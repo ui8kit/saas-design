@@ -53,7 +53,7 @@ for (let i = 0; i < cases.length; i++) {
   if (!Bun.deepEquals(normalizeHtml(templOut[i]!), want)) { fail++; failures.push(`templ != canonical: ${label}`); }
   if (!Bun.deepEquals(normalizeHtml(svelte), want)) { fail++; failures.push(`svelte != canonical: ${label}`); if (process.env.PARITY_DEBUG) failures.push(`  canonical: ${c.canonical}\n  svelte:    ${svelte}`); }
   const caller = new Set(Object.values(c.props as any).filter((v) => typeof v === "string").flatMap((v) => (v as string).split(/\s+/))); // caller-provided values are not generated
-  for (const m of c.canonical.matchAll(/class="([^"]*)"/g)) for (const t of m[1]!.split(/\s+/).filter(Boolean)) if (!t.startsWith("ui-") && !caller.has(t) && !/^icon-/.test(t)) { // icon-<name> is the upstream Icon name hook (data, not styling) nonSemantic++; failures.push(`non-semantic class "${t}" in ${label}`); }
+  for (const m of c.canonical.matchAll(/class="([^"]*)"/g)) for (const t of m[1]!.split(/\s+/).filter(Boolean)) if (!t.startsWith("ui-") && !caller.has(t) && !/^icon-/.test(t) /* icon-<name>: upstream Icon name hook */) { nonSemantic++; failures.push(`non-semantic class "${t}" in ${label}`); }
 }
 for (const f of failures.slice(0, 30)) console.error(f);
 console.log(`parity(ui): ${cases.length} cases x 2 runtimes, ${fail} mismatches, ${nonSemantic} non-ui-* classes`);
