@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Root quality gate: generators in --check mode, runtime parity, ui8px lint, contract, both app builds.
+# Root quality gate: generators in --check mode, runtime parity (templ/svelte/react), ui8px lint, contract, app builds + design app DOM parity.
 #   bun run check
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -41,4 +41,6 @@ step "apps/design-svelte: SvelteKit static build"
 (cd apps/design-svelte && bun run build >/dev/null && echo "design-svelte: built $(find build -name '*.html' | wc -l) pages")
 step "apps/design-react: tsc + Vite SSR build + static prerender"
 (cd apps/design-react && ../../node_modules/.bin/tsc -p . && bun run build >/dev/null && echo "design-react: built $(find build -name '*.html' | wc -l) pages")
+step "design apps: DOM parity design-react vs design-svelte (every prerendered page)"
+bun tools/design-parity.ts
 printf '\nall checks passed\n'

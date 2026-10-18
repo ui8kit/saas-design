@@ -1,28 +1,24 @@
 <script lang="ts">
+  import { Inline, List, ListItem } from "@saas-design/ui";
   import { font, typeScale, typeSteps } from "$design/foundations";
+  import PageHeader from "$lib/PageHeader.svelte";
+  import Section from "$lib/Section.svelte";
 </script>
 
 <svelte:head><title>Typography · Habitus Design</title></svelte:head>
-<header class="ds-header">
-  <h1 class="ds-title">Typography</h1>
-  <p class="ds-lead">Family {font.sans} (--font-sans). Tailwind type steps used by the adapter, and the Figma type scale they were derived from.</p>
-</header>
-<section class="ds-section" aria-labelledby="type-steps">
-  <h2 class="ds-h2" id="type-steps">Type steps</h2>
-  <ul class="ds-rows">
-    {#each typeSteps as t}
-      <li class="ds-row"><span class="ds-row-label">text-{t}</span><span class="ds-type-{t}">Build better habits</span></li>
-    {/each}
-  </ul>
-</section>
-<section class="ds-section" aria-labelledby="type-figma">
-  <h2 class="ds-h2" id="type-figma">Figma type scale</h2>
-  <ul class="ds-rows">
+<PageHeader title="Typography" lead="Family {font.sans} (--font-sans). Tailwind type steps used by the adapter, and the Figma type scale they were derived from." />
+<Section id="type-steps" title="Type steps">
+  <List class="ds-rows">
+    {#each typeSteps as t}<ListItem class="ds-row"><Inline class="ds-row-label">text-{t}</Inline><Inline class="ds-type-{t}">Build better habits</Inline></ListItem>{/each}
+  </List>
+</Section>
+<Section id="type-figma" title="Figma type scale">
+  <List class="ds-rows">
     {#each typeScale as s}
-      <li class="ds-row">
-        <span class="ds-row-label">{s.size}px / {s.weight}</span>
-        <span class="ds-meta">{s.tailwind ?? "no Tailwind step (display)"} · used {s.count}×</span>
-      </li>
+      <ListItem class="ds-row">
+        <Inline class="ds-row-label">{s.size}px / {s.weight}</Inline>
+        <Inline class="ds-meta">{s.tailwind ?? "no Tailwind step (display)"} · used {s.count}×</Inline>
+      </ListItem>
     {/each}
-  </ul>
-</section>
+  </List>
+</Section>

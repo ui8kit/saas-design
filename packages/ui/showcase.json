@@ -4827,8 +4827,8 @@
               "name": "locked",
               "options": [
                 {
-                  "Label": "Option A",
-                  "Value": "a"
+                  "label": "Option A",
+                  "value": "a"
                 }
               ]
             },
@@ -4837,8 +4837,8 @@
               "name": "locked",
               "options": [
                 {
-                  "Label": "Option A",
-                  "Value": "a"
+                  "label": "Option A",
+                  "value": "a"
                 }
               ]
             }

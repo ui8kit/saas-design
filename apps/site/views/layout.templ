@@ -1,5 +1,10 @@
 package views
 
+import (
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/container"
+	linkplain "github.com/ui8kit/saas-design/packages/ui/templ/ui/link-plain"
+)
+
 // PageMeta is the page part of fixtures/views/<page>.json.
 type PageMeta struct {
 	ID          string `json:"id"`
@@ -42,15 +47,17 @@ templ Page(meta PageMeta, r Regions, a Assets) {
 			<script src={ a.JS } defer></script>
 		</head>
 		<body class="ui-page" data-class="ui-page" data-figma={ meta.Figma }>
-			<a class="ui-skip" data-class="ui-skip" href="#content">Skip to content</a>
+			@linkplain.LinkPlain(linkplain.LinkPlainProps{Class: "ui-skip", Href: "#content", Attrs: templ.Attributes{"data-class": "ui-skip"}}) {
+				Skip to content
+			}
 			for _, c := range r.Header {
 				@c
 			}
-			<main id="content">
+			@container.Container(container.ContainerProps{Tag: "main", Attrs: templ.Attributes{"id": "content"}}) {
 				for _, c := range r.Main {
 					@c
 				}
-			</main>
+			}
 			for _, c := range r.Footer {
 				@c
 			}

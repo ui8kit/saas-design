@@ -1,12 +1,14 @@
 <script lang="ts">
+  // One block of packages/blocks (codegen Svelte output) rendered with its fixture view data.
+  import { Box, Text } from "@saas-design/ui";
   import { registry } from "@saas-design/blocks";
   import { blockData } from "$design/blocks";
 
   let { id }: { id: string } = $props();
-  const Block = $derived(registry[id]);
+  const Preview = $derived(registry[id]);
   const data = $derived(blockData(id));
 </script>
 
-<div class="ds-frame">
-  {#if Block && data}<Block {data} />{:else}<p class="ds-meta">No preview data for {id}.</p>{/if}
-</div>
+<Box class="ds-frame">
+  {#if Preview && data}<Preview {data} />{:else}<Text class="ds-meta">No preview data for {id}.</Text>{/if}
+</Box>

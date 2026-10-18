@@ -29,7 +29,9 @@ for (const b of bricks as any[]) {
     const add = (id: string, canonical: Record<string, unknown>) => {
       const c = Object.entries(canonical ?? {}).filter(([k]) => k !== "Class" && defs.some((d) => d.name === k && d.type !== "children" && d.type !== "attrs"));
       // example URLs from upstream point nowhere in this app: links -> "#", images -> a fixture avatar
-      const val = (k: string, v: unknown) => (typeof v === "string" && v.startsWith("/") ? (/^(Src|SrcSet)$/.test(k) ? "/media/avatar-sarah.jpg" : "#") : v);
+      // nested example records use Go field names (Label, Value); the Svelte and React item types are camelCase (label, value)
+      const js = (v: unknown): unknown => Array.isArray(v) ? v.map(js) : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k === "ID" ? "id" : k[0]!.toLowerCase() + k.slice(1), js(x)])) : v;
+      const val = (k: string, v: unknown) => (typeof v === "string" && v.startsWith("/") ? (/^(Src|SrcSet)$/.test(k) ? "/media/avatar-sarah.jpg" : "#") : js(v));
       const props = Object.fromEntries(c.map(([k, v]) => [htmlPropName(defs.find((d) => d.name === k)!), val(k, v)]));
       const react = Object.fromEntries(c.map(([k, v]) => [reactPropName(defs.find((d) => d.name === k)!), val(k, v)]));
       const key = JSON.stringify(props);
