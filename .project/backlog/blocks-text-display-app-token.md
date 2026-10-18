@@ -1,6 +1,6 @@
 # blocks: `text-display` / `max-w-page` come from app-level theme vars
 
-Status: open
+Status: fixed (tokens.ts emits them into packages/tokens/theme.css; `bun run check` compiles packages/adapter/test/standalone.css without any brand.css)
 
 **Context.** `packages/blocks` uses `text-display` (cta-split title, not-found code) and `max-w-page` (section containers). Their
 theme variables (`--text-display`, `--container-page`) are emitted by tools/tokens.ts into each **app's** `brand.css`, not into

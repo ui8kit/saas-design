@@ -1,0 +1,4 @@
+/* Build test: packages must compile with ONLY packages/tokens + packages/adapter (no app brand.css). Used by tools/check.sh. */
+@import "tailwindcss" source(none);
+@import "../../tokens/theme.css";
+@import "../src/index.css";

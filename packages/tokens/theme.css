@@ -112,3 +112,10 @@
   --radius-xl: calc(var(--radius) * 1.5);
   --font-sans: var(--font-sans);
 }
+
+/* Type/layout scale the blocks rely on (not colors, not brand): available to every app. */
+@theme {
+  --text-display: 5.3125rem;
+  --text-display--line-height: 1.2;
+  --container-page: 77.5rem;
+}

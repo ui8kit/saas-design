@@ -142,7 +142,7 @@ const contract = {
 };
 emit("fixtures/tokens/brand.contract.json", JSON.stringify(contract, null, 2));
 
-// ---- packages/tokens/theme.css (shadcn set only) -------------------------------------------
+// ---- packages/tokens/theme.css (shadcn set + type/layout scale used by packages) -------------------------------------------
 const block = (sel: string, set: Record<string, { hsl: string }>, extra: string[] = []) =>
   `${sel} {\n${[...extra, ...Object.entries(set).map(([k, v]) => `  --${k}: ${v.hsl};`)].join("\n")}\n}`;
 const themeKeys = Object.keys(light);
@@ -160,6 +160,13 @@ ${themeKeys.map((k) => `  --color-${k}: var(--${k});`).join("\n")}
   --radius-xl: calc(var(--radius) * 1.5);
   --font-sans: var(--font-sans);
 }
+
+/* Type/layout scale the blocks rely on (not colors, not brand): available to every app. */
+@theme {
+  --text-display: 5.3125rem;
+  --text-display--line-height: 1.2;
+  --container-page: 77.5rem;
+}
 `;
 emit("packages/tokens/theme.css", theme);
 
@@ -171,9 +178,6 @@ ${block(".dark,\n[data-theme=\"dark\"]", brandDark)}
 
 @theme inline {
 ${Object.keys(brandLight).map((k) => `  --color-${k}: var(--${k});`).join("\n")}
-  --text-display: 5.3125rem;
-  --text-display--line-height: 1.2;
-  --container-page: 77.5rem;
 }
 `;
 emit("apps/site/styles/brand.css", brandCss("apps/site"));

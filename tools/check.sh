@@ -23,6 +23,9 @@ bun tools/ui8px-policy.ts --check
 npx -y ui8px@latest lint
 # app-level brand tokens must never reach packages/ (ui8px cannot scope allowed utilities, see .project/backlog)
 if grep -rEn --exclude-dir=node_modules '(bg|text|border|fill|stroke|ring|from|to)-brand-|var\(--brand-' packages/; then echo "brand tokens used in packages/"; exit 1; fi
+step "packages compile standalone (tokens + adapter, no app brand.css)"
+npx --no-install @tailwindcss/cli -i packages/adapter/test/standalone.css -o /tmp/saas-design-standalone.css 2>&1 | tee /tmp/saas-design-standalone.log | tail -1
+if grep -q "Error" /tmp/saas-design-standalone.log; then echo "packages depend on app-level CSS"; exit 1; fi
 step "apps/site: templ generate (no drift) + static build"
 (cd apps/site && go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path views >/dev/null)
 git diff --quiet -- apps/site/views || { echo "drift: apps/site/views (run templ generate)"; exit 1; }
