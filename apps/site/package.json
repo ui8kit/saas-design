@@ -5,6 +5,6 @@
   "scripts": {
     "generate": "go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path views",
     "build": "bash scripts/build.sh",
-    "serve": "bunx serve public -l 4173"
+    "serve": "npx -y serve@14 public -l 4173"
   }
 }

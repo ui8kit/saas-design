@@ -1,0 +1,172 @@
+# saas-design — Figma → site + design system, end to end
+
+A **viability check** for a fully generated front-end pipeline. One local Figma file (`.fig`) becomes:
+
+- **`apps/site`**: a static copy of the Figma landing page, rendered with **Go templ** (exported to plain HTML).
+- **`apps/design`**: a **Svelte 5 / SvelteKit** design-system app with foundations, primitives, components, widgets and every block.
+- Both apps use the **same** tokens, semantic CSS, primitives and blocks. Those come from one source per layer and give **identical DOM/ARIA** in both runtimes, which is checked by parity tests.
+
+Everything between the `.fig` and the deployed apps is a script in this repo or a pinned public tool. `bun run check` fails if any generated file drifts from its source.
+
+> Developers: start with [Quickstart](#quickstart). AI agents: read [AGENTS.md](AGENTS.md) first.
+
+## Screenshots
+
+| Figma (left) vs generated site (right), hero at 1440px |
+|---|
+| ![Figma vs site, hero](docs/assets/hero-compare.png) |
+
+| Site, light | Site, dark | Site, 390px menu (Sheet) |
+|---|---|---|
+| ![site light](docs/assets/site-light.png) | ![site dark](docs/assets/site-dark.png) | ![site mobile menu](docs/assets/site-mobile-menu.png) |
+
+| Design app, light | Design app, dark | Design app, 390px nav (Sheet) |
+|---|---|---|
+| ![design light](docs/assets/design-light.png) | ![design dark](docs/assets/design-dark.png) | ![design mobile menu](docs/assets/design-mobile-menu.png) |
+
+Full-size screenshots, per-section Figma/site pairs and a `report.json` with height deltas are produced by `bun run shots`. They are written outside the repo, to `/workspace/shots-saas/` (see [docs/checks.md](docs/checks.md#screenshots-not-in-check)).
+
+## Pipeline
+
+```mermaid
+flowchart LR
+  fig[".fig file<br/>(outside the repo)"] -->|"bun run extract<br/>fig2design parse"| figma["fixtures/figma<br/>frames, variables, images"]
+  figma -->|"bun run tokens<br/>+ fixtures/tokens/mapping.json"| tokens["shadcn HSL tokens<br/>packages/tokens/theme.css<br/>+ app brand.css"]
+  tokens -->|"bun run brand:emit / brand:check"| brandos["brand-os bundle<br/>fixtures/tokens/brand.generated"]
+  figma -->|"bun run content"| records["@ui8kit/contract records<br/>fixtures/content/records"]
+  records -->|"bun tools/views.ts"| views["view models<br/>fixtures/views/*.json"]
+  recipes["recipes + bricks<br/>packages/ui/recipes, bricks"] -->|"@ui8kit/codegen"| ui["packages/ui<br/>templ + Svelte 5"]
+  ui --> adapter["packages/adapter<br/>ui-* classes, @apply only"]
+  defs["block DSL<br/>packages/blocks/defs"] -->|"packages/blocks generate"| blocks["packages/blocks<br/>templ + Svelte 5"]
+  blocks --> adapter
+  tokens --> adapter
+  views --> site["apps/site<br/>Go templ → static HTML"]
+  views --> design["apps/design<br/>SvelteKit static"]
+  blocks --> site
+  blocks --> design
+  adapter --> site
+  adapter --> design
+  site --> check["bun run check<br/>drift, contract, parity, ui8px, builds"]
+  design --> check
+  check --> shots["bun run shots / shots:modes<br/>Figma vs site screenshots"]
+  shots --> vercel["Vercel<br/>two projects"]
+```
+
+Layer details: [docs/architecture.md](docs/architecture.md).
+
+## Tools used
+
+| Tool | Role here | Version used |
+|---|---|---|
+| [fig2design](https://www.npmjs.com/package/fig2design) ([source](https://github.com/codegen-x/figma-cli)) | Parses `.fig` offline into a JSON dump | `0.1.0` via `npx` |
+| [@ui8kit/contract](https://www.npmjs.com/package/@ui8kit/contract) ([source](https://github.com/ui8kit/contract)) | Content record schemas + validator | `0.2.0` (devDependency) |
+| [ui8kit/codegen](https://github.com/ui8kit/codegen) (`@ui8kit/codegen`) | Generates primitives from one brick contract into templ, React 19, Svelte 5, Vue 3, SolidJS, Latte or Twig. This repo uses templ and Svelte | `github:ui8kit/codegen#972b492` |
+| [ui8px](https://www.npmjs.com/package/ui8px) ([source](https://github.com/ui8kit/ui8px-cli)) | Lints utilities (8+4 grid, token colors, no arbitrary values) | `ui8px@latest` via `npx` |
+| [brand-os](https://www.npmjs.com/package/brand-os) ([source](https://github.com/ui8kit/brand-os)) | Brand token contract emit/validate/verify | `0.3.0` via `npx` |
+| [templ](https://github.com/a-h/templ) | Go HTML templates | `v0.3.1001`, always via `go run …@v0.3.1001` |
+| Tailwind CSS v4 | Compiles `@apply` rules (`source(none)`, no content scanning) | `4` |
+
+## Repository structure
+
+```
+.cursor/rules/          agent rules (*.mdc): pipeline, grid, tokens, adapter, blocks, contract, git, dark mode, sheet
+.cursor/skills/         figma-to-site skill (agent workflow)
+.manual/                short command-by-command manual (00–09)
+.project/STATUS.md      deliverable status; .project/backlog/ = one file per tool problem
+.ui8px/policy/          generated ui8px lint policy (bun tools/ui8px-policy.ts)
+docs/                   English guides (this README links them) + docs/assets screenshots
+fixtures/
+  figma/                fig2design dump (generated by `bun run extract`)
+  tokens/               mapping.json (hand-edited role decisions) → tokens.json, palette.json, brand contract/bundle
+  content/source/       authored content that is not in Figma (FAQ answers, showcase data)
+  content/records/      @ui8kit/contract records (generated by `bun run content`)
+  views/                view models for both runtimes (generated by `bun tools/views.ts`)
+  media/                vector assets extracted from the frame
+packages/
+  tokens/theme.css      shadcn HSL tokens, light + dark, dark variant, layout theme vars (generated)
+  adapter/src/          base.css (hand-written) + primitives/blocks *.generated.css: ui-* classes, @apply only
+  ui/                   recipes/*.variants.json, bricks/ (local bricks), behaviors/ (vanilla JS), generated templ/ + svelte/
+  icons/                lucide subset → templ + Svelte
+  blocks/               defs/ (block DSL) → generated templ/ + svelte/ + catalog.json
+apps/
+  site/                 Go: views/layout.templ, cmd/export (static export), scripts/build.sh, vercel.json
+  design/               SvelteKit: src/routes, scripts/foundations.ts + showcase.ts, vercel.json
+tools/                  generators, checks, screenshot and measuring scripts (bun/TS, bash)
+```
+
+## Quickstart
+
+### Prerequisites
+
+| Tool | Version | Tested here |
+|---|---|---|
+| Bun | ≥ 1.2 | 1.4.2 |
+| Node.js | ≥ 20 (`npx` for fig2design, ui8px, brand-os, Tailwind CLI) | 20.19.2 |
+| Go | ≥ 1.23 (`go.mod`) | 1.27.2 |
+| templ | v0.3.1001, pinned through `go run`, nothing to install | — |
+| Google Chrome | for screenshots and behaviour tests only (`/usr/bin/google-chrome`, or `CHROME=/path`) | — |
+
+### Install and verify
+
+```bash
+git clone https://github.com/ui8kit/saas-design && cd saas-design
+bun install
+bun run check            # must end with "all checks passed"
+```
+
+### Extract a Figma file (optional; the dump is committed)
+
+The `.fig` must live **outside** the repo. `tools/extract.sh` refuses a path inside it, and `*.fig` is git-ignored.
+
+```bash
+FIG=/absolute/path/outside/repo/file.fig bun run extract
+# runs, from /tmp:  npx -y fig2design@0.1.0 parse "$FIG" --out fixtures/figma --no-config
+```
+
+The variable is `FIG`; without it the default is `/workspace/fig-fixtures/saas.fig`. Then regenerate and re-check with the pipeline in [AGENTS.md](AGENTS.md#pipeline-order). For a **different** Figma file, follow [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md).
+
+### Run the apps
+
+```bash
+# site (Go templ → static HTML in apps/site/public)
+bun run site:build                         # = bash apps/site/scripts/build.sh
+(cd apps/site && bun run serve)            # npx -y serve@14 public -l 4173 → http://localhost:4173
+
+# design system app (SvelteKit)
+(cd apps/design && bun run dev)            # vite dev → http://localhost:5173
+bun run design:build                       # → apps/design/build (49 prerendered pages)
+```
+
+### Other runtimes
+
+`@ui8kit/codegen` also emits React 19, Vue 3, SolidJS, Latte and Twig. This repo only wires templ and Svelte. See [docs/add-a-runtime.md](docs/add-a-runtime.md) for what has to be added; the block emitter is the main piece of work.
+
+## Documentation
+
+| Doc | For |
+|---|---|
+| [AGENTS.md](AGENTS.md) | AI agents: rules, pipeline order, definition of done |
+| [docs/architecture.md](docs/architecture.md) | Layers, data flow, why the adapter layer exists |
+| [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md) | Repeating this with another `.fig` |
+| [docs/add-a-runtime.md](docs/add-a-runtime.md) | Adding React, Vue, Solid, Latte/Twig, … |
+| [docs/checks.md](docs/checks.md) | Every check, what it verifies, how to fix failures |
+| [docs/deploy-vercel.md](docs/deploy-vercel.md) | Two Vercel projects from one repo |
+| [docs/troubleshooting.md](docs/troubleshooting.md) | Known gaps and fixes (links into `.project/backlog`) |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Commit rules, how to propose changes |
+| [.manual/](.manual/README.md) | Terse command manual |
+
+## Status
+
+See [.project/STATUS.md](.project/STATUS.md). In short:
+- All checks are green and parity shows 0 mismatches.
+- The site is within 19px of the Figma page height (6269 vs 6288px).
+- Dark mode and mobile Sheet navigation work in both apps.
+- A real Vercel deploy is **not verified yet**.
+
+## Design credit
+
+The source design is **[Habitus — Habit Tracker App Landing Page](https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page)** on Figma Community, by its original author. All visual design credit goes to them; this repo only re-implements it to test the pipeline. The `.fig` file is not redistributed here.
+
+## License
+
+There is **no LICENSE file** in this repository yet, so no license is granted for the code. No decision has been made; one has to be added by the maintainers. The upstream tools are MIT-licensed according to their npm metadata. The Figma design is subject to its own Figma Community license.
