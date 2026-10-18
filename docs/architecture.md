@@ -22,7 +22,7 @@ fixtures/views/*.json        packages/ui  ◄── @ui8kit/codegen 2.0 bricks +
   ▼                               ▼
 apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 5, static)
                                         apps/design-react  (React 19, Vite SSR → static)
-                                          both read apps/design-shared (nav, pages, ds-* CSS)
+                                          both read packages/design-docs (nav, pages, ds-* CSS)
 ```
 
 ## Layers
@@ -51,7 +51,7 @@ apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 
     - dark under `.dark, [data-theme="dark"]`;
     - `@custom-variant dark`;
     - an `@theme` block with `--text-display*` and `--container-page`.
-  - `apps/site/styles/brand.css` and `apps/design-shared/styles/brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
+  - `apps/site/styles/brand.css` and `apps/design-{svelte,react} brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
   - `fixtures/tokens/{palette,tokens}.json` and `brand.contract.json` for [brand-os](https://github.com/ui8kit/brand-os) (`bun run brand:emit`, `bun run brand:check`).
 
 ### 3. Adapter (`packages/adapter/src`)
@@ -104,7 +104,7 @@ The semantic class layer. Markup in every runtime carries only `ui-*` classes. T
 | `apps/site` | Go + templ | `cmd/export/main.go` renders `fixtures/views/home.json` through `blocks.Render` into `views.Page` (`views/layout.templ`) | `apps/site/public` (index.html, `/assets/app.css` via Tailwind CLI, `/assets/ui8kit.js`, media) |
 | `apps/design-svelte` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design-svelte/build` (49 prerendered pages) |
 | `apps/design-react` | React 19, Vite (client + SSR build), `react-dom/server` prerender | `src/routes.tsx`, `src/pages/*` | `apps/design-react/build` (49 pages, no client React) |
-| `apps/design-shared` | TS + CSS shared by both design apps | `src/*`, `styles/design.css`, `scripts/foundations.ts` | `styles/foundations.generated.css` |
+| `packages/design-docs` (not an app) | TS + CSS shared by both design apps | `src/*`, `styles/design.css`, `scripts/foundations.ts` | `foundations.generated.css` in each design app (it uses brand colors, so it stays at app level) |
 
 - **Site.** One page for now (`pages = {"home.json": "index.html"}` in `cmd/export`). Each block's `region` (`header`/`main`/`footer`) places it.
 - **Design apps.** `tools/design-parity.ts` asserts every design-react page has the same normalized DOM as its design-svelte page. The Svelte app imports `@saas-design/ui|blocks|icons` through Vite aliases, `packages/blocks/catalog.json`, and `fixtures/views/blocks.json`. It generates its own data:

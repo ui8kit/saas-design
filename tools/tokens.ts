@@ -4,7 +4,7 @@
  * Reads  fixtures/figma/variables.json (+ frames/*.json for usage counts) and fixtures/tokens/mapping.json.
  * Writes fixtures/tokens/palette.json, fixtures/tokens/tokens.json, fixtures/tokens/brand.contract.json,
  *        packages/tokens/theme.css (shadcn set only),
- *        apps/site/styles/brand.css and apps/design-shared/styles/brand.css (brand extras, app level only).
+ *        apps/site/styles/brand.css and apps/design-{svelte,react} brand.css (brand extras, app level only).
  *
  *   bun tools/tokens.ts [--check]   (--check: fail if any output would change)
  */
@@ -193,7 +193,8 @@ ${Object.keys(brandLight).map((k) => `  --color-${k}: var(--${k});`).join("\n")}
 }
 `;
 emit("apps/site/styles/brand.css", brandCss("apps/site"));
-emit("apps/design-shared/styles/brand.css", brandCss("apps/design-svelte and apps/design-react"));
+emit("apps/design-svelte/src/lib/styles/brand.css", brandCss("apps/design-svelte"));
+emit("apps/design-react/src/styles/brand.css", brandCss("apps/design-react"));
 
 let drift = 0;
 for (const [p, s] of outputs) {

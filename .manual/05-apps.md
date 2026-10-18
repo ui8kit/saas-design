@@ -19,7 +19,7 @@ bun run build                          # copy media → static/, vite build → 
 ```
 
 Pages: overview, foundations (colors, typography, spacing, radius, shadows), primitives, components, widgets, blocks + one page per block.
-`@saas-design/ui|blocks|icons` resolve via aliases in `vite.config.ts` (`@saas-design/icons/svelte` before `@saas-design/icons`). Docs-shell classes are `ds-*` in `apps/design-shared/styles/design.css` (@apply only); nav, page data and showcase transforms are shared in `apps/design-shared/src`.
+`@saas-design/ui|blocks|icons` resolve via aliases in `vite.config.ts` (`@saas-design/icons/svelte` before `@saas-design/icons`). Docs-shell classes are `ds-*` in `packages/design-docs/styles/design.css` (@apply only); nav, page data and showcase transforms are shared in `packages/design-docs/src`.
 
 ## apps/design-react — React 19 twin of the design app (Vite SSR + static prerender)
 

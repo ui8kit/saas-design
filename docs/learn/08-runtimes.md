@@ -6,7 +6,7 @@
 | [`apps/design-svelte`](../../apps/design-svelte/vite.config.ts) | SvelteKit 2, Svelte 5, adapter-static | 49 docs pages: foundations, primitives, components, blocks |
 | [`apps/design-react`](../../apps/design-react/README.md) | React 19, Vite SSR + static prerender ([`scripts/build.mjs`](../../apps/design-react/scripts/build.mjs)) | the same 49 pages ([`src/routes.tsx`](../../apps/design-react/src/routes.tsx)) |
 
-The two design apps share their nav, page data, showcase transforms and `ds-*` CSS through [`apps/design-shared`](../../apps/design-shared/package.json).
+The two design apps share their nav, page data, showcase transforms and `ds-*` CSS through [`packages/design-docs`](../../packages/design-docs/package.json).
 
 ## Parity, three levels
 

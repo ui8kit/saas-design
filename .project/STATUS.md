@@ -27,7 +27,7 @@ Behaviour: `bun run test:behaviors` → 27/27 ok (sheet focus trap, Esc, overlay
   - Pages: overview; foundations (colors incl. a light/dark preview and light + dark brand groups, typography, 8+4 spacing, radius, shadows); primitives + components (40 codegen 2.0 bricks); widgets; 39 block pages. App parts are retagged onto primitives (`src/lib`: NavTree, PageHeader, Pager, Section, ShowcasePart, Sidebar, Topbar).
   - Dark mode: ThemeToggle in the sidebar head and mobile top bar; theme-init is injected by hooks.server.
   - Mobile: the sidebar becomes a left Sheet below `lg`.
-- **apps/design-react** — React 19, Vite client + SSR build, static prerender of the same 49 pages (no client React). Shares nav, page data, showcase transforms and `ds-*` CSS with design-svelte via `apps/design-shared`.
+- **apps/design-react** — React 19, Vite client + SSR build, static prerender of the same 49 pages (no client React). Shares nav, page data, showcase transforms and `ds-*` CSS with design-svelte via `packages/design-docs`.
 - **packages**
   - ui: 40 codegen 2.0 bricks (ThemeToggle and Sheet are now upstream) in templ + Svelte 5 + React 19, recipe overrides in `packages/ui/recipes`, with parity.
   - ui behaviours: `packages/ui/behaviors/ui8kit.js` plus `theme-init.js`.

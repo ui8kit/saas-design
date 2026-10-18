@@ -1,4 +1,4 @@
-/* Docs-shell classes (ds-*). App level only; utilities only inside @apply, shadcn + brand tokens only. */
+/* Docs-shell classes (ds-*). Utilities only inside @apply, shadcn tokens only (brand tokens stay in the apps). */
 @layer components {
   .ds-shell { @apply flex min-h-screen flex-col lg:flex-row; }
   .ds-sidebar { @apply hidden bg-muted px-6 py-8 lg:sticky lg:top-0 lg:block lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-auto; }

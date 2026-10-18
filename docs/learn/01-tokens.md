@@ -7,7 +7,7 @@ All colors are shadcn-style HSL tokens (`--background`, `--primary`, `--chart-3`
 1. [`fixtures/tokens/mapping.json`](../../fixtures/tokens/mapping.json) maps Figma colors (from [`fixtures/tokens/palette.json`](../../fixtures/tokens/palette.json)) to token names, for light and dark.
 2. `bun run tokens` runs [`tools/tokens.ts`](../../tools/tokens.ts) and writes:
    - [`packages/tokens/theme.css`](../../packages/tokens/theme.css): the package tokens, plus the `@theme` layout vars (`--radius`, `--text-display`, `--container-page`);
-   - the app brand files [`apps/site/styles/brand.css`](../../apps/site/styles/brand.css) and [`apps/design-shared/styles/brand.css`](../../apps/design-shared/styles/brand.css).
+   - the app brand files [`apps/site/styles/brand.css`](../../apps/site/styles/brand.css) and [`apps/design-svelte/src/lib/styles/brand.css`](../../apps/design-svelte/src/lib/styles/brand.css) / [`apps/design-react/src/styles/brand.css`](../../apps/design-react/src/styles/brand.css).
 3. `bun run brand:emit && bun run brand:check` validate the brand contract in [`fixtures/tokens/brand.contract.json`](../../fixtures/tokens/brand.contract.json).
 
 ## Two rules

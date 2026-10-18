@@ -37,8 +37,8 @@ step "apps/site: templ generate (no drift) + static build"
 (cd apps/site && go run github.com/a-h/templ/cmd/templ@v0.3.1070 generate -path views >/dev/null)
 git diff --quiet -- apps/site/views || { echo "drift: apps/site/views (run templ generate)"; exit 1; }
 bash apps/site/scripts/build.sh
-step "apps/design-shared: generated foundations drift"
-(cd apps/design-shared && bun run check)
+step "packages/design-docs: generated foundations drift (written into both design apps)"
+(cd packages/design-docs && bun run check)
 step "apps/design-svelte: SvelteKit static build"
 (cd apps/design-svelte && bun run build >/dev/null && echo "design-svelte: built $(find build -name '*.html' | wc -l) pages")
 step "apps/design-react: tsc + Vite SSR build + static prerender"

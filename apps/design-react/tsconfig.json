@@ -19,7 +19,7 @@
         "../../packages/icons/src/react.tsx"
       ],
       "$design/*": [
-        "../design-shared/src/*"
+        "../../packages/design-docs/src/*"
       ],
       "@saas-design/ui/showcase.json": [
         "../../packages/ui/showcase.json"

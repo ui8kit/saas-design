@@ -2,7 +2,7 @@
   "name": "@saas-design/design-react",
   "private": true,
   "type": "module",
-  "description": "React 19 design-system docs app (Vite SSR build + static prerender, no client React). Consumes packages/* (codegen 2.0 React output), apps/design-shared and fixtures.",
+  "description": "React 19 design-system docs app (Vite SSR build + static prerender, no client React). Consumes packages/* (codegen 2.0 React output), packages/design-docs and fixtures.",
   "scripts": {
     "build": "node ../../tools/copy-media.mjs public && node scripts/build.mjs",
     "preview": "npx --no-install vite preview --outDir build"

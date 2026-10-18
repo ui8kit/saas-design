@@ -14,7 +14,7 @@ export default defineConfig({
       "@saas-design/blocks": r("../../packages/blocks/svelte/index.ts"),
       "@saas-design/icons/svelte": r("../../packages/icons/src/Icon.svelte"),
       "@saas-design/icons": r("../../packages/icons/src/index.ts"),
-      "$design": r("../design-shared/src"),
+      "$design": r("../../packages/design-docs/src"),
       "$fixtures": r("../../fixtures"),
       "$packages": r("../../packages"),
     },

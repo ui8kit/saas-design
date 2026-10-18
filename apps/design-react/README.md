@@ -27,7 +27,7 @@ Next.js static export was rejected. It would add a second build system and CSS p
 | `src/components/*.tsx` | App frame (`Layout`, `Topbar`, `Sidebar`, `NavTree`), `Section`, `Showcase`/`ShowcasePart`, `BlockPreview`, `Pager`. |
 | `src/entry-server.tsx` | `render(path)`: page in `Layout`, rendered to static markup. |
 | `scripts/build.mjs` | CSS client build, SSR build, prerender, behaviors copy. The document shell is the only hand-written raw HTML. |
-| `../design-shared` | Framework-neutral content shared with design-svelte: nav, block data, foundation scales, the docs stylesheet. |
+| [`../../packages/design-docs`](../../packages/design-docs/package.json) | Framework-neutral content shared with design-svelte: nav, block data, foundation scales, the docs stylesheet. |
 
 Composition follows the retag and block rules of codegen 2.0. Pages use primitives only (`Block`, `Container`, `Box`, `Title`, `Text`, `Inline`, `List`, `LinkPlain`, `Table*`, `Form`, …) with `tag`/`as`. There are no raw native tags and no `dangerouslySetInnerHTML`. There is one `Block` per render path (a page's header, the frame's `<header>`/`<aside>`/`<nav>` in their own files). The current nav link gets a static `aria-current` in its own branch.
 

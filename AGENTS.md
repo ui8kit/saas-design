@@ -6,7 +6,7 @@ This repo turns a local Figma file into three apps through generated, checked la
 - a Svelte 5 design-system app (`apps/design-svelte`);
 - its React 19 twin (`apps/design-react`).
 
-Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#2309848`, linked at `packages/ui/.xgen` by `tools/xgen-link.ts`). The two design apps share their content in `apps/design-shared`. New here? Read [docs/learn/](docs/learn/README.md) in order. Read this file, then the rules in [`.cursor/rules/`](.cursor/rules) and the skill [`.cursor/skills/figma-to-site/SKILL.md`](.cursor/skills/figma-to-site/SKILL.md).
+Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#2309848`, linked at `packages/ui/.xgen` by `tools/xgen-link.ts`). The two design apps share their content in `packages/design-docs`. New here? Read [docs/learn/](docs/learn/README.md) in order. Read this file, then the rules in [`.cursor/rules/`](.cursor/rules) and the skill [`.cursor/skills/figma-to-site/SKILL.md`](.cursor/skills/figma-to-site/SKILL.md).
 
 ## Golden rules
 
@@ -21,7 +21,7 @@ Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#
    | `packages/icons/scripts/generate.ts` | icons (Go `icons.Icon`, TS registry) |
    | `packages/blocks/defs/*.ts` | blocks |
    | `tools/ui8px/allowed.base.json` (rhythm), `tools/ui8px/allowed.extra.json` | lint policy |
-   | `apps/design-shared/scripts/foundations.ts` | `foundations.generated.css` |
+   | `packages/design-docs/scripts/foundations.ts` | `foundations.generated.css` |
 
    Every generator has a `--check` mode, and `bun run check` fails on drift.
 2. **No `.fig` in the repo.** Keep it outside (e.g. `/workspace/fig-fixtures/`). `*.fig` is git-ignored and `tools/extract.sh` refuses a path inside the repo. Never `git add -f` one.
@@ -36,7 +36,7 @@ Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#
    - Colors with no shadcn role become `--brand-*` in the **app** `brand.css` only. `bun run check` greps `packages/` for brand tokens.
    - Layout theme vars that packages need (`--radius`, `--text-display`, `--container-page`) live in `packages/tokens/theme.css`.
 5. **Adapter: `@apply` only, no inline styles** ([adapter-no-inline-styles.mdc](.cursor/rules/adapter-no-inline-styles.mdc)):
-   - Markup carries only semantic `ui-*` classes (packages) and `ds-*` classes (design-app shell, `apps/design-shared/styles/design.css`).
+   - Markup carries only semantic `ui-*` classes (packages) and `ds-*` classes (design-app shell, `packages/design-docs/styles/design.css`).
    - Utilities live in `@apply` rules in `packages/adapter/src/*.css` or app CSS.
    - Tailwind runs with `source(none)`, so a utility written in markup does not exist.
    - No `style="…"`, no `style:`, and no JS that sets styles.
@@ -57,7 +57,7 @@ Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#
      - `packages/blocks` parity: Svelte and React = templ;
      - `tools/design-parity.ts`: every design-react page = its design-svelte page.
    - A feature added to one runtime is added to all through the generators, never by hand in one app.
-   - A design-app change is made in both apps; shared content goes into `apps/design-shared`.
+   - A design-app change is made in both apps; shared content goes into `packages/design-docs`.
 9. **Dark mode** ([dark-mode.mdc](.cursor/rules/dark-mode.mdc)):
    - `.dark` on `<html>` is set by `packages/ui/behaviors/theme-init.js`, the **only** allowed inline script, in `<head>`.
    - Islands are forced with `data-theme="light|dark"`. Never name a plain variant key `light` or `dark` if it ends up in `data-theme`.
@@ -103,7 +103,7 @@ bun tools/lint-apps.ts                                   # 0 blocking
 
 # 9. apps
 bun run site:build                                # apps/site/public
-(cd apps/design-shared && bun run generate) && bun run design-svelte:build && bun run design-react:build
+(cd packages/design-docs && bun run generate) && bun run design-svelte:build && bun run design-react:build
 bun tools/design-parity.ts                        # react 49/49 DOM-identical to svelte
 
 # 10. gate
@@ -127,7 +127,7 @@ Users often phrase requests the way the [README examples](README.md#use-it-with-
 | "A restaurant site in this same design, on React, in `apps/resta`" | **New app folder** `apps/resta`, one per request. **Reuse** `packages/tokens`, `packages/adapter`, the behaviours and the fixtures pattern. New content goes in as contract records: extend `tools/content.ts` / `fixtures/content/source`, then `tools/views.ts` view models. Never hard-code copy in components. React primitives (`packages/ui/react`) and blocks (`packages/blocks/react`) already exist; start from `apps/design-react` (Vite SSR + static prerender) and render the site views instead of the docs pages. Add the app to `tools/check.sh`, `tools/lint-apps.ts`, the screenshot tools and `tools/test-behaviors.ts`, plus a `vercel.json`. |
 | "Study this repo and build a site + design system for this (other) Figma design, on Vue" | Follow [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md): extract with `FIG=` outside the repo, remap `fixtures/tokens/mapping.json`, rewrite the design-specific scripts (table in that doc), map frames to blocks, regenerate, then measure drift. Do the runtime part as in [docs/add-a-runtime.md](docs/add-a-runtime.md). Credit the new design's author and check its license (CC BY or other) the same way [LICENSE-DESIGN.md](LICENSE-DESIGN.md) does. |
 | "Same design, different content" | Change only the fixtures (`tools/content.ts` mapping, `fixtures/content/source/*.json`, media entries), then run `bun run content && bun run contract && bun tools/views.ts`. Leave blocks and tokens unchanged unless asked. |
-| "Add a page" | Site: add a view file (e.g. `fixtures/views/<page>.json`, written by `tools/views.ts`) and an entry in `pages` in `apps/site/cmd/export/main.go`. Design apps: add the route to **both** `apps/design-svelte/src/routes` and `apps/design-react/src/routes.tsx` (+ `src/pages`), nav in `apps/design-shared/src/nav.ts`; `tools/design-parity.ts` fails if one is missing. Reuse existing blocks; add a block only when no block fits (≤ 45 total). |
+| "Add a page" | Site: add a view file (e.g. `fixtures/views/<page>.json`, written by `tools/views.ts`) and an entry in `pages` in `apps/site/cmd/export/main.go`. Design apps: add the route to **both** `apps/design-svelte/src/routes` and `apps/design-react/src/routes.tsx` (+ `src/pages`), nav in `packages/design-docs/src/nav.ts`; `tools/design-parity.ts` fails if one is missing. Reuse existing blocks; add a block only when no block fits (≤ 45 total). |
 | "Change the brand colors / dark theme" | Edit `fixtures/tokens/mapping.json` only, then `bun run tokens`, then `shots:modes`. |
 
 ### Single-runtime mode ("React only", "Vue only", "Svelte only", "templ only")
@@ -137,7 +137,7 @@ When the user wants **one** runtime, do not keep the others in parity. Remove th
 | Keep only… | Drop | Adjust |
 |---|---|---|
 | **Svelte** | `apps/site`, `apps/design-react`; `packages/ui/{templ,react}`, `packages/blocks/{templ,react}`, `packages/icons/templ`, `packages/icons/src/react.tsx`; the templ/React branches of both generators | `tools/check.sh`: remove the `templ generate`/drift lines, the apps/site, design-react and design-parity steps. Parity: Svelte vs canonical (ui); blocks parity compares Svelte with a snapshot or is dropped. `tools/lint-apps.ts`: drop the removed zones. Go is no longer a prerequisite. |
-| **templ** (static HTML) | `apps/design-svelte`, `apps/design-react`, `apps/design-shared`; `packages/ui/{svelte,react}`, `packages/blocks/{svelte,react}` | `tools/check.sh`: remove the design-app steps and design-parity. Parity: templ vs canonical. Screenshot and behaviour tools: site only. |
+| **templ** (static HTML) | `apps/design-svelte`, `apps/design-react`, `packages/design-docs`; `packages/ui/{svelte,react}`, `packages/blocks/{svelte,react}` | `tools/check.sh`: remove the design-app steps and design-parity. Parity: templ vs canonical. Screenshot and behaviour tools: site only. |
 | **React** | `apps/site`, `apps/design-svelte`; templ and Svelte outputs | Keep `apps/design-react` and render the site views in a React app. Parity: React vs canonical (ui); blocks: React vs a snapshot. Remove the templ/Svelte steps and design-parity from `tools/check.sh`. |
 | **Vue / Solid** (not built yet) | the other apps once the new app replaces them | Add the runtime first ([docs/add-a-runtime.md](docs/add-a-runtime.md)): primitives via codegen 2.0, an icons component, a block emitter, an app. Then switch parity to *new runtime vs canonical*. |
 

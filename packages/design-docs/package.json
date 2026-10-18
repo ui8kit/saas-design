@@ -1,0 +1,10 @@
+{
+  "name": "@saas-design/design-docs",
+  "private": true,
+  "type": "module",
+  "description": "Framework-neutral content of the design-system docs apps: nav, block catalog + fixture data, foundation scales, the ds-* docs stylesheet and the foundations CSS generator. Rendered by apps/design-svelte and apps/design-react. Brand-dependent CSS (brand.css, foundations.generated.css) is written into each app (brand tokens stay at app level).",
+  "scripts": {
+    "generate": "bun scripts/foundations.ts",
+    "check": "bun scripts/foundations.ts --check"
+  }
+}

@@ -22,7 +22,7 @@ are what that took, in order. Repeat them for Vue, Solid or a PHP/Python templat
 | Primitives (`packages/ui`) | codegen 2.0 has an emitter | add it to `scripts/generate.ts`, extend parity |
 | Icons (`packages/icons`) | one registry | a component for the runtime |
 | Blocks (`packages/blocks`) | the DSL | an emitter in `scripts/generate.ts`, extend parity |
-| App | `apps/design-shared` (nav, block data, docs CSS) | scaffold, routes, Vercel config |
+| App | `packages/design-docs` (nav, block data, docs CSS) | scaffold, routes, Vercel config |
 
 ## 1. Primitives
 
@@ -90,12 +90,12 @@ emitted as a spread (`ELEMENT_ATTRS`). They produce the same DOM attribute, and 
 
 ## 5. App
 
-Reuse `apps/design-shared` (nav, block data, foundations, the docs stylesheet) and the CSS entry pattern:
+Reuse `packages/design-docs` (nav, block data, foundations, the docs stylesheet) and the CSS entry pattern:
 
 ```css
 @import "tailwindcss" source(none);          /* no content scanning: all utilities come from @apply */
 @import "<rel>/packages/tokens/theme.css";
-@import "<rel>/apps/design-shared/styles/brand.css";
+@import "./brand.css";                 /* written by tools/tokens.ts (add your app there) */
 @import "<rel>/packages/adapter/src/index.css";
 ```
 
@@ -119,7 +119,7 @@ on. See [deploy-vercel.md](deploy-vercel.md). PHP and Python runtimes need their
 
 - [ ] Primitives are emitted and parity is extended (every case, 0 mismatches).
 - [ ] Icons have a component; blocks are emitted, and block parity is extended (49 cases, 0 mismatches).
-- [ ] The app is built from `fixtures/views` / `apps/design-shared`, with no copy in components.
+- [ ] The app is built from `fixtures/views` / `packages/design-docs`, with no copy in components.
 - [ ] Composition uses primitives only and is a zone of `tools/lint-apps.ts` (0 blocking).
 - [ ] Only `ui-*` / `ds-*` classes, no inline styles.
 - [ ] `theme-init.js` and `ui8kit.js` are loaded, and `bun run test:behaviors` covers the app.

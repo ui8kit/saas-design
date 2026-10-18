@@ -16,7 +16,7 @@ Read first: `.cursor/rules/pipeline.mdc` (order), `grid-8-4.mdc`, `tokens.mdc`, 
 5. **Primitives.** Change recipes in `packages/ui/recipes/*.variants.json` → `cd packages/ui && bun run generate && bun run parity`.
 6. **Blocks.** Add/edit a def in `packages/blocks/defs/` (DSL: `c()` primitives, `css:` utilities → @apply, Block retagged as section/header/footer/nav, `aria-labelledby` → Title id), add its data to the views, then `cd packages/blocks && bun run generate && bun run parity`. Keep ≤ 45 blocks.
 7. **Policy + lint.** `bun tools/ui8px-policy.ts && npx ui8px@latest lint`. A new utility needs a reviewed entry in `tools/ui8px/allowed.extra.json` (on-grid, token colors, no arbitrary values).
-8. **Apps.** `bash apps/site/scripts/build.sh`; `(cd apps/design-shared && bun run generate) && (cd apps/design-svelte && bun run build)`.
+8. **Apps.** `bash apps/site/scripts/build.sh`; `(cd packages/design-docs && bun run generate) && (cd apps/design-svelte && bun run build)`.
 9. **Verify visually.** `bun run render:figma && bun run shots` (Figma vs site, `/workspace/shots-saas/`, `report.json` has per-section y/height deltas) and `bun run shots:design` (design app pages → `/workspace/shots-saas/design-*.png`), `bun run shots:modes` (light/dark/390px menu) and `bun run test:behaviors` (Sheet + ThemeToggle). Fix the largest height delta first, in the block def `css:`, staying on the 8+4 grid.
 10. **Gate + ship.** `bun run check` → commit (small, descriptive) → push (see git-workflow rule). Log tool problems in `.project/backlog/`, deliverable state in `.project/STATUS.md`.
 
