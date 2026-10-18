@@ -1768,6 +1768,8 @@
       "aspect-video"
     ],
     "ui-image-avatar": [
+      "size-12",
+      "shrink-0",
       "rounded-full"
     ],
     "ui-image-fit-contain": [
