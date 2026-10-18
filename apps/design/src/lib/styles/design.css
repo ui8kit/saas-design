@@ -1,8 +1,12 @@
 /* Docs-shell classes (ds-*). App level only; utilities only inside @apply, shadcn + brand tokens only. */
 @layer components {
   .ds-shell { @apply flex min-h-screen flex-col lg:flex-row; }
-  .ds-sidebar { @apply bg-muted px-6 py-8 lg:sticky lg:top-0 lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-auto; }
-  .ds-brand { @apply mb-8 flex items-center gap-2 text-lg font-bold text-foreground; }
+  .ds-sidebar { @apply hidden bg-muted px-6 py-8 lg:sticky lg:top-0 lg:block lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-auto; }
+  .ds-brand { @apply flex items-center gap-2 text-lg font-bold text-foreground; }
+  .ds-sidebar-head { @apply mb-8 flex items-center justify-between gap-2; }
+  .ds-topbar { @apply sticky top-0 z-10 flex items-center justify-between gap-4 bg-background px-6 py-4 shadow-sm lg:hidden; }
+  .ds-topbar-actions { @apply flex items-center gap-2; }
+  .ds-sheet-close { @apply self-end; }
   .ds-nav-group { @apply mb-6; }
   .ds-nav-title { @apply mb-2 text-xs font-semibold tracking-wide text-muted-foreground; }
   .ds-nav-list { @apply flex flex-col gap-0; }
@@ -58,4 +62,13 @@
   .ds-widget-list { @apply mt-4 flex flex-col gap-2 text-sm; }
   .ds-widget-person { @apply mt-6 flex items-center gap-4; }
   .ds-widget-form { @apply flex flex-col gap-2; }
+}
+@layer components {
+  .ds-sample-light { @apply rounded-lg bg-background p-4 text-foreground; }
+  .ds-modes { @apply mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2; }
+  .ds-mode { @apply flex flex-col gap-4 rounded-lg border border-border bg-background p-6 text-foreground; }
+  .ds-mode-row { @apply mt-4 flex flex-wrap items-center gap-2; }
+  .ds-mode-swatches { @apply grid grid-cols-5 gap-2; }
+  .ds-mode-swatch { @apply flex h-16 items-end rounded-md p-2; }
+  .ds-mode-swatch-label { @apply text-xs text-foreground; }
 }

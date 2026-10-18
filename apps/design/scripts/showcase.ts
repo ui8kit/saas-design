@@ -39,6 +39,8 @@ for (const b of bricks as any[]) {
       const prop = part.props.find((p: any) => p.name.toLowerCase() === key.toLowerCase());
       if (prop) for (const v of Object.keys(values)) add(`${key}.${v}`, { ...(key === "size" && v === "icon" ? { AriaLabel: "Example" } : {}), [prop.name]: v });
     }
+    // a rendered Sheet is a fixed full-screen dialog (and needs a unique id): the docs page shows its triggers only
+    if (b.dir === "sheet" && part.name === "Sheet") { parts.push({ name: part.name, docs: part.docs ?? "", children: true, props: part.props.map((p: any) => ({ name: p.name, type: p.type, docs: p.docs ?? "" })), cases: [] }); continue; }
     for (const c of showcaseCases(b)) { const p = knownCanonicalProps(b, part, c.props); if (p && Object.keys(p).length) add(c.id, p); }
     parts.push({
       name: part.name,

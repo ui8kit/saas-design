@@ -4706,33 +4706,7 @@
             "docs": ""
           }
         ],
-        "cases": [
-          {
-            "id": "defaults",
-            "props": {
-              "aria-label": "Example"
-            }
-          },
-          {
-            "id": "side.left",
-            "props": {
-              "side": "left"
-            }
-          },
-          {
-            "id": "side.right",
-            "props": {
-              "side": "right"
-            }
-          },
-          {
-            "id": "state.open",
-            "props": {
-              "id": "nav-sheet",
-              "open": true
-            }
-          }
-        ]
+        "cases": []
       },
       {
         "name": "SheetTrigger",

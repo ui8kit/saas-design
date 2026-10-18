@@ -9,6 +9,7 @@ export const colors = {
   light: entries(tokens.color.light as Record<string, Color>),
   dark: entries(tokens.color.dark as Record<string, Color>),
   brand: entries(tokens.brand.light as Record<string, Color>),
+  brandDark: entries(tokens.brand.dark as Record<string, Color>),
 };
 export const colorNames = [...Object.keys(tokens.color.light), ...Object.keys(tokens.brand.light)];
 export const typeSteps = ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl"];
