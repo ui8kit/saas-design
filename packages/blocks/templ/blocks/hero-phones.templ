@@ -17,7 +17,7 @@ import (
 
 // HeroPhones: Full-bleed primary surface with navbar, centered headline, two actions, social badge and tilted app screens.
 templ HeroPhones(p HeroPhonesData) {
-	@block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "ui-hero-phones"}}) {
+	@block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "ui-hero-phones", "data-theme": "light"}}) {
 		@Navbar(p.Nav)
 		@stack.Stack(stack.StackProps{Class: "ui-hero-phones-content", Attrs: templ.Attributes{"data-class": "ui-hero-phones-content"}}) {
 			@title.Title(title.TitleProps{Class: "ui-hero-phones-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-phones-title"}}) {

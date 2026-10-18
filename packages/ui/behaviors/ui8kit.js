@@ -3,7 +3,7 @@
  * Event delegation on document: works for server-rendered and client-rendered markup alike.
  *   data-ui8kit="theme-toggle"  toggles .dark on <html>, persists localStorage.theme, syncs aria-pressed
  *   data-ui8kit="sheet-trigger" opens the Sheet named by aria-controls (aria-expanded sync)
- *   data-ui8kit="sheet"         dialog root: focus trap, Esc, overlay click, focus restore, scroll lock
+ *   data-ui8kit="sheet"         dialog root: moved to <body> on first open; focus trap, Esc, overlay click, focus restore, scroll lock
  *   data-ui8kit="sheet-close"   closes its Sheet; links inside a Sheet close it too
  * Pair with theme-init.js inlined in <head> (sets .dark before first paint, no flash).
  */
@@ -41,6 +41,8 @@
   }
   function openSheet(sheet, trigger) {
     if (open) closeSheet(false);
+    // portal: a fixed dialog inside a stacking context (e.g. an isolated hero) could paint under later content
+    if (sheet.parentNode !== document.body) document.body.appendChild(sheet);
     sheet.hidden = false;
     root.classList.add("ui-sheet-locked");
     setExpanded(sheet.id, true);

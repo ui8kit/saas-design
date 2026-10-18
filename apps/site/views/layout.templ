@@ -16,7 +16,19 @@ type Regions struct {
 	Footer []templ.Component
 }
 
-templ Page(meta PageMeta, r Regions, css string) {
+// Assets are the page-level files: stylesheet, the shared behavior script and the inline no-flash theme snippet.
+type Assets struct {
+	CSS       string
+	JS        string
+	ThemeInit string
+}
+
+// themeInit inlines packages/ui/behaviors/theme-init.js: the only inline script, it sets .dark before first paint.
+func themeInit(js string) templ.Component {
+	return templ.Raw("<script>" + js + "</script>")
+}
+
+templ Page(meta PageMeta, r Regions, a Assets) {
 	<!DOCTYPE html>
 	<html lang={ meta.Lang }>
 		<head>
@@ -25,7 +37,9 @@ templ Page(meta PageMeta, r Regions, css string) {
 			<title>{ meta.Title }</title>
 			<meta name="description" content={ meta.Description }/>
 			<link rel="icon" href="/media/brand-mark.svg" type="image/svg+xml"/>
-			<link rel="stylesheet" href={ css }/>
+			@themeInit(a.ThemeInit)
+			<link rel="stylesheet" href={ a.CSS }/>
+			<script src={ a.JS } defer></script>
 		</head>
 		<body class="ui-page" data-class="ui-page" data-figma={ meta.Figma }>
 			<a class="ui-skip" data-class="ui-skip" href="#content">Skip to content</a>

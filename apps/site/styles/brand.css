@@ -12,7 +12,14 @@
 
 .dark,
 [data-theme="dark"] {
+  --brand-orange: hsl(12.4 99% 59.8%);
+  --brand-ink: hsl(210 20% 98%);
+  --brand-pink: hsl(350.2 36.3% 26.5%);
+  --brand-lilac: hsl(288.5 15.7% 32.5%);
+  --brand-sky: hsl(214.2 52% 24.5%);
+  --brand-mist: hsl(215 27.9% 16.9%);
   --brand-success: hsl(158.1 64.4% 51.6%);
+  --brand-placeholder: hsl(220 8.9% 46.1%);
 }
 
 @theme inline {

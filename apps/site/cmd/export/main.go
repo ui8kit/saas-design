@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/a-h/templ"
 	"github.com/ui8kit/saas-design/apps/site/views"
@@ -33,9 +34,17 @@ func main() {
 	viewsDir := flag.String("views", "../../fixtures/views", "view model directory")
 	out := flag.String("out", "public", "output directory")
 	css := flag.String("css", "/assets/app.css", "stylesheet href")
+	js := flag.String("js", "/assets/ui8kit.js", "behavior script href (packages/ui/behaviors/ui8kit.js)")
+	themeInit := flag.String("theme-init", "../../packages/ui/behaviors/theme-init.js", "inline <head> script that sets .dark before first paint")
 	flag.Parse()
+	initJS, err := os.ReadFile(*themeInit)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "export:", err)
+		os.Exit(1)
+	}
+	assets := views.Assets{CSS: *css, JS: *js, ThemeInit: strings.TrimSpace(string(initJS))}
 	for src, dst := range pages {
-		if err := export(filepath.Join(*viewsDir, src), filepath.Join(*out, dst), *css); err != nil {
+		if err := export(filepath.Join(*viewsDir, src), filepath.Join(*out, dst), assets); err != nil {
 			fmt.Fprintln(os.Stderr, "export:", err)
 			os.Exit(1)
 		}
@@ -43,7 +52,7 @@ func main() {
 	}
 }
 
-func export(src, dst, css string) error {
+func export(src, dst string, assets views.Assets) error {
 	raw, err := os.ReadFile(src)
 	if err != nil {
 		return err
@@ -75,6 +84,6 @@ func export(src, dst, css string) error {
 		return err
 	}
 	defer f.Close()
-	var _ templ.Component = views.Page(pf.Page, r, css)
-	return views.Page(pf.Page, r, css).Render(context.Background(), f)
+	var _ templ.Component = views.Page(pf.Page, r, assets)
+	return views.Page(pf.Page, r, assets).Render(context.Background(), f)
 }

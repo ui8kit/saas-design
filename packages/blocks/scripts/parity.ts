@@ -18,6 +18,8 @@ const cases = loadCases();
 const known = new Set<string>([
   ...Object.keys(JSON.parse(readFileSync(join(ROOT, "packages/ui/classes.json"), "utf8"))),
   ...Object.keys(JSON.parse(readFileSync(join(PKG, "classes.json"), "utf8"))),
+  // hand-written adapter classes (static parts of local bricks: icons, sheet overlay/panel)
+  ...[...readFileSync(join(ROOT, "packages/adapter/src/base.css"), "utf8").matchAll(/\.(ui-[\w-]+)\s*\{/g)].map((m) => m[1]!),
 ]);
 const LANDMARK = /^<(header|footer|section|nav|main|aside|article)\b/;
 

@@ -226,6 +226,7 @@
   .ui-sheet-side-right { @apply flex-row justify-end; }
   .ui-sheettrigger { @apply inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring; }
   .ui-sheettrigger-contrast { @apply bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20; }
+  .ui-sheettrigger-current { @apply bg-transparent text-current hover:bg-current/10; }
   .ui-sheettrigger-default { @apply bg-muted text-foreground hover:bg-accent; }
   .ui-sheettrigger-ghost { @apply bg-transparent text-foreground hover:bg-muted; }
   .ui-sheettrigger-size-default { @apply size-10; }
@@ -279,6 +280,7 @@
   .ui-textarea-size-xs { @apply px-3 py-2 text-xs; }
   .ui-themetoggle { @apply inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring; }
   .ui-themetoggle-contrast { @apply bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20; }
+  .ui-themetoggle-current { @apply bg-transparent text-current hover:bg-current/10; }
   .ui-themetoggle-default { @apply bg-muted text-foreground hover:bg-accent; }
   .ui-themetoggle-ghost { @apply bg-transparent text-foreground hover:bg-muted; }
   .ui-themetoggle-size-default { @apply size-10; }

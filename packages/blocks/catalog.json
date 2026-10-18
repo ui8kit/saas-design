@@ -12,7 +12,15 @@
       "ui-navbar-mark",
       "ui-navbar-menu",
       "ui-navbar-menu-link",
-      "ui-navbar-cta"
+      "ui-navbar-actions",
+      "ui-navbar-toggle",
+      "ui-navbar-cta",
+      "ui-navbar-trigger",
+      "ui-navbar-sheet",
+      "ui-navbar-sheet-close",
+      "ui-navbar-sheet-menu",
+      "ui-navbar-sheet-link",
+      "ui-navbar-sheet-cta"
     ]
   },
   {

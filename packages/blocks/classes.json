@@ -123,23 +123,58 @@
     "text-current",
     "hover:underline"
   ],
-  "ui-navbar-cta": [
-    "px-8"
+  "ui-navbar-actions": [
+    "flex",
+    "items-center",
+    "gap-4"
   ],
+  "ui-navbar-toggle": [],
+  "ui-navbar-cta": [
+    "hidden",
+    "px-8",
+    "md:inline-flex"
+  ],
+  "ui-navbar-trigger": [
+    "lg:hidden"
+  ],
+  "ui-navbar-sheet": [],
+  "ui-navbar-sheet-close": [
+    "self-end"
+  ],
+  "ui-navbar-sheet-menu": [
+    "flex",
+    "flex-col",
+    "gap-2"
+  ],
+  "ui-navbar-sheet-link": [
+    "block",
+    "rounded-md",
+    "px-4",
+    "py-2",
+    "text-lg",
+    "text-foreground",
+    "no-underline",
+    "hover:bg-muted"
+  ],
+  "ui-navbar-sheet-cta": [],
   "ui-hero-phones": [
     "relative",
     "isolate",
-    "mx-8",
-    "mt-8",
+    "mx-4",
+    "mt-4",
     "flex",
     "flex-col",
     "overflow-hidden",
     "rounded-lg",
     "bg-primary",
-    "px-12",
-    "pt-12",
+    "px-6",
+    "pt-6",
     "pb-12",
     "text-primary-foreground",
+    "md:mx-8",
+    "md:mt-8",
+    "md:px-12",
+    "md:pt-12",
     "lg:aspect-video"
   ],
   "ui-hero-phones-content": [
@@ -154,9 +189,10 @@
   ],
   "ui-hero-phones-title": [
     "max-w-2xl",
-    "text-6xl",
+    "text-5xl",
     "leading-none",
-    "font-medium"
+    "font-medium",
+    "md:text-6xl"
   ],
   "ui-hero-phones-lead": [
     "max-w-2xl",
@@ -342,7 +378,9 @@
   ],
   "ui-social-proof-split-logo": [
     "h-12",
-    "w-auto"
+    "w-auto",
+    "dark:brightness-0",
+    "dark:invert"
   ],
   "ui-app-gallery": [
     "overflow-x-clip",
@@ -519,7 +557,9 @@
     "bg-card"
   ],
   "ui-pricing-two-plans-plan-theme-dark": [
-    "bg-background"
+    "bg-background",
+    "inset-ring",
+    "inset-ring-input"
   ],
   "ui-pricing-two-plans-plan-name-row": [
     "justify-between",
@@ -887,7 +927,9 @@
   ],
   "ui-logo-cloud-logo": [
     "h-10",
-    "w-auto"
+    "w-auto",
+    "dark:brightness-0",
+    "dark:invert"
   ],
   "ui-stats-row": [],
   "ui-stats-row-title": [
@@ -1070,7 +1112,9 @@
     "bg-card"
   ],
   "ui-pricing-three-tiers-plan-theme-dark": [
-    "bg-background"
+    "bg-background",
+    "inset-ring",
+    "inset-ring-input"
   ],
   "ui-pricing-three-tiers-plan-name-row": [
     "justify-between",

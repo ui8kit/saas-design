@@ -1424,17 +1424,21 @@
     "ui-hero-phones": [
       "relative",
       "isolate",
-      "mx-8",
-      "mt-8",
+      "mx-4",
+      "mt-4",
       "flex",
       "flex-col",
       "overflow-hidden",
       "rounded-lg",
       "bg-primary",
-      "px-12",
-      "pt-12",
+      "px-6",
+      "pt-6",
       "pb-12",
       "text-primary-foreground",
+      "md:mx-8",
+      "md:mt-8",
+      "md:px-12",
+      "md:pt-12",
       "lg:aspect-video"
     ],
     "ui-hero-phones-actions": [
@@ -1536,9 +1540,10 @@
     ],
     "ui-hero-phones-title": [
       "max-w-2xl",
-      "text-6xl",
+      "text-5xl",
       "leading-none",
-      "font-medium"
+      "font-medium",
+      "md:text-6xl"
     ],
     "ui-hero-split": [
       "py-16"
@@ -1939,7 +1944,9 @@
     ],
     "ui-logo-cloud-logo": [
       "h-10",
-      "w-auto"
+      "w-auto",
+      "dark:brightness-0",
+      "dark:invert"
     ],
     "ui-logo-cloud-logos": [
       "flex",
@@ -1985,6 +1992,11 @@
       "justify-between",
       "gap-8"
     ],
+    "ui-navbar-actions": [
+      "flex",
+      "items-center",
+      "gap-4"
+    ],
     "ui-navbar-brand": [
       "gap-2",
       "text-3xl",
@@ -1995,7 +2007,9 @@
       "hover:no-underline"
     ],
     "ui-navbar-cta": [
-      "px-8"
+      "hidden",
+      "px-8",
+      "md:inline-flex"
     ],
     "ui-navbar-mark": [
       "size-6"
@@ -2011,6 +2025,30 @@
       "leading-none",
       "text-current",
       "hover:underline"
+    ],
+    "ui-navbar-sheet": [],
+    "ui-navbar-sheet-close": [
+      "self-end"
+    ],
+    "ui-navbar-sheet-cta": [],
+    "ui-navbar-sheet-link": [
+      "block",
+      "rounded-md",
+      "px-4",
+      "py-2",
+      "text-lg",
+      "text-foreground",
+      "no-underline",
+      "hover:bg-muted"
+    ],
+    "ui-navbar-sheet-menu": [
+      "flex",
+      "flex-col",
+      "gap-2"
+    ],
+    "ui-navbar-toggle": [],
+    "ui-navbar-trigger": [
+      "lg:hidden"
     ],
     "ui-newsletter-band": [],
     "ui-newsletter-band-container": [
@@ -2151,7 +2189,9 @@
       "gap-4"
     ],
     "ui-pricing-three-tiers-plan-theme-dark": [
-      "bg-background"
+      "bg-background",
+      "inset-ring",
+      "inset-ring-input"
     ],
     "ui-pricing-three-tiers-plan-theme-light": [
       "bg-card"
@@ -2227,7 +2267,9 @@
       "gap-4"
     ],
     "ui-pricing-two-plans-plan-theme-dark": [
-      "bg-background"
+      "bg-background",
+      "inset-ring",
+      "inset-ring-input"
     ],
     "ui-pricing-two-plans-plan-theme-light": [
       "bg-card"
@@ -2501,6 +2543,11 @@
       "text-primary-foreground",
       "hover:bg-primary-foreground/20"
     ],
+    "ui-sheettrigger-current": [
+      "bg-transparent",
+      "text-current",
+      "hover:bg-current/10"
+    ],
     "ui-sheettrigger-default": [
       "bg-muted",
       "text-foreground",
@@ -2589,7 +2636,9 @@
     ],
     "ui-social-proof-split-logo": [
       "h-12",
-      "w-auto"
+      "w-auto",
+      "dark:brightness-0",
+      "dark:invert"
     ],
     "ui-social-proof-split-logos": [
       "flex-wrap",
@@ -2972,6 +3021,11 @@
       "bg-primary-foreground/10",
       "text-primary-foreground",
       "hover:bg-primary-foreground/20"
+    ],
+    "ui-themetoggle-current": [
+      "bg-transparent",
+      "text-current",
+      "hover:bg-current/10"
     ],
     "ui-themetoggle-default": [
       "bg-muted",

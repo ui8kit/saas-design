@@ -46,7 +46,7 @@ export default brick({
       docs: "SheetTrigger renders the menu button (aria-expanded, aria-controls, aria-haspopup=dialog) with Lucide menu/x icons.",
       recipeId: "sheettrigger",
       classes: { recipe: { variant: "Variant", size: "Size" } },
-      props: [pVariant("default, ghost, contrast"), pSize("sm, default, lg"), pClass(), pStr("Controls", "id of the Sheet"), pStr("AriaLabel", "accessible name (default: Open menu)"), pAttrs()],
+      props: [pVariant("default, ghost, contrast, current"), pSize("sm, default, lg"), pClass(), pStr("Controls", "id of the Sheet"), pStr("AriaLabel", "accessible name (default: Open menu)"), pAttrs()],
       render: el(
         "button",
         [
@@ -67,7 +67,7 @@ export default brick({
       docs: "SheetClose renders the close button (Lucide x) inside the panel.",
       recipeId: "sheettrigger",
       classes: { recipe: { variant: "Variant", size: "Size" } },
-      props: [pVariant("default, ghost, contrast"), pSize("sm, default, lg"), pClass(), pStr("AriaLabel", "accessible name (default: Close menu)"), pAttrs()],
+      props: [pVariant("default, ghost, contrast, current"), pSize("sm, default, lg"), pClass(), pStr("AriaLabel", "accessible name (default: Close menu)"), pAttrs()],
       render: el(
         "button",
         [

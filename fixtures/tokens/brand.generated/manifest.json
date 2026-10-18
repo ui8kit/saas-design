@@ -6,7 +6,7 @@
   },
   "schema": {
     "version": "1.0.0",
-    "sha256": "4888a4441e00317282c70fefbb0bc228b46a43701d6b4c5a5881ec29eaf7ede5"
+    "sha256": "8164fe5da6f18c2c0b5cdf34efc92050c44b24dab8d108beff4bb687cde5ff06"
   },
   "warnings": [
     "Theme \"dark\" dark heading contrast 6.99:1 is below configured threshold 7:1."
@@ -25,7 +25,7 @@
     {
       "path": "contract.json",
       "bytes": 6988,
-      "sha256": "4888a4441e00317282c70fefbb0bc228b46a43701d6b4c5a5881ec29eaf7ede5"
+      "sha256": "8164fe5da6f18c2c0b5cdf34efc92050c44b24dab8d108beff4bb687cde5ff06"
     }
   ]
 }

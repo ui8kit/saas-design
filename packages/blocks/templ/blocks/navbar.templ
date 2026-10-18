@@ -5,9 +5,12 @@ package blocks
 import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/block"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/button"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/group"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/inline"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/link"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/list"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/sheet"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/themetoggle"
 	icons "github.com/ui8kit/saas-design/packages/icons/templ"
 )
 
@@ -29,8 +32,27 @@ templ Navbar(p NavbarData) {
 				}
 			}
 		}
-		@button.Button(button.ButtonProps{Class: "ui-navbar-cta", Variant: "contrast", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-cta"}}) {
-			{ p.Cta.Label }
+		@group.Group(group.GroupProps{Class: "ui-navbar-actions", Attrs: templ.Attributes{"data-class": "ui-navbar-actions"}}) {
+			@themetoggle.ThemeToggle(themetoggle.ThemeToggleProps{Class: "ui-navbar-toggle", Variant: "current", Attrs: templ.Attributes{"data-class": "ui-navbar-toggle"}})
+			@button.Button(button.ButtonProps{Class: "ui-navbar-cta", Variant: "contrast", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-cta"}}) {
+				{ p.Cta.Label }
+			}
+			@sheet.SheetTrigger(sheet.SheetTriggerProps{Class: "ui-navbar-trigger", Variant: "current", Controls: "navbar-menu", Attrs: templ.Attributes{"data-class": "ui-navbar-trigger"}})
+		}
+		@sheet.Sheet(sheet.SheetProps{Class: "ui-navbar-sheet", ID: "navbar-menu", Side: "right", AriaLabel: p.Label, Attrs: templ.Attributes{"data-class": "ui-navbar-sheet"}}) {
+			@sheet.SheetClose(sheet.SheetCloseProps{Class: "ui-navbar-sheet-close", Variant: "ghost", Attrs: templ.Attributes{"data-class": "ui-navbar-sheet-close"}})
+			@list.List(list.ListProps{Class: "ui-navbar-sheet-menu", Attrs: templ.Attributes{"data-class": "ui-navbar-sheet-menu"}}) {
+				for _, item := range p.Items {
+					@list.ListItem(list.ListItemProps{}) {
+						@link.Link(link.LinkProps{Class: "ui-navbar-sheet-link", Href: item.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-sheet-link"}}) {
+							{ item.Label }
+						}
+					}
+				}
+			}
+			@button.Button(button.ButtonProps{Class: "ui-navbar-sheet-cta", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-sheet-cta"}}) {
+				{ p.Cta.Label }
+			}
 		}
 	}
 }

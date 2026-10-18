@@ -153,7 +153,7 @@ func Sheet(p SheetProps) templ.Component {
 
 // SheetTriggerProps configures SheetTrigger.
 type SheetTriggerProps struct {
-	// Variant — default, ghost, contrast
+	// Variant — default, ghost, contrast, current
 	Variant string
 	// Size — sm, default, lg
 	Size string
@@ -269,7 +269,7 @@ func SheetTrigger(p SheetTriggerProps) templ.Component {
 
 // SheetCloseProps configures SheetClose.
 type SheetCloseProps struct {
-	// Variant — default, ghost, contrast
+	// Variant — default, ghost, contrast, current
 	Variant string
 	// Size — sm, default, lg
 	Size string

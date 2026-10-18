@@ -9,7 +9,7 @@
   let { data }: { data: HeroPhonesData } = $props();
 </script>
 
-<Block class="ui-hero-phones" data-class="ui-hero-phones" tag="header" id="top">
+<Block class="ui-hero-phones" data-class="ui-hero-phones" tag="header" id="top" data-theme="light">
   <Navbar data={data.nav} />
   <Stack class="ui-hero-phones-content" data-class="ui-hero-phones-content">
     <Title class="ui-hero-phones-title" data-class="ui-hero-phones-title" as={1}>

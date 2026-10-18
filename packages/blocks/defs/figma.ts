@@ -19,17 +19,28 @@ export const navbar = block({
     c("List", { ui: "menu", css: "hidden items-center gap-8 lg:flex" },
       each($("items"), "item", c("ListItem", {},
         c("Link", { ui: "menu-link", href: $("item.href"), css: "text-lg leading-none text-current hover:underline" }, $("item.label"))))),
-    c("Button", { ui: "cta", variant: "contrast", href: $("cta.href"), css: "px-8" }, $("cta.label"))),
+    c("Group", { ui: "actions", css: "flex items-center gap-4" },
+      c("ThemeToggle", { ui: "toggle", variant: "current" }),
+      c("Button", { ui: "cta", variant: "contrast", href: $("cta.href"), css: "hidden px-8 md:inline-flex" }, $("cta.label")),
+      c("SheetTrigger", { ui: "trigger", variant: "current", controls: "navbar-menu", css: "lg:hidden" })),
+    // mobile menu (below lg): side sheet with the same links; behavior from packages/ui/behaviors/ui8kit.js
+    c("Sheet", { ui: "sheet", id: "navbar-menu", side: "right", "aria-label": $("label") },
+      c("SheetClose", { ui: "sheet-close", variant: "ghost", css: "self-end" }),
+      c("List", { ui: "sheet-menu", css: "flex flex-col gap-2" },
+        each($("items"), "item", c("ListItem", {},
+          c("Link", { ui: "sheet-link", href: $("item.href"), css: "block rounded-md px-4 py-2 text-lg text-foreground no-underline hover:bg-muted" }, $("item.label"))))),
+      c("Button", { ui: "sheet-cta", href: $("cta.href") }, $("cta.label"))),
+  ),
 });
 
 export const heroPhones = block({
   id: "hero-phones", title: "Hero with phones", category: "hero", figma: "1:262 Hero",
   description: "Full-bleed primary surface with navbar, centered headline, two actions, social badge and tilted app screens.",
   schema: { nav: "@navbar", title: "string", lead: "string", primary: link, secondary: link, badge: "string", screens: [img] },
-  root: c("Block", { tag: "header", id: "top", css: "relative isolate mx-8 mt-8 flex flex-col overflow-hidden rounded-lg bg-primary px-12 pt-12 pb-12 text-primary-foreground lg:aspect-video" },
+  root: c("Block", { tag: "header", id: "top", "data-theme": "light", css: "relative isolate mx-4 mt-4 flex flex-col overflow-hidden rounded-lg bg-primary px-6 pt-6 pb-12 text-primary-foreground md:mx-8 md:mt-8 md:px-12 md:pt-12 lg:aspect-video" },
     use("navbar", $("nav")),
     c("Stack", { ui: "content", css: "mx-auto flex max-w-3xl flex-col items-center gap-8 pt-24 text-center" },
-      c("Title", { as: "h1", ui: "title", css: "max-w-2xl text-6xl leading-none font-medium" }, $("title")),
+      c("Title", { as: "h1", ui: "title", css: "max-w-2xl text-5xl leading-none font-medium md:text-6xl" }, $("title")),
       c("Text", { ui: "lead", css: "max-w-2xl text-xl" }, $("lead")),
       c("Group", { ui: "actions", css: "mt-4 flex-wrap justify-center gap-6" },
         c("Button", { variant: "contrast", size: "lg", href: $("primary.href") }, $("primary.label")),
@@ -81,7 +92,7 @@ export const socialProofSplit = block({
       c("Stack", { ui: "body", css: "flex flex-col justify-between gap-12 py-6" },
         c("Title", { as: "h2", id: "social-proof-title", ui: "title", css: "text-4xl leading-12 font-medium" }, $("title")),
         c("Group", { ui: "logos", css: "flex-wrap justify-between gap-8 rounded-lg bg-muted px-12 py-10" },
-          each($("logos"), "logo", c("Image", { ui: "logo", variant: "logo", src: $("logo.src"), alt: $("logo.alt"), css: "h-12 w-auto" })))))),
+          each($("logos"), "logo", c("Image", { ui: "logo", variant: "logo", src: $("logo.src"), alt: $("logo.alt"), css: "h-12 w-auto dark:brightness-0 dark:invert" })))))),
 });
 
 export const appGallery = block({
@@ -146,7 +157,7 @@ export const pricingTwoPlans = block({
         c("Text", { ui: "lead", css: "text-xl font-light" }, $("lead"))),
       c("List", { ui: "plans", css: "grid grid-cols-1 gap-10 lg:grid-cols-2" },
         each($("plans"), "plan",
-          c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground" },
+          c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground" },
             c("Stack", { kit: "stack-4" },
               c("Group", { ui: "plan-name-row", css: "justify-between gap-4" },
                 c("Title", { as: "h3", ui: "plan-name", css: "text-2xl leading-6 font-semibold" }, $("plan.name")),

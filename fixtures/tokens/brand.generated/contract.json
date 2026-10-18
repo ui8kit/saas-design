@@ -133,9 +133,9 @@
         "ring": "hsl(12.4 99% 59.8%)",
         "chart1": "hsl(12.4 99% 59.8%)",
         "chart2": "hsl(0 0% 96.5%)",
-        "chart3": "hsl(307.3 30.3% 78.6%)",
-        "chart4": "hsl(206.2 80% 92.2%)",
-        "chart5": "hsl(358.9 96.6% 88.6%)",
+        "chart3": "hsl(288.5 15.7% 32.5%)",
+        "chart4": "hsl(214.2 52% 24.5%)",
+        "chart5": "hsl(350.2 36.3% 26.5%)",
         "sidebar": "hsl(220.9 39.3% 11%)",
         "sidebarForeground": "hsl(0 0% 100%)",
         "sidebarPrimary": "hsl(12.4 99% 59.8%)",
@@ -159,23 +159,23 @@
         },
         "brandInk": {
           "light": "hsl(220.9 39.3% 11%)",
-          "dark": "hsl(220.9 39.3% 11%)"
+          "dark": "hsl(210 20% 98%)"
         },
         "brandPink": {
           "light": "hsl(358.9 96.6% 88.6%)",
-          "dark": "hsl(358.9 96.6% 88.6%)"
+          "dark": "hsl(350.2 36.3% 26.5%)"
         },
         "brandLilac": {
           "light": "hsl(307.3 30.3% 78.6%)",
-          "dark": "hsl(307.3 30.3% 78.6%)"
+          "dark": "hsl(288.5 15.7% 32.5%)"
         },
         "brandSky": {
           "light": "hsl(206.2 80% 92.2%)",
-          "dark": "hsl(206.2 80% 92.2%)"
+          "dark": "hsl(214.2 52% 24.5%)"
         },
         "brandMist": {
           "light": "hsl(0 0% 96.5%)",
-          "dark": "hsl(0 0% 96.5%)"
+          "dark": "hsl(215 27.9% 16.9%)"
         },
         "brandSuccess": {
           "light": "hsl(160.1 84.1% 39.4%)",
@@ -183,7 +183,7 @@
         },
         "brandPlaceholder": {
           "light": "hsl(236 10.1% 70.8%)",
-          "dark": "hsl(236 10.1% 70.8%)"
+          "dark": "hsl(220 8.9% 46.1%)"
         }
       }
     },

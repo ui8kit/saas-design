@@ -19,7 +19,7 @@ const head = (id: string, center = false, lead = true) =>
     c("Title", { as: "h2", id: `${id}-title`, kit: "section-title" }, $("title")),
     ...(lead ? [c("Text", { kit: "section-lead" }, $("lead"))] : []));
 const planCard = (prefix: string) =>
-  c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-8 rounded-lg p-10 text-card-foreground" },
+  c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-8 rounded-lg p-10 text-card-foreground" },
     c("Group", { ui: "plan-name-row", css: "justify-between gap-4" },
       c("Title", { as: "h3", ui: "plan-name", css: "text-2xl font-semibold" }, $("plan.name")),
       when($("plan.badge"), c("Badge", {}, $("plan.badge")))),
@@ -83,7 +83,7 @@ export const logoCloud = block({
   root: section("logo-cloud", { css: "py-16", container: "mx-auto flex max-w-page flex-col items-center gap-8 px-6" },
     c("Title", { as: "h2", id: "logo-cloud-title", ui: "title", css: "text-base font-medium text-muted-foreground" }, $("title")),
     c("List", { ui: "logos", css: "flex flex-wrap items-center justify-center gap-12" },
-      each($("logos"), "logo", c("ListItem", {}, c("Image", { ui: "logo", variant: "logo", src: $("logo.src"), alt: $("logo.alt"), css: "h-10 w-auto" }))))),
+      each($("logos"), "logo", c("ListItem", {}, c("Image", { ui: "logo", variant: "logo", src: $("logo.src"), alt: $("logo.alt"), css: "h-10 w-auto dark:brightness-0 dark:invert" }))))),
 });
 
 export const statsRow = block({

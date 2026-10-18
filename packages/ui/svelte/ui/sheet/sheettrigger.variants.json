@@ -14,7 +14,8 @@
     "variant": {
       "default": "ui-sheettrigger-default",
       "ghost": "ui-sheettrigger-ghost",
-      "contrast": "ui-sheettrigger-contrast"
+      "contrast": "ui-sheettrigger-contrast",
+      "current": "ui-sheettrigger-current"
     },
     "size": {
       "sm": "ui-sheettrigger-size-sm",

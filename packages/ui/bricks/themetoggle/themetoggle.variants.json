@@ -1,13 +1,20 @@
 {
   "id": "ui.themetoggle",
   "base": "inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-  "keys": ["variant", "size"],
-  "defaults": { "variant": "default", "size": "default" },
+  "keys": [
+    "variant",
+    "size"
+  ],
+  "defaults": {
+    "variant": "default",
+    "size": "default"
+  },
   "byKey": {
     "variant": {
       "default": "bg-muted text-foreground hover:bg-accent",
       "ghost": "bg-transparent text-foreground hover:bg-muted",
-      "contrast": "bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
+      "contrast": "bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20",
+      "current": "bg-transparent text-current hover:bg-current/10"
     },
     "size": {
       "sm": "size-8",

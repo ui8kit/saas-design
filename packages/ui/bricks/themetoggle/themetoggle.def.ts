@@ -18,7 +18,7 @@ export default brick({
       docs: "ThemeToggle renders a button with Lucide sun/moon icons; aria-pressed reflects dark mode.",
       recipeId: "themetoggle",
       classes: { recipe: { variant: "Variant", size: "Size" } },
-      props: [pVariant("default, ghost, contrast (on primary surfaces)"), pSize("sm, default, lg"), pClass(), pPass("ID"), pStr("AriaLabel", "accessible name (default: Dark mode)"), pAttrs()],
+      props: [pVariant("default, ghost, contrast (on primary surfaces), current (inherits text color)"), pSize("sm, default, lg"), pClass(), pPass("ID"), pStr("AriaLabel", "accessible name (default: Dark mode)"), pAttrs()],
       render: el(
         "button",
         [

@@ -14,7 +14,8 @@
     "variant": {
       "default": "ui-themetoggle-default",
       "ghost": "ui-themetoggle-ghost",
-      "contrast": "ui-themetoggle-contrast"
+      "contrast": "ui-themetoggle-contrast",
+      "current": "ui-themetoggle-current"
     },
     "size": {
       "sm": "ui-themetoggle-size-sm",

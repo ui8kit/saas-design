@@ -27,11 +27,16 @@
   .ui-navbar-mark { @apply size-6; }
   .ui-navbar-menu { @apply hidden items-center gap-8 lg:flex; }
   .ui-navbar-menu-link { @apply text-lg leading-none text-current hover:underline; }
-  .ui-navbar-cta { @apply px-8; }
+  .ui-navbar-actions { @apply flex items-center gap-4; }
+  .ui-navbar-cta { @apply hidden px-8 md:inline-flex; }
+  .ui-navbar-trigger { @apply lg:hidden; }
+  .ui-navbar-sheet-close { @apply self-end; }
+  .ui-navbar-sheet-menu { @apply flex flex-col gap-2; }
+  .ui-navbar-sheet-link { @apply block rounded-md px-4 py-2 text-lg text-foreground no-underline hover:bg-muted; }
   /* hero-phones */
-  .ui-hero-phones { @apply relative isolate mx-8 mt-8 flex flex-col overflow-hidden rounded-lg bg-primary px-12 pt-12 pb-12 text-primary-foreground lg:aspect-video; }
+  .ui-hero-phones { @apply relative isolate mx-4 mt-4 flex flex-col overflow-hidden rounded-lg bg-primary px-6 pt-6 pb-12 text-primary-foreground md:mx-8 md:mt-8 md:px-12 md:pt-12 lg:aspect-video; }
   .ui-hero-phones-content { @apply mx-auto flex max-w-3xl flex-col items-center gap-8 pt-24 text-center; }
-  .ui-hero-phones-title { @apply max-w-2xl text-6xl leading-none font-medium; }
+  .ui-hero-phones-title { @apply max-w-2xl text-5xl leading-none font-medium md:text-6xl; }
   .ui-hero-phones-lead { @apply max-w-2xl text-xl; }
   .ui-hero-phones-actions { @apply mt-4 flex-wrap justify-center gap-6; }
   .ui-hero-phones-demo-icon { @apply size-4 fill-current; }
@@ -67,7 +72,7 @@
   .ui-social-proof-split-body { @apply flex flex-col justify-between gap-12 py-6; }
   .ui-social-proof-split-title { @apply text-4xl leading-12 font-medium; }
   .ui-social-proof-split-logos { @apply flex-wrap justify-between gap-8 rounded-lg bg-muted px-12 py-10; }
-  .ui-social-proof-split-logo { @apply h-12 w-auto; }
+  .ui-social-proof-split-logo { @apply h-12 w-auto dark:brightness-0 dark:invert; }
   /* app-gallery */
   .ui-app-gallery { @apply overflow-x-clip pt-28; }
   .ui-app-gallery-container { @apply mx-auto flex max-w-page flex-col gap-20; }
@@ -106,7 +111,7 @@
   .ui-pricing-two-plans-plans { @apply grid grid-cols-1 gap-10 lg:grid-cols-2; }
   .ui-pricing-two-plans-plan { @apply flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground; }
   .ui-pricing-two-plans-plan-theme-light { @apply bg-card; }
-  .ui-pricing-two-plans-plan-theme-dark { @apply bg-background; }
+  .ui-pricing-two-plans-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-two-plans-plan-name-row { @apply justify-between gap-4; }
   .ui-pricing-two-plans-plan-name { @apply text-2xl leading-6 font-semibold; }
   .ui-pricing-two-plans-plan-description { @apply leading-5 text-muted-foreground; }
@@ -182,7 +187,7 @@
   .ui-logo-cloud-container { @apply mx-auto flex max-w-page flex-col items-center gap-8 px-6; }
   .ui-logo-cloud-title { @apply text-base font-medium text-muted-foreground; }
   .ui-logo-cloud-logos { @apply flex flex-wrap items-center justify-center gap-12; }
-  .ui-logo-cloud-logo { @apply h-10 w-auto; }
+  .ui-logo-cloud-logo { @apply h-10 w-auto dark:brightness-0 dark:invert; }
   /* stats-row */
   .ui-stats-row-title { @apply sr-only; }
   .ui-stats-row-list { @apply grid grid-cols-2 gap-6 lg:grid-cols-4; }
@@ -220,7 +225,7 @@
   .ui-pricing-three-tiers-plans { @apply grid grid-cols-1 gap-6 lg:grid-cols-3; }
   .ui-pricing-three-tiers-plan { @apply flex flex-col gap-8 rounded-lg p-10 text-card-foreground; }
   .ui-pricing-three-tiers-plan-theme-light { @apply bg-card; }
-  .ui-pricing-three-tiers-plan-theme-dark { @apply bg-background; }
+  .ui-pricing-three-tiers-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-three-tiers-plan-name-row { @apply justify-between gap-4; }
   .ui-pricing-three-tiers-plan-name { @apply text-2xl font-semibold; }
   .ui-pricing-three-tiers-price { @apply flex items-baseline gap-2; }
