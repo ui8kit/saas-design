@@ -130,7 +130,8 @@ Then check dark mode and mobile with `bun run shots:modes` and `bun run test:beh
 | `tools/measure.ts`, `tools/shots*.ts`, `tools/test-behaviors.ts` | Chrome at `/usr/bin/google-chrome` (`CHROME=` overrides it, except in `measure.ts`). `measure.ts` serves the hard-coded path `/workspace/saas-design/apps/site/public` |
 | `packages/blocks/defs/figma.ts` | blocks copied from this design (keep as examples or remove) |
 | `fixtures/content/source/*.json` | authored copy and block catalog for this design |
+| `tools/views.ts` | the "Figma home page" part: which `section-*` records become which blocks on `home.json`, and per-block view builders (e.g. `planView`). The block-preview part (`blocks.json`) is per block id |
 | `apps/site/cmd/export/main.go` | `pages = {"home.json": "index.html"}`; add entries for more pages |
 | `apps/design` nav / overview copy | `src/lib/nav.ts`, `src/routes/+page.svelte` |
 
-Generic, no change needed: `tools/check.sh`, `tools/views.ts` (block-schema driven; extend it for new blocks), `tools/ui8px-policy.ts`, `tools/validate-content.ts`, `tools/copy-media.mjs`, the packages/ui and packages/blocks generators, the adapter, and the behaviours.
+Generic, no change needed: `tools/check.sh`, `tools/ui8px-policy.ts`, `tools/validate-content.ts`, `tools/copy-media.mjs`, the packages/ui and packages/blocks generators, the adapter, and the behaviours.
