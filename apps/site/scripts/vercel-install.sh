@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Vercel installCommand for apps/site (NOT VERIFIED on Vercel — see .manual/04-deploy-vercel.md).
+# Vercel installCommand for apps/site (NOT VERIFIED on Vercel — see .manual/08-deploy-vercel.md).
 # 1) JS deps for the Tailwind CLI (bun workspaces at the repo root).
 # 2) Go toolchain: Vercel's build image does not guarantee Go, so install a pinned one if missing.
 set -euo pipefail

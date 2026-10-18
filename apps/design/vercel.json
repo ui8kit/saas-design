@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "cd ../.. && bun install",
-  "buildCommand": "bun run build",
+  "installCommand": "bash scripts/vercel-install.sh",
+  "buildCommand": "node ../../tools/copy-media.mjs static && npx vite build",
   "outputDirectory": "build",
   "cleanUrls": true,
   "trailingSlash": false

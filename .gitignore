@@ -16,3 +16,4 @@ apps/design/static/fonts/
 .DS_Store
 .env
 .env.*
+.vercel-go/
