@@ -13,16 +13,17 @@ The first part covers common failures and their fixes. The second part summarize
 | ui8px `Unknown utility class` / violation | Off-grid step, palette color or arbitrary value, or a new utility not reviewed yet | Use an on-grid/token utility, or add a reviewed entry to `tools/ui8px/allowed.extra.json`, then `bun tools/ui8px-policy.ts` |
 | `brand tokens used in packages/` | `--brand-*` or `*-brand-*` in a package | Use a shadcn token; brand colors belong to app CSS |
 | `packages depend on app-level CSS` | A package uses a theme var only an app defines | Emit the var from `tools/tokens.ts` into `packages/tokens/theme.css` |
-| Parity mismatch (ui) | A brick def renders differently in one emitter | Read the printed case. Expressions cannot reference passthrough props (`pPass`); use `pStr`. |
+| Parity mismatch (ui) | A recipe override renders differently in one emitter | Read the printed case (templ / svelte / react vs canonical) |
 | Parity `unknown ui-* class` (blocks) | A class in markup that no generator or `base.css` defines | Define it via `css:`/`base.css`, or fix the typo |
-| Codegen error about an expression on a passthrough prop | Same as above | Switch the prop to `pStr` |
 | `npx fig2design` "command not found" inside a checkout | npx does not link the bin inside a directory named like the package | Run from `/tmp`, as `tools/extract.sh` does ([fig2design-npx-inside-source.md](../.project/backlog/fig2design-npx-inside-source.md)) |
 | `refusing: keep the .fig outside the repo` | `FIG` points inside the repo | Move the `.fig` out (e.g. `/workspace/fig-fixtures/`) |
 | `bun run serve` in apps/site loops with `E2BIG` | (fixed) `bunx serve` resolved to the script named `serve` itself | The script is now `npx -y serve@14 public -l 4173` |
 | A light island turns dark, or the reverse | A variant value `light`/`dark` ended up in `data-theme` and forced a token scope | Name variant keys differently (e.g. `default`); see [dark-mode rule](../.cursor/rules/dark-mode.mdc) |
 | Sheet clipped or painted under content | A parent has `overflow-hidden`/`isolate` | `ui8kit.js` moves the sheet to `<body>` on open ([ui-behaviors-sheet-portal.md](../.project/backlog/ui-behaviors-sheet-portal.md)) |
 | Chrome not found (shots, tests) | Chrome is not at `/usr/bin/google-chrome` | Set `CHROME=/path` (`shots*.ts`, `test-behaviors.ts`). `measure.ts` has the path hard-coded |
-| Svelte warning `a11y_no_noninteractive_tabindex` (Link) | Upstream codegen Svelte Link emitter | Known, non-fatal ([codegen-svelte-link-a11y-tabindex.md](../.project/backlog/codegen-svelte-link-a11y-tabindex.md)) |
+| `lint-apps: N blocking` | Raw tag, `{@html}` / `dangerouslySetInnerHTML` / `@templ.Raw`, computed tag, reactive ARIA, a second Block on a render path, or `style` in composition code | Use the primitive with `tag`/`as`, an icons component, a static ARIA attribute per branch, or extract a file; see [blocks-retag rule](../.cursor/rules/blocks-retag.mdc) |
+| `lint-apps.baseline.json: stale entry` | A baselined finding was fixed | Remove the entry |
+| Parity mismatch (design apps) | A design-svelte page and its design-react twin render a different `<body>` | `bun tools/design-parity.ts --diff`; change both apps |
 
 ## Known gaps (from `.project/backlog`)
 
@@ -38,14 +39,18 @@ The first part covers common failures and their fixes. The second part summarize
 | 7 of 14 images have empty `usedBy` | open | [fig2design-unused-images.md](../.project/backlog/fig2design-unused-images.md) |
 | `npx` fails inside the source checkout | open (minor) | [fig2design-npx-inside-source.md](../.project/backlog/fig2design-npx-inside-source.md) |
 
-### @ui8kit/codegen
+### @ui8kit/codegen 2.0
 
 | Item | Status | File |
 |---|---|---|
-| Not on npm; no recipe-override or custom-class hook (`registry.ts` rewrites classes) | worked-around | [codegen-not-on-npm-no-recipe-override.md](../.project/backlog/codegen-not-on-npm-no-recipe-override.md) |
-| No extension point for local bricks or showcase cases | worked-around | [codegen-no-local-brick-hook.md](../.project/backlog/codegen-no-local-brick-hook.md) |
-| Upstream fractional steps (`gap-1.5`) snapped to the grid | worked-around | [codegen-half-steps.md](../.project/backlog/codegen-half-steps.md) |
-| Svelte Link a11y warning | open | [codegen-svelte-link-a11y-tabindex.md](../.project/backlog/codegen-svelte-link-a11y-tabindex.md) |
+| Not on npm; no recipe-override hook (`registry.ts` merges `packages/ui/recipes` and rewrites classes) | worked-around | [codegen-not-on-npm-no-recipe-override.md](../.project/backlog/codegen-not-on-npm-no-recipe-override.md) |
+| A git dependency does not install the nested xgen workspaces | worked-around (`tools/xgen-link.ts`) | [codegen2-git-dep-nested-workspaces.md](../.project/backlog/codegen2-git-dep-nested-workspaces.md) |
+| `kit.css` mixes a document base layer and unlayered rules; per-element tokens (`--radius-card`, `data-density-*`) never match `ui-*` markup | worked-around | [codegen2-kit-css-layering.md](../.project/backlog/codegen2-kit-css-layering.md) |
+| Changed primitive defaults (Title, Stack, Summary) | worked-around | [codegen2-default-changes.md](../.project/backlog/codegen2-default-changes.md) |
+| React output uses kebab-case SVG attributes (dev warnings) | open | [codegen2-react-svg-attrs.md](../.project/backlog/codegen2-react-svg-attrs.md) |
+| Local bricks (ThemeToggle, Sheet) are upstream now | fixed | [codegen-no-local-brick-hook.md](../.project/backlog/codegen-no-local-brick-hook.md) |
+| Fractional steps (`gap-1.5`) | fixed | [codegen-half-steps.md](../.project/backlog/codegen-half-steps.md) |
+| Svelte Link a11y warning | fixed | [codegen-svelte-link-a11y-tabindex.md](../.project/backlog/codegen-svelte-link-a11y-tabindex.md) |
 
 ### ui8px
 
@@ -67,6 +72,7 @@ The first part covers common failures and their fixes. The second part summarize
 
 | Item | Status | File |
 |---|---|---|
+| Blocks DSL has no part files: the `<nav>` of `footer-simple` stays raw (baselined) | open | [blocks-dsl-no-part-files.md](../.project/backlog/blocks-dsl-no-part-files.md) |
 | Generated code must match templ runtime v0.3.1070 | worked-around | [templ-version-pin.md](../.project/backlog/templ-version-pin.md) |
 | `dark:` variant ignores `[data-theme]` islands | open | [tokens-dark-variant-ignores-data-theme.md](../.project/backlog/tokens-dark-variant-ignores-data-theme.md) |
 | Sheet is moved to `<body>` on open | open (works) | [ui-behaviors-sheet-portal.md](../.project/backlog/ui-behaviors-sheet-portal.md) |
@@ -78,5 +84,5 @@ The first part covers common failures and their fixes. The second part summarize
 
 - **Vercel.** A real deploy is not verified ([deploy-vercel.md](deploy-vercel.md#known-risks)).
 - **Design-specific scripts.** `tools/content.ts`, `tokens.ts`, `views.ts`, `shots.ts` and `figma-render.ts` are tied to frame `1-10` ([replicate-with-new-figma.md](replicate-with-new-figma.md#file-specific-code-you-must-change)).
-- **Block emitter.** It supports only templ and Svelte ([add-a-runtime.md](add-a-runtime.md#3-blocks-write-an-emitter)).
+- **Block emitter.** It supports templ, Svelte and React; Vue, Solid and the PHP/Python runtimes need an emitter ([add-a-runtime.md](add-a-runtime.md#4-blocks-emitter)).
 - **Contrast.** Contrast in dark mode was checked visually, not with an automated tool.

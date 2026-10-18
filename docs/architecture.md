@@ -13,7 +13,7 @@ fixtures/content/records     packages/tokens/theme.css (shadcn HSL)        │
   (@ui8kit/contract)         apps/*/brand.css (--brand-*, app only)        │
   │ tools/views.ts           fixtures/tokens/brand.* (brand-os)            │
   ▼                                                                        │
-fixtures/views/*.json        packages/ui  ◄── @ui8kit/codegen bricks + recipes + local bricks
+fixtures/views/*.json        packages/ui  ◄── @ui8kit/codegen 2.0 bricks + recipe overrides
   │                          packages/icons ◄── lucide-static subset
   │                          packages/blocks ◄── block DSL (packages/blocks/defs)
   │                               │ all emit semantic ui-* classes …
@@ -21,6 +21,8 @@ fixtures/views/*.json        packages/ui  ◄── @ui8kit/codegen bricks + rec
   │                          packages/adapter/src/*.css  (… whose utilities live here, in @apply)
   ▼                               ▼
 apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 5, static)
+                                        apps/design-react  (React 19, Vite SSR → static)
+                                          both read apps/design-shared (nav, pages, ds-* CSS)
 ```
 
 ## Layers
@@ -36,7 +38,7 @@ apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 
 | `fixtures/media/` | vector assets from the frame | `bun run content` |
 
 - **Records** are [@ui8kit/contract](https://github.com/ui8kit/contract) entries, dictionaries, menus, settings and a manifest. `tools/validate-content.ts` checks them in three ways: against the package's JSON Schemas (ajv), with `validateCollectionV04`, and with local reference checks (media ids, section item ids).
-- **Views** are the props of each block, with the shapes defined by the block `schema` in `packages/blocks/defs`. Both runtimes render from these same JSON files, so copy never lives in components.
+- **Views** are the props of each block, with the shapes defined by the block `schema` in `packages/blocks/defs`. Every runtime renders from these same JSON files, so copy never lives in components.
   - `home.json` is the site page: a list of `{ block, region, data }`.
   - `blocks.json` holds one data set per block, for the design-app previews.
 
@@ -101,9 +103,11 @@ The semantic class layer. Markup in every runtime carries only `ui-*` classes. T
 |---|---|---|---|
 | `apps/site` | Go + templ | `cmd/export/main.go` renders `fixtures/views/home.json` through `blocks.Render` into `views.Page` (`views/layout.templ`) | `apps/site/public` (index.html, `/assets/app.css` via Tailwind CLI, `/assets/ui8kit.js`, media) |
 | `apps/design-svelte` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design-svelte/build` (49 prerendered pages) |
+| `apps/design-react` | React 19, Vite (client + SSR build), `react-dom/server` prerender | `src/routes.tsx`, `src/pages/*` | `apps/design-react/build` (49 pages, no client React) |
+| `apps/design-shared` | TS + CSS shared by both design apps | `src/*`, `styles/design.css`, `scripts/foundations.ts` | `styles/foundations.generated.css` |
 
 - **Site.** One page for now (`pages = {"home.json": "index.html"}` in `cmd/export`). Each block's `region` (`header`/`main`/`footer`) places it.
-- **Design app.** Imports `@saas-design/ui|blocks|icons` through Vite aliases, `packages/blocks/catalog.json`, and `fixtures/views/blocks.json`. It generates its own data:
+- **Design apps.** `tools/design-parity.ts` asserts every design-react page has the same normalized DOM as its design-svelte page. The Svelte app imports `@saas-design/ui|blocks|icons` through Vite aliases, `packages/blocks/catalog.json`, and `fixtures/views/blocks.json`. It generates its own data:
   - `scripts/foundations.ts` → `foundations.generated.css` (one `ds-*` class per swatch or sample);
   - `scripts/showcase.ts` → `showcase.generated.json` (every brick part, recipe variant and showcase case).
 - **Theme script.** `src/hooks.server.ts` injects `theme-init.js` in place of `%theme-init%` in `app.html`.

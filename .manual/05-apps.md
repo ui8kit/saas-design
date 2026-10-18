@@ -19,4 +19,13 @@ bun run build                          # copy media → static/, vite build → 
 ```
 
 Pages: overview, foundations (colors, typography, spacing, radius, shadows), primitives, components, widgets, blocks + one page per block.
-`@saas-design/ui|blocks|icons` resolve via aliases in `vite.config.ts`. Docs-shell classes are `ds-*` in `src/lib/styles/design.css` (@apply only).
+`@saas-design/ui|blocks|icons` resolve via aliases in `vite.config.ts` (`@saas-design/icons/svelte` before `@saas-design/icons`). Docs-shell classes are `ds-*` in `apps/design-shared/styles/design.css` (@apply only); nav, page data and showcase transforms are shared in `apps/design-shared/src`.
+
+## apps/design-react — React 19 twin of the design app (Vite SSR + static prerender)
+
+```bash
+bun run design-react:build             # vite build (client + SSR) → prerender 49 pages into apps/design-react/build
+bun tools/design-parity.ts             # every page: normalized DOM identical to apps/design-svelte/build
+```
+
+Routes: `src/routes.tsx` + `src/pages/*`; same shared content and `ds-*` classes as the Svelte app. A page added to one design app must be added to the other.
