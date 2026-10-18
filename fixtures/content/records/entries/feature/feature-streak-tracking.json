@@ -1,0 +1,26 @@
+{
+  "id": "feature-streak-tracking",
+  "locale": "en",
+  "kind": "feature",
+  "status": "published",
+  "visibility": "public",
+  "slug": "streak-tracking",
+  "title": "Streak Tracking",
+  "excerpt": "Stay motivated by building unbreakable streaks and unlocking milestones.",
+  "order": 3,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "icon": {
+      "value": "flame"
+    },
+    "source": {
+      "value": "figma"
+    },
+    "figma_node": {
+      "value": "1:257"
+    }
+  }
+}

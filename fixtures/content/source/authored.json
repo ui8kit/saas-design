@@ -1,0 +1,87 @@
+{
+  "$comment": "Content that is NOT in the Figma file (FAQ answers, design-system showcase data). Everything else is read from fixtures/figma by tools/content.ts. Plain strings, locale en.",
+  "faq_answers": {
+    "What do I get with Premium?": "Advanced analytics, habit templates, cloud backup and sync across devices, premium themes and priority support.",
+    "What happens if I miss a day?": "Nothing is lost. Your streak pauses, the app suggests a better time, and you pick up again tomorrow."
+  },
+  "faq_more": [
+    { "q": "Can I use Habitus offline?", "a": "Yes. Habits are stored on the device and sync when you are back online." },
+    { "q": "Is there a family plan?", "a": "Premium covers one account. Family sharing is on the roadmap." },
+    { "q": "How do I cancel?", "a": "Cancel any time from Settings. You keep Premium until the end of the billing period." }
+  ],
+  "features_more": [
+    { "title": "Habit templates", "text": "Start from proven routines for sleep, focus, fitness and learning.", "icon": "layout-template" },
+    { "title": "Cloud sync", "text": "Your habits follow you across phone, tablet and web.", "icon": "cloud" },
+    { "title": "Private by default", "text": "Your data stays yours. Export or delete it any time.", "icon": "shield-check" }
+  ],
+  "stats": [
+    { "value": "1M+", "label": "Active users" },
+    { "value": "4.9", "label": "App store rating" },
+    { "value": "12M", "label": "Habits completed" },
+    { "value": "92%", "label": "Keep a 7 day streak" }
+  ],
+  "steps": [
+    { "title": "Pick a habit", "text": "Choose from templates or write your own goal.", "icon": "list-plus" },
+    { "title": "Set a reminder", "text": "Tell Habitus when, and it nudges you at the right time.", "icon": "bell" },
+    { "title": "Watch it grow", "text": "Streaks and heatmaps show your progress every week.", "icon": "chart-line" }
+  ],
+  "integrations": [
+    { "name": "Apple Health", "text": "Import steps, sleep and workouts.", "icon": "heart-pulse" },
+    { "name": "Google Fit", "text": "Sync activity minutes automatically.", "icon": "activity" },
+    { "name": "Calendar", "text": "Block time for habits in your calendar.", "icon": "calendar" },
+    { "name": "Notion", "text": "Log daily notes next to your habits.", "icon": "notebook-pen" },
+    { "name": "Slack", "text": "Share weekly wins with your team.", "icon": "message-square" },
+    { "name": "Zapier", "text": "Connect Habitus to 5000+ apps.", "icon": "zap" }
+  ],
+  "members": [
+    { "name": "Ava Lindqvist", "role": "Co-founder, Product", "avatar": "sarah" },
+    { "name": "Marcus Chen", "role": "Co-founder, Engineering", "avatar": "james" },
+    { "name": "Priya Raman", "role": "Head of Coaching", "avatar": "priya" }
+  ],
+  "posts": [
+    { "title": "The two-minute rule for new habits", "excerpt": "Make the first step so small you cannot say no.", "date": "2026-09-02", "tag": "Guides", "media": "screen-habit-tracker" },
+    { "title": "Why streaks work (and when they do not)", "excerpt": "What the research says about chains and motivation.", "date": "2026-09-16", "tag": "Research", "media": "screen-dashboard" },
+    { "title": "Designing a calm morning routine", "excerpt": "Five habits our users keep for more than a year.", "date": "2026-10-01", "tag": "Stories", "media": "screen-goals" }
+  ],
+  "releases": [
+    { "version": "3.2", "date": "2026-10-10", "title": "Weekly heatmaps", "text": "See every habit as a 7x52 heatmap and export it as an image." },
+    { "version": "3.1", "date": "2026-09-12", "title": "Smart reminder times", "text": "Reminders move to the time you usually complete a habit." },
+    { "version": "3.0", "date": "2026-08-01", "title": "New design", "text": "A fresh look with light and dark mode and larger tap targets." }
+  ],
+  "plans_more": [
+    { "title": "Team", "excerpt": "For coaches and small groups", "price": 1999, "period": "/month", "cta": "Contact sales", "features": ["Everything in Premium", "Up to 20 members", "Shared challenges", "Admin dashboard"] }
+  ],
+  "comparison": [
+    { "feature": "Unlimited habits", "free": "yes", "premium": "yes" },
+    { "feature": "Daily reminders", "free": "yes", "premium": "yes" },
+    { "feature": "Advanced analytics", "free": "no", "premium": "yes" },
+    { "feature": "Cloud backup and sync", "free": "no", "premium": "yes" },
+    { "feature": "Premium themes", "free": "no", "premium": "yes" },
+    { "feature": "Priority support", "free": "no", "premium": "yes" }
+  ],
+  "dashboard": {
+    "cards": [
+      { "label": "Today", "value": "5 / 7", "hint": "habits done" },
+      { "label": "Current streak", "value": "23 days", "hint": "best: 41" },
+      { "label": "This week", "value": "86%", "hint": "+4% vs last week" },
+      { "label": "Focus time", "value": "6h 20m", "hint": "logged this week" }
+    ],
+    "rows": [
+      { "habit": "Read 20 pages", "streak": "23", "status": "Done", "time": "07:30" },
+      { "habit": "Drink water", "streak": "41", "status": "Done", "time": "09:00" },
+      { "habit": "Workout", "streak": "6", "status": "Pending", "time": "18:00" },
+      { "habit": "Journal", "streak": "90", "status": "Pending", "time": "22:00" }
+    ]
+  },
+  "announcement": { "text": "Habitus 3.2 is out: weekly heatmaps for every habit.", "link": "Read the changelog" },
+  "cookie": { "text": "We use cookies to keep you signed in and to measure what works.", "accept": "Accept", "decline": "Decline" },
+  "not_found": { "code": "404", "title": "This page skipped a day", "text": "The page you are looking for does not exist or moved.", "cta": "Back to home" },
+  "empty": { "title": "No habits yet", "text": "Create your first habit and we will remind you at the right time.", "cta": "New habit" },
+  "auth": {
+    "login_title": "Welcome back", "login_text": "Log in to continue your streak.", "email": "Email", "password": "Password", "login": "Log In", "forgot": "Forgot password?",
+    "signup_title": "Create your account", "signup_text": "Start free. No credit card required.", "name": "Full name", "signup": "Get Started Free", "terms": "I agree to the Terms and Privacy Policy"
+  },
+  "contact": { "title": "Talk to us", "text": "Questions about Premium or Team? We answer within one business day.", "name": "Name", "email": "Email", "message": "Message", "send": "Send message" },
+  "settings": { "title": "Notifications", "text": "Choose how Habitus reminds you.", "options": ["Daily summary email", "Push reminders", "Weekly report"], "save": "Save changes" },
+  "download": { "title": "Take Habitus everywhere", "text": "Free on iOS and Android. Sync with the web app.", "ios": "App Store", "android": "Google Play" }
+}

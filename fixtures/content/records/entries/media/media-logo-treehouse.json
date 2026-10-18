@@ -1,0 +1,39 @@
+{
+  "id": "media-logo-treehouse",
+  "locale": "en",
+  "kind": "media",
+  "status": "published",
+  "visibility": "public",
+  "slug": "logo-treehouse",
+  "title": "Treehouse",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "file": {
+      "value": "media/svg/logo-treehouse.svg"
+    },
+    "public_path": {
+      "value": "/media/logo-treehouse.svg"
+    },
+    "mime": {
+      "value": "image/svg+xml"
+    },
+    "width": {
+      "value": 164
+    },
+    "height": {
+      "value": 47
+    },
+    "alt": {
+      "value": "Treehouse"
+    },
+    "figma_node": {
+      "value": "1:230"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "header",
+  "location": "header",
+  "locale": "en",
+  "items": [
+    {
+      "id": "header-home",
+      "label": "Home",
+      "url": "#top",
+      "order": 1
+    },
+    {
+      "id": "header-features",
+      "label": "Features",
+      "url": "#why",
+      "order": 2
+    },
+    {
+      "id": "header-how-it-works",
+      "label": "How it works",
+      "url": "#inside",
+      "order": 3
+    },
+    {
+      "id": "header-blog",
+      "label": "Blog",
+      "url": "#blog",
+      "order": 4
+    },
+    {
+      "id": "header-resources",
+      "label": "Resources",
+      "url": "#resources",
+      "order": 5
+    },
+    {
+      "id": "header-about-us",
+      "label": "About Us",
+      "url": "#about",
+      "order": 6
+    }
+  ]
+}

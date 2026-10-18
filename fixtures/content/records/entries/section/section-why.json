@@ -1,0 +1,30 @@
+{
+  "id": "section-why",
+  "locale": "en",
+  "kind": "section",
+  "status": "published",
+  "visibility": "public",
+  "slug": "why",
+  "title": "Why you’ll love it",
+  "excerpt": "Designed to help you stay on track, effortlessly.",
+  "order": 2,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "figma_node": {
+      "value": "1:244"
+    },
+    "block": {
+      "value": "feature-cards"
+    },
+    "items": {
+      "value": [
+        "feature-smart-reminders",
+        "feature-progress-analytics",
+        "feature-streak-tracking"
+      ]
+    }
+  }
+}

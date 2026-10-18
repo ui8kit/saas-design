@@ -1,0 +1,72 @@
+{
+  "id": "plan-premium",
+  "locale": "en",
+  "kind": "plan",
+  "status": "published",
+  "visibility": "public",
+  "slug": "premium",
+  "title": "Premium",
+  "excerpt": "All features you need",
+  "order": 2,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "price": {
+      "value": 499
+    },
+    "currency": {
+      "value": "USD"
+    },
+    "price_label": {
+      "value": "$4.99"
+    },
+    "period": {
+      "value": "/month"
+    },
+    "features": {
+      "value": [
+        {
+          "label": "Everything in Free",
+          "included": true
+        },
+        {
+          "label": "Advanced analytics",
+          "included": true
+        },
+        {
+          "label": "Habit templates & suggestions",
+          "included": true
+        },
+        {
+          "label": "Cloud backup & device sync",
+          "included": true
+        },
+        {
+          "label": "Premium themes and icons",
+          "included": true
+        },
+        {
+          "label": "Priority support",
+          "included": true
+        }
+      ]
+    },
+    "cta_label": {
+      "value": "Upgrade Now"
+    },
+    "cta_href": {
+      "value": "#signup"
+    },
+    "featured": {
+      "value": true
+    },
+    "badge": {
+      "value": "Popular"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

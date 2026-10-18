@@ -1,0 +1,23 @@
+{
+  "id": "feature-cloud-sync",
+  "locale": "en",
+  "kind": "feature",
+  "status": "published",
+  "visibility": "public",
+  "slug": "cloud-sync",
+  "title": "Cloud sync",
+  "excerpt": "Your habits follow you across phone, tablet and web.",
+  "order": 11,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "icon": {
+      "value": "cloud"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "block-newsletter-band",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "newsletter-band",
+  "title": "Newsletter band",
+  "excerpt": "Inline email form on a muted band.",
+  "order": 29,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "cta"
+    },
+    "runtimes": {
+      "value": [
+        "svelte"
+      ]
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

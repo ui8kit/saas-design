@@ -1,0 +1,23 @@
+{
+  "id": "integration-calendar",
+  "locale": "en",
+  "kind": "integration",
+  "status": "published",
+  "visibility": "public",
+  "slug": "calendar",
+  "title": "Calendar",
+  "excerpt": "Block time for habits in your calendar.",
+  "order": 3,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "icon": {
+      "value": "calendar"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

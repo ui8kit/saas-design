@@ -1,0 +1,39 @@
+{
+  "id": "media-avatar-sarah",
+  "locale": "en",
+  "kind": "media",
+  "status": "published",
+  "visibility": "public",
+  "slug": "avatar-sarah",
+  "title": "Sarah T.",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "file": {
+      "value": "figma/images/f578f9c2a181ef669150341163e63e6e9da01878.jpg"
+    },
+    "public_path": {
+      "value": "/media/avatar-sarah.jpg"
+    },
+    "mime": {
+      "value": "image/jpeg"
+    },
+    "width": {
+      "value": 1024
+    },
+    "height": {
+      "value": 1024
+    },
+    "alt": {
+      "value": "Sarah T."
+    },
+    "figma_hash": {
+      "value": "f578f9c2a181ef669150341163e63e6e9da01878"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

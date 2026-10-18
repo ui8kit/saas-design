@@ -1,0 +1,32 @@
+{
+  "id": "block-app-gallery",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "app-gallery",
+  "title": "App gallery",
+  "excerpt": "Centered heading and a row of phone screenshots on colored tiles.",
+  "order": 5,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "media"
+    },
+    "runtimes": {
+      "value": [
+        "templ",
+        "svelte"
+      ]
+    },
+    "figma_node": {
+      "value": "1:206"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

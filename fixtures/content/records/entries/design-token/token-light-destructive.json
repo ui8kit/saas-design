@@ -1,0 +1,33 @@
+{
+  "id": "token-light-destructive",
+  "locale": "en",
+  "kind": "design-token",
+  "status": "published",
+  "visibility": "public",
+  "slug": "light-destructive",
+  "title": "--destructive",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "group": {
+      "value": "color"
+    },
+    "scope": {
+      "value": "shadcn"
+    },
+    "mode": {
+      "value": "light"
+    },
+    "value": {
+      "value": "hsl(0 72.2% 50.6%)"
+    },
+    "hex": {
+      "value": "#dc2626"
+    },
+    "source": {
+      "value": "not-in-figma"
+    }
+  }
+}

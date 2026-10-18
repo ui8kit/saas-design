@@ -1,0 +1,22 @@
+{
+  "id": "stat-3",
+  "locale": "en",
+  "kind": "stat",
+  "status": "published",
+  "visibility": "public",
+  "slug": "3",
+  "title": "Habits completed",
+  "order": 3,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "value": {
+      "value": "12M"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

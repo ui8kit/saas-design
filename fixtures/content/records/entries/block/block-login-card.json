@@ -1,0 +1,28 @@
+{
+  "id": "block-login-card",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "login-card",
+  "title": "Login card",
+  "excerpt": "Email and password form in a card.",
+  "order": 31,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "account"
+    },
+    "runtimes": {
+      "value": [
+        "svelte"
+      ]
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

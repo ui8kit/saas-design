@@ -1,0 +1,23 @@
+{
+  "id": "faq-how-do-i-cancel",
+  "locale": "en",
+  "kind": "faq",
+  "status": "published",
+  "visibility": "public",
+  "slug": "how-do-i-cancel",
+  "title": "How do I cancel?",
+  "content": "Cancel any time from Settings. You keep Premium until the end of the billing period.",
+  "order": 12,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "tone": {
+      "value": "muted"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

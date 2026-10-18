@@ -1,0 +1,65 @@
+{
+  "id": "plan-free",
+  "locale": "en",
+  "kind": "plan",
+  "status": "published",
+  "visibility": "public",
+  "slug": "free",
+  "title": "Free",
+  "excerpt": "Perfect to get started",
+  "order": 1,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "price": {
+      "value": 0
+    },
+    "currency": {
+      "value": "USD"
+    },
+    "price_label": {
+      "value": "$0"
+    },
+    "period": {
+      "value": ""
+    },
+    "features": {
+      "value": [
+        {
+          "label": "Track unlimited habits",
+          "included": true
+        },
+        {
+          "label": "Daily reminders",
+          "included": true
+        },
+        {
+          "label": "Streaks & basic analytics",
+          "included": true
+        },
+        {
+          "label": "Light & dark mode",
+          "included": true
+        },
+        {
+          "label": "No credit card required",
+          "included": false
+        }
+      ]
+    },
+    "cta_label": {
+      "value": "Start for Free"
+    },
+    "cta_href": {
+      "value": "#signup"
+    },
+    "featured": {
+      "value": false
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "faq-premium-2",
+  "locale": "en",
+  "kind": "faq",
+  "status": "published",
+  "visibility": "public",
+  "slug": "premium-2",
+  "title": "What do I get with Premium?",
+  "content": "Advanced analytics, habit templates, cloud backup and sync across devices, premium themes and priority support.",
+  "order": 2,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "tone": {
+      "value": "pink"
+    },
+    "source": {
+      "value": "figma"
+    },
+    "answer_source": {
+      "value": "authored"
+    }
+  }
+}

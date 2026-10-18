@@ -1,0 +1,23 @@
+{
+  "id": "release-3-1",
+  "locale": "en",
+  "kind": "release",
+  "status": "published",
+  "visibility": "public",
+  "slug": "3-1",
+  "title": "Smart reminder times",
+  "excerpt": "Reminders move to the time you usually complete a habit.",
+  "order": 2,
+  "published_at": "2026-10-18T00:00:00Z",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "release_version": {
+      "value": "3.1"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

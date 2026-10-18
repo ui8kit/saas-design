@@ -1,0 +1,31 @@
+{
+  "id": "footer-product",
+  "location": "footer",
+  "locale": "en",
+  "items": [
+    {
+      "id": "footer-product-features",
+      "label": "Features",
+      "url": "#why",
+      "order": 1
+    },
+    {
+      "id": "footer-product-pricing",
+      "label": "Pricing",
+      "url": "#pricing",
+      "order": 2
+    },
+    {
+      "id": "footer-product-faq",
+      "label": "FAQ",
+      "url": "#faq",
+      "order": 3
+    },
+    {
+      "id": "footer-product-blog",
+      "label": "Blog",
+      "url": "#blog",
+      "order": 4
+    }
+  ]
+}

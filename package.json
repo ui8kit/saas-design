@@ -12,9 +12,14 @@
     "shots": "bun tools/shots.ts",
     "tokens": "bun tools/tokens.ts",
     "brand:emit": "npx -y brand-os@0.3.0 emit --schema fixtures/tokens/brand.contract.json --output fixtures/tokens/brand.generated --force --json",
-    "brand:check": "npx -y brand-os@0.3.0 validate --schema fixtures/tokens/brand.contract.json --json && npx -y brand-os@0.3.0 verify --schema fixtures/tokens/brand.contract.json --bundle fixtures/tokens/brand.generated --strict --json"
+    "brand:check": "npx -y brand-os@0.3.0 validate --schema fixtures/tokens/brand.contract.json --json && npx -y brand-os@0.3.0 verify --schema fixtures/tokens/brand.contract.json --bundle fixtures/tokens/brand.generated --strict --json",
+    "content": "bun tools/content.ts",
+    "contract": "bun tools/validate-content.ts"
   },
   "devDependencies": {
+    "@ui8kit/contract": "0.2.0",
+    "ajv": "8",
+    "ajv-formats": "3",
     "playwright-core": "1.48.2"
   }
 }

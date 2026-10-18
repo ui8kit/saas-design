@@ -1,0 +1,39 @@
+{
+  "id": "media-avatar-james",
+  "locale": "en",
+  "kind": "media",
+  "status": "published",
+  "visibility": "public",
+  "slug": "avatar-james",
+  "title": "James K.",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "file": {
+      "value": "figma/images/1d5ad8aaf12fd61a75197f707f6ef40c7edd6e1f.jpg"
+    },
+    "public_path": {
+      "value": "/media/avatar-james.jpg"
+    },
+    "mime": {
+      "value": "image/jpeg"
+    },
+    "width": {
+      "value": 1024
+    },
+    "height": {
+      "value": 1024
+    },
+    "alt": {
+      "value": "James K."
+    },
+    "figma_hash": {
+      "value": "1d5ad8aaf12fd61a75197f707f6ef40c7edd6e1f"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

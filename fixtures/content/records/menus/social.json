@@ -1,0 +1,19 @@
+{
+  "id": "social",
+  "location": "footer",
+  "locale": "en",
+  "items": [
+    {
+      "id": "social-instagram",
+      "label": "Instagram",
+      "url": "#instagram",
+      "order": 1
+    },
+    {
+      "id": "social-linkedin",
+      "label": "LinkedIn",
+      "url": "#linkedin",
+      "order": 2
+    }
+  ]
+}

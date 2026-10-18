@@ -1,0 +1,25 @@
+{
+  "id": "footer-company",
+  "location": "footer",
+  "locale": "en",
+  "items": [
+    {
+      "id": "footer-company-about",
+      "label": "About",
+      "url": "#about",
+      "order": 1
+    },
+    {
+      "id": "footer-company-contact",
+      "label": "Contact",
+      "url": "#contact",
+      "order": 2
+    },
+    {
+      "id": "footer-company-privacy-policy",
+      "label": "Privacy Policy",
+      "url": "#privacy",
+      "order": 3
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "faq-can-i-use-habitus-offline",
+  "locale": "en",
+  "kind": "faq",
+  "status": "published",
+  "visibility": "public",
+  "slug": "can-i-use-habitus-offline",
+  "title": "Can I use Habitus offline?",
+  "content": "Yes. Habits are stored on the device and sync when you are back online.",
+  "order": 10,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "tone": {
+      "value": "muted"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

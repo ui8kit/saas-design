@@ -1,0 +1,33 @@
+{
+  "id": "page-home",
+  "locale": "en",
+  "kind": "page",
+  "status": "published",
+  "visibility": "public",
+  "slug": "home",
+  "title": "Habitus — Build Better Habits",
+  "template": "landing",
+  "excerpt": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "figma_node": {
+      "value": "1:10"
+    },
+    "sections": {
+      "value": [
+        "section-hero",
+        "section-why",
+        "section-social-proof",
+        "section-inside",
+        "section-testimonials",
+        "section-cta",
+        "section-pricing",
+        "section-faq",
+        "section-footer"
+      ]
+    }
+  }
+}

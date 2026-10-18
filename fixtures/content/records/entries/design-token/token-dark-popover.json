@@ -1,0 +1,33 @@
+{
+  "id": "token-dark-popover",
+  "locale": "en",
+  "kind": "design-token",
+  "status": "published",
+  "visibility": "public",
+  "slug": "dark-popover",
+  "title": "--popover",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "group": {
+      "value": "color"
+    },
+    "scope": {
+      "value": "shadcn"
+    },
+    "mode": {
+      "value": "dark"
+    },
+    "value": {
+      "value": "hsl(215 27.9% 16.9%)"
+    },
+    "hex": {
+      "value": "#1f2937"
+    },
+    "source": {
+      "value": "figma-fill"
+    }
+  }
+}

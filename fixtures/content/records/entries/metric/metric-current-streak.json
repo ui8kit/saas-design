@@ -1,0 +1,25 @@
+{
+  "id": "metric-current-streak",
+  "locale": "en",
+  "kind": "metric",
+  "status": "published",
+  "visibility": "public",
+  "slug": "current-streak",
+  "title": "Current streak",
+  "order": 2,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "value": {
+      "value": "23 days"
+    },
+    "hint": {
+      "value": "best: 41"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

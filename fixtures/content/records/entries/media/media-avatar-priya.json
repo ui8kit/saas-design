@@ -1,0 +1,39 @@
+{
+  "id": "media-avatar-priya",
+  "locale": "en",
+  "kind": "media",
+  "status": "published",
+  "visibility": "public",
+  "slug": "avatar-priya",
+  "title": "Priya R.",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "file": {
+      "value": "figma/images/ec901f1c0d6bdc3abb3b7f2578c96a444ee001e2.jpg"
+    },
+    "public_path": {
+      "value": "/media/avatar-priya.jpg"
+    },
+    "mime": {
+      "value": "image/jpeg"
+    },
+    "width": {
+      "value": 1024
+    },
+    "height": {
+      "value": 1024
+    },
+    "alt": {
+      "value": "Priya R."
+    },
+    "figma_hash": {
+      "value": "ec901f1c0d6bdc3abb3b7f2578c96a444ee001e2"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

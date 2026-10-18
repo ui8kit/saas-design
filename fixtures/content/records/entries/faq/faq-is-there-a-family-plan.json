@@ -1,0 +1,23 @@
+{
+  "id": "faq-is-there-a-family-plan",
+  "locale": "en",
+  "kind": "faq",
+  "status": "published",
+  "visibility": "public",
+  "slug": "is-there-a-family-plan",
+  "title": "Is there a family plan?",
+  "content": "Premium covers one account. Family sharing is on the roadmap.",
+  "order": 11,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "tone": {
+      "value": "muted"
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

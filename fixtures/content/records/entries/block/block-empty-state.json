@@ -1,0 +1,28 @@
+{
+  "id": "block-empty-state",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "empty-state",
+  "title": "Empty state",
+  "excerpt": "Icon, message and a primary action.",
+  "order": 36,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "dashboard"
+    },
+    "runtimes": {
+      "value": [
+        "svelte"
+      ]
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

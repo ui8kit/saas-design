@@ -1,0 +1,32 @@
+{
+  "id": "block-pricing-two-plans",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "pricing-two-plans",
+  "title": "Pricing: two plans",
+  "excerpt": "Free and featured plan cards with check lists.",
+  "order": 8,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "pricing"
+    },
+    "runtimes": {
+      "value": [
+        "templ",
+        "svelte"
+      ]
+    },
+    "figma_node": {
+      "value": "1:84"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}

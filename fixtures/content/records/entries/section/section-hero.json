@@ -1,0 +1,52 @@
+{
+  "id": "section-hero",
+  "locale": "en",
+  "kind": "section",
+  "status": "published",
+  "visibility": "public",
+  "slug": "hero",
+  "title": "Build Better Habits. One Day at a Time.",
+  "excerpt": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+  "order": 1,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "figma_node": {
+      "value": "1:262"
+    },
+    "block": {
+      "value": "hero-phones"
+    },
+    "badge": {
+      "value": "Loved by 1M+ users worldwide"
+    },
+    "primary_label": {
+      "value": "Get Started Free"
+    },
+    "primary_href": {
+      "value": "#pricing"
+    },
+    "secondary_label": {
+      "value": "Watch Demo"
+    },
+    "secondary_href": {
+      "value": "#inside"
+    },
+    "login_label": {
+      "value": "Log In"
+    },
+    "login_href": {
+      "value": "#login"
+    },
+    "media": {
+      "value": [
+        "media-screen-habit-tracker",
+        "media-screen-settings",
+        "media-screen-dashboard",
+        "media-screen-goals"
+      ]
+    }
+  }
+}

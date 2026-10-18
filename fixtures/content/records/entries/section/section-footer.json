@@ -1,0 +1,38 @@
+{
+  "id": "section-footer",
+  "locale": "en",
+  "kind": "section",
+  "status": "published",
+  "visibility": "public",
+  "slug": "footer",
+  "title": "Habitus",
+  "excerpt": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+  "order": 9,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "figma_node": {
+      "value": "1:11"
+    },
+    "block": {
+      "value": "footer-newsletter"
+    },
+    "newsletter_title": {
+      "value": "Newsletter"
+    },
+    "newsletter_text": {
+      "value": "Get tips & updates in your inbox"
+    },
+    "email_placeholder": {
+      "value": "Enter your email"
+    },
+    "submit_label": {
+      "value": "Subscribe"
+    },
+    "copyright": {
+      "value": "© 2025 Habitus. All rights reserved."
+    }
+  }
+}

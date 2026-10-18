@@ -1,0 +1,28 @@
+{
+  "id": "block-comparison-table",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "comparison-table",
+  "title": "Comparison table",
+  "excerpt": "Feature by plan table with check marks.",
+  "order": 21,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "pricing"
+    },
+    "runtimes": {
+      "value": [
+        "svelte"
+      ]
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

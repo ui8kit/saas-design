@@ -1,0 +1,33 @@
+{
+  "id": "token-light-muted-foreground",
+  "locale": "en",
+  "kind": "design-token",
+  "status": "published",
+  "visibility": "public",
+  "slug": "light-muted-foreground",
+  "title": "--muted-foreground",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "group": {
+      "value": "color"
+    },
+    "scope": {
+      "value": "shadcn"
+    },
+    "mode": {
+      "value": "light"
+    },
+    "value": {
+      "value": "hsl(215 13.8% 34.1%)"
+    },
+    "hex": {
+      "value": "#4b5563"
+    },
+    "source": {
+      "value": "figma-variable:Grey Text"
+    }
+  }
+}

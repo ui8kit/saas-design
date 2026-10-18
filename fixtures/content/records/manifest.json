@@ -1,0 +1,903 @@
+{
+  "name": "saas-design",
+  "version": "1",
+  "resources": [
+    {
+      "record": {
+        "id": "page",
+        "label": "Pages",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "figma_node",
+            "label": "figma node",
+            "type": "string"
+          },
+          {
+            "id": "sections",
+            "label": "sections",
+            "type": "collection",
+            "items": {
+              "id": "section",
+              "label": "section",
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "section",
+        "label": "Page sections",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "figma_node",
+            "label": "figma node",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "block",
+            "label": "block",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "badge",
+            "label": "badge",
+            "type": "string"
+          },
+          {
+            "id": "primary_label",
+            "label": "primary label",
+            "type": "string"
+          },
+          {
+            "id": "primary_href",
+            "label": "primary href",
+            "type": "string"
+          },
+          {
+            "id": "secondary_label",
+            "label": "secondary label",
+            "type": "string"
+          },
+          {
+            "id": "secondary_href",
+            "label": "secondary href",
+            "type": "string"
+          },
+          {
+            "id": "login_label",
+            "label": "login label",
+            "type": "string"
+          },
+          {
+            "id": "login_href",
+            "label": "login href",
+            "type": "string"
+          },
+          {
+            "id": "link_label",
+            "label": "link label",
+            "type": "string"
+          },
+          {
+            "id": "link_href",
+            "label": "link href",
+            "type": "string"
+          },
+          {
+            "id": "media",
+            "label": "media",
+            "type": "collection",
+            "items": {
+              "id": "media_id",
+              "label": "media id",
+              "type": "string"
+            }
+          },
+          {
+            "id": "logos",
+            "label": "logos",
+            "type": "collection",
+            "items": {
+              "id": "media_id",
+              "label": "media id",
+              "type": "string"
+            }
+          },
+          {
+            "id": "items",
+            "label": "items",
+            "type": "collection",
+            "items": {
+              "id": "entry_id",
+              "label": "entry id",
+              "type": "string"
+            }
+          },
+          {
+            "id": "newsletter_title",
+            "label": "newsletter title",
+            "type": "string"
+          },
+          {
+            "id": "newsletter_text",
+            "label": "newsletter text",
+            "type": "string"
+          },
+          {
+            "id": "email_placeholder",
+            "label": "email placeholder",
+            "type": "string"
+          },
+          {
+            "id": "submit_label",
+            "label": "submit label",
+            "type": "string"
+          },
+          {
+            "id": "copyright",
+            "label": "copyright",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "media",
+        "label": "Media",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "file",
+            "label": "file",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "public_path",
+            "label": "public path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "mime",
+            "label": "mime",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "width",
+            "label": "width",
+            "type": "number",
+            "rules": [
+              {
+                "name": "fastygo.codex/integer"
+              }
+            ]
+          },
+          {
+            "id": "height",
+            "label": "height",
+            "type": "number",
+            "rules": [
+              {
+                "name": "fastygo.codex/integer"
+              }
+            ]
+          },
+          {
+            "id": "alt",
+            "label": "alt",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "figma_hash",
+            "label": "figma hash",
+            "type": "string"
+          },
+          {
+            "id": "figma_node",
+            "label": "figma node",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "feature",
+        "label": "Features",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "icon",
+            "label": "icon",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "figma_node",
+            "label": "figma node",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "testimonial",
+        "label": "Testimonials",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "role",
+            "label": "role",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "plan",
+        "label": "Plans",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "price",
+            "label": "price",
+            "type": "number",
+            "required": true,
+            "rules": [
+              {
+                "name": "fastygo.codex/money",
+                "args": {
+                  "currency_field": "currency"
+                }
+              }
+            ]
+          },
+          {
+            "id": "currency",
+            "label": "currency",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "price_label",
+            "label": "price label",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "period",
+            "label": "period",
+            "type": "string"
+          },
+          {
+            "id": "features",
+            "label": "features",
+            "type": "collection",
+            "items": {
+              "id": "feature",
+              "label": "feature",
+              "type": "object",
+              "fields": [
+                {
+                  "id": "label",
+                  "label": "label",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "id": "included",
+                  "label": "included",
+                  "type": "boolean",
+                  "required": true
+                }
+              ]
+            }
+          },
+          {
+            "id": "cta_label",
+            "label": "cta label",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "cta_href",
+            "label": "cta href",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "featured",
+            "label": "featured",
+            "type": "boolean"
+          },
+          {
+            "id": "badge",
+            "label": "badge",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "faq",
+        "label": "FAQ",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "tone",
+            "label": "tone",
+            "type": "select",
+            "options": [
+              {
+                "value": "primary",
+                "label": "primary"
+              },
+              {
+                "value": "pink",
+                "label": "pink"
+              },
+              {
+                "value": "lilac",
+                "label": "lilac"
+              },
+              {
+                "value": "sky",
+                "label": "sky"
+              },
+              {
+                "value": "muted",
+                "label": "muted"
+              }
+            ]
+          },
+          {
+            "id": "answer_source",
+            "label": "answer source",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "stat",
+        "label": "Stats",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "value",
+            "label": "value",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "step",
+        "label": "Steps",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "icon",
+            "label": "icon",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "integration",
+        "label": "Integrations",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "icon",
+            "label": "icon",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "member",
+        "label": "Team members",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "role",
+            "label": "role",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "post",
+        "label": "Posts",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "tag",
+            "label": "tag",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "release",
+        "label": "Releases",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "release_version",
+            "label": "release version",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "comparison-row",
+        "label": "Comparison rows",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "free",
+            "label": "free",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "id": "premium",
+            "label": "premium",
+            "type": "boolean",
+            "required": true
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "metric",
+        "label": "Metrics",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "value",
+            "label": "value",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "hint",
+            "label": "hint",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "habit",
+        "label": "Habits",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "streak",
+            "label": "streak",
+            "type": "number",
+            "rules": [
+              {
+                "name": "fastygo.codex/integer"
+              }
+            ]
+          },
+          {
+            "id": "habit_status",
+            "label": "habit status",
+            "type": "select",
+            "options": [
+              {
+                "value": "done",
+                "label": "Done"
+              },
+              {
+                "value": "pending",
+                "label": "Pending"
+              }
+            ]
+          },
+          {
+            "id": "time",
+            "label": "time",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "block",
+        "label": "Design-system blocks",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "category",
+            "label": "category",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "runtimes",
+            "label": "runtimes",
+            "type": "collection",
+            "items": {
+              "id": "runtime",
+              "label": "runtime",
+              "type": "string"
+            }
+          },
+          {
+            "id": "figma_node",
+            "label": "figma node",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "select",
+            "options": [
+              {
+                "value": "figma",
+                "label": "Figma"
+              },
+              {
+                "value": "authored",
+                "label": "Authored"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "record": {
+        "id": "design-token",
+        "label": "Design tokens",
+        "scope": "tenant",
+        "schema_version": "1",
+        "owner_module": "saas-design",
+        "fields": [
+          {
+            "id": "group",
+            "label": "group",
+            "type": "select",
+            "required": true,
+            "options": [
+              {
+                "value": "color",
+                "label": "color"
+              },
+              {
+                "value": "radius",
+                "label": "radius"
+              },
+              {
+                "value": "font",
+                "label": "font"
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "label": "scope",
+            "type": "select",
+            "required": true,
+            "options": [
+              {
+                "value": "shadcn",
+                "label": "shadcn set (packages)"
+              },
+              {
+                "value": "app",
+                "label": "app level only"
+              }
+            ]
+          },
+          {
+            "id": "mode",
+            "label": "mode",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "value",
+            "label": "value",
+            "type": "string",
+            "required": true
+          },
+          {
+            "id": "hex",
+            "label": "hex",
+            "type": "string"
+          },
+          {
+            "id": "source",
+            "label": "source",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

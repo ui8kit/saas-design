@@ -1,0 +1,33 @@
+{
+  "id": "token-brand-light-brand-placeholder",
+  "locale": "en",
+  "kind": "design-token",
+  "status": "published",
+  "visibility": "public",
+  "slug": "brand-light-brand-placeholder",
+  "title": "--brand-placeholder",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "group": {
+      "value": "color"
+    },
+    "scope": {
+      "value": "app"
+    },
+    "mode": {
+      "value": "light"
+    },
+    "value": {
+      "value": "hsl(236 10.1% 70.8%)"
+    },
+    "hex": {
+      "value": "#adaebc"
+    },
+    "source": {
+      "value": "figma-fill"
+    }
+  }
+}

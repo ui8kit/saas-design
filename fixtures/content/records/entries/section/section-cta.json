@@ -1,0 +1,29 @@
+{
+  "id": "section-cta",
+  "locale": "en",
+  "kind": "section",
+  "status": "published",
+  "visibility": "public",
+  "slug": "cta",
+  "title": "Ready to build better habits?",
+  "excerpt": "Take control of your daily routines, stay consistent with the goals that matter, and build meaningful progress — one habit at a time. With Habitus, you’re just a step away from creating a better version of yourself. ",
+  "order": 6,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "figma_node": {
+      "value": "1:170"
+    },
+    "block": {
+      "value": "cta-split"
+    },
+    "primary_label": {
+      "value": "Start Tracking – It’s Free"
+    },
+    "primary_href": {
+      "value": "#pricing"
+    }
+  }
+}

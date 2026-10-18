@@ -1,0 +1,28 @@
+{
+  "id": "block-cookie-banner",
+  "locale": "en",
+  "kind": "block",
+  "status": "published",
+  "visibility": "public",
+  "slug": "cookie-banner",
+  "title": "Cookie banner",
+  "excerpt": "Consent text with accept and decline.",
+  "order": 38,
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "category": {
+      "value": "support"
+    },
+    "runtimes": {
+      "value": [
+        "svelte"
+      ]
+    },
+    "source": {
+      "value": "authored"
+    }
+  }
+}

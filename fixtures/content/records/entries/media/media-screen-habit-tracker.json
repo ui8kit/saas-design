@@ -1,0 +1,39 @@
+{
+  "id": "media-screen-habit-tracker",
+  "locale": "en",
+  "kind": "media",
+  "status": "published",
+  "visibility": "public",
+  "slug": "screen-habit-tracker",
+  "title": "Habit tracker screen of the Habitus app",
+  "version": 1,
+  "created_at": "2026-10-18T00:00:00Z",
+  "updated_at": "2026-10-18T00:00:00Z",
+  "published_at": "2026-10-18T00:00:00Z",
+  "metadata": {
+    "file": {
+      "value": "figma/images/1bc08fb819ca5d936d5f96bb8290547b9d7865d9.png"
+    },
+    "public_path": {
+      "value": "/media/screen-habit-tracker.png"
+    },
+    "mime": {
+      "value": "image/png"
+    },
+    "width": {
+      "value": 938
+    },
+    "height": {
+      "value": 2030
+    },
+    "alt": {
+      "value": "Habit tracker screen of the Habitus app"
+    },
+    "figma_hash": {
+      "value": "1bc08fb819ca5d936d5f96bb8290547b9d7865d9"
+    },
+    "source": {
+      "value": "figma"
+    }
+  }
+}
