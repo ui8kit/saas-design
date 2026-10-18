@@ -1,0 +1,10 @@
+{
+  "name": "@saas-design/site",
+  "private": true,
+  "description": "Go templ static copy of the Figma frame Home (1:10).",
+  "scripts": {
+    "generate": "go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path views",
+    "build": "bash scripts/build.sh",
+    "serve": "bunx serve public -l 4173"
+  }
+}

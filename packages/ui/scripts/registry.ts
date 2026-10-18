@@ -24,7 +24,8 @@ const kebab = (s: string) => s.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCas
 export const css = new Map<string, string>(); // semantic class -> utilities
 const origin = new Map<string, string>(); // semantic class -> where
 function define(name: string, utilities: string, where: string): string {
-  const u = utilities.trim().replace(/\s+/g, " ");
+  // Marker classes (group, peer) cannot be @applied in Tailwind v4 and carry no styling; no brick uses group-*/peer-* variants.
+  const u = utilities.trim().split(/\s+/).filter((t) => !/^(group|peer)(\/.*)?$/.test(t)).join(" ");
   if (!u) return "";
   const prev = css.get(name);
   if (prev !== undefined && prev !== u) throw new Error(`semantic class ${name} defined twice with different utilities (${origin.get(name)} / ${where})`);

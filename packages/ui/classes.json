@@ -78,7 +78,6 @@
   "ui-dialog-size-sm": "w-full max-w-sm",
   "ui-dialog-size-xl": "w-full max-w-4xl",
   "ui-disabled": "pointer-events-none opacity-50",
-  "ui-disclosure": "group",
   "ui-disclosure-card": "rounded-lg bg-card text-card-foreground",
   "ui-disclosure-default": "rounded-md inset-ring inset-ring-border",
   "ui-disclosure-size-default": "text-base",

@@ -1,0 +1,45 @@
+package views
+
+// PageMeta is the page part of fixtures/views/<page>.json.
+type PageMeta struct {
+	ID          string `json:"id"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Lang        string `json:"lang"`
+	Figma       string `json:"figma"`
+}
+
+// Regions groups rendered blocks by landmark: header and footer blocks sit outside <main>.
+type Regions struct {
+	Header []templ.Component
+	Main   []templ.Component
+	Footer []templ.Component
+}
+
+templ Page(meta PageMeta, r Regions, css string) {
+	<!DOCTYPE html>
+	<html lang={ meta.Lang }>
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<title>{ meta.Title }</title>
+			<meta name="description" content={ meta.Description }/>
+			<link rel="icon" href="/media/brand-mark.svg" type="image/svg+xml"/>
+			<link rel="stylesheet" href={ css }/>
+		</head>
+		<body class="ui-page" data-class="page" data-figma={ meta.Figma }>
+			<a class="ui-skip" data-class="skip" href="#content">Skip to content</a>
+			for _, c := range r.Header {
+				@c
+			}
+			<main id="content">
+				for _, c := range r.Main {
+					@c
+				}
+			</main>
+			for _, c := range r.Footer {
+				@c
+			}
+		</body>
+	</html>
+}

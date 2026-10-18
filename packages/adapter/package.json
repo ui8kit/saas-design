@@ -1,0 +1,6 @@
+{
+  "name": "@saas-design/adapter",
+  "private": true,
+  "description": "Semantic ui-* classes for the generated primitives and blocks. Utilities only inside @apply; shadcn tokens only.",
+  "exports": { ".": "./src/index.css", "./*": "./src/*" }
+}

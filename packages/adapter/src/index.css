@@ -1,0 +1,8 @@
+/*
+ * @saas-design/adapter — semantic class layer.
+ * Requires Tailwind v4 with packages/tokens/theme.css imported first.
+ * Markup (templ + svelte) only carries ui-* classes; every utility lives in an @apply below.
+ */
+@import "./base.css";
+@import "./primitives.generated.css";
+@import "./blocks.generated.css";

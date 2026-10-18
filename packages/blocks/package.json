@@ -1,0 +1,19 @@
+{
+  "name": "@saas-design/blocks",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./svelte/index.ts",
+    "./catalog.json": "./catalog.json"
+  },
+  "scripts": {
+    "generate": "bun scripts/generate.ts",
+    "check": "bun scripts/generate.ts --check",
+    "parity": "bun --preload ../../tools/svelte-preload.ts scripts/parity.ts"
+  },
+  "dependencies": {
+    "@saas-design/ui": "workspace:*",
+    "@saas-design/icons": "workspace:*"
+  },
+  "devDependencies": {}
+}

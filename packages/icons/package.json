@@ -1,0 +1,10 @@
+{
+  "name": "@saas-design/icons",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "generate": "bun scripts/generate.ts",
+    "check": "bun scripts/generate.ts --check"
+  }
+}

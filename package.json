@@ -17,13 +17,16 @@
     "contract": "bun tools/validate-content.ts"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "4",
     "@ui8kit/contract": "0.2.0",
     "ajv": "8",
     "ajv-formats": "3",
     "clsx": "2",
+    "lucide-static": "0.460.0",
     "parse5": "7",
     "playwright-core": "1.48.2",
     "svelte": "5",
-    "tailwind-merge": "2"
+    "tailwind-merge": "2",
+    "tailwindcss": "4"
   }
 }

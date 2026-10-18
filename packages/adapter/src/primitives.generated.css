@@ -80,7 +80,6 @@
   .ui-dialog-size-sm { @apply w-full max-w-sm; }
   .ui-dialog-size-xl { @apply w-full max-w-4xl; }
   .ui-disabled { @apply pointer-events-none opacity-50; }
-  .ui-disclosure { @apply group; }
   .ui-disclosure-card { @apply rounded-lg bg-card text-card-foreground; }
   .ui-disclosure-default { @apply rounded-md inset-ring inset-ring-border; }
   .ui-disclosure-size-default { @apply text-base; }

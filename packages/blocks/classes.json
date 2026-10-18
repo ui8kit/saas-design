@@ -1,0 +1,756 @@
+{
+  "ui-navbar": [
+    "flex",
+    "items-center",
+    "justify-between",
+    "gap-8"
+  ],
+  "ui-navbar-brand": [
+    "gap-2",
+    "text-3xl",
+    "leading-none",
+    "font-bold",
+    "text-current",
+    "no-underline",
+    "hover:no-underline"
+  ],
+  "ui-navbar-mark": [
+    "size-6"
+  ],
+  "ui-navbar-menu": [
+    "hidden",
+    "items-center",
+    "gap-8",
+    "lg:flex"
+  ],
+  "ui-navbar-menu-link": [
+    "text-lg",
+    "leading-none",
+    "text-current",
+    "hover:underline"
+  ],
+  "ui-navbar-cta": [
+    "px-8"
+  ],
+  "ui-hero-phones": [
+    "relative",
+    "isolate",
+    "mx-8",
+    "mt-8",
+    "flex",
+    "flex-col",
+    "overflow-hidden",
+    "rounded-lg",
+    "bg-primary",
+    "px-12",
+    "pt-12",
+    "pb-12",
+    "text-primary-foreground",
+    "lg:aspect-video"
+  ],
+  "ui-hero-phones-content": [
+    "mx-auto",
+    "flex",
+    "max-w-3xl",
+    "flex-col",
+    "items-center",
+    "gap-8",
+    "pt-24",
+    "text-center"
+  ],
+  "ui-hero-phones-title": [
+    "max-w-2xl",
+    "text-6xl",
+    "leading-none",
+    "font-medium"
+  ],
+  "ui-hero-phones-lead": [
+    "max-w-2xl",
+    "text-xl"
+  ],
+  "ui-hero-phones-actions": [
+    "mt-4",
+    "flex-wrap",
+    "justify-center",
+    "gap-6"
+  ],
+  "ui-hero-phones-demo": [],
+  "ui-hero-phones-demo-icon": [
+    "size-4",
+    "fill-current"
+  ],
+  "ui-hero-phones-badge": [
+    "mt-auto",
+    "self-center"
+  ],
+  "ui-hero-phones-badge-icon": [
+    "size-4",
+    "fill-current"
+  ],
+  "ui-hero-phones-art": [
+    "pointer-events-none",
+    "absolute",
+    "inset-0",
+    "-z-10",
+    "hidden",
+    "lg:block"
+  ],
+  "ui-hero-phones-dot-1": [
+    "absolute",
+    "top-33/100",
+    "left-9/100",
+    "size-16",
+    "rounded-full",
+    "bg-muted"
+  ],
+  "ui-hero-phones-dot-2": [
+    "absolute",
+    "top-1/2",
+    "left-77/100",
+    "size-16",
+    "rounded-full",
+    "bg-secondary"
+  ],
+  "ui-hero-phones-dot-3": [
+    "absolute",
+    "top-33/100",
+    "left-80/100",
+    "size-16",
+    "rounded-full",
+    "bg-chart-3"
+  ],
+  "ui-hero-phones-dot-4": [
+    "absolute",
+    "top-77/100",
+    "left-61/100",
+    "size-16",
+    "rounded-full",
+    "bg-chart-4"
+  ],
+  "ui-hero-phones-dot-5": [
+    "absolute",
+    "top-58/100",
+    "left-21/100",
+    "size-16",
+    "rounded-full",
+    "bg-chart-4"
+  ],
+  "ui-hero-phones-dot-6": [
+    "absolute",
+    "top-52/100",
+    "left-20/100",
+    "size-16",
+    "rounded-full",
+    "bg-chart-5"
+  ],
+  "ui-hero-phones-screen": [
+    "absolute",
+    "w-4/25",
+    "origin-top-left",
+    "rounded-md",
+    "ring-2",
+    "ring-secondary"
+  ],
+  "ui-feature-cards": [
+    "pt-24"
+  ],
+  "ui-feature-cards-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12"
+  ],
+  "ui-feature-cards-head": [
+    "flex-col",
+    "items-start",
+    "justify-between",
+    "gap-6",
+    "lg:flex-row",
+    "lg:items-center"
+  ],
+  "ui-feature-cards-title": [
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-feature-cards-lead": [
+    "max-w-md",
+    "text-xl",
+    "font-light"
+  ],
+  "ui-feature-cards-grid": [
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-feature-cards-card": [
+    "gap-6"
+  ],
+  "ui-feature-cards-icon": [
+    "size-6",
+    "text-foreground"
+  ],
+  "ui-feature-cards-body": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-feature-cards-card-title": [
+    "text-xl",
+    "leading-none",
+    "font-semibold"
+  ],
+  "ui-feature-cards-card-text": [
+    "text-base",
+    "leading-6",
+    "text-muted-foreground"
+  ],
+  "ui-social-proof-split": [
+    "pt-10"
+  ],
+  "ui-social-proof-split-container": [
+    "mx-auto",
+    "grid",
+    "max-w-page",
+    "grid-cols-1",
+    "gap-16",
+    "lg:grid-cols-2"
+  ],
+  "ui-social-proof-split-panel": [
+    "flex",
+    "h-140",
+    "justify-center",
+    "overflow-hidden",
+    "rounded-lg",
+    "bg-accent",
+    "pt-20"
+  ],
+  "ui-social-proof-split-screen": [
+    "w-1/2",
+    "self-start",
+    "rounded-md",
+    "ring-2",
+    "ring-secondary"
+  ],
+  "ui-social-proof-split-body": [
+    "flex",
+    "flex-col",
+    "justify-between",
+    "gap-12",
+    "py-6"
+  ],
+  "ui-social-proof-split-title": [
+    "text-4xl",
+    "leading-12",
+    "font-medium"
+  ],
+  "ui-social-proof-split-logos": [
+    "flex-wrap",
+    "justify-between",
+    "gap-8",
+    "rounded-lg",
+    "bg-muted",
+    "px-12",
+    "py-10"
+  ],
+  "ui-social-proof-split-logo": [
+    "h-12",
+    "w-auto"
+  ],
+  "ui-app-gallery": [
+    "overflow-x-clip",
+    "pt-24"
+  ],
+  "ui-app-gallery-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-20"
+  ],
+  "ui-app-gallery-head": [
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-4",
+    "text-center"
+  ],
+  "ui-app-gallery-title": [
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-app-gallery-lead": [
+    "text-xl",
+    "font-light"
+  ],
+  "ui-app-gallery-tiles": [
+    "grid",
+    "grid-cols-2",
+    "gap-10",
+    "md:grid-cols-4",
+    "lg:w-5/4",
+    "lg:grid-cols-5"
+  ],
+  "ui-app-gallery-tile": [
+    "flex",
+    "min-h-120",
+    "justify-center",
+    "rounded-lg",
+    "px-12",
+    "pt-24",
+    "pb-12"
+  ],
+  "ui-app-gallery-tile-tone-primary": [
+    "bg-primary",
+    "text-primary-foreground"
+  ],
+  "ui-app-gallery-tile-tone-secondary": [
+    "bg-secondary",
+    "text-secondary-foreground"
+  ],
+  "ui-app-gallery-tile-tone-lilac": [
+    "bg-chart-3",
+    "text-foreground"
+  ],
+  "ui-app-gallery-tile-tone-sky": [
+    "bg-chart-4",
+    "text-foreground"
+  ],
+  "ui-app-gallery-tile-tone-pink": [
+    "bg-chart-5",
+    "text-foreground"
+  ],
+  "ui-app-gallery-tile-tone-muted": [
+    "bg-muted",
+    "text-foreground"
+  ],
+  "ui-app-gallery-screen": [
+    "w-full",
+    "self-start",
+    "rounded-md",
+    "ring-2",
+    "ring-secondary"
+  ],
+  "ui-testimonial-cards": [
+    "pt-24"
+  ],
+  "ui-testimonial-cards-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-16"
+  ],
+  "ui-testimonial-cards-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-testimonial-cards-title": [
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-testimonial-cards-lead": [
+    "text-xl",
+    "font-light"
+  ],
+  "ui-testimonial-cards-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-testimonial-cards-item": [],
+  "ui-testimonial-cards-card": [
+    "h-full",
+    "gap-8"
+  ],
+  "ui-testimonial-cards-author": [
+    "gap-4"
+  ],
+  "ui-testimonial-cards-avatar": [],
+  "ui-testimonial-cards-who": [
+    "flex",
+    "flex-col",
+    "gap-1"
+  ],
+  "ui-testimonial-cards-name": [
+    "leading-5",
+    "font-bold"
+  ],
+  "ui-testimonial-cards-role": [
+    "leading-5",
+    "text-muted-foreground"
+  ],
+  "ui-testimonial-cards-quote": [
+    "leading-6",
+    "text-muted-foreground"
+  ],
+  "ui-cta-split": [
+    "pt-24"
+  ],
+  "ui-cta-split-container": [
+    "mx-auto",
+    "max-w-page"
+  ],
+  "ui-cta-split-panel": [
+    "flex",
+    "flex-col",
+    "gap-24",
+    "rounded-lg",
+    "bg-accent",
+    "p-20",
+    "text-accent-foreground"
+  ],
+  "ui-cta-split-mark": [
+    "size-20",
+    "text-foreground"
+  ],
+  "ui-cta-split-row": [
+    "grid-cols-1",
+    "items-end",
+    "gap-12",
+    "lg:grid-cols-2"
+  ],
+  "ui-cta-split-title": [
+    "max-w-xl",
+    "text-display",
+    "font-normal"
+  ],
+  "ui-cta-split-aside": [
+    "flex",
+    "flex-col",
+    "items-start",
+    "gap-16",
+    "lg:items-end"
+  ],
+  "ui-cta-split-text": [
+    "max-w-lg",
+    "text-xl",
+    "leading-8",
+    "font-light",
+    "lg:text-right"
+  ],
+  "ui-pricing-two-plans": [
+    "pt-24"
+  ],
+  "ui-pricing-two-plans-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-16"
+  ],
+  "ui-pricing-two-plans-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-pricing-two-plans-title": [
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-pricing-two-plans-lead": [
+    "text-xl",
+    "font-light"
+  ],
+  "ui-pricing-two-plans-plans": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "lg:grid-cols-2"
+  ],
+  "ui-pricing-two-plans-plan": [
+    "flex",
+    "flex-col",
+    "gap-12",
+    "rounded-lg",
+    "p-16",
+    "pb-24",
+    "text-card-foreground"
+  ],
+  "ui-pricing-two-plans-plan-theme-light": [
+    "bg-card"
+  ],
+  "ui-pricing-two-plans-plan-theme-dark": [
+    "bg-background"
+  ],
+  "ui-pricing-two-plans-plan-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-pricing-two-plans-plan-name-row": [
+    "justify-between",
+    "gap-4"
+  ],
+  "ui-pricing-two-plans-plan-name": [
+    "text-2xl",
+    "leading-6",
+    "font-semibold"
+  ],
+  "ui-pricing-two-plans-plan-description": [
+    "leading-5",
+    "text-muted-foreground"
+  ],
+  "ui-pricing-two-plans-plan-body": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-pricing-two-plans-price": [
+    "flex",
+    "items-baseline",
+    "gap-2"
+  ],
+  "ui-pricing-two-plans-price-value": [
+    "text-4xl",
+    "font-bold"
+  ],
+  "ui-pricing-two-plans-price-period": [
+    "text-muted-foreground"
+  ],
+  "ui-pricing-two-plans-features": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-pricing-two-plans-feature": [
+    "flex",
+    "h-6",
+    "items-center",
+    "gap-4",
+    "leading-5"
+  ],
+  "ui-pricing-two-plans-feature-check": [
+    "size-4",
+    "text-primary"
+  ],
+  "ui-pricing-two-plans-feature-lock": [
+    "size-4",
+    "text-muted-foreground"
+  ],
+  "ui-pricing-two-plans-plan-cta": [
+    "mt-auto",
+    "w-full"
+  ],
+  "ui-faq-tiles": [
+    "pt-24"
+  ],
+  "ui-faq-tiles-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-16"
+  ],
+  "ui-faq-tiles-head": [
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-4",
+    "text-center"
+  ],
+  "ui-faq-tiles-title": [
+    "max-w-3xl",
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-faq-tiles-lead": [
+    "text-xl",
+    "font-light"
+  ],
+  "ui-faq-tiles-body": [
+    "flex",
+    "flex-col",
+    "gap-8"
+  ],
+  "ui-faq-tiles-grid": [
+    "grid-cols-1",
+    "gap-x-10",
+    "gap-y-8",
+    "md:grid-cols-2"
+  ],
+  "ui-faq-tiles-tile": [
+    "rounded-lg",
+    "px-10",
+    "py-8"
+  ],
+  "ui-faq-tiles-tile-tone-primary": [
+    "bg-primary",
+    "text-primary-foreground"
+  ],
+  "ui-faq-tiles-tile-tone-secondary": [
+    "bg-secondary",
+    "text-secondary-foreground"
+  ],
+  "ui-faq-tiles-tile-tone-lilac": [
+    "bg-chart-3",
+    "text-foreground"
+  ],
+  "ui-faq-tiles-tile-tone-sky": [
+    "bg-chart-4",
+    "text-foreground"
+  ],
+  "ui-faq-tiles-tile-tone-pink": [
+    "bg-chart-5",
+    "text-foreground"
+  ],
+  "ui-faq-tiles-tile-tone-muted": [
+    "bg-muted",
+    "text-foreground"
+  ],
+  "ui-faq-tiles-question": [
+    "flex",
+    "cursor-pointer",
+    "list-none",
+    "items-center",
+    "gap-6",
+    "text-xl",
+    "font-medium"
+  ],
+  "ui-faq-tiles-arrow": [
+    "flex",
+    "size-10",
+    "shrink-0",
+    "items-center",
+    "justify-center",
+    "rounded-full",
+    "bg-background",
+    "text-foreground"
+  ],
+  "ui-faq-tiles-arrow-icon": [
+    "size-4"
+  ],
+  "ui-faq-tiles-answer": [
+    "pt-4",
+    "pl-16",
+    "text-base",
+    "leading-6"
+  ],
+  "ui-faq-tiles-more": [
+    "self-end",
+    "text-lg",
+    "text-foreground",
+    "hover:underline"
+  ],
+  "ui-footer-newsletter": [
+    "px-0",
+    "pt-20",
+    "pb-24"
+  ],
+  "ui-footer-newsletter-container": [
+    "mx-auto",
+    "max-w-page"
+  ],
+  "ui-footer-newsletter-panel": [
+    "flex",
+    "flex-col",
+    "gap-16",
+    "rounded-lg",
+    "bg-background",
+    "px-12",
+    "pt-16",
+    "pb-6",
+    "text-foreground"
+  ],
+  "ui-footer-newsletter-top": [
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-2",
+    "lg:grid-cols-12",
+    "lg:gap-6"
+  ],
+  "ui-footer-newsletter-brand": [
+    "flex",
+    "flex-col",
+    "gap-8",
+    "lg:col-span-4"
+  ],
+  "ui-footer-newsletter-brand-link": [
+    "gap-2",
+    "text-3xl",
+    "leading-none",
+    "font-bold",
+    "text-foreground"
+  ],
+  "ui-footer-newsletter-mark": [
+    "size-6"
+  ],
+  "ui-footer-newsletter-text": [
+    "max-w-xs",
+    "leading-6",
+    "text-muted-foreground"
+  ],
+  "ui-footer-newsletter-socials": [
+    "flex",
+    "gap-4"
+  ],
+  "ui-footer-newsletter-social": [
+    "text-muted-foreground",
+    "hover:text-foreground"
+  ],
+  "ui-footer-newsletter-social-icon": [
+    "size-6"
+  ],
+  "ui-footer-newsletter-column": [
+    "flex",
+    "flex-col",
+    "gap-6",
+    "lg:col-span-2"
+  ],
+  "ui-footer-newsletter-column-title": [
+    "text-base",
+    "leading-5",
+    "font-semibold"
+  ],
+  "ui-footer-newsletter-links": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-footer-newsletter-link": [
+    "leading-5",
+    "text-muted-foreground",
+    "hover:text-foreground"
+  ],
+  "ui-footer-newsletter-newsletter": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "lg:col-span-3",
+    "lg:col-start-10"
+  ],
+  "ui-footer-newsletter-newsletter-title": [
+    "text-base",
+    "leading-5",
+    "font-semibold"
+  ],
+  "ui-footer-newsletter-newsletter-text": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-footer-newsletter-form": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-footer-newsletter-label": [
+    "sr-only"
+  ],
+  "ui-footer-newsletter-input": [
+    "bg-card"
+  ],
+  "ui-footer-newsletter-submit": [
+    "w-full",
+    "font-normal"
+  ],
+  "ui-footer-newsletter-copyright": [
+    "border-t",
+    "border-border",
+    "pt-8",
+    "text-center",
+    "leading-5",
+    "text-muted-foreground"
+  ]
+}
