@@ -14,7 +14,7 @@ const serve = (dir: string) => { const s = createServer((req, res) => { let p = 
 const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/usr/bin/google-chrome" });
 let fail = 0;
 const ok = (c: boolean, m: string) => { console.log(`${c ? "ok  " : "FAIL"} ${m}`); if (!c) fail++; };
-for (const [app, dir] of [["site", "apps/site/public"], ["design", "apps/design/build"]] as const) {
+for (const [app, dir] of [["site", "apps/site/public"], ["design", "apps/design-svelte/build"]] as const) {
   const s = serve(join(ROOT, dir));
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await page.goto(s.url + "/", { waitUntil: "networkidle" });

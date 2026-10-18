@@ -2,7 +2,7 @@
 
 Status: worked-around
 
-**Context.** `.ui8px/policy/scopes.json` scopes only spacing (layout vs control). `allowed.json` is one flat list. apps/design needs
+**Context.** `.ui8px/policy/scopes.json` scopes only spacing (layout vs control). `allowed.json` is one flat list. apps/design-svelte needs
 app-level brand swatches (`bg-brand-*`) and `bg-sidebar-*`/`bg-input`/`bg-ring` for the color foundations page, so they were added to
 `tools/ui8px/allowed.extra.json` — which now also allows them in `packages/`, where brand tokens are forbidden by project rule.
 

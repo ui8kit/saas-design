@@ -1,6 +1,6 @@
 /**
  * View models: contract records (fixtures/content/records) → fixtures/views/*.json.
- * The same JSON feeds the Go export (apps/site) and the Svelte app (apps/design), so both
+ * The same JSON feeds the Go export (apps/site) and the Svelte app (apps/design-svelte), so both
  * runtimes render identical DOM. Shapes are the block schemas in packages/blocks/defs.
  *   bun tools/views.ts [--check]
  */

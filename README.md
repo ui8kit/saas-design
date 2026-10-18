@@ -3,7 +3,7 @@
 A **viability check** for a fully generated front-end pipeline. One local Figma file (`.fig`) becomes:
 
 - **`apps/site`**: a static copy of the Figma landing page, rendered with **Go templ** (exported to plain HTML).
-- **`apps/design`**: a **Svelte 5 / SvelteKit** design-system app with foundations, primitives, components, widgets and every block.
+- **`apps/design-svelte`**: a **Svelte 5 / SvelteKit** design-system app with foundations, primitives, components, widgets and every block.
 - Both apps use the **same** tokens, semantic CSS, primitives and blocks. Those come from one source per layer and give **identical DOM/ARIA** in both runtimes, which is checked by parity tests.
 
 Everything between the `.fig` and the deployed apps is a script in this repo or a pinned public tool. `bun run check` fails if any generated file drifts from its source.
@@ -41,7 +41,7 @@ flowchart LR
   blocks --> adapter
   tokens --> adapter
   views --> site["apps/site<br/>Go templ → static HTML"]
-  views --> design["apps/design<br/>SvelteKit static"]
+  views --> design["apps/design-svelte<br/>SvelteKit static"]
   blocks --> site
   blocks --> design
   adapter --> site
@@ -133,8 +133,8 @@ bun run site:build                         # = bash apps/site/scripts/build.sh
 (cd apps/site && bun run serve)            # npx -y serve@14 public -l 4173 → http://localhost:4173
 
 # design system app (SvelteKit)
-(cd apps/design && bun run dev)            # vite dev → http://localhost:5173
-bun run design:build                       # → apps/design/build (49 prerendered pages)
+(cd apps/design-svelte && bun run dev)            # vite dev → http://localhost:5173
+bun run design-svelte:build                       # → apps/design-svelte/build (49 prerendered pages)
 ```
 
 ### Other runtimes
@@ -156,7 +156,7 @@ Example prompts:
 - **Another page in the same system:**
   > "Add a pricing page and a blog index to `apps/site`, reusing the existing blocks."
 
-> **Note: this repo has two runtimes, Go templ (`apps/site`) and Svelte 5 (`apps/design`), kept in parity.** If you don't need both, say so up front, e.g. "I want **React only**" (or "Vue only", "Svelte only"). The agent then drops the other runtimes' outputs, apps and checks instead of keeping them in sync. How each request is interpreted: [AGENTS.md → How to interpret common requests](AGENTS.md#how-to-interpret-common-requests).
+> **Note: this repo has two runtimes, Go templ (`apps/site`) and Svelte 5 (`apps/design-svelte`), kept in parity.** If you don't need both, say so up front, e.g. "I want **React only**" (or "Vue only", "Svelte only"). The agent then drops the other runtimes' outputs, apps and checks instead of keeping them in sync. How each request is interpreted: [AGENTS.md → How to interpret common requests](AGENTS.md#how-to-interpret-common-requests).
 
 ## Documentation
 

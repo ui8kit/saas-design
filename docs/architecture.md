@@ -20,7 +20,7 @@ fixtures/views/*.json        packages/ui  ◄── @ui8kit/codegen bricks + rec
   │                               ▼
   │                          packages/adapter/src/*.css  (… whose utilities live here, in @apply)
   ▼                               ▼
-apps/site  (Go templ → static HTML)     apps/design (SvelteKit, Svelte 5, static)
+apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 5, static)
 ```
 
 ## Layers
@@ -49,7 +49,7 @@ apps/site  (Go templ → static HTML)     apps/design (SvelteKit, Svelte 5, stat
     - dark under `.dark, [data-theme="dark"]`;
     - `@custom-variant dark`;
     - an `@theme` block with `--text-display*` and `--container-page`.
-  - `apps/site/styles/brand.css` and `apps/design/src/lib/styles/brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
+  - `apps/site/styles/brand.css` and `apps/design-svelte/src/lib/styles/brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
   - `fixtures/tokens/{palette,tokens}.json` and `brand.contract.json` for [brand-os](https://github.com/ui8kit/brand-os) (`bun run brand:emit`, `bun run brand:check`).
 
 ### 3. Adapter (`packages/adapter/src`)
@@ -100,7 +100,7 @@ The semantic class layer. Markup in every runtime carries only `ui-*` classes. T
 | App | Runtime | Entry | Output |
 |---|---|---|---|
 | `apps/site` | Go + templ | `cmd/export/main.go` renders `fixtures/views/home.json` through `blocks.Render` into `views.Page` (`views/layout.templ`) | `apps/site/public` (index.html, `/assets/app.css` via Tailwind CLI, `/assets/ui8kit.js`, media) |
-| `apps/design` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design/build` (49 prerendered pages) |
+| `apps/design-svelte` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design-svelte/build` (49 prerendered pages) |
 
 - **Site.** One page for now (`pages = {"home.json": "index.html"}` in `cmd/export`). Each block's `region` (`header`/`main`/`footer`) places it.
 - **Design app.** Imports `@saas-design/ui|blocks|icons` through Vite aliases, `packages/blocks/catalog.json`, and `fixtures/views/blocks.json`. It generates its own data:

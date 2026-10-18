@@ -1,5 +1,5 @@
 {
-  "name": "@saas-design/design",
+  "name": "@saas-design/design-svelte",
   "private": true,
   "type": "module",
   "description": "Svelte 5 design-system docs app (SvelteKit, static prerender). Consumes packages/* and fixtures.",

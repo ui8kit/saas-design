@@ -9,7 +9,7 @@ Behaviour: `bun run test:behaviors` → 18/18 ok (sheet focus trap, Esc, overlay
   - Hero: Watch Demo is outline on orange; phone screens have a dark bezel, Figma z-order, and positions within about 8px.
   - Dark mode: ThemeToggle in the navbar and no-flash head script.
   - Mobile: the nav collapses to a right Sheet below `lg`.
-- **apps/design** — SvelteKit (Svelte 5), adapter-static.
+- **apps/design-svelte** — SvelteKit (Svelte 5), adapter-static.
   - Pages: overview; foundations (colors incl. a light/dark preview and light + dark brand groups, typography, 8+4 spacing, radius, shadows); primitives + components (35 bricks, 326 showcase cases); widgets; 39 block pages.
   - Dark mode: ThemeToggle in the sidebar head and mobile top bar; theme-init is injected by hooks.server.
   - Mobile: the sidebar becomes a left Sheet below `lg`.

@@ -56,7 +56,7 @@ if (which === "site" || which === "all") {
   s.close();
 }
 if (which === "design" || which === "all") {
-  const s = serve(join(ROOT, "apps/design/build"));
+  const s = serve(join(ROOT, "apps/design-svelte/build"));
   await shot(s.url, "/", "design-light.png", { width: 1440 });
   await shot(s.url, "/", "design-dark.png", { width: 1440, dark: true });
   await shot(s.url, "/foundations/colors", "design-dark-colors.png", { width: 1440, dark: true });

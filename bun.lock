@@ -18,8 +18,8 @@
         "tailwindcss": "4",
       },
     },
-    "apps/design": {
-      "name": "@saas-design/design",
+    "apps/design-svelte": {
+      "name": "@saas-design/design-svelte",
       "devDependencies": {
         "@sveltejs/adapter-static": "^3.0.8",
         "@sveltejs/kit": "^2.20.0",
@@ -222,7 +222,7 @@
 
     "@saas-design/blocks": ["@saas-design/blocks@workspace:packages/blocks"],
 
-    "@saas-design/design": ["@saas-design/design@workspace:apps/design"],
+    "@saas-design/design-svelte": ["@saas-design/design-svelte@workspace:apps/design-svelte"],
 
     "@saas-design/icons": ["@saas-design/icons@workspace:packages/icons"],
 

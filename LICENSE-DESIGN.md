@@ -13,7 +13,7 @@ The design and everything derived from it:
 - `fixtures/figma/`: the fig2design dump of the design, including `fixtures/figma/images/` (app screens, photos, exported images).
 - `fixtures/media/`: vector artwork extracted from the design (logo marks, icons drawn in the design).
 - Design copy and imagery carried into `fixtures/content/records/` and `fixtures/views/`.
-- Build-time copies of these assets, e.g. `apps/site/public/media/` and `apps/design/static/media/`.
+- Build-time copies of these assets, e.g. `apps/site/public/media/` and `apps/design-svelte/static/media/`.
 - `docs/assets/`: screenshots of the design and of the pages rendered from it.
 - Any other artwork, layout or visual style taken from the design.
 

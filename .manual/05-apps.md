@@ -9,10 +9,10 @@ bun run build                          # = bash scripts/build.sh → public/ (ex
 bun run serve                          # http://localhost:4173
 ```
 
-## apps/design — Svelte 5 design-system app (SvelteKit, static)
+## apps/design-svelte — Svelte 5 design-system app (SvelteKit, static)
 
 ```bash
-cd apps/design
+cd apps/design-svelte
 bun run generate                       # foundations.generated.css + showcase.generated.json (from tokens + packages/ui registry)
 bun run dev                            # http://localhost:5173
 bun run build                          # copy media → static/, vite build → build/ (49 prerendered pages)

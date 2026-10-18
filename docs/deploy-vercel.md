@@ -9,7 +9,7 @@ Deploy as two Vercel projects from one repository, one per app. This is the Engl
 | Project | Root Directory | Framework preset | Config |
 |---|---|---|---|
 | site (e.g. `saas-site`) | `apps/site` | Other | [`apps/site/vercel.json`](../apps/site/vercel.json) |
-| design (e.g. `saas-design`) | `apps/design` | Other | [`apps/design/vercel.json`](../apps/design/vercel.json) |
+| design (e.g. `saas-design`) | `apps/design-svelte` | Other | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
 
 Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. Both apps read `packages/`, `fixtures/` and `tools/` from the repo root.
 
@@ -35,7 +35,7 @@ Keep **"Include source files outside of the Root Directory in the Build Step"** 
   4. copies media with `node tools/copy-media.mjs public`.
 - The committed `*_templ.go` files are used, so `templ generate` is **not** needed at deploy time.
 
-### apps/design (SvelteKit static)
+### apps/design-svelte (SvelteKit static)
 
 ```json
 {
@@ -58,8 +58,8 @@ Run once per project, from the repo root. These are Vercel CLI commands; they we
 ```bash
 npx vercel link --cwd apps/site        # create/choose the site project, Root Directory apps/site
 npx vercel --cwd apps/site --prod
-npx vercel link --cwd apps/design      # create/choose the design project, Root Directory apps/design
-npx vercel --cwd apps/design --prod
+npx vercel link --cwd apps/design-svelte      # create/choose the design project, Root Directory apps/design-svelte
+npx vercel --cwd apps/design-svelte --prod
 ```
 
 Alternatively, import the GitHub repo twice in the Vercel dashboard and set the Root Directory for each project.
@@ -68,7 +68,7 @@ Alternatively, import the GitHub repo twice in the Vercel dashboard and set the 
 
 ```bash
 (cd apps/site && bash scripts/vercel-install.sh && bash scripts/build.sh)                              # → apps/site/public
-(cd apps/design && bash scripts/vercel-install.sh && node ../../tools/copy-media.mjs static && npx vite build)   # → apps/design/build
+(cd apps/design-svelte && bash scripts/vercel-install.sh && node ../../tools/copy-media.mjs static && npx vite build)   # → apps/design-svelte/build
 ```
 
 ## Known risks

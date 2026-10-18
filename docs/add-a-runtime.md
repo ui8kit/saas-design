@@ -1,6 +1,6 @@
 # Add a runtime
 
-This repo ships **two** runtimes: Go templ (`apps/site`) and Svelte 5 (`apps/design`). [@ui8kit/codegen](https://github.com/ui8kit/codegen) can emit **seven** runtimes for the primitives: `templ`, `react` (19), `svelte` (5), `vue` (3), `solid`, `latte` and `twig`. See its `docs/runtimes.md`, also at `packages/ui/node_modules/@ui8kit/codegen/docs/runtimes.md` after `bun install`.
+This repo ships **two** runtimes: Go templ (`apps/site`) and Svelte 5 (`apps/design-svelte`). [@ui8kit/codegen](https://github.com/ui8kit/codegen) can emit **seven** runtimes for the primitives: `templ`, `react` (19), `svelte` (5), `vue` (3), `solid`, `latte` and `twig`. See its `docs/runtimes.md`, also at `packages/ui/node_modules/@ui8kit/codegen/docs/runtimes.md` after `bun install`.
 
 "Static HTML" is **not** a codegen runtime; codegen builds its static HTML example from React. Here, static HTML comes from the templ export in `apps/site`.
 
@@ -108,7 +108,7 @@ This is the largest piece of work, and **nothing of it exists yet**. Track it in
 
 ## 4. App scaffold
 
-Reuse the CSS entry pattern from `apps/site/styles/app.css` or `apps/design/src/lib/styles/app.css`:
+Reuse the CSS entry pattern from `apps/site/styles/app.css` or `apps/design-svelte/src/lib/styles/app.css`:
 
 ```css
 @import "tailwindcss" source(none);          /* no content scanning: all utilities come from @apply */
@@ -128,7 +128,7 @@ Reuse the CSS entry pattern from `apps/site/styles/app.css` or `apps/design/src/
 
 ## 5. Vercel config
 
-Copy the pattern from `apps/design/vercel.json`:
+Copy the pattern from `apps/design-svelte/vercel.json`:
 
 ```json
 {
@@ -143,7 +143,7 @@ Copy the pattern from `apps/design/vercel.json`:
 
 - Set the Vercel project's Root Directory to `apps/<new-app>`.
 - Keep "Include source files outside of the Root Directory" on, because the app reads `packages/` and `fixtures/`.
-- The install script must install the bun workspace at the repo root. See `apps/design/scripts/vercel-install.sh` and [deploy-vercel.md](deploy-vercel.md).
+- The install script must install the bun workspace at the repo root. See `apps/design-svelte/scripts/vercel-install.sh` and [deploy-vercel.md](deploy-vercel.md).
 - PHP runtimes (Latte, Twig) need a PHP host; that is not covered here.
 
 ## Checklist

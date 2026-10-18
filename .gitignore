@@ -8,8 +8,8 @@ build/
 .output/
 apps/site/bin/
 apps/site/public/
-apps/design/static/media/
-apps/design/static/fonts/
+apps/design-svelte/static/media/
+apps/design-svelte/static/fonts/
 .ui8px/telemetry/
 .ui8px/reports/
 *.log

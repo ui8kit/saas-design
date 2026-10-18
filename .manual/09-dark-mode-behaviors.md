@@ -8,7 +8,7 @@ bun run content && bun tools/views.ts  # contract records / views pick up token 
 cd packages/ui && bun run generate && bun run parity && cd -
 node --check packages/ui/behaviors/ui8kit.js packages/ui/behaviors/theme-init.js
 bash apps/site/scripts/build.sh        # copies ui8kit.js → public/assets, inlines theme-init in <head>
-cd apps/design && bun run build && cd -
+cd apps/design-svelte && bun run build && cd -
 bun run test:behaviors                 # Chrome @390px, both apps: sheet trap/Esc/overlay/focus restore, toggle persistence
 bun run shots:modes                    # light/dark/mobile/mobile-menu screenshots → /workspace/shots-saas
 ```

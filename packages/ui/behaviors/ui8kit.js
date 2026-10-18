@@ -1,5 +1,5 @@
 /**
- * @saas-design/ui behaviors — one tiny, framework-free script shared by apps/site (templ) and apps/design (Svelte).
+ * @saas-design/ui behaviors — one tiny, framework-free script shared by apps/site (templ) and apps/design-svelte (Svelte).
  * Event delegation on document: works for server-rendered and client-rendered markup alike.
  *   data-ui8kit="theme-toggle"  toggles .dark on <html>, persists localStorage.theme, syncs aria-pressed
  *   data-ui8kit="sheet-trigger" opens the Sheet named by aria-controls (aria-expanded sync)

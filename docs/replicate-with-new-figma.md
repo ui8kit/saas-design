@@ -96,7 +96,7 @@ Follow the [pipeline order in AGENTS.md](../AGENTS.md#pipeline-order):
 (cd packages/blocks && bun run generate && bun run parity)
 bun tools/ui8px-policy.ts && npx -y ui8px@latest lint
 bun run site:build
-(cd apps/design && bun run generate && bun run build)
+(cd apps/design-svelte && bun run generate && bun run build)
 bun run check
 ```
 
@@ -132,6 +132,6 @@ Then check dark mode and mobile with `bun run shots:modes` and `bun run test:beh
 | `fixtures/content/source/*.json` | authored copy and block catalog for this design |
 | `tools/views.ts` | the "Figma home page" part: which `section-*` records become which blocks on `home.json`, and per-block view builders (e.g. `planView`). The block-preview part (`blocks.json`) is per block id |
 | `apps/site/cmd/export/main.go` | `pages = {"home.json": "index.html"}`; add entries for more pages |
-| `apps/design` nav / overview copy | `src/lib/nav.ts`, `src/routes/+page.svelte` |
+| `apps/design-svelte` nav / overview copy | `src/lib/nav.ts`, `src/routes/+page.svelte` |
 
 Generic, no change needed: `tools/check.sh`, `tools/ui8px-policy.ts`, `tools/validate-content.ts`, `tools/copy-media.mjs`, the packages/ui and packages/blocks generators, the adapter, and the behaviours.

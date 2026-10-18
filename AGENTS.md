@@ -1,6 +1,6 @@
 # AGENTS.md — instructions for AI agents
 
-This repo turns a local Figma file into two apps, a Go templ static site (`apps/site`) and a Svelte 5 design-system app (`apps/design`), through generated, checked layers. Read this file, then the rules in [`.cursor/rules/`](.cursor/rules) and the skill [`.cursor/skills/figma-to-site/SKILL.md`](.cursor/skills/figma-to-site/SKILL.md).
+This repo turns a local Figma file into two apps, a Go templ static site (`apps/site`) and a Svelte 5 design-system app (`apps/design-svelte`), through generated, checked layers. Read this file, then the rules in [`.cursor/rules/`](.cursor/rules) and the skill [`.cursor/skills/figma-to-site/SKILL.md`](.cursor/skills/figma-to-site/SKILL.md).
 
 ## Golden rules
 
@@ -87,7 +87,7 @@ bun tools/ui8px-policy.ts && npx -y ui8px@latest lint   # Violations: 0
 
 # 9. apps
 bun run site:build                                # apps/site/public
-(cd apps/design && bun run generate && bun run build)
+(cd apps/design-svelte && bun run generate && bun run build)
 
 # 10. gate
 bun run check                                     # "all checks passed"
@@ -119,8 +119,8 @@ When the user wants **one** runtime, do not keep the others in parity. Remove th
 | Keep only… | Drop | Adjust |
 |---|---|---|
 | **Svelte** | `apps/site`; templ output of `packages/ui/templ`, `packages/blocks/templ`, `packages/icons/templ`; the templ emitters in `packages/blocks/scripts/generate.ts` | `tools/check.sh`: remove the `templ generate`/drift lines and the apps/site step. Parity scripts: compare Svelte against the canonical renderer only (ui) or drop the cross-runtime DOM comparison (blocks). Go is no longer a prerequisite. |
-| **templ** (static HTML) | `apps/design`; `packages/ui/svelte`, `packages/blocks/svelte` | `tools/check.sh`: remove the apps/design step. Parity: templ vs canonical. Screenshot and behaviour tools: site only. |
-| **React / Vue / Solid** (not built yet) | both `apps/site` and `apps/design` once the new app replaces them; templ + Svelte outputs | Add the runtime first ([docs/add-a-runtime.md](docs/add-a-runtime.md)): primitives via codegen, a block emitter, an app. Then switch parity to *new runtime vs canonical* and remove the templ/Svelte steps from `tools/check.sh`. Go is only needed while templ exists. |
+| **templ** (static HTML) | `apps/design-svelte`; `packages/ui/svelte`, `packages/blocks/svelte` | `tools/check.sh`: remove the apps/design-svelte step. Parity: templ vs canonical. Screenshot and behaviour tools: site only. |
+| **React / Vue / Solid** (not built yet) | both `apps/site` and `apps/design-svelte` once the new app replaces them; templ + Svelte outputs | Add the runtime first ([docs/add-a-runtime.md](docs/add-a-runtime.md)): primitives via codegen, a block emitter, an app. Then switch parity to *new runtime vs canonical* and remove the templ/Svelte steps from `tools/check.sh`. Go is only needed while templ exists. |
 
 In every mode, keep:
 - fixtures and contract validation;
