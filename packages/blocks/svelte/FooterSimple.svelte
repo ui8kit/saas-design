@@ -2,7 +2,7 @@
 <!-- Brand, inline links and copyright on one row. -->
 <script lang="ts">
   import { Block, Container, Inline, Link, List, ListItem, Text } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FooterSimpleData } from "./types";
 
   let { data }: { data: FooterSimpleData } = $props();
@@ -11,7 +11,7 @@
 <Block class="ui-footer-simple" data-class="ui-footer-simple" tag="footer">
   <Container class="ui-footer-simple-container" data-class="ui-footer-simple-container">
     <Link class="ui-footer-simple-brand" data-class="ui-footer-simple-brand" href={data.href || undefined}>
-      {@html svg("brand-mark", `ui-icon-sm`)}
+      <Icon name={"brand-mark"} class={`ui-icon-sm`} />
       <Inline>
         {data.brand}
       </Inline>

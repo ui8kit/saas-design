@@ -7,6 +7,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/container"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/disclosure"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/grid"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/inline"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/link"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/stack"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/text"
@@ -31,9 +32,9 @@ templ FaqTiles(p FaqTilesData) {
 					for _, item := range p.Items {
 						@disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-tiles-tile" + " ui-faq-tiles-tile-tone-" + item.Tone, Attrs: templ.Attributes{"data-class": "ui-faq-tiles-tile"}}) {
 							@disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-tiles-question", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-question"}}) {
-								<span class="ui-faq-tiles-arrow" data-class="ui-faq-tiles-arrow">
-									@templ.Raw(icons.SVG("chevron-down", "ui-faq-tiles-arrow-icon"))
-								</span>
+								@inline.Inline(inline.InlineProps{Class: "ui-faq-tiles-arrow", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-arrow"}}) {
+									@icons.Icon("chevron-down", "ui-faq-tiles-arrow-icon")
+								}
 								{ item.Question }
 							}
 							@text.Text(text.TextProps{Class: "ui-faq-tiles-answer", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-answer"}}) {

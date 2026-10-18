@@ -2,7 +2,7 @@
 <!-- One-line release note above the navbar with a link. -->
 <script lang="ts">
   import { Block, Container, Link, Text } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { AnnouncementBarData } from "./types";
 
   let { data }: { data: AnnouncementBarData } = $props();
@@ -15,7 +15,7 @@
     </Text>
     <Link class="ui-announcement-bar-link" data-class="ui-announcement-bar-link" href={data.link.href || undefined}>
       {data.link.label}
-      {@html svg("arrow-right", `ui-icon-sm`)}
+      <Icon name={"arrow-right"} class={`ui-icon-sm`} />
     </Link>
   </Container>
 </Block>

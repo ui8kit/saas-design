@@ -33,7 +33,8 @@ This repo turns a local Figma file into two apps, a Go templ static site (`apps/
    - No `style="…"`, no `style:`, and no JS that sets styles.
 6. **Blocks and retag** ([blocks-retag.mdc](.cursor/rules/blocks-retag.mdc)):
    - `Block` is the only section/landmark/anchor unit, retagged by meaning (`section|header|footer|nav|main|aside|article`).
-   - Never nest a Block in a Block. `Box` is internal layout only.
+   - Never nest a Block in a Block, one Block per render path. `Box` is internal layout only.
+   - No raw HTML tags, `{@html}` / `dangerouslySetInnerHTML` / `@templ.Raw`, computed tags, reactive ARIA or `style` in composition code. `bun tools/lint-apps.ts` (in `bun run check`) runs the codegen 2.0 rules detectors on `apps/*` and the generated blocks. Accepted exceptions live in `tools/lint-apps.baseline.json`, each with a reason.
    - Content-model tags come from their primitives (`List`/`ListItem`, `Table*`, `Image`, `Disclosure`, `Form`…).
    - One `h1` per page. Sections use `aria-labelledby` → Title id.
    - At most 45 blocks.

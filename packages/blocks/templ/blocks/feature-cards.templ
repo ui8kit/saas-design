@@ -29,7 +29,7 @@ templ FeatureCards(p FeatureCardsData) {
 			@grid.Grid(grid.GridProps{Class: "ui-feature-cards-grid", Attrs: templ.Attributes{"data-class": "ui-feature-cards-grid"}}) {
 				for _, item := range p.Items {
 					@card.Card(card.CardProps{Class: "ui-feature-cards-card", Attrs: templ.Attributes{"data-class": "ui-feature-cards-card"}}) {
-						@templ.Raw(icons.SVG(item.Icon, "ui-feature-cards-icon"))
+						@icons.Icon(item.Icon, "ui-feature-cards-icon")
 						@stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}) {
 							@title.Title(title.TitleProps{Class: "ui-feature-cards-card-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-feature-cards-card-title"}}) {
 								{ item.Title }

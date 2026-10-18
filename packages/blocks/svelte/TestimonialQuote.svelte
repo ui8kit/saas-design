@@ -10,11 +10,11 @@
 <Block class="ui-testimonial-quote" data-class="ui-testimonial-quote" tag="section" aria-label={data.label}>
   <Container class="ui-testimonial-quote-container" data-class="ui-testimonial-quote-container">
     <Box class="ui-testimonial-quote-panel" data-class="ui-testimonial-quote-panel">
-      <blockquote class="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote">
+      <Text class="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote" tag="blockquote">
         <Text>
           {data.quote}
         </Text>
-      </blockquote>
+      </Text>
       <Group class="ui-testimonial-quote-author" data-class="ui-testimonial-quote-author">
         <Image class="ui-testimonial-quote-avatar" data-class="ui-testimonial-quote-avatar" variant="avatar" src={data.avatar.src || undefined} alt={data.avatar.alt || undefined} />
         <Stack class="ui-testimonial-quote-who" data-class="ui-testimonial-quote-who">

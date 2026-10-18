@@ -27,11 +27,11 @@ templ AppDownload(p AppDownloadData) {
 				}
 				@group.Group(group.GroupProps{Class: "ui-app-download-stores", Attrs: templ.Attributes{"data-class": "ui-app-download-stores"}}) {
 					@button.Button(button.ButtonProps{Variant: "secondary", Size: "lg", Href: p.Ios.Href}) {
-						@templ.Raw(icons.SVG("apple", "ui-app-download-apple"))
+						@icons.Icon("apple", "ui-app-download-apple")
 						{ p.Ios.Label }
 					}
 					@button.Button(button.ButtonProps{Variant: "outline", Size: "lg", Href: p.Android.Href}) {
-						@templ.Raw(icons.SVG("smartphone", "ui-app-download-phone"))
+						@icons.Icon("smartphone", "ui-app-download-phone")
 						{ p.Android.Label }
 					}
 				}

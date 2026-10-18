@@ -158,7 +158,7 @@ func AppDownload(p AppDownloadData) templ.Component {
 								}()
 							}
 							ctx = templ.InitializeContext(ctx)
-							templ_7745c5c3_Err = templ.Raw(icons.SVG("apple", "ui-app-download-apple")).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = icons.Icon("apple", "ui-app-download-apple").Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -193,7 +193,7 @@ func AppDownload(p AppDownloadData) templ.Component {
 								}()
 							}
 							ctx = templ.InitializeContext(ctx)
-							templ_7745c5c3_Err = templ.Raw(icons.SVG("smartphone", "ui-app-download-phone")).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = icons.Icon("smartphone", "ui-app-download-phone").Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}

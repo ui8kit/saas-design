@@ -61,10 +61,10 @@ templ PricingTwoPlans(p PricingTwoPlansData) {
 								for _, f := range plan.Features {
 									@list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-feature"}}) {
 										if f.Included {
-											@templ.Raw(icons.SVG("check", "ui-pricing-two-plans-feature-check"))
+											@icons.Icon("check", "ui-pricing-two-plans-feature-check")
 										}
 										if !(f.Included) {
-											@templ.Raw(icons.SVG("lock", "ui-pricing-two-plans-feature-lock"))
+											@icons.Icon("lock", "ui-pricing-two-plans-feature-lock")
 										}
 										{ f.Label }
 									}

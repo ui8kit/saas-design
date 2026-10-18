@@ -19,7 +19,7 @@ templ AnnouncementBar(p AnnouncementBarData) {
 			}
 			@link.Link(link.LinkProps{Class: "ui-announcement-bar-link", Href: p.Link.Href, Attrs: templ.Attributes{"data-class": "ui-announcement-bar-link"}}) {
 				{ p.Link.Label }
-				@templ.Raw(icons.SVG("arrow-right", "ui-icon-sm"))
+				@icons.Icon("arrow-right", "ui-icon-sm")
 			}
 		}
 	}

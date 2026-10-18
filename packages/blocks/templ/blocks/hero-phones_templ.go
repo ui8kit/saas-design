@@ -178,7 +178,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 							}()
 						}
 						ctx = templ.InitializeContext(ctx)
-						templ_7745c5c3_Err = templ.Raw(icons.SVG("play", "ui-hero-phones-demo-icon")).Render(ctx, templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = icons.Icon("play", "ui-hero-phones-demo-icon").Render(ctx, templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -225,7 +225,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				templ_7745c5c3_Err = templ.Raw(icons.SVG("star", "ui-hero-phones-badge-icon")).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = icons.Icon("star", "ui-hero-phones-badge-icon").Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

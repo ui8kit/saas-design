@@ -2,7 +2,7 @@
 <!-- Headline and actions beside an app screen on an accent panel. -->
 <script lang="ts">
   import { Block, Box, Button, Container, Group, Image, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { HeroSplitData } from "./types";
 
   let { data }: { data: HeroSplitData } = $props();
@@ -22,7 +22,7 @@
           {data.primary.label}
         </Button>
         <Button variant="ghost" size="lg" href={data.secondary.href || undefined}>
-          {@html svg("play", `ui-icon-sm`)}
+          <Icon name={"play"} class={`ui-icon-sm`} />
           {data.secondary.label}
         </Button>
       </Group>

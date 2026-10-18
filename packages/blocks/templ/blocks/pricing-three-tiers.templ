@@ -58,10 +58,10 @@ templ PricingThreeTiers(p PricingThreeTiersData) {
 							for _, f := range plan.Features {
 								@list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-feature"}}) {
 									if f.Included {
-										@templ.Raw(icons.SVG("check", "ui-pricing-three-tiers-check"))
+										@icons.Icon("check", "ui-pricing-three-tiers-check")
 									}
 									if !(f.Included) {
-										@templ.Raw(icons.SVG("x", "ui-pricing-three-tiers-cross"))
+										@icons.Icon("x", "ui-pricing-three-tiers-cross")
 									}
 									{ f.Label }
 								}

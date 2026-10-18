@@ -29,7 +29,7 @@ templ FaqAccordion(p FaqAccordionData) {
 					@disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-accordion-item", Open: item.Open, Attrs: templ.Attributes{"data-class": "ui-faq-accordion-item"}}) {
 						@disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-accordion-question", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-question"}}) {
 							{ item.Question }
-							@templ.Raw(icons.SVG("chevron-down", "ui-faq-accordion-chevron"))
+							@icons.Icon("chevron-down", "ui-faq-accordion-chevron")
 						}
 						@text.Text(text.TextProps{Class: "ui-faq-accordion-answer", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-answer"}}) {
 							{ item.Answer }

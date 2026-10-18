@@ -1,0 +1,35 @@
+{
+  "$comment": "Accepted findings of tools/lint-apps.ts, like rules/baselines/*.json of codegen 2.0: each entry is matched by file + detector + message (not by line); a new finding fails, and an entry that no longer matches fails too (remove it). Every entry says why it stays.",
+  "entries": [
+    {
+      "file": "apps/site/views/layout.templ",
+      "detector": "dynamic-tag",
+      "message": "dynamic tag themeInit",
+      "reason": "Document shell: inlines packages/ui/behaviors/theme-init.js in <head> (sets .dark before first paint, no flash). The script is a static repo file passed by cmd/export, not data."
+    },
+    {
+      "file": "apps/design-react/src/components/BlockPreview.tsx",
+      "detector": "dynamic-tag",
+      "message": "dynamic tag Preview",
+      "reason": "Preview is a generated block component looked up in the packages/blocks registry by id, not a host tag; the Svelte twin (BlockPreview.svelte, <Preview {data} />) is a plain component to the svelte adapter. DOM parity with design-svelte is checked by tools/design-parity.ts."
+    },
+    {
+      "file": "packages/blocks/svelte/FooterSimple.svelte",
+      "detector": "raw-native-tag",
+      "message": "raw <nav>",
+      "reason": "The footer links are a nav landmark inside the footer Block; Block cannot nest, so it needs its own part file (NavBlock), which the blocks DSL cannot emit yet. Backlog blocks-dsl-no-part-files.md."
+    },
+    {
+      "file": "packages/blocks/react/FooterSimple.tsx",
+      "detector": "raw-native-tag",
+      "message": "raw <nav>",
+      "reason": "Same as FooterSimple.svelte (one DSL, three runtimes). Backlog blocks-dsl-no-part-files.md."
+    },
+    {
+      "file": "packages/blocks/templ/blocks/footer-simple.templ",
+      "detector": "raw-native-tag",
+      "message": "raw <nav>",
+      "reason": "Same as FooterSimple.svelte (one DSL, three runtimes). Backlog blocks-dsl-no-part-files.md."
+    }
+  ]
+}

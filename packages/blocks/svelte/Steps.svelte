@@ -2,7 +2,7 @@
 <!-- Ordered three-step explainer. -->
 <script lang="ts">
   import { Block, Container, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { StepsData } from "./types";
 
   let { data }: { data: StepsData } = $props();
@@ -21,7 +21,7 @@
     <List class="ui-steps-list" data-class="ui-steps-list" tag="ol">
       {#each data.items as item}
         <ListItem class="ui-steps-item" data-class="ui-steps-item">
-          {@html svg(item.icon, `ui-steps-icon`)}
+          <Icon name={item.icon} class={`ui-steps-icon`} />
           <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {item.title}
           </Title>

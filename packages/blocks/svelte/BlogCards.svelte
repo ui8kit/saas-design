@@ -28,9 +28,9 @@
               <Badge variant="outline">
                 {post.tag}
               </Badge>
-              <time class="ui-blog-cards-date" data-class="ui-blog-cards-date" datetime={post.datetime}>
+              <Text class="ui-blog-cards-date" data-class="ui-blog-cards-date" tag="time" datetime={post.datetime}>
                 {post.date}
-              </time>
+              </Text>
             </Group>
             <Title class="ui-item-title" data-class="ui-item-title" as={3}>
               <Link class="ui-blog-cards-post-link" data-class="ui-blog-cards-post-link" href={post.href || undefined}>

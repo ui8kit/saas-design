@@ -318,7 +318,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 										}
 										ctx = templ.InitializeContext(ctx)
 										if r.Free {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("check", "ui-comparison-table-yes")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("check", "ui-comparison-table-yes").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -355,7 +355,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 											return templ_7745c5c3_Err
 										}
 										if !(r.Free) {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("x", "ui-comparison-table-no")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("x", "ui-comparison-table-no").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -406,7 +406,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 										}
 										ctx = templ.InitializeContext(ctx)
 										if r.Premium {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("check", "ui-comparison-table-yes-2")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("check", "ui-comparison-table-yes-2").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -443,7 +443,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 											return templ_7745c5c3_Err
 										}
 										if !(r.Premium) {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("x", "ui-comparison-table-no-2")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("x", "ui-comparison-table-no-2").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}

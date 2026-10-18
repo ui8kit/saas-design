@@ -24,9 +24,9 @@ export function Changelog({ data }: { data: ChangelogData }) {
                 <Badge>
                   {r.version}
                 </Badge>
-                <time className="ui-changelog-date" data-class="ui-changelog-date" dateTime={r.datetime}>
+                <Text className="ui-changelog-date" data-class="ui-changelog-date" tag={"time"} {...{ dateTime: r.datetime }}>
                   {r.date}
-                </time>
+                </Text>
               </Group>
               <Title className="ui-item-title" data-class="ui-item-title" as={3}>
                 {r.title}

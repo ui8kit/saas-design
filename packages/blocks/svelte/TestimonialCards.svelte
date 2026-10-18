@@ -32,11 +32,11 @@
                 </Inline>
               </Stack>
             </Group>
-            <blockquote class="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote">
+            <Text class="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote" tag="blockquote">
               <Text>
                 {item.quote}
               </Text>
-            </blockquote>
+            </Text>
           </Card>
         </ListItem>
       {/each}

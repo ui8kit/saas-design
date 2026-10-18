@@ -8,11 +8,11 @@ export function TestimonialQuote({ data }: { data: TestimonialQuoteData }) {
     <Block className="ui-testimonial-quote" data-class="ui-testimonial-quote" tag={"section"} aria-label={data.label}>
       <Container className="ui-testimonial-quote-container" data-class="ui-testimonial-quote-container">
         <Box className="ui-testimonial-quote-panel" data-class="ui-testimonial-quote-panel">
-          <blockquote className="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote">
+          <Text className="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote" tag={"blockquote"}>
             <Text>
               {data.quote}
             </Text>
-          </blockquote>
+          </Text>
           <Group className="ui-testimonial-quote-author" data-class="ui-testimonial-quote-author">
             <Image className="ui-testimonial-quote-avatar" data-class="ui-testimonial-quote-avatar" variant={"avatar"} src={data.avatar.src || undefined} alt={data.avatar.alt || undefined} />
             <Stack className="ui-testimonial-quote-who" data-class="ui-testimonial-quote-who">

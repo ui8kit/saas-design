@@ -2,7 +2,7 @@
 <!-- Feature matrix for Free vs Premium. -->
 <script lang="ts">
   import { Block, Box, Container, Inline, Stack, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { ComparisonTableData } from "./types";
 
   let { data }: { data: ComparisonTableData } = $props();
@@ -38,13 +38,13 @@
               </TableHeadCell>
               <TableCell class="ui-comparison-table-cell" data-class="ui-comparison-table-cell">
                 {#if r.free}
-                  {@html svg("check", `ui-comparison-table-yes`)}
+                  <Icon name={"check"} class={`ui-comparison-table-yes`} />
                   <Inline class="ui-comparison-table-sr" data-class="ui-comparison-table-sr">
                     {data.yes}
                   </Inline>
                 {/if}
                 {#if !(r.free)}
-                  {@html svg("x", `ui-comparison-table-no`)}
+                  <Icon name={"x"} class={`ui-comparison-table-no`} />
                   <Inline class="ui-comparison-table-sr-2" data-class="ui-comparison-table-sr-2">
                     {data.no}
                   </Inline>
@@ -52,13 +52,13 @@
               </TableCell>
               <TableCell class="ui-comparison-table-cell-2" data-class="ui-comparison-table-cell-2">
                 {#if r.premium}
-                  {@html svg("check", `ui-comparison-table-yes-2`)}
+                  <Icon name={"check"} class={`ui-comparison-table-yes-2`} />
                   <Inline class="ui-comparison-table-sr-3" data-class="ui-comparison-table-sr-3">
                     {data.yes}
                   </Inline>
                 {/if}
                 {#if !(r.premium)}
-                  {@html svg("x", `ui-comparison-table-no-2`)}
+                  <Icon name={"x"} class={`ui-comparison-table-no-2`} />
                   <Inline class="ui-comparison-table-sr-4" data-class="ui-comparison-table-sr-4">
                     {data.no}
                   </Inline>

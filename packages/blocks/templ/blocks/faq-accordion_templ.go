@@ -184,7 +184,7 @@ func FaqAccordion(p FaqAccordionData) templ.Component {
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
-								templ_7745c5c3_Err = templ.Raw(icons.SVG("chevron-down", "ui-faq-accordion-chevron")).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = icons.Icon("chevron-down", "ui-faq-accordion-chevron").Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}

@@ -1,15 +1,31 @@
 ---
-description: UI8Kit block/box semantics, tag (retag) rules, block DSL conventions
-globs: packages/blocks/**,packages/ui/**,apps/**/*.templ,apps/**/*.svelte
+description: UI8Kit block/box semantics, tag (retag) rules, block DSL conventions, app-level lint (tools/lint-apps.ts)
+globs: packages/blocks/**,packages/ui/**,apps/**
 alwaysApply: false
 ---
 
-# Blocks and retag (from ui8kit block/box semantics)
+# Blocks and retag (codegen 2.0 rules, enforced by `bun tools/lint-apps.ts` in `bun run check`)
 
-- `Block` is the only top-level unit for page sections, landmarks and public anchors. Retag it by meaning: `tag: "section" | "header" | "footer" | "nav" | "main" | "aside" | "article"`. Never nest a Block in a Block — promote it to a sibling.
-- `id` / anchors belong to `Block` only, except primitives that own ids (Field/Input, Button, Form, Dialog, Disclosure, Output, Meter, Progress). Sections use `aria-labelledby` pointing to their `Title` id.
-- `Box` is internal layout only (no anchors, no landmarks). Inside a Block compose with `Container`, `Stack`, `Group`, `Grid`, `Card`, list/table/media/disclosure/form primitives.
-- Pick tags for meaning, not style. Generic containers (`Box`, `Block`, `Stack`, `Group`, `Container`) never take strict content-model tags: use `List`/`ListItem` for `ul/ol/li`, `Table*` for tables, `Image`/`Picture`/`Source` for media, `Disclosure`/`Summary` for `details`, `Form`/`Fieldset`/`Legend` around fields. Allowed tags per primitive are in codegen `utils/tags` (`IsAllowedTag`) — do not widen them.
-- Headings: one `Title as={1}` per page (hero); section titles `as={2}`, card titles `as={3}`.
-- Apps never write raw HTML layout tags in `.templ`; packages/ui is the tag supplier. Blocks are defined once in `packages/blocks/defs` with the DSL (`c(...)` primitives, `h(...)` only for tags no primitive owns) and emitted to both runtimes. `bun run parity` in packages/blocks must report 0 DOM mismatches.
-- Max 45 blocks in the catalog. Each block: `id`, `category`, `description`, `figma` node ref (or catalog-only), data schema, fixture data in `fixtures/views/blocks.json`.
+The detectors are the codegen 2.0 `rules` group (`packages/ui/.xgen/xgen/check/src/rules`), run on composition code of `apps/site/views`, `apps/design-svelte/src`, `apps/design-react/src` and the generated `packages/blocks/{svelte,react,templ}`.
+
+- **block-root.** `Block` is the only unit for page sections, landmarks and public anchors. Retag it by meaning: `tag: "section" | "header" | "footer" | "nav" | "main" | "aside" | "article" | "figure" | "search" | "hgroup"`.
+  - At most one Block per render path; exclusive `if/else` branches may each have one. Never nest a Block in a Block, never put one in a loop: extract a file (for example `NavTree`, `ShowcasePart`).
+  - A page (`+page.svelte`, `src/pages/*.tsx`) and every generated block opens on Block, directly or through a component whose file opens on Block (`PageHeader`).
+- **raw-native-tag.** No raw HTML tags in composition. Use primitives with `tag`/`as`:
+  - `Container tag="main"`, `Block tag="nav"`, `Title as={2}`.
+  - `Text tag="blockquote" | "time" | "figcaption"`, `Inline` for `span`.
+  - `List`/`ListItem`, `Table*`, `LinkPlain` for a bare `<a>`.
+  - Allowed tags per primitive are in codegen `utils/tags`; do not widen them. The templ document shell (`apps/site/views/layout.templ`) may use `html head body meta title link script`.
+- **raw-html.** No `{@html}`, `dangerouslySetInnerHTML` or `@templ.Raw` in composition.
+  - Icons are components: Go `@icons.Icon(name, class)`, Svelte `<Icon name class />` (`@saas-design/icons/svelte`), React `<Icon name className />`.
+  - The one raw write of an icon is inside `packages/icons`.
+- **dynamic-tag.** No `<svelte:element this>` or computed host tags. Region slots in templ use `@templ.Join(r.Main...)`.
+- **reactive-aria.** ARIA state (`aria-current`, `aria-expanded`, ...) is never an expression. Write a static attribute in each branch (see `NavTree`) or pass the state through a primitive prop.
+- **inline-style** (this repo). No `style` attribute anywhere.
+- **literal-text.** Blocking in blocks: their copy comes from fixtures. Report-only in the docs apps.
+- **Baseline.** An accepted finding goes in `tools/lint-apps.baseline.json` with a reason. It is matched by file + detector + message, and a stale entry fails. Prefer fixing the code over adding an entry.
+- **Anchors.** `id` / anchors belong to `Block` (or `Container tag="section"` inside a page), plus primitives that own ids (Field/Input, Button, Form, Dialog, Disclosure, Output, Meter, Progress). Sections use `aria-labelledby` pointing to their `Title` id.
+- **Box.** `Box` is internal layout only (no anchors, no landmarks). Inside a Block compose with `Container`, `Stack`, `Group`, `Grid`, `Card`, list/table/media/disclosure/form primitives.
+- **Headings.** One `Title as={1}` per page (hero); section titles `as={2}`, card titles `as={3}`.
+- **DSL.** Blocks are defined once in `packages/blocks/defs` with the DSL and emitted to templ, Svelte and React. Use `c(...)` for primitives and `h(...)` only for tags no primitive owns; `h` is reported by the lint. Block parity in `bun run check` must report 0 mismatches.
+- **Catalog.** Max 45 blocks. Each block has `id`, `category`, `description`, a `figma` node ref (or catalog-only), a data schema, and fixture data in `fixtures/views/blocks.json`.

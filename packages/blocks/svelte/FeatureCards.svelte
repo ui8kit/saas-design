@@ -2,7 +2,7 @@
 <!-- Split section header and three muted cards with an icon, title and description. -->
 <script lang="ts">
   import { Block, Card, Container, Grid, Group, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FeatureCardsData } from "./types";
 
   let { data }: { data: FeatureCardsData } = $props();
@@ -21,7 +21,7 @@
     <Grid class="ui-feature-cards-grid" data-class="ui-feature-cards-grid">
       {#each data.items as item}
         <Card class="ui-feature-cards-card" data-class="ui-feature-cards-card">
-          {@html svg(item.icon, `ui-feature-cards-icon`)}
+          <Icon name={item.icon} class={`ui-feature-cards-icon`} />
           <Stack class="ui-stack-4" data-class="ui-stack-4">
             <Title class="ui-feature-cards-card-title" data-class="ui-feature-cards-card-title" as={3}>
               {item.title}

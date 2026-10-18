@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       "@saas-design/ui": r("../../packages/ui/svelte/src/index.ts"),
       "@saas-design/blocks": r("../../packages/blocks/svelte/index.ts"),
+      "@saas-design/icons/svelte": r("../../packages/icons/src/Icon.svelte"),
       "@saas-design/icons": r("../../packages/icons/src/index.ts"),
       "$design": r("../design-shared/src"),
       "$fixtures": r("../../fixtures"),

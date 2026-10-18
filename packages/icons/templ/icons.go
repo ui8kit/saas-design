@@ -3,6 +3,8 @@
 
 package icons
 
+import "github.com/a-h/templ"
+
 type icon struct {
 	viewBox, inner string
 	stroke         bool
@@ -59,6 +61,10 @@ func SVG(name, class string) string {
 	}
 	return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="` + i.viewBox + `" ` + paint + ` class="` + class + `" aria-hidden="true" focusable="false">` + i.inner + `</svg>`
 }
+
+// Icon is the templ component of SVG: blocks render `@icons.Icon(name, class)`, so the one raw-HTML write of an icon
+// lives here (the registry is static, generated from lucide-static and fixtures/media/svg), never in composition code.
+func Icon(name, class string) templ.Component { return templ.Raw(SVG(name, class)) }
 
 // Names lists the registered icons.
 func Names() []string {

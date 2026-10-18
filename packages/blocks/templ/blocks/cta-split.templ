@@ -18,7 +18,7 @@ templ CtaSplit(p CtaSplitData) {
 	@block.Block(block.BlockProps{Class: "ui-cta-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-cta-split", "aria-labelledby": "cta-split-title"}}) {
 		@container.Container(container.ContainerProps{Class: "ui-cta-split-container", Attrs: templ.Attributes{"data-class": "ui-cta-split-container"}}) {
 			@stack.Stack(stack.StackProps{Class: "ui-cta-split-panel", Attrs: templ.Attributes{"data-class": "ui-cta-split-panel"}}) {
-				@templ.Raw(icons.SVG("brand-mark", "ui-cta-split-mark"))
+				@icons.Icon("brand-mark", "ui-cta-split-mark")
 				@grid.Grid(grid.GridProps{Class: "ui-cta-split-row", Attrs: templ.Attributes{"data-class": "ui-cta-split-row"}}) {
 					@title.Title(title.TitleProps{Class: "ui-cta-split-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-cta-split-title", "id": "cta-split-title"}}) {
 						{ p.Title }

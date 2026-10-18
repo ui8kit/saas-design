@@ -2,7 +2,7 @@
 <!-- Header and two plan cards; the featured plan flips to the dark scope (variables only, same markup). -->
 <script lang="ts">
   import { Badge, Block, Button, Container, Group, Inline, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { PricingTwoPlansData } from "./types";
 
   let { data }: { data: PricingTwoPlansData } = $props();
@@ -51,10 +51,10 @@
               {#each plan.features as f}
                 <ListItem class="ui-pricing-two-plans-feature" data-class="ui-pricing-two-plans-feature">
                   {#if f.included}
-                    {@html svg("check", `ui-pricing-two-plans-feature-check`)}
+                    <Icon name={"check"} class={`ui-pricing-two-plans-feature-check`} />
                   {/if}
                   {#if !(f.included)}
-                    {@html svg("lock", `ui-pricing-two-plans-feature-lock`)}
+                    <Icon name={"lock"} class={`ui-pricing-two-plans-feature-lock`} />
                   {/if}
                   {f.label}
                 </ListItem>

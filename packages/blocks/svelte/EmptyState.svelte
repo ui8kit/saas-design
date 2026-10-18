@@ -2,7 +2,7 @@
 <!-- Icon, message and primary action when a list is empty. -->
 <script lang="ts">
   import { Block, Button, Container, IconBadge, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { EmptyStateData } from "./types";
 
   let { data }: { data: EmptyStateData } = $props();
@@ -11,7 +11,7 @@
 <Block class="ui-section ui-empty-state" data-class="ui-empty-state" tag="section" aria-labelledby="empty-state-title">
   <Container class="ui-empty-state-container" data-class="ui-empty-state-container">
     <IconBadge class="ui-empty-state-badge" data-class="ui-empty-state-badge">
-      {@html svg("inbox", `ui-empty-state-icon`)}
+      <Icon name={"inbox"} class={`ui-empty-state-icon`} />
     </IconBadge>
     <Title class="ui-empty-state-title" data-class="ui-empty-state-title" as={2} id="empty-state-title">
       {data.title}
@@ -20,7 +20,7 @@
       {data.text}
     </Text>
     <Button href={data.cta.href || undefined}>
-      {@html svg("plus", `ui-icon-sm`)}
+      <Icon name={"plus"} class={`ui-icon-sm`} />
       {data.cta.label}
     </Button>
   </Container>

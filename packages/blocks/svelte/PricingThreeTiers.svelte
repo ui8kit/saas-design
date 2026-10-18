@@ -2,7 +2,7 @@
 <!-- Free, Premium (dark scope) and Team plans. -->
 <script lang="ts">
   import { Badge, Block, Button, Container, Group, Inline, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { PricingThreeTiersData } from "./types";
 
   let { data }: { data: PricingThreeTiersData } = $props();
@@ -48,10 +48,10 @@
             {#each plan.features as f}
               <ListItem class="ui-pricing-three-tiers-feature" data-class="ui-pricing-three-tiers-feature">
                 {#if f.included}
-                  {@html svg("check", `ui-pricing-three-tiers-check`)}
+                  <Icon name={"check"} class={`ui-pricing-three-tiers-check`} />
                 {/if}
                 {#if !(f.included)}
-                  {@html svg("x", `ui-pricing-three-tiers-cross`)}
+                  <Icon name={"x"} class={`ui-pricing-three-tiers-cross`} />
                 {/if}
                 {f.label}
               </ListItem>

@@ -24,9 +24,9 @@
             <Badge>
               {r.version}
             </Badge>
-            <time class="ui-changelog-date" data-class="ui-changelog-date" datetime={r.datetime}>
+            <Text class="ui-changelog-date" data-class="ui-changelog-date" tag="time" datetime={r.datetime}>
               {r.date}
-            </time>
+            </Text>
           </Group>
           <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {r.title}

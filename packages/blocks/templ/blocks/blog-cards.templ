@@ -39,9 +39,9 @@ templ BlogCards(p BlogCardsData) {
 								@badge.Badge(badge.BadgeProps{Variant: "outline"}) {
 									{ post.Tag }
 								}
-								<time class="ui-blog-cards-date" data-class="ui-blog-cards-date" datetime={ post.Datetime }>
+								@text.Text(text.TextProps{Class: "ui-blog-cards-date", Tag: "time", Attrs: templ.Attributes{"data-class": "ui-blog-cards-date", "datetime": post.Datetime}}) {
 									{ post.Date }
-								</time>
+								}
 							}
 							@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 								@link.Link(link.LinkProps{Class: "ui-blog-cards-post-link", Href: post.Href, Attrs: templ.Attributes{"data-class": "ui-blog-cards-post-link"}}) {

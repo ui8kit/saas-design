@@ -2,7 +2,7 @@
 <!-- Full-bleed primary surface with navbar, centered headline, two actions, social badge and tilted app screens. -->
 <script lang="ts">
   import { Badge, Block, Box, Button, Group, Image, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import Navbar from "./Navbar.svelte";
   import type { HeroPhonesData } from "./types";
 
@@ -23,13 +23,13 @@
         {data.primary.label}
       </Button>
       <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="outline" size="xl" href={data.secondary.href || undefined}>
-        {@html svg("play", `ui-hero-phones-demo-icon`)}
+        <Icon name={"play"} class={`ui-hero-phones-demo-icon`} />
         {data.secondary.label}
       </Button>
     </Group>
   </Stack>
   <Badge class="ui-hero-phones-badge" data-class="ui-hero-phones-badge" variant="secondary" size="lg">
-    {@html svg("star", `ui-hero-phones-badge-icon`)}
+    <Icon name={"star"} class={`ui-hero-phones-badge-icon`} />
     {data.badge}
   </Badge>
   <Box class="ui-hero-phones-art" data-class="ui-hero-phones-art" aria-hidden="true">

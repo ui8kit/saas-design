@@ -29,7 +29,7 @@ templ Integrations(p IntegrationsData) {
 				for _, item := range p.Items {
 					@list.ListItem(list.ListItemProps{Class: "ui-integrations-item", Attrs: templ.Attributes{"data-class": "ui-integrations-item"}}) {
 						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-integrations-badge", Attrs: templ.Attributes{"data-class": "ui-integrations-badge"}}) {
-							@templ.Raw(icons.SVG(item.Icon, "ui-integrations-icon"))
+							@icons.Icon(item.Icon, "ui-integrations-icon")
 						}
 						@stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}) {
 							@title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}) {

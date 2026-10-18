@@ -2,7 +2,7 @@
 <!-- Dark-scope footer card: brand and socials, two link columns, newsletter form and copyright bar. -->
 <script lang="ts">
   import { Block, Button, Container, Form, Grid, Inline, Input, Label, Link, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FooterNewsletterData } from "./types";
 
   let { data }: { data: FooterNewsletterData } = $props();
@@ -14,7 +14,7 @@
       <Grid class="ui-footer-newsletter-top" data-class="ui-footer-newsletter-top">
         <Stack class="ui-footer-newsletter-brand" data-class="ui-footer-newsletter-brand">
           <Link class="ui-footer-newsletter-brand-link" data-class="ui-footer-newsletter-brand-link" href={data.href || undefined}>
-            {@html svg("brand-mark", `ui-footer-newsletter-mark`)}
+            <Icon name={"brand-mark"} class={`ui-footer-newsletter-mark`} />
             <Inline>
               {data.brand}
             </Inline>
@@ -26,7 +26,7 @@
             {#each data.socials as s}
               <ListItem>
                 <Link class="ui-footer-newsletter-social" data-class="ui-footer-newsletter-social" href={s.href || undefined} aria-label={s.label || undefined}>
-                  {@html svg(s.icon, `ui-footer-newsletter-social-icon`)}
+                  <Icon name={s.icon} class={`ui-footer-newsletter-social-icon`} />
                 </Link>
               </ListItem>
             {/each}

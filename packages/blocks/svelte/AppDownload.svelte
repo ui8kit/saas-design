@@ -2,7 +2,7 @@
 <!-- Store buttons beside a phone on a dark panel. -->
 <script lang="ts">
   import { Block, Button, Container, Group, Image, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { AppDownloadData } from "./types";
 
   let { data }: { data: AppDownloadData } = $props();
@@ -19,11 +19,11 @@
       </Text>
       <Group class="ui-app-download-stores" data-class="ui-app-download-stores">
         <Button variant="secondary" size="lg" href={data.ios.href || undefined}>
-          {@html svg("apple", `ui-app-download-apple`)}
+          <Icon name={"apple"} class={`ui-app-download-apple`} />
           {data.ios.label}
         </Button>
         <Button variant="outline" size="lg" href={data.android.href || undefined}>
-          {@html svg("smartphone", `ui-app-download-phone`)}
+          <Icon name={"smartphone"} class={`ui-app-download-phone`} />
           {data.android.label}
         </Button>
       </Group>

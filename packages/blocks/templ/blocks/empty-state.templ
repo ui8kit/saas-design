@@ -17,7 +17,7 @@ templ EmptyState(p EmptyStateData) {
 	@block.Block(block.BlockProps{Class: "ui-section ui-empty-state", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-empty-state", "aria-labelledby": "empty-state-title"}}) {
 		@container.Container(container.ContainerProps{Class: "ui-empty-state-container", Attrs: templ.Attributes{"data-class": "ui-empty-state-container"}}) {
 			@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-empty-state-badge", Attrs: templ.Attributes{"data-class": "ui-empty-state-badge"}}) {
-				@templ.Raw(icons.SVG("inbox", "ui-empty-state-icon"))
+				@icons.Icon("inbox", "ui-empty-state-icon")
 			}
 			@title.Title(title.TitleProps{Class: "ui-empty-state-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-empty-state-title", "id": "empty-state-title"}}) {
 				{ p.Title }
@@ -26,7 +26,7 @@ templ EmptyState(p EmptyStateData) {
 				{ p.Text }
 			}
 			@button.Button(button.ButtonProps{Href: p.Cta.Href}) {
-				@templ.Raw(icons.SVG("plus", "ui-icon-sm"))
+				@icons.Icon("plus", "ui-icon-sm")
 				{ p.Cta.Label }
 			}
 		}

@@ -2,7 +2,7 @@
 <!-- Native details/summary list; first item open. -->
 <script lang="ts">
   import { Block, Container, Disclosure, Stack, Summary, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FaqAccordionData } from "./types";
 
   let { data }: { data: FaqAccordionData } = $props();
@@ -23,7 +23,7 @@
         <Disclosure class="ui-faq-accordion-item" data-class="ui-faq-accordion-item" open={item.open}>
           <Summary class="ui-faq-accordion-question" data-class="ui-faq-accordion-question">
             {item.question}
-            {@html svg("chevron-down", `ui-faq-accordion-chevron`)}
+            <Icon name={"chevron-down"} class={`ui-faq-accordion-chevron`} />
           </Summary>
           <Text class="ui-faq-accordion-answer" data-class="ui-faq-accordion-answer">
             {item.answer}

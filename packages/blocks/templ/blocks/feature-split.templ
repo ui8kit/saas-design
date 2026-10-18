@@ -33,7 +33,7 @@ templ FeatureSplit(p FeatureSplitData) {
 				@list.List(list.ListProps{Class: "ui-feature-split-list", Attrs: templ.Attributes{"data-class": "ui-feature-split-list"}}) {
 					for _, item := range p.Items {
 						@list.ListItem(list.ListItemProps{Class: "ui-feature-split-item", Attrs: templ.Attributes{"data-class": "ui-feature-split-item"}}) {
-							@templ.Raw(icons.SVG("circle-check", "ui-feature-split-check"))
+							@icons.Icon("circle-check", "ui-feature-split-check")
 							@stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}) {
 								@title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}) {
 									{ item.Title }

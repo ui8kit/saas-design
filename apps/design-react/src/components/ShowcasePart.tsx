@@ -1,15 +1,10 @@
 import type { ComponentType } from "react";
-import * as ui from "@saas-design/ui/react";
 import { Block, Box, Inline, List, ListItem, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow, Text, Title } from "@saas-design/ui/react";
 import type showcase from "@saas-design/ui/showcase.json";
 
 type Part = (typeof showcase)[number]["parts"][number];
-// Generated React parts of packages/ui, by exported name (the `name` of a part in showcase.json).
-const parts = ui as unknown as Record<string, ComponentType<Record<string, unknown>> | undefined>;
-
 // One part of a brick: every showcase case rendered with the codegen React output (`react` = React prop names), plus its prop table.
-export function ShowcasePart({ part }: { part: Part }) {
-  const Comp = parts[part.name];
+export function ShowcasePart({ part, Comp }: { part: Part; Comp?: ComponentType<Record<string, unknown>> }) {
   return (
     <Block tag="article" className="ds-part">
       <Title as={3} className="ds-h3">{part.name}</Title>

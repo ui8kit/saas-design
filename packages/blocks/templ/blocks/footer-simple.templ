@@ -17,7 +17,7 @@ templ FooterSimple(p FooterSimpleData) {
 	@block.Block(block.BlockProps{Class: "ui-footer-simple", Tag: "footer", Attrs: templ.Attributes{"data-class": "ui-footer-simple"}}) {
 		@container.Container(container.ContainerProps{Class: "ui-footer-simple-container", Attrs: templ.Attributes{"data-class": "ui-footer-simple-container"}}) {
 			@link.Link(link.LinkProps{Class: "ui-footer-simple-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-footer-simple-brand"}}) {
-				@templ.Raw(icons.SVG("brand-mark", "ui-icon-sm"))
+				@icons.Icon("brand-mark", "ui-icon-sm")
 				@inline.Inline(inline.InlineProps{}) {
 					{ p.Brand }
 				}

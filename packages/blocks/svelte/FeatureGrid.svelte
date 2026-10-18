@@ -2,7 +2,7 @@
 <!-- Six features with icon badges on a plain grid. -->
 <script lang="ts">
   import { Block, Container, IconBadge, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FeatureGridData } from "./types";
 
   let { data }: { data: FeatureGridData } = $props();
@@ -22,7 +22,7 @@
       {#each data.items as item}
         <ListItem class="ui-feature-grid-item" data-class="ui-feature-grid-item">
           <IconBadge class="ui-feature-grid-badge" data-class="ui-feature-grid-badge">
-            {@html svg(item.icon, `ui-feature-grid-icon`)}
+            <Icon name={item.icon} class={`ui-feature-grid-icon`} />
           </IconBadge>
           <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {item.title}

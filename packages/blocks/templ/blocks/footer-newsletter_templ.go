@@ -121,7 +121,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 									}()
 								}
 								ctx = templ.InitializeContext(ctx)
-								templ_7745c5c3_Err = templ.Raw(icons.SVG("brand-mark", "ui-footer-newsletter-mark")).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = icons.Icon("brand-mark", "ui-footer-newsletter-mark").Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -222,7 +222,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 												}()
 											}
 											ctx = templ.InitializeContext(ctx)
-											templ_7745c5c3_Err = templ.Raw(icons.SVG(s.Icon, "ui-footer-newsletter-social-icon")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon(s.Icon, "ui-footer-newsletter-social-icon").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}

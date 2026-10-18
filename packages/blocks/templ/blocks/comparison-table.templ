@@ -45,13 +45,13 @@ templ ComparisonTable(p ComparisonTableData) {
 								}
 								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell"}}) {
 									if r.Free {
-										@templ.Raw(icons.SVG("check", "ui-comparison-table-yes"))
+										@icons.Icon("check", "ui-comparison-table-yes")
 										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr"}}) {
 											{ p.Yes }
 										}
 									}
 									if !(r.Free) {
-										@templ.Raw(icons.SVG("x", "ui-comparison-table-no"))
+										@icons.Icon("x", "ui-comparison-table-no")
 										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-2"}}) {
 											{ p.No }
 										}
@@ -59,13 +59,13 @@ templ ComparisonTable(p ComparisonTableData) {
 								}
 								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell-2"}}) {
 									if r.Premium {
-										@templ.Raw(icons.SVG("check", "ui-comparison-table-yes-2"))
+										@icons.Icon("check", "ui-comparison-table-yes-2")
 										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-3", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-3"}}) {
 											{ p.Yes }
 										}
 									}
 									if !(r.Premium) {
-										@templ.Raw(icons.SVG("x", "ui-comparison-table-no-2"))
+										@icons.Icon("x", "ui-comparison-table-no-2")
 										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-4", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-4"}}) {
 											{ p.No }
 										}

@@ -42,11 +42,11 @@ templ TestimonialCards(p TestimonialCardsData) {
 									}
 								}
 							}
-							<blockquote class="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote">
+							@text.Text(text.TextProps{Class: "ui-testimonial-cards-quote", Tag: "blockquote", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-quote"}}) {
 								@text.Text(text.TextProps{}) {
 									{ item.Quote }
 								}
-							</blockquote>
+							}
 						}
 					}
 				}

@@ -2,7 +2,7 @@
 <!-- Brand mark, primary menu and one call to action; inherits the surface color of its parent. -->
 <script lang="ts">
   import { Block, Button, Group, Inline, Link, List, ListItem, Sheet, SheetClose, SheetTrigger, ThemeToggle } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { NavbarData } from "./types";
 
   let { data }: { data: NavbarData } = $props();
@@ -10,7 +10,7 @@
 
 <Block class="ui-navbar" data-class="ui-navbar" tag="nav" aria-label={data.label}>
   <Link class="ui-navbar-brand" data-class="ui-navbar-brand" href={data.href || undefined}>
-    {@html svg("brand-mark", `ui-navbar-mark`)}
+    <Icon name={"brand-mark"} class={`ui-navbar-mark`} />
     <Inline>
       {data.brand}
     </Inline>

@@ -128,7 +128,7 @@ export const testimonialCards = block({
                 c("Stack", { kit: "stack-2" },
                   c("Inline", { ui: "name", css: "leading-5 font-bold" }, $("item.name")),
                   c("Inline", { ui: "role", css: "leading-5 text-muted-foreground" }, $("item.role")))),
-              h("blockquote", { ui: "quote", css: "leading-6 text-muted-foreground" }, c("Text", {}, $("item.quote"))))))))),
+              c("Text", { tag: "blockquote", ui: "quote", css: "leading-6 text-muted-foreground" }, c("Text", {}, $("item.quote"))))))))),
 });
 
 export const ctaSplit = block({
@@ -190,7 +190,7 @@ export const faqTiles = block({
           each($("items"), "item",
             c("Disclosure", { ui: "tile", variants: { tone }, vary: { tone: $("item.tone") }, css: "rounded-lg px-10 py-6" },
               c("Summary", { ui: "question", css: "flex cursor-pointer list-none items-center gap-6 text-xl font-medium" },
-                h("span", { ui: "arrow", css: "flex size-10 shrink-0 items-center justify-center rounded-full bg-background text-foreground" }, icon("chevron-down", { ui: "arrow-icon", css: "size-4" })),
+                c("Inline", { ui: "arrow", css: "flex size-10 shrink-0 items-center justify-center rounded-full bg-background text-foreground" }, icon("chevron-down", { ui: "arrow-icon", css: "size-4" })),
                 $("item.question")),
               c("Text", { ui: "answer", css: "pt-4 pl-16 text-base leading-6" }, $("item.answer"))))),
         c("Link", { ui: "more", href: $("more.href"), css: "self-end text-lg text-foreground hover:underline" }, $("more.label"))))),

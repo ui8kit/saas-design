@@ -79,7 +79,7 @@ func CtaSplit(p CtaSplitData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = templ.Raw(icons.SVG("brand-mark", "ui-cta-split-mark")).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = icons.Icon("brand-mark", "ui-cta-split-mark").Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}

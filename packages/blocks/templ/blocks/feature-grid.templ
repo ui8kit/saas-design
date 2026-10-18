@@ -29,7 +29,7 @@ templ FeatureGrid(p FeatureGridData) {
 				for _, item := range p.Items {
 					@list.ListItem(list.ListItemProps{Class: "ui-feature-grid-item", Attrs: templ.Attributes{"data-class": "ui-feature-grid-item"}}) {
 						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-feature-grid-badge", Attrs: templ.Attributes{"data-class": "ui-feature-grid-badge"}}) {
-							@templ.Raw(icons.SVG(item.Icon, "ui-feature-grid-icon"))
+							@icons.Icon(item.Icon, "ui-feature-grid-icon")
 						}
 						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ item.Title }

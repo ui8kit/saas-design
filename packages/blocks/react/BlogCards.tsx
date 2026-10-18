@@ -28,9 +28,9 @@ export function BlogCards({ data }: { data: BlogCardsData }) {
                   <Badge variant={"outline"}>
                     {post.tag}
                   </Badge>
-                  <time className="ui-blog-cards-date" data-class="ui-blog-cards-date" dateTime={post.datetime}>
+                  <Text className="ui-blog-cards-date" data-class="ui-blog-cards-date" tag={"time"} {...{ dateTime: post.datetime }}>
                     {post.date}
-                  </time>
+                  </Text>
                 </Group>
                 <Title className="ui-item-title" data-class="ui-item-title" as={3}>
                   <Link className="ui-blog-cards-post-link" data-class="ui-blog-cards-post-link" href={post.href || undefined}>

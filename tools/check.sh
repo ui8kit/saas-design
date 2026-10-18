@@ -28,6 +28,8 @@ bun tools/ui8px-policy.ts --check
 bun tools/ui8px-gate.ts
 # app-level brand tokens must never reach packages/ (ui8px cannot scope allowed utilities, see .project/backlog)
 if grep -rEn --exclude-dir=node_modules '(bg|text|border|fill|stroke|ring|from|to)-brand-|var\(--brand-' packages/; then echo "brand tokens used in packages/"; exit 1; fi
+step "app-level retag + block rules (codegen 2.0 rules detectors on apps/* and generated blocks)"
+bun tools/lint-apps.ts
 step "packages compile standalone (tokens + adapter, no app brand.css)"
 npx --no-install @tailwindcss/cli -i packages/adapter/test/standalone.css -o /tmp/saas-design-standalone.css 2>&1 | tee /tmp/saas-design-standalone.log | tail -1
 if grep -q "Error" /tmp/saas-design-standalone.log; then echo "packages depend on app-level CSS"; exit 1; fi

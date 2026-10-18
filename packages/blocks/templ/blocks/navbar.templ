@@ -18,7 +18,7 @@ import (
 templ Navbar(p NavbarData) {
 	@block.Block(block.BlockProps{Class: "ui-navbar", Tag: "nav", Attrs: templ.Attributes{"data-class": "ui-navbar", "aria-label": p.Label}}) {
 		@link.Link(link.LinkProps{Class: "ui-navbar-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-brand"}}) {
-			@templ.Raw(icons.SVG("brand-mark", "ui-navbar-mark"))
+			@icons.Icon("brand-mark", "ui-navbar-mark")
 			@inline.Inline(inline.InlineProps{}) {
 				{ p.Brand }
 			}

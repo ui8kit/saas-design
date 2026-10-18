@@ -2,7 +2,7 @@
 <!-- Checklist of benefits beside an app screen. -->
 <script lang="ts">
   import { Block, Box, Container, Image, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { FeatureSplitData } from "./types";
 
   let { data }: { data: FeatureSplitData } = $props();
@@ -25,7 +25,7 @@
       <List class="ui-feature-split-list" data-class="ui-feature-split-list">
         {#each data.items as item}
           <ListItem class="ui-feature-split-item" data-class="ui-feature-split-item">
-            {@html svg("circle-check", `ui-feature-split-check`)}
+            <Icon name={"circle-check"} class={`ui-feature-split-check`} />
             <Stack class="ui-stack-2" data-class="ui-stack-2">
               <Title class="ui-item-title-sm" data-class="ui-item-title-sm" as={3}>
                 {item.title}

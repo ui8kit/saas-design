@@ -32,11 +32,11 @@ export function TestimonialCards({ data }: { data: TestimonialCardsData }) {
                     </Inline>
                   </Stack>
                 </Group>
-                <blockquote className="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote">
+                <Text className="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote" tag={"blockquote"}>
                   <Text>
                     {item.quote}
                   </Text>
-                </blockquote>
+                </Text>
               </Card>
             </ListItem>
             </Fragment>

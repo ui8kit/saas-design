@@ -31,7 +31,7 @@ templ HeroSplit(p HeroSplitData) {
 						{ p.Primary.Label }
 					}
 					@button.Button(button.ButtonProps{Variant: "ghost", Size: "lg", Href: p.Secondary.Href}) {
-						@templ.Raw(icons.SVG("play", "ui-icon-sm"))
+						@icons.Icon("play", "ui-icon-sm")
 						{ p.Secondary.Label }
 					}
 				}

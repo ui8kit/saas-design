@@ -32,9 +32,9 @@ templ Changelog(p ChangelogData) {
 							@badge.Badge(badge.BadgeProps{}) {
 								{ r.Version }
 							}
-							<time class="ui-changelog-date" data-class="ui-changelog-date" datetime={ r.Datetime }>
+							@text.Text(text.TextProps{Class: "ui-changelog-date", Tag: "time", Attrs: templ.Attributes{"data-class": "ui-changelog-date", "datetime": r.Datetime}}) {
 								{ r.Date }
-							</time>
+							}
 						}
 						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ r.Title }

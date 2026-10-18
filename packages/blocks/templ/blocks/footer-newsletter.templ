@@ -27,7 +27,7 @@ templ FooterNewsletter(p FooterNewsletterData) {
 				@grid.Grid(grid.GridProps{Class: "ui-footer-newsletter-top", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-top"}}) {
 					@stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-brand", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-brand"}}) {
 						@link.Link(link.LinkProps{Class: "ui-footer-newsletter-brand-link", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-brand-link"}}) {
-							@templ.Raw(icons.SVG("brand-mark", "ui-footer-newsletter-mark"))
+							@icons.Icon("brand-mark", "ui-footer-newsletter-mark")
 							@inline.Inline(inline.InlineProps{}) {
 								{ p.Brand }
 							}
@@ -39,7 +39,7 @@ templ FooterNewsletter(p FooterNewsletterData) {
 							for _, s := range p.Socials {
 								@list.ListItem(list.ListItemProps{}) {
 									@link.Link(link.LinkProps{Class: "ui-footer-newsletter-social", Href: s.Href, AriaLabel: s.Label, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-social"}}) {
-										@templ.Raw(icons.SVG(s.Icon, "ui-footer-newsletter-social-icon"))
+										@icons.Icon(s.Icon, "ui-footer-newsletter-social-icon")
 									}
 								}
 							}

@@ -31,13 +31,13 @@ templ HeroPhones(p HeroPhonesData) {
 					{ p.Primary.Label }
 				}
 				@button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "outline", Size: "xl", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}) {
-					@templ.Raw(icons.SVG("play", "ui-hero-phones-demo-icon"))
+					@icons.Icon("play", "ui-hero-phones-demo-icon")
 					{ p.Secondary.Label }
 				}
 			}
 		}
 		@badge.Badge(badge.BadgeProps{Class: "ui-hero-phones-badge", Variant: "secondary", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-hero-phones-badge"}}) {
-			@templ.Raw(icons.SVG("star", "ui-hero-phones-badge-icon"))
+			@icons.Icon("star", "ui-hero-phones-badge-icon")
 			{ p.Badge }
 		}
 		@box.Box(box.BoxProps{Class: "ui-hero-phones-art", Attrs: templ.Attributes{"data-class": "ui-hero-phones-art", "aria-hidden": "true"}}) {

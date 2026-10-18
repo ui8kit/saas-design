@@ -2,7 +2,7 @@
 <!-- Grid of integration cards. -->
 <script lang="ts">
   import { Block, Container, IconBadge, List, ListItem, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { IntegrationsData } from "./types";
 
   let { data }: { data: IntegrationsData } = $props();
@@ -22,7 +22,7 @@
       {#each data.items as item}
         <ListItem class="ui-integrations-item" data-class="ui-integrations-item">
           <IconBadge class="ui-integrations-badge" data-class="ui-integrations-badge">
-            {@html svg(item.icon, `ui-integrations-icon`)}
+            <Icon name={item.icon} class={`ui-integrations-icon`} />
           </IconBadge>
           <Stack class="ui-stack-2" data-class="ui-stack-2">
             <Title class="ui-item-title-sm" data-class="ui-item-title-sm" as={3}>

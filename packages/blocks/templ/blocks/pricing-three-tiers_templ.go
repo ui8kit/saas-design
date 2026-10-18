@@ -368,7 +368,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 										}
 										ctx = templ.InitializeContext(ctx)
 										if f.Included {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("check", "ui-pricing-three-tiers-check")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("check", "ui-pricing-three-tiers-check").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -378,7 +378,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 											return templ_7745c5c3_Err
 										}
 										if !(f.Included) {
-											templ_7745c5c3_Err = templ.Raw(icons.SVG("x", "ui-pricing-three-tiers-cross")).Render(ctx, templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = icons.Icon("x", "ui-pricing-three-tiers-cross").Render(ctx, templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}

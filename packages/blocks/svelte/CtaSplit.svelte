@@ -2,7 +2,7 @@
 <!-- Accent panel with a display headline on the left and copy plus action aligned right. -->
 <script lang="ts">
   import { Block, Button, Container, Grid, Stack, Text, Title } from "@saas-design/ui";
-  import { svg } from "@saas-design/icons";
+  import Icon from "@saas-design/icons/svelte";
   import type { CtaSplitData } from "./types";
 
   let { data }: { data: CtaSplitData } = $props();
@@ -11,7 +11,7 @@
 <Block class="ui-cta-split" data-class="ui-cta-split" tag="section" aria-labelledby="cta-split-title">
   <Container class="ui-cta-split-container" data-class="ui-cta-split-container">
     <Stack class="ui-cta-split-panel" data-class="ui-cta-split-panel">
-      {@html svg("brand-mark", `ui-cta-split-mark`)}
+      <Icon name={"brand-mark"} class={`ui-cta-split-mark`} />
       <Grid class="ui-cta-split-row" data-class="ui-cta-split-row">
         <Title class="ui-cta-split-title" data-class="ui-cta-split-title" as={2} id="cta-split-title">
           {data.title}
