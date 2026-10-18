@@ -10,6 +10,7 @@ Deploy as three Vercel projects from one repository, one per app. This is the En
 |---|---|---|---|
 | site (e.g. `saas-site`) | `apps/site` | Other | [`apps/site/vercel.json`](../apps/site/vercel.json) |
 | design (e.g. `saas-design`) | `apps/design-svelte` | Other | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
+| existing `saas-design` project (https://saas-svelte.vercel.app), Root Directory still `apps/design` | `apps/design` (shim) | Other | [`apps/design/vercel.json`](../apps/design/vercel.json): builds design-svelte and copies `build/` ([why](../apps/design/README.md)) |
 | design-react (e.g. `saas-design-react`) | `apps/design-react` | Other | [`apps/design-react/vercel.json`](../apps/design-react/vercel.json) |
 
 Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. All apps read `packages/`, `fixtures/` and `tools/` from the repo root.
