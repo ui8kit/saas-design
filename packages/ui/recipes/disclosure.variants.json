@@ -1,0 +1,10 @@
+{
+  "id": "ui.disclosure",
+  "base": "group",
+  "keys": ["variant", "size"],
+  "defaults": { "variant": "default", "size": "default" },
+  "byKey": {
+    "size": { "default": "text-base", "lg": "text-lg", "sm": "text-sm" },
+    "variant": { "card": "rounded-lg bg-card text-card-foreground", "default": "rounded-md inset-ring inset-ring-border", "ghost": "" }
+  }
+}

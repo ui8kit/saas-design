@@ -1,0 +1,10 @@
+{
+  "id": "ui.summary",
+  "base": "flex cursor-pointer list-none items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-ring",
+  "keys": ["variant", "size"],
+  "defaults": { "variant": "default", "size": "default" },
+  "byKey": {
+    "size": { "default": "text-base", "lg": "text-xl", "sm": "text-sm" },
+    "variant": { "card": "px-8 py-6 font-medium", "default": "px-6 py-4 font-medium", "ghost": "py-2 font-medium" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "ui.link",
+  "base": "inline-flex items-center gap-2 underline-offset-4 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring",
+  "keys": ["variant", "size"],
+  "defaults": { "variant": "default", "size": "default" },
+  "byKey": {
+    "size": { "default": "text-base", "lg": "text-lg", "md": "text-base", "sm": "text-sm" },
+    "variant": {
+      "block": "flex w-full text-foreground hover:text-primary",
+      "default": "text-primary hover:underline",
+      "external": "text-primary hover:underline",
+      "muted": "text-muted-foreground hover:text-foreground",
+      "nav": "text-current hover:underline"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "ui.card",
+  "base": "flex flex-col gap-6 rounded-lg bg-card p-12 text-card-foreground",
+  "keys": ["variant"],
+  "defaults": { "variant": "default" },
+  "byKey": {
+    "variant": {
+      "default": "",
+      "raised": "bg-background inset-ring inset-ring-border",
+      "kpi": "gap-2 p-6",
+      "muted": "bg-muted",
+      "ghost": "bg-transparent inset-ring inset-ring-border",
+      "compact": "gap-4 p-6",
+      "flat": "bg-transparent p-0",
+      "accent": "bg-accent text-accent-foreground"
+    }
+  }
+}

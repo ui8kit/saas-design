@@ -1,0 +1,10 @@
+{
+  "id": "ui.icon",
+  "base": "inline-block shrink-0",
+  "keys": ["size", "type"],
+  "defaults": { "size": "default", "type": "svg" },
+  "byKey": {
+    "size": { "default": "size-4", "lg": "size-6", "md": "size-5", "sm": "size-4", "xl": "size-8", "xs": "size-3" },
+    "type": { "class": "", "svg": "", "text": "" }
+  }
+}

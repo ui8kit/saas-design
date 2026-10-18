@@ -1,0 +1,15 @@
+{
+  "id": "ui.textarea",
+  "base": "w-full rounded-md bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "keys": ["variant", "size"],
+  "defaults": { "variant": "default", "size": "default" },
+  "byKey": {
+    "variant": { "default": "", "ghost": "bg-muted inset-ring-transparent", "outline": "bg-transparent" },
+    "size": {
+      "default": "min-h-32 px-6 py-4 text-base",
+      "lg": "min-h-40 px-6 py-4 text-base",
+      "sm": "min-h-24 px-4 py-2 text-sm",
+      "xs": "min-h-16 px-3 py-2 text-xs"
+    }
+  }
+}

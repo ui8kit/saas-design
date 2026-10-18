@@ -1,0 +1,10 @@
+{
+  "id": "ui.switch",
+  "base": "shrink-0 rounded-sm accent-primary outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50",
+  "keys": ["variant", "size"],
+  "defaults": { "variant": "default", "size": "default" },
+  "byKey": {
+    "size": { "default": "size-4", "lg": "size-5", "sm": "size-4", "xs": "size-3" },
+    "variant": { "default": "", "ghost": "", "outline": "" }
+  }
+}
