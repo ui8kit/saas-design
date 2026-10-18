@@ -128,7 +128,7 @@ const contract = {
       light: toMap(light),
       dark: toMap(dark),
       charts: Object.fromEntries(Object.entries(light).filter(([k]) => k.startsWith("chart-")).map(([k, v]) => [k, v.hsl])),
-      categories: Object.fromEntries(Object.entries(brandLight).map(([k, v]) => [camel(k), { value: v.hsl }])),
+      categories: Object.fromEntries(Object.entries(brandLight).map(([k, v]) => [camel(k), { light: v.hsl, dark: (brandDark[k] ?? v).hsl }])),
     },
     typography: {
       families: { display: mapping.font.sans, body: mapping.font.sans },

@@ -154,28 +154,36 @@
       },
       "categories": {
         "brandOrange": {
-          "value": "hsl(12.4 99% 59.8%)"
+          "light": "hsl(12.4 99% 59.8%)",
+          "dark": "hsl(12.4 99% 59.8%)"
         },
         "brandInk": {
-          "value": "hsl(220.9 39.3% 11%)"
+          "light": "hsl(220.9 39.3% 11%)",
+          "dark": "hsl(220.9 39.3% 11%)"
         },
         "brandPink": {
-          "value": "hsl(358.9 96.6% 88.6%)"
+          "light": "hsl(358.9 96.6% 88.6%)",
+          "dark": "hsl(358.9 96.6% 88.6%)"
         },
         "brandLilac": {
-          "value": "hsl(307.3 30.3% 78.6%)"
+          "light": "hsl(307.3 30.3% 78.6%)",
+          "dark": "hsl(307.3 30.3% 78.6%)"
         },
         "brandSky": {
-          "value": "hsl(206.2 80% 92.2%)"
+          "light": "hsl(206.2 80% 92.2%)",
+          "dark": "hsl(206.2 80% 92.2%)"
         },
         "brandMist": {
-          "value": "hsl(0 0% 96.5%)"
+          "light": "hsl(0 0% 96.5%)",
+          "dark": "hsl(0 0% 96.5%)"
         },
         "brandSuccess": {
-          "value": "hsl(160.1 84.1% 39.4%)"
+          "light": "hsl(160.1 84.1% 39.4%)",
+          "dark": "hsl(158.1 64.4% 51.6%)"
         },
         "brandPlaceholder": {
-          "value": "hsl(236 10.1% 70.8%)"
+          "light": "hsl(236 10.1% 70.8%)",
+          "dark": "hsl(236 10.1% 70.8%)"
         }
       }
     },
