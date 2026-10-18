@@ -3,6 +3,7 @@
   import type { Component } from "svelte";
   import { Block, Box, Inline, List, ListItem, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow, Text, Title } from "@saas-design/ui";
   import type showcase from "$packages/ui/showcase.json";
+  import { sampleChildren } from "$design/samples";
 
   type Part = (typeof showcase)[number]["parts"][number];
   let { part, Comp }: { part: Part; Comp?: Component<Record<string, unknown>> } = $props();
@@ -17,7 +18,7 @@
         <ListItem class="ds-case">
           <Inline class="ds-meta">{c.id}</Inline>
           <Box class="ds-case-body">
-            {#if part.children}<Comp {...c.props}>{part.name}</Comp>{:else}<Comp {...c.props} />{/if}
+            {#if part.children}<Comp {...c.props}>{sampleChildren(part.name)}</Comp>{:else}<Comp {...c.props} />{/if}
           </Box>
         </ListItem>
       {/each}

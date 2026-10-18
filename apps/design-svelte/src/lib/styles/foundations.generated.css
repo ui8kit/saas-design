@@ -61,6 +61,7 @@
   .ds-space-16 { @apply size-16; }
   .ds-space-20 { @apply size-20; }
   .ds-space-24 { @apply size-24; }
+  .ds-space-28 { @apply size-28; }
   .ds-radius-none { @apply rounded-none; }
   .ds-radius-sm { @apply rounded-sm; }
   .ds-radius-md { @apply rounded-md; }

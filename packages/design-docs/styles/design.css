@@ -1,10 +1,10 @@
 /* Docs-shell classes (ds-*). Utilities only inside @apply, shadcn tokens only (brand tokens stay in the apps). */
 @layer components {
-  .ds-shell { @apply flex min-h-screen flex-col lg:flex-row; }
-  .ds-sidebar { @apply hidden bg-muted px-6 py-8 lg:sticky lg:top-0 lg:block lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-auto; }
+  .ds-shell { @apply flex min-h-screen flex-col xl:flex-row; }
+  .ds-sidebar { @apply hidden bg-muted px-6 py-8 xl:sticky xl:top-0 xl:block xl:h-screen xl:w-64 xl:shrink-0 xl:overflow-auto; }
   .ds-brand { @apply flex items-center gap-2 text-lg font-bold text-foreground; }
   .ds-sidebar-head { @apply mb-8 flex items-center justify-between gap-2; }
-  .ds-topbar { @apply sticky top-0 z-10 flex items-center justify-between gap-4 bg-background px-6 py-4 shadow-sm lg:hidden; }
+  .ds-topbar { @apply sticky top-0 z-10 flex items-center justify-between gap-4 bg-background px-6 py-4 shadow-sm xl:hidden; }
   .ds-topbar-actions { @apply flex items-center gap-2; }
   .ds-sheet-close { @apply self-end; }
   .ds-nav-group { @apply mb-6; }
@@ -12,7 +12,7 @@
   .ds-nav-list { @apply flex flex-col gap-0; }
   .ds-nav-link { @apply block rounded-md px-2 py-2 text-sm text-foreground hover:bg-background; }
   .ds-nav-link[aria-current="page"] { @apply bg-background font-semibold text-primary; }
-  .ds-main { @apply min-w-0 grow px-6 py-12 lg:px-12; }
+  .ds-main { @apply min-w-0 grow px-6 py-10 md:px-10 md:py-12 xl:px-12; }
   .ds-header { @apply mb-12 max-w-3xl; }
   .ds-title { @apply text-4xl font-bold text-foreground; }
   .ds-lead { @apply mt-4 text-lg text-muted-foreground; }
@@ -52,6 +52,7 @@
 }
 @layer components {
   .ds-frame { @apply overflow-hidden rounded-lg border border-border bg-background; }
+  .ds-frame-flow { @apply pb-10 md:pb-12 lg:pb-16; }
   .ds-chip { @apply rounded-full bg-muted px-4 py-2 text-xs text-muted-foreground; }
   .ds-pager { @apply flex justify-between gap-4; }
 }

@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { Block, Box, Inline, List, ListItem, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow, Text, Title } from "@saas-design/ui/react";
 import type showcase from "@saas-design/ui/showcase.json";
+import { sampleChildren } from "$design/samples";
 
 type Part = (typeof showcase)[number]["parts"][number];
 // One part of a brick: every showcase case rendered with the codegen React output (`react` = React prop names), plus its prop table.
@@ -15,7 +16,7 @@ export function ShowcasePart({ part, Comp }: { part: Part; Comp?: ComponentType<
             <ListItem className="ds-case" key={c.id}>
               <Inline className="ds-meta">{c.id}</Inline>
               <Box className="ds-case-body">
-                {part.children ? <Comp {...c.react}>{part.name}</Comp> : <Comp {...c.react} />}
+                {part.children ? <Comp {...c.react}>{sampleChildren(part.name)}</Comp> : <Comp {...c.react} />}
               </Box>
             </ListItem>
           ))}
