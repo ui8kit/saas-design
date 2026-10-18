@@ -1,0 +1,8 @@
+{
+  "id": "ui.themetoggle",
+  "showcase": {
+    "variant.ghost": { "props": { "Variant": "ghost" } },
+    "variant.contrast": { "props": { "Variant": "contrast", "Size": "sm" } },
+    "label.custom": { "props": { "AriaLabel": "Toggle theme", "ID": "theme" } }
+  }
+}

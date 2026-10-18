@@ -127,4 +127,6 @@ export { default as Textarea } from "./textarea/Textarea.svelte";
 export type { TextareaProps } from "./textarea/Textarea.svelte";
 export { default as Title } from "./title/Title.svelte";
 export type { TitleProps } from "./title/Title.svelte";
+export { default as ThemeToggle } from "./themetoggle/ThemeToggle.svelte";
+export type { ThemeToggleProps } from "./themetoggle/ThemeToggle.svelte";
 export * from "./shared";

@@ -7,3 +7,9 @@
   .ui-page { @apply overflow-x-clip; }
   .ui-skip { @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-background focus:px-6 focus:py-2 focus:text-foreground; }
 }
+
+/* ThemeToggle icons (packages/ui/bricks/themetoggle): moon in light mode, sun in dark mode. */
+@layer components {
+  .ui-themetoggle-sun { @apply hidden size-5 dark:block; }
+  .ui-themetoggle-moon { @apply block size-5 dark:hidden; }
+}

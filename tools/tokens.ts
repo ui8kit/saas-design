@@ -161,6 +161,9 @@ ${themeKeys.map((k) => `  --color-${k}: var(--${k});`).join("\n")}
   --font-sans: var(--font-sans);
 }
 
+/* dark: variant follows the .dark root class set by behaviors/theme-init.js (not only prefers-color-scheme). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Type/layout scale the blocks rely on (not colors, not brand): available to every app. */
 @theme {
   --text-display: 5.3125rem;

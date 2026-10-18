@@ -46,6 +46,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/table"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/text"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/textarea"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/themetoggle"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/title"
 )
 
@@ -435,6 +436,12 @@ func renderCase(ctx context.Context, name string, propsJSON []byte, children tem
 			return err
 		}
 		return title.Title(p).Render(templ.WithChildren(ctx, children), buf)
+	case "themetoggle/themetoggle/ThemeToggle":
+		var p themetoggle.ThemeToggleProps
+		if err := json.Unmarshal(propsJSON, &p); err != nil {
+			return err
+		}
+		return themetoggle.ThemeToggle(p).Render(ctx, buf)
 	}
 	return fmt.Errorf("unknown case %q", name)
 }

@@ -13,7 +13,7 @@ import { createRawSnippet } from "svelte";
 import { bricks } from "./registry";
 import { fileStem } from "@ui8kit/codegen/src/domain/model";
 import { renderPart } from "@ui8kit/codegen/src/domain/render";
-import { showcaseCases } from "@ui8kit/codegen/tests/support/fixtures";
+import { showcaseCases } from "./registry";
 import { normalizeHtml } from "@ui8kit/codegen/tests/support/normalize";
 import { hasChildren, knownCanonicalProps, htmlRuntimeProps } from "@ui8kit/codegen/tests/support/props";
 

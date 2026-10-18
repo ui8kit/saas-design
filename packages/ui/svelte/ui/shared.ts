@@ -34,3 +34,4 @@ export * from "./table/table.shared";
 export * from "./text/text.shared";
 export * from "./textarea/textarea.shared";
 export * from "./title/title.shared";
+export * from "./themetoggle/themetoggle.shared";

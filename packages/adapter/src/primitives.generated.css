@@ -267,4 +267,11 @@
   .ui-textarea-size-lg { @apply px-6 py-4 text-lg; }
   .ui-textarea-size-sm { @apply px-4 py-2 text-sm; }
   .ui-textarea-size-xs { @apply px-3 py-2 text-xs; }
+  .ui-themetoggle { @apply inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring; }
+  .ui-themetoggle-contrast { @apply bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20; }
+  .ui-themetoggle-default { @apply bg-muted text-foreground hover:bg-accent; }
+  .ui-themetoggle-ghost { @apply bg-transparent text-foreground hover:bg-muted; }
+  .ui-themetoggle-size-default { @apply size-10; }
+  .ui-themetoggle-size-lg { @apply size-12; }
+  .ui-themetoggle-size-sm { @apply size-8; }
 }

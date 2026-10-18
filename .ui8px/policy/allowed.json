@@ -74,6 +74,8 @@
     "bg-popover-foreground",
     "bg-primary",
     "bg-primary-foreground",
+    "bg-primary-foreground/10",
+    "bg-primary-foreground/20",
     "bg-primary/10",
     "bg-primary/90",
     "bg-ring",

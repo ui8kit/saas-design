@@ -16,6 +16,8 @@ import { readFileSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { bricks as upstream } from "@ui8kit/codegen/bricks/index";
 import { validateRegistry } from "@ui8kit/codegen/src/domain/validate";
+import { showcaseCases as upstreamShowcase } from "@ui8kit/codegen/tests/support/fixtures";
+import { local } from "../bricks";
 
 const PKG = resolve(import.meta.dir, "..");
 export const GO_MODULE = "github.com/ui8kit/saas-design/packages/ui/templ";
@@ -109,7 +111,16 @@ function rewriteNode(n: any, ctx: string, i = { n: 0 }): any {
   return out;
 }
 
-export const bricks = upstream.map((b: any) => {
+const localDirs = new Set(local.map((b: any) => b.dir));
+/** Showcase cases: upstream data.json for codegen bricks, packages/ui/bricks/<dir>/<dir>.data.json for local ones. */
+export function showcaseCases(b: any): Array<{ id: string; props: Record<string, unknown> }> {
+  if (!localDirs.has(b.dir)) return upstreamShowcase(b);
+  const f = join(PKG, "bricks", b.dir, `${b.file ?? b.dir}.data.json`);
+  if (!existsSync(f)) return [];
+  return Object.entries(JSON.parse(readFileSync(f, "utf8")).showcase ?? {}).map(([id, e]: [string, any]) => ({ id, props: e.props ?? {} }));
+}
+
+export const bricks = [...upstream, ...local].map((b: any) => {
   const recipes = Object.fromEntries(Object.entries(b.recipes).map(([id, r]) => [id, semanticRecipe(b.dir, b.recipeFiles[id], r)]));
   const parts = b.parts.map((p: any) => {
     const ctx = kebab(p.name);
