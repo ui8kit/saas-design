@@ -153,7 +153,7 @@
   .ui-image-aspect-auto { @apply aspect-auto; }
   .ui-image-aspect-square { @apply aspect-square; }
   .ui-image-aspect-video { @apply aspect-video; }
-  .ui-image-avatar { @apply rounded-full; }
+  .ui-image-avatar { @apply size-12 shrink-0 rounded-full; }
   .ui-image-fit-contain { @apply object-contain; }
   .ui-image-fit-cover { @apply object-cover; }
   .ui-image-fit-fill { @apply object-fill; }

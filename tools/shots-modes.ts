@@ -34,6 +34,8 @@ async function shot(base: string, path: string, name: string, o: { width: number
   await ctx.addInitScript((dark) => { try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch {} }, !!o.dark);
   const page: Page = await ctx.newPage();
   await page.goto(base + path, { waitUntil: "networkidle" });
+  // lazy images below the fold never load in a full-page screenshot: load them eagerly (bounded wait)
+  await page.evaluate(() => Promise.race([new Promise((r) => setTimeout(r, 3000)), Promise.all([...document.images].map((i) => { i.loading = "eager"; return i.complete ? 0 : new Promise((r) => { i.addEventListener("load", r); i.addEventListener("error", r); }); }))]));
   if (o.menu) {
     const t = page.locator('[data-ui8kit="sheet-trigger"]:visible').first();
     await t.click();

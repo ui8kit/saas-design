@@ -150,7 +150,7 @@
   "ui-image-aspect-auto": "aspect-auto",
   "ui-image-aspect-square": "aspect-square",
   "ui-image-aspect-video": "aspect-video",
-  "ui-image-avatar": "rounded-full",
+  "ui-image-avatar": "size-12 shrink-0 rounded-full",
   "ui-image-fit-contain": "object-contain",
   "ui-image-fit-cover": "object-cover",
   "ui-image-fit-fill": "object-fill",

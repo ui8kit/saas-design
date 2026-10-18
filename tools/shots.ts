@@ -48,6 +48,8 @@ for (const [slug, name] of SECTIONS) {
 }
 
 await page.goto(`http://localhost:${server.port}/`); await page.waitForLoadState("networkidle");
+// lazy images below the fold never load in a full-page screenshot: load them eagerly (bounded wait)
+await page.evaluate(() => Promise.race([new Promise((r) => setTimeout(r, 3000)), Promise.all([...document.images].map((i) => { i.loading = "eager"; return i.complete ? 0 : new Promise((r) => { i.addEventListener("load", r); i.addEventListener("error", r); }); }))]));
 await page.screenshot({ path: join(OUT, "site-home.png"), fullPage: true });
 const fullH = await page.evaluate(() => document.documentElement.scrollHeight);
 for (const [slug, , block] of SECTIONS) {

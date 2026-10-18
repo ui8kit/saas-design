@@ -27,6 +27,8 @@ const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/
 const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
 for (const p of paths) {
   await page.goto(`http://localhost:${port}${p}`, { waitUntil: "networkidle" });
+  // lazy images below the fold never load in a full-page screenshot: load them eagerly (bounded wait)
+  await page.evaluate(() => Promise.race([new Promise((r) => setTimeout(r, 3000)), Promise.all([...document.images].map((i) => { i.loading = "eager"; return i.complete ? 0 : new Promise((r) => { i.addEventListener("load", r); i.addEventListener("error", r); }); }))]));
   const name = p === "/" ? "overview" : p.slice(1).replaceAll("/", "-");
   await page.screenshot({ path: join(OUT, `design-${name}.png`), fullPage: true });
   console.log(`design-${name}.png`);
