@@ -1473,7 +1473,12 @@
       "pt-24",
       "text-center"
     ],
-    "ui-hero-phones-demo": [],
+    "ui-hero-phones-demo": [
+      "font-bold",
+      "inset-ring-primary-foreground",
+      "hover:bg-primary-foreground/10",
+      "hover:text-primary-foreground"
+    ],
     "ui-hero-phones-demo-icon": [
       "size-4",
       "fill-current"
@@ -1534,9 +1539,9 @@
       "absolute",
       "w-4/25",
       "origin-top-left",
-      "rounded-md",
-      "ring-2",
-      "ring-secondary"
+      "rounded-lg",
+      "ring-4",
+      "ring-foreground"
     ],
     "ui-hero-phones-title": [
       "max-w-2xl",

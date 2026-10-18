@@ -22,7 +22,7 @@
       <Button variant="contrast" size="lg" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>
-      <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="secondary" size="lg" href={data.secondary.href || undefined}>
+      <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="outline" size="lg" href={data.secondary.href || undefined}>
         {@html svg("play", `ui-hero-phones-demo-icon`)}
         {data.secondary.label}
       </Button>

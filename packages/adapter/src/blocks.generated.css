@@ -39,6 +39,7 @@
   .ui-hero-phones-title { @apply max-w-2xl text-5xl leading-none font-medium md:text-6xl; }
   .ui-hero-phones-lead { @apply max-w-2xl text-xl; }
   .ui-hero-phones-actions { @apply mt-4 flex-wrap justify-center gap-6; }
+  .ui-hero-phones-demo { @apply font-bold hover:bg-primary-foreground/10 hover:text-primary-foreground; @apply inset-ring-primary-foreground; }
   .ui-hero-phones-demo-icon { @apply size-4 fill-current; }
   .ui-hero-phones-badge { @apply mt-auto self-center; }
   .ui-hero-phones-badge-icon { @apply size-4 fill-current; }
@@ -49,11 +50,11 @@
   .ui-hero-phones-dot-4 { @apply absolute top-77/100 left-61/100 size-16 rounded-full bg-chart-4; }
   .ui-hero-phones-dot-5 { @apply absolute top-58/100 left-21/100 size-16 rounded-full bg-chart-4; }
   .ui-hero-phones-dot-6 { @apply absolute top-52/100 left-20/100 size-16 rounded-full bg-chart-5; }
-  .ui-hero-phones-screen { @apply absolute w-4/25 origin-top-left rounded-md ring-2 ring-secondary; }
-  .ui-hero-phones-screen:nth-child(7) { @apply top-70/100 -left-2/100 rotate-19; }
-  .ui-hero-phones-screen:nth-child(8) { @apply top-74/100 left-14/100 -rotate-4; }
-  .ui-hero-phones-screen:nth-child(9) { @apply top-76/100 left-76/100 -rotate-14; }
-  .ui-hero-phones-screen:nth-child(10) { @apply top-66/100 left-82/100 rotate-15; }
+  .ui-hero-phones-screen { @apply absolute w-4/25 origin-top-left rounded-lg ring-4 ring-foreground; }
+  .ui-hero-phones-screen:nth-child(7) { @apply top-68/100 -left-2/100 rotate-19; }
+  .ui-hero-phones-screen:nth-child(8) { @apply top-72/100 left-14/100 -rotate-4; }
+  .ui-hero-phones-screen:nth-child(9) { @apply top-72/100 left-76/100 z-10 -rotate-14; }
+  .ui-hero-phones-screen:nth-child(10) { @apply top-62/100 left-82/100 rotate-15; }
   /* feature-cards */
   .ui-feature-cards { @apply pt-28; }
   .ui-feature-cards-container { @apply mx-auto flex max-w-page flex-col gap-12; }

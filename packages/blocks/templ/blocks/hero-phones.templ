@@ -30,7 +30,7 @@ templ HeroPhones(p HeroPhonesData) {
 				@button.Button(button.ButtonProps{Variant: "contrast", Size: "lg", Href: p.Primary.Href}) {
 					{ p.Primary.Label }
 				}
-				@button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "secondary", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}) {
+				@button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "outline", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}) {
 					@templ.Raw(icons.SVG("play", "ui-hero-phones-demo-icon"))
 					{ p.Secondary.Label }
 				}

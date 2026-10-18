@@ -44,7 +44,7 @@ export const heroPhones = block({
       c("Text", { ui: "lead", css: "max-w-2xl text-xl" }, $("lead")),
       c("Group", { ui: "actions", css: "mt-4 flex-wrap justify-center gap-6" },
         c("Button", { variant: "contrast", size: "lg", href: $("primary.href") }, $("primary.label")),
-        c("Button", { ui: "demo", variant: "secondary", size: "lg", href: $("secondary.href") }, icon("play", { ui: "demo-icon", css: "size-4 fill-current" }), $("secondary.label")))),
+        c("Button", { ui: "demo", variant: "outline", size: "lg", css: "font-bold inset-ring-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground", href: $("secondary.href") }, icon("play", { ui: "demo-icon", css: "size-4 fill-current" }), $("secondary.label")))),
     c("Badge", { ui: "badge", variant: "secondary", size: "lg", css: "mt-auto self-center" }, icon("star", { ui: "badge-icon", css: "size-4 fill-current" }), $("badge")),
     c("Box", { ui: "art", "aria-hidden": "true", css: "pointer-events-none absolute inset-0 -z-10 hidden lg:block" },
       c("Box", { ui: "dot-1", css: "absolute top-33/100 left-9/100 size-16 rounded-full bg-muted" }),
@@ -54,12 +54,12 @@ export const heroPhones = block({
       c("Box", { ui: "dot-5", css: "absolute top-58/100 left-21/100 size-16 rounded-full bg-chart-4" }),
       c("Box", { ui: "dot-6", css: "absolute top-52/100 left-20/100 size-16 rounded-full bg-chart-5" }),
       each($("screens"), "screen",
-        c("Image", { ui: "screen", src: $("screen.src"), alt: "", decorative: true, css: "absolute w-4/25 origin-top-left rounded-md ring-2 ring-secondary" }))),
+        c("Image", { ui: "screen", src: $("screen.src"), alt: "", decorative: true, css: "absolute w-4/25 origin-top-left rounded-lg ring-4 ring-foreground" }))),
   ),
-  extraCss: `.ui-hero-phones-screen:nth-child(7) { @apply top-70/100 -left-2/100 rotate-19; }
-.ui-hero-phones-screen:nth-child(8) { @apply top-74/100 left-14/100 -rotate-4; }
-.ui-hero-phones-screen:nth-child(9) { @apply top-76/100 left-76/100 -rotate-14; }
-.ui-hero-phones-screen:nth-child(10) { @apply top-66/100 left-82/100 rotate-15; }`,
+  extraCss: `.ui-hero-phones-screen:nth-child(7) { @apply top-68/100 -left-2/100 rotate-19; }
+.ui-hero-phones-screen:nth-child(8) { @apply top-72/100 left-14/100 -rotate-4; }
+.ui-hero-phones-screen:nth-child(9) { @apply top-72/100 left-76/100 z-10 -rotate-14; }
+.ui-hero-phones-screen:nth-child(10) { @apply top-62/100 left-82/100 rotate-15; }`,
 });
 
 
