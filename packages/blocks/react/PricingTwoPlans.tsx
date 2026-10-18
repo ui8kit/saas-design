@@ -71,7 +71,7 @@ export function PricingTwoPlans({ data }: { data: PricingTwoPlansData }) {
                   ))}
                 </List>
               </Stack>
-              <Button className="ui-pricing-two-plans-plan-cta" data-class="ui-pricing-two-plans-plan-cta" variant={"secondary"} size={"lg"} href={plan.cta.href || undefined}>
+              <Button className="ui-pricing-two-plans-plan-cta" data-class="ui-pricing-two-plans-plan-cta" variant={"secondary"} size={"xl"} href={plan.cta.href || undefined}>
                 {plan.cta.label}
               </Button>
             </ListItem>

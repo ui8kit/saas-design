@@ -3,7 +3,8 @@
  *   patterns.json  every ui-* class the generated markup can emit (packages/ui + packages/blocks + adapter base)
  *   scopes.json    controls = codegen primitives (packages/ui, primitives.generated.css); layout = everything else
  *   allowed.json   spacing steps: the 8+4 grid of the pinned @ui8kit/codegen 2.0 (packages/ui/.xgen/.ui8px/policy/allowed.json:
- *                  layout = 8px steps, controls = 4px steps up to 16 then 8px steps);
+ *                  layout = 8px steps 0-160, controls = 4px steps up to 16 then 8px steps), narrowed to the Habitus rhythm of
+ *                  tools/ui8px/allowed.base.json (layout 0 2 4 6 8 10 12 16 20 24 28, controls 0-8 10 12 14);
  *                  utilities: ui8px go-preset defaults (tools/ui8px/allowed.base.json) + the reviewed utilities of the codegen 2.0
  *                  recipes (same upstream file) + the utilities our primitives take verbatim from the pinned specs
  *                  (packages/ui/upstream-utilities.json) + this project's reviewed extras (tools/ui8px/allowed.extra.json)
@@ -27,7 +28,12 @@ const extra = read("tools/ui8px/allowed.extra.json") as { $comment?: string; uti
 const upstream = read("packages/ui/.xgen/.ui8px/policy/allowed.json") as { spacing: Record<string, string[]>; utilities: string[] };
 // utilities the generated primitives take verbatim from the pinned specs (packages/ui/scripts/registry.ts records them; never ours)
 const fromSpecs = (read("packages/ui/upstream-utilities.json") as { utilities: string[] }).utilities;
-const allowed = { spacing: upstream.spacing, utilities: [...new Set([...base.utilities, ...upstream.utilities, ...fromSpecs, ...extra.utilities])].sort() };
+// spacing: the 2.0 grid narrowed to the Habitus rhythm (tools/ui8px/allowed.base.json); a rhythm step off the 2.0 grid is an error
+const rhythm = base.spacing as Record<string, string[]>;
+const off = Object.entries(rhythm).flatMap(([scope, steps]) => steps.filter((x) => !upstream.spacing[scope]?.includes(x)).map((x) => `${scope} ${x}`));
+if (off.length) { console.error(`ui8px policy: rhythm steps off the codegen 2.0 grid: ${off.join(", ")}`); process.exit(1); }
+const spacing = Object.fromEntries(Object.entries(upstream.spacing).map(([scope, steps]) => [scope, steps.filter((x) => rhythm[scope]?.includes(x))]));
+const allowed = { spacing, utilities: [...new Set([...base.utilities, ...upstream.utilities, ...fromSpecs, ...extra.utilities])].sort() };
 const scopes = {
   defaultScope: "layout",
   scopes: [

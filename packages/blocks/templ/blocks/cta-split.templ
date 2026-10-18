@@ -27,7 +27,7 @@ templ CtaSplit(p CtaSplitData) {
 						@text.Text(text.TextProps{Class: "ui-cta-split-text", Attrs: templ.Attributes{"data-class": "ui-cta-split-text"}}) {
 							{ p.Text }
 						}
-						@button.Button(button.ButtonProps{Size: "lg", Href: p.Cta.Href}) {
+						@button.Button(button.ButtonProps{Size: "xl", Href: p.Cta.Href}) {
 							{ p.Cta.Label }
 						}
 					}

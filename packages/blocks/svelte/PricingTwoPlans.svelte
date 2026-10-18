@@ -61,7 +61,7 @@
               {/each}
             </List>
           </Stack>
-          <Button class="ui-pricing-two-plans-plan-cta" data-class="ui-pricing-two-plans-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
+          <Button class="ui-pricing-two-plans-plan-cta" data-class="ui-pricing-two-plans-plan-cta" variant="secondary" size="xl" href={plan.cta.href || undefined}>
             {plan.cta.label}
           </Button>
         </ListItem>

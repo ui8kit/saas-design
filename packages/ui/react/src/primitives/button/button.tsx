@@ -29,6 +29,7 @@ export const buttonVariants = variants({
       sm: "ui-button-size-sm",
       default: "ui-button-size-default",
       lg: "ui-button-size-lg",
+      xl: "ui-button-size-xl",
     },
     layout: {
       default: "",

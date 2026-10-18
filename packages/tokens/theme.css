@@ -2,7 +2,6 @@
 /* shadcn token set (HSL). A skin overrides these variables only; markup never changes. */
 :root,
 [data-theme="light"] {
-  --radius: 2.5rem;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --background: hsl(0 0% 100%);
   --foreground: hsl(220.9 39.3% 11%);
@@ -74,6 +73,15 @@
   --sidebar-ring: hsl(12.4 99% 59.8%);
 }
 
+/* The one corner token (codegen 2.0, xgen/runtimes/core/assets/styles/theme.css): in @theme, so plain `rounded` reads it
+   (in :root only, `rounded` fell back to Tailwind's 0.25rem). Habitus: 40px on cards and bands; on controls (h-8..h-14)
+   it clamps to a pill, so buttons and inputs need no rounded-full override. A skin changes this one value. */
+@theme {
+  --radius: 2.5rem;
+}
+
+/* Derived steps measured in the frame (fixtures/figma/frames/1-10.json radii: 20 phone screens, 40 cards, 100/9999 pills).
+   Not the 2.0 multipliers (0.6 / 0.8 / 1.4 of a 10px corner): on a 40px corner they give 24 / 32 / 56, which the frame never uses. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

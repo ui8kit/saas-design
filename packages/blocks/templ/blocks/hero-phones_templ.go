@@ -162,7 +162,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = button.Button(button.ButtonProps{Variant: "contrast", Size: "lg", Href: p.Primary.Href}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = button.Button(button.ButtonProps{Variant: "contrast", Size: "xl", Href: p.Primary.Href}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -197,7 +197,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "outline", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "outline", Size: "xl", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}

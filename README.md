@@ -176,7 +176,7 @@ Example prompts:
 
 See [.project/STATUS.md](.project/STATUS.md). In short:
 - All checks are green and parity shows 0 mismatches.
-- The site is within 19px of the Figma page height (6269 vs 6288px).
+- The site is within 11px of the Figma page height (6277 vs 6288px); see [docs/design-settings.md](docs/design-settings.md).
 - Dark mode and mobile Sheet navigation work in both apps.
 - A real Vercel deploy is **not verified yet**.
 

@@ -1,4 +1,5 @@
 {
+  "$comment": "spacing = the Habitus rhythm, a subset of the codegen 2.0 grid (packages/ui/.xgen/.ui8px/policy/allowed.json: layout = every 8px step 0-160, control = 4px steps to 16 then 8px). tools/ui8px-policy.ts writes the intersection and fails if a rhythm step is off the 2.0 grid. 28 (112px, Figma section gap 110) is an ordinary 2.0 layout step, not a local extension. Control 14 = h-14 (56px), the Habitus xl button (Figma hero/CTA/pricing buttons 56-58px).",
   "spacing": {
     "layout": [
       "0",
@@ -24,7 +25,8 @@
       "7",
       "8",
       "10",
-      "12"
+      "12",
+      "14"
     ]
   },
   "utilities": [

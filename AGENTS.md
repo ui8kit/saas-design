@@ -19,7 +19,7 @@ This repo turns a local Figma file into two apps, a Go templ static site (`apps/
 2. **No `.fig` in the repo.** Keep it outside (e.g. `/workspace/fig-fixtures/`). `*.fig` is git-ignored and `tools/extract.sh` refuses a path inside the repo. Never `git add -f` one.
 3. **8 + 4 grid** ([grid-8-4.mdc](.cursor/rules/grid-8-4.mdc)):
    - 1 step = 4px.
-   - Layout scope (blocks, apps, `base.css`) uses even steps only: `0 2 4 6 8 10 12 16 20 24 28`.
+   - Layout scope (blocks, apps, `base.css`) uses even steps only: `0 2 4 6 8 10 12 16 20 24 28` (the codegen 2.0 8px grid narrowed to the Habitus rhythm; see [docs/design-settings.md](docs/design-settings.md)).
    - Control scope (`packages/ui`, icons) may also use `1 3 5 7`.
    - No fractional or arbitrary values.
 4. **Tokens-only colors** ([tokens.mdc](.cursor/rules/tokens.mdc)):

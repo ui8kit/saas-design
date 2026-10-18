@@ -1,6 +1,6 @@
 {
   "id": "ui.input",
-  "base": "w-full rounded-full bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "base": "w-full rounded bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50",
   "keys": ["variant", "size"],
   "defaults": { "variant": "default", "size": "default" },
   "byKey": {

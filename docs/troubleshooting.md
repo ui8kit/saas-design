@@ -51,7 +51,7 @@ The first part covers common failures and their fixes. The second part summarize
 
 | Item | Status | File |
 |---|---|---|
-| Layout preset stops at step 24; `28` added locally | worked-around | [ui8px-layout-step-28.md](../.project/backlog/ui8px-layout-step-28.md) |
+| Layout preset stopped at step 24 (`28` was added locally); 2.0 grid has every 8px step | fixed (codegen 2.0) | [ui8px-layout-step-28.md](../.project/backlog/ui8px-layout-step-28.md) |
 | Allowed utilities are global, not per scope (hence the brand-token grep) | worked-around | [ui8px-allowed-list-not-scoped.md](../.project/backlog/ui8px-allowed-list-not-scoped.md) |
 | `inset-ring` flagged as an inset spacing conflict | worked-around | [ui8px-inset-ring-false-positives.md](../.project/backlog/ui8px-inset-ring-false-positives.md) |
 

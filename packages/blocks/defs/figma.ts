@@ -43,8 +43,8 @@ export const heroPhones = block({
       c("Title", { as: "h1", ui: "title", css: "max-w-2xl text-5xl leading-none font-medium md:text-6xl" }, $("title")),
       c("Text", { ui: "lead", css: "max-w-2xl text-xl" }, $("lead")),
       c("Group", { ui: "actions", css: "mt-4 flex-wrap justify-center gap-6" },
-        c("Button", { variant: "contrast", size: "lg", href: $("primary.href") }, $("primary.label")),
-        c("Button", { ui: "demo", variant: "outline", size: "lg", css: "font-bold inset-ring-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground", href: $("secondary.href") }, icon("play", { ui: "demo-icon", css: "size-4 fill-current" }), $("secondary.label")))),
+        c("Button", { variant: "contrast", size: "xl", href: $("primary.href") }, $("primary.label")),
+        c("Button", { ui: "demo", variant: "outline", size: "xl", css: "font-bold inset-ring-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground", href: $("secondary.href") }, icon("play", { ui: "demo-icon", css: "size-4 fill-current" }), $("secondary.label")))),
     c("Badge", { ui: "badge", variant: "secondary", size: "lg", css: "mt-auto self-center" }, icon("star", { ui: "badge-icon", css: "size-4 fill-current" }), $("badge")),
     c("Box", { ui: "art", "aria-hidden": "true", css: "pointer-events-none absolute inset-0 -z-10 hidden lg:block" },
       c("Box", { ui: "dot-1", css: "absolute top-33/100 left-9/100 size-16 rounded-full bg-muted" }),
@@ -143,7 +143,7 @@ export const ctaSplit = block({
           c("Title", { as: "h2", id: "cta-split-title", ui: "title", css: "max-w-xl text-display font-normal" }, $("title")),
           c("Stack", { ui: "aside", css: "flex flex-col items-start gap-16 lg:items-end" },
             c("Text", { ui: "text", css: "max-w-lg text-xl leading-8 font-light lg:text-right" }, $("text")),
-            c("Button", { size: "lg", href: $("cta.href") }, $("cta.label"))))))),
+            c("Button", { size: "xl", href: $("cta.href") }, $("cta.label"))))))),
 });
 
 export const pricingTwoPlans = block({
@@ -173,7 +173,7 @@ export const pricingTwoPlans = block({
                     when($("f.included"), icon("check", { ui: "feature-check", css: "size-4 text-primary" })),
                     unless($("f.included"), icon("lock", { ui: "feature-lock", css: "size-4 text-muted-foreground" })),
                     $("f.label"))))),
-            c("Button", { ui: "plan-cta", variant: "secondary", size: "lg", href: $("plan.cta.href"), css: "mt-auto w-full" }, $("plan.cta.label"))))))),
+            c("Button", { ui: "plan-cta", variant: "secondary", size: "xl", href: $("plan.cta.href"), css: "mt-auto w-full" }, $("plan.cta.label"))))))),
 });
 
 export const faqTiles = block({

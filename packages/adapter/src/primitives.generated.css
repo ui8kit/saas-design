@@ -25,7 +25,7 @@
   .ui-breadcrumb-part-4-extra { @apply font-medium; }
   .ui-breadcrumb-part-4-extra-else { @apply text-muted-foreground; }
   .ui-breadcrumb-part-4-extra-else-else { @apply text-primary underline-offset-4 hover:underline; }
-  .ui-button { @apply inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50; }
+  .ui-button { @apply inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded font-semibold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50; }
   .ui-button-contrast { @apply bg-background text-foreground hover:bg-background/90; }
   .ui-button-default { @apply bg-primary text-primary-foreground hover:bg-primary/90; }
   .ui-button-destructive { @apply bg-destructive text-destructive-foreground hover:bg-destructive/90; }
@@ -35,14 +35,15 @@
   .ui-button-outline { @apply bg-transparent text-current inset-ring hover:bg-accent hover:text-accent-foreground; @apply inset-ring-border; }
   .ui-button-secondary { @apply bg-secondary text-secondary-foreground hover:bg-secondary/90; }
   .ui-button-size-default { @apply h-10 px-6 text-base; }
-  .ui-button-size-lg { @apply h-12 px-10 text-base; }
-  .ui-button-size-sm { @apply h-8 px-4 text-sm; }
+  .ui-button-size-lg { @apply h-12 px-6 text-base; }
+  .ui-button-size-sm { @apply h-8 px-3 text-sm; }
+  .ui-button-size-xl { @apply h-14 px-10 text-base; }
   .ui-button-x-layout-icon-size-default { @apply size-10 p-0 [&>svg]:size-5; }
   .ui-button-x-layout-icon-size-lg { @apply size-12 p-0 [&>svg]:size-6; }
   .ui-button-x-layout-icon-size-sm { @apply size-8 p-0 [&>svg]:size-4; }
   .ui-button-x-variant-ghost-layout-icon { @apply text-muted-foreground; }
   .ui-button-x-variant-outline-layout-icon { @apply text-muted-foreground; }
-  .ui-card { @apply flex flex-col gap-6 rounded-lg bg-card p-12 text-card-foreground; }
+  .ui-card { @apply flex flex-col gap-6 rounded bg-card p-12 text-card-foreground; }
   .ui-card-accent { @apply bg-accent text-accent-foreground; }
   .ui-card-compact { @apply gap-4 p-6; }
   .ui-card-description { @apply text-sm text-muted-foreground; }
@@ -176,7 +177,7 @@
   .ui-image-size-xl { @apply size-24; }
   .ui-image-size-xs { @apply size-6; }
   .ui-image-thumbnail { @apply rounded-md inset-ring; @apply inset-ring-border; }
-  .ui-input { @apply w-full rounded-full bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
+  .ui-input { @apply w-full rounded bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
   .ui-input::placeholder { @apply text-muted-foreground; }
   .ui-input-ghost { @apply bg-muted; @apply inset-ring-transparent; }
   .ui-input-outline { @apply bg-transparent; }
@@ -230,7 +231,7 @@
   .ui-radio-size-default { @apply size-5 [--dot:10px]; }
   .ui-radio-size-sm { @apply size-4 [--dot:8px]; }
   .ui-range { @apply h-5 w-full cursor-pointer appearance-none bg-transparent accent-primary disabled:cursor-not-allowed disabled:opacity-50 [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:rounded [&::-webkit-slider-runnable-track]:bg-muted [&::-webkit-slider-thumb]:-mt-1 [&::-webkit-slider-thumb]:size-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded [&::-webkit-slider-thumb]:bg-primary [&::-moz-range-track]:h-1 [&::-moz-range-track]:rounded [&::-moz-range-track]:bg-muted [&::-moz-range-thumb]:size-4 [&::-moz-range-thumb]:rounded [&::-moz-range-thumb]:border-0 [&::-moz-range-thumb]:bg-primary; }
-  .ui-select { @apply w-full appearance-none rounded-full bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
+  .ui-select { @apply w-full appearance-none rounded bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
   .ui-select::placeholder { @apply text-muted-foreground; }
   .ui-select-ghost { @apply bg-muted; @apply inset-ring-transparent; }
   .ui-select-outline { @apply bg-transparent; }

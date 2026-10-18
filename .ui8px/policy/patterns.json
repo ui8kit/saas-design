@@ -290,7 +290,7 @@
       "justify-center",
       "gap-2",
       "whitespace-nowrap",
-      "rounded-full",
+      "rounded",
       "font-semibold",
       "transition-colors",
       "outline-none",
@@ -353,13 +353,18 @@
     ],
     "ui-button-size-lg": [
       "h-12",
-      "px-10",
+      "px-6",
       "text-base"
     ],
     "ui-button-size-sm": [
       "h-8",
-      "px-4",
+      "px-3",
       "text-sm"
+    ],
+    "ui-button-size-xl": [
+      "h-14",
+      "px-10",
+      "text-base"
     ],
     "ui-button-x-layout-icon-size-default": [
       "size-10",
@@ -386,7 +391,7 @@
       "flex",
       "flex-col",
       "gap-6",
-      "rounded-lg",
+      "rounded",
       "bg-card",
       "p-12",
       "text-card-foreground"
@@ -1838,7 +1843,7 @@
     ],
     "ui-input": [
       "w-full",
-      "rounded-full",
+      "rounded",
       "bg-background",
       "text-foreground",
       "inset-ring",
@@ -2506,7 +2511,7 @@
     "ui-select": [
       "w-full",
       "appearance-none",
-      "rounded-full",
+      "rounded",
       "bg-background",
       "text-foreground",
       "inset-ring",

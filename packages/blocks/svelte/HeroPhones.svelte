@@ -19,10 +19,10 @@
       {data.lead}
     </Text>
     <Group class="ui-hero-phones-actions" data-class="ui-hero-phones-actions">
-      <Button variant="contrast" size="lg" href={data.primary.href || undefined}>
+      <Button variant="contrast" size="xl" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>
-      <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="outline" size="lg" href={data.secondary.href || undefined}>
+      <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="outline" size="xl" href={data.secondary.href || undefined}>
         {@html svg("play", `ui-hero-phones-demo-icon`)}
         {data.secondary.label}
       </Button>

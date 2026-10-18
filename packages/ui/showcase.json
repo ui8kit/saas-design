@@ -681,6 +681,15 @@
             }
           },
           {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
             "id": "layout.default",
             "props": {
               "layout": "default"
