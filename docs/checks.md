@@ -6,6 +6,7 @@
 
 | # | Step (as printed) | Command | Verifies | Typical failure → fix |
 |---|---|---|---|---|
+| 0 | `docs: relative links + anchors` | `bun tools/check-links.ts` (also `bun run docs:links`) | Every relative link in README, AGENTS, CONTRIBUTING, `docs/`, `.manual/`, `.cursor/`, `.project/` points at an existing file and, for Markdown targets, an existing heading anchor (GitHub slug rules). External links are not fetched | Fix the path/anchor; after renaming a heading, update links to it |
 | 1 | `fixtures: content, views, tokens (drift)` | `bun tools/content.ts --check`, `bun tools/views.ts --check`, `bun tools/tokens.ts --check` | Committed records, views and token outputs (`theme.css`, app `brand.css`, `tokens.json`…) equal what the generators produce now | You changed a source (`mapping.json`, `tools/content.ts`, defs schema…) but did not regenerate → run `bun run content`, `bun tools/views.ts`, `bun run tokens`, commit the outputs. Never hand-edit outputs. |
 | 2 | `contract (@ui8kit/contract)` | `bun tools/validate-content.ts` | Every record passes the @ui8kit/contract JSON Schemas, `validateCollectionV04` (strict keys, uniqueness, references, manifest) and the local media/section reference checks; prints `errors 0, warnings 0` | Fix the mapping in `tools/content.ts` (missing required field, unknown key, dangling media id), regenerate. `--json` gives machine-readable output. |
 | 3 | `packages/icons` | `(cd packages/icons && bun scripts/generate.ts --check)` | Generated icon components are in sync | Run `bun scripts/generate.ts` in packages/icons. |

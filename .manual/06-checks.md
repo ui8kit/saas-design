@@ -5,6 +5,7 @@ bun run check                          # tools/check.sh
 ```
 
 Runs, in order, failing fast:
+0. `check-links.ts` (relative links + anchors in all docs)
 1. `content.ts / views.ts / tokens.ts --check` (fixture drift)
 2. `validate-content.ts` (@ui8kit/contract)
 3. icons, ui, blocks `generate.ts --check` + ui/blocks `parity.ts` (templ vs svelte DOM)

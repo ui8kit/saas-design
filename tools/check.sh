@@ -6,6 +6,8 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 step() { printf '\n== %s\n' "$*"; }
 
+step "docs: relative links + anchors"
+bun tools/check-links.ts
 step "fixtures: content, views, tokens (drift)"
 bun tools/content.ts --check
 bun tools/views.ts --check

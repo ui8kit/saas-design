@@ -115,7 +115,7 @@ A change is done only when all of these hold:
 - [ ] For visual changes: you ran `bun run shots` (and `shots:modes` for theme or mobile changes), **opened the images**, and compared them with Figma. Section height deltas in `report.json` must not get worse. Check dark mode and 390px.
 - [ ] For behaviour changes (`ui8kit.js`, Sheet, ThemeToggle): `bun run test:behaviors` passes.
 - [ ] New utilities are reviewed into `tools/ui8px/allowed.extra.json`: on-grid, token colors, no arbitrary values.
-- [ ] Docs updated if a command, path or rule changed: `README.md`, `docs/`, `.manual/`, `.cursor/rules/`.
+- [ ] Docs updated if a command, path or rule changed: `README.md`, `docs/`, `.manual/`, `.cursor/rules/`. Relative links are checked by `bun run docs:links`, which is part of `check`.
 - [ ] `.project/STATUS.md` updated when a deliverable changes state.
 - [ ] Committed and pushed. Never push with a failing check.
 
