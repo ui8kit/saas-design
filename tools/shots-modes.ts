@@ -2,7 +2,8 @@
  * Light / dark / mobile screenshots of the built apps → /workspace/shots-saas
  *   site:   site-light.png site-dark.png site-mobile.png site-mobile-menu.png site-mobile-dark-menu.png
  *   design: design-light.png design-dark.png design-mobile.png design-mobile-menu.png design-dark-<page>.png
- *   bun tools/shots-modes.ts [site|design|all]
+ *   design-react: the same set prefixed design-react-* (apps/design-react/build)
+ *   bun tools/shots-modes.ts [site|design|design-svelte|design-react|all]   (design = both design apps)
  * Dark mode is set the way a visitor does it: localStorage.theme before load (theme-init.js applies it, no flash).
  */
 import { chromium, type Page } from "playwright-core";
@@ -55,16 +56,17 @@ if (which === "site" || which === "all") {
   await shot(s.url, "/", "site-mobile-dark-menu.png", { width: 390, dark: true, menu: true });
   s.close();
 }
-if (which === "design" || which === "all") {
-  const s = serve(join(ROOT, "apps/design-svelte/build"));
-  await shot(s.url, "/", "design-light.png", { width: 1440 });
-  await shot(s.url, "/", "design-dark.png", { width: 1440, dark: true });
-  await shot(s.url, "/foundations/colors", "design-dark-colors.png", { width: 1440, dark: true });
-  await shot(s.url, "/components", "design-dark-components.png", { width: 1440, dark: true, full: false });
-  await shot(s.url, "/widgets", "design-dark-widgets.png", { width: 1440, dark: true });
-  await shot(s.url, "/blocks/pricing-two-plans", "design-dark-pricing.png", { width: 1440, dark: true });
-  await shot(s.url, "/", "design-mobile.png", { width: 390 });
-  await shot(s.url, "/", "design-mobile-menu.png", { width: 390, menu: true });
+for (const [app, prefix] of [["design-svelte", "design"], ["design-react", "design-react"]] as const) {
+  if (which !== "all" && which !== "design" && which !== app) continue;
+  const s = serve(join(ROOT, `apps/${app}/build`));
+  await shot(s.url, "/", `${prefix}-light.png`, { width: 1440 });
+  await shot(s.url, "/", `${prefix}-dark.png`, { width: 1440, dark: true });
+  await shot(s.url, "/foundations/colors", `${prefix}-dark-colors.png`, { width: 1440, dark: true });
+  await shot(s.url, "/components", `${prefix}-dark-components.png`, { width: 1440, dark: true, full: false });
+  await shot(s.url, "/widgets", `${prefix}-dark-widgets.png`, { width: 1440, dark: true });
+  await shot(s.url, "/blocks/pricing-two-plans", `${prefix}-dark-pricing.png`, { width: 1440, dark: true });
+  await shot(s.url, "/", `${prefix}-mobile.png`, { width: 390 });
+  await shot(s.url, "/", `${prefix}-mobile-menu.png`, { width: 390, menu: true });
   s.close();
 }
 await browser.close();

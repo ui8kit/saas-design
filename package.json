@@ -18,6 +18,7 @@
     "content": "bun tools/content.ts",
     "contract": "bun tools/validate-content.ts",
     "check": "bash tools/check.sh",
+    "design-react:build": "cd apps/design-react && bun run build",
     "design-svelte:build": "cd apps/design-svelte && bun run build",
     "site:build": "bash apps/site/scripts/build.sh",
     "shots:design": "bun tools/shots-design.ts",

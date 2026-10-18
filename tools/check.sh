@@ -39,4 +39,6 @@ step "apps/design-shared: generated foundations drift"
 (cd apps/design-shared && bun run check)
 step "apps/design-svelte: SvelteKit static build"
 (cd apps/design-svelte && bun run build >/dev/null && echo "design-svelte: built $(find build -name '*.html' | wc -l) pages")
+step "apps/design-react: tsc + Vite SSR build + static prerender"
+(cd apps/design-react && ../../node_modules/.bin/tsc -p . && bun run build >/dev/null && echo "design-react: built $(find build -name '*.html' | wc -l) pages")
 printf '\nall checks passed\n'

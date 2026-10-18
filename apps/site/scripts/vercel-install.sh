@@ -3,7 +3,7 @@
 # 1) JS deps for the Tailwind CLI (bun workspaces at the repo root).
 # 2) Go toolchain: Vercel's build image does not guarantee Go, so install a pinned one if missing.
 set -euo pipefail
-GO_VERSION="${GO_VERSION:-1.23.4}"
+GO_VERSION="${GO_VERSION:-1.26.0}"
 cd "$(dirname "$0")/../../.."
 if command -v bun >/dev/null 2>&1; then bun install --frozen-lockfile; else npm install --no-audit --no-fund; fi
 if ! command -v go >/dev/null 2>&1; then

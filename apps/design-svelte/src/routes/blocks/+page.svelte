@@ -5,7 +5,7 @@
 <svelte:head><title>Blocks · Habitus Design</title></svelte:head>
 <header class="ds-header">
   <h1 class="ds-title">Blocks</h1>
-  <p class="ds-lead">{blocks.length} page sections from packages/blocks, generated from one DSL into Svelte 5 and Go templ with identical DOM. Previews use fixtures/views/blocks.json (contract records).</p>
+  <p class="ds-lead">{blocks.length} page sections from packages/blocks, generated from one DSL into React 19, Svelte 5 and Go templ with identical DOM. Previews use fixtures/views/blocks.json (contract records).</p>
 </header>
 {#each categories as cat}
   <section class="ds-section" aria-labelledby="cat-{cat.id}">

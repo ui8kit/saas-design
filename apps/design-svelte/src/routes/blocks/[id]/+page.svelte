@@ -8,7 +8,7 @@
   <p class="ds-meta">blocks / {data.meta.category}</p>
   <h1 class="ds-title">{data.meta.title}</h1>
   <p class="ds-lead">{data.meta.description}</p>
-  <p class="ds-meta">Svelte: {data.meta.name} · templ: blocks.{data.meta.name} · Figma: {data.meta.figma ?? "catalog (no Figma node)"}</p>
+  <p class="ds-meta">React: {data.meta.name} · Svelte: {data.meta.name} · templ: blocks.{data.meta.name} · Figma: {data.meta.figma ?? "catalog (no Figma node)"}</p>
 </header>
 <section class="ds-section" aria-label="Preview">
   {#key data.meta.id}<BlockPreview id={data.meta.id} />{/key}

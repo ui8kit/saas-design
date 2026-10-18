@@ -1,5 +1,5 @@
 /**
- * Behavior test (Chrome) for packages/ui/behaviors/ui8kit.js on both built apps at 390px:
+ * Behavior test (Chrome) for packages/ui/behaviors/ui8kit.js on the three built apps at 390px:
  * sheet opens (aria-expanded, focus inside), Tab is trapped, Esc closes + restores focus, overlay click closes,
  * theme toggle flips .dark + aria-pressed and persists across reload.  bun tools/test-behaviors.ts
  */
@@ -14,7 +14,7 @@ const serve = (dir: string) => { const s = createServer((req, res) => { let p = 
 const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/usr/bin/google-chrome" });
 let fail = 0;
 const ok = (c: boolean, m: string) => { console.log(`${c ? "ok  " : "FAIL"} ${m}`); if (!c) fail++; };
-for (const [app, dir] of [["site", "apps/site/public"], ["design", "apps/design-svelte/build"]] as const) {
+for (const [app, dir] of [["site", "apps/site/public"], ["design-svelte", "apps/design-svelte/build"], ["design-react", "apps/design-react/build"]] as const) {
   const s = serve(join(ROOT, dir));
   const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await page.goto(s.url + "/", { waitUntil: "networkidle" });

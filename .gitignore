@@ -18,3 +18,5 @@ apps/design-svelte/static/fonts/
 .env.*
 .vercel-go/
 packages/ui/.xgen/
+apps/design-react/public/media/
+apps/design-react/.ssr/

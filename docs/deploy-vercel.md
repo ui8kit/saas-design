@@ -1,6 +1,6 @@
 # Deploy to Vercel
 
-Deploy as two Vercel projects from one repository, one per app. This is the English long-form counterpart of [.manual/08-deploy-vercel.md](../.manual/08-deploy-vercel.md).
+Deploy as three Vercel projects from one repository, one per app. This is the English long-form counterpart of [.manual/08-deploy-vercel.md](../.manual/08-deploy-vercel.md).
 
 > **Status: not verified on Vercel.** Both configs have been dry-run locally with the exact install and build commands Vercel would execute, and both succeed (2026-10-18). A real Vercel deploy, including Go being available in the build image and the `npm` fallback path, has **not** been tested.
 
@@ -10,8 +10,9 @@ Deploy as two Vercel projects from one repository, one per app. This is the Engl
 |---|---|---|---|
 | site (e.g. `saas-site`) | `apps/site` | Other | [`apps/site/vercel.json`](../apps/site/vercel.json) |
 | design (e.g. `saas-design`) | `apps/design-svelte` | Other | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
+| design-react (e.g. `saas-design-react`) | `apps/design-react` | Other | [`apps/design-react/vercel.json`](../apps/design-react/vercel.json) |
 
-Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. Both apps read `packages/`, `fixtures/` and `tools/` from the repo root.
+Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. All apps read `packages/`, `fixtures/` and `tools/` from the repo root.
 
 ### apps/site (Go templ → static HTML)
 
@@ -27,13 +28,29 @@ Keep **"Include source files outside of the Root Directory in the Build Step"** 
 
 - `scripts/vercel-install.sh` runs from the repo root:
   - `bun install --frozen-lockfile` if bun exists, otherwise `npm install --no-audit --no-fund`;
-  - if `go` is missing, it downloads Go `${GO_VERSION:-1.23.4}` into `.vercel-go/` (git-ignored).
+  - if `go` is missing, it downloads Go `${GO_VERSION:-1.26.0}` into `.vercel-go/` (git-ignored).
 - `scripts/build.sh` puts `.vercel-go/go/bin` on `PATH`, then:
   1. runs `go run ./cmd/export` (templ blocks + `fixtures/views/home.json` → `public/index.html`);
   2. copies `packages/ui/behaviors/ui8kit.js` → `public/assets/`;
   3. compiles `styles/app.css` with the Tailwind CLI → `public/assets/app.css`;
   4. copies media with `node tools/copy-media.mjs public`.
 - The committed `*_templ.go` files are used, so `templ generate` is **not** needed at deploy time.
+
+### apps/design-react (React 19, Vite SSR → static HTML)
+
+```json
+{
+  "framework": null,
+  "installCommand": "bash scripts/vercel-install.sh",
+  "buildCommand": "node ../../tools/copy-media.mjs public && node scripts/build.mjs",
+  "outputDirectory": "build",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+```
+
+- The install is the same bun workspace install as design-svelte. Go is not needed.
+- `scripts/build.mjs` runs a Vite client build (CSS + `public/` media), then a Vite SSR build of `src/entry-server.tsx`, then writes one `.html` per route (49) with `react-dom/server`. No client React is shipped. See [apps/design-react/README.md](../apps/design-react/README.md).
 
 ### apps/design-svelte (SvelteKit static)
 

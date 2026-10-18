@@ -19,6 +19,21 @@
         "typescript": "^5.9",
       },
     },
+    "apps/design-react": {
+      "name": "@saas-design/design-react",
+      "devDependencies": {
+        "@tailwindcss/vite": "^4.1.0",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "tailwindcss": "^4.1.0",
+        "vite": "^6.2.0",
+      },
+    },
+    "apps/design-shared": {
+      "name": "@saas-design/design-shared",
+    },
     "apps/design-svelte": {
       "name": "@saas-design/design-svelte",
       "devDependencies": {
@@ -222,6 +237,10 @@
     "@saas-design/adapter": ["@saas-design/adapter@workspace:packages/adapter"],
 
     "@saas-design/blocks": ["@saas-design/blocks@workspace:packages/blocks"],
+
+    "@saas-design/design-react": ["@saas-design/design-react@workspace:apps/design-react"],
+
+    "@saas-design/design-shared": ["@saas-design/design-shared@workspace:apps/design-shared"],
 
     "@saas-design/design-svelte": ["@saas-design/design-svelte@workspace:apps/design-svelte"],
 

@@ -309,7 +309,7 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-card", "tag": "figure"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}

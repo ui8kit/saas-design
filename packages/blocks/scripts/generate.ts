@@ -28,6 +28,7 @@ type Field = { name: string; type: string };
 const compDir = new Map<string, string>();
 for (const m of readFileSync(UI_SVELTE_INDEX, "utf8").matchAll(/export \{ default as (\w+) \} from "\.\/primitives\/([\w-]+)\/[\w-]+\.svelte"/g)) compDir.set(m[1]!, m[2]!);
 // canonical prop defs of every part (React prop names come from them: reactPropName)
+const API_PROPS = new Set(["tag", "as", "variant", "size", "layout", "tone", "align", "justify", "gap", "weight", "aschild"]);
 const partProps = new Map<string, PropDef[]>(uiBricks.flatMap((b: any) => b.parts.map((p: any) => [p.name, p.props as PropDef[]] as const)));
 const goFields = new Map<string, Field[]>();
 const goPkg = new Map<string, string>(); // dir -> Go package name (switch → formswitch, select → selectfield)
@@ -205,6 +206,8 @@ function emit(n: Child, sc: Scope, ctx: Ctx, d: number, isRoot = false): Out {
         const norm = k === "for" ? "htmlfor" : k.replace(/-/g, "").toLowerCase();
         const f = fields.find((x) => x.name.toLowerCase() === norm && x.name !== "Attrs" && x.name !== "Class");
         const def = f ? defs.find((p) => p.name === f.name) : undefined;
+        // a primitive-API prop (retag, recipe axis) the part does not declare would leak as a bogus HTML attribute in every runtime
+        if (!f && API_PROPS.has(norm)) throw new Error(`[${sc.block.id}] ${n.comp} has no prop "${k}" (codegen 2.0 parts: ${defs.map((p) => p.name).join(", ")})`);
         if (f) goProps.push(`${f.name}: ${goVal(v, sc, f.type)}`);
         else attrs.push(`${goStr(k)}: ${goVal(v, sc)}`);
         const rk = def ? reactPropName(def) : jsxAttr(k);

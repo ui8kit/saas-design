@@ -20,7 +20,7 @@
     <List class="ui-grid-3" data-class="ui-grid-3">
       {#each data.items as item}
         <ListItem class="ui-testimonial-cards-item" data-class="ui-testimonial-cards-item">
-          <Card class="ui-testimonial-cards-card" data-class="ui-testimonial-cards-card" tag="figure">
+          <Card class="ui-testimonial-cards-card" data-class="ui-testimonial-cards-card">
             <Group class="ui-testimonial-cards-author" data-class="ui-testimonial-cards-author">
               <Image class="ui-testimonial-cards-avatar" data-class="ui-testimonial-cards-avatar" variant="avatar" src={item.avatar.src || undefined} alt={item.avatar.alt || undefined} />
               <Stack class="ui-stack-2" data-class="ui-stack-2">

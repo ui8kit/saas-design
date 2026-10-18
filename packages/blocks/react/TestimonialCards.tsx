@@ -20,7 +20,7 @@ export function TestimonialCards({ data }: { data: TestimonialCardsData }) {
           {data.items.map((item, i) => (
             <Fragment key={i}>
             <ListItem className="ui-testimonial-cards-item" data-class="ui-testimonial-cards-item">
-              <Card className="ui-testimonial-cards-card" data-class="ui-testimonial-cards-card" tag={"figure"}>
+              <Card className="ui-testimonial-cards-card" data-class="ui-testimonial-cards-card">
                 <Group className="ui-testimonial-cards-author" data-class="ui-testimonial-cards-author">
                   <Image className="ui-testimonial-cards-avatar" data-class="ui-testimonial-cards-avatar" variant={"avatar"} src={item.avatar.src || undefined} alt={item.avatar.alt || undefined} />
                   <Stack className="ui-stack-2" data-class="ui-stack-2">

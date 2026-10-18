@@ -1,0 +1,7 @@
+/* apps/design-react stylesheet: the same entry as apps/design-svelte. No source scanning: every utility lives in an @apply. */
+@import "tailwindcss" source(none);
+@import "../../../../packages/tokens/theme.css";
+@import "../../../design-shared/styles/brand.css";
+@import "../../../../packages/adapter/src/index.css";
+@import "../../../design-shared/styles/design.css";
+@import "../../../design-shared/styles/foundations.generated.css";

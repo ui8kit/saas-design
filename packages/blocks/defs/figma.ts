@@ -122,7 +122,7 @@ export const testimonialCards = block({
       c("List", { kit: "grid-3" },
         each($("items"), "item",
           c("ListItem", { ui: "item" },
-            c("Card", { ui: "card", tag: "figure", css: "h-full gap-8" },
+            c("Card", { ui: "card", css: "h-full gap-8" },
               c("Group", { ui: "author", css: "gap-4" },
                 c("Image", { ui: "avatar", variant: "avatar", src: $("item.avatar.src"), alt: $("item.avatar.alt") }),
                 c("Stack", { kit: "stack-2" },

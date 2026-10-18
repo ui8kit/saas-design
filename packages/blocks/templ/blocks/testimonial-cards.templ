@@ -30,7 +30,7 @@ templ TestimonialCards(p TestimonialCardsData) {
 			@list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}) {
 				for _, item := range p.Items {
 					@list.ListItem(list.ListItemProps{Class: "ui-testimonial-cards-item", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-item"}}) {
-						@card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-card", "tag": "figure"}}) {
+						@card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-card"}}) {
 							@group.Group(group.GroupProps{Class: "ui-testimonial-cards-author", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-author"}}) {
 								@image.Image(image.ImageProps{Class: "ui-testimonial-cards-avatar", Variant: "avatar", Src: item.Avatar.Src, Alt: item.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-avatar"}})
 								@stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}) {

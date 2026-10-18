@@ -7,9 +7,7 @@
 <header class="ds-header">
   <h1 class="ds-title">Habitus Design System</h1>
   <p class="ds-lead">
-    Foundations, primitives, components, widgets and blocks generated from the Figma file. Every page renders the same
-    Svelte 5 packages the site uses in Go templ: shadcn HSL tokens, semantic ui-* classes from the adapter, fixtures that
-    conform to @ui8kit/contract.
+    Foundations, primitives, components, widgets and blocks generated from the Figma file. Every page renders the generated packages with one DOM (React 19 in apps/design-react, Svelte 5 in apps/design-svelte, Go templ in apps/site): shadcn HSL tokens, semantic ui-* classes from the adapter, fixtures that conform to @ui8kit/contract.
   </p>
 </header>
 
