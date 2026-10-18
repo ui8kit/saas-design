@@ -21,13 +21,13 @@
       "value": "dark"
     },
     "value": {
-      "value": "hsl(206.2 80% 92.2%)"
+      "value": "hsl(214.2 52% 24.5%)"
     },
     "hex": {
-      "value": "#dbedfb"
+      "value": "#1e3a5f"
     },
     "source": {
-      "value": "figma-variable:Light Blue"
+      "value": "not-in-figma"
     }
   }
 }

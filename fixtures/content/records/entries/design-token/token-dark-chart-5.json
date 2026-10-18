@@ -21,13 +21,13 @@
       "value": "dark"
     },
     "value": {
-      "value": "hsl(358.9 96.6% 88.6%)"
+      "value": "hsl(350.2 36.3% 26.5%)"
     },
     "hex": {
-      "value": "#fec6c7"
+      "value": "#5c2b33"
     },
     "source": {
-      "value": "figma-variable:Pink"
+      "value": "not-in-figma"
     }
   }
 }

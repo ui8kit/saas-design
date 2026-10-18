@@ -4556,5 +4556,386 @@
         ]
       }
     ]
+  },
+  {
+    "id": "ui.themetoggle",
+    "dir": "themetoggle",
+    "kind": "component",
+    "docs": "ThemeToggle switches between light and dark color schemes (button with aria-pressed). Behavior: data-ui8kit=\"theme-toggle\" in behaviors/ui8kit.js.",
+    "parts": [
+      {
+        "name": "ThemeToggle",
+        "docs": "ThemeToggle renders a button with Lucide sun/moon icons; aria-pressed reflects dark mode.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast (on primary surfaces), current (inherits text color)"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Dark mode)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "label.custom",
+            "props": {
+              "aria-label": "Toggle theme",
+              "id": "theme"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.sheet",
+    "dir": "sheet",
+    "kind": "component",
+    "docs": "Sheet is a side drawer dialog with a trigger (Lucide menu/x) and a close button. Behavior: behaviors/ui8kit.js.",
+    "parts": [
+      {
+        "name": "Sheet",
+        "docs": "Sheet renders the hidden dialog root: overlay + panel (children). ID is required for the trigger's aria-controls.",
+        "children": true,
+        "props": [
+          {
+            "name": "Side",
+            "type": "string",
+            "docs": "left or right"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "dialog id (target of SheetTrigger Controls)"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Menu)"
+          },
+          {
+            "name": "Open",
+            "type": "bool",
+            "docs": "render open (static); default hidden"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "side.left",
+            "props": {
+              "side": "left"
+            }
+          },
+          {
+            "id": "side.right",
+            "props": {
+              "side": "right"
+            }
+          },
+          {
+            "id": "state.open",
+            "props": {
+              "id": "nav-sheet",
+              "open": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "SheetTrigger",
+        "docs": "SheetTrigger renders the menu button (aria-expanded, aria-controls, aria-haspopup=dialog) with Lucide menu/x icons.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast, current"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Controls",
+            "type": "string",
+            "docs": "id of the Sheet"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Open menu)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "side.left",
+            "props": {
+              "aria-label": "Navigation"
+            }
+          },
+          {
+            "id": "trigger.controls",
+            "props": {
+              "controls": "nav-sheet",
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "close.ghost",
+            "props": {
+              "variant": "ghost",
+              "size": "sm"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SheetClose",
+        "docs": "SheetClose renders the close button (Lucide x) inside the panel.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast, current"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Close menu)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "side.left",
+            "props": {
+              "aria-label": "Navigation"
+            }
+          },
+          {
+            "id": "close.ghost",
+            "props": {
+              "variant": "ghost",
+              "size": "sm"
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

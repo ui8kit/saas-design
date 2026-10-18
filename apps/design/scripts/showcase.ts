@@ -10,8 +10,7 @@ import { join, resolve } from "node:path";
 const APP = resolve(import.meta.dir, "..");
 const UI = resolve(APP, "../../packages/ui");
 const CHECK = process.argv.includes("--check");
-const { bricks } = await import(join(UI, "scripts/registry.ts"));
-const { showcaseCases } = await import(join(UI, "node_modules/@ui8kit/codegen/tests/support/fixtures.ts"));
+const { bricks, showcaseCases } = await import(join(UI, "scripts/registry.ts"));
 const { hasChildren, knownCanonicalProps, htmlRuntimeProps } = await import(join(UI, "node_modules/@ui8kit/codegen/tests/support/props.ts"));
 
 // Layout/text building blocks are "primitives"; interactive or composite bricks are "components".
