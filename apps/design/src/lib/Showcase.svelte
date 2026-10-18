@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { Component } from "svelte";
-  import showcase from "./showcase.generated.json";
+  import showcase from "$packages/ui/showcase.json";
 
   let { kind, title, lead }: { kind: "primitive" | "component"; title: string; lead: string } = $props();
 
-  // Every generated Svelte 5 part of packages/ui, keyed "<dir>/<Part>".
-  const modules = import.meta.glob<{ default: Component<Record<string, unknown>> }>("../../../../packages/ui/svelte/ui/*/*.svelte", { eager: true });
+  // Every generated Svelte 5 part of packages/ui, keyed "<dir>/<file>" (the `file` of a part in showcase.json).
+  const modules = import.meta.glob<{ default: Component<Record<string, unknown>> }>("../../../../packages/ui/svelte/src/primitives/*/*.svelte", { eager: true });
   const parts: Record<string, Component<Record<string, unknown>>> = {};
   for (const [path, mod] of Object.entries(modules)) parts[path.split("/").slice(-2).join("/").replace(/\.svelte$/, "")] = mod.default;
 
@@ -27,7 +27,7 @@
     <h2 class="ds-h2" id="{slug(b.id)}-title">{b.id}</h2>
     {#if b.docs}<p class="ds-text">{b.docs}</p>{/if}
     {#each b.parts as part}
-      {@const Comp = parts[`${b.dir}/${part.name}`]}
+      {@const Comp = parts[part.file]}
       <article class="ds-part">
         <h3 class="ds-h3">{part.name}</h3>
         {#if part.docs}<p class="ds-meta">{part.docs}</p>{/if}

@@ -1,0 +1,5 @@
+{
+  "$comment": "Habitus blocks were laid out on 0.1 stacks (flex-col, children stretch). codegen 2.0 defaults Stack to align=start, which shrinks full-width rows (plan name + badge, justify-between). Only the default is overridden; align=start stays available.",
+  "id": "ui.stack",
+  "defaults": { "align": "stretch" }
+}

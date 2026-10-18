@@ -8,21 +8,9 @@
   .ui-skip { @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-background focus:px-6 focus:py-2 focus:text-foreground; }
 }
 
-/* ThemeToggle icons (packages/ui/bricks/themetoggle): moon in light mode, sun in dark mode. */
+/* Sheet scroll lock set on <html> by packages/ui/behaviors/ui8kit.js while a sheet is open
+   (the Sheet and ThemeToggle markup and classes come from the codegen 2.0 specs: primitives.generated.css). */
 @layer components {
-  .ui-themetoggle-sun { @apply hidden size-5 dark:block; }
-  .ui-themetoggle-moon { @apply block size-5 dark:hidden; }
-}
-
-/* Sheet (packages/ui/bricks/sheet): overlay + panel; trigger shows menu when closed, x when open. */
-@layer components {
-  .ui-sheet-overlay { @apply absolute inset-0 bg-foreground/40; }
-  .ui-sheet-panel { @apply relative flex h-full w-80 max-w-full flex-col gap-6 overflow-auto bg-background p-6 text-foreground shadow-xl; }
-  .ui-sheet-icon-open { @apply block size-5; }
-  .ui-sheet-icon-close { @apply hidden size-5; }
-  [aria-expanded="true"] > .ui-sheet-icon-open { @apply hidden; }
-  [aria-expanded="true"] > .ui-sheet-icon-close { @apply block; }
-  .ui-sheet-close-icon { @apply size-5; }
   .ui-sheet-locked { @apply overflow-hidden; }
 }
 

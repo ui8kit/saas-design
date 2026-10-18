@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [tailwindcss(), sveltekit()],
   resolve: {
     alias: {
-      "@saas-design/ui": r("../../packages/ui/svelte/ui/index.svelte.ts"),
+      "@saas-design/ui": r("../../packages/ui/svelte/src/index.ts"),
       "@saas-design/blocks": r("../../packages/blocks/svelte/index.ts"),
       "@saas-design/icons": r("../../packages/icons/src/index.ts"),
       "$fixtures": r("../../fixtures"),

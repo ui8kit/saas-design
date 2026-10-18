@@ -2,7 +2,11 @@
  * Writes .ui8px/policy from project sources:
  *   patterns.json  every ui-* class the generated markup can emit (packages/ui + packages/blocks + adapter base)
  *   scopes.json    controls = codegen primitives (packages/ui, primitives.generated.css); layout = everything else
- *   allowed.json   ui8px go-preset defaults (tools/ui8px/allowed.base.json) + reviewed extras (tools/ui8px/allowed.extra.json)
+ *   allowed.json   spacing steps: the 8+4 grid of the pinned @ui8kit/codegen 2.0 (packages/ui/.xgen/.ui8px/policy/allowed.json:
+ *                  layout = 8px steps, controls = 4px steps up to 16 then 8px steps);
+ *                  utilities: ui8px go-preset defaults (tools/ui8px/allowed.base.json) + the reviewed utilities of the codegen 2.0
+ *                  recipes (same upstream file) + the utilities our primitives take verbatim from the pinned specs
+ *                  (packages/ui/upstream-utilities.json) + this project's reviewed extras (tools/ui8px/allowed.extra.json)
  *   denied.json    defaults + palette/arbitrary bans (tools/ui8px/denied.base.json)
  *   bun tools/ui8px-policy.ts [--check]
  */
@@ -20,7 +24,10 @@ for (const m of readFileSync(join(ROOT, "packages/adapter/src/base.css"), "utf8"
 
 const base = read("tools/ui8px/allowed.base.json");
 const extra = read("tools/ui8px/allowed.extra.json") as { $comment?: string; utilities: string[] };
-const allowed = { spacing: base.spacing, utilities: [...new Set([...base.utilities, ...extra.utilities])].sort() };
+const upstream = read("packages/ui/.xgen/.ui8px/policy/allowed.json") as { spacing: Record<string, string[]>; utilities: string[] };
+// utilities the generated primitives take verbatim from the pinned specs (packages/ui/scripts/registry.ts records them; never ours)
+const fromSpecs = (read("packages/ui/upstream-utilities.json") as { utilities: string[] }).utilities;
+const allowed = { spacing: upstream.spacing, utilities: [...new Set([...base.utilities, ...upstream.utilities, ...fromSpecs, ...extra.utilities])].sort() };
 const scopes = {
   defaultScope: "layout",
   scopes: [

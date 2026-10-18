@@ -1,8 +1,14 @@
 {
   "id": "ui.button",
   "base": "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
-  "keys": ["variant", "size"],
-  "defaults": { "variant": "default", "size": "default" },
+  "keys": [
+    "variant",
+    "size"
+  ],
+  "defaults": {
+    "variant": "default",
+    "size": "default"
+  },
   "byKey": {
     "variant": {
       "default": "bg-primary text-primary-foreground hover:bg-primary/90",
@@ -17,8 +23,7 @@
     "size": {
       "default": "h-10 px-6 text-base",
       "sm": "h-8 px-4 text-sm",
-      "lg": "h-12 px-10 text-base",
-      "icon": "size-10"
+      "lg": "h-12 px-10 text-base"
     }
   }
 }

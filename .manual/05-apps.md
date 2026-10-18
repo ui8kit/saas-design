@@ -4,7 +4,7 @@
 
 ```bash
 cd apps/site
-bun run generate                       # templ@v0.3.1001 generate -path views
+bun run generate                       # templ@v0.3.1070 generate -path views
 bun run build                          # = bash scripts/build.sh → public/ (export + Tailwind CLI + media)
 bun run serve                          # http://localhost:4173
 ```

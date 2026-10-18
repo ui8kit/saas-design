@@ -140,6 +140,7 @@
   .ui-faq-tiles-arrow-icon { @apply size-4; }
   .ui-faq-tiles-answer { @apply pt-4 pl-16 text-base leading-6; }
   .ui-faq-tiles-more { @apply self-end text-lg text-foreground hover:underline; }
+  .ui-faq-tiles-question > [data-slot="summary-indicator"] { @apply hidden; }
   .ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }
   .ui-faq-tiles-question::-webkit-details-marker { @apply hidden; }
   /* footer-newsletter */
@@ -287,6 +288,7 @@
   .ui-faq-accordion-question { @apply flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium; }
   .ui-faq-accordion-chevron { @apply size-4 shrink-0; }
   .ui-faq-accordion-answer { @apply pt-4 text-muted-foreground; }
+  .ui-faq-accordion-question > [data-slot="summary-indicator"] { @apply hidden; }
   .ui-faq-accordion-item[open] .ui-faq-accordion-chevron { @apply rotate-180; }
   .ui-faq-accordion-question::-webkit-details-marker { @apply hidden; }
   /* cta-centered */

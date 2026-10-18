@@ -63,7 +63,7 @@ Layer details: [docs/architecture.md](docs/architecture.md).
 | [ui8kit/codegen](https://github.com/ui8kit/codegen) (`@ui8kit/codegen`) | Generates primitives from one brick contract into templ, React 19, Svelte 5, Vue 3, SolidJS, Latte or Twig. This repo uses templ and Svelte | `github:ui8kit/codegen#972b492` |
 | [ui8px](https://www.npmjs.com/package/ui8px) ([source](https://github.com/ui8kit/ui8px-cli)) | Lints utilities (8+4 grid, token colors, no arbitrary values) | `ui8px@latest` via `npx` |
 | [brand-os](https://www.npmjs.com/package/brand-os) ([source](https://github.com/ui8kit/brand-os)) | Brand token contract emit/validate/verify | `0.3.0` via `npx` |
-| [templ](https://github.com/a-h/templ) | Go HTML templates | `v0.3.1001`, always via `go run …@v0.3.1001` |
+| [templ](https://github.com/a-h/templ) | Go HTML templates | `v0.3.1070`, always via `go run …@v0.3.1070` |
 | Tailwind CSS v4 | Compiles `@apply` rules (`source(none)`, no content scanning) | `4` |
 
 ## Repository structure
@@ -103,7 +103,7 @@ tools/                  generators, checks, screenshot and measuring scripts (bu
 | Bun | ≥ 1.2 | 1.4.2 |
 | Node.js | ≥ 20 (`npx` for fig2design, ui8px, brand-os, Tailwind CLI) | 20.19.2 |
 | Go | ≥ 1.23 (`go.mod`) | 1.27.2 |
-| templ | v0.3.1001, pinned through `go run`, nothing to install | — |
+| templ | v0.3.1070, pinned through `go run`, nothing to install | — |
 | Google Chrome | for screenshots and behaviour tests only (`/usr/bin/google-chrome`, or `CHROME=/path`) | — |
 
 ### Install and verify

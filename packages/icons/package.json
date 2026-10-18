@@ -2,9 +2,19 @@
   "name": "@saas-design/icons",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react.tsx"
+  },
   "scripts": {
     "generate": "bun scripts/generate.ts",
     "check": "bun scripts/generate.ts --check"
+  },
+  "devDependencies": {
+    "react": "^19.2.0",
+    "@types/react": "^19"
+  },
+  "peerDependencies": {
+    "react": "^19"
   }
 }

@@ -8,6 +8,7 @@
     "apps/*"
   ],
   "scripts": {
+    "postinstall": "if command -v bun >/dev/null 2>&1; then bun tools/xgen-link.ts; else echo 'xgen-link: skipped (no bun; only the generators need @ui8kit/codegen)'; fi",
     "extract": "bash tools/extract.sh",
     "render:figma": "bun tools/figma-render.ts",
     "shots": "bun tools/shots.ts",

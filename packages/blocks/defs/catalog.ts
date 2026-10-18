@@ -264,7 +264,8 @@ export const faqAccordion = block({
         c("Summary", { ui: "question", css: "flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium" },
           $("item.question"), icon("chevron-down", { ui: "chevron", css: "size-4 shrink-0" })),
         c("Text", { ui: "answer", css: "pt-4 text-muted-foreground" }, $("item.answer")))))),
-  extraCss: `.ui-faq-accordion-item[open] .ui-faq-accordion-chevron { @apply rotate-180; }
+  extraCss: `.ui-faq-accordion-question > [data-slot="summary-indicator"] { @apply hidden; }
+  .ui-faq-accordion-item[open] .ui-faq-accordion-chevron { @apply rotate-180; }
 .ui-faq-accordion-question::-webkit-details-marker { @apply hidden; }`,
 });
 

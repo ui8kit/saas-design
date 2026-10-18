@@ -1,9 +1,0 @@
-{
-  "id": "ui.sheet",
-  "showcase": {
-    "side.left": { "props": { "Side": "left", "ID": "nav-sheet", "AriaLabel": "Navigation" } },
-    "state.open": { "props": { "ID": "nav-sheet", "Open": true } },
-    "trigger.controls": { "props": { "Controls": "nav-sheet", "Variant": "contrast" } },
-    "close.ghost": { "props": { "Variant": "ghost", "Size": "sm" } }
-  }
-}

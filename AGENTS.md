@@ -78,7 +78,7 @@ bun run brand:emit && bun run brand:check         # brand-os@0.3.0 (not part of 
 
 # 5. primitives, 6. icons, 7. blocks
 (cd packages/ui && bun run generate && bun run parity)
-(cd packages/ui/templ && go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path ui)
+(cd packages/ui/templ && go run github.com/a-h/templ/cmd/templ@v0.3.1070 generate -path ui)
 (cd packages/icons && bun scripts/generate.ts)
 (cd packages/blocks && bun run generate && bun run parity)
 

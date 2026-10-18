@@ -4,6 +4,7 @@
   "type": "module",
   "exports": {
     ".": "./svelte/index.ts",
+    "./react": "./react/index.ts",
     "./catalog.json": "./catalog.json"
   },
   "scripts": {
@@ -15,5 +16,8 @@
     "@saas-design/ui": "workspace:*",
     "@saas-design/icons": "workspace:*"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
 }

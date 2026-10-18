@@ -7,8 +7,8 @@ The first part covers common failures and their fixes. The second part summarize
 | Symptom | Cause | Fix |
 |---|---|---|
 | `drift: … (run: …)` in `bun run check` | A source changed but its generated output was not regenerated, or the output was hand-edited | Run the generator named in the message and commit the output. See [checks.md](checks.md). |
-| `drift: packages/ui/templ *_templ.go` or `apps/site/views` | `templ generate` not rerun after a `.templ` change | `go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path ui` (in `packages/ui/templ`) or `-path views` (in `apps/site`) |
-| `undefined: templ.ResolveAttributeValue` | A templ CLI newer than the runtime generated the code | Always use the pinned `go run …templ@v0.3.1001` ([templ-version-pin.md](../.project/backlog/templ-version-pin.md)) |
+| `drift: packages/ui/templ *_templ.go` or `apps/site/views` | `templ generate` not rerun after a `.templ` change | `go run github.com/a-h/templ/cmd/templ@v0.3.1070 generate -path ui` (in `packages/ui/templ`) or `-path views` (in `apps/site`) |
+| `undefined: templ.ResolveAttributeValue` | A templ CLI newer than the runtime generated the code | Always use the pinned `go run …templ@v0.3.1070` ([templ-version-pin.md](../.project/backlog/templ-version-pin.md)) |
 | A utility "does nothing" | Tailwind runs with `source(none)`: utilities in markup are never generated | Put it in an `@apply`: block def `css:`, recipe, or `base.css` |
 | ui8px `Unknown utility class` / violation | Off-grid step, palette color or arbitrary value, or a new utility not reviewed yet | Use an on-grid/token utility, or add a reviewed entry to `tools/ui8px/allowed.extra.json`, then `bun tools/ui8px-policy.ts` |
 | `brand tokens used in packages/` | `--brand-*` or `*-brand-*` in a package | Use a shadcn token; brand colors belong to app CSS |
@@ -67,7 +67,7 @@ The first part covers common failures and their fixes. The second part summarize
 
 | Item | Status | File |
 |---|---|---|
-| Generated code must match templ runtime v0.3.1001 | worked-around | [templ-version-pin.md](../.project/backlog/templ-version-pin.md) |
+| Generated code must match templ runtime v0.3.1070 | worked-around | [templ-version-pin.md](../.project/backlog/templ-version-pin.md) |
 | `dark:` variant ignores `[data-theme]` islands | open | [tokens-dark-variant-ignores-data-theme.md](../.project/backlog/tokens-dark-variant-ignores-data-theme.md) |
 | Sheet is moved to `<body>` on open | open (works) | [ui-behaviors-sheet-portal.md](../.project/backlog/ui-behaviors-sheet-portal.md) |
 | Hero: badge star color, logo glyph, phone tilt | open | [blocks-hero-star-color-logo-glyph.md](../.project/backlog/blocks-hero-star-color-logo-glyph.md) |

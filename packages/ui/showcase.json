@@ -1,0 +1,6851 @@
+[
+  {
+    "id": "ui.alert",
+    "dir": "alert",
+    "kind": "component",
+    "docs": "Alert displays a static status or informational message.\nRenders a live region with role=status by default; children carry the message body.",
+    "parts": [
+      {
+        "name": "Alert",
+        "file": "alert/alert",
+        "docs": "Alert renders a div with alert or status semantics.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, destructive, or wireframe preset"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "status or alert (defaults to status)"
+          },
+          {
+            "name": "AriaLive",
+            "type": "string",
+            "docs": "polite or assertive (defaults to polite)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.destructive",
+            "props": {
+              "variant": "destructive"
+            },
+            "react": {
+              "variant": "destructive"
+            }
+          },
+          {
+            "id": "variant.success",
+            "props": {
+              "variant": "success"
+            },
+            "react": {
+              "variant": "success"
+            }
+          },
+          {
+            "id": "variant.warning",
+            "props": {
+              "variant": "warning"
+            },
+            "react": {
+              "variant": "warning"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.badge",
+    "dir": "badge",
+    "kind": "component",
+    "docs": "Badge shows a short status label.\nBadge uses variant and size presets.",
+    "parts": [
+      {
+        "name": "Badge",
+        "file": "badge/badge",
+        "docs": "Badge renders label text in a div wrapper.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "color preset: default, secondary, destructive, outline"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "density preset: default, sm, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.secondary",
+            "props": {
+              "variant": "secondary"
+            },
+            "react": {
+              "variant": "secondary"
+            }
+          },
+          {
+            "id": "variant.outline",
+            "props": {
+              "variant": "outline"
+            },
+            "react": {
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "variant.destructive",
+            "props": {
+              "variant": "destructive"
+            },
+            "react": {
+              "variant": "destructive"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.block",
+    "dir": "block",
+    "kind": "primitive",
+    "docs": "Block is the one semantic root of a file (div, section, article, aside, header, footer, main, nav, figure, search, hgroup).\nAny file (block, composite, screen) may open on one Block; never nest Block inside Block in one file, never repeat it in a loop.",
+    "parts": [
+      {
+        "name": "Block",
+        "file": "block/block",
+        "docs": "Block renders a resolved landmark element with children.",
+        "children": true,
+        "props": [
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "semantic tag: div (default), section, article, aside, header, footer, main, nav, figure, search, hgroup"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "tag.footer",
+            "props": {
+              "tag": "footer"
+            },
+            "react": {
+              "tag": "footer"
+            }
+          },
+          {
+            "id": "tag.header",
+            "props": {
+              "tag": "header"
+            },
+            "react": {
+              "tag": "header"
+            }
+          },
+          {
+            "id": "tag.main",
+            "props": {
+              "tag": "main"
+            },
+            "react": {
+              "tag": "main"
+            }
+          },
+          {
+            "id": "tag.nav",
+            "props": {
+              "tag": "nav"
+            },
+            "react": {
+              "tag": "nav"
+            }
+          },
+          {
+            "id": "tag.section",
+            "props": {
+              "tag": "section"
+            },
+            "react": {
+              "tag": "section"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.box",
+    "dir": "box",
+    "kind": "primitive",
+    "docs": "Box is a generic layout wrapper for internal sections.\nNot for top-level landmarks — use Block for page regions.",
+    "parts": [
+      {
+        "name": "Box",
+        "file": "box/box",
+        "docs": "Box renders a div layout wrapper.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "div only. Use Block for landmarks (aside, section, header, nav)."
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "tag.default",
+            "props": {
+              "tag": "div"
+            },
+            "react": {
+              "tag": "div"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.breadcrumb",
+    "dir": "breadcrumb",
+    "kind": "component",
+    "docs": "Breadcrumb shows the current page location within a hierarchy.\nRenders nav with ordered links and aria-current on the active item.",
+    "parts": [
+      {
+        "name": "Breadcrumb",
+        "file": "breadcrumb/breadcrumb",
+        "docs": "Breadcrumb renders the full navigation trail.",
+        "children": false,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Items",
+            "type": "items",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "DataUI8Kit",
+            "type": "string",
+            "docs": "opt-in behavior hook; empty emits nothing"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.button-plain",
+    "dir": "button-plain",
+    "kind": "component",
+    "docs": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
+    "parts": [
+      {
+        "name": "ButtonPlain",
+        "file": "button-plain/button-plain",
+        "docs": "ButtonPlain is a bare button element: no styling beyond Class. Patterns (tabs, tree rows, menu items) style it themselves.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": "button type: button, submit, reset (ignored when Href is set)"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": "blocks interaction"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "default",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.button",
+    "dir": "button",
+    "kind": "component",
+    "docs": "Button triggers an action on click.\nOptional Href renders an anchor with button appearance (CTA navigation).\nFor exotic roots, use ButtonClasses (Templ/Svelte/Vue/Solid) or asChild (React).\nPrefer Link for prose/semantic navigation.",
+    "parts": [
+      {
+        "name": "Button",
+        "file": "button/button",
+        "docs": "Button renders a button element, or an anchor when Href is set.\nType/Form apply only in button mode; Disabled on anchors uses aria-disabled.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "appearance preset: default, secondary, destructive, outline, ghost, link"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "density preset: default, sm, lg, icon"
+          },
+          {
+            "name": "Layout",
+            "type": "string",
+            "docs": "sets layout"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": "button type: button, submit, reset (ignored when Href is set)"
+          },
+          {
+            "name": "Form",
+            "type": "string",
+            "docs": "links button to a form id (ignored when Href is set)"
+          },
+          {
+            "name": "Href",
+            "type": "string",
+            "docs": "when set, renders an anchor with button appearance"
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "docs": "explicit target; External implies _blank (anchor mode)"
+          },
+          {
+            "name": "Rel",
+            "type": "string",
+            "docs": "explicit rel; external links default to noopener noreferrer (anchor mode)"
+          },
+          {
+            "name": "External",
+            "type": "bool",
+            "docs": "opens in a new tab with safe rel defaults (anchor mode)"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": "blocks interaction"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.outline",
+            "props": {
+              "variant": "outline"
+            },
+            "react": {
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.secondary",
+            "props": {
+              "variant": "secondary"
+            },
+            "react": {
+              "variant": "secondary"
+            }
+          },
+          {
+            "id": "variant.destructive",
+            "props": {
+              "variant": "destructive"
+            },
+            "react": {
+              "variant": "destructive"
+            }
+          },
+          {
+            "id": "variant.link",
+            "props": {
+              "variant": "link"
+            },
+            "react": {
+              "variant": "link"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            },
+            "react": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "layout.default",
+            "props": {
+              "layout": "default"
+            },
+            "react": {
+              "layout": "default"
+            }
+          },
+          {
+            "id": "layout.icon",
+            "props": {
+              "aria-label": "Example",
+              "layout": "icon"
+            },
+            "react": {
+              "aria-label": "Example",
+              "layout": "icon"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "variant": "default"
+            },
+            "react": {
+              "disabled": true,
+              "variant": "default"
+            }
+          },
+          {
+            "id": "state.reset",
+            "props": {
+              "type": "reset",
+              "variant": "outline"
+            },
+            "react": {
+              "type": "reset",
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "state.submit",
+            "props": {
+              "type": "submit",
+              "variant": "default"
+            },
+            "react": {
+              "type": "submit",
+              "variant": "default"
+            }
+          },
+          {
+            "id": "composition.aschild-link",
+            "props": {
+              "variant": "outline",
+              "size": "sm"
+            },
+            "react": {
+              "variant": "outline",
+              "size": "sm"
+            }
+          },
+          {
+            "id": "composition.href",
+            "props": {
+              "href": "#",
+              "variant": "default",
+              "size": "default"
+            },
+            "react": {
+              "href": "#",
+              "variant": "default",
+              "size": "default"
+            }
+          },
+          {
+            "id": "composition.href-external",
+            "props": {
+              "href": "https://example.com",
+              "external": true,
+              "variant": "outline",
+              "size": "sm"
+            },
+            "react": {
+              "href": "https://example.com",
+              "external": true,
+              "variant": "outline",
+              "size": "sm"
+            }
+          },
+          {
+            "id": "composition.href-disabled",
+            "props": {
+              "href": "#",
+              "disabled": true,
+              "variant": "secondary"
+            },
+            "react": {
+              "href": "#",
+              "disabled": true,
+              "variant": "secondary"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.card",
+    "dir": "card",
+    "kind": "component",
+    "docs": "Card groups related content in one bordered surface.\nCard uses header, content, and footer slots.\nFor semantic root elements (section, article), use CardClasses on a manual wrapper.",
+    "parts": [
+      {
+        "name": "Card",
+        "file": "card/card",
+        "docs": "Card renders the bordered surface wrapper.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "surface: default, muted, ghost, compact"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.compact",
+            "props": {
+              "variant": "compact"
+            },
+            "react": {
+              "variant": "compact"
+            }
+          },
+          {
+            "id": "variant.raised",
+            "props": {
+              "variant": "raised"
+            },
+            "react": {
+              "variant": "raised"
+            }
+          },
+          {
+            "id": "variant.kpi",
+            "props": {
+              "variant": "kpi"
+            },
+            "react": {
+              "variant": "kpi"
+            }
+          },
+          {
+            "id": "variant.flat",
+            "props": {
+              "variant": "flat"
+            },
+            "react": {
+              "variant": "flat"
+            }
+          },
+          {
+            "id": "variant.accent",
+            "props": {
+              "variant": "accent"
+            },
+            "react": {
+              "variant": "accent"
+            }
+          }
+        ]
+      },
+      {
+        "name": "CardHeader",
+        "file": "card/card-header",
+        "docs": "CardHeader renders the top slot.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "CardTitle",
+        "file": "card/card-title",
+        "docs": "CardTitle renders heading text at the As level (default h2).",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "As",
+            "type": "int",
+            "docs": "maps to h1-h6 (default h2)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "CardDescription",
+        "file": "card/card-description",
+        "docs": "CardDescription renders a muted subtitle in a p element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "CardContent",
+        "file": "card/card-content",
+        "docs": "CardContent renders the padded main body slot.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "CardFooter",
+        "file": "card/card-footer",
+        "docs": "CardFooter renders the bottom action slot.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.checkbox",
+    "dir": "checkbox",
+    "kind": "component",
+    "docs": "Checkbox is a native boolean form control.\nWireframe styling via Variant and Size; supports standard ARIA attrs.",
+    "parts": [
+      {
+        "name": "Checkbox",
+        "file": "checkbox/checkbox",
+        "docs": "Checkbox renders a styled input[type=checkbox].",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Checked",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "state.checked",
+            "props": {
+              "checked": true,
+              "id": "terms",
+              "name": "terms"
+            },
+            "react": {
+              "checked": true,
+              "id": "terms",
+              "name": "terms"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "checked": true,
+              "disabled": true,
+              "name": "locked"
+            },
+            "react": {
+              "checked": true,
+              "disabled": true,
+              "name": "locked"
+            }
+          },
+          {
+            "id": "state.unchecked",
+            "props": {
+              "id": "terms",
+              "name": "terms"
+            },
+            "react": {
+              "id": "terms",
+              "name": "terms"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.container",
+    "dir": "container",
+    "kind": "primitive",
+    "docs": "Container wraps page content with a constrained width shell.\nOptional main or section tag for inner layout regions.",
+    "parts": [
+      {
+        "name": "Container",
+        "file": "container/container",
+        "docs": "Container renders the outer content shell.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "div, main, or section"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "tag.default",
+            "props": {
+              "tag": "div"
+            },
+            "react": {
+              "tag": "div"
+            }
+          },
+          {
+            "id": "tag.main",
+            "props": {
+              "tag": "main"
+            },
+            "react": {
+              "tag": "main"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.form.controls",
+    "dir": "form",
+    "kind": "component",
+    "docs": "Form controls covers fieldset, legend, datalist, output, meter, and progress.",
+    "parts": [
+      {
+        "name": "Fieldset",
+        "file": "form/fieldset",
+        "docs": "Fieldset renders a native fieldset.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Form",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo"
+            },
+            "react": {
+              "name": "demo"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "variant.card",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.inline",
+            "props": {
+              "variant": "inline"
+            },
+            "react": {
+              "variant": "inline"
+            }
+          },
+          {
+            "id": "status.progress",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "Legend",
+        "file": "form/legend",
+        "docs": "Legend renders a native legend.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "group.fieldset",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DataList",
+        "file": "form/data-list",
+        "docs": "DataList renders a native datalist.",
+        "children": true,
+        "props": [
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "DataOption",
+        "file": "form/data-option",
+        "docs": "DataOption renders an option inside a datalist.",
+        "children": false,
+        "props": [
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "status.progress",
+            "props": {
+              "value": "40"
+            },
+            "react": {
+              "value": "40"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Output",
+        "file": "form/output",
+        "docs": "Output renders a native output element.",
+        "children": true,
+        "props": [
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "For",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": "initial output text"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo"
+            },
+            "react": {
+              "name": "demo"
+            }
+          },
+          {
+            "id": "group.fieldset",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "status.progress",
+            "props": {
+              "value": "40"
+            },
+            "react": {
+              "value": "40"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Meter",
+        "file": "form/meter",
+        "docs": "Meter renders a native meter.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Min",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Max",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Low",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "High",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Optimum",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "group.fieldset",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "status.progress",
+            "props": {
+              "max": "100",
+              "value": "40"
+            },
+            "react": {
+              "max": "100",
+              "value": "40"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Progress",
+        "file": "form/progress",
+        "docs": "Progress renders a native progress element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Max",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "group.fieldset",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "status.progress",
+            "props": {
+              "max": "100",
+              "value": "40"
+            },
+            "react": {
+              "max": "100",
+              "value": "40"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.dialog",
+    "dir": "dialog",
+    "kind": "component",
+    "docs": "Dialog renders a native dialog root with an optional behavior hook.\nThe data-ui8kit hook defaults off; the registry ships no client JS.",
+    "parts": [
+      {
+        "name": "Dialog",
+        "file": "dialog/dialog",
+        "docs": "Dialog renders a native dialog element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Open",
+            "type": "bool",
+            "docs": "initial open state (static attribute only)"
+          },
+          {
+            "name": "DataUI8Kit",
+            "type": "string",
+            "docs": "opt-in behavior hook; empty emits nothing"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabelledBy",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaDescribedBy",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.full",
+            "props": {
+              "size": "full"
+            },
+            "react": {
+              "size": "full"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
+            "id": "variant.card",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.sheet",
+            "props": {
+              "variant": "sheet"
+            },
+            "react": {
+              "variant": "sheet"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.disclosure",
+    "dir": "disclosure",
+    "kind": "component",
+    "docs": "Disclosure renders native details and summary elements.\nOpen is a static attribute only — no controlled-state contract.",
+    "parts": [
+      {
+        "name": "Disclosure",
+        "file": "disclosure/disclosure",
+        "docs": "Disclosure renders native details.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Open",
+            "type": "bool",
+            "docs": "initial open state (static attribute only)"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": "group name: details of one name open one at a time (native exclusive accordion); leave out for independent items"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo"
+            },
+            "react": {
+              "name": "demo"
+            }
+          },
+          {
+            "id": "variant.card",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.item",
+            "props": {
+              "variant": "item"
+            },
+            "react": {
+              "variant": "item"
+            }
+          },
+          {
+            "id": "state.open",
+            "props": {
+              "open": true
+            },
+            "react": {
+              "open": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Summary",
+        "file": "disclosure/summary",
+        "docs": "Summary renders native summary, followed by a Lucide chevron-down indicator that turns over when the details open (CSS only: group-open:rotate-180 on the Disclosure group).",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "variant.card",
+            "props": {
+              "variant": "card"
+            },
+            "react": {
+              "variant": "card"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.item",
+            "props": {
+              "variant": "item"
+            },
+            "react": {
+              "variant": "item"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.form",
+    "dir": "form",
+    "kind": "component",
+    "docs": "Form primitives: form wrapper, field item, description, and validation message.\nComposes with Label, Input, and other controls.",
+    "parts": [
+      {
+        "name": "Form",
+        "file": "form/form",
+        "docs": "Form renders a vertical grid form container.",
+        "children": true,
+        "props": [
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Method",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Enctype",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Autocomplete",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "NoValidate",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo"
+            },
+            "react": {
+              "name": "demo"
+            }
+          },
+          {
+            "id": "group.fieldset",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "FormItem",
+        "file": "form/form-item",
+        "docs": "FormItem groups a single field with spacing for label and control.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "FormDescription",
+        "file": "form/form-description",
+        "docs": "FormDescription renders muted helper copy below a control.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "FormMessage",
+        "file": "form/form-message",
+        "docs": "FormMessage renders destructive validation feedback.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.grid",
+    "dir": "grid",
+    "kind": "primitive",
+    "docs": "Grid lays out children in a CSS grid with optional column wrappers.",
+    "parts": [
+      {
+        "name": "Grid",
+        "file": "grid/grid",
+        "docs": "Grid renders a display:grid container.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Cols",
+            "type": "string",
+            "docs": "column preset: 1–12 or responsive 1-2, 1-3, 1-4"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "layout.three-col",
+            "props": {
+              "cols": "3"
+            },
+            "react": {
+              "cols": "3"
+            }
+          },
+          {
+            "id": "layout.two-col",
+            "props": {
+              "cols": "2"
+            },
+            "react": {
+              "cols": "2"
+            }
+          }
+        ]
+      },
+      {
+        "name": "GridCol",
+        "file": "grid/grid-col",
+        "docs": "GridCol renders one grid column child.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Span",
+            "type": "int",
+            "docs": "col-span-1..12"
+          },
+          {
+            "name": "Start",
+            "type": "int",
+            "docs": "col-start-1..12"
+          },
+          {
+            "name": "End",
+            "type": "int",
+            "docs": "col-end-1..12"
+          },
+          {
+            "name": "Order",
+            "type": "int",
+            "docs": "order-1..12"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.group",
+    "dir": "group",
+    "kind": "primitive",
+    "docs": "Group arranges children in a horizontal flex row.\nSupports fieldset for related form controls.",
+    "parts": [
+      {
+        "name": "Group",
+        "file": "group/group",
+        "docs": "Group renders a horizontal flex container.",
+        "children": true,
+        "props": [
+          {
+            "name": "Gap",
+            "type": "string",
+            "docs": "sets gap: a Tailwind spacing step (0, 2, 4, 6, 8, 10, 12 = gap-N) or auto"
+          },
+          {
+            "name": "Align",
+            "type": "string",
+            "docs": "sets align"
+          },
+          {
+            "name": "Justify",
+            "type": "string",
+            "docs": "sets justify"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "div, fieldset, or dl. Use fieldset for related form controls."
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "gap.0",
+            "props": {
+              "gap": "0"
+            },
+            "react": {
+              "gap": "0"
+            }
+          },
+          {
+            "id": "gap.2",
+            "props": {
+              "gap": "2"
+            },
+            "react": {
+              "gap": "2"
+            }
+          },
+          {
+            "id": "gap.4",
+            "props": {
+              "gap": "4"
+            },
+            "react": {
+              "gap": "4"
+            }
+          },
+          {
+            "id": "gap.6",
+            "props": {
+              "gap": "6"
+            },
+            "react": {
+              "gap": "6"
+            }
+          },
+          {
+            "id": "gap.8",
+            "props": {
+              "gap": "8"
+            },
+            "react": {
+              "gap": "8"
+            }
+          },
+          {
+            "id": "gap.10",
+            "props": {
+              "gap": "10"
+            },
+            "react": {
+              "gap": "10"
+            }
+          },
+          {
+            "id": "gap.12",
+            "props": {
+              "gap": "12"
+            },
+            "react": {
+              "gap": "12"
+            }
+          },
+          {
+            "id": "gap.auto",
+            "props": {
+              "gap": "auto"
+            },
+            "react": {
+              "gap": "auto"
+            }
+          },
+          {
+            "id": "align.start",
+            "props": {
+              "align": "start"
+            },
+            "react": {
+              "align": "start"
+            }
+          },
+          {
+            "id": "align.center",
+            "props": {
+              "align": "center"
+            },
+            "react": {
+              "align": "center"
+            }
+          },
+          {
+            "id": "align.end",
+            "props": {
+              "align": "end"
+            },
+            "react": {
+              "align": "end"
+            }
+          },
+          {
+            "id": "align.stretch",
+            "props": {
+              "align": "stretch"
+            },
+            "react": {
+              "align": "stretch"
+            }
+          },
+          {
+            "id": "align.baseline",
+            "props": {
+              "align": "baseline"
+            },
+            "react": {
+              "align": "baseline"
+            }
+          },
+          {
+            "id": "justify.start",
+            "props": {
+              "justify": "start"
+            },
+            "react": {
+              "justify": "start"
+            }
+          },
+          {
+            "id": "justify.center",
+            "props": {
+              "justify": "center"
+            },
+            "react": {
+              "justify": "center"
+            }
+          },
+          {
+            "id": "justify.end",
+            "props": {
+              "justify": "end"
+            },
+            "react": {
+              "justify": "end"
+            }
+          },
+          {
+            "id": "justify.between",
+            "props": {
+              "justify": "between"
+            },
+            "react": {
+              "justify": "between"
+            }
+          },
+          {
+            "id": "tag.default",
+            "props": {
+              "tag": "div"
+            },
+            "react": {
+              "tag": "div"
+            }
+          },
+          {
+            "id": "tag.fieldset",
+            "props": {
+              "tag": "fieldset"
+            },
+            "react": {
+              "tag": "fieldset"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.icon",
+    "dir": "icon",
+    "kind": "primitive",
+    "docs": "Icon renders a class-based span, svg use reference, or text fallback.\nDecorative icons are hidden from assistive technology by default.",
+    "parts": [
+      {
+        "name": "Icon",
+        "file": "icon/icon",
+        "docs": "Icon renders a class-based span, svg use, or text fallback host.",
+        "children": true,
+        "props": [
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": "icon name appended to Prefix in class mode"
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": "svg, text, or class (default)"
+          },
+          {
+            "name": "BaseClass",
+            "type": "string",
+            "docs": "base icon font class in class mode"
+          },
+          {
+            "name": "Prefix",
+            "type": "string",
+            "docs": "icon font prefix in class mode"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Href",
+            "type": "string",
+            "docs": "svg use href in svg mode"
+          },
+          {
+            "name": "Title",
+            "type": "string",
+            "docs": "svg title / accessible name"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for non-decorative icons"
+          },
+          {
+            "name": "Decorative",
+            "type": "bool",
+            "docs": "hides the icon from assistive technology"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.md",
+            "props": {
+              "size": "md"
+            },
+            "react": {
+              "size": "md"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
+            "id": "type.class",
+            "props": {
+              "type": "class"
+            },
+            "react": {
+              "type": "class"
+            }
+          },
+          {
+            "id": "type.svg",
+            "props": {
+              "type": "svg"
+            },
+            "react": {
+              "type": "svg"
+            }
+          },
+          {
+            "id": "type.text",
+            "props": {
+              "type": "text"
+            },
+            "react": {
+              "type": "text"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.iconbadge",
+    "dir": "iconbadge",
+    "kind": "component",
+    "docs": "IconBadge renders a small icon surface for nav rows, cards, and status blocks.\nPass the letter, glyph, or Icon node as children.",
+    "parts": [
+      {
+        "name": "IconBadge",
+        "file": "iconbadge/icon-badge",
+        "docs": "IconBadge renders children as the badge content.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.primary",
+            "props": {
+              "variant": "primary"
+            },
+            "react": {
+              "variant": "primary"
+            }
+          },
+          {
+            "id": "variant.accent",
+            "props": {
+              "variant": "accent"
+            },
+            "react": {
+              "variant": "accent"
+            }
+          },
+          {
+            "id": "variant.secondary",
+            "props": {
+              "variant": "secondary"
+            },
+            "react": {
+              "variant": "secondary"
+            }
+          },
+          {
+            "id": "variant.outline",
+            "props": {
+              "variant": "outline"
+            },
+            "react": {
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "variant.destructive",
+            "props": {
+              "variant": "destructive"
+            },
+            "react": {
+              "variant": "destructive"
+            }
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.image",
+    "dir": "image",
+    "kind": "primitive",
+    "docs": "Image renders accessible img, picture, and source primitives.\nUse Decorative for purely visual images so alt stays empty.",
+    "parts": [
+      {
+        "name": "Image",
+        "file": "image/image",
+        "docs": "Image renders an accessible img element.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Src",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "SrcSet",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Sizes",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Alt",
+            "type": "string",
+            "docs": "alternative text; ignored when Decorative"
+          },
+          {
+            "name": "Width",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Height",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Fit",
+            "type": "string",
+            "docs": "object-fit preset"
+          },
+          {
+            "name": "Position",
+            "type": "string",
+            "docs": "object-position preset"
+          },
+          {
+            "name": "Aspect",
+            "type": "string",
+            "docs": "aspect-ratio preset"
+          },
+          {
+            "name": "Loading",
+            "type": "string",
+            "docs": "eager or lazy (default lazy)"
+          },
+          {
+            "name": "Decoding",
+            "type": "string",
+            "docs": "sync, auto, or async (default async)"
+          },
+          {
+            "name": "FetchPriority",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Decorative",
+            "type": "bool",
+            "docs": "marks the image as purely presentational"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "src": "/media/avatar-sarah.jpg",
+              "alt": "Avatar"
+            },
+            "react": {
+              "src": "/media/avatar-sarah.jpg",
+              "alt": "Avatar"
+            }
+          },
+          {
+            "id": "aspect.auto",
+            "props": {
+              "aspect": "auto"
+            },
+            "react": {
+              "aspect": "auto"
+            }
+          },
+          {
+            "id": "aspect.square",
+            "props": {
+              "aspect": "square"
+            },
+            "react": {
+              "aspect": "square"
+            }
+          },
+          {
+            "id": "aspect.video",
+            "props": {
+              "aspect": "video"
+            },
+            "react": {
+              "aspect": "video"
+            }
+          },
+          {
+            "id": "fit.contain",
+            "props": {
+              "fit": "contain"
+            },
+            "react": {
+              "fit": "contain"
+            }
+          },
+          {
+            "id": "fit.cover",
+            "props": {
+              "fit": "cover"
+            },
+            "react": {
+              "fit": "cover"
+            }
+          },
+          {
+            "id": "fit.fill",
+            "props": {
+              "fit": "fill"
+            },
+            "react": {
+              "fit": "fill"
+            }
+          },
+          {
+            "id": "fit.none",
+            "props": {
+              "fit": "none"
+            },
+            "react": {
+              "fit": "none"
+            }
+          },
+          {
+            "id": "fit.scale-down",
+            "props": {
+              "fit": "scale-down"
+            },
+            "react": {
+              "fit": "scale-down"
+            }
+          },
+          {
+            "id": "position.bottom",
+            "props": {
+              "position": "bottom"
+            },
+            "react": {
+              "position": "bottom"
+            }
+          },
+          {
+            "id": "position.center",
+            "props": {
+              "position": "center"
+            },
+            "react": {
+              "position": "center"
+            }
+          },
+          {
+            "id": "position.left",
+            "props": {
+              "position": "left"
+            },
+            "react": {
+              "position": "left"
+            }
+          },
+          {
+            "id": "position.left-bottom",
+            "props": {
+              "position": "left-bottom"
+            },
+            "react": {
+              "position": "left-bottom"
+            }
+          },
+          {
+            "id": "position.left-top",
+            "props": {
+              "position": "left-top"
+            },
+            "react": {
+              "position": "left-top"
+            }
+          },
+          {
+            "id": "position.right",
+            "props": {
+              "position": "right"
+            },
+            "react": {
+              "position": "right"
+            }
+          },
+          {
+            "id": "position.right-bottom",
+            "props": {
+              "position": "right-bottom"
+            },
+            "react": {
+              "position": "right-bottom"
+            }
+          },
+          {
+            "id": "position.right-top",
+            "props": {
+              "position": "right-top"
+            },
+            "react": {
+              "position": "right-top"
+            }
+          },
+          {
+            "id": "position.top",
+            "props": {
+              "position": "top"
+            },
+            "react": {
+              "position": "top"
+            }
+          },
+          {
+            "id": "size.auto",
+            "props": {
+              "size": "auto"
+            },
+            "react": {
+              "size": "auto"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.full",
+            "props": {
+              "size": "full"
+            },
+            "react": {
+              "size": "full"
+            }
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.md",
+            "props": {
+              "size": "md"
+            },
+            "react": {
+              "size": "md"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.logo",
+            "props": {
+              "variant": "logo"
+            },
+            "react": {
+              "variant": "logo"
+            }
+          },
+          {
+            "id": "variant.avatar",
+            "props": {
+              "variant": "avatar"
+            },
+            "react": {
+              "variant": "avatar"
+            }
+          },
+          {
+            "id": "variant.rounded",
+            "props": {
+              "variant": "rounded"
+            },
+            "react": {
+              "variant": "rounded"
+            }
+          },
+          {
+            "id": "variant.thumbnail",
+            "props": {
+              "variant": "thumbnail"
+            },
+            "react": {
+              "variant": "thumbnail"
+            }
+          },
+          {
+            "id": "layout.picture",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "Picture",
+        "file": "image/picture",
+        "docs": "Picture renders a responsive image wrapper.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "Source",
+        "file": "image/source",
+        "docs": "Source renders a source candidate for picture, video, or audio.",
+        "children": false,
+        "props": [
+          {
+            "name": "SrcSet",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Src",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Media",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Sizes",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "src": "/media/avatar-sarah.jpg"
+            },
+            "react": {
+              "src": "/media/avatar-sarah.jpg"
+            }
+          },
+          {
+            "id": "layout.picture",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.inline",
+    "dir": "inline",
+    "kind": "primitive",
+    "docs": "Inline renders inline copy as a span. Use Text for paragraph blocks and\nTitle (as 1–6) for headings.",
+    "parts": [
+      {
+        "name": "Inline",
+        "file": "inline/inline",
+        "docs": "Inline renders a span element with inline copy classes.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.input",
+    "dir": "input",
+    "kind": "component",
+    "docs": "Input is a single-line native text field.\nSupports types, validation attrs, and wireframe variant/size classes.",
+    "parts": [
+      {
+        "name": "Input",
+        "file": "input/input",
+        "docs": "Input renders a styled single-line form control.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": "input type; defaults to text"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Placeholder",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Autocomplete",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Min",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Max",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.outline",
+            "props": {
+              "variant": "outline"
+            },
+            "react": {
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "name": "locked",
+              "value": "Read only"
+            },
+            "react": {
+              "disabled": true,
+              "name": "locked",
+              "value": "Read only"
+            }
+          },
+          {
+            "id": "state.required",
+            "props": {
+              "name": "name",
+              "placeholder": "Required field",
+              "required": true
+            },
+            "react": {
+              "name": "name",
+              "placeholder": "Required field",
+              "required": true
+            }
+          },
+          {
+            "id": "type.email",
+            "props": {
+              "id": "demo-email",
+              "name": "email",
+              "type": "email"
+            },
+            "react": {
+              "id": "demo-email",
+              "name": "email",
+              "type": "email"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.label",
+    "dir": "label",
+    "kind": "primitive",
+    "docs": "Label associates visible text with a form control via the for attribute.",
+    "parts": [
+      {
+        "name": "Label",
+        "file": "label/label",
+        "docs": "Label renders accessible text linked to a control.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "HTMLFor",
+            "type": "string",
+            "docs": "id of the labeled control"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "layout.with-control",
+            "props": {
+              "for": "demo-email"
+            },
+            "react": {
+              "htmlFor": "demo-email"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.linebreak",
+    "dir": "linebreak",
+    "kind": "primitive",
+    "docs": "Break renders br or wbr for controlled inline wrapping.",
+    "parts": [
+      {
+        "name": "Break",
+        "file": "linebreak/break",
+        "docs": "Break renders br by default, or wbr when Type is wbr/word.",
+        "children": false,
+        "props": [
+          {
+            "name": "Type",
+            "type": "string",
+            "docs": "br (default) or wbr/word"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "type.br",
+            "props": {
+              "type": "br"
+            },
+            "react": {
+              "type": "br"
+            }
+          },
+          {
+            "id": "type.wbr",
+            "props": {
+              "type": "wbr"
+            },
+            "react": {
+              "type": "wbr"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.link-plain",
+    "dir": "link-plain",
+    "kind": "component",
+    "docs": "LinkPlain is a bare anchor: no styling beyond Class.",
+    "parts": [
+      {
+        "name": "LinkPlain",
+        "file": "link-plain/link-plain",
+        "docs": "LinkPlain is a bare anchor: no styling beyond Class.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Href",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "docs": "explicit target; External implies _blank"
+          },
+          {
+            "name": "Rel",
+            "type": "string",
+            "docs": "explicit rel; external links default to noopener noreferrer"
+          },
+          {
+            "name": "Download",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "External",
+            "type": "bool",
+            "docs": "opens in a new tab with safe rel defaults"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": "visually and semantically disables the link"
+          },
+          {
+            "name": "AriaCurrent",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "default",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.link",
+    "dir": "link",
+    "kind": "primitive",
+    "docs": "Link renders a semantic anchor for navigation and prose.\nUse Button for actions; use Link for destinations.",
+    "parts": [
+      {
+        "name": "Link",
+        "file": "link/link",
+        "docs": "Link renders a semantic anchor element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Href",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "docs": "explicit target; External implies _blank"
+          },
+          {
+            "name": "Rel",
+            "type": "string",
+            "docs": "explicit rel; external links default to noopener noreferrer"
+          },
+          {
+            "name": "Download",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "External",
+            "type": "bool",
+            "docs": "opens in a new tab with safe rel defaults"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": "visually and semantically disables the link"
+          },
+          {
+            "name": "AriaCurrent",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "href": "#",
+              "aria-label": "Example"
+            },
+            "react": {
+              "href": "#",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.md",
+            "props": {
+              "size": "md"
+            },
+            "react": {
+              "size": "md"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.block",
+            "props": {
+              "variant": "block"
+            },
+            "react": {
+              "variant": "block"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.external",
+            "props": {
+              "variant": "external"
+            },
+            "react": {
+              "variant": "external"
+            }
+          },
+          {
+            "id": "variant.muted",
+            "props": {
+              "variant": "muted"
+            },
+            "react": {
+              "variant": "muted"
+            }
+          },
+          {
+            "id": "variant.nav",
+            "props": {
+              "variant": "nav"
+            },
+            "react": {
+              "variant": "nav"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.list",
+    "dir": "list",
+    "kind": "primitive",
+    "docs": "List renders semantic ul, ol, dl, or menu lists with ListItem children.",
+    "parts": [
+      {
+        "name": "List",
+        "file": "list/list",
+        "docs": "List renders a list container (ul, ol, dl, or menu).",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "ul, ol, dl, or menu"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "tag.dl",
+            "props": {
+              "tag": "dl"
+            },
+            "react": {
+              "tag": "dl"
+            }
+          },
+          {
+            "id": "tag.ol",
+            "props": {
+              "tag": "ol"
+            },
+            "react": {
+              "tag": "ol"
+            }
+          },
+          {
+            "id": "tag.ul",
+            "props": {
+              "tag": "ul"
+            },
+            "react": {
+              "tag": "ul"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ListItem",
+        "file": "list/list-item",
+        "docs": "ListItem renders one li with optional value attribute.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "li, dt, or dd; defaults to li"
+          },
+          {
+            "name": "Value",
+            "type": "int",
+            "docs": "optional li value for ordered contexts"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "tag.dl",
+            "props": {
+              "tag": "dl"
+            },
+            "react": {
+              "tag": "dl"
+            }
+          },
+          {
+            "id": "tag.ol",
+            "props": {
+              "tag": "ol"
+            },
+            "react": {
+              "tag": "ol"
+            }
+          },
+          {
+            "id": "tag.ul",
+            "props": {
+              "tag": "ul"
+            },
+            "react": {
+              "tag": "ul"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.lucide-icon",
+    "dir": "lucide-icon",
+    "kind": "primitive",
+    "docs": "LucideIcon renders a Lucide glyph (ISC license) by kebab-case name from the generated registry specs/assets/lucide-icons.json. Decorative (aria-hidden) unless a Label is given.",
+    "parts": [
+      {
+        "name": "LucideIcon",
+        "file": "lucide-icon/lucide-icon",
+        "docs": "LucideIcon renders an svg glyph by name.",
+        "children": false,
+        "props": [
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": "kebab-case Lucide name; an unknown name draws a circle"
+          },
+          {
+            "name": "Size",
+            "type": "int",
+            "docs": "width and height in px, 16 by default"
+          },
+          {
+            "name": "StrokeWidth",
+            "type": "int",
+            "docs": "stroke width, 2 by default"
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "docs": "accessible name; without it the icon is decorative"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo"
+            },
+            "react": {
+              "name": "demo"
+            }
+          },
+          {
+            "id": "check",
+            "props": {
+              "name": "check",
+              "size": 24
+            },
+            "react": {
+              "name": "check",
+              "size": 24
+            }
+          },
+          {
+            "id": "arrow-right",
+            "props": {
+              "name": "arrow-right",
+              "size": 24
+            },
+            "react": {
+              "name": "arrow-right",
+              "size": 24
+            }
+          },
+          {
+            "id": "star",
+            "props": {
+              "name": "star",
+              "size": 24
+            },
+            "react": {
+              "name": "star",
+              "size": 24
+            }
+          },
+          {
+            "id": "bell",
+            "props": {
+              "name": "bell",
+              "size": 24
+            },
+            "react": {
+              "name": "bell",
+              "size": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.radio",
+    "dir": "radio",
+    "kind": "component",
+    "docs": "Radio is a native single-choice control within a named group.",
+    "parts": [
+      {
+        "name": "Radio",
+        "file": "radio/radio",
+        "docs": "Radio renders input[type=radio] with shared Name for grouping.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Checked",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "layout.group",
+            "props": {
+              "name": "plan"
+            },
+            "react": {
+              "name": "plan"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "name": "plan",
+              "value": "pro"
+            },
+            "react": {
+              "disabled": true,
+              "name": "plan",
+              "value": "pro"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.range",
+    "dir": "range",
+    "kind": "component",
+    "docs": "Range renders a styled input[type=range] (single thumb slider). The value is controlled from outside: Value in, an input event out (canary used a bindable prop).",
+    "parts": [
+      {
+        "name": "Range",
+        "file": "range/range",
+        "docs": "Range renders input type=range.",
+        "children": false,
+        "props": [
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": "current value as a string, controlled by the caller"
+          },
+          {
+            "name": "Min",
+            "type": "int",
+            "docs": "lowest value, 0 by default"
+          },
+          {
+            "name": "Max",
+            "type": "int",
+            "docs": "highest value, 100 by default"
+          },
+          {
+            "name": "Step",
+            "type": "int",
+            "docs": "step, 1 by default"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": "disables the slider"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "value.default",
+            "props": {
+              "value": "30",
+              "aria-label": "Volume"
+            },
+            "react": {
+              "value": "30",
+              "aria-label": "Volume"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "aria-label": "Volume"
+            },
+            "react": {
+              "disabled": true,
+              "aria-label": "Volume"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.select",
+    "dir": "select",
+    "kind": "component",
+    "docs": "Select is a native dropdown built from Option items.",
+    "parts": [
+      {
+        "name": "Select",
+        "file": "select/select",
+        "docs": "Select renders option children from the Options list plus manual children.",
+        "children": true,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": "currently selected option value"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Options",
+            "type": "items",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.outline",
+            "props": {
+              "variant": "outline"
+            },
+            "react": {
+              "variant": "outline"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "name": "locked",
+              "options": [
+                {
+                  "Label": "Option A",
+                  "Value": "a"
+                }
+              ]
+            },
+            "react": {
+              "disabled": true,
+              "name": "locked",
+              "options": [
+                {
+                  "Label": "Option A",
+                  "Value": "a"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "SelectOption",
+        "file": "select/select-option",
+        "docs": "SelectOption renders an option for custom Select children.",
+        "children": true,
+        "props": [
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Selected",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true
+            },
+            "react": {
+              "disabled": true
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "value": "us"
+            },
+            "react": {
+              "value": "us"
+            }
+          }
+        ]
+      },
+      {
+        "name": "OptGroup",
+        "file": "select/opt-group",
+        "docs": "OptGroup renders a native optgroup around option children.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true
+            },
+            "react": {
+              "disabled": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.separator",
+    "dir": "separator",
+    "kind": "primitive",
+    "docs": "Separator renders a semantic or decorative hr.",
+    "parts": [
+      {
+        "name": "Separator",
+        "file": "separator/separator",
+        "docs": "Separator renders hr with optional decorative semantics.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Orientation",
+            "type": "string",
+            "docs": "horizontal or vertical"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Decorative",
+            "type": "bool",
+            "docs": "hides the rule from assistive technology"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "orientation.horizontal",
+            "props": {
+              "orientation": "horizontal"
+            },
+            "react": {
+              "orientation": "horizontal"
+            }
+          },
+          {
+            "id": "orientation.vertical",
+            "props": {
+              "orientation": "vertical"
+            },
+            "react": {
+              "orientation": "vertical"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.spaced",
+            "props": {
+              "variant": "spaced"
+            },
+            "react": {
+              "variant": "spaced"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.sheet",
+    "dir": "sheet",
+    "kind": "component",
+    "docs": "Sheet is a side drawer dialog with a trigger (Lucide menu/x) and a close button. Behavior: behaviors/ui8kit.js.",
+    "parts": [
+      {
+        "name": "Sheet",
+        "file": "sheet/sheet",
+        "docs": "Sheet renders the hidden dialog root: overlay + panel (children). ID is required for the trigger's aria-controls.",
+        "children": true,
+        "props": [
+          {
+            "name": "Side",
+            "type": "string",
+            "docs": "left or right"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "dialog id (target of SheetTrigger Controls)"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Menu)"
+          },
+          {
+            "name": "Open",
+            "type": "bool",
+            "docs": "render open (static); default hidden"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": []
+      },
+      {
+        "name": "SheetTrigger",
+        "file": "sheet/sheet-trigger",
+        "docs": "SheetTrigger renders the menu button (aria-expanded, aria-controls, aria-haspopup=dialog) with Lucide menu/x icons.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast, current"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Controls",
+            "type": "string",
+            "docs": "id of the Sheet"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Open menu)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            },
+            "react": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            },
+            "react": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "side.right",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "side.left",
+            "props": {
+              "aria-label": "Navigation"
+            },
+            "react": {
+              "aria-label": "Navigation"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SheetClose",
+        "file": "sheet/sheet-close",
+        "docs": "SheetClose renders the close button (Lucide x) inside the panel.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast, current"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Close menu)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            },
+            "react": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            },
+            "react": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "side.right",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "side.left",
+            "props": {
+              "aria-label": "Navigation"
+            },
+            "react": {
+              "aria-label": "Navigation"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.skeleton",
+    "dir": "skeleton",
+    "kind": "component",
+    "docs": "Skeleton renders a pulsing placeholder box (loading state). It is decorative: aria-hidden; the loading state is announced by the container (aria-busy).",
+    "parts": [
+      {
+        "name": "Skeleton",
+        "file": "skeleton/skeleton",
+        "docs": "Skeleton renders a decorative placeholder.",
+        "children": false,
+        "props": [
+          {
+            "name": "Shape",
+            "type": "string",
+            "docs": "line, block or circle"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "shape.line",
+            "props": {
+              "shape": "line"
+            },
+            "react": {
+              "shape": "line"
+            }
+          },
+          {
+            "id": "shape.block",
+            "props": {
+              "shape": "block"
+            },
+            "react": {
+              "shape": "block"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.stack",
+    "dir": "stack",
+    "kind": "primitive",
+    "docs": "Stack arranges children vertically in a flex column.\nDefault layout primitive for spacing sections and form fields.",
+    "parts": [
+      {
+        "name": "Stack",
+        "file": "stack/stack",
+        "docs": "Stack renders a vertical flex container.",
+        "children": true,
+        "props": [
+          {
+            "name": "Gap",
+            "type": "string",
+            "docs": "sets gap: a Tailwind spacing step (0, 2, 4, 6, 8, 10, 12 = gap-N) or auto"
+          },
+          {
+            "name": "Align",
+            "type": "string",
+            "docs": "sets align"
+          },
+          {
+            "name": "Justify",
+            "type": "string",
+            "docs": "sets justify"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "div, ul, or ol. Use Block for landmarks (aside, section, header, nav)."
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "gap.0",
+            "props": {
+              "gap": "0"
+            },
+            "react": {
+              "gap": "0"
+            }
+          },
+          {
+            "id": "gap.2",
+            "props": {
+              "gap": "2"
+            },
+            "react": {
+              "gap": "2"
+            }
+          },
+          {
+            "id": "gap.4",
+            "props": {
+              "gap": "4"
+            },
+            "react": {
+              "gap": "4"
+            }
+          },
+          {
+            "id": "gap.6",
+            "props": {
+              "gap": "6"
+            },
+            "react": {
+              "gap": "6"
+            }
+          },
+          {
+            "id": "gap.8",
+            "props": {
+              "gap": "8"
+            },
+            "react": {
+              "gap": "8"
+            }
+          },
+          {
+            "id": "gap.10",
+            "props": {
+              "gap": "10"
+            },
+            "react": {
+              "gap": "10"
+            }
+          },
+          {
+            "id": "gap.12",
+            "props": {
+              "gap": "12"
+            },
+            "react": {
+              "gap": "12"
+            }
+          },
+          {
+            "id": "gap.auto",
+            "props": {
+              "gap": "auto"
+            },
+            "react": {
+              "gap": "auto"
+            }
+          },
+          {
+            "id": "align.start",
+            "props": {
+              "align": "start"
+            },
+            "react": {
+              "align": "start"
+            }
+          },
+          {
+            "id": "align.center",
+            "props": {
+              "align": "center"
+            },
+            "react": {
+              "align": "center"
+            }
+          },
+          {
+            "id": "align.end",
+            "props": {
+              "align": "end"
+            },
+            "react": {
+              "align": "end"
+            }
+          },
+          {
+            "id": "align.stretch",
+            "props": {
+              "align": "stretch"
+            },
+            "react": {
+              "align": "stretch"
+            }
+          },
+          {
+            "id": "align.baseline",
+            "props": {
+              "align": "baseline"
+            },
+            "react": {
+              "align": "baseline"
+            }
+          },
+          {
+            "id": "justify.start",
+            "props": {
+              "justify": "start"
+            },
+            "react": {
+              "justify": "start"
+            }
+          },
+          {
+            "id": "justify.center",
+            "props": {
+              "justify": "center"
+            },
+            "react": {
+              "justify": "center"
+            }
+          },
+          {
+            "id": "justify.end",
+            "props": {
+              "justify": "end"
+            },
+            "react": {
+              "justify": "end"
+            }
+          },
+          {
+            "id": "justify.between",
+            "props": {
+              "justify": "between"
+            },
+            "react": {
+              "justify": "between"
+            }
+          },
+          {
+            "id": "tag.default",
+            "props": {
+              "tag": "div"
+            },
+            "react": {
+              "tag": "div"
+            }
+          },
+          {
+            "id": "tag.ul",
+            "props": {
+              "tag": "ul"
+            },
+            "react": {
+              "tag": "ul"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.switch",
+    "dir": "switch",
+    "kind": "component",
+    "docs": "Switch is a toggle control (checkbox with switch ARIA semantics).\nUse for on/off settings; wireframe uses native checkbox styling.",
+    "parts": [
+      {
+        "name": "Switch",
+        "file": "switch/switch",
+        "docs": "Switch renders input[type=checkbox] with switch role attrs.",
+        "children": false,
+        "props": [
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Checked",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "aria-label": "Locked setting",
+              "checked": true,
+              "disabled": true,
+              "name": "locked"
+            },
+            "react": {
+              "aria-label": "Locked setting",
+              "checked": true,
+              "disabled": true,
+              "name": "locked"
+            }
+          },
+          {
+            "id": "state.off",
+            "props": {
+              "aria-label": "Notifications",
+              "id": "notifications",
+              "name": "notifications"
+            },
+            "react": {
+              "aria-label": "Notifications",
+              "id": "notifications",
+              "name": "notifications"
+            }
+          },
+          {
+            "id": "state.on",
+            "props": {
+              "aria-label": "Notifications",
+              "checked": true,
+              "id": "notifications",
+              "name": "notifications"
+            },
+            "react": {
+              "aria-label": "Notifications",
+              "checked": true,
+              "id": "notifications",
+              "name": "notifications"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.table",
+    "dir": "table",
+    "kind": "component",
+    "docs": "Table composes semantic table, caption, sections, rows, and cells.\nSupports scope, colspan, and headers attrs on head cells.",
+    "parts": [
+      {
+        "name": "Table",
+        "file": "table/table",
+        "docs": "Table renders the root table element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableCaption",
+        "file": "table/table-caption",
+        "docs": "TableCaption renders the table caption.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableHead",
+        "file": "table/table-head",
+        "docs": "TableHead renders the thead section.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableBody",
+        "file": "table/table-body",
+        "docs": "TableBody renders the tbody section.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableFoot",
+        "file": "table/table-foot",
+        "docs": "TableFoot renders the tfoot section.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableRow",
+        "file": "table/table-row",
+        "docs": "TableRow renders one tr row.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableHeadCell",
+        "file": "table/table-head-cell",
+        "docs": "TableHeadCell renders th with optional scope and abbr.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "docs": "th scope: col, row, colgroup, rowgroup"
+          },
+          {
+            "name": "ColSpan",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "RowSpan",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "Headers",
+            "type": "string",
+            "docs": "ids of related header cells"
+          },
+          {
+            "name": "Abbr",
+            "type": "string",
+            "docs": "abbreviated header text for th"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableCell",
+        "file": "table/table-cell",
+        "docs": "TableCell renders td with colspan and rowspan.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "docs": "th scope: col, row, colgroup, rowgroup"
+          },
+          {
+            "name": "ColSpan",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "RowSpan",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "Headers",
+            "type": "string",
+            "docs": "ids of related header cells"
+          },
+          {
+            "name": "Abbr",
+            "type": "string",
+            "docs": "abbreviated header text for th"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableColGroup",
+        "file": "table/table-col-group",
+        "docs": "TableColGroup renders colgroup with optional span.",
+        "children": true,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Span",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      },
+      {
+        "name": "TableCol",
+        "file": "table/table-col",
+        "docs": "TableCol renders a single col definition.",
+        "children": false,
+        "props": [
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Span",
+            "type": "int",
+            "docs": ""
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.text",
+    "dir": "text",
+    "kind": "primitive",
+    "docs": "Text renders body copy: a paragraph by default; Tag picks another text element (blockquote, figcaption, address, pre, or an\ninline element). Title (as 1–6) is for headings.",
+    "parts": [
+      {
+        "name": "Text",
+        "file": "text/text",
+        "docs": "Text renders a p element with body copy classes, or the block or inline text element of `Tag`.",
+        "children": true,
+        "props": [
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets size"
+          },
+          {
+            "name": "Weight",
+            "type": "string",
+            "docs": "sets weight"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "docs": "p (default), blockquote, figcaption, address, pre, or an inline element (span, strong, em, ...)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.base",
+            "props": {
+              "size": "base"
+            },
+            "react": {
+              "size": "base"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
+            "id": "size.2xl",
+            "props": {
+              "size": "2xl"
+            },
+            "react": {
+              "size": "2xl"
+            }
+          },
+          {
+            "id": "size.3xl",
+            "props": {
+              "size": "3xl"
+            },
+            "react": {
+              "size": "3xl"
+            }
+          },
+          {
+            "id": "size.4xl",
+            "props": {
+              "size": "4xl"
+            },
+            "react": {
+              "size": "4xl"
+            }
+          },
+          {
+            "id": "size.5xl",
+            "props": {
+              "size": "5xl"
+            },
+            "react": {
+              "size": "5xl"
+            }
+          },
+          {
+            "id": "size.inherit",
+            "props": {
+              "size": "inherit"
+            },
+            "react": {
+              "size": "inherit"
+            }
+          },
+          {
+            "id": "weight.regular",
+            "props": {
+              "weight": "regular"
+            },
+            "react": {
+              "weight": "regular"
+            }
+          },
+          {
+            "id": "weight.medium",
+            "props": {
+              "weight": "medium"
+            },
+            "react": {
+              "weight": "medium"
+            }
+          },
+          {
+            "id": "weight.semibold",
+            "props": {
+              "weight": "semibold"
+            },
+            "react": {
+              "weight": "semibold"
+            }
+          },
+          {
+            "id": "weight.bold",
+            "props": {
+              "weight": "bold"
+            },
+            "react": {
+              "weight": "bold"
+            }
+          },
+          {
+            "id": "weight.inherit",
+            "props": {
+              "weight": "inherit"
+            },
+            "react": {
+              "weight": "inherit"
+            }
+          },
+          {
+            "id": "tag.blockquote",
+            "props": {
+              "tag": "blockquote"
+            },
+            "react": {
+              "tag": "blockquote"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.textarea",
+    "dir": "textarea",
+    "kind": "component",
+    "docs": "Textarea is a multi-line native text field with row sizing.",
+    "parts": [
+      {
+        "name": "Textarea",
+        "file": "textarea/textarea",
+        "docs": "Textarea renders a styled multi-line form control.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "sets appearance preset"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets density preset"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "docs": "initial textarea content"
+          },
+          {
+            "name": "Placeholder",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "Rows",
+            "type": "int",
+            "docs": "visible line count; defaults to 4 when zero"
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "Required",
+            "type": "bool",
+            "docs": ""
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": "element id"
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "docs": "ARIA role override"
+          },
+          {
+            "name": "TabIndex",
+            "type": "string",
+            "docs": "tab order override"
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name for unlabeled controls"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "name": "demo",
+              "aria-label": "Example"
+            },
+            "react": {
+              "name": "demo",
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "rows.custom",
+            "props": {
+              "name": "bio",
+              "placeholder": "Bio",
+              "rows": 6
+            },
+            "react": {
+              "name": "bio",
+              "placeholder": "Bio",
+              "rows": 6
+            }
+          },
+          {
+            "id": "state.disabled",
+            "props": {
+              "disabled": true,
+              "name": "locked",
+              "value": "Fixed text"
+            },
+            "react": {
+              "disabled": true,
+              "name": "locked",
+              "value": "Fixed text"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.themetoggle",
+    "dir": "themetoggle",
+    "kind": "component",
+    "docs": "ThemeToggle switches between light and dark color schemes (button with aria-pressed). Behavior: data-ui8kit=\"theme-toggle\" in behaviors/ui8kit.js.",
+    "parts": [
+      {
+        "name": "ThemeToggle",
+        "file": "themetoggle/theme-toggle",
+        "docs": "ThemeToggle renders a button with Lucide sun/moon icons; aria-pressed reflects dark mode.",
+        "children": false,
+        "props": [
+          {
+            "name": "Variant",
+            "type": "string",
+            "docs": "default, ghost, contrast (on primary surfaces), current (inherits text color)"
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sm, default, lg"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "ID",
+            "type": "string",
+            "docs": ""
+          },
+          {
+            "name": "AriaLabel",
+            "type": "string",
+            "docs": "accessible name (default: Dark mode)"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {
+              "aria-label": "Example"
+            },
+            "react": {
+              "aria-label": "Example"
+            }
+          },
+          {
+            "id": "variant.default",
+            "props": {
+              "variant": "default"
+            },
+            "react": {
+              "variant": "default"
+            }
+          },
+          {
+            "id": "variant.ghost",
+            "props": {
+              "variant": "ghost"
+            },
+            "react": {
+              "variant": "ghost"
+            }
+          },
+          {
+            "id": "variant.contrast",
+            "props": {
+              "variant": "contrast"
+            },
+            "react": {
+              "variant": "contrast"
+            }
+          },
+          {
+            "id": "variant.current",
+            "props": {
+              "variant": "current"
+            },
+            "react": {
+              "variant": "current"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.default",
+            "props": {
+              "size": "default"
+            },
+            "react": {
+              "size": "default"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "label.custom",
+            "props": {
+              "aria-label": "Toggle theme",
+              "id": "theme"
+            },
+            "react": {
+              "aria-label": "Toggle theme",
+              "id": "theme"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ui.title",
+    "dir": "title",
+    "kind": "primitive",
+    "docs": "Title renders a heading (h1–h6) from As (1–6). Defaults to h2 when As is 0\nor out of range.",
+    "parts": [
+      {
+        "name": "Title",
+        "file": "title/title",
+        "docs": "Title renders the resolved heading element.",
+        "children": true,
+        "props": [
+          {
+            "name": "Size",
+            "type": "string",
+            "docs": "sets size"
+          },
+          {
+            "name": "Weight",
+            "type": "string",
+            "docs": "sets weight"
+          },
+          {
+            "name": "Class",
+            "type": "string",
+            "docs": "adds Tailwind utilities"
+          },
+          {
+            "name": "As",
+            "type": "int",
+            "docs": "maps to h1–h6; 0 and 2 default to h2"
+          },
+          {
+            "name": "Attrs",
+            "type": "attrs",
+            "docs": ""
+          },
+          {
+            "name": "Children",
+            "type": "children",
+            "docs": ""
+          }
+        ],
+        "cases": [
+          {
+            "id": "defaults",
+            "props": {},
+            "react": {}
+          },
+          {
+            "id": "size.xs",
+            "props": {
+              "size": "xs"
+            },
+            "react": {
+              "size": "xs"
+            }
+          },
+          {
+            "id": "size.sm",
+            "props": {
+              "size": "sm"
+            },
+            "react": {
+              "size": "sm"
+            }
+          },
+          {
+            "id": "size.base",
+            "props": {
+              "size": "base"
+            },
+            "react": {
+              "size": "base"
+            }
+          },
+          {
+            "id": "size.lg",
+            "props": {
+              "size": "lg"
+            },
+            "react": {
+              "size": "lg"
+            }
+          },
+          {
+            "id": "size.xl",
+            "props": {
+              "size": "xl"
+            },
+            "react": {
+              "size": "xl"
+            }
+          },
+          {
+            "id": "size.2xl",
+            "props": {
+              "size": "2xl"
+            },
+            "react": {
+              "size": "2xl"
+            }
+          },
+          {
+            "id": "size.3xl",
+            "props": {
+              "size": "3xl"
+            },
+            "react": {
+              "size": "3xl"
+            }
+          },
+          {
+            "id": "size.4xl",
+            "props": {
+              "size": "4xl"
+            },
+            "react": {
+              "size": "4xl"
+            }
+          },
+          {
+            "id": "size.5xl",
+            "props": {
+              "size": "5xl"
+            },
+            "react": {
+              "size": "5xl"
+            }
+          },
+          {
+            "id": "size.inherit",
+            "props": {
+              "size": "inherit"
+            },
+            "react": {
+              "size": "inherit"
+            }
+          },
+          {
+            "id": "weight.regular",
+            "props": {
+              "weight": "regular"
+            },
+            "react": {
+              "weight": "regular"
+            }
+          },
+          {
+            "id": "weight.medium",
+            "props": {
+              "weight": "medium"
+            },
+            "react": {
+              "weight": "medium"
+            }
+          },
+          {
+            "id": "weight.semibold",
+            "props": {
+              "weight": "semibold"
+            },
+            "react": {
+              "weight": "semibold"
+            }
+          },
+          {
+            "id": "weight.bold",
+            "props": {
+              "weight": "bold"
+            },
+            "react": {
+              "weight": "bold"
+            }
+          },
+          {
+            "id": "weight.inherit",
+            "props": {
+              "weight": "inherit"
+            },
+            "react": {
+              "weight": "inherit"
+            }
+          },
+          {
+            "id": "as.h1",
+            "props": {
+              "as": 1
+            },
+            "react": {
+              "as": 1
+            }
+          },
+          {
+            "id": "as.h2",
+            "props": {
+              "as": 2
+            },
+            "react": {
+              "as": 2
+            }
+          },
+          {
+            "id": "as.h3",
+            "props": {
+              "as": 3
+            },
+            "react": {
+              "as": 3
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

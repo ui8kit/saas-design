@@ -23,7 +23,7 @@ Read first: `.cursor/rules/pipeline.mdc` (order), `grid-8-4.mdc`, `tokens.mdc`, 
 ## Gotchas
 
 - Tailwind runs with `source(none)`: a utility written in markup is not generated. Put it in an `@apply`.
-- `templ` must be v0.3.1001 (`go run github.com/a-h/templ/cmd/templ@v0.3.1001 …`), not the one on PATH.
+- `templ` must be v0.3.1070 (`go run github.com/a-h/templ/cmd/templ@v0.3.1070 …`), not the one on PATH.
 - Generated Go is gofmt'ed after writing; the blocks `--check` compares gofmt'ed output.
 - apps/design resolves `@saas-design/*` via Vite aliases (no workspace linking needed); media is copied into `static/` at build time (git-ignored).
 - Block previews contain in-page anchors (`#why`, `#pricing`); the design app prerender ignores missing ids on purpose.

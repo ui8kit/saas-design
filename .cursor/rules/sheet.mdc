@@ -6,8 +6,8 @@ alwaysApply: false
 
 # Sheet and shared behaviours
 
-- Local bricks live in `packages/ui/bricks/<name>/` (`*.def.ts` IR via `@ui8kit/codegen/bricks/_dsl`, `*.variants.json`, `data.json` showcase cases) and are appended to the upstream registry in `packages/ui/scripts/registry.ts`. Both runtimes are generated; parity must stay 0 mismatches.
-- Lucide icons in bricks come from `bricks/_lucide.ts` (parsed lucide-static SVG) — no hand-copied paths.
+- Sheet, SheetTrigger, SheetClose and ThemeToggle are upstream codegen 2.0 specs (`xgen/specs/ui/sheet.json`, `themetoggle.json`). There are no local bricks. They are generated for templ, Svelte and React like every primitive; parity must stay 0 mismatches.
+- Their icons are part of the spec (Lucide paths in the spec); block icons come from `packages/icons` (lucide-static + brand marks). No hand-copied paths.
 - `Sheet` = `div role="dialog" aria-modal="true" aria-label` + `hidden` until open, overlay `data-ui8kit="sheet-overlay"`, panel slot. `SheetTrigger` has `aria-controls=<sheet id>`, `aria-expanded`, `aria-haspopup="dialog"`, menu/x icons switched by CSS on `[aria-expanded="true"]`. `SheetClose` closes the nearest sheet.
 - Behaviour only in `packages/ui/behaviors/ui8kit.js` (no framework, event delegation on `data-ui8kit`): open portals the sheet to `<body>`, focuses the first focusable, traps Tab/Shift+Tab, Esc + overlay + SheetClose + link click close, focus returns to the trigger, `ui-sheet-locked` on `<html>` locks scroll, resize past the breakpoint closes. Never add per-app copies of this logic, never inline handlers.
 - Site loads it as `/assets/ui8kit.js` (defer); design app imports it in `+layout.svelte` `onMount`.

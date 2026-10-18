@@ -1,0 +1,7 @@
+{
+  "$comment": "Habitus: headings inherit the colour and the weight of their band and block (inverse hero, dark plan card, display titles); codegen 2.0 sets text-foreground and font-semibold on Title. Base and default weight are overridden; `inherit` is the same empty value Text has upstream.",
+  "id": "ui.title",
+  "base": "",
+  "defaults": { "weight": "inherit" },
+  "byKey": { "weight": { "inherit": "" } }
+}

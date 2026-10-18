@@ -1,8 +1,10 @@
 /*
  * @saas-design/adapter — semantic class layer.
  * Requires Tailwind v4 with packages/tokens/theme.css imported first.
- * Markup (templ + svelte) only carries ui-* classes; every utility lives in an @apply below.
+ * Markup (templ, svelte, react) only carries ui-* classes; every utility lives in an @apply below.
+ * kit.generated.css is the codegen 2.0 kit layer (glyph @utility rules the recipes use, focus ring, summary indicator).
  */
+@import "./kit.generated.css";
 @import "./base.css";
 @import "./primitives.generated.css";
 @import "./blocks.generated.css";

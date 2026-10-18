@@ -71,15 +71,14 @@ The semantic class layer. Markup in every runtime carries only `ui-*` classes. T
 ### 4. UI primitives (`packages/ui`)
 
 - **Source.**
-  - The [@ui8kit/codegen](https://github.com/ui8kit/codegen) brick registry, pinned as `github:ui8kit/codegen#972b492`.
+  - The [@ui8kit/codegen](https://github.com/ui8kit/codegen) brick registry, codegen 2.0 (xgen), pinned as `github:ui8kit/codegen#2309848` and linked by `tools/xgen-link.ts`.
   - Token-only recipes in `packages/ui/recipes/*.variants.json` replace the upstream recipes. The keys must match upstream; the generator fails otherwise.
-  - Local bricks in `packages/ui/bricks/` (ThemeToggle, Sheet, SheetTrigger, SheetClose), merged in `packages/ui/scripts/registry.ts`.
 - **Generator** (`bun run generate`, in `packages/ui`):
   - rewrites every class string a brick can emit into a semantic `ui-*` class;
   - writes the utilities into `primitives.generated.css`;
   - calls codegen's `generateFiles(bricks, { runtimes: ["templ"] })` and `["svelte"]`;
   - writes `packages/ui/templ` (Go module `github.com/ui8kit/saas-design/packages/ui/templ`) and `packages/ui/svelte`.
-- **templ step.** `*_templ.go` files are produced by `templ generate` (v0.3.1001). The check fails if they drift.
+- **templ step.** `*_templ.go` files are produced by `templ generate` (v0.3.1070). The check fails if they drift.
 - **Behaviours.** `packages/ui/behaviors/ui8kit.js` holds framework-free, delegated `data-ui8kit` hooks for the theme toggle and the sheet. `theme-init.js` is the head script that prevents a flash of the wrong theme.
 
 ### 5. Blocks (`packages/blocks`)

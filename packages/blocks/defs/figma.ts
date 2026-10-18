@@ -194,7 +194,8 @@ export const faqTiles = block({
                 $("item.question")),
               c("Text", { ui: "answer", css: "pt-4 pl-16 text-base leading-6" }, $("item.answer"))))),
         c("Link", { ui: "more", href: $("more.href"), css: "self-end text-lg text-foreground hover:underline" }, $("more.label"))))),
-  extraCss: `.ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }
+  extraCss: `.ui-faq-tiles-question > [data-slot="summary-indicator"] { @apply hidden; }
+  .ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }
 .ui-faq-tiles-question::-webkit-details-marker { @apply hidden; }`,
 });
 
