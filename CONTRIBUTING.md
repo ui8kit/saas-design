@@ -41,4 +41,4 @@ Add one file per issue to [.project/backlog/](.project/backlog/README.md), named
 
 ## License
 
-There is no LICENSE file yet (see [README → License](README.md#license)). Until one is added, ask the maintainers before reusing the code.
+Code contributions are accepted under the [MIT License](LICENSE). Design-derived assets (`fixtures/figma`, `fixtures/media`, `docs/assets`) are CC BY 4.0 and require attribution. See [LICENSE-DESIGN.md](LICENSE-DESIGN.md).

@@ -23,6 +23,7 @@ Behaviour: `bun run test:behaviors` → 18/18 ok (sheet focus trap, Esc, overlay
 - **.cursor** — rules: pipeline, grid-8-4, tokens, adapter-no-inline-styles, blocks-retag, fixtures-contract, git-workflow, dark-mode, sheet. Skill: figma-to-site.
 - **.manual** — 00–09 (09 = dark mode + behaviours).
 - **.project/backlog** — 23 feedback files.
+- **License** — code MIT (`LICENSE`), design + design-derived assets CC BY 4.0 (`LICENSE-DESIGN.md`).
 - **English docs** — `README.md` (pipeline diagram, tools, structure, quickstart, screenshots in `docs/assets/`, design credit, license note), `AGENTS.md`, `CONTRIBUTING.md`, `docs/` (architecture, replicate-with-new-figma, add-a-runtime, checks, deploy-vercel, troubleshooting). Relative links + anchors are checked in `bun run check` (`tools/check-links.ts`).
 - **Screenshots** in `/workspace/shots-saas/`:
   - Figma vs site: site-home.png, sections/, compare/ (incl. hero.png), report.json.
@@ -31,7 +32,6 @@ Behaviour: `bun run test:behaviors` → 18/18 ok (sheet focus trap, Esc, overlay
 
 ## Partial / open
 - **Vercel** — configs build locally (dry run of install + build commands verified 2026-10-18); no real deploy has been verified.
-- **License** — no LICENSE file; needs a maintainer decision.
 - **Other runtimes** — codegen emits React/Vue/Solid/Latte/Twig primitives from this registry (verified file generation only); no parity, no block emitter, no app for them yet (`docs/add-a-runtime.md`).
 - **New Figma file** — `tools/content.ts`, `tokens.ts`, `views.ts`, `shots.ts`, `figma-render.ts` are tied to frame 1-10 (`docs/replicate-with-new-figma.md`).
 - **Nav breakpoint** — decided (user, 2026-10-18): the burger stays below `lg` (1024px) (backlog `site-navbar-collapse-lg-not-md.md`).

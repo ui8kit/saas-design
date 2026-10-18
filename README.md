@@ -163,10 +163,14 @@ See [.project/STATUS.md](.project/STATUS.md). In short:
 - Dark mode and mobile Sheet navigation work in both apps.
 - A real Vercel deploy is **not verified yet**.
 
-## Design credit
+## Design credit and license
 
 The source design is **[Habitus — Habit Tracker App Landing Page](https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page)** on Figma Community, by its original author. All visual design credit goes to them; this repo only re-implements it to test the pipeline. The `.fig` file is not redistributed here.
 
+The design and design-derived assets are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. That covers `fixtures/figma` images/exports, `fixtures/media` artwork, design copy in fixtures, and the `docs/assets` screenshots. The attribution requirements and the full list are in [LICENSE-DESIGN.md](LICENSE-DESIGN.md).
+
 ## License
 
-There is **no LICENSE file** in this repository yet, so no license is granted for the code. No decision has been made; one has to be added by the maintainers. The upstream tools are MIT-licensed according to their npm metadata. The Figma design is subject to its own Figma Community license.
+- **Code:** [MIT](LICENSE), © 2026 Smarty Cab.
+- **Design and design-derived assets:** CC BY 4.0. See [Design credit and license](#design-credit-and-license) and [LICENSE-DESIGN.md](LICENSE-DESIGN.md).
+- The upstream tools (fig2design, @ui8kit/contract, ui8kit/codegen, ui8px, brand-os) are MIT-licensed according to their npm metadata.
