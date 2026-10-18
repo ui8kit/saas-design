@@ -96,7 +96,7 @@
     ],
     "ui-app-gallery": [
       "overflow-x-clip",
-      "pt-24"
+      "pt-28"
     ],
     "ui-app-gallery-container": [
       "mx-auto",
@@ -704,7 +704,7 @@
       "font-bold"
     ],
     "ui-cta-split": [
-      "pt-24"
+      "pt-28"
     ],
     "ui-cta-split-aside": [
       "flex",
@@ -927,7 +927,7 @@
       "font-medium"
     ],
     "ui-faq-tiles": [
-      "pt-24"
+      "pt-28"
     ],
     "ui-faq-tiles-answer": [
       "pt-4",
@@ -1015,7 +1015,7 @@
       "font-bold"
     ],
     "ui-feature-cards": [
-      "pt-24"
+      "pt-28"
     ],
     "ui-feature-cards-card": [
       "gap-6"
@@ -2171,7 +2171,7 @@
       "font-bold"
     ],
     "ui-pricing-two-plans": [
-      "pt-24"
+      "pt-28"
     ],
     "ui-pricing-two-plans-container": [
       "mx-auto",
@@ -2757,7 +2757,7 @@
       "text-center"
     ],
     "ui-testimonial-cards": [
-      "pt-24"
+      "pt-28"
     ],
     "ui-testimonial-cards-author": [
       "gap-4"

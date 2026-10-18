@@ -245,7 +245,7 @@
     "ring-secondary"
   ],
   "ui-feature-cards": [
-    "pt-24"
+    "pt-28"
   ],
   "ui-feature-cards-container": [
     "mx-auto",
@@ -343,7 +343,7 @@
   ],
   "ui-app-gallery": [
     "overflow-x-clip",
-    "pt-24"
+    "pt-28"
   ],
   "ui-app-gallery-container": [
     "mx-auto",
@@ -404,7 +404,7 @@
     "ring-secondary"
   ],
   "ui-testimonial-cards": [
-    "pt-24"
+    "pt-28"
   ],
   "ui-testimonial-cards-container": [
     "mx-auto",
@@ -439,7 +439,7 @@
     "text-muted-foreground"
   ],
   "ui-cta-split": [
-    "pt-24"
+    "pt-28"
   ],
   "ui-cta-split-container": [
     "mx-auto",
@@ -484,7 +484,7 @@
     "lg:text-right"
   ],
   "ui-pricing-two-plans": [
-    "pt-24"
+    "pt-28"
   ],
   "ui-pricing-two-plans-container": [
     "mx-auto",
@@ -560,7 +560,7 @@
     "w-full"
   ],
   "ui-faq-tiles": [
-    "pt-24"
+    "pt-28"
   ],
   "ui-faq-tiles-container": [
     "mx-auto",

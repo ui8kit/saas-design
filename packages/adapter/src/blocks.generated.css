@@ -50,7 +50,7 @@
   .ui-hero-phones-screen:nth-child(9) { @apply top-76/100 left-76/100 -rotate-14; }
   .ui-hero-phones-screen:nth-child(10) { @apply top-66/100 left-82/100 rotate-15; }
   /* feature-cards */
-  .ui-feature-cards { @apply pt-24; }
+  .ui-feature-cards { @apply pt-28; }
   .ui-feature-cards-container { @apply mx-auto flex max-w-page flex-col gap-12; }
   .ui-feature-cards-head { @apply flex-col items-start justify-between gap-6 lg:flex-row lg:items-center; }
   .ui-feature-cards-lead { @apply max-w-md text-xl font-light; }
@@ -69,7 +69,7 @@
   .ui-social-proof-split-logos { @apply flex-wrap justify-between gap-8 rounded-lg bg-muted px-12 py-10; }
   .ui-social-proof-split-logo { @apply h-12 w-auto; }
   /* app-gallery */
-  .ui-app-gallery { @apply overflow-x-clip pt-24; }
+  .ui-app-gallery { @apply overflow-x-clip pt-28; }
   .ui-app-gallery-container { @apply mx-auto flex max-w-page flex-col gap-20; }
   .ui-app-gallery-lead { @apply text-xl font-light; }
   .ui-app-gallery-tiles { @apply grid grid-cols-2 gap-10 md:grid-cols-4 lg:w-5/4 lg:grid-cols-5; }
@@ -82,7 +82,7 @@
   .ui-app-gallery-tile-tone-muted { @apply bg-muted text-foreground; }
   .ui-app-gallery-screen { @apply w-full self-start rounded-md ring-2 ring-secondary; }
   /* testimonial-cards */
-  .ui-testimonial-cards { @apply pt-24; }
+  .ui-testimonial-cards { @apply pt-28; }
   .ui-testimonial-cards-container { @apply mx-auto flex max-w-page flex-col gap-16; }
   .ui-testimonial-cards-lead { @apply text-xl font-light; }
   .ui-testimonial-cards-card { @apply h-full gap-8; }
@@ -91,7 +91,7 @@
   .ui-testimonial-cards-role { @apply leading-5 text-muted-foreground; }
   .ui-testimonial-cards-quote { @apply leading-6 text-muted-foreground; }
   /* cta-split */
-  .ui-cta-split { @apply pt-24; }
+  .ui-cta-split { @apply pt-28; }
   .ui-cta-split-container { @apply mx-auto max-w-page; }
   .ui-cta-split-panel { @apply flex flex-col gap-24 rounded-lg bg-accent p-20 text-accent-foreground; }
   .ui-cta-split-mark { @apply size-20 text-foreground; }
@@ -100,7 +100,7 @@
   .ui-cta-split-aside { @apply flex flex-col items-start gap-16 lg:items-end; }
   .ui-cta-split-text { @apply max-w-lg text-xl leading-8 font-light lg:text-right; }
   /* pricing-two-plans */
-  .ui-pricing-two-plans { @apply pt-24; }
+  .ui-pricing-two-plans { @apply pt-28; }
   .ui-pricing-two-plans-container { @apply mx-auto flex max-w-page flex-col gap-16; }
   .ui-pricing-two-plans-lead { @apply text-xl font-light; }
   .ui-pricing-two-plans-plans { @apply grid grid-cols-1 gap-10 lg:grid-cols-2; }
@@ -117,7 +117,7 @@
   .ui-pricing-two-plans-feature-lock { @apply size-4 text-muted-foreground; }
   .ui-pricing-two-plans-plan-cta { @apply mt-auto w-full; }
   /* faq-tiles */
-  .ui-faq-tiles { @apply pt-24; }
+  .ui-faq-tiles { @apply pt-28; }
   .ui-faq-tiles-container { @apply mx-auto flex max-w-page flex-col gap-16; }
   .ui-faq-tiles-title { @apply max-w-3xl text-6xl font-bold; }
   .ui-faq-tiles-lead { @apply text-xl font-light; }
