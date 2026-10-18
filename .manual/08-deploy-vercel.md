@@ -8,6 +8,8 @@ Create three Vercel projects from `github.com/ui8kit/saas-design`. Keep **"Inclu
 | saas-design | `apps/design-svelte` | Other | `apps/design-svelte/vercel.json`: install `bash scripts/vercel-install.sh`, build `node ../../tools/copy-media.mjs static && npx vite build`, output `build` |
 | saas-design-react | `apps/design-react` | Other | `apps/design-react/vercel.json`: install `bash scripts/vercel-install.sh`, build `node ../../tools/copy-media.mjs public && node scripts/build.mjs`, output `build` |
 
+Root Directory of the Svelte design project must be `apps/design-svelte` (renamed from `apps/design`; a project still on `apps/design` fails every build).
+
 CLI (once per project, from the repo root):
 
 ```bash

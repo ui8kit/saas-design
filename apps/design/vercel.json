@@ -1,9 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "installCommand": "bash ../design-svelte/scripts/vercel-install.sh",
-  "buildCommand": "bash build.sh",
-  "outputDirectory": "build",
-  "cleanUrls": true,
-  "trailingSlash": false
-}

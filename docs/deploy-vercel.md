@@ -10,8 +10,11 @@ Deploy as three Vercel projects from one repository, one per app. This is the En
 |---|---|---|---|
 | site (e.g. `saas-site`) | `apps/site` | Other | [`apps/site/vercel.json`](../apps/site/vercel.json) |
 | design (e.g. `saas-design`) | `apps/design-svelte` | Other | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
-| existing `saas-design` project (https://saas-svelte.vercel.app), Root Directory still `apps/design` | `apps/design` (shim) | Other | [`apps/design/vercel.json`](../apps/design/vercel.json): builds design-svelte and copies `build/` ([why](../apps/design/README.md)) |
 | design-react (e.g. `saas-design-react`) | `apps/design-react` | Other | [`apps/design-react/vercel.json`](../apps/design-react/vercel.json) |
+
+> **Root Directory must be `apps/design-svelte`** for the Svelte design project. The app was renamed from `apps/design` in `ab8add8`; a project still pointing at `apps/design` fails every build (this is what happened to `saas-design` / https://saas-svelte.vercel.app, last good deploy `5c4f921`). Fix: Project → Settings → Build and Deployment → Root Directory → `apps/design-svelte`, then redeploy. The React app needs its **own third project** with Root Directory `apps/design-react`.
+>
+> Dry run (2026-10-19, clean clone, Vercel's install + build commands): from `apps/design-svelte` → 49 pages; from `apps/design-react` → 49 pages; from the repo root (`bun install --frozen-lockfile && bun run design-svelte:build`) → 49 pages.
 
 Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. All apps read `packages/`, `fixtures/` and `tools/` from the repo root.
 
