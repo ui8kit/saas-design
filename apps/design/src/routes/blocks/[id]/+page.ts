@@ -1,9 +1,9 @@
 import { error } from "@sveltejs/kit";
-import catalog from "$packages/blocks/catalog.json";
+import { blocks } from "$lib/blocks";
 
-export const entries = () => catalog.map((b) => ({ id: b.id }));
+export const entries = () => blocks.map((b) => ({ id: b.id }));
 export const load = ({ params }) => {
-  const meta = catalog.find((b) => b.id === params.id);
-  if (!meta) error(404, "Unknown block");
-  return { meta };
+  const i = blocks.findIndex((b) => b.id === params.id);
+  if (i < 0) error(404, "Unknown block");
+  return { meta: blocks[i]!, prev: blocks[i - 1], next: blocks[i + 1] };
 };

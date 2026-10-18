@@ -6,6 +6,7 @@ export default {
   preprocess: vitePreprocess(),
   kit: {
     adapter: adapter({ pages: "build", assets: "build", strict: true }),
-    prerender: { entries: ["*"], handleHttpError: "fail" },
+    // Block previews keep the site's in-page anchors (#why, #pricing…) which only exist on the full page.
+    prerender: { entries: ["*"], handleHttpError: "fail", handleMissingId: "ignore" },
   },
 };
