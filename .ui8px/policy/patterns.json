@@ -983,7 +983,7 @@
     "ui-faq-tiles-tile": [
       "rounded-lg",
       "px-10",
-      "py-8"
+      "py-6"
     ],
     "ui-faq-tiles-tile-tone-lilac": [
       "bg-chart-3",
@@ -1012,6 +1012,7 @@
     "ui-faq-tiles-title": [
       "max-w-3xl",
       "text-6xl",
+      "leading-tight",
       "font-bold"
     ],
     "ui-feature-cards": [
@@ -2325,6 +2326,7 @@
     ],
     "ui-section-title-display": [
       "text-6xl",
+      "leading-tight",
       "font-bold"
     ],
     "ui-section-title-sm": [
@@ -2524,7 +2526,9 @@
       "overflow-hidden",
       "rounded-lg",
       "bg-accent",
-      "pt-20"
+      "pt-20",
+      "lg:aspect-auto",
+      "lg:h-140"
     ],
     "ui-social-proof-split-screen": [
       "w-1/2",

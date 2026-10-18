@@ -10,7 +10,7 @@ export const kits: Record<string, string> = {
   "section-head": "flex flex-col gap-4",
   "section-head-center": "flex flex-col items-center gap-4 text-center",
   "section-title": "text-5xl font-bold",
-  "section-title-display": "text-6xl font-bold",
+  "section-title-display": "text-6xl leading-tight font-bold",
   "section-title-sm": "text-3xl font-bold",
   "section-lead": "max-w-2xl text-xl font-light text-muted-foreground",
   "stack-2": "flex flex-col gap-2",

@@ -172,7 +172,7 @@ ${block(".dark,\n[data-theme=\"dark\"]", brandDark)}
 @theme inline {
 ${Object.keys(brandLight).map((k) => `  --color-${k}: var(--${k});`).join("\n")}
   --text-display: 5.3125rem;
-  --text-display--line-height: 1;
+  --text-display--line-height: 1.2;
   --container-page: 77.5rem;
 }
 `;

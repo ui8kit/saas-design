@@ -7,7 +7,7 @@
   .ui-section-container-narrow { @apply mx-auto flex max-w-3xl flex-col gap-12 px-6; }
   .ui-section-head-center { @apply flex flex-col items-center gap-4 text-center; }
   .ui-section-title { @apply text-5xl font-bold; }
-  .ui-section-title-display { @apply text-6xl font-bold; }
+  .ui-section-title-display { @apply text-6xl leading-tight font-bold; }
   .ui-section-title-sm { @apply text-3xl font-bold; }
   .ui-section-lead { @apply max-w-2xl text-xl font-light text-muted-foreground; }
   .ui-stack-2 { @apply flex flex-col gap-2; }
@@ -62,7 +62,7 @@
   /* social-proof-split */
   .ui-social-proof-split { @apply pt-10; }
   .ui-social-proof-split-container { @apply mx-auto grid max-w-page grid-cols-1 gap-16 lg:grid-cols-2; }
-  .ui-social-proof-split-panel { @apply flex aspect-square justify-center overflow-hidden rounded-lg bg-accent pt-20; }
+  .ui-social-proof-split-panel { @apply flex aspect-square justify-center overflow-hidden rounded-lg bg-accent pt-20 lg:aspect-auto lg:h-140; }
   .ui-social-proof-split-screen { @apply w-1/2 self-start rounded-md ring-2 ring-secondary; }
   .ui-social-proof-split-body { @apply flex flex-col justify-between gap-12 py-6; }
   .ui-social-proof-split-title { @apply text-4xl leading-12 font-medium; }
@@ -119,10 +119,10 @@
   /* faq-tiles */
   .ui-faq-tiles { @apply pt-28; }
   .ui-faq-tiles-container { @apply mx-auto flex max-w-page flex-col gap-16; }
-  .ui-faq-tiles-title { @apply max-w-3xl text-6xl font-bold; }
+  .ui-faq-tiles-title { @apply max-w-3xl text-6xl leading-tight font-bold; }
   .ui-faq-tiles-lead { @apply text-xl font-light; }
   .ui-faq-tiles-grid { @apply grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2; }
-  .ui-faq-tiles-tile { @apply rounded-lg px-10 py-8; }
+  .ui-faq-tiles-tile { @apply rounded-lg px-10 py-6; }
   .ui-faq-tiles-tile-tone-primary { @apply bg-primary text-primary-foreground; }
   .ui-faq-tiles-tile-tone-secondary { @apply bg-secondary text-secondary-foreground; }
   .ui-faq-tiles-tile-tone-lilac { @apply bg-chart-3 text-foreground; }
