@@ -7,7 +7,7 @@
     "apps/*"
   ],
   "scripts": {
-    "extract": "bun tools/extract.ts",
+    "extract": "bash tools/extract.sh",
     "render:figma": "bun tools/figma-render.ts",
     "shots": "bun tools/shots.ts",
     "tokens": "bun tools/tokens.ts",

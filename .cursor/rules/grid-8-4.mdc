@@ -1,0 +1,13 @@
+---
+description: 8 + 4 px spacing grid enforced by ui8px
+globs: packages/**,apps/**
+alwaysApply: false
+---
+
+# Spacing grid 8 + 4
+
+- One Tailwind spacing step = 4px. **Layout scope** (`packages/blocks/**`, `packages/adapter/src/blocks.generated.css`, `base.css`, `apps/**`): even steps only — `0 2 4 6 8 10 12 16 20 24` (8px rhythm).
+- **Control scope** (`packages/ui/**`, `packages/icons/**`, `primitives.generated.css`): also 4px half steps `1 3 5 7` for dense controls.
+- No fractional steps (`gap-1.5` is snapped to `gap-2` by the ui generator), no arbitrary values (`p-[13px]`, `grid-cols-[…]`).
+- Figma values are snapped to the nearest grid step; record a deliberate deviation in `.project/backlog/`.
+- Verify: `npx ui8px@latest lint` → `Violations: 0`. New utilities go through review in `tools/ui8px/allowed.extra.json`, then `bun tools/ui8px-policy.ts`.

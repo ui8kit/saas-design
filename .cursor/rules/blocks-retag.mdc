@@ -1,0 +1,15 @@
+---
+description: UI8Kit block/box semantics, tag (retag) rules, block DSL conventions
+globs: packages/blocks/**,packages/ui/**,apps/**/*.templ,apps/**/*.svelte
+alwaysApply: false
+---
+
+# Blocks and retag (from ui8kit block/box semantics)
+
+- `Block` is the only top-level unit for page sections, landmarks and public anchors. Retag it by meaning: `tag: "section" | "header" | "footer" | "nav" | "main" | "aside" | "article"`. Never nest a Block in a Block — promote it to a sibling.
+- `id` / anchors belong to `Block` only, except primitives that own ids (Field/Input, Button, Form, Dialog, Disclosure, Output, Meter, Progress). Sections use `aria-labelledby` pointing to their `Title` id.
+- `Box` is internal layout only (no anchors, no landmarks). Inside a Block compose with `Container`, `Stack`, `Group`, `Grid`, `Card`, list/table/media/disclosure/form primitives.
+- Pick tags for meaning, not style. Generic containers (`Box`, `Block`, `Stack`, `Group`, `Container`) never take strict content-model tags: use `List`/`ListItem` for `ul/ol/li`, `Table*` for tables, `Image`/`Picture`/`Source` for media, `Disclosure`/`Summary` for `details`, `Form`/`Fieldset`/`Legend` around fields. Allowed tags per primitive are in codegen `utils/tags` (`IsAllowedTag`) — do not widen them.
+- Headings: one `Title as={1}` per page (hero); section titles `as={2}`, card titles `as={3}`.
+- Apps never write raw HTML layout tags in `.templ`; packages/ui is the tag supplier. Blocks are defined once in `packages/blocks/defs` with the DSL (`c(...)` primitives, `h(...)` only for tags no primitive owns) and emitted to both runtimes. `bun run parity` in packages/blocks must report 0 DOM mismatches.
+- Max 45 blocks in the catalog. Each block: `id`, `category`, `description`, `figma` node ref (or catalog-only), data schema, fixture data in `fixtures/views/blocks.json`.

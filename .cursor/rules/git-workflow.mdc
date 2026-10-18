@@ -1,0 +1,11 @@
+---
+description: Commit/push discipline for agents in this repo
+alwaysApply: true
+---
+
+# Git workflow
+
+- Small steps; commit and push after each verified step (`bun run check` green, or the relevant sub-check).
+- Push: `git -c credential.helper= -c 'credential.helper=!gh auth git-credential' push origin main`. No force push, no amend/rebase of pushed commits, do not change `~/.gitconfig`.
+- Agent commits: `git -c user.name='Grok Designer' -c user.email=grokbot@users.noreply.github.com commit -m "…"`.
+- New tool problems → one file in `.project/backlog/<tool>-<issue>.md` (context, repro, impact, proposed fix, status). Update `.project/STATUS.md` when a deliverable changes state.
