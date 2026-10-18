@@ -1,0 +1,57 @@
+{
+  "schema": "fig2design/document@1",
+  "name": "Document",
+  "figVersion": 101,
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "Page 1",
+      "type": "CANVAS",
+      "visible": true,
+      "frames": [
+        {
+          "id": "1:10",
+          "name": "Home",
+          "type": "FRAME",
+          "visible": true,
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 6288,
+          "section": null,
+          "file": "frames/1-10.json"
+        }
+      ]
+    },
+    {
+      "id": "0:2",
+      "name": "Internal Only Canvas",
+      "type": "CANVAS",
+      "visible": false,
+      "frames": []
+    }
+  ],
+  "figMeta": {
+    "client_meta": {
+      "background_color": {
+        "r": 0.11764705926179886,
+        "g": 0.11764705926179886,
+        "b": 0.11764705926179886,
+        "a": 1
+      },
+      "thumbnail_size": {
+        "width": 92,
+        "height": 400
+      },
+      "render_coordinates": {
+        "x": -1.4210854715202004e-14,
+        "y": 0,
+        "width": 1440,
+        "height": 6288
+      }
+    },
+    "file_name": "Untitled",
+    "developer_related_links": [],
+    "exported_at": "2026-10-18T12:57:18.506Z"
+  }
+}

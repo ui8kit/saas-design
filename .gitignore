@@ -1,0 +1,19 @@
+# Figma sources never live in the repo (keep them in /workspace/fig-fixtures or similar)
+*.fig
+node_modules/
+.svelte-kit/
+dist/
+build/
+.vercel/
+.output/
+*_templ.go
+apps/site/bin/
+apps/site/public/
+apps/design/static/media/
+apps/design/static/fonts/
+.ui8px/telemetry/
+.ui8px/reports/
+*.log
+.DS_Store
+.env
+.env.*

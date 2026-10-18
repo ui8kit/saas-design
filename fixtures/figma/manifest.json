@@ -1,0 +1,42 @@
+{
+  "schema": "fig2design/manifest@1",
+  "tool": {
+    "name": "fig2design",
+    "version": "0.1.0"
+  },
+  "source": {
+    "file": "saas.fig",
+    "path": "/workspace/fig-fixtures/saas.fig",
+    "format": "zip",
+    "sha256": "6c1f3b0b7899cbf56f5e0ebc819d8ba2b7d46eb6e7d1cb30226a7e6158c97026",
+    "bytes": 2168152,
+    "figVersion": 101,
+    "fileKey": null
+  },
+  "generatedAt": "2026-10-18T14:49:12.566Z",
+  "filters": {
+    "page": null,
+    "frames": null
+  },
+  "counts": {
+    "pages": 2,
+    "frames": 1,
+    "componentSets": 0,
+    "components": 0,
+    "variableCollections": 1,
+    "variables": 0,
+    "styles": 0,
+    "images": 14
+  },
+  "files": {
+    "document": "document.json",
+    "variables": "variables.json",
+    "styles": "styles.json",
+    "components": "components.json",
+    "frames": [
+      "frames/1-10.json"
+    ],
+    "images": "images/index.json"
+  },
+  "notice": "Users are responsible for complying with Figma's terms of service and with any licenses that apply to the .fig file and the design kit it contains. This tool only reads a local file; it does not grant rights to the contents."
+}

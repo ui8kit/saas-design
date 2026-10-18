@@ -1,0 +1,268 @@
+FRAME 'Home' @0,0 1440x6288 fill=#ffffff
+  FRAME 'Hero' @30,30 1380x783 r=40
+    FRAME 'Logo' @80,82 141x36
+      TEXT 'Habitus' @106,82 115x36 fill=#ffffff T[30/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Habitus"
+      VECTO 'Polygon 2' @80,89 22x19 fill=#ffffff
+      VECTO 'Polygon 1' @99,89 22x19 fill=#ffffff
+    FRAME 'Menu' @424,89 592x22 L={"dir": "H", "gap": 30, "main": "start", "cross": "center", "sizeMain": "fixed", "sizeCross": "hug"}
+      TEXT 'About Us' @937,89 79x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "About Us"
+      TEXT 'Resources' @818,89 89x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Resources"
+      TEXT 'Blog' @750,89 38x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Blog"
+      TEXT 'How it works' @609,89 111x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "How it works"
+      TEXT 'Features' @505,89 74x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Features"
+      TEXT 'Home' @424,89 51x22 fill=#ffffff T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Home"
+    FRAME 'Button' @1247,80 113x40 fill=#ffffff r=9999
+      TEXT 'Log In' @1280,91 47x19 fill=#111827 T[16/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Log In"
+    TEXT 'Build Better Habits. One Day at a Time.' @395,230 650x120 fill=#ffffff T[60/500 lh={'value': 60, 'units': 'PIXELS'} ls=None al=center] "Build Better Habits. One Day at a Time."
+    TEXT 'Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.' @383,381 673x56 fill=#ffffff T[22/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app."
+    FRAME 'Button Group' @503,487 435x58
+      FRAME 'Button' @731,487 207x58 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+        FRAME 'Frame' @771,508 12x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+          FRAME 'Frame' @771,508 12x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            VECTO 'Vector' @771,509 12x14 fill=#ffffff
+        TEXT 'Watch Demo' @798,506 100x19 fill=#ffffff T[16/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Watch Demo"
+      FRAME 'Button' @503,487 208x58 fill=#ffffff r=100 L={"dir": "H", "pad": [13, 40, 13, 40], "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+        TEXT 'Get Started Free' @543,506 128x19 fill=#111827 T[16/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Get Started Free"
+    FRAME 'Label' @588,727 265x36 fill=#111827 r=9999
+      TEXT 'Loved by 1M+ users worldwide' @630,736 205x17 fill=#ffffff T[14/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Loved by 1M+ users worldwide"
+      FRAME 'Icon' @604,737 18x16
+    ELLIP 'Ellipse 6' @159,290 72x72 fill=#f6f6f6
+    ELLIP 'Ellipse 4' @1095,422 72x72 fill=#111827
+    ELLIP 'Ellipse 3' @1131,290 72x72 fill=#d9b8d5
+    ELLIP 'Ellipse 7' @867,635 72x72 fill=#dbedfb
+    ELLIP 'Ellipse 2' @325,487 72x72 fill=#dbedfb
+    ELLIP 'Ellipse 1' @310,435 72x72 fill=#fec6c7
+    ROUND 'Habit tracker' @-2,579 220x476 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+    ROUND 'Settings' @219,607 220x476 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+    ROUND 'Dashboard' @1081,624 220x476 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+    ROUND 'Goals' @1157,544 220x476 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+    ROUND 'Rectangle 6' @30,30 1380x783 fill=#fe5d33 r=40
+  FRAME 'Why' @100,923 1240x378
+    TEXT 'Why you’ll love it' @102,923 650x73 fill=#111827 T[60/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Why you’ll love it"
+    TEXT 'Designed to help you stay on track, effortlessly.' @895,951 445x24 fill=#111827 T[20/300 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Designed to help you stay on track, effortlessly."
+    FRAME 'Card' @953,1045 387x256
+      VECTO 'Vector' @1003,1095 18x20 fill=#111827
+      TEXT 'Stay motivated by building unbreakable streaks and unlocking milestones.' @1003,1179 287x72 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "Stay motivated by building unbreakable streaks and unlocking milestones."
+      TEXT 'Streak Tracking' @1003,1140 287x24 fill=#111827 T[20/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Streak Tracking"
+      ROUND 'Rectangle 15' @953,1045 387x256 fill=#f6f6f6 r=40
+    FRAME 'Card' @100,1045 387x256
+      VECTO 'Vector' @150,1095 18x20 fill=#111827
+      TEXT 'Never miss a habit again. Set daily notifications or let the app suggest the best time.' @150,1179 287x72 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "Never miss a habit again. Set daily notifications or let the app suggest the best time."
+      TEXT 'Smart Reminders' @150,1140 287x24 fill=#111827 T[20/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Smart Reminders"
+      ROUND 'Rectangle 11' @100,1045 387x256 fill=#f6f6f6 r=40
+    FRAME 'Card' @527,1045 387x256
+      TEXT 'See your growth with weekly reports, streaks, and visual heatmaps.' @577,1179 287x48 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "See your growth with weekly reports, streaks, and visual heatmaps."
+      TEXT 'Progress Analytics' @577,1140 287x24 fill=#111827 T[20/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Progress Analytics"
+      VECTO 'Vector' @577,1095 20x18 fill=#111827
+      ROUND 'Rectangle 16' @527,1045 387x256 fill=#f6f6f6 r=40
+  FRAME 'Social Proof' @100,1342 1393x560
+    FRAME 'Logos' @760,1766 733x136
+      FRAME 'Company logo' @1362,1812 82x46
+      FRAME 'Company logo' @972,1810 139x47
+      FRAME 'Company logo' @818,1810 111x47
+      FRAME 'Company logo' @1155,1810 164x47
+      ROUND 'Rectangle 17' @760,1766 733x136 fill=#f6f6f6 r=40
+    TEXT 'Join thousands of users from top companies using Habitus to build better habits' @759,1367 581x144 fill=#111827 T[36/500 lh={'value': 48, 'units': 'PIXELS'} ls=None al=left] "Join thousands of users from top companies using Habitus to build better habits"
+    FRAME 'Frame 5' @100,1342 600x560
+      ROUND 'Habit tracker' @241,1416 317x687 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+      ROUND 'Rectangle 14' @100,1342 600x560 fill=#dbedfb r=40
+  FRAME 'Inside' @100,2012 1563x722
+    FRAME 'Group 5' @100,2012 1563x722
+      FRAME 'Image' @420,2209 280x525
+        ROUND 'Habit tracker' @475,2307 171x370 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+        VECTO 'Rectangle 40' @420,2209 280x525 fill=#fe5d33 r=40
+      FRAME 'Image' @740,2213 280x521
+        ROUND 'Settings' @795,2307 171x370 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+        VECTO 'Rectangle 41' @740,2213 280x521 fill=#111827 r=40
+      FRAME 'Image' @100,2213 280x521
+        ROUND 'Dashboard' @155,2307 171x370 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+        VECTO 'Rectangle 39' @100,2213 280x521 fill=#d9b8d5 r=40
+      FRAME 'Image' @1063,2217 280x517
+        ROUND 'Goals' @1117,2307 171x370 fill=IMG::None stroke=[{"type": "solid", "color": "#111827"}] sw=None r=20
+        VECTO 'Rectangle 42' @1063,2217 280x517 fill=#dbedfb r=40
+      VECTO 'Rectangle 43' @1383,2217 280x517 fill=#fec6c7 r=40
+      TEXT 'Take a Look Inside' @395,2012 650x73 fill=#111827 T[60/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Take a Look Inside"
+      TEXT 'A simple, beautiful interface built for everyday use.' @484,2105 473x24 fill=#111827 T[20/300 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "A simple, beautiful interface built for everyday use."
+  FRAME 'Testimonials' @100,2844 1240x447
+    FRAME 'Card' @953,3031 387x260
+      FRAME 'div' @1003,3081 287x48
+        FRAME 'div' @1067,3081 123x48 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Wellness Coach' @1067,3107 120x20 fill=#4b5563 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Wellness Coach"
+          TEXT 'Priya R.' @1067,3083 59x20 fill=#111827 T[16/700 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Priya R."
+        FRAME 'img' @1003,3081 48x48 fill=IMG::None stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+      TEXT '"I've tried several habit trackers, but this one is the only one I actually stuck with."' @1003,3159 287x72 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] ""I've tried several habit trackers, but this one is the only one I actually stuck with.""
+      ROUND 'Rectangle 25' @953,3031 387x260 fill=#f6f6f6 r=40
+    FRAME 'Card' @527,3031 387x260
+      FRAME 'div' @577,3081 287x48
+        FRAME 'div' @641,3081 141x48 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Software Engineer' @641,3107 140x20 fill=#4b5563 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Software Engineer"
+          TEXT 'James K.' @641,3083 72x20 fill=#111827 T[16/700 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "James K."
+        FRAME 'img' @577,3081 48x48 fill=IMG::None stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+      TEXT '"Seeing my progress visually keeps me motivated every day. The reminders are just perfect!"' @577,3159 287x72 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] ""Seeing my progress visually keeps me motivated every day. The reminders are just perfect!""
+      ROUND 'Rectangle 24' @527,3031 387x260 fill=#f6f6f6 r=40
+    FRAME 'Card' @100,3031 387x260
+      TEXT '"I've finally stayed consistent with journaling for 90 days. This app made it effortless."' @150,3159 287x72 fill=#4b5563 T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] ""I've finally stayed consistent with journaling for 90 days. This app made it effortless.""
+      FRAME 'div' @150,3081 287x48
+        FRAME 'div' @214,3081 65x48 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Writer' @214,3107 46x20 fill=#4b5563 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Writer"
+          TEXT 'Sarah T.' @214,3083 64x20 fill=#111827 T[16/700 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Sarah T."
+        FRAME 'img' @150,3081 48x48 fill=IMG::None stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+      ROUND 'Rectangle 23' @100,3031 387x260 fill=#f6f6f6 r=40
+    TEXT 'What our users say' @110,2844 650x73 fill=#111827 T[60/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "What our users say"
+    TEXT 'Real stories from people who turned their goals into habits.' @110,2937 551x24 fill=#111827 T[20/300 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Real stories from people who turned their goals into habits."
+  FRAME 'CTA' @100,3401 1240x651
+    FRAME 'Logo' @180,3481 76x86
+    TEXT 'Take control of your daily routines, stay consistent with the goals that matter, and build meaningful progress — one habit at a time. With Habitus, you’re just a step away from creating a better version of yourself.' @776,3693 484x160 fill=#111827 T[20/300 lh={'value': 32, 'units': 'PIXELS'} ls=None al=right] "Take control of your daily routines, stay consistent with the goals that matter, and build meaningful progress — one hab"
+    TEXT 'Ready to build better habits?' @180,3667 568x309 fill=#111827 T[85/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Ready to build better habits?"
+    FRAME 'Button' @994,3914 266x58 fill=#fe5d33 r=100 L={"dir": "H", "pad": [13, 40, 13, 40], "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+      TEXT 'Start Tracking – It’s Free' @1034,3934 186x19 fill=#ffffff T[16/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Start Tracking – It’s Free"
+    ROUND 'Rectangle 26' @100,3401 1240x651 fill=#dbedfb r=40
+  FRAME 'Pricing' @100,4162 1240x862
+    FRAME 'Free Plan' @100,4349 600x675
+      FRAME 'button' @170,4871 460x56 fill=#111827 r=9999
+        TEXT 'Start for Free' @349,4889 103x20 fill=#ffffff T[16/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Start for Free"
+      FRAME 'div' @170,4533 430x248 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'ul' @170,4597 430x184 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          FRAME 'li' @170,4757 430x24 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'No credit card required' @196,4763 175x20 fill=#4b5563 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "No credit card required"
+            FRAME 'Frame' @170,4761 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @170,4761 14x16 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @170,4763 12x14 fill=#9ca3af
+          FRAME 'li' @170,4717 430x24 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Light & dark mode' @196,4719 138x20 fill=#111827 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Light & dark mode"
+            FRAME 'Frame' @170,4721 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @170,4721 14x16 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @170,4724 14x10 fill=#10b981
+          FRAME 'li' @170,4677 430x24 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Streaks & basic analytics' @196,4679 188x20 fill=#111827 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Streaks & basic analytics"
+            FRAME 'Frame' @170,4681 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @170,4681 14x16 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @170,4684 14x10 fill=#10b981
+          FRAME 'li' @170,4637 430x24 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Daily reminders' @196,4639 118x20 fill=#111827 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Daily reminders"
+            FRAME 'Frame' @170,4641 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @170,4641 14x16 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @170,4644 14x10 fill=#10b981
+          FRAME 'li' @170,4597 430x24 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Track unlimited habits' @196,4599 167x20 fill=#111827 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Track unlimited habits"
+            FRAME 'Frame' @170,4601 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @170,4601 14x16 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @170,4604 14x10 fill=#10b981
+        FRAME 'div' @170,4533 430x40 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT '$0' @170,4531 49x44 fill=#111827 T[36/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "$0"
+      FRAME 'div' @170,4419 430x64 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        TEXT 'Perfect to get started' @170,4461 164x20 fill=#4b5563 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Perfect to get started"
+        TEXT 'Free' @170,4420 52x29 fill=#111827 T[24/600 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "Free"
+      ROUND 'Rectangle 19' @100,4349 600x675 fill=#f6f6f6 r=40
+    FRAME 'Premium Plan' @740,4349 600x675
+      FRAME 'button' @810,4871 460x56 fill=#f6f6f6 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+        TEXT 'Upgrade Now' @987,4889 106x20 fill=#111827 T[16/600 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Upgrade Now"
+      FRAME 'div' @810,4533 432x288 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'ul' @810,4597 432x224 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          FRAME 'li' @810,4797 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Priority support' @836,4799 118x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Priority support"
+            FRAME 'Frame' @810,4801 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4801 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4804 14x10 fill=#34d399
+          FRAME 'li' @810,4757 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Premium themes and icons' @836,4759 205x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Premium themes and icons"
+            FRAME 'Frame' @810,4761 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4761 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4764 14x10 fill=#34d399
+          FRAME 'li' @810,4717 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Cloud backup & device sync' @836,4719 214x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Cloud backup & device sync"
+            FRAME 'Frame' @810,4721 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4721 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4724 14x10 fill=#34d399
+          FRAME 'li' @810,4677 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Habit templates & suggestions' @836,4679 231x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Habit templates & suggestions"
+            FRAME 'Frame' @810,4681 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4681 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4684 14x10 fill=#34d399
+          FRAME 'li' @810,4637 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Advanced analytics' @836,4639 148x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Advanced analytics"
+            FRAME 'Frame' @810,4641 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4641 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4644 14x10 fill=#34d399
+          FRAME 'li' @810,4597 432x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT 'Everything in Free' @836,4599 137x20 fill=#ffffff T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Everything in Free"
+            FRAME 'Frame' @810,4601 14x16 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+              FRAME 'Frame' @810,4601 14x16 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+                VECTO 'Vector' @810,4604 14x10 fill=#34d399
+        FRAME 'div' @810,4533 432x40 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          FRAME 'div' @923,4549 54x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT '/month' @923,4551 54x20 fill=#9ca3af T[16/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "/month"
+          FRAME 'div' @810,4533 105x40 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            TEXT '$4.99' @810,4531 106x44 fill=#ffffff T[36/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "$4.99"
+      FRAME 'div' @810,4419 460x64 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        TEXT 'All features you need' @810,4461 160x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "All features you need"
+        FRAME 'div' @810,4419 459x32 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          FRAME 'span' @1194,4421 75x28 fill=#fe5d33 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=9999
+            TEXT 'Popular' @1206,4426 51x17 fill=#ffffff T[14/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Popular"
+          TEXT 'Premium' @810,4420 103x29 fill=#ffffff T[24/600 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "Premium"
+      ROUND 'Rectangle 20' @740,4349 600x675 fill=#111827 r=40
+    TEXT 'Simple, transparent pricing' @110,4162 879x73 fill=#111827 T[60/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Simple, transparent pricing"
+    TEXT 'Start free. Upgrade when you're ready.' @110,4255 363x24 fill=#111827 T[20/300 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Start free. Upgrade when you're ready."
+  FRAME 'FAQ' @100,5134 1240x566
+    TEXT 'Frequently Asked Questions' @370,5134 701x146 fill=#111827 T[60/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Frequently Asked Questions"
+    FRAME 'Question' @740,5536 600x112
+      FRAME 'Arrow' @780,5573 39x39
+      TEXT 'What happens if I miss a day?' @839,5580 450x24 fill=#111827 T[20/500 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "What happens if I miss a day?"
+      ROUND 'Rectangle 45' @740,5536 600x112 fill=#dbedfb r=40
+    FRAME 'Question' @100,5536 600x112
+      FRAME 'Arrow' @140,5573 39x39
+      TEXT 'What happens if I miss a day?' @199,5580 450x24 fill=#111827 T[20/500 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "What happens if I miss a day?"
+      ROUND 'Rectangle 36' @100,5536 600x112 fill=#d9b8d5 r=40
+    FRAME 'Question' @740,5394 600x112
+      FRAME 'Arrow' @780,5431 39x39
+      TEXT 'What do I get with Premium?' @839,5438 450x24 fill=#111827 T[20/500 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "What do I get with Premium?"
+      ROUND 'Rectangle 44' @740,5394 600x112 fill=#fec6c7 r=40
+    FRAME 'Question' @100,5394 600x112
+      FRAME 'Arrow' @140,5431 39x39
+      TEXT 'What do I get with Premium?' @199,5438 450x24 fill=#111827 T[20/500 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "What do I get with Premium?"
+      ROUND 'Rectangle 34' @100,5394 600x112 fill=#fe5d33 r=40
+    TEXT 'View All FAQs' @1224,5678 116x22 fill=#111827 T[18/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "View All FAQs"
+    TEXT 'Everything you need to know before getting started' @479,5300 483x24 fill=#111827 T[20/300 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Everything you need to know before getting started"
+  FRAME 'Footer' @100,5780 1240x408
+    FRAME 'div' @100,6106 1240x57 fill=#000000 stroke=[{"type": "solid", "color": "#1f2937"}] sw=None
+      TEXT '© 2025 Habitus. All rights reserved.' @579,6139 272x20 fill=#6b7280 T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=center] "© 2025 Habitus. All rights reserved."
+    TEXT 'Get tips & updates in your inbox' @1005,5899 285x17 fill=#6b7280 T[14/400 lh={'value': 19, 'units': 'PIXELS'} ls=None al=left] "Get tips & updates in your inbox"
+    FRAME 'Button' @1005,5992 285x42 fill=#fe5d33 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None r=100
+      TEXT 'Subscribe' @1110,6003 76x20 fill=#ffffff T[16/400 lh={'value': 100, 'units': 'PERCENT'} ls=None al=center] "Subscribe"
+    FRAME 'div' @1005,5936 285x42 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+      FRAME 'input' @1005,5936 285x42 fill=#1f2937 stroke=[{"type": "solid", "color": "#374151"}] sw=None r=100
+        TEXT 'Enter your email' @1031,5936 123x42 fill=#adaebc T[16/400 lh={'value': 24, 'units': 'PIXELS'} ls=None al=left] "Enter your email"
+    TEXT 'Newsletter' @1005,5852 86x20 fill=#ffffff T[16/600 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Newsletter"
+    FRAME 'div' @777,5850 208x192 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+      FRAME 'ul' @777,5898 208x104 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'li' @777,5978 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Privacy Policy' @777,5980 105x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Privacy Policy"
+        FRAME 'li' @777,5938 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Contact' @777,5940 61x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Contact"
+        FRAME 'li' @777,5898 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'About' @777,5900 46x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "About"
+      TEXT 'Company' @777,5852 74x20 fill=#ffffff T[16/600 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Company"
+    FRAME 'div' @549,5850 208x192 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+      FRAME 'ul' @549,5898 208x144 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'li' @549,6018 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Blog' @549,6020 34x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Blog"
+        FRAME 'li' @549,5978 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'FAQ' @549,5980 31x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "FAQ"
+        FRAME 'li' @549,5938 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Pricing' @549,5940 52x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Pricing"
+        FRAME 'li' @549,5898 208x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          TEXT 'Features' @549,5900 66x20 fill=#9ca3af T[16/400 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Features"
+      TEXT 'Product' @549,5852 62x20 fill=#ffffff T[16/600 lh={'value': 16, 'units': 'PIXELS'} ls=None al=left] "Product"
+    FRAME 'div' @150,5850 352x192 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+      FRAME 'div' @150,6010 363x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'Frame' @191,6010 21x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+          VECTO 'Vector' @191,6012 21x21 fill=#9ca3af
+        FRAME 'Frame' @227,6010 21x24 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+        FRAME 'Frame' @150,6010 21x24 L={"dir": "H", "main": "center", "cross": "center", "sizeMain": "fixed", "sizeCross": "fixed"}
+          FRAME 'Frame' @150,6010 21x24 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+            VECTO 'Vector' @150,6011 21x21 fill=#9ca3af
+      TEXT 'Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.' @150,5916 272x20 fill=#9ca3af T[16/400 lh={'value': 22, 'units': 'PIXELS'} ls=None al=left] "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app."
+      FRAME 'div' @150,5850 464x36 fill=#000000 stroke=[{"type": "solid", "color": "#e5e7eb"}] sw=None
+        FRAME 'Group 2' @153,5857 19x22
+        TEXT 'Habitus' @178,5850 115x36 fill=#ffffff T[30/700 lh={'value': 100, 'units': 'PERCENT'} ls=None al=left] "Habitus"
+    ROUND 'Rectangle 27' @100,5780 1240x408 fill=#111827 r=40

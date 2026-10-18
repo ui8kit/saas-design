@@ -1,0 +1,14 @@
+{
+  "name": "saas-design",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "extract": "bun tools/extract.ts",
+    "render:figma": "bun tools/figma-render.ts",
+    "shots": "bun tools/shots.ts"
+  },
+  "devDependencies": {
+    "playwright-core": "1.48.2"
+  }
+}
