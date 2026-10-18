@@ -1,5 +1,7 @@
 # codegen: not published, no recipe-override / custom-class hook
 
+Status: worked-around (git dependency + `packages/ui/scripts/registry.ts` rewrite)
+
 **Context.** `@ui8kit/codegen` is not on npm; we pin `github:ui8kit/codegen#972b492` as a git dependency in `packages/ui`.
 Bricks hard-code Tailwind utility strings in recipes *and* in non-recipe places (`staticBase`, `attrStatic("class", …)`,
 state classes, inner `class` attr specs). A project that wants semantic classes (`ui-*` + `@apply` adapter) has to deep-rewrite the brick model.

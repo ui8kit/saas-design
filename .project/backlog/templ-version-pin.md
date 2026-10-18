@@ -1,5 +1,7 @@
 # templ: generated code must match the runtime version (v0.3.1001)
 
+Status: worked-around (pinned via `go run github.com/a-h/templ/cmd/templ@v0.3.1001`)
+
 **Context.** codegen's templ output targets `github.com/a-h/templ v0.3.1001`. A locally installed `templ` CLI (v0.3.1070) generates `_templ.go`
 calling `templ.ResolveAttributeValue`, which v0.3.1001 does not have.
 
