@@ -1,0 +1,6 @@
+/* apps/design stylesheet. No source scanning: every utility lives in an @apply (adapter + design.css). */
+@import "tailwindcss" source(none);
+@import "../../../../../packages/tokens/theme.css";
+@import "./brand.css";
+@import "../../../../../packages/adapter/src/index.css";
+@import "./design.css";

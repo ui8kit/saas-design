@@ -1,0 +1,23 @@
+/* Docs-shell classes (ds-*). App level only; utilities only inside @apply, shadcn + brand tokens only. */
+@layer components {
+  .ds-shell { @apply flex min-h-screen flex-col lg:flex-row; }
+  .ds-sidebar { @apply bg-muted px-6 py-8 lg:sticky lg:top-0 lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-auto; }
+  .ds-brand { @apply mb-8 flex items-center gap-2 text-lg font-bold text-foreground; }
+  .ds-nav-group { @apply mb-6; }
+  .ds-nav-title { @apply mb-2 text-xs font-semibold tracking-wide text-muted-foreground; }
+  .ds-nav-list { @apply flex flex-col gap-0; }
+  .ds-nav-link { @apply block rounded-md px-2 py-2 text-sm text-foreground hover:bg-background; }
+  .ds-nav-link[aria-current="page"] { @apply bg-background font-semibold text-primary; }
+  .ds-main { @apply min-w-0 grow px-6 py-12 lg:px-12; }
+  .ds-header { @apply mb-12 max-w-3xl; }
+  .ds-title { @apply text-4xl font-bold text-foreground; }
+  .ds-lead { @apply mt-4 text-lg text-muted-foreground; }
+}
+@layer components {
+  .ds-section { @apply mb-12; }
+  .ds-h2 { @apply mb-6 text-2xl font-semibold text-foreground; }
+  .ds-h3 { @apply mb-4 text-lg font-semibold text-foreground; }
+  .ds-cards { @apply grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3; }
+  .ds-card { @apply rounded-lg border border-border bg-card p-6; }
+  .ds-card-link { @apply font-semibold text-foreground hover:text-primary; }
+}
