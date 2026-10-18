@@ -178,7 +178,7 @@ func AppGallery(p AppGalleryData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles", "data-bleed": "inline-end"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

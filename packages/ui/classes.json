@@ -41,7 +41,7 @@
   "ui-button-x-layout-icon-size-sm": "size-8 p-0 [&>svg]:size-4",
   "ui-button-x-variant-ghost-layout-icon": "text-muted-foreground",
   "ui-button-x-variant-outline-layout-icon": "text-muted-foreground",
-  "ui-card": "flex flex-col gap-6 rounded bg-card p-12 text-card-foreground",
+  "ui-card": "flex flex-col gap-6 rounded bg-card p-6 text-card-foreground md:p-8 lg:p-12",
   "ui-card-accent": "bg-accent text-accent-foreground",
   "ui-card-compact": "gap-4 p-6",
   "ui-card-description": "text-sm text-muted-foreground",

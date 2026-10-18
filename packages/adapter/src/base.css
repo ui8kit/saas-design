@@ -19,3 +19,8 @@
   :root { @apply scheme-light; }
   :root.dark { @apply scheme-dark; }
 }
+
+/* A dialog never gets wider than the viewport (the 2.0 sizes are fixed widths: w-70 / w-100 / w-140). */
+@layer components {
+  .ui-dialog { @apply max-w-full; }
+}

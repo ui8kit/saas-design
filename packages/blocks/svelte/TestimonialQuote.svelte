@@ -7,7 +7,7 @@
   let { data }: { data: TestimonialQuoteData } = $props();
 </script>
 
-<Block class="ui-testimonial-quote" data-class="ui-testimonial-quote" tag="section" aria-label={data.label}>
+<Block class="ui-section ui-testimonial-quote" data-class="ui-testimonial-quote" tag="section" aria-label={data.label}>
   <Container class="ui-testimonial-quote-container" data-class="ui-testimonial-quote-container">
     <Box class="ui-testimonial-quote-panel" data-class="ui-testimonial-quote-panel">
       <Text class="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote" tag="blockquote">

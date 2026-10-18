@@ -15,7 +15,7 @@ import (
 
 // TestimonialQuote: One large quote with author on a pink panel.
 templ TestimonialQuote(p TestimonialQuoteData) {
-	@block.Block(block.BlockProps{Class: "ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote", "aria-label": p.Label}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote", "aria-label": p.Label}}) {
 		@container.Container(container.ContainerProps{Class: "ui-testimonial-quote-container", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-container"}}) {
 			@box.Box(box.BoxProps{Class: "ui-testimonial-quote-panel", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-panel"}}) {
 				@text.Text(text.TextProps{Class: "ui-testimonial-quote-quote", Tag: "blockquote", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-quote"}}) {

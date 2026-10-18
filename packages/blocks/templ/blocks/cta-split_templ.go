@@ -184,7 +184,7 @@ func CtaSplit(p CtaSplitData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = button.Button(button.ButtonProps{Size: "xl", Href: p.Cta.Href}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-cta-split-button", Size: "xl", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-cta-split-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}

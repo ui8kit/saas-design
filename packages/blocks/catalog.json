@@ -144,7 +144,8 @@
       "ui-cta-split-row",
       "ui-cta-split-title",
       "ui-cta-split-aside",
-      "ui-cta-split-text"
+      "ui-cta-split-text",
+      "ui-cta-split-button"
     ]
   },
   {

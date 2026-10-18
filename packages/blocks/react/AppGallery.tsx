@@ -16,7 +16,7 @@ export function AppGallery({ data }: { data: AppGalleryData }) {
             {data.lead}
           </Text>
         </Stack>
-        <List className="ui-app-gallery-tiles" data-class="ui-app-gallery-tiles">
+        <List className="ui-app-gallery-tiles" data-class="ui-app-gallery-tiles" data-bleed={"inline-end"}>
           {data.tiles.map((tile, i) => (
             <Fragment key={i}>
             <ListItem className={`ui-app-gallery-tile ui-app-gallery-tile-tone-${tile.tone}`} data-class="ui-app-gallery-tile">

@@ -5,7 +5,7 @@ import type { TestimonialQuoteData } from "./types";
 
 export function TestimonialQuote({ data }: { data: TestimonialQuoteData }) {
   return (
-    <Block className="ui-testimonial-quote" data-class="ui-testimonial-quote" tag={"section"} aria-label={data.label}>
+    <Block className="ui-section ui-testimonial-quote" data-class="ui-testimonial-quote" tag={"section"} aria-label={data.label}>
       <Container className="ui-testimonial-quote-container" data-class="ui-testimonial-quote-container">
         <Box className="ui-testimonial-quote-panel" data-class="ui-testimonial-quote-panel">
           <Text className="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote" tag={"blockquote"}>

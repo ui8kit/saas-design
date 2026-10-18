@@ -42,9 +42,11 @@
       "flex-wrap",
       "items-center",
       "justify-center",
-      "gap-4",
+      "gap-x-4",
+      "gap-y-2",
       "px-6",
       "py-2",
+      "text-center",
       "text-sm"
     ],
     "ui-announcement-bar-link": [
@@ -60,16 +62,20 @@
     "ui-app-download-container": [
       "mx-auto",
       "grid",
+      "w-full",
       "max-w-page",
       "grid-cols-1",
       "items-center",
-      "gap-12",
+      "gap-8",
       "overflow-hidden",
       "rounded-lg",
       "bg-background",
-      "px-12",
-      "pt-16",
+      "px-6",
+      "pt-10",
       "text-foreground",
+      "md:gap-12",
+      "md:px-12",
+      "md:pt-16",
       "lg:grid-cols-2"
     ],
     "ui-app-download-copy": [
@@ -77,13 +83,15 @@
       "flex-col",
       "items-start",
       "gap-6",
-      "pb-16"
+      "lg:pb-16"
     ],
     "ui-app-download-image": [
       "mx-auto",
       "w-1/2",
       "self-end",
-      "rounded-t-md"
+      "rounded-t-md",
+      "md:w-1/3",
+      "lg:w-1/2"
     ],
     "ui-app-download-phone": [
       "size-6"
@@ -93,23 +101,33 @@
       "gap-4"
     ],
     "ui-app-download-text": [
-      "text-xl",
-      "text-muted-foreground"
+      "text-lg",
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-app-gallery": [
       "overflow-x-clip",
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "md:pt-20",
+      "lg:pt-28"
     ],
     "ui-app-gallery-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-20"
+      "gap-10",
+      "md:gap-16",
+      "lg:gap-20"
     ],
     "ui-app-gallery-lead": [
-      "text-xl",
-      "font-light"
+      "text-lg",
+      "font-light",
+      "md:text-xl"
     ],
     "ui-app-gallery-screen": [
       "w-full",
@@ -122,9 +140,15 @@
       "flex",
       "justify-center",
       "rounded-lg",
-      "px-12",
-      "pt-24",
-      "pb-12"
+      "px-4",
+      "pt-10",
+      "pb-6",
+      "md:px-6",
+      "md:pt-16",
+      "md:pb-8",
+      "lg:px-12",
+      "lg:pt-24",
+      "lg:pb-12"
     ],
     "ui-app-gallery-tile-tone-lilac": [
       "bg-chart-3",
@@ -153,10 +177,12 @@
     "ui-app-gallery-tiles": [
       "grid",
       "grid-cols-2",
-      "gap-10",
+      "gap-4",
       "md:grid-cols-4",
+      "md:gap-6",
       "lg:w-5/4",
-      "lg:grid-cols-5"
+      "lg:grid-cols-5",
+      "lg:gap-10"
     ],
     "ui-badge": [
       "inline-flex",
@@ -205,16 +231,19 @@
       "flex",
       "flex-col",
       "gap-4",
-      "p-8"
+      "p-6",
+      "lg:p-8"
     ],
-    "ui-blog-cards-date": [],
+    "ui-blog-cards-date": [
+      "whitespace-nowrap"
+    ],
     "ui-blog-cards-head": [
       "flex",
       "flex-col",
       "gap-4"
     ],
     "ui-blog-cards-image": [
-      "w-1/3",
+      "w-1/2",
       "self-start",
       "rounded-t-md"
     ],
@@ -224,10 +253,13 @@
       "justify-center",
       "overflow-hidden",
       "bg-accent",
-      "pt-8"
+      "px-6",
+      "pt-6"
     ],
     "ui-blog-cards-meta": [
-      "gap-4",
+      "flex-wrap",
+      "gap-x-4",
+      "gap-y-2",
       "text-sm",
       "text-muted-foreground"
     ],
@@ -393,8 +425,10 @@
       "gap-6",
       "rounded",
       "bg-card",
-      "p-12",
-      "text-card-foreground"
+      "p-6",
+      "text-card-foreground",
+      "md:p-8",
+      "lg:p-12"
     ],
     "ui-card-accent": [
       "bg-accent",
@@ -450,6 +484,7 @@
     "ui-changelog": [],
     "ui-changelog-date": [
       "text-sm",
+      "whitespace-nowrap",
       "text-muted-foreground"
     ],
     "ui-changelog-head": [
@@ -465,13 +500,17 @@
     "ui-changelog-list": [
       "flex",
       "flex-col",
-      "gap-10",
+      "gap-8",
       "border-l",
       "border-border",
-      "pl-8"
+      "pl-6",
+      "md:gap-10",
+      "md:pl-8"
     ],
     "ui-changelog-meta": [
-      "gap-4"
+      "flex-wrap",
+      "gap-x-4",
+      "gap-y-2"
     ],
     "ui-checkbox": [
       "shrink-0",
@@ -624,12 +663,13 @@
     "ui-contact-form-container": [
       "mx-auto",
       "grid",
+      "w-full",
       "max-w-page",
       "grid-cols-1",
-      "gap-12",
-      "px-6",
+      "gap-8",
+      "md:gap-10",
       "lg:grid-cols-2",
-      "lg:px-0"
+      "lg:gap-12"
     ],
     "ui-contact-form-copy": [
       "flex",
@@ -644,19 +684,23 @@
       "gap-6",
       "rounded-lg",
       "bg-muted",
-      "p-10"
+      "p-6",
+      "md:p-8",
+      "lg:p-10"
     ],
     "ui-contact-form-input": [],
     "ui-contact-form-label": [],
     "ui-contact-form-label-message": [],
     "ui-contact-form-text": [
-      "text-xl",
-      "text-muted-foreground"
+      "text-lg",
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-contact-form-textarea": [],
     "ui-cookie-banner": [
       "px-6",
-      "py-8"
+      "py-8",
+      "md:px-10"
     ],
     "ui-cookie-banner-actions": [
       "shrink-0",
@@ -666,6 +710,7 @@
       "mx-auto",
       "max-w-2xl",
       "flex-col",
+      "items-start",
       "justify-between",
       "gap-4",
       "rounded-lg",
@@ -675,7 +720,8 @@
       "shadow-lg",
       "inset-ring",
       "inset-ring-border",
-      "md:flex-row"
+      "md:flex-row",
+      "md:items-center"
     ],
     "ui-cookie-banner-text": [
       "text-sm"
@@ -689,70 +735,99 @@
     "ui-cta-centered-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
       "items-center",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
       "bg-primary",
       "px-6",
-      "py-20",
+      "py-12",
       "text-center",
-      "text-primary-foreground"
+      "text-primary-foreground",
+      "md:gap-8",
+      "md:px-10",
+      "md:py-16",
+      "lg:py-20"
     ],
     "ui-cta-centered-text": [
       "max-w-xl",
-      "text-xl"
+      "text-lg",
+      "md:text-xl"
     ],
     "ui-cta-centered-title": [
       "max-w-2xl",
-      "text-5xl",
-      "font-bold"
+      "text-4xl",
+      "font-bold",
+      "md:text-5xl"
     ],
     "ui-cta-split": [
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "md:pt-20",
+      "lg:pt-28"
     ],
     "ui-cta-split-aside": [
       "flex",
       "flex-col",
       "items-start",
-      "gap-16",
-      "lg:items-end"
+      "gap-8",
+      "md:gap-10",
+      "lg:items-end",
+      "lg:gap-16"
+    ],
+    "ui-cta-split-button": [
+      "w-full",
+      "md:w-auto"
     ],
     "ui-cta-split-container": [
       "mx-auto",
+      "w-full",
       "max-w-page"
     ],
     "ui-cta-split-mark": [
-      "size-20",
-      "text-foreground"
+      "size-12",
+      "text-foreground",
+      "md:size-16",
+      "lg:size-20"
     ],
     "ui-cta-split-panel": [
       "flex",
       "flex-col",
-      "gap-24",
+      "gap-12",
       "rounded-lg",
       "bg-accent",
-      "p-20",
-      "text-accent-foreground"
+      "p-8",
+      "text-accent-foreground",
+      "md:gap-16",
+      "md:p-12",
+      "lg:gap-24",
+      "lg:p-20"
     ],
     "ui-cta-split-row": [
       "grid-cols-1",
       "items-end",
-      "gap-12",
-      "lg:grid-cols-2"
+      "gap-8",
+      "lg:grid-cols-2",
+      "lg:gap-12"
     ],
     "ui-cta-split-text": [
       "max-w-lg",
-      "text-xl",
+      "text-lg",
       "leading-8",
       "font-light",
+      "md:text-xl",
       "lg:text-right"
     ],
     "ui-cta-split-title": [
       "max-w-xl",
-      "text-display",
-      "font-normal"
+      "text-5xl",
+      "font-normal",
+      "md:text-6xl",
+      "lg:text-display"
     ],
     "ui-dashboard-stats": [],
     "ui-dashboard-stats-card": [
@@ -761,7 +836,8 @@
       "gap-2",
       "rounded-lg",
       "bg-card",
-      "p-8"
+      "p-6",
+      "lg:p-8"
     ],
     "ui-dashboard-stats-grid": [
       "grid",
@@ -771,16 +847,7 @@
       "lg:grid-cols-4"
     ],
     "ui-dialog": [
-      "m-auto",
-      "flex",
-      "flex-col",
-      "bg-background",
-      "text-foreground",
-      "inset-ring",
-      "inset-ring-border",
-      "shadow-lg",
-      "backdrop:bg-foreground/20",
-      "rounded"
+      "max-w-full"
     ],
     "ui-dialog-card": [
       "bg-card",
@@ -833,16 +900,20 @@
     "ui-empty-state-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-xl",
       "flex-col",
       "items-center",
       "gap-6",
       "rounded-lg",
       "px-6",
-      "py-20",
+      "py-12",
       "text-center",
       "inset-ring",
-      "inset-ring-border"
+      "inset-ring-border",
+      "md:px-10",
+      "md:py-16",
+      "lg:py-20"
     ],
     "ui-empty-state-icon": [
       "size-6"
@@ -906,8 +977,10 @@
     "ui-faq-accordion-item": [
       "rounded-lg",
       "bg-muted",
-      "px-8",
-      "py-6"
+      "px-6",
+      "py-4",
+      "md:px-8",
+      "md:py-6"
     ],
     "ui-faq-accordion-list": [
       "flex",
@@ -925,7 +998,12 @@
       "font-medium"
     ],
     "ui-faq-tiles": [
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "md:pt-20",
+      "lg:pt-28"
     ],
     "ui-faq-tiles-answer": [
       "pt-4",
@@ -949,15 +1027,20 @@
     "ui-faq-tiles-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-16"
+      "gap-10",
+      "md:gap-12",
+      "lg:gap-16"
     ],
     "ui-faq-tiles-grid": [
       "grid-cols-1",
-      "gap-x-10",
-      "gap-y-8",
-      "md:grid-cols-2"
+      "gap-4",
+      "md:grid-cols-2",
+      "md:gap-6",
+      "lg:gap-x-10",
+      "lg:gap-y-8"
     ],
     "ui-faq-tiles-lead": [
       "text-xl",
@@ -975,13 +1058,16 @@
       "list-none",
       "items-center",
       "gap-6",
-      "text-xl",
-      "font-medium"
+      "text-lg",
+      "font-medium",
+      "md:text-xl"
     ],
     "ui-faq-tiles-tile": [
       "rounded-lg",
-      "px-10",
-      "py-6"
+      "px-6",
+      "py-6",
+      "md:px-8",
+      "lg:px-10"
     ],
     "ui-faq-tiles-tile-tone-lilac": [
       "bg-chart-3",
@@ -1009,12 +1095,18 @@
     ],
     "ui-faq-tiles-title": [
       "max-w-3xl",
-      "text-6xl",
+      "text-4xl",
       "leading-tight",
-      "font-bold"
+      "font-bold",
+      "md:text-5xl",
+      "lg:text-6xl"
     ],
     "ui-feature-cards": [
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-12",
+      "lg:pt-20"
     ],
     "ui-feature-cards-card": [
       "gap-6"
@@ -1032,22 +1124,28 @@
     "ui-feature-cards-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-12"
+      "gap-8",
+      "md:gap-10",
+      "lg:gap-12"
     ],
     "ui-feature-cards-grid": [
       "grid-cols-1",
-      "gap-10",
-      "md:grid-cols-3"
+      "gap-6",
+      "md:grid-cols-2",
+      "lg:grid-cols-3",
+      "lg:gap-10"
     ],
     "ui-feature-cards-head": [
       "flex-col",
       "items-start",
       "justify-between",
-      "gap-6",
+      "gap-4",
       "lg:flex-row",
-      "lg:items-center"
+      "lg:items-center",
+      "lg:gap-6"
     ],
     "ui-feature-cards-icon": [
       "size-6",
@@ -1055,8 +1153,9 @@
     ],
     "ui-feature-cards-lead": [
       "max-w-md",
-      "text-xl",
-      "font-light"
+      "text-lg",
+      "font-light",
+      "md:text-xl"
     ],
     "ui-feature-grid": [],
     "ui-feature-grid-badge": [
@@ -1068,10 +1167,13 @@
     "ui-feature-grid-grid": [
       "grid",
       "grid-cols-1",
-      "gap-x-10",
-      "gap-y-12",
+      "gap-8",
       "md:grid-cols-2",
-      "lg:grid-cols-3"
+      "md:gap-x-8",
+      "md:gap-y-10",
+      "lg:grid-cols-3",
+      "lg:gap-x-10",
+      "lg:gap-y-12"
     ],
     "ui-feature-grid-head": [
       "flex",
@@ -1091,11 +1193,17 @@
     "ui-feature-split": [],
     "ui-feature-split-art": [
       "flex",
+      "aspect-square",
       "justify-center",
+      "overflow-hidden",
       "rounded-lg",
       "bg-chart-3",
-      "px-12",
-      "pt-16"
+      "px-8",
+      "pt-10",
+      "md:aspect-video",
+      "md:px-12",
+      "md:pt-16",
+      "lg:aspect-square"
     ],
     "ui-feature-split-check": [
       "size-6",
@@ -1105,18 +1213,20 @@
     "ui-feature-split-container": [
       "mx-auto",
       "grid",
+      "w-full",
       "max-w-page",
       "grid-cols-1",
       "items-center",
-      "gap-16",
-      "px-6",
+      "gap-10",
+      "md:gap-12",
       "lg:grid-cols-2",
-      "lg:px-0"
+      "lg:gap-16"
     ],
     "ui-feature-split-copy": [
       "flex",
       "flex-col",
-      "gap-8"
+      "gap-6",
+      "md:gap-8"
     ],
     "ui-feature-split-head": [
       "flex",
@@ -1125,7 +1235,10 @@
     ],
     "ui-feature-split-image": [
       "w-1/2",
-      "rounded-t-md"
+      "self-start",
+      "rounded-t-md",
+      "md:w-1/3",
+      "lg:w-1/2"
     ],
     "ui-feature-split-item": [
       "flex",
@@ -1161,9 +1274,13 @@
       "gap-2"
     ],
     "ui-footer-newsletter": [
-      "px-0",
-      "pt-20",
-      "pb-24"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "pb-16",
+      "md:pt-20",
+      "lg:pb-24"
     ],
     "ui-footer-newsletter-brand": [
       "flex",
@@ -1191,6 +1308,7 @@
     ],
     "ui-footer-newsletter-container": [
       "mx-auto",
+      "w-full",
       "max-w-page"
     ],
     "ui-footer-newsletter-copyright": [
@@ -1235,13 +1353,19 @@
     "ui-footer-newsletter-panel": [
       "flex",
       "flex-col",
-      "gap-16",
+      "gap-10",
       "rounded-lg",
       "bg-background",
-      "px-12",
-      "pt-16",
+      "px-6",
+      "pt-10",
       "pb-6",
-      "text-foreground"
+      "text-foreground",
+      "md:gap-12",
+      "md:px-10",
+      "md:pt-12",
+      "lg:gap-16",
+      "lg:px-12",
+      "lg:pt-16"
     ],
     "ui-footer-newsletter-social": [
       "text-muted-foreground",
@@ -1273,6 +1397,9 @@
     "ui-footer-simple": [
       "border-t",
       "border-border",
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
       "py-10"
     ],
     "ui-footer-simple-brand": [
@@ -1284,20 +1411,23 @@
     "ui-footer-simple-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
       "items-center",
       "justify-between",
       "gap-6",
-      "px-6",
+      "text-center",
       "md:flex-row",
-      "lg:px-0"
+      "md:text-left"
     ],
     "ui-footer-simple-link": [],
     "ui-footer-simple-links": [
       "flex",
       "flex-wrap",
-      "gap-6"
+      "justify-center",
+      "gap-x-6",
+      "gap-y-2"
     ],
     "ui-footer-simple-nav": [],
     "ui-form": [
@@ -1325,8 +1455,10 @@
     "ui-grid-3": [
       "grid",
       "grid-cols-1",
-      "gap-10",
-      "md:grid-cols-3"
+      "gap-6",
+      "md:grid-cols-2",
+      "lg:grid-cols-3",
+      "lg:gap-10"
     ],
     "ui-grid-extra-else-1-2": [
       "grid-cols-1",
@@ -1470,8 +1602,8 @@
       "text-muted-foreground"
     ],
     "ui-hero-centered": [
-      "px-8",
-      "pt-8"
+      "p-4",
+      "md:p-8"
     ],
     "ui-hero-centered-actions": [
       "flex-wrap",
@@ -1484,29 +1616,35 @@
       "max-w-page",
       "flex-col",
       "items-center",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
       "bg-muted",
       "px-6",
-      "py-24",
-      "text-center"
+      "py-16",
+      "text-center",
+      "md:gap-8",
+      "md:px-10",
+      "md:py-20",
+      "lg:py-24"
     ],
     "ui-hero-centered-lead": [
       "max-w-2xl",
-      "text-xl",
-      "text-muted-foreground"
+      "text-lg",
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-hero-centered-title": [
       "max-w-3xl",
-      "text-6xl",
+      "text-4xl",
       "leading-none",
-      "font-semibold"
+      "font-semibold",
+      "md:text-5xl",
+      "lg:text-6xl"
     ],
     "ui-hero-phones": [
       "relative",
       "isolate",
-      "mx-4",
-      "mt-4",
+      "m-4",
       "flex",
       "flex-col",
       "overflow-hidden",
@@ -1516,17 +1654,19 @@
       "pt-6",
       "pb-12",
       "text-primary-foreground",
-      "md:mx-8",
-      "md:mt-8",
-      "md:px-12",
-      "md:pt-12",
-      "lg:aspect-video"
+      "md:m-8",
+      "md:px-10",
+      "md:pt-10",
+      "xl:aspect-video",
+      "xl:px-12",
+      "xl:pt-12"
     ],
     "ui-hero-phones-actions": [
       "mt-4",
       "flex-wrap",
       "justify-center",
-      "gap-6"
+      "gap-4",
+      "md:gap-6"
     ],
     "ui-hero-phones-art": [
       "pointer-events-none",
@@ -1534,11 +1674,12 @@
       "inset-0",
       "-z-10",
       "hidden",
-      "lg:block"
+      "xl:block"
     ],
     "ui-hero-phones-badge": [
-      "mt-auto",
-      "self-center"
+      "mt-12",
+      "self-center",
+      "xl:mt-auto"
     ],
     "ui-hero-phones-badge-icon": [
       "size-4",
@@ -1550,9 +1691,12 @@
       "max-w-3xl",
       "flex-col",
       "items-center",
-      "gap-8",
-      "pt-24",
-      "text-center"
+      "gap-6",
+      "pt-16",
+      "text-center",
+      "md:gap-8",
+      "md:pt-20",
+      "lg:pt-24"
     ],
     "ui-hero-phones-demo": [
       "font-bold",
@@ -1614,7 +1758,8 @@
     ],
     "ui-hero-phones-lead": [
       "max-w-2xl",
-      "text-xl"
+      "text-lg",
+      "md:text-xl"
     ],
     "ui-hero-phones-screen": [
       "absolute",
@@ -1626,13 +1771,18 @@
     ],
     "ui-hero-phones-title": [
       "max-w-2xl",
-      "text-5xl",
+      "text-4xl",
       "leading-none",
       "font-medium",
-      "md:text-6xl"
+      "md:text-5xl",
+      "lg:text-6xl"
     ],
     "ui-hero-split": [
-      "py-16"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "py-12",
+      "md:py-16"
     ],
     "ui-hero-split-actions": [
       "flex-wrap",
@@ -1640,41 +1790,54 @@
     ],
     "ui-hero-split-art": [
       "flex",
+      "aspect-square",
       "justify-center",
+      "overflow-hidden",
       "rounded-lg",
       "bg-accent",
-      "px-12",
-      "pt-12"
+      "px-8",
+      "pt-8",
+      "md:aspect-video",
+      "md:px-12",
+      "md:pt-12",
+      "lg:aspect-square"
     ],
     "ui-hero-split-container": [
       "mx-auto",
       "grid",
+      "w-full",
       "max-w-page",
       "grid-cols-1",
       "items-center",
-      "gap-12",
-      "px-6",
+      "gap-10",
       "lg:grid-cols-2",
-      "lg:px-0"
+      "lg:gap-12"
     ],
     "ui-hero-split-copy": [
       "flex",
       "flex-col",
       "items-start",
-      "gap-8"
+      "gap-6",
+      "md:gap-8"
     ],
     "ui-hero-split-image": [
       "w-1/2",
-      "rounded-t-md"
+      "self-start",
+      "rounded-t-md",
+      "md:w-1/3",
+      "lg:w-1/2"
     ],
     "ui-hero-split-lead": [
-      "text-xl",
-      "text-muted-foreground"
+      "text-lg",
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-hero-split-title": [
-      "text-6xl",
+      "text-4xl",
       "leading-none",
-      "font-semibold"
+      "font-semibold",
+      "md:text-5xl",
+      "lg:text-6xl"
     ],
     "ui-icon": [
       "inline-block",
@@ -1913,9 +2076,10 @@
       "gap-4",
       "rounded-lg",
       "bg-card",
-      "p-8",
+      "p-6",
       "inset-ring",
-      "inset-ring-border"
+      "inset-ring-border",
+      "lg:p-8"
     ],
     "ui-item-title": [
       "text-xl",
@@ -1990,21 +2154,28 @@
       "text-sm"
     ],
     "ui-login-card": [
-      "py-24"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "py-16",
+      "md:py-20",
+      "lg:py-24"
     ],
     "ui-login-card-button": [
       "w-full"
     ],
     "ui-login-card-card": [
-      "gap-8",
-      "p-10"
+      "gap-6",
+      "p-6",
+      "md:gap-8",
+      "md:p-10"
     ],
     "ui-login-card-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-md",
-      "flex-col",
-      "px-6"
+      "flex-col"
     ],
     "ui-login-card-field": [],
     "ui-login-card-foot": [
@@ -2026,16 +2197,20 @@
     "ui-login-card-input": [],
     "ui-login-card-label": [],
     "ui-logo-cloud": [
-      "py-16"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "py-12",
+      "md:py-16"
     ],
     "ui-logo-cloud-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
       "items-center",
-      "gap-8",
-      "px-6"
+      "gap-8"
     ],
     "ui-logo-cloud-logo": [
       "h-10",
@@ -2048,7 +2223,8 @@
       "flex-wrap",
       "items-center",
       "justify-center",
-      "gap-12"
+      "gap-8",
+      "md:gap-12"
     ],
     "ui-logo-cloud-title": [
       "text-base",
@@ -2090,29 +2266,34 @@
       "text-muted-foreground"
     ],
     "ui-navbar": [
+      "@container",
       "flex",
       "items-center",
       "justify-between",
-      "gap-8"
+      "gap-4",
+      "@5xl:gap-8"
     ],
     "ui-navbar-actions": [
       "flex",
       "items-center",
-      "gap-4"
+      "gap-2",
+      "@5xl:gap-4"
     ],
     "ui-navbar-brand": [
       "gap-2",
-      "text-3xl",
+      "text-2xl",
       "leading-none",
       "font-bold",
       "text-current",
       "no-underline",
-      "hover:no-underline"
+      "hover:no-underline",
+      "@5xl:text-3xl"
     ],
     "ui-navbar-cta": [
       "hidden",
-      "px-8",
-      "md:inline-flex"
+      "px-6",
+      "md:inline-flex",
+      "@5xl:px-8"
     ],
     "ui-navbar-mark": [
       "size-6"
@@ -2120,14 +2301,17 @@
     "ui-navbar-menu": [
       "hidden",
       "items-center",
-      "gap-8",
-      "lg:flex"
+      "gap-4",
+      "lg:flex",
+      "@5xl:gap-8"
     ],
     "ui-navbar-menu-link": [
-      "text-lg",
+      "text-base",
       "leading-none",
+      "whitespace-nowrap",
       "text-current",
-      "hover:underline"
+      "hover:underline",
+      "@5xl:text-lg"
     ],
     "ui-navbar-sheet": [],
     "ui-navbar-sheet-close": [
@@ -2157,17 +2341,24 @@
     "ui-newsletter-band-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "items-center",
+      "items-start",
       "justify-between",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
       "bg-accent",
-      "px-12",
-      "py-16",
+      "px-6",
+      "py-10",
       "text-accent-foreground",
-      "lg:flex-row"
+      "md:gap-8",
+      "md:px-10",
+      "md:py-12",
+      "lg:flex-row",
+      "lg:items-center",
+      "lg:px-12",
+      "lg:py-16"
     ],
     "ui-newsletter-band-copy": [
       "flex",
@@ -2178,14 +2369,21 @@
       "flex",
       "w-full",
       "max-w-md",
-      "gap-2"
+      "flex-col",
+      "gap-2",
+      "md:flex-row"
     ],
     "ui-newsletter-band-input": [],
     "ui-newsletter-band-label": [
       "sr-only"
     ],
     "ui-not-found": [
-      "py-24"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "py-16",
+      "md:py-20",
+      "lg:py-24"
     ],
     "ui-not-found-code": [
       "text-display",
@@ -2196,16 +2394,17 @@
     "ui-not-found-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-2xl",
       "flex-col",
       "items-center",
       "gap-6",
-      "px-6",
       "text-center"
     ],
     "ui-not-found-text": [
-      "text-xl",
-      "text-muted-foreground"
+      "text-lg",
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-not-found-title": [
       "text-4xl",
@@ -2274,10 +2473,13 @@
     "ui-pricing-three-tiers-plan": [
       "flex",
       "flex-col",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
-      "p-10",
-      "text-card-foreground"
+      "p-6",
+      "text-card-foreground",
+      "md:gap-8",
+      "md:p-8",
+      "lg:p-10"
     ],
     "ui-pricing-three-tiers-plan-cta": [
       "mt-auto",
@@ -2288,8 +2490,9 @@
       "font-semibold"
     ],
     "ui-pricing-three-tiers-plan-name-row": [
+      "flex-wrap",
       "justify-between",
-      "gap-4"
+      "gap-2"
     ],
     "ui-pricing-three-tiers-plan-theme-dark": [
       "bg-background",
@@ -2307,6 +2510,7 @@
     ],
     "ui-pricing-three-tiers-price": [
       "flex",
+      "flex-wrap",
       "items-baseline",
       "gap-2"
     ],
@@ -2315,14 +2519,22 @@
       "font-bold"
     ],
     "ui-pricing-two-plans": [
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "md:pt-20",
+      "lg:pt-28"
     ],
     "ui-pricing-two-plans-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-16"
+      "gap-10",
+      "md:gap-12",
+      "lg:gap-16"
     ],
     "ui-pricing-two-plans-feature": [
       "flex",
@@ -2346,11 +2558,17 @@
     "ui-pricing-two-plans-plan": [
       "flex",
       "flex-col",
-      "gap-12",
+      "gap-8",
       "rounded-lg",
-      "p-16",
-      "pb-24",
-      "text-card-foreground"
+      "p-8",
+      "pb-10",
+      "text-card-foreground",
+      "md:gap-10",
+      "md:p-10",
+      "md:pb-12",
+      "lg:gap-12",
+      "lg:p-16",
+      "lg:pb-24"
     ],
     "ui-pricing-two-plans-plan-cta": [
       "mt-auto",
@@ -2380,8 +2598,9 @@
     "ui-pricing-two-plans-plans": [
       "grid",
       "grid-cols-1",
-      "gap-10",
-      "lg:grid-cols-2"
+      "gap-6",
+      "md:grid-cols-2",
+      "lg:gap-10"
     ],
     "ui-pricing-two-plans-price": [
       "flex",
@@ -2465,24 +2684,32 @@
       "[&::-moz-range-thumb]:bg-primary"
     ],
     "ui-section": [
-      "py-24"
+      "px-6",
+      "py-16",
+      "md:px-10",
+      "md:py-20",
+      "lg:px-12",
+      "lg:py-24"
     ],
     "ui-section-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-12",
-      "px-6",
-      "lg:px-0"
+      "gap-8",
+      "md:gap-10",
+      "lg:gap-12"
     ],
     "ui-section-container-narrow": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-3xl",
       "flex-col",
-      "gap-12",
-      "px-6"
+      "gap-8",
+      "md:gap-10",
+      "lg:gap-12"
     ],
     "ui-section-head-center": [
       "flex",
@@ -2493,18 +2720,22 @@
     ],
     "ui-section-lead": [
       "max-w-2xl",
-      "text-xl",
+      "text-lg",
       "font-light",
-      "text-muted-foreground"
+      "text-muted-foreground",
+      "md:text-xl"
     ],
     "ui-section-title": [
-      "text-5xl",
-      "font-bold"
+      "text-4xl",
+      "font-bold",
+      "md:text-5xl"
     ],
     "ui-section-title-display": [
-      "text-6xl",
+      "text-4xl",
       "leading-tight",
-      "font-bold"
+      "font-bold",
+      "md:text-5xl",
+      "lg:text-6xl"
     ],
     "ui-section-title-sm": [
       "text-3xl",
@@ -2575,17 +2806,20 @@
     "ui-settings-panel-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-2xl",
-      "flex-col",
-      "px-6"
+      "flex-col"
     ],
     "ui-settings-panel-form": [
       "flex",
       "flex-col",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
       "bg-card",
-      "p-10"
+      "p-6",
+      "md:gap-8",
+      "md:p-8",
+      "lg:p-10"
     ],
     "ui-settings-panel-label": [
       "text-base",
@@ -2602,8 +2836,9 @@
       "gap-4",
       "rounded-md",
       "bg-background",
-      "px-6",
-      "py-4"
+      "px-4",
+      "py-4",
+      "md:px-6"
     ],
     "ui-settings-panel-switch": [],
     "ui-settings-panel-title": [
@@ -2701,21 +2936,28 @@
       "size-8"
     ],
     "ui-signup-card": [
-      "py-24"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "py-16",
+      "md:py-20",
+      "lg:py-24"
     ],
     "ui-signup-card-button": [
       "w-full"
     ],
     "ui-signup-card-card": [
-      "gap-8",
-      "p-10"
+      "gap-6",
+      "p-6",
+      "md:gap-8",
+      "md:p-10"
     ],
     "ui-signup-card-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-md",
-      "flex-col",
-      "px-6"
+      "flex-col"
     ],
     "ui-signup-card-field": [],
     "ui-signup-card-foot": [
@@ -2764,37 +3006,52 @@
       "focus:text-foreground"
     ],
     "ui-social-proof-split": [
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
       "pt-10"
     ],
     "ui-social-proof-split-body": [
       "flex",
       "flex-col",
       "justify-between",
-      "gap-12",
-      "py-6"
+      "gap-8",
+      "lg:gap-12",
+      "lg:py-6"
     ],
     "ui-social-proof-split-container": [
       "mx-auto",
       "grid",
+      "w-full",
       "max-w-page",
       "grid-cols-1",
-      "gap-16",
-      "lg:grid-cols-2"
+      "gap-8",
+      "md:gap-12",
+      "lg:grid-cols-2",
+      "lg:gap-16"
     ],
     "ui-social-proof-split-logo": [
-      "h-12",
+      "h-8",
       "w-auto",
+      "md:h-10",
+      "lg:h-12",
       "dark:brightness-0",
       "dark:invert"
     ],
     "ui-social-proof-split-logos": [
       "flex-wrap",
-      "justify-between",
-      "gap-8",
+      "justify-center",
+      "gap-6",
       "rounded-lg",
       "bg-muted",
-      "px-12",
-      "py-10"
+      "px-6",
+      "py-6",
+      "md:justify-between",
+      "md:gap-8",
+      "md:px-10",
+      "md:py-8",
+      "lg:px-12",
+      "lg:py-10"
     ],
     "ui-social-proof-split-panel": [
       "flex",
@@ -2803,9 +3060,12 @@
       "overflow-hidden",
       "rounded-lg",
       "bg-accent",
-      "pt-20",
+      "pt-12",
+      "md:aspect-video",
+      "md:pt-16",
       "lg:aspect-auto",
-      "lg:h-140"
+      "lg:h-140",
+      "lg:pt-20"
     ],
     "ui-social-proof-split-screen": [
       "w-1/2",
@@ -2815,9 +3075,11 @@
       "ring-secondary"
     ],
     "ui-social-proof-split-title": [
-      "text-4xl",
-      "leading-12",
-      "font-medium"
+      "text-3xl",
+      "leading-10",
+      "font-medium",
+      "md:text-4xl",
+      "md:leading-12"
     ],
     "ui-span-1": [
       "col-span-1"
@@ -2970,7 +3232,8 @@
       "gap-2",
       "rounded-lg",
       "bg-muted",
-      "p-8"
+      "p-6",
+      "lg:p-8"
     ],
     "ui-stats-row-list": [
       "grid",
@@ -2999,13 +3262,16 @@
       "gap-4",
       "rounded-lg",
       "bg-muted",
-      "p-10"
+      "p-6",
+      "md:p-8",
+      "lg:p-10"
     ],
     "ui-steps-list": [
       "grid",
       "grid-cols-1",
-      "gap-10",
-      "md:grid-cols-3"
+      "gap-6",
+      "lg:grid-cols-3",
+      "lg:gap-10"
     ],
     "ui-summary": [
       "flex",
@@ -3107,11 +3373,18 @@
       "gap-4",
       "rounded-lg",
       "bg-muted",
-      "p-10",
-      "text-center"
+      "p-6",
+      "text-center",
+      "md:p-8",
+      "lg:p-10"
     ],
     "ui-testimonial-cards": [
-      "pt-28"
+      "px-6",
+      "md:px-10",
+      "lg:px-12",
+      "pt-16",
+      "md:pt-20",
+      "lg:pt-28"
     ],
     "ui-testimonial-cards-author": [
       "gap-4"
@@ -3124,9 +3397,12 @@
     "ui-testimonial-cards-container": [
       "mx-auto",
       "flex",
+      "w-full",
       "max-w-page",
       "flex-col",
-      "gap-16"
+      "gap-10",
+      "md:gap-12",
+      "lg:gap-16"
     ],
     "ui-testimonial-cards-item": [],
     "ui-testimonial-cards-lead": [
@@ -3145,18 +3421,15 @@
       "leading-5",
       "text-muted-foreground"
     ],
-    "ui-testimonial-quote": [
-      "py-24"
-    ],
+    "ui-testimonial-quote": [],
     "ui-testimonial-quote-author": [
       "gap-4"
     ],
     "ui-testimonial-quote-avatar": [],
     "ui-testimonial-quote-container": [
       "mx-auto",
-      "max-w-page",
-      "px-6",
-      "lg:px-0"
+      "w-full",
+      "max-w-page"
     ],
     "ui-testimonial-quote-name": [
       "font-bold"
@@ -3165,19 +3438,25 @@
       "flex",
       "flex-col",
       "items-center",
-      "gap-8",
+      "gap-6",
       "rounded-lg",
       "bg-chart-5",
-      "px-12",
-      "py-20",
+      "px-6",
+      "py-12",
       "text-center",
-      "text-foreground"
+      "text-foreground",
+      "md:gap-8",
+      "md:px-12",
+      "md:py-16",
+      "lg:py-20"
     ],
     "ui-testimonial-quote-quote": [
       "max-w-3xl",
-      "text-3xl",
-      "leading-10",
-      "font-medium"
+      "text-2xl",
+      "leading-8",
+      "font-medium",
+      "md:text-3xl",
+      "md:leading-10"
     ],
     "ui-testimonial-quote-who": [
       "flex",

@@ -24,7 +24,7 @@ templ AppGallery(p AppGalleryData) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}) {
+			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles", "data-bleed": "inline-end"}}) {
 				for _, tile := range p.Tiles {
 					@list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-tile"}}) {
 						if tile.Src != "" {

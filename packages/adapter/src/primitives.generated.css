@@ -43,7 +43,7 @@
   .ui-button-x-layout-icon-size-sm { @apply size-8 p-0 [&>svg]:size-4; }
   .ui-button-x-variant-ghost-layout-icon { @apply text-muted-foreground; }
   .ui-button-x-variant-outline-layout-icon { @apply text-muted-foreground; }
-  .ui-card { @apply flex flex-col gap-6 rounded bg-card p-12 text-card-foreground; }
+  .ui-card { @apply flex flex-col gap-6 rounded bg-card p-6 text-card-foreground md:p-8 lg:p-12; }
   .ui-card-accent { @apply bg-accent text-accent-foreground; }
   .ui-card-compact { @apply gap-4 p-6; }
   .ui-card-description { @apply text-sm text-muted-foreground; }

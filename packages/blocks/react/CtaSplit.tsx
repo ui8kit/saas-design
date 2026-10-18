@@ -18,7 +18,7 @@ export function CtaSplit({ data }: { data: CtaSplitData }) {
               <Text className="ui-cta-split-text" data-class="ui-cta-split-text">
                 {data.text}
               </Text>
-              <Button size={"xl"} href={data.cta.href || undefined}>
+              <Button className="ui-cta-split-button" data-class="ui-cta-split-button" size={"xl"} href={data.cta.href || undefined}>
                 {data.cta.label}
               </Button>
             </Stack>

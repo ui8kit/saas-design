@@ -17,7 +17,7 @@
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-app-gallery-tiles" data-class="ui-app-gallery-tiles">
+    <List class="ui-app-gallery-tiles" data-class="ui-app-gallery-tiles" data-bleed="inline-end">
       {#each data.tiles as tile}
         <ListItem class="ui-app-gallery-tile ui-app-gallery-tile-tone-{tile.tone}" data-class="ui-app-gallery-tile">
           {#if tile.src}
