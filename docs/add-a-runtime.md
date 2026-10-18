@@ -102,7 +102,7 @@ For a new runtime, add a third emitter alongside the templ and Svelte ones:
 4. Emit data types from `schema`, as `types.ts` does for Svelte.
 5. Extend `packages/blocks/scripts/parity.ts` to render the same 49 cases (`scripts/cases.ts`) in the new runtime.
 
-Also add `packages/icons` output for the runtime: `packages/icons/scripts/generate.ts` currently writes templ + Svelte from the lucide-static subset.
+Also add `packages/icons` output for the runtime. `packages/icons/scripts/generate.ts` currently writes a Go file (`templ/icons.go`) and a TS module (`src/icons.generated.ts`) from the lucide-static subset.
 
 This is the largest piece of work, and **nothing of it exists yet**. Track it in `.project/backlog/` when you start.
 
