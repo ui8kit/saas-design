@@ -141,6 +141,23 @@ bun run design:build                       # → apps/design/build (49 prerender
 
 `@ui8kit/codegen` also emits React 19, Vue 3, SolidJS, Latte and Twig. This repo only wires templ and Svelte. See [docs/add-a-runtime.md](docs/add-a-runtime.md) for what has to be added; the block emitter is the main piece of work.
 
+## Use it with an AI agent
+
+The repo is written so that an AI coding agent can repeat the result. Point the agent at the repo and ask in plain words. It should read [AGENTS.md](AGENTS.md) first; the guides it needs are [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md) (another design) and [docs/add-a-runtime.md](docs/add-a-runtime.md) (another framework).
+
+Example prompts:
+
+- **You like this design but want React / Next.js:**
+  > "I want a restaurant website in this same design, on React. Build it in `apps/resta`."
+- **You found another great Figma design:**
+  > "Study this repo and build me a site and a design system for this design, on Vue. The `.fig` is at `/path/outside/the/repo/design.fig`."
+- **Same design, different content:**
+  > "Keep this design, but turn the landing page into a fitness-coach site. Change the copy and images through the fixtures, not the components."
+- **Another page in the same system:**
+  > "Add a pricing page and a blog index to `apps/site`, reusing the existing blocks."
+
+> **Note: this repo has two runtimes, Go templ (`apps/site`) and Svelte 5 (`apps/design`), kept in parity.** If you don't need both, say so up front, e.g. "I want **React only**" (or "Vue only", "Svelte only"). The agent then drops the other runtimes' outputs, apps and checks instead of keeping them in sync. How each request is interpreted: [AGENTS.md → How to interpret common requests](AGENTS.md#how-to-interpret-common-requests).
+
 ## Documentation
 
 | Doc | For |

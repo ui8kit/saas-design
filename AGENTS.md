@@ -100,6 +100,37 @@ bun run test:behaviors                            # Sheet + ThemeToggle behaviou
 
 Details of each check and how to fix it: [docs/checks.md](docs/checks.md). For a new Figma file: [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md). For a new runtime: [docs/add-a-runtime.md](docs/add-a-runtime.md).
 
+## How to interpret common requests
+
+Users often phrase requests the way the [README examples](README.md#use-it-with-an-ai-agent) do. Map them like this, and confirm assumptions in your first reply.
+
+| Request | Interpretation |
+|---|---|
+| "A restaurant site in this same design, on React, in `apps/resta`" | **New app folder** `apps/resta`, one per request. **Reuse** `packages/tokens`, `packages/adapter`, the behaviours and the fixtures pattern. New content goes in as contract records: extend `tools/content.ts` / `fixtures/content/source`, then `tools/views.ts` view models. Never hard-code copy in components. Primitives: add the `react` runtime to `packages/ui/scripts/generate.ts`. Blocks: write a React block emitter ([docs/add-a-runtime.md](docs/add-a-runtime.md)); none exists yet. Add the app to `tools/check.sh`, the screenshot tools and `tools/test-behaviors.ts`, plus a `vercel.json`. |
+| "Study this repo and build a site + design system for this (other) Figma design, on Vue" | Follow [docs/replicate-with-new-figma.md](docs/replicate-with-new-figma.md): extract with `FIG=` outside the repo, remap `fixtures/tokens/mapping.json`, rewrite the design-specific scripts (table in that doc), map frames to blocks, regenerate, then measure drift. Do the runtime part as in [docs/add-a-runtime.md](docs/add-a-runtime.md). Credit the new design's author and check its license (CC BY or other) the same way [LICENSE-DESIGN.md](LICENSE-DESIGN.md) does. |
+| "Same design, different content" | Change only the fixtures (`tools/content.ts` mapping, `fixtures/content/source/*.json`, media entries), then run `bun run content && bun run contract && bun tools/views.ts`. Leave blocks and tokens unchanged unless asked. |
+| "Add a page" | Site: add a view file (e.g. `fixtures/views/<page>.json`, written by `tools/views.ts`) and an entry in `pages` in `apps/site/cmd/export/main.go`. Design app: add a route. Reuse existing blocks; add a block only when no block fits (≤ 45 total). |
+| "Change the brand colors / dark theme" | Edit `fixtures/tokens/mapping.json` only, then `bun run tokens`, then `shots:modes`. |
+
+### Single-runtime mode ("React only", "Vue only", "Svelte only", "templ only")
+
+When the user wants **one** runtime, do not keep the others in parity. Remove them once, in a dedicated commit, so `bun run check` stays meaningful:
+
+| Keep only… | Drop | Adjust |
+|---|---|---|
+| **Svelte** | `apps/site`; templ output of `packages/ui/templ`, `packages/blocks/templ`, `packages/icons/templ`; the templ emitters in `packages/blocks/scripts/generate.ts` | `tools/check.sh`: remove the `templ generate`/drift lines and the apps/site step. Parity scripts: compare Svelte against the canonical renderer only (ui) or drop the cross-runtime DOM comparison (blocks). Go is no longer a prerequisite. |
+| **templ** (static HTML) | `apps/design`; `packages/ui/svelte`, `packages/blocks/svelte` | `tools/check.sh`: remove the apps/design step. Parity: templ vs canonical. Screenshot and behaviour tools: site only. |
+| **React / Vue / Solid** (not built yet) | both `apps/site` and `apps/design` once the new app replaces them; templ + Svelte outputs | Add the runtime first ([docs/add-a-runtime.md](docs/add-a-runtime.md)): primitives via codegen, a block emitter, an app. Then switch parity to *new runtime vs canonical* and remove the templ/Svelte steps from `tools/check.sh`. Go is only needed while templ exists. |
+
+In every mode, keep:
+- fixtures and contract validation;
+- tokens, adapter and the ui8px lint;
+- the brand-token guard and the standalone compile;
+- link checking;
+- the behaviour script and its test.
+
+Update `README.md` (Quickstart, Pipeline), this file and `docs/` in the same change.
+
 ## Definition of done
 
 A change is done only when all of these hold:
