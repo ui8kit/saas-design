@@ -14,6 +14,6 @@ bun run shots:modes                    # light/dark/mobile/mobile-menu screensho
 ```
 
 - `.dark` on `<html>` comes from `packages/ui/behaviors/theme-init.js` (the only inline script; `localStorage.theme`, else `prefers-color-scheme`). Toggle and sheet logic: `packages/ui/behaviors/ui8kit.js` (hooks: `data-ui8kit="theme-toggle|sheet|sheet-trigger|sheet-close|sheet-overlay"`).
-- Force a scope with `data-theme="light"` / `data-theme="dark"` (hero stays light; Premium plan and CTA panel stay dark). `dark:` utilities do **not** match `data-theme`.
+- Force a scope with `data-theme="light"` / `data-theme="dark"` (hero stays light; Premium plan, footer newsletter panel and app-download copy stay dark). `dark:` utilities do **not** match `data-theme`.
 - Site: ThemeToggle + SheetTrigger in the navbar `actions` group; nav collapses to the sheet below `lg`. Design app: ThemeToggle in the sidebar head and mobile top bar; sidebar becomes a left Sheet below `lg`.
 - Rules: `.cursor/rules/dark-mode.mdc`, `.cursor/rules/sheet.mdc`.
