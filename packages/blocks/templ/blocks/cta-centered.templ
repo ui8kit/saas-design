@@ -13,15 +13,15 @@ import (
 
 // CtaCentered: Primary band with headline and two actions.
 templ CtaCentered(p CtaCenteredData) {
-	@block.Block(block.BlockProps{Class: "ui-cta-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "cta-centered", "aria-labelledby": "cta-centered-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-cta-centered-container", Attrs: templ.Attributes{"data-class": "cta-centered-container"}}) {
-			@title.Title(title.TitleProps{Class: "ui-cta-centered-title", As: 2, Attrs: templ.Attributes{"data-class": "cta-centered-title", "id": "cta-centered-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-cta-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-cta-centered", "aria-labelledby": "cta-centered-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-cta-centered-container", Attrs: templ.Attributes{"data-class": "ui-cta-centered-container"}}) {
+			@title.Title(title.TitleProps{Class: "ui-cta-centered-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-cta-centered-title", "id": "cta-centered-title"}}) {
 				{ p.Title }
 			}
-			@text.Text(text.TextProps{Class: "ui-cta-centered-text", Attrs: templ.Attributes{"data-class": "cta-centered-text"}}) {
+			@text.Text(text.TextProps{Class: "ui-cta-centered-text", Attrs: templ.Attributes{"data-class": "ui-cta-centered-text"}}) {
 				{ p.Text }
 			}
-			@group.Group(group.GroupProps{Class: "ui-cta-centered-actions", Attrs: templ.Attributes{"data-class": "cta-centered-actions"}}) {
+			@group.Group(group.GroupProps{Class: "ui-cta-centered-actions", Attrs: templ.Attributes{"data-class": "ui-cta-centered-actions"}}) {
 				@button.Button(button.ButtonProps{Variant: "contrast", Size: "lg", Href: p.Primary.Href}) {
 					{ p.Primary.Label }
 				}

@@ -87,7 +87,7 @@ func DashboardStats(p DashboardStatsData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-dashboard-stats-title", As: 2, Attrs: templ.Attributes{"data-class": "dashboard-stats-title", "id": "dashboard-stats-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "dashboard-stats-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -143,7 +143,7 @@ func DashboardStats(p DashboardStatsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-label", Attrs: templ.Attributes{"data-class": "dashboard-stats-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -174,7 +174,7 @@ func DashboardStats(p DashboardStatsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-value", Attrs: templ.Attributes{"data-class": "dashboard-stats-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-section-title-sm", Attrs: templ.Attributes{"data-class": "ui-section-title-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -205,32 +205,32 @@ func DashboardStats(p DashboardStatsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-hint", Attrs: templ.Attributes{"data-class": "dashboard-stats-hint"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-dashboard-stats-card", Attrs: templ.Attributes{"data-class": "dashboard-stats-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-dashboard-stats-card", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-dashboard-stats-grid", Attrs: templ.Attributes{"data-class": "dashboard-stats-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-dashboard-stats-grid", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-dashboard-stats-container", Attrs: templ.Attributes{"data-class": "dashboard-stats-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-dashboard-stats", Tag: "section", Attrs: templ.Attributes{"data-class": "dashboard-stats", "aria-labelledby": "dashboard-stats-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-dashboard-stats", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats", "aria-labelledby": "dashboard-stats-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

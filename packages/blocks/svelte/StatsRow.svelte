@@ -7,18 +7,18 @@
   let { data }: { data: StatsRowData } = $props();
 </script>
 
-<Block class="ui-stats-row" data-class="stats-row" tag="section" aria-labelledby="stats-row-title">
-  <Container class="ui-stats-row-container" data-class="stats-row-container">
-    <Title class="ui-stats-row-title" data-class="stats-row-title" as={2} id="stats-row-title">
+<Block class="ui-section ui-stats-row" data-class="ui-stats-row" tag="section" aria-labelledby="stats-row-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Title class="ui-stats-row-title" data-class="ui-stats-row-title" as={2} id="stats-row-title">
       {data.title}
     </Title>
-    <List class="ui-stats-row-list" data-class="stats-row-list">
+    <List class="ui-stats-row-list" data-class="ui-stats-row-list">
       {#each data.items as s}
-        <ListItem class="ui-stats-row-item" data-class="stats-row-item">
-          <Inline class="ui-stats-row-value" data-class="stats-row-value">
+        <ListItem class="ui-stats-row-item" data-class="ui-stats-row-item">
+          <Inline class="ui-section-title" data-class="ui-section-title">
             {s.value}
           </Inline>
-          <Inline class="ui-stats-row-label" data-class="stats-row-label">
+          <Inline class="ui-muted" data-class="ui-muted">
             {s.label}
           </Inline>
         </ListItem>

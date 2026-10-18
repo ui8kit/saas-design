@@ -12,18 +12,18 @@ import (
 
 // StatsRow: Four headline numbers with labels.
 templ StatsRow(p StatsRowData) {
-	@block.Block(block.BlockProps{Class: "ui-stats-row", Tag: "section", Attrs: templ.Attributes{"data-class": "stats-row", "aria-labelledby": "stats-row-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-stats-row-container", Attrs: templ.Attributes{"data-class": "stats-row-container"}}) {
-			@title.Title(title.TitleProps{Class: "ui-stats-row-title", As: 2, Attrs: templ.Attributes{"data-class": "stats-row-title", "id": "stats-row-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-stats-row", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-stats-row", "aria-labelledby": "stats-row-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@title.Title(title.TitleProps{Class: "ui-stats-row-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-stats-row-title", "id": "stats-row-title"}}) {
 				{ p.Title }
 			}
-			@list.List(list.ListProps{Class: "ui-stats-row-list", Attrs: templ.Attributes{"data-class": "stats-row-list"}}) {
+			@list.List(list.ListProps{Class: "ui-stats-row-list", Attrs: templ.Attributes{"data-class": "ui-stats-row-list"}}) {
 				for _, s := range p.Items {
-					@list.ListItem(list.ListItemProps{Class: "ui-stats-row-item", Attrs: templ.Attributes{"data-class": "stats-row-item"}}) {
-						@inline.Inline(inline.InlineProps{Class: "ui-stats-row-value", Attrs: templ.Attributes{"data-class": "stats-row-value"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-stats-row-item", Attrs: templ.Attributes{"data-class": "ui-stats-row-item"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-section-title", Attrs: templ.Attributes{"data-class": "ui-section-title"}}) {
 							{ s.Value }
 						}
-						@inline.Inline(inline.InlineProps{Class: "ui-stats-row-label", Attrs: templ.Attributes{"data-class": "stats-row-label"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ s.Label }
 						}
 					}

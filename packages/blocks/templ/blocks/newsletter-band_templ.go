@@ -103,7 +103,7 @@ func NewsletterBand(p NewsletterBandData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-newsletter-band-title", As: 2, Attrs: templ.Attributes{"data-class": "newsletter-band-title", "id": "newsletter-band-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "newsletter-band-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -134,13 +134,13 @@ func NewsletterBand(p NewsletterBandData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-newsletter-band-text", Attrs: templ.Attributes{"data-class": "newsletter-band-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-newsletter-band-copy", Attrs: templ.Attributes{"data-class": "newsletter-band-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-newsletter-band-copy", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -183,7 +183,7 @@ func NewsletterBand(p NewsletterBandData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-newsletter-band-label", HTMLFor: "newsletter-band-email", Attrs: templ.Attributes{"data-class": "newsletter-band-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-newsletter-band-label", HTMLFor: "newsletter-band-email", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -191,7 +191,7 @@ func NewsletterBand(p NewsletterBandData) templ.Component {
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
-					templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-newsletter-band-input", ID: "newsletter-band-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Placeholder, Attrs: templ.Attributes{"data-class": "newsletter-band-input"}}).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-newsletter-band-input", ID: "newsletter-band-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Placeholder, Attrs: templ.Attributes{"data-class": "ui-newsletter-band-input"}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -228,19 +228,19 @@ func NewsletterBand(p NewsletterBandData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-newsletter-band-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "newsletter-band-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-newsletter-band-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-newsletter-band-container", Attrs: templ.Attributes{"data-class": "newsletter-band-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-newsletter-band-container", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-newsletter-band", Tag: "section", Attrs: templ.Attributes{"data-class": "newsletter-band", "aria-labelledby": "newsletter-band-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-newsletter-band", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-newsletter-band", "aria-labelledby": "newsletter-band-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

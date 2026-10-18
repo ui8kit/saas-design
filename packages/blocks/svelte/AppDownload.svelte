@@ -8,16 +8,16 @@
   let { data }: { data: AppDownloadData } = $props();
 </script>
 
-<Block class="ui-app-download" data-class="app-download" tag="section" aria-labelledby="app-download-title">
-  <Container class="ui-app-download-container" data-class="app-download-container">
-    <Stack class="ui-app-download-copy" data-class="app-download-copy" data-theme="dark">
-      <Title class="ui-app-download-title" data-class="app-download-title" as={2} id="app-download-title">
+<Block class="ui-section ui-app-download" data-class="ui-app-download" tag="section" aria-labelledby="app-download-title">
+  <Container class="ui-app-download-container" data-class="ui-app-download-container">
+    <Stack class="ui-app-download-copy" data-class="ui-app-download-copy" data-theme="dark">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="app-download-title">
         {data.title}
       </Title>
-      <Text class="ui-app-download-text" data-class="app-download-text">
+      <Text class="ui-app-download-text" data-class="ui-app-download-text">
         {data.text}
       </Text>
-      <Group class="ui-app-download-stores" data-class="app-download-stores">
+      <Group class="ui-app-download-stores" data-class="ui-app-download-stores">
         <Button variant="secondary" size="lg" href={data.ios.href || undefined}>
           {@html svg("apple", `ui-app-download-apple`)}
           {data.ios.label}
@@ -28,6 +28,6 @@
         </Button>
       </Group>
     </Stack>
-    <Image class="ui-app-download-image" data-class="app-download-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+    <Image class="ui-app-download-image" data-class="ui-app-download-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
   </Container>
 </Block>

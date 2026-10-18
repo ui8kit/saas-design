@@ -8,21 +8,21 @@
   let { data }: { data: PricingThreeTiersData } = $props();
 </script>
 
-<Block class="ui-pricing-three-tiers" data-class="pricing-three-tiers" tag="section" aria-labelledby="pricing-three-tiers-title">
-  <Container class="ui-pricing-three-tiers-container" data-class="pricing-three-tiers-container">
-    <Stack class="ui-pricing-three-tiers-head" data-class="pricing-three-tiers-head">
-      <Title class="ui-pricing-three-tiers-title" data-class="pricing-three-tiers-title" as={2} id="pricing-three-tiers-title">
+<Block class="ui-section ui-pricing-three-tiers" data-class="ui-pricing-three-tiers" tag="section" aria-labelledby="pricing-three-tiers-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-pricing-three-tiers-head" data-class="ui-pricing-three-tiers-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="pricing-three-tiers-title">
         {data.title}
       </Title>
-      <Text class="ui-pricing-three-tiers-lead" data-class="pricing-three-tiers-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-pricing-three-tiers-plans" data-class="pricing-three-tiers-plans">
+    <List class="ui-pricing-three-tiers-plans" data-class="ui-pricing-three-tiers-plans">
       {#each data.plans as plan}
-        <ListItem class="ui-pricing-three-tiers-plan ui-pricing-three-tiers-plan-theme-{plan.theme}" data-class="pricing-three-tiers-plan" data-theme={plan.theme}>
-          <Group class="ui-pricing-three-tiers-plan-name-row" data-class="pricing-three-tiers-plan-name-row">
-            <Title class="ui-pricing-three-tiers-plan-name" data-class="pricing-three-tiers-plan-name" as={3}>
+        <ListItem class="ui-pricing-three-tiers-plan ui-pricing-three-tiers-plan-theme-{plan.theme}" data-class="ui-pricing-three-tiers-plan" data-theme={plan.theme}>
+          <Group class="ui-pricing-three-tiers-plan-name-row" data-class="ui-pricing-three-tiers-plan-name-row">
+            <Title class="ui-pricing-three-tiers-plan-name" data-class="ui-pricing-three-tiers-plan-name" as={3}>
               {plan.name}
             </Title>
             {#if plan.badge}
@@ -31,22 +31,22 @@
               </Badge>
             {/if}
           </Group>
-          <Text class="ui-pricing-three-tiers-plan-description" data-class="pricing-three-tiers-plan-description">
+          <Text class="ui-muted" data-class="ui-muted">
             {plan.description}
           </Text>
-          <Text class="ui-pricing-three-tiers-price" data-class="pricing-three-tiers-price">
-            <Inline class="ui-pricing-three-tiers-price-value" data-class="pricing-three-tiers-price-value">
+          <Text class="ui-pricing-three-tiers-price" data-class="ui-pricing-three-tiers-price">
+            <Inline class="ui-pricing-three-tiers-price-value" data-class="ui-pricing-three-tiers-price-value">
               {plan.price}
             </Inline>
             {#if plan.period}
-              <Inline class="ui-pricing-three-tiers-price-period" data-class="pricing-three-tiers-price-period">
+              <Inline class="ui-muted" data-class="ui-muted">
                 {plan.period}
               </Inline>
             {/if}
           </Text>
-          <List class="ui-pricing-three-tiers-features" data-class="pricing-three-tiers-features">
+          <List class="ui-stack-4" data-class="ui-stack-4">
             {#each plan.features as f}
-              <ListItem class="ui-pricing-three-tiers-feature" data-class="pricing-three-tiers-feature">
+              <ListItem class="ui-pricing-three-tiers-feature" data-class="ui-pricing-three-tiers-feature">
                 {#if f.included}
                   {@html svg("check", `ui-pricing-three-tiers-check`)}
                 {/if}
@@ -57,7 +57,7 @@
               </ListItem>
             {/each}
           </List>
-          <Button class="ui-pricing-three-tiers-plan-cta" data-class="pricing-three-tiers-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
+          <Button class="ui-pricing-three-tiers-plan-cta" data-class="ui-pricing-three-tiers-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
             {plan.cta.label}
           </Button>
         </ListItem>

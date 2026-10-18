@@ -18,31 +18,31 @@ import (
 
 // SignupCard: Signup card with labelled fields on a centered card.
 templ SignupCard(p SignupCardData) {
-	@block.Block(block.BlockProps{Class: "ui-signup-card", Tag: "section", Attrs: templ.Attributes{"data-class": "signup-card", "aria-labelledby": "signup-card-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-signup-card-container", Attrs: templ.Attributes{"data-class": "signup-card-container"}}) {
-			@card.Card(card.CardProps{Class: "ui-signup-card-card", Attrs: templ.Attributes{"data-class": "signup-card-card"}}) {
-				@stack.Stack(stack.StackProps{Class: "ui-signup-card-head", Attrs: templ.Attributes{"data-class": "signup-card-head"}}) {
-					@title.Title(title.TitleProps{Class: "ui-signup-card-title", As: 2, Attrs: templ.Attributes{"data-class": "signup-card-title", "id": "signup-card-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-signup-card", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-signup-card", "aria-labelledby": "signup-card-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-signup-card-container", Attrs: templ.Attributes{"data-class": "ui-signup-card-container"}}) {
+			@card.Card(card.CardProps{Class: "ui-signup-card-card", Attrs: templ.Attributes{"data-class": "ui-signup-card-card"}}) {
+				@stack.Stack(stack.StackProps{Class: "ui-signup-card-head", Attrs: templ.Attributes{"data-class": "ui-signup-card-head"}}) {
+					@title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "signup-card-title"}}) {
 						{ p.Title }
 					}
-					@text.Text(text.TextProps{Class: "ui-signup-card-text", Attrs: templ.Attributes{"data-class": "signup-card-text"}}) {
+					@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 						{ p.Text }
 					}
 				}
-				@form.Form(form.FormProps{Class: "ui-signup-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "signup-card-form"}}) {
+				@form.Form(form.FormProps{Class: "ui-signup-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-signup-card-form"}}) {
 					for _, f := range p.Fields {
-						@form.FormItem(form.FormItemProps{Class: "ui-signup-card-field", Attrs: templ.Attributes{"data-class": "signup-card-field"}}) {
-							@label.Label(label.LabelProps{Class: "ui-signup-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "signup-card-label"}}) {
+						@form.FormItem(form.FormItemProps{Class: "ui-signup-card-field", Attrs: templ.Attributes{"data-class": "ui-signup-card-field"}}) {
+							@label.Label(label.LabelProps{Class: "ui-signup-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "ui-signup-card-label"}}) {
 								{ f.Label }
 							}
-							@input.Input(input.InputProps{Class: "ui-signup-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "signup-card-input"}})
+							@input.Input(input.InputProps{Class: "ui-signup-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "ui-signup-card-input"}})
 						}
 					}
-					@button.Button(button.ButtonProps{Class: "ui-signup-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "signup-card-button"}}) {
+					@button.Button(button.ButtonProps{Class: "ui-signup-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-signup-card-button"}}) {
 						{ p.Submit }
 					}
 				}
-				@text.Text(text.TextProps{Class: "ui-signup-card-foot", Attrs: templ.Attributes{"data-class": "signup-card-foot"}}) {
+				@text.Text(text.TextProps{Class: "ui-signup-card-foot", Attrs: templ.Attributes{"data-class": "ui-signup-card-foot"}}) {
 					{ p.Note }
 					{ " " }
 					@link.Link(link.LinkProps{Href: p.Link.Href}) {

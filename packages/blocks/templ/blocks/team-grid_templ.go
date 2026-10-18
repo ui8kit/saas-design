@@ -101,7 +101,7 @@ func TeamGrid(p TeamGridData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-team-grid-title", As: 2, Attrs: templ.Attributes{"data-class": "team-grid-title", "id": "team-grid-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "team-grid-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -132,13 +132,13 @@ func TeamGrid(p TeamGridData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-team-grid-lead", Attrs: templ.Attributes{"data-class": "team-grid-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-team-grid-head", Attrs: templ.Attributes{"data-class": "team-grid-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-team-grid-head", Attrs: templ.Attributes{"data-class": "ui-team-grid-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -171,7 +171,7 @@ func TeamGrid(p TeamGridData) templ.Component {
 								}()
 							}
 							ctx = templ.InitializeContext(ctx)
-							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-team-grid-avatar", Variant: "avatar", Size: "xl", Src: m.Avatar.Src, Alt: m.Avatar.Alt, Attrs: templ.Attributes{"data-class": "team-grid-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-team-grid-avatar", Variant: "avatar", Size: "xl", Src: m.Avatar.Src, Alt: m.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-team-grid-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -202,7 +202,7 @@ func TeamGrid(p TeamGridData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-team-grid-name", As: 3, Attrs: templ.Attributes{"data-class": "team-grid-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -233,32 +233,32 @@ func TeamGrid(p TeamGridData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-team-grid-role", Attrs: templ.Attributes{"data-class": "team-grid-role"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-team-grid-member", Attrs: templ.Attributes{"data-class": "team-grid-member"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-team-grid-member", Attrs: templ.Attributes{"data-class": "ui-team-grid-member"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-team-grid-grid", Attrs: templ.Attributes{"data-class": "team-grid-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-team-grid-container", Attrs: templ.Attributes{"data-class": "team-grid-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-team-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "team-grid", "aria-labelledby": "team-grid-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-team-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-team-grid", "aria-labelledby": "team-grid-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

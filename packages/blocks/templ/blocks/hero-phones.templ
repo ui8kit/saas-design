@@ -17,38 +17,38 @@ import (
 
 // HeroPhones: Full-bleed primary surface with navbar, centered headline, two actions, social badge and tilted app screens.
 templ HeroPhones(p HeroPhonesData) {
-	@block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "hero-phones"}}) {
+	@block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "ui-hero-phones"}}) {
 		@Navbar(p.Nav)
-		@stack.Stack(stack.StackProps{Class: "ui-hero-phones-content", Attrs: templ.Attributes{"data-class": "hero-phones-content"}}) {
-			@title.Title(title.TitleProps{Class: "ui-hero-phones-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-phones-title"}}) {
+		@stack.Stack(stack.StackProps{Class: "ui-hero-phones-content", Attrs: templ.Attributes{"data-class": "ui-hero-phones-content"}}) {
+			@title.Title(title.TitleProps{Class: "ui-hero-phones-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-phones-title"}}) {
 				{ p.Title }
 			}
-			@text.Text(text.TextProps{Class: "ui-hero-phones-lead", Attrs: templ.Attributes{"data-class": "hero-phones-lead"}}) {
+			@text.Text(text.TextProps{Class: "ui-hero-phones-lead", Attrs: templ.Attributes{"data-class": "ui-hero-phones-lead"}}) {
 				{ p.Lead }
 			}
-			@group.Group(group.GroupProps{Class: "ui-hero-phones-actions", Attrs: templ.Attributes{"data-class": "hero-phones-actions"}}) {
+			@group.Group(group.GroupProps{Class: "ui-hero-phones-actions", Attrs: templ.Attributes{"data-class": "ui-hero-phones-actions"}}) {
 				@button.Button(button.ButtonProps{Variant: "contrast", Size: "lg", Href: p.Primary.Href}) {
 					{ p.Primary.Label }
 				}
-				@button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "secondary", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "hero-phones-demo"}}) {
+				@button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "secondary", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}) {
 					@templ.Raw(icons.SVG("play", "ui-hero-phones-demo-icon"))
 					{ p.Secondary.Label }
 				}
 			}
 		}
-		@badge.Badge(badge.BadgeProps{Class: "ui-hero-phones-badge", Variant: "secondary", Size: "lg", Attrs: templ.Attributes{"data-class": "hero-phones-badge"}}) {
+		@badge.Badge(badge.BadgeProps{Class: "ui-hero-phones-badge", Variant: "secondary", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-hero-phones-badge"}}) {
 			@templ.Raw(icons.SVG("star", "ui-hero-phones-badge-icon"))
 			{ p.Badge }
 		}
-		@box.Box(box.BoxProps{Class: "ui-hero-phones-art", Attrs: templ.Attributes{"data-class": "hero-phones-art", "aria-hidden": "true"}}) {
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-1", Attrs: templ.Attributes{"data-class": "hero-phones-dot-1"}})
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-2", Attrs: templ.Attributes{"data-class": "hero-phones-dot-2"}})
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-3", Attrs: templ.Attributes{"data-class": "hero-phones-dot-3"}})
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-4", Attrs: templ.Attributes{"data-class": "hero-phones-dot-4"}})
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-5", Attrs: templ.Attributes{"data-class": "hero-phones-dot-5"}})
-			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-6", Attrs: templ.Attributes{"data-class": "hero-phones-dot-6"}})
+		@box.Box(box.BoxProps{Class: "ui-hero-phones-art", Attrs: templ.Attributes{"data-class": "ui-hero-phones-art", "aria-hidden": "true"}}) {
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-1", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-1"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-2", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-2"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-3", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-3"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-4", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-4"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-5", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-5"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-phones-dot-6", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-6"}})
 			for _, screen := range p.Screens {
-				@image.Image(image.ImageProps{Class: "ui-hero-phones-screen", Src: screen.Src, Alt: "", Decorative: true, Attrs: templ.Attributes{"data-class": "hero-phones-screen"}})
+				@image.Image(image.ImageProps{Class: "ui-hero-phones-screen", Src: screen.Src, Alt: "", Decorative: true, Attrs: templ.Attributes{"data-class": "ui-hero-phones-screen"}})
 			}
 		}
 	}

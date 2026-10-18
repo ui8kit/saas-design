@@ -7,36 +7,36 @@
   let { data }: { data: ContactFormData } = $props();
 </script>
 
-<Block class="ui-contact-form" data-class="contact-form" tag="section" aria-labelledby="contact-form-title">
-  <Container class="ui-contact-form-container" data-class="contact-form-container">
-    <Stack class="ui-contact-form-copy" data-class="contact-form-copy">
-      <Title class="ui-contact-form-title" data-class="contact-form-title" as={2} id="contact-form-title">
+<Block class="ui-section ui-contact-form" data-class="ui-contact-form" tag="section" aria-labelledby="contact-form-title">
+  <Container class="ui-contact-form-container" data-class="ui-contact-form-container">
+    <Stack class="ui-contact-form-copy" data-class="ui-contact-form-copy">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="contact-form-title">
         {data.title}
       </Title>
-      <Text class="ui-contact-form-text" data-class="contact-form-text">
+      <Text class="ui-contact-form-text" data-class="ui-contact-form-text">
         {data.text}
       </Text>
     </Stack>
-    <Form class="ui-contact-form-form" data-class="contact-form-form" action={data.action || undefined} method="post">
-      <FormItem class="ui-contact-form-field" data-class="contact-form-field">
-        <Label class="ui-contact-form-label" data-class="contact-form-label" for={data.name.name || undefined}>
+    <Form class="ui-contact-form-form" data-class="ui-contact-form-form" action={data.action || undefined} method="post">
+      <FormItem class="ui-contact-form-field" data-class="ui-contact-form-field">
+        <Label class="ui-contact-form-label" data-class="ui-contact-form-label" for={data.name.name || undefined}>
           {data.name.label}
         </Label>
-        <Input class="ui-contact-form-input" data-class="contact-form-input" id={data.name.name || undefined} name={data.name.name || undefined} type={data.name.type || undefined} placeholder={data.name.placeholder || undefined} autocomplete={data.name.autocomplete || undefined} required={true} />
+        <Input class="ui-contact-form-input" data-class="ui-contact-form-input" id={data.name.name || undefined} name={data.name.name || undefined} type={data.name.type || undefined} placeholder={data.name.placeholder || undefined} autocomplete={data.name.autocomplete || undefined} required={true} />
       </FormItem>
-      <FormItem class="ui-contact-form-field" data-class="contact-form-field">
-        <Label class="ui-contact-form-label" data-class="contact-form-label" for={data.email.name || undefined}>
+      <FormItem class="ui-contact-form-field" data-class="ui-contact-form-field">
+        <Label class="ui-contact-form-label" data-class="ui-contact-form-label" for={data.email.name || undefined}>
           {data.email.label}
         </Label>
-        <Input class="ui-contact-form-input" data-class="contact-form-input" id={data.email.name || undefined} name={data.email.name || undefined} type={data.email.type || undefined} placeholder={data.email.placeholder || undefined} autocomplete={data.email.autocomplete || undefined} required={true} />
+        <Input class="ui-contact-form-input" data-class="ui-contact-form-input" id={data.email.name || undefined} name={data.email.name || undefined} type={data.email.type || undefined} placeholder={data.email.placeholder || undefined} autocomplete={data.email.autocomplete || undefined} required={true} />
       </FormItem>
-      <FormItem class="ui-contact-form-field-message" data-class="contact-form-field-message">
-        <Label class="ui-contact-form-label-message" data-class="contact-form-label-message" for="contact-form-message">
+      <FormItem class="ui-contact-form-field-message" data-class="ui-contact-form-field-message">
+        <Label class="ui-contact-form-label-message" data-class="ui-contact-form-label-message" for="contact-form-message">
           {data.message.label}
         </Label>
-        <Textarea class="ui-contact-form-textarea" data-class="contact-form-textarea" id="contact-form-message" name="message" rows="4" placeholder={data.message.placeholder || undefined} required={true} />
+        <Textarea class="ui-contact-form-textarea" data-class="ui-contact-form-textarea" id="contact-form-message" name="message" rows="4" placeholder={data.message.placeholder || undefined} required={true} />
       </FormItem>
-      <Button class="ui-contact-form-button" data-class="contact-form-button" type="submit">
+      <Button class="ui-contact-form-button" data-class="ui-contact-form-button" type="submit">
         {data.send}
       </Button>
     </Form>

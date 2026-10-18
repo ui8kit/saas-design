@@ -105,7 +105,7 @@ func BlogCards(p BlogCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-blog-cards-title", As: 2, Attrs: templ.Attributes{"data-class": "blog-cards-title", "id": "blog-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "blog-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -136,13 +136,13 @@ func BlogCards(p BlogCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-blog-cards-lead", Attrs: templ.Attributes{"data-class": "blog-cards-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-blog-cards-head", Attrs: templ.Attributes{"data-class": "blog-cards-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-blog-cards-head", Attrs: templ.Attributes{"data-class": "ui-blog-cards-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -187,13 +187,13 @@ func BlogCards(p BlogCardsData) templ.Component {
 									}()
 								}
 								ctx = templ.InitializeContext(ctx)
-								templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-blog-cards-image", Src: post.Image.Src, Alt: post.Image.Alt, Attrs: templ.Attributes{"data-class": "blog-cards-image"}}).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-blog-cards-image", Src: post.Image.Src, Alt: post.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-blog-cards-image"}}).Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-blog-cards-media", Attrs: templ.Attributes{"data-class": "blog-cards-media"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-blog-cards-media", Attrs: templ.Attributes{"data-class": "ui-blog-cards-media"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -252,14 +252,14 @@ func BlogCards(p BlogCardsData) templ.Component {
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
-									templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, " <time class=\"ui-blog-cards-date\" data-class=\"blog-cards-date\" datetime=\"")
+									templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, " <time class=\"ui-blog-cards-date\" data-class=\"ui-blog-cards-date\" datetime=\"")
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									var templ_7745c5c3_Var16 string
 									templ_7745c5c3_Var16, templ_7745c5c3_Err = templ.JoinStringErrs(post.Datetime)
 									if templ_7745c5c3_Err != nil {
-										return templ.Error{Err: templ_7745c5c3_Err, FileName: `blog-cards.templ`, Line: 42, Col: 94}
+										return templ.Error{Err: templ_7745c5c3_Err, FileName: `blog-cards.templ`, Line: 42, Col: 97}
 									}
 									_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var16))
 									if templ_7745c5c3_Err != nil {
@@ -284,7 +284,7 @@ func BlogCards(p BlogCardsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-blog-cards-meta", Attrs: templ.Attributes{"data-class": "blog-cards-meta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-blog-cards-meta", Attrs: templ.Attributes{"data-class": "ui-blog-cards-meta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -327,13 +327,13 @@ func BlogCards(p BlogCardsData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-blog-cards-post-link", Href: post.Href, Attrs: templ.Attributes{"data-class": "blog-cards-post-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-blog-cards-post-link", Href: post.Href, Attrs: templ.Attributes{"data-class": "ui-blog-cards-post-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-blog-cards-post-title", As: 3, Attrs: templ.Attributes{"data-class": "blog-cards-post-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -364,38 +364,38 @@ func BlogCards(p BlogCardsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-blog-cards-excerpt", Attrs: templ.Attributes{"data-class": "blog-cards-excerpt"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-blog-cards-body", Attrs: templ.Attributes{"data-class": "blog-cards-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-blog-cards-body", Attrs: templ.Attributes{"data-class": "ui-blog-cards-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-blog-cards-post", Attrs: templ.Attributes{"data-class": "blog-cards-post"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-blog-cards-post", Attrs: templ.Attributes{"data-class": "ui-blog-cards-post"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-blog-cards-grid", Attrs: templ.Attributes{"data-class": "blog-cards-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-blog-cards-container", Attrs: templ.Attributes{"data-class": "blog-cards-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-blog-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "blog-cards", "aria-labelledby": "blog-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-blog-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-blog-cards", "aria-labelledby": "blog-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

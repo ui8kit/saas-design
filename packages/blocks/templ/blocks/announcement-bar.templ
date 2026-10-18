@@ -12,14 +12,14 @@ import (
 
 // AnnouncementBar: One-line release note above the navbar with a link.
 templ AnnouncementBar(p AnnouncementBarData) {
-	@block.Block(block.BlockProps{Class: "ui-announcement-bar", Tag: "aside", Attrs: templ.Attributes{"data-class": "announcement-bar", "aria-label": p.Label}}) {
-		@container.Container(container.ContainerProps{Class: "ui-announcement-bar-container", Attrs: templ.Attributes{"data-class": "announcement-bar-container"}}) {
-			@text.Text(text.TextProps{Class: "ui-announcement-bar-text", Attrs: templ.Attributes{"data-class": "announcement-bar-text"}}) {
+	@block.Block(block.BlockProps{Class: "ui-announcement-bar", Tag: "aside", Attrs: templ.Attributes{"data-class": "ui-announcement-bar", "aria-label": p.Label}}) {
+		@container.Container(container.ContainerProps{Class: "ui-announcement-bar-container", Attrs: templ.Attributes{"data-class": "ui-announcement-bar-container"}}) {
+			@text.Text(text.TextProps{Class: "ui-announcement-bar-text", Attrs: templ.Attributes{"data-class": "ui-announcement-bar-text"}}) {
 				{ p.Text }
 			}
-			@link.Link(link.LinkProps{Class: "ui-announcement-bar-link", Href: p.Link.Href, Attrs: templ.Attributes{"data-class": "announcement-bar-link"}}) {
+			@link.Link(link.LinkProps{Class: "ui-announcement-bar-link", Href: p.Link.Href, Attrs: templ.Attributes{"data-class": "ui-announcement-bar-link"}}) {
 				{ p.Link.Label }
-				@templ.Raw(icons.SVG("arrow-right", "ui-announcement-bar-arrow"))
+				@templ.Raw(icons.SVG("arrow-right", "ui-icon-sm"))
 			}
 		}
 	}

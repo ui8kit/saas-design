@@ -102,7 +102,7 @@ func Integrations(p IntegrationsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-integrations-title", As: 2, Attrs: templ.Attributes{"data-class": "integrations-title", "id": "integrations-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "integrations-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -133,13 +133,13 @@ func Integrations(p IntegrationsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-integrations-lead", Attrs: templ.Attributes{"data-class": "integrations-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-integrations-head", Attrs: templ.Attributes{"data-class": "integrations-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-integrations-head", Attrs: templ.Attributes{"data-class": "ui-integrations-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -190,7 +190,7 @@ func Integrations(p IntegrationsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-integrations-badge", Attrs: templ.Attributes{"data-class": "integrations-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-integrations-badge", Attrs: templ.Attributes{"data-class": "ui-integrations-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -233,7 +233,7 @@ func Integrations(p IntegrationsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-integrations-item-title", As: 3, Attrs: templ.Attributes{"data-class": "integrations-item-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -264,38 +264,38 @@ func Integrations(p IntegrationsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-integrations-item-text", Attrs: templ.Attributes{"data-class": "integrations-item-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-integrations-body", Attrs: templ.Attributes{"data-class": "integrations-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-integrations-item", Attrs: templ.Attributes{"data-class": "integrations-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-integrations-item", Attrs: templ.Attributes{"data-class": "ui-integrations-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-integrations-grid", Attrs: templ.Attributes{"data-class": "integrations-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-integrations-grid", Attrs: templ.Attributes{"data-class": "ui-integrations-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-integrations-container", Attrs: templ.Attributes{"data-class": "integrations-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-integrations", Tag: "section", Attrs: templ.Attributes{"data-class": "integrations", "aria-labelledby": "integrations-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-integrations", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-integrations", "aria-labelledby": "integrations-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

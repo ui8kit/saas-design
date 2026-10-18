@@ -27,8 +27,8 @@ templ Page(meta PageMeta, r Regions, css string) {
 			<link rel="icon" href="/media/brand-mark.svg" type="image/svg+xml"/>
 			<link rel="stylesheet" href={ css }/>
 		</head>
-		<body class="ui-page" data-class="page" data-figma={ meta.Figma }>
-			<a class="ui-skip" data-class="skip" href="#content">Skip to content</a>
+		<body class="ui-page" data-class="ui-page" data-figma={ meta.Figma }>
+			<a class="ui-skip" data-class="ui-skip" href="#content">Skip to content</a>
 			for _, c := range r.Header {
 				@c
 			}

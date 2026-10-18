@@ -25,7 +25,9 @@ export const css = new Map<string, string>(); // semantic class -> utilities
 const origin = new Map<string, string>(); // semantic class -> where
 function define(name: string, utilities: string, where: string): string {
   // Marker classes (group, peer) cannot be @applied in Tailwind v4 and carry no styling; no brick uses group-*/peer-* variants.
-  const u = utilities.trim().split(/\s+/).filter((t) => !/^(group|peer)(\/.*)?$/.test(t)).join(" ");
+  // Half steps from upstream bricks are snapped to the 8+4 grid (.project/backlog/codegen-half-steps.md).
+  const SNAP: Record<string, string> = { "gap-1.5": "gap-2" };
+  const u = utilities.trim().split(/\s+/).filter((t) => !/^(group|peer)(\/.*)?$/.test(t)).map((t) => SNAP[t] ?? t).join(" ");
   if (!u) return "";
   const prev = css.get(name);
   if (prev !== undefined && prev !== u) throw new Error(`semantic class ${name} defined twice with different utilities (${origin.get(name)} / ${where})`);

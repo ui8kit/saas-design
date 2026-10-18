@@ -103,7 +103,7 @@ func AppDownload(p AppDownloadData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-app-download-title", As: 2, Attrs: templ.Attributes{"data-class": "app-download-title", "id": "app-download-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "app-download-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -134,7 +134,7 @@ func AppDownload(p AppDownloadData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-app-download-text", Attrs: templ.Attributes{"data-class": "app-download-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-app-download-text", Attrs: templ.Attributes{"data-class": "ui-app-download-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -230,13 +230,13 @@ func AppDownload(p AppDownloadData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-app-download-stores", Attrs: templ.Attributes{"data-class": "app-download-stores"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-app-download-stores", Attrs: templ.Attributes{"data-class": "ui-app-download-stores"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-app-download-copy", Attrs: templ.Attributes{"data-class": "app-download-copy", "data-theme": "dark"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-app-download-copy", Attrs: templ.Attributes{"data-class": "ui-app-download-copy", "data-theme": "dark"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -244,19 +244,19 @@ func AppDownload(p AppDownloadData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-app-download-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "app-download-image"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-app-download-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-app-download-image"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-app-download-container", Attrs: templ.Attributes{"data-class": "app-download-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-app-download-container", Attrs: templ.Attributes{"data-class": "ui-app-download-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-app-download", Tag: "section", Attrs: templ.Attributes{"data-class": "app-download", "aria-labelledby": "app-download-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-app-download", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-app-download", "aria-labelledby": "app-download-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

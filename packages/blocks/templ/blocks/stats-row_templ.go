@@ -87,7 +87,7 @@ func StatsRow(p StatsRowData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-stats-row-title", As: 2, Attrs: templ.Attributes{"data-class": "stats-row-title", "id": "stats-row-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-stats-row-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-stats-row-title", "id": "stats-row-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -143,7 +143,7 @@ func StatsRow(p StatsRowData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-stats-row-value", Attrs: templ.Attributes{"data-class": "stats-row-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-section-title", Attrs: templ.Attributes{"data-class": "ui-section-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -174,32 +174,32 @@ func StatsRow(p StatsRowData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-stats-row-label", Attrs: templ.Attributes{"data-class": "stats-row-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-stats-row-item", Attrs: templ.Attributes{"data-class": "stats-row-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-stats-row-item", Attrs: templ.Attributes{"data-class": "ui-stats-row-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-stats-row-list", Attrs: templ.Attributes{"data-class": "stats-row-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-stats-row-list", Attrs: templ.Attributes{"data-class": "ui-stats-row-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-stats-row-container", Attrs: templ.Attributes{"data-class": "stats-row-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-stats-row", Tag: "section", Attrs: templ.Attributes{"data-class": "stats-row", "aria-labelledby": "stats-row-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-stats-row", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-stats-row", "aria-labelledby": "stats-row-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

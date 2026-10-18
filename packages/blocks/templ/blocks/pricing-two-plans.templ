@@ -18,22 +18,22 @@ import (
 
 // PricingTwoPlans: Header and two plan cards; the featured plan flips to the dark scope (variables only, same markup).
 templ PricingTwoPlans(p PricingTwoPlansData) {
-	@block.Block(block.BlockProps{Class: "ui-pricing-two-plans", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "pricing-two-plans", "aria-labelledby": "pricing-two-plans-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-pricing-two-plans-container", Attrs: templ.Attributes{"data-class": "pricing-two-plans-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-head", Attrs: templ.Attributes{"data-class": "pricing-two-plans-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-pricing-two-plans-title", As: 2, Attrs: templ.Attributes{"data-class": "pricing-two-plans-title", "id": "pricing-two-plans-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-pricing-two-plans", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans", "aria-labelledby": "pricing-two-plans-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-pricing-two-plans-container", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "pricing-two-plans-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-pricing-two-plans-lead", Attrs: templ.Attributes{"data-class": "pricing-two-plans-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-pricing-two-plans-lead", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-pricing-two-plans-plans", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plans"}}) {
+			@list.List(list.ListProps{Class: "ui-pricing-two-plans-plans", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plans"}}) {
 				for _, plan := range p.Plans {
-					@list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-plan" + " ui-pricing-two-plans-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan", "data-theme": plan.Theme}}) {
-						@stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-plan-head", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-head"}}) {
-							@group.Group(group.GroupProps{Class: "ui-pricing-two-plans-plan-name-row", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-name-row"}}) {
-								@title.Title(title.TitleProps{Class: "ui-pricing-two-plans-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-name"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-plan" + " ui-pricing-two-plans-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan", "data-theme": plan.Theme}}) {
+						@stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}) {
+							@group.Group(group.GroupProps{Class: "ui-pricing-two-plans-plan-name-row", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-name-row"}}) {
+								@title.Title(title.TitleProps{Class: "ui-pricing-two-plans-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-name"}}) {
 									{ plan.Name }
 								}
 								if plan.Badge != "" {
@@ -42,24 +42,24 @@ templ PricingTwoPlans(p PricingTwoPlansData) {
 									}
 								}
 							}
-							@text.Text(text.TextProps{Class: "ui-pricing-two-plans-plan-description", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-description"}}) {
+							@text.Text(text.TextProps{Class: "ui-pricing-two-plans-plan-description", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-description"}}) {
 								{ plan.Description }
 							}
 						}
-						@stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-plan-body", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-body"}}) {
-							@text.Text(text.TextProps{Class: "ui-pricing-two-plans-price", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price"}}) {
-								@inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-value", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price-value"}}) {
+						@stack.Stack(stack.StackProps{Class: "ui-stack-6", Attrs: templ.Attributes{"data-class": "ui-stack-6"}}) {
+							@text.Text(text.TextProps{Class: "ui-pricing-two-plans-price", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-price"}}) {
+								@inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-value", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-price-value"}}) {
 									{ plan.Price }
 								}
 								if plan.Period != "" {
-									@inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-period", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price-period"}}) {
+									@inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 										{ plan.Period }
 									}
 								}
 							}
-							@list.List(list.ListProps{Class: "ui-pricing-two-plans-features", Attrs: templ.Attributes{"data-class": "pricing-two-plans-features"}}) {
+							@list.List(list.ListProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}) {
 								for _, f := range plan.Features {
-									@list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-feature", Attrs: templ.Attributes{"data-class": "pricing-two-plans-feature"}}) {
+									@list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-feature"}}) {
 										if f.Included {
 											@templ.Raw(icons.SVG("check", "ui-pricing-two-plans-feature-check"))
 										}
@@ -71,7 +71,7 @@ templ PricingTwoPlans(p PricingTwoPlansData) {
 								}
 							}
 						}
-						@button.Button(button.ButtonProps{Class: "ui-pricing-two-plans-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-cta"}}) {
+						@button.Button(button.ButtonProps{Class: "ui-pricing-two-plans-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-cta"}}) {
 							{ plan.Cta.Label }
 						}
 					}

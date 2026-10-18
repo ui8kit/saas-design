@@ -9,38 +9,38 @@
   let { data }: { data: HeroPhonesData } = $props();
 </script>
 
-<Block class="ui-hero-phones" data-class="hero-phones" tag="header" id="top">
+<Block class="ui-hero-phones" data-class="ui-hero-phones" tag="header" id="top">
   <Navbar data={data.nav} />
-  <Stack class="ui-hero-phones-content" data-class="hero-phones-content">
-    <Title class="ui-hero-phones-title" data-class="hero-phones-title" as={1}>
+  <Stack class="ui-hero-phones-content" data-class="ui-hero-phones-content">
+    <Title class="ui-hero-phones-title" data-class="ui-hero-phones-title" as={1}>
       {data.title}
     </Title>
-    <Text class="ui-hero-phones-lead" data-class="hero-phones-lead">
+    <Text class="ui-hero-phones-lead" data-class="ui-hero-phones-lead">
       {data.lead}
     </Text>
-    <Group class="ui-hero-phones-actions" data-class="hero-phones-actions">
+    <Group class="ui-hero-phones-actions" data-class="ui-hero-phones-actions">
       <Button variant="contrast" size="lg" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>
-      <Button class="ui-hero-phones-demo" data-class="hero-phones-demo" variant="secondary" size="lg" href={data.secondary.href || undefined}>
+      <Button class="ui-hero-phones-demo" data-class="ui-hero-phones-demo" variant="secondary" size="lg" href={data.secondary.href || undefined}>
         {@html svg("play", `ui-hero-phones-demo-icon`)}
         {data.secondary.label}
       </Button>
     </Group>
   </Stack>
-  <Badge class="ui-hero-phones-badge" data-class="hero-phones-badge" variant="secondary" size="lg">
+  <Badge class="ui-hero-phones-badge" data-class="ui-hero-phones-badge" variant="secondary" size="lg">
     {@html svg("star", `ui-hero-phones-badge-icon`)}
     {data.badge}
   </Badge>
-  <Box class="ui-hero-phones-art" data-class="hero-phones-art" aria-hidden="true">
-    <Box class="ui-hero-phones-dot-1" data-class="hero-phones-dot-1" />
-    <Box class="ui-hero-phones-dot-2" data-class="hero-phones-dot-2" />
-    <Box class="ui-hero-phones-dot-3" data-class="hero-phones-dot-3" />
-    <Box class="ui-hero-phones-dot-4" data-class="hero-phones-dot-4" />
-    <Box class="ui-hero-phones-dot-5" data-class="hero-phones-dot-5" />
-    <Box class="ui-hero-phones-dot-6" data-class="hero-phones-dot-6" />
+  <Box class="ui-hero-phones-art" data-class="ui-hero-phones-art" aria-hidden="true">
+    <Box class="ui-hero-phones-dot-1" data-class="ui-hero-phones-dot-1" />
+    <Box class="ui-hero-phones-dot-2" data-class="ui-hero-phones-dot-2" />
+    <Box class="ui-hero-phones-dot-3" data-class="ui-hero-phones-dot-3" />
+    <Box class="ui-hero-phones-dot-4" data-class="ui-hero-phones-dot-4" />
+    <Box class="ui-hero-phones-dot-5" data-class="ui-hero-phones-dot-5" />
+    <Box class="ui-hero-phones-dot-6" data-class="ui-hero-phones-dot-6" />
     {#each data.screens as screen}
-      <Image class="ui-hero-phones-screen" data-class="hero-phones-screen" src={screen.src || undefined} alt="" decorative={true} />
+      <Image class="ui-hero-phones-screen" data-class="ui-hero-phones-screen" src={screen.src || undefined} alt="" decorative={true} />
     {/each}
   </Box>
 </Block>

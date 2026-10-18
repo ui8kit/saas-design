@@ -79,7 +79,7 @@ func TestimonialQuote(p TestimonialQuoteData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<blockquote class=\"ui-testimonial-quote-quote\" data-class=\"testimonial-quote-quote\">")
+					templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<blockquote class=\"ui-testimonial-quote-quote\" data-class=\"ui-testimonial-quote-quote\">")
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -126,7 +126,7 @@ func TestimonialQuote(p TestimonialQuoteData) templ.Component {
 							}()
 						}
 						ctx = templ.InitializeContext(ctx)
-						templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-testimonial-quote-avatar", Variant: "avatar", Src: p.Avatar.Src, Alt: p.Avatar.Alt, Attrs: templ.Attributes{"data-class": "testimonial-quote-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-testimonial-quote-avatar", Variant: "avatar", Src: p.Avatar.Src, Alt: p.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -169,7 +169,7 @@ func TestimonialQuote(p TestimonialQuoteData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-name", Attrs: templ.Attributes{"data-class": "testimonial-quote-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-name", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -200,37 +200,37 @@ func TestimonialQuote(p TestimonialQuoteData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-role", Attrs: templ.Attributes{"data-class": "testimonial-quote-role"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-testimonial-quote-who", Attrs: templ.Attributes{"data-class": "testimonial-quote-who"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-testimonial-quote-who", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-who"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-testimonial-quote-author", Attrs: templ.Attributes{"data-class": "testimonial-quote-author"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-testimonial-quote-author", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-author"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-testimonial-quote-panel", Attrs: templ.Attributes{"data-class": "testimonial-quote-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-testimonial-quote-panel", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-testimonial-quote-container", Attrs: templ.Attributes{"data-class": "testimonial-quote-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-testimonial-quote-container", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "testimonial-quote", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

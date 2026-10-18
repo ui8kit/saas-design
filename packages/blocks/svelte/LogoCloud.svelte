@@ -7,15 +7,15 @@
   let { data }: { data: LogoCloudData } = $props();
 </script>
 
-<Block class="ui-logo-cloud" data-class="logo-cloud" tag="section" aria-labelledby="logo-cloud-title">
-  <Container class="ui-logo-cloud-container" data-class="logo-cloud-container">
-    <Title class="ui-logo-cloud-title" data-class="logo-cloud-title" as={2} id="logo-cloud-title">
+<Block class="ui-logo-cloud" data-class="ui-logo-cloud" tag="section" aria-labelledby="logo-cloud-title">
+  <Container class="ui-logo-cloud-container" data-class="ui-logo-cloud-container">
+    <Title class="ui-logo-cloud-title" data-class="ui-logo-cloud-title" as={2} id="logo-cloud-title">
       {data.title}
     </Title>
-    <List class="ui-logo-cloud-logos" data-class="logo-cloud-logos">
+    <List class="ui-logo-cloud-logos" data-class="ui-logo-cloud-logos">
       {#each data.logos as logo}
         <ListItem>
-          <Image class="ui-logo-cloud-logo" data-class="logo-cloud-logo" variant="logo" src={logo.src || undefined} alt={logo.alt || undefined} />
+          <Image class="ui-logo-cloud-logo" data-class="ui-logo-cloud-logo" variant="logo" src={logo.src || undefined} alt={logo.alt || undefined} />
         </ListItem>
       {/each}
     </List>

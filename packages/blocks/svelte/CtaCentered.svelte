@@ -7,15 +7,15 @@
   let { data }: { data: CtaCenteredData } = $props();
 </script>
 
-<Block class="ui-cta-centered" data-class="cta-centered" tag="section" aria-labelledby="cta-centered-title">
-  <Container class="ui-cta-centered-container" data-class="cta-centered-container">
-    <Title class="ui-cta-centered-title" data-class="cta-centered-title" as={2} id="cta-centered-title">
+<Block class="ui-section ui-cta-centered" data-class="ui-cta-centered" tag="section" aria-labelledby="cta-centered-title">
+  <Container class="ui-cta-centered-container" data-class="ui-cta-centered-container">
+    <Title class="ui-cta-centered-title" data-class="ui-cta-centered-title" as={2} id="cta-centered-title">
       {data.title}
     </Title>
-    <Text class="ui-cta-centered-text" data-class="cta-centered-text">
+    <Text class="ui-cta-centered-text" data-class="ui-cta-centered-text">
       {data.text}
     </Text>
-    <Group class="ui-cta-centered-actions" data-class="cta-centered-actions">
+    <Group class="ui-cta-centered-actions" data-class="ui-cta-centered-actions">
       <Button variant="contrast" size="lg" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>

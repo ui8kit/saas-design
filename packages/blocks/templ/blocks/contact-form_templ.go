@@ -104,7 +104,7 @@ func ContactForm(p ContactFormData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-contact-form-title", As: 2, Attrs: templ.Attributes{"data-class": "contact-form-title", "id": "contact-form-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "contact-form-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -135,13 +135,13 @@ func ContactForm(p ContactFormData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-contact-form-text", Attrs: templ.Attributes{"data-class": "contact-form-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-contact-form-text", Attrs: templ.Attributes{"data-class": "ui-contact-form-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-contact-form-copy", Attrs: templ.Attributes{"data-class": "contact-form-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-contact-form-copy", Attrs: templ.Attributes{"data-class": "ui-contact-form-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -196,7 +196,7 @@ func ContactForm(p ContactFormData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label", HTMLFor: p.Name.Name, Attrs: templ.Attributes{"data-class": "contact-form-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label", HTMLFor: p.Name.Name, Attrs: templ.Attributes{"data-class": "ui-contact-form-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -204,13 +204,13 @@ func ContactForm(p ContactFormData) templ.Component {
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
-						templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-contact-form-input", ID: p.Name.Name, Name: p.Name.Name, Type: p.Name.Type, Placeholder: p.Name.Placeholder, Autocomplete: p.Name.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "contact-form-input"}}).Render(ctx, templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-contact-form-input", ID: p.Name.Name, Name: p.Name.Name, Type: p.Name.Type, Placeholder: p.Name.Placeholder, Autocomplete: p.Name.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "ui-contact-form-input"}}).Render(ctx, templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field", Attrs: templ.Attributes{"data-class": "contact-form-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field", Attrs: templ.Attributes{"data-class": "ui-contact-form-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -253,7 +253,7 @@ func ContactForm(p ContactFormData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label", HTMLFor: p.Email.Name, Attrs: templ.Attributes{"data-class": "contact-form-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label", HTMLFor: p.Email.Name, Attrs: templ.Attributes{"data-class": "ui-contact-form-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -261,13 +261,13 @@ func ContactForm(p ContactFormData) templ.Component {
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
-						templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-contact-form-input", ID: p.Email.Name, Name: p.Email.Name, Type: p.Email.Type, Placeholder: p.Email.Placeholder, Autocomplete: p.Email.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "contact-form-input"}}).Render(ctx, templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-contact-form-input", ID: p.Email.Name, Name: p.Email.Name, Type: p.Email.Type, Placeholder: p.Email.Placeholder, Autocomplete: p.Email.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "ui-contact-form-input"}}).Render(ctx, templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field", Attrs: templ.Attributes{"data-class": "contact-form-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field", Attrs: templ.Attributes{"data-class": "ui-contact-form-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -310,7 +310,7 @@ func ContactForm(p ContactFormData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label-message", HTMLFor: "contact-form-message", Attrs: templ.Attributes{"data-class": "contact-form-label-message"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var17), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-contact-form-label-message", HTMLFor: "contact-form-message", Attrs: templ.Attributes{"data-class": "ui-contact-form-label-message"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var17), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -318,13 +318,13 @@ func ContactForm(p ContactFormData) templ.Component {
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
-						templ_7745c5c3_Err = textarea.Textarea(textarea.TextareaProps{Class: "ui-contact-form-textarea", ID: "contact-form-message", Name: "message", Rows: 4, Placeholder: p.Message.Placeholder, Required: true, Attrs: templ.Attributes{"data-class": "contact-form-textarea"}}).Render(ctx, templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = textarea.Textarea(textarea.TextareaProps{Class: "ui-contact-form-textarea", ID: "contact-form-message", Name: "message", Rows: 4, Placeholder: p.Message.Placeholder, Required: true, Attrs: templ.Attributes{"data-class": "ui-contact-form-textarea"}}).Render(ctx, templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field-message", Attrs: templ.Attributes{"data-class": "contact-form-field-message"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-contact-form-field-message", Attrs: templ.Attributes{"data-class": "ui-contact-form-field-message"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -355,25 +355,25 @@ func ContactForm(p ContactFormData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-contact-form-button", Type: "submit", Attrs: templ.Attributes{"data-class": "contact-form-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-contact-form-button", Type: "submit", Attrs: templ.Attributes{"data-class": "ui-contact-form-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-contact-form-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "contact-form-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-contact-form-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-contact-form-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-contact-form-container", Attrs: templ.Attributes{"data-class": "contact-form-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-contact-form-container", Attrs: templ.Attributes{"data-class": "ui-contact-form-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-contact-form", Tag: "section", Attrs: templ.Attributes{"data-class": "contact-form", "aria-labelledby": "contact-form-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-contact-form", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-contact-form", "aria-labelledby": "contact-form-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

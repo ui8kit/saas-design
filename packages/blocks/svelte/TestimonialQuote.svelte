@@ -7,21 +7,21 @@
   let { data }: { data: TestimonialQuoteData } = $props();
 </script>
 
-<Block class="ui-testimonial-quote" data-class="testimonial-quote" tag="section" aria-label={data.label}>
-  <Container class="ui-testimonial-quote-container" data-class="testimonial-quote-container">
-    <Box class="ui-testimonial-quote-panel" data-class="testimonial-quote-panel">
-      <blockquote class="ui-testimonial-quote-quote" data-class="testimonial-quote-quote">
+<Block class="ui-testimonial-quote" data-class="ui-testimonial-quote" tag="section" aria-label={data.label}>
+  <Container class="ui-testimonial-quote-container" data-class="ui-testimonial-quote-container">
+    <Box class="ui-testimonial-quote-panel" data-class="ui-testimonial-quote-panel">
+      <blockquote class="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote">
         <Text>
           {data.quote}
         </Text>
       </blockquote>
-      <Group class="ui-testimonial-quote-author" data-class="testimonial-quote-author">
-        <Image class="ui-testimonial-quote-avatar" data-class="testimonial-quote-avatar" variant="avatar" src={data.avatar.src || undefined} alt={data.avatar.alt || undefined} />
-        <Stack class="ui-testimonial-quote-who" data-class="testimonial-quote-who">
-          <Inline class="ui-testimonial-quote-name" data-class="testimonial-quote-name">
+      <Group class="ui-testimonial-quote-author" data-class="ui-testimonial-quote-author">
+        <Image class="ui-testimonial-quote-avatar" data-class="ui-testimonial-quote-avatar" variant="avatar" src={data.avatar.src || undefined} alt={data.avatar.alt || undefined} />
+        <Stack class="ui-testimonial-quote-who" data-class="ui-testimonial-quote-who">
+          <Inline class="ui-testimonial-quote-name" data-class="ui-testimonial-quote-name">
             {data.name}
           </Inline>
-          <Inline class="ui-testimonial-quote-role" data-class="testimonial-quote-role">
+          <Inline class="ui-muted" data-class="ui-muted">
             {data.role}
           </Inline>
         </Stack>

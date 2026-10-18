@@ -117,7 +117,7 @@ func LoginCard(p LoginCardData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-login-card-title", As: 2, Attrs: templ.Attributes{"data-class": "login-card-title", "id": "login-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "login-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -148,13 +148,13 @@ func LoginCard(p LoginCardData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-login-card-text", Attrs: templ.Attributes{"data-class": "login-card-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-login-card-head", Attrs: templ.Attributes{"data-class": "login-card-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-login-card-head", Attrs: templ.Attributes{"data-class": "ui-login-card-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -210,7 +210,7 @@ func LoginCard(p LoginCardData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-login-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "login-card-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-login-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "ui-login-card-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -218,13 +218,13 @@ func LoginCard(p LoginCardData) templ.Component {
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
-								templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-login-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "login-card-input"}}).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-login-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "ui-login-card-input"}}).Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-login-card-field", Attrs: templ.Attributes{"data-class": "login-card-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = form.FormItem(form.FormItemProps{Class: "ui-login-card-field", Attrs: templ.Attributes{"data-class": "ui-login-card-field"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -256,13 +256,13 @@ func LoginCard(p LoginCardData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-login-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "login-card-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-login-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-login-card-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-login-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "login-card-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-login-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-login-card-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -333,25 +333,25 @@ func LoginCard(p LoginCardData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-login-card-foot", Attrs: templ.Attributes{"data-class": "login-card-foot"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-login-card-foot", Attrs: templ.Attributes{"data-class": "ui-login-card-foot"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-login-card-card", Attrs: templ.Attributes{"data-class": "login-card-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-login-card-card", Attrs: templ.Attributes{"data-class": "ui-login-card-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-login-card-container", Attrs: templ.Attributes{"data-class": "login-card-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-login-card-container", Attrs: templ.Attributes{"data-class": "ui-login-card-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-login-card", Tag: "section", Attrs: templ.Attributes{"data-class": "login-card", "aria-labelledby": "login-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-login-card", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-login-card", "aria-labelledby": "login-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

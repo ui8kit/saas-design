@@ -12,21 +12,21 @@ import (
 
 // DashboardStats: KPI cards for today, streak, week and focus time.
 templ DashboardStats(p DashboardStatsData) {
-	@block.Block(block.BlockProps{Class: "ui-dashboard-stats", Tag: "section", Attrs: templ.Attributes{"data-class": "dashboard-stats", "aria-labelledby": "dashboard-stats-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-dashboard-stats-container", Attrs: templ.Attributes{"data-class": "dashboard-stats-container"}}) {
-			@title.Title(title.TitleProps{Class: "ui-dashboard-stats-title", As: 2, Attrs: templ.Attributes{"data-class": "dashboard-stats-title", "id": "dashboard-stats-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-dashboard-stats", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats", "aria-labelledby": "dashboard-stats-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "dashboard-stats-title"}}) {
 				{ p.Title }
 			}
-			@list.List(list.ListProps{Class: "ui-dashboard-stats-grid", Attrs: templ.Attributes{"data-class": "dashboard-stats-grid"}}) {
+			@list.List(list.ListProps{Class: "ui-dashboard-stats-grid", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats-grid"}}) {
 				for _, k := range p.Cards {
-					@list.ListItem(list.ListItemProps{Class: "ui-dashboard-stats-card", Attrs: templ.Attributes{"data-class": "dashboard-stats-card"}}) {
-						@inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-label", Attrs: templ.Attributes{"data-class": "dashboard-stats-label"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-dashboard-stats-card", Attrs: templ.Attributes{"data-class": "ui-dashboard-stats-card"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}) {
 							{ k.Label }
 						}
-						@inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-value", Attrs: templ.Attributes{"data-class": "dashboard-stats-value"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-section-title-sm", Attrs: templ.Attributes{"data-class": "ui-section-title-sm"}}) {
 							{ k.Value }
 						}
-						@inline.Inline(inline.InlineProps{Class: "ui-dashboard-stats-hint", Attrs: templ.Attributes{"data-class": "dashboard-stats-hint"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}) {
 							{ k.Hint }
 						}
 					}

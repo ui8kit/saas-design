@@ -8,16 +8,16 @@
   let { data }: { data: CtaSplitData } = $props();
 </script>
 
-<Block class="ui-cta-split" data-class="cta-split" tag="section" aria-labelledby="cta-split-title">
-  <Container class="ui-cta-split-container" data-class="cta-split-container">
-    <Stack class="ui-cta-split-panel" data-class="cta-split-panel">
+<Block class="ui-cta-split" data-class="ui-cta-split" tag="section" aria-labelledby="cta-split-title">
+  <Container class="ui-cta-split-container" data-class="ui-cta-split-container">
+    <Stack class="ui-cta-split-panel" data-class="ui-cta-split-panel">
       {@html svg("brand-mark", `ui-cta-split-mark`)}
-      <Grid class="ui-cta-split-row" data-class="cta-split-row">
-        <Title class="ui-cta-split-title" data-class="cta-split-title" as={2} id="cta-split-title">
+      <Grid class="ui-cta-split-row" data-class="ui-cta-split-row">
+        <Title class="ui-cta-split-title" data-class="ui-cta-split-title" as={2} id="cta-split-title">
           {data.title}
         </Title>
-        <Stack class="ui-cta-split-aside" data-class="cta-split-aside">
-          <Text class="ui-cta-split-text" data-class="cta-split-text">
+        <Stack class="ui-cta-split-aside" data-class="ui-cta-split-aside">
+          <Text class="ui-cta-split-text" data-class="ui-cta-split-text">
             {data.text}
           </Text>
           <Button size="lg" href={data.cta.href || undefined}>

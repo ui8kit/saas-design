@@ -14,21 +14,21 @@ import (
 
 // AppGallery: Centered header and a row of colored tiles each framing an app screen; the last tile bleeds off the page.
 templ AppGallery(p AppGalleryData) {
-	@block.Block(block.BlockProps{Class: "ui-app-gallery", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "app-gallery", "aria-labelledby": "app-gallery-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-app-gallery-container", Attrs: templ.Attributes{"data-class": "app-gallery-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-app-gallery-head", Attrs: templ.Attributes{"data-class": "app-gallery-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-app-gallery-title", As: 2, Attrs: templ.Attributes{"data-class": "app-gallery-title", "id": "app-gallery-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-app-gallery", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-app-gallery", "aria-labelledby": "app-gallery-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-app-gallery-container", Attrs: templ.Attributes{"data-class": "ui-app-gallery-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-section-head-center", Attrs: templ.Attributes{"data-class": "ui-section-head-center"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "app-gallery-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-app-gallery-lead", Attrs: templ.Attributes{"data-class": "app-gallery-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-app-gallery-lead", Attrs: templ.Attributes{"data-class": "ui-app-gallery-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "app-gallery-tiles"}}) {
+			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}) {
 				for _, tile := range p.Tiles {
-					@list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "app-gallery-tile"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-tile"}}) {
 						if tile.Src != "" {
-							@image.Image(image.ImageProps{Class: "ui-app-gallery-screen", Src: tile.Src, Alt: tile.Alt, Attrs: templ.Attributes{"data-class": "app-gallery-screen"}})
+							@image.Image(image.ImageProps{Class: "ui-app-gallery-screen", Src: tile.Src, Alt: tile.Alt, Attrs: templ.Attributes{"data-class": "ui-app-gallery-screen"}})
 						}
 					}
 				}

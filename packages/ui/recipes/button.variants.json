@@ -17,7 +17,7 @@
     "size": {
       "default": "h-10 px-6 text-base",
       "sm": "h-8 px-4 text-sm",
-      "lg": "h-14 px-10 text-base",
+      "lg": "h-12 px-10 text-base",
       "icon": "size-10"
     }
   }

@@ -8,33 +8,33 @@
   let { data }: { data: FaqTilesData } = $props();
 </script>
 
-<Block class="ui-faq-tiles" data-class="faq-tiles" tag="section" id={data.id || undefined} aria-labelledby="faq-tiles-title">
-  <Container class="ui-faq-tiles-container" data-class="faq-tiles-container">
-    <Stack class="ui-faq-tiles-head" data-class="faq-tiles-head">
-      <Title class="ui-faq-tiles-title" data-class="faq-tiles-title" as={2} id="faq-tiles-title">
+<Block class="ui-faq-tiles" data-class="ui-faq-tiles" tag="section" id={data.id || undefined} aria-labelledby="faq-tiles-title">
+  <Container class="ui-faq-tiles-container" data-class="ui-faq-tiles-container">
+    <Stack class="ui-section-head-center" data-class="ui-section-head-center">
+      <Title class="ui-faq-tiles-title" data-class="ui-faq-tiles-title" as={2} id="faq-tiles-title">
         {data.title}
       </Title>
-      <Text class="ui-faq-tiles-lead" data-class="faq-tiles-lead">
+      <Text class="ui-faq-tiles-lead" data-class="ui-faq-tiles-lead">
         {data.lead}
       </Text>
     </Stack>
-    <Stack class="ui-faq-tiles-body" data-class="faq-tiles-body">
-      <Grid class="ui-faq-tiles-grid" data-class="faq-tiles-grid">
+    <Stack class="ui-stack-8" data-class="ui-stack-8">
+      <Grid class="ui-faq-tiles-grid" data-class="ui-faq-tiles-grid">
         {#each data.items as item}
-          <Disclosure class="ui-faq-tiles-tile ui-faq-tiles-tile-tone-{item.tone}" data-class="faq-tiles-tile">
-            <Summary class="ui-faq-tiles-question" data-class="faq-tiles-question">
-              <span class="ui-faq-tiles-arrow" data-class="faq-tiles-arrow">
+          <Disclosure class="ui-faq-tiles-tile ui-faq-tiles-tile-tone-{item.tone}" data-class="ui-faq-tiles-tile">
+            <Summary class="ui-faq-tiles-question" data-class="ui-faq-tiles-question">
+              <span class="ui-faq-tiles-arrow" data-class="ui-faq-tiles-arrow">
                 {@html svg("chevron-down", `ui-faq-tiles-arrow-icon`)}
               </span>
               {item.question}
             </Summary>
-            <Text class="ui-faq-tiles-answer" data-class="faq-tiles-answer">
+            <Text class="ui-faq-tiles-answer" data-class="ui-faq-tiles-answer">
               {item.answer}
             </Text>
           </Disclosure>
         {/each}
       </Grid>
-      <Link class="ui-faq-tiles-more" data-class="faq-tiles-more" href={data.more.href || undefined}>
+      <Link class="ui-faq-tiles-more" data-class="ui-faq-tiles-more" href={data.more.href || undefined}>
         {data.more.label}
       </Link>
     </Stack>

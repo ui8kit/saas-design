@@ -7,21 +7,21 @@
   let { data }: { data: AppGalleryData } = $props();
 </script>
 
-<Block class="ui-app-gallery" data-class="app-gallery" tag="section" id={data.id || undefined} aria-labelledby="app-gallery-title">
-  <Container class="ui-app-gallery-container" data-class="app-gallery-container">
-    <Stack class="ui-app-gallery-head" data-class="app-gallery-head">
-      <Title class="ui-app-gallery-title" data-class="app-gallery-title" as={2} id="app-gallery-title">
+<Block class="ui-app-gallery" data-class="ui-app-gallery" tag="section" id={data.id || undefined} aria-labelledby="app-gallery-title">
+  <Container class="ui-app-gallery-container" data-class="ui-app-gallery-container">
+    <Stack class="ui-section-head-center" data-class="ui-section-head-center">
+      <Title class="ui-section-title-display" data-class="ui-section-title-display" as={2} id="app-gallery-title">
         {data.title}
       </Title>
-      <Text class="ui-app-gallery-lead" data-class="app-gallery-lead">
+      <Text class="ui-app-gallery-lead" data-class="ui-app-gallery-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-app-gallery-tiles" data-class="app-gallery-tiles">
+    <List class="ui-app-gallery-tiles" data-class="ui-app-gallery-tiles">
       {#each data.tiles as tile}
-        <ListItem class="ui-app-gallery-tile ui-app-gallery-tile-tone-{tile.tone}" data-class="app-gallery-tile">
+        <ListItem class="ui-app-gallery-tile ui-app-gallery-tile-tone-{tile.tone}" data-class="ui-app-gallery-tile">
           {#if tile.src}
-            <Image class="ui-app-gallery-screen" data-class="app-gallery-screen" src={tile.src || undefined} alt={tile.alt || undefined} />
+            <Image class="ui-app-gallery-screen" data-class="ui-app-gallery-screen" src={tile.src || undefined} alt={tile.alt || undefined} />
           {/if}
         </ListItem>
       {/each}

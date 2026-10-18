@@ -103,7 +103,7 @@ func FaqTiles(p FaqTilesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-faq-tiles-title", As: 2, Attrs: templ.Attributes{"data-class": "faq-tiles-title", "id": "faq-tiles-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-faq-tiles-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-faq-tiles-title", "id": "faq-tiles-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -134,13 +134,13 @@ func FaqTiles(p FaqTilesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-tiles-lead", Attrs: templ.Attributes{"data-class": "faq-tiles-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-tiles-lead", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-tiles-head", Attrs: templ.Attributes{"data-class": "faq-tiles-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-section-head-center", Attrs: templ.Attributes{"data-class": "ui-section-head-center"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -197,7 +197,7 @@ func FaqTiles(p FaqTilesData) templ.Component {
 										}()
 									}
 									ctx = templ.InitializeContext(ctx)
-									templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<span class=\"ui-faq-tiles-arrow\" data-class=\"faq-tiles-arrow\">")
+									templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<span class=\"ui-faq-tiles-arrow\" data-class=\"ui-faq-tiles-arrow\">")
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -220,7 +220,7 @@ func FaqTiles(p FaqTilesData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-tiles-question", Attrs: templ.Attributes{"data-class": "faq-tiles-question"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-tiles-question", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-question"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -251,20 +251,20 @@ func FaqTiles(p FaqTilesData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-tiles-answer", Attrs: templ.Attributes{"data-class": "faq-tiles-answer"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-tiles-answer", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-answer"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-tiles-tile" + " ui-faq-tiles-tile-tone-" + item.Tone, Attrs: templ.Attributes{"data-class": "faq-tiles-tile"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-tiles-tile" + " ui-faq-tiles-tile-tone-" + item.Tone, Attrs: templ.Attributes{"data-class": "ui-faq-tiles-tile"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-faq-tiles-grid", Attrs: templ.Attributes{"data-class": "faq-tiles-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-faq-tiles-grid", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -295,25 +295,25 @@ func FaqTiles(p FaqTilesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-faq-tiles-more", Href: p.More.Href, Attrs: templ.Attributes{"data-class": "faq-tiles-more"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-faq-tiles-more", Href: p.More.Href, Attrs: templ.Attributes{"data-class": "ui-faq-tiles-more"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-tiles-body", Attrs: templ.Attributes{"data-class": "faq-tiles-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-8", Attrs: templ.Attributes{"data-class": "ui-stack-8"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-faq-tiles-container", Attrs: templ.Attributes{"data-class": "faq-tiles-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-faq-tiles-container", Attrs: templ.Attributes{"data-class": "ui-faq-tiles-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-faq-tiles", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "faq-tiles", "aria-labelledby": "faq-tiles-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-faq-tiles", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-faq-tiles", "aria-labelledby": "faq-tiles-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -7,21 +7,21 @@
   let { data }: { data: DashboardStatsData } = $props();
 </script>
 
-<Block class="ui-dashboard-stats" data-class="dashboard-stats" tag="section" aria-labelledby="dashboard-stats-title">
-  <Container class="ui-dashboard-stats-container" data-class="dashboard-stats-container">
-    <Title class="ui-dashboard-stats-title" data-class="dashboard-stats-title" as={2} id="dashboard-stats-title">
+<Block class="ui-section ui-dashboard-stats" data-class="ui-dashboard-stats" tag="section" aria-labelledby="dashboard-stats-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Title class="ui-section-title-sm" data-class="ui-section-title-sm" as={2} id="dashboard-stats-title">
       {data.title}
     </Title>
-    <List class="ui-dashboard-stats-grid" data-class="dashboard-stats-grid">
+    <List class="ui-dashboard-stats-grid" data-class="ui-dashboard-stats-grid">
       {#each data.cards as k}
-        <ListItem class="ui-dashboard-stats-card" data-class="dashboard-stats-card">
-          <Inline class="ui-dashboard-stats-label" data-class="dashboard-stats-label">
+        <ListItem class="ui-dashboard-stats-card" data-class="ui-dashboard-stats-card">
+          <Inline class="ui-muted-sm" data-class="ui-muted-sm">
             {k.label}
           </Inline>
-          <Inline class="ui-dashboard-stats-value" data-class="dashboard-stats-value">
+          <Inline class="ui-section-title-sm" data-class="ui-section-title-sm">
             {k.value}
           </Inline>
-          <Inline class="ui-dashboard-stats-hint" data-class="dashboard-stats-hint">
+          <Inline class="ui-muted-sm" data-class="ui-muted-sm">
             {k.hint}
           </Inline>
         </ListItem>

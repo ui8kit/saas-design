@@ -15,21 +15,21 @@ import (
 
 // TestimonialQuote: One large quote with author on a pink panel.
 templ TestimonialQuote(p TestimonialQuoteData) {
-	@block.Block(block.BlockProps{Class: "ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "testimonial-quote", "aria-label": p.Label}}) {
-		@container.Container(container.ContainerProps{Class: "ui-testimonial-quote-container", Attrs: templ.Attributes{"data-class": "testimonial-quote-container"}}) {
-			@box.Box(box.BoxProps{Class: "ui-testimonial-quote-panel", Attrs: templ.Attributes{"data-class": "testimonial-quote-panel"}}) {
-				<blockquote class="ui-testimonial-quote-quote" data-class="testimonial-quote-quote">
+	@block.Block(block.BlockProps{Class: "ui-testimonial-quote", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote", "aria-label": p.Label}}) {
+		@container.Container(container.ContainerProps{Class: "ui-testimonial-quote-container", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-container"}}) {
+			@box.Box(box.BoxProps{Class: "ui-testimonial-quote-panel", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-panel"}}) {
+				<blockquote class="ui-testimonial-quote-quote" data-class="ui-testimonial-quote-quote">
 					@text.Text(text.TextProps{}) {
 						{ p.Quote }
 					}
 				</blockquote>
-				@group.Group(group.GroupProps{Class: "ui-testimonial-quote-author", Attrs: templ.Attributes{"data-class": "testimonial-quote-author"}}) {
-					@image.Image(image.ImageProps{Class: "ui-testimonial-quote-avatar", Variant: "avatar", Src: p.Avatar.Src, Alt: p.Avatar.Alt, Attrs: templ.Attributes{"data-class": "testimonial-quote-avatar"}})
-					@stack.Stack(stack.StackProps{Class: "ui-testimonial-quote-who", Attrs: templ.Attributes{"data-class": "testimonial-quote-who"}}) {
-						@inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-name", Attrs: templ.Attributes{"data-class": "testimonial-quote-name"}}) {
+				@group.Group(group.GroupProps{Class: "ui-testimonial-quote-author", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-author"}}) {
+					@image.Image(image.ImageProps{Class: "ui-testimonial-quote-avatar", Variant: "avatar", Src: p.Avatar.Src, Alt: p.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-avatar"}})
+					@stack.Stack(stack.StackProps{Class: "ui-testimonial-quote-who", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-who"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-name", Attrs: templ.Attributes{"data-class": "ui-testimonial-quote-name"}}) {
 							{ p.Name }
 						}
-						@inline.Inline(inline.InlineProps{Class: "ui-testimonial-quote-role", Attrs: templ.Attributes{"data-class": "testimonial-quote-role"}}) {
+						@inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ p.Role }
 						}
 					}

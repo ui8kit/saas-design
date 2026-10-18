@@ -2,17 +2,17 @@
 /* Semantic classes emitted by the generated primitives (templ + svelte). Utilities only inside @apply. */
 @layer components {
   .ui-alert { @apply flex flex-col gap-2 rounded-md px-6 py-4 inset-ring; }
-  .ui-alert-default { @apply bg-card text-card-foreground inset-ring-border; }
-  .ui-alert-destructive { @apply bg-destructive/10 text-destructive inset-ring-destructive; }
-  .ui-alert-success { @apply bg-primary/10 text-foreground inset-ring-primary; }
-  .ui-alert-warning { @apply bg-accent text-accent-foreground inset-ring-border; }
+  .ui-alert-default { @apply bg-card text-card-foreground; @apply inset-ring-border; }
+  .ui-alert-destructive { @apply bg-destructive/10 text-destructive; @apply inset-ring-destructive; }
+  .ui-alert-success { @apply bg-primary/10 text-foreground; @apply inset-ring-primary; }
+  .ui-alert-warning { @apply bg-accent text-accent-foreground; @apply inset-ring-border; }
   .ui-badge { @apply inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full font-normal; }
   .ui-badge-default { @apply bg-primary text-primary-foreground; }
   .ui-badge-destructive { @apply bg-destructive text-destructive-foreground; }
-  .ui-badge-outline { @apply bg-transparent text-foreground inset-ring inset-ring-border; }
+  .ui-badge-outline { @apply bg-transparent text-foreground inset-ring; @apply inset-ring-border; }
   .ui-badge-secondary { @apply bg-secondary text-secondary-foreground; }
   .ui-badge-size-default { @apply h-7 px-3 text-sm; }
-  .ui-badge-size-lg { @apply h-9 px-4 text-sm; }
+  .ui-badge-size-lg { @apply h-8 px-4 text-sm; }
   .ui-badge-size-sm { @apply h-6 px-2 text-xs; }
   .ui-breadcrumb { @apply text-sm; }
   .ui-breadcrumb-part-1 { @apply flex flex-wrap items-center gap-2; }
@@ -31,12 +31,12 @@
   .ui-button-destructive { @apply bg-destructive text-destructive-foreground hover:bg-destructive/90; }
   .ui-button-ghost { @apply bg-transparent text-current hover:bg-accent hover:text-accent-foreground; }
   .ui-button-link { @apply bg-transparent text-primary underline-offset-4 hover:underline; }
-  .ui-button-muted { @apply bg-muted text-foreground inset-ring inset-ring-border hover:bg-accent; }
-  .ui-button-outline { @apply bg-transparent text-current inset-ring inset-ring-border hover:bg-accent hover:text-accent-foreground; }
+  .ui-button-muted { @apply bg-muted text-foreground inset-ring hover:bg-accent; @apply inset-ring-border; }
+  .ui-button-outline { @apply bg-transparent text-current inset-ring hover:bg-accent hover:text-accent-foreground; @apply inset-ring-border; }
   .ui-button-secondary { @apply bg-secondary text-secondary-foreground hover:bg-secondary/90; }
   .ui-button-size-default { @apply h-10 px-6 text-base; }
   .ui-button-size-icon { @apply size-10; }
-  .ui-button-size-lg { @apply h-14 px-10 text-base; }
+  .ui-button-size-lg { @apply h-12 px-10 text-base; }
   .ui-button-size-sm { @apply h-8 px-4 text-sm; }
   .ui-card { @apply flex flex-col gap-6 rounded-lg bg-card p-12 text-card-foreground; }
   .ui-card-accent { @apply bg-accent text-accent-foreground; }
@@ -45,11 +45,11 @@
   .ui-card-description { @apply text-sm text-muted-foreground; }
   .ui-card-flat { @apply bg-transparent p-0; }
   .ui-card-footer { @apply flex items-center px-6; }
-  .ui-card-ghost { @apply bg-transparent inset-ring inset-ring-border; }
-  .ui-card-header { @apply grid auto-rows-min items-start gap-1.5 px-6; }
+  .ui-card-ghost { @apply bg-transparent inset-ring; @apply inset-ring-border; }
+  .ui-card-header { @apply grid auto-rows-min items-start gap-2 px-6; }
   .ui-card-kpi { @apply gap-2 p-6; }
   .ui-card-muted { @apply bg-muted; }
-  .ui-card-raised { @apply bg-background inset-ring inset-ring-border; }
+  .ui-card-raised { @apply bg-background inset-ring; @apply inset-ring-border; }
   .ui-card-title { @apply font-semibold leading-none; }
   .ui-checkbox { @apply shrink-0 rounded-sm accent-primary outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:opacity-50; }
   .ui-checkbox-size-default { @apply size-4; }
@@ -71,7 +71,8 @@
   .ui-cols-7 { @apply grid-cols-7; }
   .ui-cols-8 { @apply grid-cols-8; }
   .ui-cols-9 { @apply grid-cols-9; }
-  .ui-dialog { @apply m-auto rounded-lg bg-popover p-8 text-popover-foreground shadow-lg backdrop:bg-foreground/40; }
+  .ui-dialog { @apply m-auto rounded-lg bg-popover p-8 text-popover-foreground shadow-lg; }
+  .ui-dialog::backdrop { @apply bg-foreground/40; }
   .ui-dialog-card { @apply bg-card text-card-foreground; }
   .ui-dialog-sheet { @apply min-h-screen rounded-none; }
   .ui-dialog-size-default { @apply w-full max-w-lg; }
@@ -81,7 +82,7 @@
   .ui-dialog-size-xl { @apply w-full max-w-4xl; }
   .ui-disabled { @apply pointer-events-none opacity-50; }
   .ui-disclosure-card { @apply rounded-lg bg-card text-card-foreground; }
-  .ui-disclosure-default { @apply rounded-md inset-ring inset-ring-border; }
+  .ui-disclosure-default { @apply rounded-md inset-ring; @apply inset-ring-border; }
   .ui-disclosure-size-default { @apply text-base; }
   .ui-disclosure-size-lg { @apply text-lg; }
   .ui-disclosure-size-sm { @apply text-sm; }
@@ -119,7 +120,7 @@
   .ui-iconbadge-accent { @apply bg-accent text-accent-foreground; }
   .ui-iconbadge-default { @apply bg-muted text-muted-foreground; }
   .ui-iconbadge-destructive { @apply bg-destructive text-destructive-foreground; }
-  .ui-iconbadge-outline { @apply text-foreground inset-ring inset-ring-border; }
+  .ui-iconbadge-outline { @apply text-foreground inset-ring; @apply inset-ring-border; }
   .ui-iconbadge-secondary { @apply bg-secondary text-secondary-foreground; }
   .ui-iconbadge-size-default { @apply size-10 text-sm; }
   .ui-iconbadge-size-lg { @apply size-12 text-base; }
@@ -152,9 +153,10 @@
   .ui-image-size-sm { @apply size-8; }
   .ui-image-size-xl { @apply size-24; }
   .ui-image-size-xs { @apply size-6; }
-  .ui-image-thumbnail { @apply rounded-md inset-ring inset-ring-border; }
-  .ui-input { @apply w-full rounded-full bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50; }
-  .ui-input-ghost { @apply bg-muted inset-ring-transparent; }
+  .ui-image-thumbnail { @apply rounded-md inset-ring; @apply inset-ring-border; }
+  .ui-input { @apply w-full rounded-full bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
+  .ui-input::placeholder { @apply text-muted-foreground; }
+  .ui-input-ghost { @apply bg-muted; @apply inset-ring-transparent; }
   .ui-input-outline { @apply bg-transparent; }
   .ui-input-size-default { @apply h-10 px-6 text-base; }
   .ui-input-size-lg { @apply h-12 px-6 text-base; }
@@ -205,8 +207,9 @@
   .ui-radio-size-lg { @apply size-5; }
   .ui-radio-size-sm { @apply size-4; }
   .ui-radio-size-xs { @apply size-3; }
-  .ui-select { @apply w-full appearance-none rounded-full bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50; }
-  .ui-select-ghost { @apply bg-muted inset-ring-transparent; }
+  .ui-select { @apply w-full appearance-none rounded-full bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
+  .ui-select::placeholder { @apply text-muted-foreground; }
+  .ui-select-ghost { @apply bg-muted; @apply inset-ring-transparent; }
   .ui-select-outline { @apply bg-transparent; }
   .ui-select-size-default { @apply h-10 px-6 text-base; }
   .ui-select-size-lg { @apply h-12 px-6 text-base; }
@@ -256,11 +259,12 @@
   .ui-switch-size-sm { @apply size-4; }
   .ui-switch-size-xs { @apply size-3; }
   .ui-table { @apply w-full caption-bottom text-sm; }
-  .ui-textarea { @apply w-full rounded-md bg-background text-foreground inset-ring inset-ring-input outline-none transition-colors placeholder:text-muted-foreground focus-visible:inset-ring-ring disabled:pointer-events-none disabled:opacity-50; }
-  .ui-textarea-ghost { @apply bg-muted inset-ring-transparent; }
+  .ui-textarea { @apply w-full rounded-md bg-background text-foreground inset-ring outline-none transition-colors disabled:pointer-events-none disabled:opacity-50; @apply inset-ring-input focus-visible:inset-ring-ring; }
+  .ui-textarea::placeholder { @apply text-muted-foreground; }
+  .ui-textarea-ghost { @apply bg-muted; @apply inset-ring-transparent; }
   .ui-textarea-outline { @apply bg-transparent; }
-  .ui-textarea-size-default { @apply min-h-32 px-6 py-4 text-base; }
-  .ui-textarea-size-lg { @apply min-h-40 px-6 py-4 text-base; }
-  .ui-textarea-size-sm { @apply min-h-24 px-4 py-2 text-sm; }
-  .ui-textarea-size-xs { @apply min-h-16 px-3 py-2 text-xs; }
+  .ui-textarea-size-default { @apply px-6 py-4 text-base; }
+  .ui-textarea-size-lg { @apply px-6 py-4 text-lg; }
+  .ui-textarea-size-sm { @apply px-4 py-2 text-sm; }
+  .ui-textarea-size-xs { @apply px-3 py-2 text-xs; }
 }

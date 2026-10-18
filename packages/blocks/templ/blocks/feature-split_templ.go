@@ -80,13 +80,13 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-feature-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "feature-split-image"}}).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-feature-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-feature-split-image"}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "feature-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "ui-feature-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -141,7 +141,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-feature-split-title", As: 2, Attrs: templ.Attributes{"data-class": "feature-split-title", "id": "feature-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "feature-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -172,13 +172,13 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-split-lead", Attrs: templ.Attributes{"data-class": "feature-split-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-split-head", Attrs: templ.Attributes{"data-class": "feature-split-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-split-head", Attrs: templ.Attributes{"data-class": "ui-feature-split-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -254,7 +254,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-feature-split-item-title", As: 3, Attrs: templ.Attributes{"data-class": "feature-split-item-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -285,44 +285,44 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-split-item-text", Attrs: templ.Attributes{"data-class": "feature-split-item-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-split-item-body", Attrs: templ.Attributes{"data-class": "feature-split-item-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-feature-split-item", Attrs: templ.Attributes{"data-class": "feature-split-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-feature-split-item", Attrs: templ.Attributes{"data-class": "ui-feature-split-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-feature-split-list", Attrs: templ.Attributes{"data-class": "feature-split-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-feature-split-list", Attrs: templ.Attributes{"data-class": "ui-feature-split-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-split-copy", Attrs: templ.Attributes{"data-class": "feature-split-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-split-copy", Attrs: templ.Attributes{"data-class": "ui-feature-split-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-feature-split-container", Attrs: templ.Attributes{"data-class": "feature-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-feature-split-container", Attrs: templ.Attributes{"data-class": "ui-feature-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-feature-split", Tag: "section", Attrs: templ.Attributes{"data-class": "feature-split", "aria-labelledby": "feature-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-feature-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-feature-split", "aria-labelledby": "feature-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

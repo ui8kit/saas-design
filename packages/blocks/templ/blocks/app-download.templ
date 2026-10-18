@@ -16,16 +16,16 @@ import (
 
 // AppDownload: Store buttons beside a phone on a dark panel.
 templ AppDownload(p AppDownloadData) {
-	@block.Block(block.BlockProps{Class: "ui-app-download", Tag: "section", Attrs: templ.Attributes{"data-class": "app-download", "aria-labelledby": "app-download-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-app-download-container", Attrs: templ.Attributes{"data-class": "app-download-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-app-download-copy", Attrs: templ.Attributes{"data-class": "app-download-copy", "data-theme": "dark"}}) {
-				@title.Title(title.TitleProps{Class: "ui-app-download-title", As: 2, Attrs: templ.Attributes{"data-class": "app-download-title", "id": "app-download-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-app-download", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-app-download", "aria-labelledby": "app-download-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-app-download-container", Attrs: templ.Attributes{"data-class": "ui-app-download-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-app-download-copy", Attrs: templ.Attributes{"data-class": "ui-app-download-copy", "data-theme": "dark"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "app-download-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-app-download-text", Attrs: templ.Attributes{"data-class": "app-download-text"}}) {
+				@text.Text(text.TextProps{Class: "ui-app-download-text", Attrs: templ.Attributes{"data-class": "ui-app-download-text"}}) {
 					{ p.Text }
 				}
-				@group.Group(group.GroupProps{Class: "ui-app-download-stores", Attrs: templ.Attributes{"data-class": "app-download-stores"}}) {
+				@group.Group(group.GroupProps{Class: "ui-app-download-stores", Attrs: templ.Attributes{"data-class": "ui-app-download-stores"}}) {
 					@button.Button(button.ButtonProps{Variant: "secondary", Size: "lg", Href: p.Ios.Href}) {
 						@templ.Raw(icons.SVG("apple", "ui-app-download-apple"))
 						{ p.Ios.Label }
@@ -36,7 +36,7 @@ templ AppDownload(p AppDownloadData) {
 					}
 				}
 			}
-			@image.Image(image.ImageProps{Class: "ui-app-download-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "app-download-image"}})
+			@image.Image(image.ImageProps{Class: "ui-app-download-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-app-download-image"}})
 		}
 	}
 }

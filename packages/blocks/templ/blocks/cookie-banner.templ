@@ -11,12 +11,12 @@ import (
 
 // CookieBanner: Consent notice with accept/decline (static; floating layer gets the only shadow).
 templ CookieBanner(p CookieBannerData) {
-	@block.Block(block.BlockProps{Class: "ui-cookie-banner", Tag: "aside", Attrs: templ.Attributes{"data-class": "cookie-banner", "aria-label": p.Label}}) {
-		@group.Group(group.GroupProps{Class: "ui-cookie-banner-card", Attrs: templ.Attributes{"data-class": "cookie-banner-card"}}) {
-			@text.Text(text.TextProps{Class: "ui-cookie-banner-text", Attrs: templ.Attributes{"data-class": "cookie-banner-text"}}) {
+	@block.Block(block.BlockProps{Class: "ui-cookie-banner", Tag: "aside", Attrs: templ.Attributes{"data-class": "ui-cookie-banner", "aria-label": p.Label}}) {
+		@group.Group(group.GroupProps{Class: "ui-cookie-banner-card", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-card"}}) {
+			@text.Text(text.TextProps{Class: "ui-cookie-banner-text", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-text"}}) {
 				{ p.Text }
 			}
-			@group.Group(group.GroupProps{Class: "ui-cookie-banner-actions", Attrs: templ.Attributes{"data-class": "cookie-banner-actions"}}) {
+			@group.Group(group.GroupProps{Class: "ui-cookie-banner-actions", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-actions"}}) {
 				@button.Button(button.ButtonProps{Variant: "ghost", Size: "sm", Type: "button"}) {
 					{ p.Decline }
 				}

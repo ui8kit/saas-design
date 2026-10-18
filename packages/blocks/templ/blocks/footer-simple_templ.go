@@ -78,7 +78,7 @@ func FooterSimple(p FooterSimpleData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = templ.Raw(icons.SVG("brand-mark", "ui-footer-simple-mark")).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = templ.Raw(icons.SVG("brand-mark", "ui-icon-sm")).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -115,18 +115,18 @@ func FooterSimple(p FooterSimpleData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-simple-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "footer-simple-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-simple-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-footer-simple-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, " <nav class=\"ui-footer-simple-nav\" data-class=\"footer-simple-nav\" aria-label=\"")
+				templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, " <nav class=\"ui-footer-simple-nav\" data-class=\"ui-footer-simple-nav\" aria-label=\"")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				var templ_7745c5c3_Var7 string
 				templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(p.Label)
 				if templ_7745c5c3_Err != nil {
-					return templ.Error{Err: templ_7745c5c3_Err, FileName: `footer-simple.templ`, Line: 25, Col: 88}
+					return templ.Error{Err: templ_7745c5c3_Err, FileName: `footer-simple.templ`, Line: 25, Col: 91}
 				}
 				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 				if templ_7745c5c3_Err != nil {
@@ -184,7 +184,7 @@ func FooterSimple(p FooterSimpleData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-simple-link", Variant: "muted", Href: l.Href, Attrs: templ.Attributes{"data-class": "footer-simple-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-simple-link", Variant: "muted", Href: l.Href, Attrs: templ.Attributes{"data-class": "ui-footer-simple-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -197,7 +197,7 @@ func FooterSimple(p FooterSimpleData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-footer-simple-links", Attrs: templ.Attributes{"data-class": "footer-simple-links"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-footer-simple-links", Attrs: templ.Attributes{"data-class": "ui-footer-simple-links"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -228,19 +228,19 @@ func FooterSimple(p FooterSimpleData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-simple-copyright", Attrs: templ.Attributes{"data-class": "footer-simple-copyright"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-footer-simple-container", Attrs: templ.Attributes{"data-class": "footer-simple-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-footer-simple-container", Attrs: templ.Attributes{"data-class": "ui-footer-simple-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-footer-simple", Tag: "footer", Attrs: templ.Attributes{"data-class": "footer-simple"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-footer-simple", Tag: "footer", Attrs: templ.Attributes{"data-class": "ui-footer-simple"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -8,27 +8,27 @@
   let { data }: { data: IntegrationsData } = $props();
 </script>
 
-<Block class="ui-integrations" data-class="integrations" tag="section" aria-labelledby="integrations-title">
-  <Container class="ui-integrations-container" data-class="integrations-container">
-    <Stack class="ui-integrations-head" data-class="integrations-head">
-      <Title class="ui-integrations-title" data-class="integrations-title" as={2} id="integrations-title">
+<Block class="ui-section ui-integrations" data-class="ui-integrations" tag="section" aria-labelledby="integrations-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-integrations-head" data-class="ui-integrations-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="integrations-title">
         {data.title}
       </Title>
-      <Text class="ui-integrations-lead" data-class="integrations-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-integrations-grid" data-class="integrations-grid">
+    <List class="ui-integrations-grid" data-class="ui-integrations-grid">
       {#each data.items as item}
-        <ListItem class="ui-integrations-item" data-class="integrations-item">
-          <IconBadge class="ui-integrations-badge" data-class="integrations-badge">
+        <ListItem class="ui-integrations-item" data-class="ui-integrations-item">
+          <IconBadge class="ui-integrations-badge" data-class="ui-integrations-badge">
             {@html svg(item.icon, `ui-integrations-icon`)}
           </IconBadge>
-          <Stack class="ui-integrations-body" data-class="integrations-body">
-            <Title class="ui-integrations-item-title" data-class="integrations-item-title" as={3}>
+          <Stack class="ui-stack-2" data-class="ui-stack-2">
+            <Title class="ui-item-title-sm" data-class="ui-item-title-sm" as={3}>
               {item.name}
             </Title>
-            <Text class="ui-integrations-item-text" data-class="integrations-item-text">
+            <Text class="ui-muted-sm" data-class="ui-muted-sm">
               {item.text}
             </Text>
           </Stack>

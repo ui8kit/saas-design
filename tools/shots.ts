@@ -52,7 +52,7 @@ await page.screenshot({ path: join(OUT, "site-home.png"), fullPage: true });
 const fullH = await page.evaluate(() => document.documentElement.scrollHeight);
 for (const [slug, , block] of SECTIONS) {
   const box = await page.evaluate((b) => {
-    const el = document.querySelector(`[data-class="${b}"]`) as HTMLElement | null; if (!el) return null;
+    const el = document.querySelector(`[data-class="ui-${b}"]`) as HTMLElement | null; if (!el) return null;
     const target = b === "hero-phones" ? el : ((el.firstElementChild as HTMLElement) ?? el);
     const r = target.getBoundingClientRect(); return { y: r.top + scrollY, height: r.height };
   }, block);

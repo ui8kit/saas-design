@@ -127,13 +127,13 @@ func SettingsPanel(p SettingsPanelData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-settings-panel-title", As: 2, Attrs: templ.Attributes{"data-class": "settings-panel-title", "id": "settings-panel-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-settings-panel-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-settings-panel-title", "id": "settings-panel-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = form.Legend(form.LegendProps{Class: "ui-settings-panel-legend", Attrs: templ.Attributes{"data-class": "settings-panel-legend"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = form.Legend(form.LegendProps{Class: "ui-settings-panel-legend", Attrs: templ.Attributes{"data-class": "ui-settings-panel-legend"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -164,7 +164,7 @@ func SettingsPanel(p SettingsPanelData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-settings-panel-text", Attrs: templ.Attributes{"data-class": "settings-panel-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -204,7 +204,7 @@ func SettingsPanel(p SettingsPanelData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-settings-panel-label", HTMLFor: o.ID, Attrs: templ.Attributes{"data-class": "settings-panel-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-settings-panel-label", HTMLFor: o.ID, Attrs: templ.Attributes{"data-class": "ui-settings-panel-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -212,20 +212,20 @@ func SettingsPanel(p SettingsPanelData) templ.Component {
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
-								templ_7745c5c3_Err = formswitch.Switch(formswitch.SwitchProps{Class: "ui-settings-panel-switch", ID: o.ID, Name: o.ID, Checked: o.Checked, Attrs: templ.Attributes{"data-class": "settings-panel-switch"}}).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = formswitch.Switch(formswitch.SwitchProps{Class: "ui-settings-panel-switch", ID: o.ID, Name: o.ID, Checked: o.Checked, Attrs: templ.Attributes{"data-class": "ui-settings-panel-switch"}}).Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-settings-panel-option", Attrs: templ.Attributes{"data-class": "settings-panel-option"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-settings-panel-option", Attrs: templ.Attributes{"data-class": "ui-settings-panel-option"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = form.Fieldset(form.FieldsetProps{Class: "ui-settings-panel-fieldset", Attrs: templ.Attributes{"data-class": "settings-panel-fieldset"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = form.Fieldset(form.FieldsetProps{Class: "ui-stack-6", Attrs: templ.Attributes{"data-class": "ui-stack-6"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -256,25 +256,25 @@ func SettingsPanel(p SettingsPanelData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-settings-panel-button", Type: "submit", Attrs: templ.Attributes{"data-class": "settings-panel-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-settings-panel-button", Type: "submit", Attrs: templ.Attributes{"data-class": "ui-settings-panel-button"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-settings-panel-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "settings-panel-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-settings-panel-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-settings-panel-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-settings-panel-container", Attrs: templ.Attributes{"data-class": "settings-panel-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-settings-panel-container", Attrs: templ.Attributes{"data-class": "ui-settings-panel-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-settings-panel", Tag: "section", Attrs: templ.Attributes{"data-class": "settings-panel", "aria-labelledby": "settings-panel-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-settings-panel", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-settings-panel", "aria-labelledby": "settings-panel-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

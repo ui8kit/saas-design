@@ -8,25 +8,25 @@
   let { data }: { data: FeatureCardsData } = $props();
 </script>
 
-<Block class="ui-feature-cards" data-class="feature-cards" tag="section" id={data.id || undefined} aria-labelledby="feature-cards-title">
-  <Container class="ui-feature-cards-container" data-class="feature-cards-container">
-    <Group class="ui-feature-cards-head" data-class="feature-cards-head">
-      <Title class="ui-feature-cards-title" data-class="feature-cards-title" as={2} id="feature-cards-title">
+<Block class="ui-feature-cards" data-class="ui-feature-cards" tag="section" id={data.id || undefined} aria-labelledby="feature-cards-title">
+  <Container class="ui-feature-cards-container" data-class="ui-feature-cards-container">
+    <Group class="ui-feature-cards-head" data-class="ui-feature-cards-head">
+      <Title class="ui-section-title-display" data-class="ui-section-title-display" as={2} id="feature-cards-title">
         {data.title}
       </Title>
-      <Text class="ui-feature-cards-lead" data-class="feature-cards-lead">
+      <Text class="ui-feature-cards-lead" data-class="ui-feature-cards-lead">
         {data.lead}
       </Text>
     </Group>
-    <Grid class="ui-feature-cards-grid" data-class="feature-cards-grid">
+    <Grid class="ui-feature-cards-grid" data-class="ui-feature-cards-grid">
       {#each data.items as item}
-        <Card class="ui-feature-cards-card" data-class="feature-cards-card">
+        <Card class="ui-feature-cards-card" data-class="ui-feature-cards-card">
           {@html svg(item.icon, `ui-feature-cards-icon`)}
-          <Stack class="ui-feature-cards-body" data-class="feature-cards-body">
-            <Title class="ui-feature-cards-card-title" data-class="feature-cards-card-title" as={3}>
+          <Stack class="ui-stack-4" data-class="ui-stack-4">
+            <Title class="ui-feature-cards-card-title" data-class="ui-feature-cards-card-title" as={3}>
               {item.title}
             </Title>
-            <Text class="ui-feature-cards-card-text" data-class="feature-cards-card-text">
+            <Text class="ui-feature-cards-card-text" data-class="ui-feature-cards-card-text">
               {item.text}
             </Text>
           </Stack>

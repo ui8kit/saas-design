@@ -7,37 +7,37 @@
   let { data }: { data: BlogCardsData } = $props();
 </script>
 
-<Block class="ui-blog-cards" data-class="blog-cards" tag="section" aria-labelledby="blog-cards-title">
-  <Container class="ui-blog-cards-container" data-class="blog-cards-container">
-    <Stack class="ui-blog-cards-head" data-class="blog-cards-head">
-      <Title class="ui-blog-cards-title" data-class="blog-cards-title" as={2} id="blog-cards-title">
+<Block class="ui-section ui-blog-cards" data-class="ui-blog-cards" tag="section" aria-labelledby="blog-cards-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-blog-cards-head" data-class="ui-blog-cards-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="blog-cards-title">
         {data.title}
       </Title>
-      <Text class="ui-blog-cards-lead" data-class="blog-cards-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-blog-cards-grid" data-class="blog-cards-grid">
+    <List class="ui-grid-3" data-class="ui-grid-3">
       {#each data.posts as post}
-        <ListItem class="ui-blog-cards-post" data-class="blog-cards-post">
-          <Box class="ui-blog-cards-media" data-class="blog-cards-media">
-            <Image class="ui-blog-cards-image" data-class="blog-cards-image" src={post.image.src || undefined} alt={post.image.alt || undefined} />
+        <ListItem class="ui-blog-cards-post" data-class="ui-blog-cards-post">
+          <Box class="ui-blog-cards-media" data-class="ui-blog-cards-media">
+            <Image class="ui-blog-cards-image" data-class="ui-blog-cards-image" src={post.image.src || undefined} alt={post.image.alt || undefined} />
           </Box>
-          <Stack class="ui-blog-cards-body" data-class="blog-cards-body">
-            <Group class="ui-blog-cards-meta" data-class="blog-cards-meta">
+          <Stack class="ui-blog-cards-body" data-class="ui-blog-cards-body">
+            <Group class="ui-blog-cards-meta" data-class="ui-blog-cards-meta">
               <Badge variant="outline">
                 {post.tag}
               </Badge>
-              <time class="ui-blog-cards-date" data-class="blog-cards-date" datetime={post.datetime}>
+              <time class="ui-blog-cards-date" data-class="ui-blog-cards-date" datetime={post.datetime}>
                 {post.date}
               </time>
             </Group>
-            <Title class="ui-blog-cards-post-title" data-class="blog-cards-post-title" as={3}>
-              <Link class="ui-blog-cards-post-link" data-class="blog-cards-post-link" href={post.href || undefined}>
+            <Title class="ui-item-title" data-class="ui-item-title" as={3}>
+              <Link class="ui-blog-cards-post-link" data-class="ui-blog-cards-post-link" href={post.href || undefined}>
                 {post.title}
               </Link>
             </Title>
-            <Text class="ui-blog-cards-excerpt" data-class="blog-cards-excerpt">
+            <Text class="ui-muted" data-class="ui-muted">
               {post.excerpt}
             </Text>
           </Stack>

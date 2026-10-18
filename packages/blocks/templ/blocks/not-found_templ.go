@@ -87,7 +87,7 @@ func NotFound(p NotFoundData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-not-found-code", Attrs: templ.Attributes{"data-class": "not-found-code"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-not-found-code", Attrs: templ.Attributes{"data-class": "ui-not-found-code"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -118,7 +118,7 @@ func NotFound(p NotFoundData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-not-found-title", As: 1, Attrs: templ.Attributes{"data-class": "not-found-title", "id": "not-found-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-not-found-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-not-found-title", "id": "not-found-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -149,7 +149,7 @@ func NotFound(p NotFoundData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-not-found-text", Attrs: templ.Attributes{"data-class": "not-found-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-not-found-text", Attrs: templ.Attributes{"data-class": "ui-not-found-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -186,13 +186,13 @@ func NotFound(p NotFoundData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-not-found-container", Attrs: templ.Attributes{"data-class": "not-found-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-not-found-container", Attrs: templ.Attributes{"data-class": "ui-not-found-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-not-found", Tag: "section", Attrs: templ.Attributes{"data-class": "not-found", "aria-labelledby": "not-found-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-not-found", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-not-found", "aria-labelledby": "not-found-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

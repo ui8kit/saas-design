@@ -120,7 +120,7 @@ func HeroCentered(p HeroCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-centered-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-centered-title", "id": "hero-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-centered-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-centered-title", "id": "hero-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -151,7 +151,7 @@ func HeroCentered(p HeroCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-centered-lead", Attrs: templ.Attributes{"data-class": "hero-centered-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-centered-lead", Attrs: templ.Attributes{"data-class": "ui-hero-centered-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -231,19 +231,19 @@ func HeroCentered(p HeroCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-centered-actions", Attrs: templ.Attributes{"data-class": "hero-centered-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-centered-actions", Attrs: templ.Attributes{"data-class": "ui-hero-centered-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-hero-centered-container", Attrs: templ.Attributes{"data-class": "hero-centered-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-hero-centered-container", Attrs: templ.Attributes{"data-class": "ui-hero-centered-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "hero-centered", "aria-labelledby": "hero-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-hero-centered", "aria-labelledby": "hero-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

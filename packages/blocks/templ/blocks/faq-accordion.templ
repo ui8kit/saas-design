@@ -14,24 +14,24 @@ import (
 
 // FaqAccordion: Native details/summary list; first item open.
 templ FaqAccordion(p FaqAccordionData) {
-	@block.Block(block.BlockProps{Class: "ui-faq-accordion", Tag: "section", Attrs: templ.Attributes{"data-class": "faq-accordion", "aria-labelledby": "faq-accordion-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-faq-accordion-container", Attrs: templ.Attributes{"data-class": "faq-accordion-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-faq-accordion-head", Attrs: templ.Attributes{"data-class": "faq-accordion-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-faq-accordion-title", As: 2, Attrs: templ.Attributes{"data-class": "faq-accordion-title", "id": "faq-accordion-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-faq-accordion", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-faq-accordion", "aria-labelledby": "faq-accordion-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container-narrow", Attrs: templ.Attributes{"data-class": "ui-section-container-narrow"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-faq-accordion-head", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "faq-accordion-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-faq-accordion-lead", Attrs: templ.Attributes{"data-class": "faq-accordion-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@stack.Stack(stack.StackProps{Class: "ui-faq-accordion-list", Attrs: templ.Attributes{"data-class": "faq-accordion-list"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-faq-accordion-list", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-list"}}) {
 				for _, item := range p.Items {
-					@disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-accordion-item", Open: item.Open, Attrs: templ.Attributes{"data-class": "faq-accordion-item"}}) {
-						@disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-accordion-question", Attrs: templ.Attributes{"data-class": "faq-accordion-question"}}) {
+					@disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-accordion-item", Open: item.Open, Attrs: templ.Attributes{"data-class": "ui-faq-accordion-item"}}) {
+						@disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-accordion-question", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-question"}}) {
 							{ item.Question }
 							@templ.Raw(icons.SVG("chevron-down", "ui-faq-accordion-chevron"))
 						}
-						@text.Text(text.TextProps{Class: "ui-faq-accordion-answer", Attrs: templ.Attributes{"data-class": "faq-accordion-answer"}}) {
+						@text.Text(text.TextProps{Class: "ui-faq-accordion-answer", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-answer"}}) {
 							{ item.Answer }
 						}
 					}

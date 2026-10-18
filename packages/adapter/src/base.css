@@ -1,7 +1,6 @@
 /* Document-level defaults shared by both apps. Tokens only. */
 @layer base {
   html { @apply bg-background font-sans text-foreground antialiased; }
-  body { @apply min-h-screen; }
 }
 
 @layer components {

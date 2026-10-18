@@ -8,58 +8,58 @@
   let { data }: { data: ComparisonTableData } = $props();
 </script>
 
-<Block class="ui-comparison-table" data-class="comparison-table" tag="section" aria-labelledby="comparison-table-title">
-  <Container class="ui-comparison-table-container" data-class="comparison-table-container">
-    <Stack class="ui-comparison-table-head" data-class="comparison-table-head">
-      <Title class="ui-comparison-table-title" data-class="comparison-table-title" as={2} id="comparison-table-title">
+<Block class="ui-section ui-comparison-table" data-class="ui-comparison-table" tag="section" aria-labelledby="comparison-table-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-comparison-table-head" data-class="ui-comparison-table-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="comparison-table-title">
         {data.title}
       </Title>
     </Stack>
-    <Box class="ui-comparison-table-scroll" data-class="comparison-table-scroll">
-      <Table class="ui-comparison-table-table" data-class="comparison-table-table">
-        <TableHead class="ui-comparison-table-thead" data-class="comparison-table-thead">
+    <Box class="ui-comparison-table-scroll" data-class="ui-comparison-table-scroll">
+      <Table class="ui-comparison-table-table" data-class="ui-comparison-table-table">
+        <TableHead class="ui-comparison-table-thead" data-class="ui-comparison-table-thead">
           <TableRow>
-            <TableHeadCell class="ui-comparison-table-th" data-class="comparison-table-th" scope="col">
+            <TableHeadCell class="ui-comparison-table-th" data-class="ui-comparison-table-th" scope="col">
               {data.feature}
             </TableHeadCell>
-            <TableHeadCell class="ui-comparison-table-th-plan" data-class="comparison-table-th-plan" scope="col">
+            <TableHeadCell class="ui-comparison-table-th-plan" data-class="ui-comparison-table-th-plan" scope="col">
               {data.free}
             </TableHeadCell>
-            <TableHeadCell class="ui-comparison-table-th-plan-2" data-class="comparison-table-th-plan-2" scope="col">
+            <TableHeadCell class="ui-comparison-table-th-plan-2" data-class="ui-comparison-table-th-plan-2" scope="col">
               {data.premium}
             </TableHeadCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {#each data.rows as r}
-            <TableRow class="ui-comparison-table-row" data-class="comparison-table-row">
-              <TableHeadCell class="ui-comparison-table-feature" data-class="comparison-table-feature" scope="row">
+            <TableRow class="ui-comparison-table-row" data-class="ui-comparison-table-row">
+              <TableHeadCell class="ui-comparison-table-feature" data-class="ui-comparison-table-feature" scope="row">
                 {r.feature}
               </TableHeadCell>
-              <TableCell class="ui-comparison-table-cell" data-class="comparison-table-cell">
+              <TableCell class="ui-comparison-table-cell" data-class="ui-comparison-table-cell">
                 {#if r.free}
                   {@html svg("check", `ui-comparison-table-yes`)}
-                  <Inline class="ui-comparison-table-sr" data-class="comparison-table-sr">
+                  <Inline class="ui-comparison-table-sr" data-class="ui-comparison-table-sr">
                     {data.yes}
                   </Inline>
                 {/if}
                 {#if !(r.free)}
                   {@html svg("x", `ui-comparison-table-no`)}
-                  <Inline class="ui-comparison-table-sr-2" data-class="comparison-table-sr-2">
+                  <Inline class="ui-comparison-table-sr-2" data-class="ui-comparison-table-sr-2">
                     {data.no}
                   </Inline>
                 {/if}
               </TableCell>
-              <TableCell class="ui-comparison-table-cell-2" data-class="comparison-table-cell-2">
+              <TableCell class="ui-comparison-table-cell-2" data-class="ui-comparison-table-cell-2">
                 {#if r.premium}
                   {@html svg("check", `ui-comparison-table-yes-2`)}
-                  <Inline class="ui-comparison-table-sr-3" data-class="comparison-table-sr-3">
+                  <Inline class="ui-comparison-table-sr-3" data-class="ui-comparison-table-sr-3">
                     {data.yes}
                   </Inline>
                 {/if}
                 {#if !(r.premium)}
                   {@html svg("x", `ui-comparison-table-no-2`)}
-                  <Inline class="ui-comparison-table-sr-4" data-class="comparison-table-sr-4">
+                  <Inline class="ui-comparison-table-sr-4" data-class="ui-comparison-table-sr-4">
                     {data.no}
                   </Inline>
                 {/if}

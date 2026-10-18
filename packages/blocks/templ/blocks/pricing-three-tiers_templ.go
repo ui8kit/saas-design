@@ -105,7 +105,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-title", As: 2, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-title", "id": "pricing-three-tiers-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "pricing-three-tiers-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -136,13 +136,13 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-three-tiers-lead", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-pricing-three-tiers-head", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-pricing-three-tiers-head", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -210,7 +210,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -249,7 +249,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-pricing-three-tiers-plan-name-row", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-name-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-pricing-three-tiers-plan-name-row", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-name-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -280,7 +280,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-three-tiers-plan-description", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-description"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -323,7 +323,7 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-value", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-value", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-price-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -355,14 +355,14 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-period", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price-period"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-three-tiers-price", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-three-tiers-price", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-price"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -426,14 +426,14 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-feature", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-three-tiers-features", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-features"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -464,32 +464,32 @@ func PricingThreeTiers(p PricingThreeTiersData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-pricing-three-tiers-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-pricing-three-tiers-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-plan" + " ui-pricing-three-tiers-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan", "data-theme": plan.Theme}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-plan" + " ui-pricing-three-tiers-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan", "data-theme": plan.Theme}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-three-tiers-plans", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plans"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-three-tiers-plans", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plans"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-pricing-three-tiers-container", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-pricing-three-tiers", Tag: "section", Attrs: templ.Attributes{"data-class": "pricing-three-tiers", "aria-labelledby": "pricing-three-tiers-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-pricing-three-tiers", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers", "aria-labelledby": "pricing-three-tiers-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

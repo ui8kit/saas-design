@@ -18,21 +18,21 @@ import (
 
 // PricingThreeTiers: Free, Premium (dark scope) and Team plans.
 templ PricingThreeTiers(p PricingThreeTiersData) {
-	@block.Block(block.BlockProps{Class: "ui-pricing-three-tiers", Tag: "section", Attrs: templ.Attributes{"data-class": "pricing-three-tiers", "aria-labelledby": "pricing-three-tiers-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-pricing-three-tiers-container", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-pricing-three-tiers-head", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-title", As: 2, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-title", "id": "pricing-three-tiers-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-pricing-three-tiers", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers", "aria-labelledby": "pricing-three-tiers-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-pricing-three-tiers-head", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "pricing-three-tiers-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-pricing-three-tiers-lead", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-pricing-three-tiers-plans", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plans"}}) {
+			@list.List(list.ListProps{Class: "ui-pricing-three-tiers-plans", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plans"}}) {
 				for _, plan := range p.Plans {
-					@list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-plan" + " ui-pricing-three-tiers-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan", "data-theme": plan.Theme}}) {
-						@group.Group(group.GroupProps{Class: "ui-pricing-three-tiers-plan-name-row", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-name-row"}}) {
-							@title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-name"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-plan" + " ui-pricing-three-tiers-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan", "data-theme": plan.Theme}}) {
+						@group.Group(group.GroupProps{Class: "ui-pricing-three-tiers-plan-name-row", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-name-row"}}) {
+							@title.Title(title.TitleProps{Class: "ui-pricing-three-tiers-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-name"}}) {
 								{ plan.Name }
 							}
 							if plan.Badge != "" {
@@ -41,22 +41,22 @@ templ PricingThreeTiers(p PricingThreeTiersData) {
 								}
 							}
 						}
-						@text.Text(text.TextProps{Class: "ui-pricing-three-tiers-plan-description", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-description"}}) {
+						@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ plan.Description }
 						}
-						@text.Text(text.TextProps{Class: "ui-pricing-three-tiers-price", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price"}}) {
-							@inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-value", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price-value"}}) {
+						@text.Text(text.TextProps{Class: "ui-pricing-three-tiers-price", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-price"}}) {
+							@inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-value", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-price-value"}}) {
 								{ plan.Price }
 							}
 							if plan.Period != "" {
-								@inline.Inline(inline.InlineProps{Class: "ui-pricing-three-tiers-price-period", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-price-period"}}) {
+								@inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 									{ plan.Period }
 								}
 							}
 						}
-						@list.List(list.ListProps{Class: "ui-pricing-three-tiers-features", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-features"}}) {
+						@list.List(list.ListProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}) {
 							for _, f := range plan.Features {
-								@list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-feature", Attrs: templ.Attributes{"data-class": "pricing-three-tiers-feature"}}) {
+								@list.ListItem(list.ListItemProps{Class: "ui-pricing-three-tiers-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-feature"}}) {
 									if f.Included {
 										@templ.Raw(icons.SVG("check", "ui-pricing-three-tiers-check"))
 									}
@@ -67,7 +67,7 @@ templ PricingThreeTiers(p PricingThreeTiersData) {
 								}
 							}
 						}
-						@button.Button(button.ButtonProps{Class: "ui-pricing-three-tiers-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "pricing-three-tiers-plan-cta"}}) {
+						@button.Button(button.ButtonProps{Class: "ui-pricing-three-tiers-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-pricing-three-tiers-plan-cta"}}) {
 							{ plan.Cta.Label }
 						}
 					}

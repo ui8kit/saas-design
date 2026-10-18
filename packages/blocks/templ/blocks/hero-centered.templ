@@ -14,18 +14,18 @@ import (
 
 // HeroCentered: Muted band with eyebrow badge, headline, lead and two actions.
 templ HeroCentered(p HeroCenteredData) {
-	@block.Block(block.BlockProps{Class: "ui-hero-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "hero-centered", "aria-labelledby": "hero-centered-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-hero-centered-container", Attrs: templ.Attributes{"data-class": "hero-centered-container"}}) {
+	@block.Block(block.BlockProps{Class: "ui-hero-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-hero-centered", "aria-labelledby": "hero-centered-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-hero-centered-container", Attrs: templ.Attributes{"data-class": "ui-hero-centered-container"}}) {
 			@badge.Badge(badge.BadgeProps{Variant: "outline", Size: "lg"}) {
 				{ p.Eyebrow }
 			}
-			@title.Title(title.TitleProps{Class: "ui-hero-centered-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-centered-title", "id": "hero-centered-title"}}) {
+			@title.Title(title.TitleProps{Class: "ui-hero-centered-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-centered-title", "id": "hero-centered-title"}}) {
 				{ p.Title }
 			}
-			@text.Text(text.TextProps{Class: "ui-hero-centered-lead", Attrs: templ.Attributes{"data-class": "hero-centered-lead"}}) {
+			@text.Text(text.TextProps{Class: "ui-hero-centered-lead", Attrs: templ.Attributes{"data-class": "ui-hero-centered-lead"}}) {
 				{ p.Lead }
 			}
-			@group.Group(group.GroupProps{Class: "ui-hero-centered-actions", Attrs: templ.Attributes{"data-class": "hero-centered-actions"}}) {
+			@group.Group(group.GroupProps{Class: "ui-hero-centered-actions", Attrs: templ.Attributes{"data-class": "ui-hero-centered-actions"}}) {
 				@button.Button(button.ButtonProps{Size: "lg", Href: p.Primary.Href}) {
 					{ p.Primary.Label }
 				}

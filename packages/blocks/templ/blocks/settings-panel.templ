@@ -16,28 +16,28 @@ import (
 
 // SettingsPanel: Notification switches in a fieldset with a save action.
 templ SettingsPanel(p SettingsPanelData) {
-	@block.Block(block.BlockProps{Class: "ui-settings-panel", Tag: "section", Attrs: templ.Attributes{"data-class": "settings-panel", "aria-labelledby": "settings-panel-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-settings-panel-container", Attrs: templ.Attributes{"data-class": "settings-panel-container"}}) {
-			@form.Form(form.FormProps{Class: "ui-settings-panel-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "settings-panel-form"}}) {
-				@form.Fieldset(form.FieldsetProps{Class: "ui-settings-panel-fieldset", Attrs: templ.Attributes{"data-class": "settings-panel-fieldset"}}) {
-					@form.Legend(form.LegendProps{Class: "ui-settings-panel-legend", Attrs: templ.Attributes{"data-class": "settings-panel-legend"}}) {
-						@title.Title(title.TitleProps{Class: "ui-settings-panel-title", As: 2, Attrs: templ.Attributes{"data-class": "settings-panel-title", "id": "settings-panel-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-settings-panel", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-settings-panel", "aria-labelledby": "settings-panel-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-settings-panel-container", Attrs: templ.Attributes{"data-class": "ui-settings-panel-container"}}) {
+			@form.Form(form.FormProps{Class: "ui-settings-panel-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-settings-panel-form"}}) {
+				@form.Fieldset(form.FieldsetProps{Class: "ui-stack-6", Attrs: templ.Attributes{"data-class": "ui-stack-6"}}) {
+					@form.Legend(form.LegendProps{Class: "ui-settings-panel-legend", Attrs: templ.Attributes{"data-class": "ui-settings-panel-legend"}}) {
+						@title.Title(title.TitleProps{Class: "ui-settings-panel-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-settings-panel-title", "id": "settings-panel-title"}}) {
 							{ p.Title }
 						}
 					}
-					@text.Text(text.TextProps{Class: "ui-settings-panel-text", Attrs: templ.Attributes{"data-class": "settings-panel-text"}}) {
+					@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 						{ p.Text }
 					}
 					for _, o := range p.Options {
-						@group.Group(group.GroupProps{Class: "ui-settings-panel-option", Attrs: templ.Attributes{"data-class": "settings-panel-option"}}) {
-							@label.Label(label.LabelProps{Class: "ui-settings-panel-label", HTMLFor: o.ID, Attrs: templ.Attributes{"data-class": "settings-panel-label"}}) {
+						@group.Group(group.GroupProps{Class: "ui-settings-panel-option", Attrs: templ.Attributes{"data-class": "ui-settings-panel-option"}}) {
+							@label.Label(label.LabelProps{Class: "ui-settings-panel-label", HTMLFor: o.ID, Attrs: templ.Attributes{"data-class": "ui-settings-panel-label"}}) {
 								{ o.Label }
 							}
-							@formswitch.Switch(formswitch.SwitchProps{Class: "ui-settings-panel-switch", ID: o.ID, Name: o.ID, Checked: o.Checked, Attrs: templ.Attributes{"data-class": "settings-panel-switch"}})
+							@formswitch.Switch(formswitch.SwitchProps{Class: "ui-settings-panel-switch", ID: o.ID, Name: o.ID, Checked: o.Checked, Attrs: templ.Attributes{"data-class": "ui-settings-panel-switch"}})
 						}
 					}
 				}
-				@button.Button(button.ButtonProps{Class: "ui-settings-panel-button", Type: "submit", Attrs: templ.Attributes{"data-class": "settings-panel-button"}}) {
+				@button.Button(button.ButtonProps{Class: "ui-settings-panel-button", Type: "submit", Attrs: templ.Attributes{"data-class": "ui-settings-panel-button"}}) {
 					{ p.Save }
 				}
 			}

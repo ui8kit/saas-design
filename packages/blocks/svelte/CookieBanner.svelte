@@ -7,12 +7,12 @@
   let { data }: { data: CookieBannerData } = $props();
 </script>
 
-<Block class="ui-cookie-banner" data-class="cookie-banner" tag="aside" aria-label={data.label}>
-  <Group class="ui-cookie-banner-card" data-class="cookie-banner-card">
-    <Text class="ui-cookie-banner-text" data-class="cookie-banner-text">
+<Block class="ui-cookie-banner" data-class="ui-cookie-banner" tag="aside" aria-label={data.label}>
+  <Group class="ui-cookie-banner-card" data-class="ui-cookie-banner-card">
+    <Text class="ui-cookie-banner-text" data-class="ui-cookie-banner-text">
       {data.text}
     </Text>
-    <Group class="ui-cookie-banner-actions" data-class="cookie-banner-actions">
+    <Group class="ui-cookie-banner-actions" data-class="ui-cookie-banner-actions">
       <Button variant="ghost" size="sm" type="button">
         {data.decline}
       </Button>

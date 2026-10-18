@@ -8,24 +8,24 @@
   let { data }: { data: StepsData } = $props();
 </script>
 
-<Block class="ui-steps" data-class="steps" tag="section" aria-labelledby="steps-title">
-  <Container class="ui-steps-container" data-class="steps-container">
-    <Stack class="ui-steps-head" data-class="steps-head">
-      <Title class="ui-steps-title" data-class="steps-title" as={2} id="steps-title">
+<Block class="ui-section ui-steps" data-class="ui-steps" tag="section" aria-labelledby="steps-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-steps-head" data-class="ui-steps-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="steps-title">
         {data.title}
       </Title>
-      <Text class="ui-steps-lead" data-class="steps-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-steps-list" data-class="steps-list" tag="ol">
+    <List class="ui-steps-list" data-class="ui-steps-list" tag="ol">
       {#each data.items as item}
-        <ListItem class="ui-steps-item" data-class="steps-item">
+        <ListItem class="ui-steps-item" data-class="ui-steps-item">
           {@html svg(item.icon, `ui-steps-icon`)}
-          <Title class="ui-steps-item-title" data-class="steps-item-title" as={3}>
+          <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {item.title}
           </Title>
-          <Text class="ui-steps-item-text" data-class="steps-item-text">
+          <Text class="ui-muted" data-class="ui-muted">
             {item.text}
           </Text>
         </ListItem>

@@ -14,18 +14,18 @@ import (
 
 // SocialProofSplit: Accent panel with an app screen beside a statement and a muted logo strip.
 templ SocialProofSplit(p SocialProofSplitData) {
-	@block.Block(block.BlockProps{Class: "ui-social-proof-split", Tag: "section", Attrs: templ.Attributes{"data-class": "social-proof-split", "aria-labelledby": "social-proof-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-social-proof-split-container", Attrs: templ.Attributes{"data-class": "social-proof-split-container"}}) {
-			@box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "social-proof-split-panel"}}) {
-				@image.Image(image.ImageProps{Class: "ui-social-proof-split-screen", Src: p.Screen.Src, Alt: p.Screen.Alt, Attrs: templ.Attributes{"data-class": "social-proof-split-screen"}})
+	@block.Block(block.BlockProps{Class: "ui-social-proof-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-social-proof-split", "aria-labelledby": "social-proof-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-social-proof-split-container", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-container"}}) {
+			@box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-panel"}}) {
+				@image.Image(image.ImageProps{Class: "ui-social-proof-split-screen", Src: p.Screen.Src, Alt: p.Screen.Alt, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-screen"}})
 			}
-			@stack.Stack(stack.StackProps{Class: "ui-social-proof-split-body", Attrs: templ.Attributes{"data-class": "social-proof-split-body"}}) {
-				@title.Title(title.TitleProps{Class: "ui-social-proof-split-title", As: 2, Attrs: templ.Attributes{"data-class": "social-proof-split-title", "id": "social-proof-title"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-social-proof-split-body", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-body"}}) {
+				@title.Title(title.TitleProps{Class: "ui-social-proof-split-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-title", "id": "social-proof-title"}}) {
 					{ p.Title }
 				}
-				@group.Group(group.GroupProps{Class: "ui-social-proof-split-logos", Attrs: templ.Attributes{"data-class": "social-proof-split-logos"}}) {
+				@group.Group(group.GroupProps{Class: "ui-social-proof-split-logos", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-logos"}}) {
 					for _, logo := range p.Logos {
-						@image.Image(image.ImageProps{Class: "ui-social-proof-split-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "social-proof-split-logo"}})
+						@image.Image(image.ImageProps{Class: "ui-social-proof-split-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-logo"}})
 					}
 				}
 			}

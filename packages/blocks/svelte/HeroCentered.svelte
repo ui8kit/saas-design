@@ -7,18 +7,18 @@
   let { data }: { data: HeroCenteredData } = $props();
 </script>
 
-<Block class="ui-hero-centered" data-class="hero-centered" tag="section" aria-labelledby="hero-centered-title">
-  <Container class="ui-hero-centered-container" data-class="hero-centered-container">
+<Block class="ui-hero-centered" data-class="ui-hero-centered" tag="section" aria-labelledby="hero-centered-title">
+  <Container class="ui-hero-centered-container" data-class="ui-hero-centered-container">
     <Badge variant="outline" size="lg">
       {data.eyebrow}
     </Badge>
-    <Title class="ui-hero-centered-title" data-class="hero-centered-title" as={1} id="hero-centered-title">
+    <Title class="ui-hero-centered-title" data-class="ui-hero-centered-title" as={1} id="hero-centered-title">
       {data.title}
     </Title>
-    <Text class="ui-hero-centered-lead" data-class="hero-centered-lead">
+    <Text class="ui-hero-centered-lead" data-class="ui-hero-centered-lead">
       {data.lead}
     </Text>
-    <Group class="ui-hero-centered-actions" data-class="hero-centered-actions">
+    <Group class="ui-hero-centered-actions" data-class="ui-hero-centered-actions">
       <Button size="lg" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>

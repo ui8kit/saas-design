@@ -7,31 +7,31 @@
   let { data }: { data: LoginCardData } = $props();
 </script>
 
-<Block class="ui-login-card" data-class="login-card" tag="section" aria-labelledby="login-card-title">
-  <Container class="ui-login-card-container" data-class="login-card-container">
-    <Card class="ui-login-card-card" data-class="login-card-card">
-      <Stack class="ui-login-card-head" data-class="login-card-head">
-        <Title class="ui-login-card-title" data-class="login-card-title" as={2} id="login-card-title">
+<Block class="ui-login-card" data-class="ui-login-card" tag="section" aria-labelledby="login-card-title">
+  <Container class="ui-login-card-container" data-class="ui-login-card-container">
+    <Card class="ui-login-card-card" data-class="ui-login-card-card">
+      <Stack class="ui-login-card-head" data-class="ui-login-card-head">
+        <Title class="ui-section-title-sm" data-class="ui-section-title-sm" as={2} id="login-card-title">
           {data.title}
         </Title>
-        <Text class="ui-login-card-text" data-class="login-card-text">
+        <Text class="ui-muted" data-class="ui-muted">
           {data.text}
         </Text>
       </Stack>
-      <Form class="ui-login-card-form" data-class="login-card-form" action={data.action || undefined} method="post">
+      <Form class="ui-login-card-form" data-class="ui-login-card-form" action={data.action || undefined} method="post">
         {#each data.fields as f}
-          <FormItem class="ui-login-card-field" data-class="login-card-field">
-            <Label class="ui-login-card-label" data-class="login-card-label" for={f.name || undefined}>
+          <FormItem class="ui-login-card-field" data-class="ui-login-card-field">
+            <Label class="ui-login-card-label" data-class="ui-login-card-label" for={f.name || undefined}>
               {f.label}
             </Label>
-            <Input class="ui-login-card-input" data-class="login-card-input" id={f.name || undefined} name={f.name || undefined} type={f.type || undefined} placeholder={f.placeholder || undefined} autocomplete={f.autocomplete || undefined} required={true} />
+            <Input class="ui-login-card-input" data-class="ui-login-card-input" id={f.name || undefined} name={f.name || undefined} type={f.type || undefined} placeholder={f.placeholder || undefined} autocomplete={f.autocomplete || undefined} required={true} />
           </FormItem>
         {/each}
-        <Button class="ui-login-card-button" data-class="login-card-button" type="submit" size="lg">
+        <Button class="ui-login-card-button" data-class="ui-login-card-button" type="submit" size="lg">
           {data.submit}
         </Button>
       </Form>
-      <Text class="ui-login-card-foot" data-class="login-card-foot">
+      <Text class="ui-login-card-foot" data-class="ui-login-card-foot">
         {data.note}
         {" "}
         <Link href={data.link.href || undefined}>

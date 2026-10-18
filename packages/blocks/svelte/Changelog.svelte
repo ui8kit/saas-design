@@ -7,31 +7,31 @@
   let { data }: { data: ChangelogData } = $props();
 </script>
 
-<Block class="ui-changelog" data-class="changelog" tag="section" aria-labelledby="changelog-title">
-  <Container class="ui-changelog-container" data-class="changelog-container">
-    <Stack class="ui-changelog-head" data-class="changelog-head">
-      <Title class="ui-changelog-title" data-class="changelog-title" as={2} id="changelog-title">
+<Block class="ui-section ui-changelog" data-class="ui-changelog" tag="section" aria-labelledby="changelog-title">
+  <Container class="ui-section-container-narrow" data-class="ui-section-container-narrow">
+    <Stack class="ui-changelog-head" data-class="ui-changelog-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="changelog-title">
         {data.title}
       </Title>
-      <Text class="ui-changelog-lead" data-class="changelog-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-changelog-list" data-class="changelog-list" tag="ol">
+    <List class="ui-changelog-list" data-class="ui-changelog-list" tag="ol">
       {#each data.items as r}
-        <ListItem class="ui-changelog-item" data-class="changelog-item">
-          <Group class="ui-changelog-meta" data-class="changelog-meta">
+        <ListItem class="ui-changelog-item" data-class="ui-changelog-item">
+          <Group class="ui-changelog-meta" data-class="ui-changelog-meta">
             <Badge>
               {r.version}
             </Badge>
-            <time class="ui-changelog-date" data-class="changelog-date" datetime={r.datetime}>
+            <time class="ui-changelog-date" data-class="ui-changelog-date" datetime={r.datetime}>
               {r.date}
             </time>
           </Group>
-          <Title class="ui-changelog-item-title" data-class="changelog-item-title" as={3}>
+          <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {r.title}
           </Title>
-          <Text class="ui-changelog-item-text" data-class="changelog-item-text">
+          <Text class="ui-muted" data-class="ui-muted">
             {r.text}
           </Text>
         </ListItem>

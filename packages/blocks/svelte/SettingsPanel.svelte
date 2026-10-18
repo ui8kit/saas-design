@@ -7,28 +7,28 @@
   let { data }: { data: SettingsPanelData } = $props();
 </script>
 
-<Block class="ui-settings-panel" data-class="settings-panel" tag="section" aria-labelledby="settings-panel-title">
-  <Container class="ui-settings-panel-container" data-class="settings-panel-container">
-    <Form class="ui-settings-panel-form" data-class="settings-panel-form" action={data.action || undefined} method="post">
-      <Fieldset class="ui-settings-panel-fieldset" data-class="settings-panel-fieldset">
-        <Legend class="ui-settings-panel-legend" data-class="settings-panel-legend">
-          <Title class="ui-settings-panel-title" data-class="settings-panel-title" as={2} id="settings-panel-title">
+<Block class="ui-section ui-settings-panel" data-class="ui-settings-panel" tag="section" aria-labelledby="settings-panel-title">
+  <Container class="ui-settings-panel-container" data-class="ui-settings-panel-container">
+    <Form class="ui-settings-panel-form" data-class="ui-settings-panel-form" action={data.action || undefined} method="post">
+      <Fieldset class="ui-stack-6" data-class="ui-stack-6">
+        <Legend class="ui-settings-panel-legend" data-class="ui-settings-panel-legend">
+          <Title class="ui-settings-panel-title" data-class="ui-settings-panel-title" as={2} id="settings-panel-title">
             {data.title}
           </Title>
         </Legend>
-        <Text class="ui-settings-panel-text" data-class="settings-panel-text">
+        <Text class="ui-muted" data-class="ui-muted">
           {data.text}
         </Text>
         {#each data.options as o}
-          <Group class="ui-settings-panel-option" data-class="settings-panel-option">
-            <Label class="ui-settings-panel-label" data-class="settings-panel-label" for={o.id || undefined}>
+          <Group class="ui-settings-panel-option" data-class="ui-settings-panel-option">
+            <Label class="ui-settings-panel-label" data-class="ui-settings-panel-label" for={o.id || undefined}>
               {o.label}
             </Label>
-            <Switch class="ui-settings-panel-switch" data-class="settings-panel-switch" id={o.id || undefined} name={o.id || undefined} checked={o.checked} />
+            <Switch class="ui-settings-panel-switch" data-class="ui-settings-panel-switch" id={o.id || undefined} name={o.id || undefined} checked={o.checked} />
           </Group>
         {/each}
       </Fieldset>
-      <Button class="ui-settings-panel-button" data-class="settings-panel-button" type="submit">
+      <Button class="ui-settings-panel-button" data-class="ui-settings-panel-button" type="submit">
         {data.save}
       </Button>
     </Form>

@@ -18,31 +18,31 @@ import (
 
 // LoginCard: Login card with labelled fields on a centered card.
 templ LoginCard(p LoginCardData) {
-	@block.Block(block.BlockProps{Class: "ui-login-card", Tag: "section", Attrs: templ.Attributes{"data-class": "login-card", "aria-labelledby": "login-card-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-login-card-container", Attrs: templ.Attributes{"data-class": "login-card-container"}}) {
-			@card.Card(card.CardProps{Class: "ui-login-card-card", Attrs: templ.Attributes{"data-class": "login-card-card"}}) {
-				@stack.Stack(stack.StackProps{Class: "ui-login-card-head", Attrs: templ.Attributes{"data-class": "login-card-head"}}) {
-					@title.Title(title.TitleProps{Class: "ui-login-card-title", As: 2, Attrs: templ.Attributes{"data-class": "login-card-title", "id": "login-card-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-login-card", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-login-card", "aria-labelledby": "login-card-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-login-card-container", Attrs: templ.Attributes{"data-class": "ui-login-card-container"}}) {
+			@card.Card(card.CardProps{Class: "ui-login-card-card", Attrs: templ.Attributes{"data-class": "ui-login-card-card"}}) {
+				@stack.Stack(stack.StackProps{Class: "ui-login-card-head", Attrs: templ.Attributes{"data-class": "ui-login-card-head"}}) {
+					@title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "login-card-title"}}) {
 						{ p.Title }
 					}
-					@text.Text(text.TextProps{Class: "ui-login-card-text", Attrs: templ.Attributes{"data-class": "login-card-text"}}) {
+					@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 						{ p.Text }
 					}
 				}
-				@form.Form(form.FormProps{Class: "ui-login-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "login-card-form"}}) {
+				@form.Form(form.FormProps{Class: "ui-login-card-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-login-card-form"}}) {
 					for _, f := range p.Fields {
-						@form.FormItem(form.FormItemProps{Class: "ui-login-card-field", Attrs: templ.Attributes{"data-class": "login-card-field"}}) {
-							@label.Label(label.LabelProps{Class: "ui-login-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "login-card-label"}}) {
+						@form.FormItem(form.FormItemProps{Class: "ui-login-card-field", Attrs: templ.Attributes{"data-class": "ui-login-card-field"}}) {
+							@label.Label(label.LabelProps{Class: "ui-login-card-label", HTMLFor: f.Name, Attrs: templ.Attributes{"data-class": "ui-login-card-label"}}) {
 								{ f.Label }
 							}
-							@input.Input(input.InputProps{Class: "ui-login-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "login-card-input"}})
+							@input.Input(input.InputProps{Class: "ui-login-card-input", ID: f.Name, Name: f.Name, Type: f.Type, Placeholder: f.Placeholder, Autocomplete: f.Autocomplete, Required: true, Attrs: templ.Attributes{"data-class": "ui-login-card-input"}})
 						}
 					}
-					@button.Button(button.ButtonProps{Class: "ui-login-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "login-card-button"}}) {
+					@button.Button(button.ButtonProps{Class: "ui-login-card-button", Type: "submit", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-login-card-button"}}) {
 						{ p.Submit }
 					}
 				}
-				@text.Text(text.TextProps{Class: "ui-login-card-foot", Attrs: templ.Attributes{"data-class": "login-card-foot"}}) {
+				@text.Text(text.TextProps{Class: "ui-login-card-foot", Attrs: templ.Attributes{"data-class": "ui-login-card-foot"}}) {
 					{ p.Note }
 					{ " " }
 					@link.Link(link.LinkProps{Href: p.Link.Href}) {

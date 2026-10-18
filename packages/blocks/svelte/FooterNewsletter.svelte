@@ -8,24 +8,24 @@
   let { data }: { data: FooterNewsletterData } = $props();
 </script>
 
-<Block class="ui-footer-newsletter" data-class="footer-newsletter" tag="footer">
-  <Container class="ui-footer-newsletter-container" data-class="footer-newsletter-container">
-    <Stack class="ui-footer-newsletter-panel" data-class="footer-newsletter-panel" data-theme="dark">
-      <Grid class="ui-footer-newsletter-top" data-class="footer-newsletter-top">
-        <Stack class="ui-footer-newsletter-brand" data-class="footer-newsletter-brand">
-          <Link class="ui-footer-newsletter-brand-link" data-class="footer-newsletter-brand-link" href={data.href || undefined}>
+<Block class="ui-footer-newsletter" data-class="ui-footer-newsletter" tag="footer">
+  <Container class="ui-footer-newsletter-container" data-class="ui-footer-newsletter-container">
+    <Stack class="ui-footer-newsletter-panel" data-class="ui-footer-newsletter-panel" data-theme="dark">
+      <Grid class="ui-footer-newsletter-top" data-class="ui-footer-newsletter-top">
+        <Stack class="ui-footer-newsletter-brand" data-class="ui-footer-newsletter-brand">
+          <Link class="ui-footer-newsletter-brand-link" data-class="ui-footer-newsletter-brand-link" href={data.href || undefined}>
             {@html svg("brand-mark", `ui-footer-newsletter-mark`)}
             <Inline>
               {data.brand}
             </Inline>
           </Link>
-          <Text class="ui-footer-newsletter-text" data-class="footer-newsletter-text">
+          <Text class="ui-footer-newsletter-text" data-class="ui-footer-newsletter-text">
             {data.text}
           </Text>
-          <List class="ui-footer-newsletter-socials" data-class="footer-newsletter-socials">
+          <List class="ui-footer-newsletter-socials" data-class="ui-footer-newsletter-socials">
             {#each data.socials as s}
               <ListItem>
-                <Link class="ui-footer-newsletter-social" data-class="footer-newsletter-social" href={s.href || undefined} aria-label={s.label || undefined}>
+                <Link class="ui-footer-newsletter-social" data-class="ui-footer-newsletter-social" href={s.href || undefined} aria-label={s.label || undefined}>
                   {@html svg(s.icon, `ui-footer-newsletter-social-icon`)}
                 </Link>
               </ListItem>
@@ -33,14 +33,14 @@
           </List>
         </Stack>
         {#each data.columns as col}
-          <Stack class="ui-footer-newsletter-column" data-class="footer-newsletter-column" tag="div">
-            <Title class="ui-footer-newsletter-column-title" data-class="footer-newsletter-column-title" as={2}>
+          <Stack class="ui-footer-newsletter-column" data-class="ui-footer-newsletter-column" tag="div">
+            <Title class="ui-footer-newsletter-column-title" data-class="ui-footer-newsletter-column-title" as={2}>
               {col.title}
             </Title>
-            <List class="ui-footer-newsletter-links" data-class="footer-newsletter-links">
+            <List class="ui-stack-4" data-class="ui-stack-4">
               {#each col.links as l}
                 <ListItem>
-                  <Link class="ui-footer-newsletter-link" data-class="footer-newsletter-link" href={l.href || undefined}>
+                  <Link class="ui-footer-newsletter-link" data-class="ui-footer-newsletter-link" href={l.href || undefined}>
                     {l.label}
                   </Link>
                 </ListItem>
@@ -48,25 +48,25 @@
             </List>
           </Stack>
         {/each}
-        <Stack class="ui-footer-newsletter-newsletter" data-class="footer-newsletter-newsletter">
-          <Title class="ui-footer-newsletter-newsletter-title" data-class="footer-newsletter-newsletter-title" as={2}>
+        <Stack class="ui-footer-newsletter-newsletter" data-class="ui-footer-newsletter-newsletter">
+          <Title class="ui-footer-newsletter-newsletter-title" data-class="ui-footer-newsletter-newsletter-title" as={2}>
             {data.newsletter.title}
           </Title>
-          <Text class="ui-footer-newsletter-newsletter-text" data-class="footer-newsletter-newsletter-text">
+          <Text class="ui-muted-sm" data-class="ui-muted-sm">
             {data.newsletter.text}
           </Text>
-          <Form class="ui-footer-newsletter-form" data-class="footer-newsletter-form" action={data.newsletter.action || undefined} method="post">
-            <Label class="ui-footer-newsletter-label" data-class="footer-newsletter-label" for="footer-newsletter-email">
+          <Form class="ui-footer-newsletter-form" data-class="ui-footer-newsletter-form" action={data.newsletter.action || undefined} method="post">
+            <Label class="ui-footer-newsletter-label" data-class="ui-footer-newsletter-label" for="footer-newsletter-email">
               {data.newsletter.label}
             </Label>
-            <Input class="ui-footer-newsletter-input" data-class="footer-newsletter-input" id="footer-newsletter-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.newsletter.placeholder || undefined} />
-            <Button class="ui-footer-newsletter-submit" data-class="footer-newsletter-submit" type="submit">
+            <Input class="ui-footer-newsletter-input" data-class="ui-footer-newsletter-input" id="footer-newsletter-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.newsletter.placeholder || undefined} />
+            <Button class="ui-footer-newsletter-submit" data-class="ui-footer-newsletter-submit" type="submit">
               {data.newsletter.button}
             </Button>
           </Form>
         </Stack>
       </Grid>
-      <Text class="ui-footer-newsletter-copyright" data-class="footer-newsletter-copyright">
+      <Text class="ui-footer-newsletter-copyright" data-class="ui-footer-newsletter-copyright">
         {data.copyright}
       </Text>
     </Stack>

@@ -16,21 +16,21 @@ import (
 
 // NewsletterBand: Inline email signup on an accent band.
 templ NewsletterBand(p NewsletterBandData) {
-	@block.Block(block.BlockProps{Class: "ui-newsletter-band", Tag: "section", Attrs: templ.Attributes{"data-class": "newsletter-band", "aria-labelledby": "newsletter-band-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-newsletter-band-container", Attrs: templ.Attributes{"data-class": "newsletter-band-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-newsletter-band-copy", Attrs: templ.Attributes{"data-class": "newsletter-band-copy"}}) {
-				@title.Title(title.TitleProps{Class: "ui-newsletter-band-title", As: 2, Attrs: templ.Attributes{"data-class": "newsletter-band-title", "id": "newsletter-band-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-newsletter-band", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-newsletter-band", "aria-labelledby": "newsletter-band-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-newsletter-band-container", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-newsletter-band-copy", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-copy"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "newsletter-band-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-newsletter-band-text", Attrs: templ.Attributes{"data-class": "newsletter-band-text"}}) {
+				@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 					{ p.Text }
 				}
 			}
-			@form.Form(form.FormProps{Class: "ui-newsletter-band-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "newsletter-band-form"}}) {
-				@label.Label(label.LabelProps{Class: "ui-newsletter-band-label", HTMLFor: "newsletter-band-email", Attrs: templ.Attributes{"data-class": "newsletter-band-label"}}) {
+			@form.Form(form.FormProps{Class: "ui-newsletter-band-form", Action: p.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-form"}}) {
+				@label.Label(label.LabelProps{Class: "ui-newsletter-band-label", HTMLFor: "newsletter-band-email", Attrs: templ.Attributes{"data-class": "ui-newsletter-band-label"}}) {
 					{ p.Label }
 				}
-				@input.Input(input.InputProps{Class: "ui-newsletter-band-input", ID: "newsletter-band-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Placeholder, Attrs: templ.Attributes{"data-class": "newsletter-band-input"}})
+				@input.Input(input.InputProps{Class: "ui-newsletter-band-input", ID: "newsletter-band-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Placeholder, Attrs: templ.Attributes{"data-class": "ui-newsletter-band-input"}})
 				@button.Button(button.ButtonProps{Type: "submit"}) {
 					{ p.Button }
 				}

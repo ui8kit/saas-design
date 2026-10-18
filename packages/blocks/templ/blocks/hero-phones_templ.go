@@ -100,7 +100,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-phones-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-phones-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-phones-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-phones-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -131,7 +131,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-phones-lead", Attrs: templ.Attributes{"data-class": "hero-phones-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-phones-lead", Attrs: templ.Attributes{"data-class": "ui-hero-phones-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -213,19 +213,19 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "secondary", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "hero-phones-demo"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-hero-phones-demo", Variant: "secondary", Size: "lg", Href: p.Secondary.Href, Attrs: templ.Attributes{"data-class": "ui-hero-phones-demo"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-phones-actions", Attrs: templ.Attributes{"data-class": "hero-phones-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-phones-actions", Attrs: templ.Attributes{"data-class": "ui-hero-phones-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-hero-phones-content", Attrs: templ.Attributes{"data-class": "hero-phones-content"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-hero-phones-content", Attrs: templ.Attributes{"data-class": "ui-hero-phones-content"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -264,7 +264,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = badge.Badge(badge.BadgeProps{Class: "ui-hero-phones-badge", Variant: "secondary", Size: "lg", Attrs: templ.Attributes{"data-class": "hero-phones-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = badge.Badge(badge.BadgeProps{Class: "ui-hero-phones-badge", Variant: "secondary", Size: "lg", Attrs: templ.Attributes{"data-class": "ui-hero-phones-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -284,7 +284,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 					}()
 				}
 				ctx = templ.InitializeContext(ctx)
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-1", Attrs: templ.Attributes{"data-class": "hero-phones-dot-1"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-1", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-1"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -292,7 +292,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-2", Attrs: templ.Attributes{"data-class": "hero-phones-dot-2"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-2", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-2"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -300,7 +300,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-3", Attrs: templ.Attributes{"data-class": "hero-phones-dot-3"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-3", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-3"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -308,7 +308,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-4", Attrs: templ.Attributes{"data-class": "hero-phones-dot-4"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-4", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-4"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -316,7 +316,7 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-5", Attrs: templ.Attributes{"data-class": "hero-phones-dot-5"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-5", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-5"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -324,25 +324,25 @@ func HeroPhones(p HeroPhonesData) templ.Component {
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-6", Attrs: templ.Attributes{"data-class": "hero-phones-dot-6"}}).Render(ctx, templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-dot-6", Attrs: templ.Attributes{"data-class": "ui-hero-phones-dot-6"}}).Render(ctx, templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				for _, screen := range p.Screens {
-					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-hero-phones-screen", Src: screen.Src, Alt: "", Decorative: true, Attrs: templ.Attributes{"data-class": "hero-phones-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-hero-phones-screen", Src: screen.Src, Alt: "", Decorative: true, Attrs: templ.Attributes{"data-class": "ui-hero-phones-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-art", Attrs: templ.Attributes{"data-class": "hero-phones-art", "aria-hidden": "true"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-phones-art", Attrs: templ.Attributes{"data-class": "ui-hero-phones-art", "aria-hidden": "true"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "hero-phones"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-phones", Tag: "header", ID: "top", Attrs: templ.Attributes{"data-class": "ui-hero-phones"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

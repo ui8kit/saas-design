@@ -8,19 +8,19 @@
   let { data }: { data: EmptyStateData } = $props();
 </script>
 
-<Block class="ui-empty-state" data-class="empty-state" tag="section" aria-labelledby="empty-state-title">
-  <Container class="ui-empty-state-container" data-class="empty-state-container">
-    <IconBadge class="ui-empty-state-badge" data-class="empty-state-badge">
+<Block class="ui-section ui-empty-state" data-class="ui-empty-state" tag="section" aria-labelledby="empty-state-title">
+  <Container class="ui-empty-state-container" data-class="ui-empty-state-container">
+    <IconBadge class="ui-empty-state-badge" data-class="ui-empty-state-badge">
       {@html svg("inbox", `ui-empty-state-icon`)}
     </IconBadge>
-    <Title class="ui-empty-state-title" data-class="empty-state-title" as={2} id="empty-state-title">
+    <Title class="ui-empty-state-title" data-class="ui-empty-state-title" as={2} id="empty-state-title">
       {data.title}
     </Title>
-    <Text class="ui-empty-state-text" data-class="empty-state-text">
+    <Text class="ui-muted" data-class="ui-muted">
       {data.text}
     </Text>
     <Button href={data.cta.href || undefined}>
-      {@html svg("plus", `ui-empty-state-plus`)}
+      {@html svg("plus", `ui-icon-sm`)}
       {data.cta.label}
     </Button>
   </Container>

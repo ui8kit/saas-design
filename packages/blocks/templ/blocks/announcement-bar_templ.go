@@ -87,7 +87,7 @@ func AnnouncementBar(p AnnouncementBarData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-announcement-bar-text", Attrs: templ.Attributes{"data-class": "announcement-bar-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-announcement-bar-text", Attrs: templ.Attributes{"data-class": "ui-announcement-bar-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -116,25 +116,25 @@ func AnnouncementBar(p AnnouncementBarData) templ.Component {
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
-					templ_7745c5c3_Err = templ.Raw(icons.SVG("arrow-right", "ui-announcement-bar-arrow")).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = templ.Raw(icons.SVG("arrow-right", "ui-icon-sm")).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-announcement-bar-link", Href: p.Link.Href, Attrs: templ.Attributes{"data-class": "announcement-bar-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-announcement-bar-link", Href: p.Link.Href, Attrs: templ.Attributes{"data-class": "ui-announcement-bar-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-announcement-bar-container", Attrs: templ.Attributes{"data-class": "announcement-bar-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-announcement-bar-container", Attrs: templ.Attributes{"data-class": "ui-announcement-bar-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-announcement-bar", Tag: "aside", Attrs: templ.Attributes{"data-class": "announcement-bar", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-announcement-bar", Tag: "aside", Attrs: templ.Attributes{"data-class": "ui-announcement-bar", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

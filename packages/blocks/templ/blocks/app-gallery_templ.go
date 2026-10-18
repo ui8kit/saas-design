@@ -101,7 +101,7 @@ func AppGallery(p AppGalleryData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-app-gallery-title", As: 2, Attrs: templ.Attributes{"data-class": "app-gallery-title", "id": "app-gallery-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "app-gallery-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -132,13 +132,13 @@ func AppGallery(p AppGalleryData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-app-gallery-lead", Attrs: templ.Attributes{"data-class": "app-gallery-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-app-gallery-lead", Attrs: templ.Attributes{"data-class": "ui-app-gallery-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-app-gallery-head", Attrs: templ.Attributes{"data-class": "app-gallery-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-section-head-center", Attrs: templ.Attributes{"data-class": "ui-section-head-center"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -172,33 +172,33 @@ func AppGallery(p AppGalleryData) templ.Component {
 							}
 							ctx = templ.InitializeContext(ctx)
 							if tile.Src != "" {
-								templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-app-gallery-screen", Src: tile.Src, Alt: tile.Alt, Attrs: templ.Attributes{"data-class": "app-gallery-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-app-gallery-screen", Src: tile.Src, Alt: tile.Alt, Attrs: templ.Attributes{"data-class": "ui-app-gallery-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "app-gallery-tile"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-tile"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "app-gallery-tiles"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-app-gallery-container", Attrs: templ.Attributes{"data-class": "app-gallery-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-app-gallery-container", Attrs: templ.Attributes{"data-class": "ui-app-gallery-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-app-gallery", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "app-gallery", "aria-labelledby": "app-gallery-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-app-gallery", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-app-gallery", "aria-labelledby": "app-gallery-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

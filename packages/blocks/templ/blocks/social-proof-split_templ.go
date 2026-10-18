@@ -78,13 +78,13 @@ func SocialProofSplit(p SocialProofSplitData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-social-proof-split-screen", Src: p.Screen.Src, Alt: p.Screen.Alt, Attrs: templ.Attributes{"data-class": "social-proof-split-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-social-proof-split-screen", Src: p.Screen.Src, Alt: p.Screen.Alt, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-screen"}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "social-proof-split-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -127,7 +127,7 @@ func SocialProofSplit(p SocialProofSplitData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-social-proof-split-title", As: 2, Attrs: templ.Attributes{"data-class": "social-proof-split-title", "id": "social-proof-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-social-proof-split-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-title", "id": "social-proof-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -148,32 +148,32 @@ func SocialProofSplit(p SocialProofSplitData) templ.Component {
 						}
 						ctx = templ.InitializeContext(ctx)
 						for _, logo := range p.Logos {
-							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-social-proof-split-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "social-proof-split-logo"}}).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-social-proof-split-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-logo"}}).Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-social-proof-split-logos", Attrs: templ.Attributes{"data-class": "social-proof-split-logos"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-social-proof-split-logos", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-logos"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-social-proof-split-body", Attrs: templ.Attributes{"data-class": "social-proof-split-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-social-proof-split-body", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-social-proof-split-container", Attrs: templ.Attributes{"data-class": "social-proof-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-social-proof-split-container", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-social-proof-split", Tag: "section", Attrs: templ.Attributes{"data-class": "social-proof-split", "aria-labelledby": "social-proof-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-social-proof-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-social-proof-split", "aria-labelledby": "social-proof-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

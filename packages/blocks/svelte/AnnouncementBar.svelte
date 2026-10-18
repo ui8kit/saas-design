@@ -8,14 +8,14 @@
   let { data }: { data: AnnouncementBarData } = $props();
 </script>
 
-<Block class="ui-announcement-bar" data-class="announcement-bar" tag="aside" aria-label={data.label}>
-  <Container class="ui-announcement-bar-container" data-class="announcement-bar-container">
-    <Text class="ui-announcement-bar-text" data-class="announcement-bar-text">
+<Block class="ui-announcement-bar" data-class="ui-announcement-bar" tag="aside" aria-label={data.label}>
+  <Container class="ui-announcement-bar-container" data-class="ui-announcement-bar-container">
+    <Text class="ui-announcement-bar-text" data-class="ui-announcement-bar-text">
       {data.text}
     </Text>
-    <Link class="ui-announcement-bar-link" data-class="announcement-bar-link" href={data.link.href || undefined}>
+    <Link class="ui-announcement-bar-link" data-class="ui-announcement-bar-link" href={data.link.href || undefined}>
       {data.link.label}
-      {@html svg("arrow-right", `ui-announcement-bar-arrow`)}
+      {@html svg("arrow-right", `ui-icon-sm`)}
     </Link>
   </Container>
 </Block>

@@ -17,27 +17,27 @@ import (
 
 // HeroSplit: Headline and actions beside an app screen on an accent panel.
 templ HeroSplit(p HeroSplitData) {
-	@block.Block(block.BlockProps{Class: "ui-hero-split", Tag: "section", Attrs: templ.Attributes{"data-class": "hero-split", "aria-labelledby": "hero-split-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-hero-split-container", Attrs: templ.Attributes{"data-class": "hero-split-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-hero-split-copy", Attrs: templ.Attributes{"data-class": "hero-split-copy"}}) {
-				@title.Title(title.TitleProps{Class: "ui-hero-split-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-split-title", "id": "hero-split-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-hero-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-hero-split", "aria-labelledby": "hero-split-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-hero-split-container", Attrs: templ.Attributes{"data-class": "ui-hero-split-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-hero-split-copy", Attrs: templ.Attributes{"data-class": "ui-hero-split-copy"}}) {
+				@title.Title(title.TitleProps{Class: "ui-hero-split-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-split-title", "id": "hero-split-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-hero-split-lead", Attrs: templ.Attributes{"data-class": "hero-split-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-hero-split-lead", Attrs: templ.Attributes{"data-class": "ui-hero-split-lead"}}) {
 					{ p.Lead }
 				}
-				@group.Group(group.GroupProps{Class: "ui-hero-split-actions", Attrs: templ.Attributes{"data-class": "hero-split-actions"}}) {
+				@group.Group(group.GroupProps{Class: "ui-hero-split-actions", Attrs: templ.Attributes{"data-class": "ui-hero-split-actions"}}) {
 					@button.Button(button.ButtonProps{Size: "lg", Href: p.Primary.Href}) {
 						{ p.Primary.Label }
 					}
 					@button.Button(button.ButtonProps{Variant: "ghost", Size: "lg", Href: p.Secondary.Href}) {
-						@templ.Raw(icons.SVG("play", "ui-hero-split-play"))
+						@templ.Raw(icons.SVG("play", "ui-icon-sm"))
 						{ p.Secondary.Label }
 					}
 				}
 			}
-			@box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "hero-split-art"}}) {
-				@image.Image(image.ImageProps{Class: "ui-hero-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "hero-split-image"}})
+			@box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "ui-hero-split-art"}}) {
+				@image.Image(image.ImageProps{Class: "ui-hero-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-hero-split-image"}})
 			}
 		}
 	}

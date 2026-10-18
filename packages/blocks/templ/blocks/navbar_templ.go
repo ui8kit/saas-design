@@ -102,7 +102,7 @@ func Navbar(p NavbarData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-navbar-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "navbar-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-navbar-brand", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -158,7 +158,7 @@ func Navbar(p NavbarData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-navbar-menu-link", Href: item.Href, Attrs: templ.Attributes{"data-class": "navbar-menu-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-navbar-menu-link", Href: item.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-menu-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -171,7 +171,7 @@ func Navbar(p NavbarData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-navbar-menu", Attrs: templ.Attributes{"data-class": "navbar-menu"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-navbar-menu", Attrs: templ.Attributes{"data-class": "ui-navbar-menu"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -202,13 +202,13 @@ func Navbar(p NavbarData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-navbar-cta", Variant: "contrast", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "navbar-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-navbar-cta", Variant: "contrast", Href: p.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-navbar-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-navbar", Tag: "nav", Attrs: templ.Attributes{"data-class": "navbar", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-navbar", Tag: "nav", Attrs: templ.Attributes{"data-class": "ui-navbar", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

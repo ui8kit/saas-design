@@ -105,7 +105,7 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-two-plans-title", As: 2, Attrs: templ.Attributes{"data-class": "pricing-two-plans-title", "id": "pricing-two-plans-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "pricing-two-plans-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -136,13 +136,13 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-lead", Attrs: templ.Attributes{"data-class": "pricing-two-plans-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-lead", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-head", Attrs: templ.Attributes{"data-class": "pricing-two-plans-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -222,7 +222,7 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-two-plans-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-pricing-two-plans-plan-name", As: 3, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -261,7 +261,7 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-pricing-two-plans-plan-name-row", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-name-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-pricing-two-plans-plan-name-row", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-name-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -292,13 +292,13 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-plan-description", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-description"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var17), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-plan-description", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-description"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var17), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-plan-head", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -353,7 +353,7 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-value", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-value", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-price-value"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -385,14 +385,14 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-pricing-two-plans-price-period", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price-period"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-price", Attrs: templ.Attributes{"data-class": "pricing-two-plans-price"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-pricing-two-plans-price", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-price"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -456,20 +456,20 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-feature", Attrs: templ.Attributes{"data-class": "pricing-two-plans-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-feature", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-two-plans-features", Attrs: templ.Attributes{"data-class": "pricing-two-plans-features"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var25), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var25), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-pricing-two-plans-plan-body", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-6", Attrs: templ.Attributes{"data-class": "ui-stack-6"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -500,32 +500,32 @@ func PricingTwoPlans(p PricingTwoPlansData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-pricing-two-plans-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var28), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-pricing-two-plans-plan-cta", Variant: "secondary", Size: "lg", Href: plan.Cta.Href, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan-cta"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var28), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-plan" + " ui-pricing-two-plans-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "pricing-two-plans-plan", "data-theme": plan.Theme}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-pricing-two-plans-plan" + " ui-pricing-two-plans-plan-theme-" + plan.Theme, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plan", "data-theme": plan.Theme}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-two-plans-plans", Attrs: templ.Attributes{"data-class": "pricing-two-plans-plans"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-pricing-two-plans-plans", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-plans"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-pricing-two-plans-container", Attrs: templ.Attributes{"data-class": "pricing-two-plans-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-pricing-two-plans-container", Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-pricing-two-plans", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "pricing-two-plans", "aria-labelledby": "pricing-two-plans-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-pricing-two-plans", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-pricing-two-plans", "aria-labelledby": "pricing-two-plans-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -88,7 +88,7 @@ func CtaCentered(p CtaCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-cta-centered-title", As: 2, Attrs: templ.Attributes{"data-class": "cta-centered-title", "id": "cta-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-cta-centered-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-cta-centered-title", "id": "cta-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -119,7 +119,7 @@ func CtaCentered(p CtaCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cta-centered-text", Attrs: templ.Attributes{"data-class": "cta-centered-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cta-centered-text", Attrs: templ.Attributes{"data-class": "ui-cta-centered-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -199,19 +199,19 @@ func CtaCentered(p CtaCenteredData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cta-centered-actions", Attrs: templ.Attributes{"data-class": "cta-centered-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cta-centered-actions", Attrs: templ.Attributes{"data-class": "ui-cta-centered-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-cta-centered-container", Attrs: templ.Attributes{"data-class": "cta-centered-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-cta-centered-container", Attrs: templ.Attributes{"data-class": "ui-cta-centered-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-cta-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "cta-centered", "aria-labelledby": "cta-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-cta-centered", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-cta-centered", "aria-labelledby": "cta-centered-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

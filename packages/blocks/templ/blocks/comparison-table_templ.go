@@ -102,13 +102,13 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-comparison-table-title", As: 2, Attrs: templ.Attributes{"data-class": "comparison-table-title", "id": "comparison-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "comparison-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-comparison-table-head", Attrs: templ.Attributes{"data-class": "comparison-table-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-comparison-table-head", Attrs: templ.Attributes{"data-class": "ui-comparison-table-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -187,7 +187,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -218,7 +218,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th-plan"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th-plan"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -249,7 +249,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan-2", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th-plan-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan-2", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th-plan-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -261,7 +261,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = table.TableHead(table.TableHeadProps{Class: "ui-comparison-table-thead", Attrs: templ.Attributes{"data-class": "comparison-table-thead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = table.TableHead(table.TableHeadProps{Class: "ui-comparison-table-thead", Attrs: templ.Attributes{"data-class": "ui-comparison-table-thead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -317,7 +317,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-feature", Scope: "row", Attrs: templ.Attributes{"data-class": "comparison-table-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-feature", Scope: "row", Attrs: templ.Attributes{"data-class": "ui-comparison-table-feature"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -369,7 +369,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 												}
 												return nil
 											})
-											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr", Attrs: templ.Attributes{"data-class": "comparison-table-sr"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -410,14 +410,14 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 												}
 												return nil
 											})
-											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-2", Attrs: templ.Attributes{"data-class": "comparison-table-sr-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell", Attrs: templ.Attributes{"data-class": "comparison-table-cell"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var21), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -469,7 +469,7 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 												}
 												return nil
 											})
-											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-3", Attrs: templ.Attributes{"data-class": "comparison-table-sr-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-3", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -510,20 +510,20 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 												}
 												return nil
 											})
-											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-4", Attrs: templ.Attributes{"data-class": "comparison-table-sr-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var29), templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-4", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var29), templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell-2", Attrs: templ.Attributes{"data-class": "comparison-table-cell-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableRow(table.TableRowProps{Class: "ui-comparison-table-row", Attrs: templ.Attributes{"data-class": "comparison-table-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableRow(table.TableRowProps{Class: "ui-comparison-table-row", Attrs: templ.Attributes{"data-class": "ui-comparison-table-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -536,25 +536,25 @@ func ComparisonTable(p ComparisonTableData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = table.Table(table.TableProps{Class: "ui-comparison-table-table", Attrs: templ.Attributes{"data-class": "comparison-table-table"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = table.Table(table.TableProps{Class: "ui-comparison-table-table", Attrs: templ.Attributes{"data-class": "ui-comparison-table-table"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-comparison-table-scroll", Attrs: templ.Attributes{"data-class": "comparison-table-scroll"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-comparison-table-scroll", Attrs: templ.Attributes{"data-class": "ui-comparison-table-scroll"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-comparison-table-container", Attrs: templ.Attributes{"data-class": "comparison-table-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-comparison-table", Tag: "section", Attrs: templ.Attributes{"data-class": "comparison-table", "aria-labelledby": "comparison-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-comparison-table", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-comparison-table", "aria-labelledby": "comparison-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

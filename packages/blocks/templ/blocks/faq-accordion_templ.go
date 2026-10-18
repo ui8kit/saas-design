@@ -101,7 +101,7 @@ func FaqAccordion(p FaqAccordionData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-faq-accordion-title", As: 2, Attrs: templ.Attributes{"data-class": "faq-accordion-title", "id": "faq-accordion-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "faq-accordion-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -132,13 +132,13 @@ func FaqAccordion(p FaqAccordionData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-accordion-lead", Attrs: templ.Attributes{"data-class": "faq-accordion-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-accordion-head", Attrs: templ.Attributes{"data-class": "faq-accordion-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-accordion-head", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -198,7 +198,7 @@ func FaqAccordion(p FaqAccordionData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-accordion-question", Attrs: templ.Attributes{"data-class": "faq-accordion-question"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = disclosure.Summary(disclosure.SummaryProps{Class: "ui-faq-accordion-question", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-question"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -229,32 +229,32 @@ func FaqAccordion(p FaqAccordionData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-accordion-answer", Attrs: templ.Attributes{"data-class": "faq-accordion-answer"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-faq-accordion-answer", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-answer"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-accordion-item", Open: item.Open, Attrs: templ.Attributes{"data-class": "faq-accordion-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = disclosure.Disclosure(disclosure.DisclosureProps{Class: "ui-faq-accordion-item", Open: item.Open, Attrs: templ.Attributes{"data-class": "ui-faq-accordion-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-accordion-list", Attrs: templ.Attributes{"data-class": "faq-accordion-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-faq-accordion-list", Attrs: templ.Attributes{"data-class": "ui-faq-accordion-list"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-faq-accordion-container", Attrs: templ.Attributes{"data-class": "faq-accordion-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container-narrow", Attrs: templ.Attributes{"data-class": "ui-section-container-narrow"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-faq-accordion", Tag: "section", Attrs: templ.Attributes{"data-class": "faq-accordion", "aria-labelledby": "faq-accordion-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-faq-accordion", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-faq-accordion", "aria-labelledby": "faq-accordion-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

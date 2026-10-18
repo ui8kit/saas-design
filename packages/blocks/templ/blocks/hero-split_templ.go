@@ -104,7 +104,7 @@ func HeroSplit(p HeroSplitData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-split-title", As: 1, Attrs: templ.Attributes{"data-class": "hero-split-title", "id": "hero-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-hero-split-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-hero-split-title", "id": "hero-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -135,7 +135,7 @@ func HeroSplit(p HeroSplitData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-split-lead", Attrs: templ.Attributes{"data-class": "hero-split-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-hero-split-lead", Attrs: templ.Attributes{"data-class": "ui-hero-split-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -198,7 +198,7 @@ func HeroSplit(p HeroSplitData) templ.Component {
 								}()
 							}
 							ctx = templ.InitializeContext(ctx)
-							templ_7745c5c3_Err = templ.Raw(icons.SVG("play", "ui-hero-split-play")).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = templ.Raw(icons.SVG("play", "ui-icon-sm")).Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -223,13 +223,13 @@ func HeroSplit(p HeroSplitData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-split-actions", Attrs: templ.Attributes{"data-class": "hero-split-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-hero-split-actions", Attrs: templ.Attributes{"data-class": "ui-hero-split-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-hero-split-copy", Attrs: templ.Attributes{"data-class": "hero-split-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-hero-split-copy", Attrs: templ.Attributes{"data-class": "ui-hero-split-copy"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -249,25 +249,25 @@ func HeroSplit(p HeroSplitData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-hero-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "hero-split-image"}}).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-hero-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-hero-split-image"}}).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "hero-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "ui-hero-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-hero-split-container", Attrs: templ.Attributes{"data-class": "hero-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-hero-split-container", Attrs: templ.Attributes{"data-class": "ui-hero-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-split", Tag: "section", Attrs: templ.Attributes{"data-class": "hero-split", "aria-labelledby": "hero-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-hero-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-hero-split", "aria-labelledby": "hero-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

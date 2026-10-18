@@ -11,23 +11,23 @@ const plan = { theme: "string", name: "string", badge: "string", description: "s
 
 /** Section shell: <section> Block › Container. */
 const section = (id: string, o: { css?: string; container?: string; labelled?: boolean } = {}, ...children: Node[]) =>
-  c("Block", { tag: "section", ...(o.labelled === false ? {} : { "aria-labelledby": `${id}-title` }), css: o.css ?? "py-24" },
-    c("Container", { ui: "container", css: o.container ?? "mx-auto flex max-w-page flex-col gap-12 px-6 lg:px-0" }, ...children));
+  c("Block", { tag: "section", ...(o.labelled === false ? {} : { "aria-labelledby": `${id}-title` }), ...(o.css ? { css: o.css } : { kit: "section" }) },
+    c("Container", o.container === "" ? { kit: "section-container-narrow" } : o.container ? { ui: "container", css: o.container } : { kit: "section-container" }, ...children));
 /** Header: Title (h2) + lead. */
 const head = (id: string, center = false, lead = true) =>
   c("Stack", { ui: "head", css: `flex flex-col gap-4 ${center ? "items-center text-center" : ""}` },
-    c("Title", { as: "h2", id: `${id}-title`, ui: "title", css: "text-5xl font-bold" }, $("title")),
-    ...(lead ? [c("Text", { ui: "lead", css: "max-w-2xl text-xl font-light text-muted-foreground" }, $("lead"))] : []));
+    c("Title", { as: "h2", id: `${id}-title`, kit: "section-title" }, $("title")),
+    ...(lead ? [c("Text", { kit: "section-lead" }, $("lead"))] : []));
 const planCard = (prefix: string) =>
   c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-8 rounded-lg p-10 text-card-foreground" },
     c("Group", { ui: "plan-name-row", css: "justify-between gap-4" },
       c("Title", { as: "h3", ui: "plan-name", css: "text-2xl font-semibold" }, $("plan.name")),
       when($("plan.badge"), c("Badge", {}, $("plan.badge")))),
-    c("Text", { ui: "plan-description", css: "text-muted-foreground" }, $("plan.description")),
+    c("Text", { kit: "muted" }, $("plan.description")),
     c("Text", { ui: "price", css: "flex items-baseline gap-2" },
       c("Inline", { ui: "price-value", css: "text-4xl font-bold" }, $("plan.price")),
-      when($("plan.period"), c("Inline", { ui: "price-period", css: "text-muted-foreground" }, $("plan.period")))),
-    c("List", { ui: "features", css: "flex flex-col gap-4" },
+      when($("plan.period"), c("Inline", { kit: "muted" }, $("plan.period")))),
+    c("List", { kit: "stack-4" },
       each($("plan.features"), "f", c("ListItem", { ui: "feature", css: "flex items-center gap-4" },
         when($("f.included"), icon("check", { ui: "check", css: "size-4 text-primary" })),
         unless($("f.included"), icon("x", { ui: "cross", css: "size-4 text-muted-foreground" })),
@@ -45,7 +45,7 @@ export const announcementBar = block({
   root: c("Block", { tag: "aside", "aria-label": $("label"), css: "bg-secondary text-secondary-foreground" },
     c("Container", { ui: "container", css: "mx-auto flex max-w-page flex-wrap items-center justify-center gap-4 px-6 py-2 text-sm" },
       c("Text", { ui: "text" }, $("text")),
-      c("Link", { ui: "link", href: $("link.href"), css: "font-semibold text-current underline" }, $("link.label"), icon("arrow-right", { ui: "arrow", css: "size-4" })))),
+      c("Link", { ui: "link", href: $("link.href"), css: "font-semibold text-current underline" }, $("link.label"), icon("arrow-right", { kit: "icon-sm" })))),
 });
 
 export const heroCentered = block({
@@ -71,7 +71,7 @@ export const heroSplit = block({
       c("Text", { ui: "lead", css: "text-xl text-muted-foreground" }, $("lead")),
       c("Group", { ui: "actions", css: "flex-wrap gap-4" },
         c("Button", { size: "lg", href: $("primary.href") }, $("primary.label")),
-        c("Button", { variant: "ghost", size: "lg", href: $("secondary.href") }, icon("play", { ui: "play", css: "size-4" }), $("secondary.label")))),
+        c("Button", { variant: "ghost", size: "lg", href: $("secondary.href") }, icon("play", { kit: "icon-sm" }), $("secondary.label")))),
     c("Box", { ui: "art", css: "flex justify-center rounded-lg bg-accent px-12 pt-12" },
       c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "w-1/2 rounded-t-md" }))),
 });
@@ -94,8 +94,8 @@ export const statsRow = block({
     c("Title", { as: "h2", id: "stats-row-title", ui: "title", css: "sr-only" }, $("title")),
     c("List", { ui: "list", css: "grid grid-cols-2 gap-6 lg:grid-cols-4" },
       each($("items"), "s", c("ListItem", { ui: "item", css: "flex flex-col gap-2 rounded-lg bg-muted p-8" },
-        c("Inline", { ui: "value", css: "text-5xl font-bold" }, $("s.value")),
-        c("Inline", { ui: "label", css: "text-muted-foreground" }, $("s.label")))))),
+        c("Inline", { kit: "section-title" }, $("s.value")),
+        c("Inline", { kit: "muted" }, $("s.label")))))),
 });
 
 export const featureGrid = block({
@@ -107,8 +107,8 @@ export const featureGrid = block({
     c("List", { ui: "grid", css: "grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3" },
       each($("items"), "item", c("ListItem", { ui: "item", css: "flex flex-col gap-4" },
         c("IconBadge", { ui: "badge", css: "size-12 rounded-full bg-primary text-primary-foreground" }, icon($("item.icon"), { ui: "icon", css: "size-6" })),
-        c("Title", { as: "h3", ui: "item-title", css: "text-xl font-semibold" }, $("item.title")),
-        c("Text", { ui: "item-text", css: "text-muted-foreground" }, $("item.text")))))),
+        c("Title", { as: "h3", kit: "item-title" }, $("item.title")),
+        c("Text", { kit: "muted" }, $("item.text")))))),
 });
 
 export const featureSplit = block({
@@ -123,9 +123,9 @@ export const featureSplit = block({
       c("List", { ui: "list", css: "flex flex-col gap-6" },
         each($("items"), "item", c("ListItem", { ui: "item", css: "flex gap-4" },
           icon("circle-check", { ui: "check", css: "size-6 shrink-0 text-primary" }),
-          c("Stack", { ui: "item-body", css: "flex flex-col gap-1" },
-            c("Title", { as: "h3", ui: "item-title", css: "text-lg font-semibold" }, $("item.title")),
-            c("Text", { ui: "item-text", css: "text-muted-foreground" }, $("item.text")))))))),
+          c("Stack", { kit: "stack-2" },
+            c("Title", { as: "h3", kit: "item-title-sm" }, $("item.title")),
+            c("Text", { kit: "muted" }, $("item.text")))))))),
 });
 
 export const steps = block({
@@ -137,8 +137,8 @@ export const steps = block({
     c("List", { tag: "ol", ui: "list", css: "grid grid-cols-1 gap-10 md:grid-cols-3" },
       each($("items"), "item", c("ListItem", { ui: "item", css: "flex flex-col gap-4 rounded-lg bg-muted p-10" },
         icon($("item.icon"), { ui: "icon", css: "size-6 text-primary" }),
-        c("Title", { as: "h3", ui: "item-title", css: "text-xl font-semibold" }, $("item.title")),
-        c("Text", { ui: "item-text", css: "text-muted-foreground" }, $("item.text"))))),
+        c("Title", { as: "h3", kit: "item-title" }, $("item.title")),
+        c("Text", { kit: "muted" }, $("item.text"))))),
   ),
   extraCss: `.ui-steps-list { counter-reset: step; }
 .ui-steps-item { counter-increment: step; }`,
@@ -153,9 +153,9 @@ export const integrations = block({
     c("List", { ui: "grid", css: "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" },
       each($("items"), "item", c("ListItem", { ui: "item", css: "flex items-start gap-4 rounded-lg bg-card p-8 inset-ring inset-ring-border" },
         c("IconBadge", { ui: "badge", css: "size-12 shrink-0 rounded-full bg-accent text-accent-foreground" }, icon($("item.icon"), { ui: "icon", css: "size-6" })),
-        c("Stack", { ui: "body", css: "flex flex-col gap-1" },
-          c("Title", { as: "h3", ui: "item-title", css: "text-lg font-semibold" }, $("item.name")),
-          c("Text", { ui: "item-text", css: "text-sm text-muted-foreground" }, $("item.text"))))))),
+        c("Stack", { kit: "stack-2" },
+          c("Title", { as: "h3", kit: "item-title-sm" }, $("item.name")),
+          c("Text", { kit: "muted-sm" }, $("item.text"))))))),
 });
 
 export const pricingThreeTiers = block({
@@ -203,7 +203,7 @@ export const testimonialQuote = block({
           c("Image", { ui: "avatar", variant: "avatar", src: $("avatar.src"), alt: $("avatar.alt") }),
           c("Stack", { ui: "who", css: "flex flex-col items-start" },
             c("Inline", { ui: "name", css: "font-bold" }, $("name")),
-            c("Inline", { ui: "role", css: "text-muted-foreground" }, $("role"))))))),
+            c("Inline", { kit: "muted" }, $("role"))))))),
 });
 
 export const teamGrid = block({
@@ -212,11 +212,11 @@ export const teamGrid = block({
   schema: { title: "string", lead: "string", members: [{ name: "string", role: "string", avatar: img }] },
   root: section("team-grid", {},
     head("team-grid", true),
-    c("List", { ui: "grid", css: "grid grid-cols-1 gap-10 md:grid-cols-3" },
+    c("List", { kit: "grid-3" },
       each($("members"), "m", c("ListItem", { ui: "member", css: "flex flex-col items-center gap-4 rounded-lg bg-muted p-10 text-center" },
         c("Image", { ui: "avatar", variant: "avatar", size: "xl", src: $("m.avatar.src"), alt: $("m.avatar.alt") }),
-        c("Title", { as: "h3", ui: "name", css: "text-xl font-semibold" }, $("m.name")),
-        c("Text", { ui: "role", css: "text-muted-foreground" }, $("m.role")))))),
+        c("Title", { as: "h3", kit: "item-title" }, $("m.name")),
+        c("Text", { kit: "muted" }, $("m.role")))))),
 });
 
 export const blogCards = block({
@@ -225,39 +225,39 @@ export const blogCards = block({
   schema: { title: "string", lead: "string", posts: [{ title: "string", excerpt: "string", date: "string", datetime: "string", tag: "string", href: "string", image: img }] },
   root: section("blog-cards", {},
     head("blog-cards"),
-    c("List", { ui: "grid", css: "grid grid-cols-1 gap-10 md:grid-cols-3" },
+    c("List", { kit: "grid-3" },
       each($("posts"), "post", c("ListItem", { ui: "post", css: "flex flex-col overflow-hidden rounded-lg bg-card" },
-        c("Box", { ui: "media", css: "flex h-48 justify-center overflow-hidden bg-accent pt-8" },
+        c("Box", { ui: "media", css: "flex aspect-video justify-center overflow-hidden bg-accent pt-8" },
           c("Image", { ui: "image", src: $("post.image.src"), alt: $("post.image.alt"), css: "w-1/3 self-start rounded-t-md" })),
         c("Stack", { ui: "body", css: "flex flex-col gap-4 p-8" },
           c("Group", { ui: "meta", css: "gap-4 text-sm text-muted-foreground" },
             c("Badge", { variant: "outline" }, $("post.tag")),
             h("time", { ui: "date", datetime: $("post.datetime") }, $("post.date"))),
-          c("Title", { as: "h3", ui: "post-title", css: "text-xl font-semibold" },
+          c("Title", { as: "h3", kit: "item-title" },
             c("Link", { ui: "post-link", href: $("post.href"), css: "text-foreground hover:underline" }, $("post.title"))),
-          c("Text", { ui: "excerpt", css: "text-muted-foreground" }, $("post.excerpt"))))))),
+          c("Text", { kit: "muted" }, $("post.excerpt"))))))),
 });
 
 export const changelog = block({
   id: "changelog", title: "Changelog", category: "content",
   description: "Release timeline with version badges.",
   schema: { title: "string", lead: "string", items: [{ version: "string", date: "string", datetime: "string", title: "string", text: "string" }] },
-  root: section("changelog", { container: "mx-auto flex max-w-3xl flex-col gap-12 px-6" },
+  root: section("changelog", { container: "" },
     head("changelog"),
     c("List", { tag: "ol", ui: "list", css: "flex flex-col gap-10 border-l border-border pl-8" },
       each($("items"), "r", c("ListItem", { ui: "item", css: "flex flex-col gap-2" },
         c("Group", { ui: "meta", css: "gap-4" },
           c("Badge", {}, $("r.version")),
           h("time", { ui: "date", datetime: $("r.datetime"), css: "text-sm text-muted-foreground" }, $("r.date"))),
-        c("Title", { as: "h3", ui: "item-title", css: "text-xl font-semibold" }, $("r.title")),
-        c("Text", { ui: "item-text", css: "text-muted-foreground" }, $("r.text")))))),
+        c("Title", { as: "h3", kit: "item-title" }, $("r.title")),
+        c("Text", { kit: "muted" }, $("r.text")))))),
 });
 
 export const faqAccordion = block({
   id: "faq-accordion", title: "FAQ accordion", category: "faq",
   description: "Native details/summary list; first item open.",
   schema: { title: "string", lead: "string", items: [{ question: "string", answer: "string", open: "bool" }] },
-  root: section("faq-accordion", { container: "mx-auto flex max-w-3xl flex-col gap-12 px-6" },
+  root: section("faq-accordion", { container: "" },
     head("faq-accordion", true),
     c("Stack", { ui: "list", css: "flex flex-col gap-4" },
       each($("items"), "item", c("Disclosure", { ui: "item", open: $("item.open"), css: "rounded-lg bg-muted px-8 py-6" },
@@ -286,7 +286,7 @@ export const appDownload = block({
   schema: { title: "string", text: "string", ios: link, android: link, image: img },
   root: section("app-download", { container: "mx-auto grid max-w-page grid-cols-1 items-center gap-12 overflow-hidden rounded-lg bg-background px-12 pt-16 text-foreground lg:grid-cols-2" },
     c("Stack", { ui: "copy", "data-theme": "dark", css: "flex flex-col items-start gap-6 pb-16" },
-      c("Title", { as: "h2", id: "app-download-title", ui: "title", css: "text-5xl font-bold" }, $("title")),
+      c("Title", { as: "h2", id: "app-download-title", kit: "section-title" }, $("title")),
       c("Text", { ui: "text", css: "text-xl text-muted-foreground" }, $("text")),
       c("Group", { ui: "stores", css: "flex-wrap gap-4" },
         c("Button", { variant: "secondary", size: "lg", href: $("ios.href") }, icon("apple", { ui: "apple", css: "size-6" }), $("ios.label")),
@@ -301,8 +301,8 @@ export const newsletterBand = block({
   schema: { title: "string", text: "string", label: "string", placeholder: "string", button: "string", action: "string" },
   root: section("newsletter-band", { container: "mx-auto flex max-w-page flex-col items-center justify-between gap-8 rounded-lg bg-accent px-12 py-16 text-accent-foreground lg:flex-row" },
     c("Stack", { ui: "copy", css: "flex flex-col gap-2" },
-      c("Title", { as: "h2", id: "newsletter-band-title", ui: "title", css: "text-3xl font-bold" }, $("title")),
-      c("Text", { ui: "text", css: "text-muted-foreground" }, $("text"))),
+      c("Title", { as: "h2", id: "newsletter-band-title", kit: "section-title-sm" }, $("title")),
+      c("Text", { kit: "muted" }, $("text"))),
     c("Form", { ui: "form", action: $("action"), method: "post", css: "flex w-full max-w-md gap-2" },
       c("Label", { ui: "label", for: "newsletter-band-email", css: "sr-only" }, $("label")),
       c("Input", { ui: "input", id: "newsletter-band-email", type: "email", name: "email", autocomplete: "email", required: true, placeholder: $("placeholder") }),
@@ -315,7 +315,7 @@ export const contactForm = block({
   schema: { title: "string", text: "string", name: field, email: field, message: { label: "string", placeholder: "string" }, send: "string", action: "string" },
   root: section("contact-form", { container: "mx-auto grid max-w-page grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-0" },
     c("Stack", { ui: "copy", css: "flex flex-col gap-4" },
-      c("Title", { as: "h2", id: "contact-form-title", ui: "title", css: "text-5xl font-bold" }, $("title")),
+      c("Title", { as: "h2", id: "contact-form-title", kit: "section-title" }, $("title")),
       c("Text", { ui: "text", css: "text-xl text-muted-foreground" }, $("text"))),
     c("Form", { ui: "form", action: $("action"), method: "post", css: "flex flex-col gap-6 rounded-lg bg-muted p-10" },
       fieldNode("contact-form", "name"), fieldNode("contact-form", "email"),
@@ -332,8 +332,8 @@ const authCard = (id: string, title: string, fields: Node[], extra: Node[]) => b
   root: section(id, { css: "py-24", container: "mx-auto flex max-w-md flex-col px-6" },
     c("Card", { ui: "card", css: "gap-8 p-10" },
       c("Stack", { ui: "head", css: "flex flex-col gap-2 text-center" },
-        c("Title", { as: "h2", id: `${id}-title`, ui: "title", css: "text-3xl font-bold" }, $("title")),
-        c("Text", { ui: "text", css: "text-muted-foreground" }, $("text"))),
+        c("Title", { as: "h2", id: `${id}-title`, kit: "section-title-sm" }, $("title")),
+        c("Text", { kit: "muted" }, $("text"))),
       c("Form", { ui: "form", action: $("action"), method: "post", css: "flex flex-col gap-6" },
         each($("fields"), "f", fieldNode(id, "f")),
         ...fields,
@@ -351,10 +351,10 @@ export const settingsPanel = block({
   schema: { title: "string", text: "string", options: [{ id: "string", label: "string", checked: "bool" }], save: "string", action: "string" },
   root: section("settings-panel", { container: "mx-auto flex max-w-2xl flex-col px-6" },
     c("Form", { ui: "form", action: $("action"), method: "post", css: "flex flex-col gap-8 rounded-lg bg-card p-10" },
-      c("Fieldset", { ui: "fieldset", css: "flex flex-col gap-6" },
+      c("Fieldset", { kit: "stack-6" },
         c("Legend", { ui: "legend", css: "mb-2 flex flex-col gap-2" },
           c("Title", { as: "h2", id: "settings-panel-title", ui: "title", css: "text-2xl font-semibold" }, $("title"))),
-        c("Text", { ui: "text", css: "text-muted-foreground" }, $("text")),
+        c("Text", { kit: "muted" }, $("text")),
         each($("options"), "o", c("Group", { ui: "option", css: "justify-between gap-4 rounded-md bg-background px-6 py-4" },
           c("Label", { ui: "label", for: $("o.id"), css: "text-base font-normal" }, $("o.label")),
           c("Switch", { ui: "switch", id: $("o.id"), name: $("o.id"), checked: $("o.checked") })))),
@@ -366,12 +366,12 @@ export const dashboardStats = block({
   description: "KPI cards for today, streak, week and focus time.",
   schema: { title: "string", cards: [{ label: "string", value: "string", hint: "string" }] },
   root: section("dashboard-stats", {},
-    c("Title", { as: "h2", id: "dashboard-stats-title", ui: "title", css: "text-3xl font-bold" }, $("title")),
+    c("Title", { as: "h2", id: "dashboard-stats-title", kit: "section-title-sm" }, $("title")),
     c("List", { ui: "grid", css: "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4" },
       each($("cards"), "k", c("ListItem", { ui: "card", css: "flex flex-col gap-2 rounded-lg bg-card p-8" },
-        c("Inline", { ui: "label", css: "text-sm text-muted-foreground" }, $("k.label")),
-        c("Inline", { ui: "value", css: "text-3xl font-bold" }, $("k.value")),
-        c("Inline", { ui: "hint", css: "text-sm text-muted-foreground" }, $("k.hint")))))),
+        c("Inline", { kit: "muted-sm" }, $("k.label")),
+        c("Inline", { kit: "section-title-sm" }, $("k.value")),
+        c("Inline", { kit: "muted-sm" }, $("k.hint")))))),
 });
 
 export const habitsTable = block({
@@ -379,7 +379,7 @@ export const habitsTable = block({
   description: "Today's habits with streak, time and status badge.",
   schema: { title: "string", columns: { habit: "string", streak: "string", time: "string", status: "string" }, rows: [{ habit: "string", streak: "string", time: "string", status: "string", tone: "string" }] },
   root: section("habits-table", {},
-    c("Title", { as: "h2", id: "habits-table-title", ui: "title", css: "text-3xl font-bold" }, $("title")),
+    c("Title", { as: "h2", id: "habits-table-title", kit: "section-title-sm" }, $("title")),
     c("Box", { ui: "scroll", css: "overflow-x-auto rounded-lg inset-ring inset-ring-border" },
       c("Table", { ui: "table", css: "w-full text-left" },
         c("TableHead", { ui: "thead", css: "bg-muted text-sm text-muted-foreground" },
@@ -391,9 +391,9 @@ export const habitsTable = block({
         c("TableBody", {},
           each($("rows"), "r", c("TableRow", { ui: "row", css: "border-t border-border" },
             c("TableHeadCell", { ui: "habit", scope: "row", css: "px-6 py-4 font-medium" }, $("r.habit")),
-            c("TableCell", { ui: "cell", css: "px-6 py-4" }, $("r.streak")),
+            c("TableCell", { kit: "cell" }, $("r.streak")),
             c("TableCell", { ui: "cell-2", css: "px-6 py-4 text-muted-foreground" }, $("r.time")),
-            c("TableCell", { ui: "cell-3", css: "px-6 py-4" },
+            c("TableCell", { kit: "cell" },
               c("Badge", { ui: "status", variants: { tone: { done: "bg-primary text-primary-foreground", pending: "bg-muted text-foreground" } }, vary: { tone: $("r.tone") } }, $("r.status"))))))))),
 });
 
@@ -404,8 +404,8 @@ export const emptyState = block({
   root: section("empty-state", { container: "mx-auto flex max-w-xl flex-col items-center gap-6 rounded-lg px-6 py-20 text-center inset-ring inset-ring-border" },
     c("IconBadge", { ui: "badge", css: "size-16 rounded-full bg-muted text-muted-foreground" }, icon("inbox", { ui: "icon", css: "size-6" })),
     c("Title", { as: "h2", id: "empty-state-title", ui: "title", css: "text-2xl font-semibold" }, $("title")),
-    c("Text", { ui: "text", css: "text-muted-foreground" }, $("text")),
-    c("Button", { href: $("cta.href") }, icon("plus", { ui: "plus", css: "size-4" }), $("cta.label"))),
+    c("Text", { kit: "muted" }, $("text")),
+    c("Button", { href: $("cta.href") }, icon("plus", { kit: "icon-sm" }), $("cta.label"))),
 });
 
 export const notFound = block({
@@ -437,11 +437,11 @@ export const footerSimple = block({
   schema: { label: "string", brand: "string", href: "string", links: [link], copyright: "string" },
   root: c("Block", { tag: "footer", css: "border-t border-border py-10" },
     c("Container", { ui: "container", css: "mx-auto flex max-w-page flex-col items-center justify-between gap-6 px-6 md:flex-row lg:px-0" },
-      c("Link", { ui: "brand", href: $("href"), css: "gap-2 text-xl font-bold text-foreground" }, icon("brand-mark", { ui: "mark", css: "size-4" }), c("Inline", {}, $("brand"))),
+      c("Link", { ui: "brand", href: $("href"), css: "gap-2 text-xl font-bold text-foreground" }, icon("brand-mark", { kit: "icon-sm" }), c("Inline", {}, $("brand"))),
       h("nav", { ui: "nav", "aria-label": $("label") },
         c("List", { ui: "links", css: "flex flex-wrap gap-6" },
           each($("links"), "l", c("ListItem", {}, c("Link", { ui: "link", variant: "muted", href: $("l.href") }, $("l.label")))))),
-      c("Text", { ui: "copyright", css: "text-sm text-muted-foreground" }, $("copyright")))),
+      c("Text", { kit: "muted-sm" }, $("copyright")))),
 });
 
 export const catalogBlocks = [announcementBar, heroCentered, heroSplit, logoCloud, statsRow, featureGrid, featureSplit, steps, integrations, pricingThreeTiers, comparisonTable, testimonialQuote, teamGrid, blogCards, changelog, faqAccordion, ctaCentered, appDownload, newsletterBand, contactForm, loginCard, signupCard, settingsPanel, dashboardStats, habitsTable, emptyState, notFound, cookieBanner, footerSimple];

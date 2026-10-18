@@ -7,24 +7,24 @@
   let { data }: { data: TeamGridData } = $props();
 </script>
 
-<Block class="ui-team-grid" data-class="team-grid" tag="section" aria-labelledby="team-grid-title">
-  <Container class="ui-team-grid-container" data-class="team-grid-container">
-    <Stack class="ui-team-grid-head" data-class="team-grid-head">
-      <Title class="ui-team-grid-title" data-class="team-grid-title" as={2} id="team-grid-title">
+<Block class="ui-section ui-team-grid" data-class="ui-team-grid" tag="section" aria-labelledby="team-grid-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-team-grid-head" data-class="ui-team-grid-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="team-grid-title">
         {data.title}
       </Title>
-      <Text class="ui-team-grid-lead" data-class="team-grid-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-team-grid-grid" data-class="team-grid-grid">
+    <List class="ui-grid-3" data-class="ui-grid-3">
       {#each data.members as m}
-        <ListItem class="ui-team-grid-member" data-class="team-grid-member">
-          <Image class="ui-team-grid-avatar" data-class="team-grid-avatar" variant="avatar" size="xl" src={m.avatar.src || undefined} alt={m.avatar.alt || undefined} />
-          <Title class="ui-team-grid-name" data-class="team-grid-name" as={3}>
+        <ListItem class="ui-team-grid-member" data-class="ui-team-grid-member">
+          <Image class="ui-team-grid-avatar" data-class="ui-team-grid-avatar" variant="avatar" size="xl" src={m.avatar.src || undefined} alt={m.avatar.alt || undefined} />
+          <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {m.name}
           </Title>
-          <Text class="ui-team-grid-role" data-class="team-grid-role">
+          <Text class="ui-muted" data-class="ui-muted">
             {m.role}
           </Text>
         </ListItem>

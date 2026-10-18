@@ -6,10 +6,10 @@
   "byKey": {
     "variant": { "default": "", "ghost": "bg-muted inset-ring-transparent", "outline": "bg-transparent" },
     "size": {
-      "default": "min-h-32 px-6 py-4 text-base",
-      "lg": "min-h-40 px-6 py-4 text-base",
-      "sm": "min-h-24 px-4 py-2 text-sm",
-      "xs": "min-h-16 px-3 py-2 text-xs"
+      "default": "px-6 py-4 text-base",
+      "lg": "px-6 py-4 text-lg",
+      "sm": "px-4 py-2 text-sm",
+      "xs": "px-3 py-2 text-xs"
     }
   }
 }

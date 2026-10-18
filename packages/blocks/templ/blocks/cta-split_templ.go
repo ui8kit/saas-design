@@ -122,7 +122,7 @@ func CtaSplit(p CtaSplitData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-cta-split-title", As: 2, Attrs: templ.Attributes{"data-class": "cta-split-title", "id": "cta-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-cta-split-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-cta-split-title", "id": "cta-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -165,7 +165,7 @@ func CtaSplit(p CtaSplitData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cta-split-text", Attrs: templ.Attributes{"data-class": "cta-split-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cta-split-text", Attrs: templ.Attributes{"data-class": "ui-cta-split-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -202,31 +202,31 @@ func CtaSplit(p CtaSplitData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-cta-split-aside", Attrs: templ.Attributes{"data-class": "cta-split-aside"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-cta-split-aside", Attrs: templ.Attributes{"data-class": "ui-cta-split-aside"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-cta-split-row", Attrs: templ.Attributes{"data-class": "cta-split-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-cta-split-row", Attrs: templ.Attributes{"data-class": "ui-cta-split-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-cta-split-panel", Attrs: templ.Attributes{"data-class": "cta-split-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-cta-split-panel", Attrs: templ.Attributes{"data-class": "ui-cta-split-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-cta-split-container", Attrs: templ.Attributes{"data-class": "cta-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-cta-split-container", Attrs: templ.Attributes{"data-class": "ui-cta-split-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-cta-split", Tag: "section", Attrs: templ.Attributes{"data-class": "cta-split", "aria-labelledby": "cta-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-cta-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-cta-split", "aria-labelledby": "cta-split-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -15,26 +15,26 @@ import (
 
 // FeatureGrid: Six features with icon badges on a plain grid.
 templ FeatureGrid(p FeatureGridData) {
-	@block.Block(block.BlockProps{Class: "ui-feature-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "feature-grid", "aria-labelledby": "feature-grid-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-feature-grid-container", Attrs: templ.Attributes{"data-class": "feature-grid-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-feature-grid-head", Attrs: templ.Attributes{"data-class": "feature-grid-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-feature-grid-title", As: 2, Attrs: templ.Attributes{"data-class": "feature-grid-title", "id": "feature-grid-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-feature-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-feature-grid", "aria-labelledby": "feature-grid-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-feature-grid-head", Attrs: templ.Attributes{"data-class": "ui-feature-grid-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "feature-grid-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-feature-grid-lead", Attrs: templ.Attributes{"data-class": "feature-grid-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-feature-grid-grid", Attrs: templ.Attributes{"data-class": "feature-grid-grid"}}) {
+			@list.List(list.ListProps{Class: "ui-feature-grid-grid", Attrs: templ.Attributes{"data-class": "ui-feature-grid-grid"}}) {
 				for _, item := range p.Items {
-					@list.ListItem(list.ListItemProps{Class: "ui-feature-grid-item", Attrs: templ.Attributes{"data-class": "feature-grid-item"}}) {
-						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-feature-grid-badge", Attrs: templ.Attributes{"data-class": "feature-grid-badge"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-feature-grid-item", Attrs: templ.Attributes{"data-class": "ui-feature-grid-item"}}) {
+						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-feature-grid-badge", Attrs: templ.Attributes{"data-class": "ui-feature-grid-badge"}}) {
 							@templ.Raw(icons.SVG(item.Icon, "ui-feature-grid-icon"))
 						}
-						@title.Title(title.TitleProps{Class: "ui-feature-grid-item-title", As: 3, Attrs: templ.Attributes{"data-class": "feature-grid-item-title"}}) {
+						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ item.Title }
 						}
-						@text.Text(text.TextProps{Class: "ui-feature-grid-item-text", Attrs: templ.Attributes{"data-class": "feature-grid-item-text"}}) {
+						@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ item.Text }
 						}
 					}

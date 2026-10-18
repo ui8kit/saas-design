@@ -13,43 +13,43 @@ import (
 
 // HabitsTable: Today's habits with streak, time and status badge.
 templ HabitsTable(p HabitsTableData) {
-	@block.Block(block.BlockProps{Class: "ui-habits-table", Tag: "section", Attrs: templ.Attributes{"data-class": "habits-table", "aria-labelledby": "habits-table-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-habits-table-container", Attrs: templ.Attributes{"data-class": "habits-table-container"}}) {
-			@title.Title(title.TitleProps{Class: "ui-habits-table-title", As: 2, Attrs: templ.Attributes{"data-class": "habits-table-title", "id": "habits-table-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-habits-table", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-habits-table", "aria-labelledby": "habits-table-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "habits-table-title"}}) {
 				{ p.Title }
 			}
-			@box.Box(box.BoxProps{Class: "ui-habits-table-scroll", Attrs: templ.Attributes{"data-class": "habits-table-scroll"}}) {
-				@table.Table(table.TableProps{Class: "ui-habits-table-table", Attrs: templ.Attributes{"data-class": "habits-table-table"}}) {
-					@table.TableHead(table.TableHeadProps{Class: "ui-habits-table-thead", Attrs: templ.Attributes{"data-class": "habits-table-thead"}}) {
+			@box.Box(box.BoxProps{Class: "ui-habits-table-scroll", Attrs: templ.Attributes{"data-class": "ui-habits-table-scroll"}}) {
+				@table.Table(table.TableProps{Class: "ui-habits-table-table", Attrs: templ.Attributes{"data-class": "ui-habits-table-table"}}) {
+					@table.TableHead(table.TableHeadProps{Class: "ui-habits-table-thead", Attrs: templ.Attributes{"data-class": "ui-habits-table-thead"}}) {
 						@table.TableRow(table.TableRowProps{}) {
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th"}}) {
 								{ p.Columns.Habit }
 							}
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-2", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-2"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-2", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-2"}}) {
 								{ p.Columns.Streak }
 							}
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-3", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-3"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-3", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-3"}}) {
 								{ p.Columns.Time }
 							}
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-4", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-4"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-4", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-4"}}) {
 								{ p.Columns.Status }
 							}
 						}
 					}
 					@table.TableBody(table.TableBodyProps{}) {
 						for _, r := range p.Rows {
-							@table.TableRow(table.TableRowProps{Class: "ui-habits-table-row", Attrs: templ.Attributes{"data-class": "habits-table-row"}}) {
-								@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-habit", Scope: "row", Attrs: templ.Attributes{"data-class": "habits-table-habit"}}) {
+							@table.TableRow(table.TableRowProps{Class: "ui-habits-table-row", Attrs: templ.Attributes{"data-class": "ui-habits-table-row"}}) {
+								@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-habit", Scope: "row", Attrs: templ.Attributes{"data-class": "ui-habits-table-habit"}}) {
 									{ r.Habit }
 								}
-								@table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell", Attrs: templ.Attributes{"data-class": "habits-table-cell"}}) {
+								@table.TableCell(table.TableCellProps{Class: "ui-cell", Attrs: templ.Attributes{"data-class": "ui-cell"}}) {
 									{ r.Streak }
 								}
-								@table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-2", Attrs: templ.Attributes{"data-class": "habits-table-cell-2"}}) {
+								@table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-2", Attrs: templ.Attributes{"data-class": "ui-habits-table-cell-2"}}) {
 									{ r.Time }
 								}
-								@table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-3", Attrs: templ.Attributes{"data-class": "habits-table-cell-3"}}) {
-									@badge.Badge(badge.BadgeProps{Class: "ui-habits-table-status" + " ui-habits-table-status-tone-" + r.Tone, Attrs: templ.Attributes{"data-class": "habits-table-status"}}) {
+								@table.TableCell(table.TableCellProps{Class: "ui-cell", Attrs: templ.Attributes{"data-class": "ui-cell"}}) {
+									@badge.Badge(badge.BadgeProps{Class: "ui-habits-table-status" + " ui-habits-table-status-tone-" + r.Tone, Attrs: templ.Attributes{"data-class": "ui-habits-table-status"}}) {
 										{ r.Status }
 									}
 								}

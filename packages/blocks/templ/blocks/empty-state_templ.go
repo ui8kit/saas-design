@@ -84,7 +84,7 @@ func EmptyState(p EmptyStateData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-empty-state-badge", Attrs: templ.Attributes{"data-class": "empty-state-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-empty-state-badge", Attrs: templ.Attributes{"data-class": "ui-empty-state-badge"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -115,7 +115,7 @@ func EmptyState(p EmptyStateData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-empty-state-title", As: 2, Attrs: templ.Attributes{"data-class": "empty-state-title", "id": "empty-state-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-empty-state-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-empty-state-title", "id": "empty-state-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -146,7 +146,7 @@ func EmptyState(p EmptyStateData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-empty-state-text", Attrs: templ.Attributes{"data-class": "empty-state-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -166,7 +166,7 @@ func EmptyState(p EmptyStateData) templ.Component {
 						}()
 					}
 					ctx = templ.InitializeContext(ctx)
-					templ_7745c5c3_Err = templ.Raw(icons.SVG("plus", "ui-empty-state-plus")).Render(ctx, templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = templ.Raw(icons.SVG("plus", "ui-icon-sm")).Render(ctx, templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -191,13 +191,13 @@ func EmptyState(p EmptyStateData) templ.Component {
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-empty-state-container", Attrs: templ.Attributes{"data-class": "empty-state-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-empty-state-container", Attrs: templ.Attributes{"data-class": "ui-empty-state-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-empty-state", Tag: "section", Attrs: templ.Attributes{"data-class": "empty-state", "aria-labelledby": "empty-state-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-empty-state", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-empty-state", "aria-labelledby": "empty-state-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

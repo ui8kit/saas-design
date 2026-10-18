@@ -8,29 +8,29 @@
   let { data }: { data: FeatureSplitData } = $props();
 </script>
 
-<Block class="ui-feature-split" data-class="feature-split" tag="section" aria-labelledby="feature-split-title">
-  <Container class="ui-feature-split-container" data-class="feature-split-container">
-    <Box class="ui-feature-split-art" data-class="feature-split-art">
-      <Image class="ui-feature-split-image" data-class="feature-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+<Block class="ui-section ui-feature-split" data-class="ui-feature-split" tag="section" aria-labelledby="feature-split-title">
+  <Container class="ui-feature-split-container" data-class="ui-feature-split-container">
+    <Box class="ui-feature-split-art" data-class="ui-feature-split-art">
+      <Image class="ui-feature-split-image" data-class="ui-feature-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
     </Box>
-    <Stack class="ui-feature-split-copy" data-class="feature-split-copy">
-      <Stack class="ui-feature-split-head" data-class="feature-split-head">
-        <Title class="ui-feature-split-title" data-class="feature-split-title" as={2} id="feature-split-title">
+    <Stack class="ui-feature-split-copy" data-class="ui-feature-split-copy">
+      <Stack class="ui-feature-split-head" data-class="ui-feature-split-head">
+        <Title class="ui-section-title" data-class="ui-section-title" as={2} id="feature-split-title">
           {data.title}
         </Title>
-        <Text class="ui-feature-split-lead" data-class="feature-split-lead">
+        <Text class="ui-section-lead" data-class="ui-section-lead">
           {data.lead}
         </Text>
       </Stack>
-      <List class="ui-feature-split-list" data-class="feature-split-list">
+      <List class="ui-feature-split-list" data-class="ui-feature-split-list">
         {#each data.items as item}
-          <ListItem class="ui-feature-split-item" data-class="feature-split-item">
+          <ListItem class="ui-feature-split-item" data-class="ui-feature-split-item">
             {@html svg("circle-check", `ui-feature-split-check`)}
-            <Stack class="ui-feature-split-item-body" data-class="feature-split-item-body">
-              <Title class="ui-feature-split-item-title" data-class="feature-split-item-title" as={3}>
+            <Stack class="ui-stack-2" data-class="ui-stack-2">
+              <Title class="ui-item-title-sm" data-class="ui-item-title-sm" as={3}>
                 {item.title}
               </Title>
-              <Text class="ui-feature-split-item-text" data-class="feature-split-item-text">
+              <Text class="ui-muted" data-class="ui-muted">
                 {item.text}
               </Text>
             </Stack>

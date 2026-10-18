@@ -12,15 +12,15 @@ import (
 
 // NotFound: 404 page body with a way back.
 templ NotFound(p NotFoundData) {
-	@block.Block(block.BlockProps{Class: "ui-not-found", Tag: "section", Attrs: templ.Attributes{"data-class": "not-found", "aria-labelledby": "not-found-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-not-found-container", Attrs: templ.Attributes{"data-class": "not-found-container"}}) {
-			@text.Text(text.TextProps{Class: "ui-not-found-code", Attrs: templ.Attributes{"data-class": "not-found-code"}}) {
+	@block.Block(block.BlockProps{Class: "ui-not-found", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-not-found", "aria-labelledby": "not-found-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-not-found-container", Attrs: templ.Attributes{"data-class": "ui-not-found-container"}}) {
+			@text.Text(text.TextProps{Class: "ui-not-found-code", Attrs: templ.Attributes{"data-class": "ui-not-found-code"}}) {
 				{ p.Code }
 			}
-			@title.Title(title.TitleProps{Class: "ui-not-found-title", As: 1, Attrs: templ.Attributes{"data-class": "not-found-title", "id": "not-found-title"}}) {
+			@title.Title(title.TitleProps{Class: "ui-not-found-title", As: 1, Attrs: templ.Attributes{"data-class": "ui-not-found-title", "id": "not-found-title"}}) {
 				{ p.Title }
 			}
-			@text.Text(text.TextProps{Class: "ui-not-found-text", Attrs: templ.Attributes{"data-class": "not-found-text"}}) {
+			@text.Text(text.TextProps{Class: "ui-not-found-text", Attrs: templ.Attributes{"data-class": "ui-not-found-text"}}) {
 				{ p.Text }
 			}
 			@button.Button(button.ButtonProps{Variant: "secondary", Size: "lg", Href: p.Cta.Href}) {

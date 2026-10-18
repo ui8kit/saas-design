@@ -8,27 +8,27 @@
   let { data }: { data: HeroSplitData } = $props();
 </script>
 
-<Block class="ui-hero-split" data-class="hero-split" tag="section" aria-labelledby="hero-split-title">
-  <Container class="ui-hero-split-container" data-class="hero-split-container">
-    <Stack class="ui-hero-split-copy" data-class="hero-split-copy">
-      <Title class="ui-hero-split-title" data-class="hero-split-title" as={1} id="hero-split-title">
+<Block class="ui-hero-split" data-class="ui-hero-split" tag="section" aria-labelledby="hero-split-title">
+  <Container class="ui-hero-split-container" data-class="ui-hero-split-container">
+    <Stack class="ui-hero-split-copy" data-class="ui-hero-split-copy">
+      <Title class="ui-hero-split-title" data-class="ui-hero-split-title" as={1} id="hero-split-title">
         {data.title}
       </Title>
-      <Text class="ui-hero-split-lead" data-class="hero-split-lead">
+      <Text class="ui-hero-split-lead" data-class="ui-hero-split-lead">
         {data.lead}
       </Text>
-      <Group class="ui-hero-split-actions" data-class="hero-split-actions">
+      <Group class="ui-hero-split-actions" data-class="ui-hero-split-actions">
         <Button size="lg" href={data.primary.href || undefined}>
           {data.primary.label}
         </Button>
         <Button variant="ghost" size="lg" href={data.secondary.href || undefined}>
-          {@html svg("play", `ui-hero-split-play`)}
+          {@html svg("play", `ui-icon-sm`)}
           {data.secondary.label}
         </Button>
       </Group>
     </Stack>
-    <Box class="ui-hero-split-art" data-class="hero-split-art">
-      <Image class="ui-hero-split-image" data-class="hero-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+    <Box class="ui-hero-split-art" data-class="ui-hero-split-art">
+      <Image class="ui-hero-split-image" data-class="ui-hero-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
     </Box>
   </Container>
 </Block>

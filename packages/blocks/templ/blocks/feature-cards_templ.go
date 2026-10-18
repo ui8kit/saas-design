@@ -103,7 +103,7 @@ func FeatureCards(p FeatureCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-feature-cards-title", As: 2, Attrs: templ.Attributes{"data-class": "feature-cards-title", "id": "feature-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "feature-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -134,13 +134,13 @@ func FeatureCards(p FeatureCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-cards-lead", Attrs: templ.Attributes{"data-class": "feature-cards-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-cards-lead", Attrs: templ.Attributes{"data-class": "ui-feature-cards-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-feature-cards-head", Attrs: templ.Attributes{"data-class": "feature-cards-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-feature-cards-head", Attrs: templ.Attributes{"data-class": "ui-feature-cards-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -216,7 +216,7 @@ func FeatureCards(p FeatureCardsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-feature-cards-card-title", As: 3, Attrs: templ.Attributes{"data-class": "feature-cards-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-feature-cards-card-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-feature-cards-card-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -247,38 +247,38 @@ func FeatureCards(p FeatureCardsData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-cards-card-text", Attrs: templ.Attributes{"data-class": "feature-cards-card-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-feature-cards-card-text", Attrs: templ.Attributes{"data-class": "ui-feature-cards-card-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-feature-cards-body", Attrs: templ.Attributes{"data-class": "feature-cards-body"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-feature-cards-card", Attrs: templ.Attributes{"data-class": "feature-cards-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-feature-cards-card", Attrs: templ.Attributes{"data-class": "ui-feature-cards-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-feature-cards-grid", Attrs: templ.Attributes{"data-class": "feature-cards-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-feature-cards-grid", Attrs: templ.Attributes{"data-class": "ui-feature-cards-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-feature-cards-container", Attrs: templ.Attributes{"data-class": "feature-cards-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-feature-cards-container", Attrs: templ.Attributes{"data-class": "ui-feature-cards-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-feature-cards", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "feature-cards", "aria-labelledby": "feature-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-feature-cards", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-feature-cards", "aria-labelledby": "feature-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

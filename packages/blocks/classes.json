@@ -1,4 +1,97 @@
 {
+  "ui-section-title-display": [
+    "text-6xl",
+    "font-bold"
+  ],
+  "ui-stack-4": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-section-head-center": [
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-4",
+    "text-center"
+  ],
+  "ui-grid-3": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-stack-2": [
+    "flex",
+    "flex-col",
+    "gap-2"
+  ],
+  "ui-stack-6": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-muted": [
+    "text-muted-foreground"
+  ],
+  "ui-stack-8": [
+    "flex",
+    "flex-col",
+    "gap-8"
+  ],
+  "ui-muted-sm": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-icon-sm": [
+    "size-4"
+  ],
+  "ui-section": [
+    "py-24"
+  ],
+  "ui-section-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-section-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-section-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-item-title": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-item-title-sm": [
+    "text-lg",
+    "font-semibold"
+  ],
+  "ui-section-container-narrow": [
+    "mx-auto",
+    "flex",
+    "max-w-3xl",
+    "flex-col",
+    "gap-12",
+    "px-6"
+  ],
+  "ui-section-title-sm": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-cell": [
+    "px-6",
+    "py-4"
+  ],
   "ui-navbar": [
     "flex",
     "items-center",
@@ -169,10 +262,6 @@
     "lg:flex-row",
     "lg:items-center"
   ],
-  "ui-feature-cards-title": [
-    "text-6xl",
-    "font-bold"
-  ],
   "ui-feature-cards-lead": [
     "max-w-md",
     "text-xl",
@@ -189,11 +278,6 @@
   "ui-feature-cards-icon": [
     "size-6",
     "text-foreground"
-  ],
-  "ui-feature-cards-body": [
-    "flex",
-    "flex-col",
-    "gap-4"
   ],
   "ui-feature-cards-card-title": [
     "text-xl",
@@ -218,7 +302,7 @@
   ],
   "ui-social-proof-split-panel": [
     "flex",
-    "h-140",
+    "aspect-square",
     "justify-center",
     "overflow-hidden",
     "rounded-lg",
@@ -268,17 +352,6 @@
     "flex-col",
     "gap-20"
   ],
-  "ui-app-gallery-head": [
-    "flex",
-    "flex-col",
-    "items-center",
-    "gap-4",
-    "text-center"
-  ],
-  "ui-app-gallery-title": [
-    "text-6xl",
-    "font-bold"
-  ],
   "ui-app-gallery-lead": [
     "text-xl",
     "font-light"
@@ -293,7 +366,6 @@
   ],
   "ui-app-gallery-tile": [
     "flex",
-    "min-h-120",
     "justify-center",
     "rounded-lg",
     "px-12",
@@ -341,24 +413,9 @@
     "flex-col",
     "gap-16"
   ],
-  "ui-testimonial-cards-head": [
-    "flex",
-    "flex-col",
-    "gap-4"
-  ],
-  "ui-testimonial-cards-title": [
-    "text-6xl",
-    "font-bold"
-  ],
   "ui-testimonial-cards-lead": [
     "text-xl",
     "font-light"
-  ],
-  "ui-testimonial-cards-grid": [
-    "grid",
-    "grid-cols-1",
-    "gap-10",
-    "md:grid-cols-3"
   ],
   "ui-testimonial-cards-item": [],
   "ui-testimonial-cards-card": [
@@ -369,11 +426,6 @@
     "gap-4"
   ],
   "ui-testimonial-cards-avatar": [],
-  "ui-testimonial-cards-who": [
-    "flex",
-    "flex-col",
-    "gap-1"
-  ],
   "ui-testimonial-cards-name": [
     "leading-5",
     "font-bold"
@@ -441,15 +493,6 @@
     "flex-col",
     "gap-16"
   ],
-  "ui-pricing-two-plans-head": [
-    "flex",
-    "flex-col",
-    "gap-4"
-  ],
-  "ui-pricing-two-plans-title": [
-    "text-6xl",
-    "font-bold"
-  ],
   "ui-pricing-two-plans-lead": [
     "text-xl",
     "font-light"
@@ -475,11 +518,6 @@
   "ui-pricing-two-plans-plan-theme-dark": [
     "bg-background"
   ],
-  "ui-pricing-two-plans-plan-head": [
-    "flex",
-    "flex-col",
-    "gap-4"
-  ],
   "ui-pricing-two-plans-plan-name-row": [
     "justify-between",
     "gap-4"
@@ -493,11 +531,6 @@
     "leading-5",
     "text-muted-foreground"
   ],
-  "ui-pricing-two-plans-plan-body": [
-    "flex",
-    "flex-col",
-    "gap-6"
-  ],
   "ui-pricing-two-plans-price": [
     "flex",
     "items-baseline",
@@ -506,14 +539,6 @@
   "ui-pricing-two-plans-price-value": [
     "text-4xl",
     "font-bold"
-  ],
-  "ui-pricing-two-plans-price-period": [
-    "text-muted-foreground"
-  ],
-  "ui-pricing-two-plans-features": [
-    "flex",
-    "flex-col",
-    "gap-4"
   ],
   "ui-pricing-two-plans-feature": [
     "flex",
@@ -544,13 +569,6 @@
     "flex-col",
     "gap-16"
   ],
-  "ui-faq-tiles-head": [
-    "flex",
-    "flex-col",
-    "items-center",
-    "gap-4",
-    "text-center"
-  ],
   "ui-faq-tiles-title": [
     "max-w-3xl",
     "text-6xl",
@@ -559,11 +577,6 @@
   "ui-faq-tiles-lead": [
     "text-xl",
     "font-light"
-  ],
-  "ui-faq-tiles-body": [
-    "flex",
-    "flex-col",
-    "gap-8"
   ],
   "ui-faq-tiles-grid": [
     "grid-cols-1",
@@ -704,11 +717,6 @@
     "leading-5",
     "font-semibold"
   ],
-  "ui-footer-newsletter-links": [
-    "flex",
-    "flex-col",
-    "gap-4"
-  ],
   "ui-footer-newsletter-link": [
     "leading-5",
     "text-muted-foreground",
@@ -725,10 +733,6 @@
     "text-base",
     "leading-5",
     "font-semibold"
-  ],
-  "ui-footer-newsletter-newsletter-text": [
-    "text-sm",
-    "text-muted-foreground"
   ],
   "ui-footer-newsletter-form": [
     "flex",
@@ -774,9 +778,6 @@
     "font-semibold",
     "text-current",
     "underline"
-  ],
-  "ui-announcement-bar-arrow": [
-    "size-4"
   ],
   "ui-hero-centered": [
     "px-8",
@@ -844,9 +845,6 @@
     "flex-wrap",
     "gap-4"
   ],
-  "ui-hero-split-play": [
-    "size-4"
-  ],
   "ui-hero-split-art": [
     "flex",
     "justify-center",
@@ -887,18 +885,7 @@
     "h-10",
     "w-auto"
   ],
-  "ui-stats-row": [
-    "py-24"
-  ],
-  "ui-stats-row-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-stats-row": [],
   "ui-stats-row-title": [
     "sr-only"
   ],
@@ -916,41 +903,13 @@
     "bg-muted",
     "p-8"
   ],
-  "ui-stats-row-value": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-stats-row-label": [
-    "text-muted-foreground"
-  ],
-  "ui-feature-grid": [
-    "py-24"
-  ],
-  "ui-feature-grid-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-feature-grid": [],
   "ui-feature-grid-head": [
     "flex",
     "flex-col",
     "gap-4",
     "items-center",
     "text-center"
-  ],
-  "ui-feature-grid-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-feature-grid-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-feature-grid-grid": [
     "grid",
@@ -974,16 +933,7 @@
   "ui-feature-grid-icon": [
     "size-6"
   ],
-  "ui-feature-grid-item-title": [
-    "text-xl",
-    "font-semibold"
-  ],
-  "ui-feature-grid-item-text": [
-    "text-muted-foreground"
-  ],
-  "ui-feature-split": [
-    "py-24"
-  ],
+  "ui-feature-split": [],
   "ui-feature-split-container": [
     "mx-auto",
     "grid",
@@ -1017,16 +967,6 @@
     "flex-col",
     "gap-4"
   ],
-  "ui-feature-split-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-feature-split-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
-  ],
   "ui-feature-split-list": [
     "flex",
     "flex-col",
@@ -1041,46 +981,13 @@
     "shrink-0",
     "text-primary"
   ],
-  "ui-feature-split-item-body": [
-    "flex",
-    "flex-col",
-    "gap-1"
-  ],
-  "ui-feature-split-item-title": [
-    "text-lg",
-    "font-semibold"
-  ],
-  "ui-feature-split-item-text": [
-    "text-muted-foreground"
-  ],
-  "ui-steps": [
-    "py-24"
-  ],
-  "ui-steps-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-steps": [],
   "ui-steps-head": [
     "flex",
     "flex-col",
     "gap-4",
     "items-center",
     "text-center"
-  ],
-  "ui-steps-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-steps-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-steps-list": [
     "grid",
@@ -1100,39 +1007,11 @@
     "size-6",
     "text-primary"
   ],
-  "ui-steps-item-title": [
-    "text-xl",
-    "font-semibold"
-  ],
-  "ui-steps-item-text": [
-    "text-muted-foreground"
-  ],
-  "ui-integrations": [
-    "py-24"
-  ],
-  "ui-integrations-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-integrations": [],
   "ui-integrations-head": [
     "flex",
     "flex-col",
     "gap-4"
-  ],
-  "ui-integrations-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-integrations-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-integrations-grid": [
     "grid",
@@ -1161,47 +1040,13 @@
   "ui-integrations-icon": [
     "size-6"
   ],
-  "ui-integrations-body": [
-    "flex",
-    "flex-col",
-    "gap-1"
-  ],
-  "ui-integrations-item-title": [
-    "text-lg",
-    "font-semibold"
-  ],
-  "ui-integrations-item-text": [
-    "text-sm",
-    "text-muted-foreground"
-  ],
-  "ui-pricing-three-tiers": [
-    "py-24"
-  ],
-  "ui-pricing-three-tiers-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-pricing-three-tiers": [],
   "ui-pricing-three-tiers-head": [
     "flex",
     "flex-col",
     "gap-4",
     "items-center",
     "text-center"
-  ],
-  "ui-pricing-three-tiers-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-pricing-three-tiers-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-pricing-three-tiers-plans": [
     "grid",
@@ -1231,9 +1076,6 @@
     "text-2xl",
     "font-semibold"
   ],
-  "ui-pricing-three-tiers-plan-description": [
-    "text-muted-foreground"
-  ],
   "ui-pricing-three-tiers-price": [
     "flex",
     "items-baseline",
@@ -1242,14 +1084,6 @@
   "ui-pricing-three-tiers-price-value": [
     "text-4xl",
     "font-bold"
-  ],
-  "ui-pricing-three-tiers-price-period": [
-    "text-muted-foreground"
-  ],
-  "ui-pricing-three-tiers-features": [
-    "flex",
-    "flex-col",
-    "gap-4"
   ],
   "ui-pricing-three-tiers-feature": [
     "flex",
@@ -1268,26 +1102,11 @@
     "mt-auto",
     "w-full"
   ],
-  "ui-comparison-table": [
-    "py-24"
-  ],
-  "ui-comparison-table-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-comparison-table": [],
   "ui-comparison-table-head": [
     "flex",
     "flex-col",
     "gap-4"
-  ],
-  "ui-comparison-table-title": [
-    "text-5xl",
-    "font-bold"
   ],
   "ui-comparison-table-scroll": [
     "overflow-x-auto",
@@ -1409,43 +1228,13 @@
   "ui-testimonial-quote-name": [
     "font-bold"
   ],
-  "ui-testimonial-quote-role": [
-    "text-muted-foreground"
-  ],
-  "ui-team-grid": [
-    "py-24"
-  ],
-  "ui-team-grid-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-team-grid": [],
   "ui-team-grid-head": [
     "flex",
     "flex-col",
     "gap-4",
     "items-center",
     "text-center"
-  ],
-  "ui-team-grid-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-team-grid-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
-  ],
-  "ui-team-grid-grid": [
-    "grid",
-    "grid-cols-1",
-    "gap-10",
-    "md:grid-cols-3"
   ],
   "ui-team-grid-member": [
     "flex",
@@ -1458,45 +1247,11 @@
     "text-center"
   ],
   "ui-team-grid-avatar": [],
-  "ui-team-grid-name": [
-    "text-xl",
-    "font-semibold"
-  ],
-  "ui-team-grid-role": [
-    "text-muted-foreground"
-  ],
-  "ui-blog-cards": [
-    "py-24"
-  ],
-  "ui-blog-cards-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
+  "ui-blog-cards": [],
   "ui-blog-cards-head": [
     "flex",
     "flex-col",
     "gap-4"
-  ],
-  "ui-blog-cards-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-blog-cards-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
-  ],
-  "ui-blog-cards-grid": [
-    "grid",
-    "grid-cols-1",
-    "gap-10",
-    "md:grid-cols-3"
   ],
   "ui-blog-cards-post": [
     "flex",
@@ -1507,7 +1262,7 @@
   ],
   "ui-blog-cards-media": [
     "flex",
-    "h-48",
+    "aspect-video",
     "justify-center",
     "overflow-hidden",
     "bg-accent",
@@ -1530,42 +1285,15 @@
     "text-muted-foreground"
   ],
   "ui-blog-cards-date": [],
-  "ui-blog-cards-post-title": [
-    "text-xl",
-    "font-semibold"
-  ],
   "ui-blog-cards-post-link": [
     "text-foreground",
     "hover:underline"
   ],
-  "ui-blog-cards-excerpt": [
-    "text-muted-foreground"
-  ],
-  "ui-changelog": [
-    "py-24"
-  ],
-  "ui-changelog-container": [
-    "mx-auto",
-    "flex",
-    "max-w-3xl",
-    "flex-col",
-    "gap-12",
-    "px-6"
-  ],
+  "ui-changelog": [],
   "ui-changelog-head": [
     "flex",
     "flex-col",
     "gap-4"
-  ],
-  "ui-changelog-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-changelog-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-changelog-list": [
     "flex",
@@ -1587,40 +1315,13 @@
     "text-sm",
     "text-muted-foreground"
   ],
-  "ui-changelog-item-title": [
-    "text-xl",
-    "font-semibold"
-  ],
-  "ui-changelog-item-text": [
-    "text-muted-foreground"
-  ],
-  "ui-faq-accordion": [
-    "py-24"
-  ],
-  "ui-faq-accordion-container": [
-    "mx-auto",
-    "flex",
-    "max-w-3xl",
-    "flex-col",
-    "gap-12",
-    "px-6"
-  ],
+  "ui-faq-accordion": [],
   "ui-faq-accordion-head": [
     "flex",
     "flex-col",
     "gap-4",
     "items-center",
     "text-center"
-  ],
-  "ui-faq-accordion-title": [
-    "text-5xl",
-    "font-bold"
-  ],
-  "ui-faq-accordion-lead": [
-    "max-w-2xl",
-    "text-xl",
-    "font-light",
-    "text-muted-foreground"
   ],
   "ui-faq-accordion-list": [
     "flex",
@@ -1651,9 +1352,7 @@
     "pt-4",
     "text-muted-foreground"
   ],
-  "ui-cta-centered": [
-    "py-24"
-  ],
+  "ui-cta-centered": [],
   "ui-cta-centered-container": [
     "mx-auto",
     "flex",
@@ -1682,9 +1381,7 @@
     "justify-center",
     "gap-4"
   ],
-  "ui-app-download": [
-    "py-24"
-  ],
+  "ui-app-download": [],
   "ui-app-download-container": [
     "mx-auto",
     "grid",
@@ -1707,10 +1404,6 @@
     "gap-6",
     "pb-16"
   ],
-  "ui-app-download-title": [
-    "text-5xl",
-    "font-bold"
-  ],
   "ui-app-download-text": [
     "text-xl",
     "text-muted-foreground"
@@ -1731,9 +1424,7 @@
     "self-end",
     "rounded-t-md"
   ],
-  "ui-newsletter-band": [
-    "py-24"
-  ],
+  "ui-newsletter-band": [],
   "ui-newsletter-band-container": [
     "mx-auto",
     "flex",
@@ -1754,13 +1445,6 @@
     "flex-col",
     "gap-2"
   ],
-  "ui-newsletter-band-title": [
-    "text-3xl",
-    "font-bold"
-  ],
-  "ui-newsletter-band-text": [
-    "text-muted-foreground"
-  ],
   "ui-newsletter-band-form": [
     "flex",
     "w-full",
@@ -1771,9 +1455,7 @@
     "sr-only"
   ],
   "ui-newsletter-band-input": [],
-  "ui-contact-form": [
-    "py-24"
-  ],
+  "ui-contact-form": [],
   "ui-contact-form-container": [
     "mx-auto",
     "grid",
@@ -1788,10 +1470,6 @@
     "flex",
     "flex-col",
     "gap-4"
-  ],
-  "ui-contact-form-title": [
-    "text-5xl",
-    "font-bold"
   ],
   "ui-contact-form-text": [
     "text-xl",
@@ -1834,13 +1512,6 @@
     "gap-2",
     "text-center"
   ],
-  "ui-login-card-title": [
-    "text-3xl",
-    "font-bold"
-  ],
-  "ui-login-card-text": [
-    "text-muted-foreground"
-  ],
   "ui-login-card-form": [
     "flex",
     "flex-col",
@@ -1877,13 +1548,6 @@
     "gap-2",
     "text-center"
   ],
-  "ui-signup-card-title": [
-    "text-3xl",
-    "font-bold"
-  ],
-  "ui-signup-card-text": [
-    "text-muted-foreground"
-  ],
   "ui-signup-card-form": [
     "flex",
     "flex-col",
@@ -1900,9 +1564,7 @@
     "text-sm",
     "text-muted-foreground"
   ],
-  "ui-settings-panel": [
-    "py-24"
-  ],
+  "ui-settings-panel": [],
   "ui-settings-panel-container": [
     "mx-auto",
     "flex",
@@ -1918,11 +1580,6 @@
     "bg-card",
     "p-10"
   ],
-  "ui-settings-panel-fieldset": [
-    "flex",
-    "flex-col",
-    "gap-6"
-  ],
   "ui-settings-panel-legend": [
     "mb-2",
     "flex",
@@ -1932,9 +1589,6 @@
   "ui-settings-panel-title": [
     "text-2xl",
     "font-semibold"
-  ],
-  "ui-settings-panel-text": [
-    "text-muted-foreground"
   ],
   "ui-settings-panel-option": [
     "justify-between",
@@ -1952,22 +1606,7 @@
   "ui-settings-panel-button": [
     "self-end"
   ],
-  "ui-dashboard-stats": [
-    "py-24"
-  ],
-  "ui-dashboard-stats-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
-  "ui-dashboard-stats-title": [
-    "text-3xl",
-    "font-bold"
-  ],
+  "ui-dashboard-stats": [],
   "ui-dashboard-stats-grid": [
     "grid",
     "grid-cols-1",
@@ -1983,34 +1622,7 @@
     "bg-card",
     "p-8"
   ],
-  "ui-dashboard-stats-label": [
-    "text-sm",
-    "text-muted-foreground"
-  ],
-  "ui-dashboard-stats-value": [
-    "text-3xl",
-    "font-bold"
-  ],
-  "ui-dashboard-stats-hint": [
-    "text-sm",
-    "text-muted-foreground"
-  ],
-  "ui-habits-table": [
-    "py-24"
-  ],
-  "ui-habits-table-container": [
-    "mx-auto",
-    "flex",
-    "max-w-page",
-    "flex-col",
-    "gap-12",
-    "px-6",
-    "lg:px-0"
-  ],
-  "ui-habits-table-title": [
-    "text-3xl",
-    "font-bold"
-  ],
+  "ui-habits-table": [],
   "ui-habits-table-scroll": [
     "overflow-x-auto",
     "rounded-lg",
@@ -2055,18 +1667,10 @@
     "py-4",
     "font-medium"
   ],
-  "ui-habits-table-cell": [
-    "px-6",
-    "py-4"
-  ],
   "ui-habits-table-cell-2": [
     "px-6",
     "py-4",
     "text-muted-foreground"
-  ],
-  "ui-habits-table-cell-3": [
-    "px-6",
-    "py-4"
   ],
   "ui-habits-table-status": [],
   "ui-habits-table-status-tone-done": [
@@ -2077,9 +1681,7 @@
     "bg-muted",
     "text-foreground"
   ],
-  "ui-empty-state": [
-    "py-24"
-  ],
+  "ui-empty-state": [],
   "ui-empty-state-container": [
     "mx-auto",
     "flex",
@@ -2106,12 +1708,6 @@
   "ui-empty-state-title": [
     "text-2xl",
     "font-semibold"
-  ],
-  "ui-empty-state-text": [
-    "text-muted-foreground"
-  ],
-  "ui-empty-state-plus": [
-    "size-4"
   ],
   "ui-not-found": [
     "py-24"
@@ -2189,18 +1785,11 @@
     "font-bold",
     "text-foreground"
   ],
-  "ui-footer-simple-mark": [
-    "size-4"
-  ],
   "ui-footer-simple-nav": [],
   "ui-footer-simple-links": [
     "flex",
     "flex-wrap",
     "gap-6"
   ],
-  "ui-footer-simple-link": [],
-  "ui-footer-simple-copyright": [
-    "text-sm",
-    "text-muted-foreground"
-  ]
+  "ui-footer-simple-link": []
 }

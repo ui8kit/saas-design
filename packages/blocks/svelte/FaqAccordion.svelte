@@ -8,24 +8,24 @@
   let { data }: { data: FaqAccordionData } = $props();
 </script>
 
-<Block class="ui-faq-accordion" data-class="faq-accordion" tag="section" aria-labelledby="faq-accordion-title">
-  <Container class="ui-faq-accordion-container" data-class="faq-accordion-container">
-    <Stack class="ui-faq-accordion-head" data-class="faq-accordion-head">
-      <Title class="ui-faq-accordion-title" data-class="faq-accordion-title" as={2} id="faq-accordion-title">
+<Block class="ui-section ui-faq-accordion" data-class="ui-faq-accordion" tag="section" aria-labelledby="faq-accordion-title">
+  <Container class="ui-section-container-narrow" data-class="ui-section-container-narrow">
+    <Stack class="ui-faq-accordion-head" data-class="ui-faq-accordion-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="faq-accordion-title">
         {data.title}
       </Title>
-      <Text class="ui-faq-accordion-lead" data-class="faq-accordion-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <Stack class="ui-faq-accordion-list" data-class="faq-accordion-list">
+    <Stack class="ui-faq-accordion-list" data-class="ui-faq-accordion-list">
       {#each data.items as item}
-        <Disclosure class="ui-faq-accordion-item" data-class="faq-accordion-item" open={item.open}>
-          <Summary class="ui-faq-accordion-question" data-class="faq-accordion-question">
+        <Disclosure class="ui-faq-accordion-item" data-class="ui-faq-accordion-item" open={item.open}>
+          <Summary class="ui-faq-accordion-question" data-class="ui-faq-accordion-question">
             {item.question}
             {@html svg("chevron-down", `ui-faq-accordion-chevron`)}
           </Summary>
-          <Text class="ui-faq-accordion-answer" data-class="faq-accordion-answer">
+          <Text class="ui-faq-accordion-answer" data-class="ui-faq-accordion-answer">
             {item.answer}
           </Text>
         </Disclosure>

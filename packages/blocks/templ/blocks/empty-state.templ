@@ -14,19 +14,19 @@ import (
 
 // EmptyState: Icon, message and primary action when a list is empty.
 templ EmptyState(p EmptyStateData) {
-	@block.Block(block.BlockProps{Class: "ui-empty-state", Tag: "section", Attrs: templ.Attributes{"data-class": "empty-state", "aria-labelledby": "empty-state-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-empty-state-container", Attrs: templ.Attributes{"data-class": "empty-state-container"}}) {
-			@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-empty-state-badge", Attrs: templ.Attributes{"data-class": "empty-state-badge"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-empty-state", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-empty-state", "aria-labelledby": "empty-state-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-empty-state-container", Attrs: templ.Attributes{"data-class": "ui-empty-state-container"}}) {
+			@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-empty-state-badge", Attrs: templ.Attributes{"data-class": "ui-empty-state-badge"}}) {
 				@templ.Raw(icons.SVG("inbox", "ui-empty-state-icon"))
 			}
-			@title.Title(title.TitleProps{Class: "ui-empty-state-title", As: 2, Attrs: templ.Attributes{"data-class": "empty-state-title", "id": "empty-state-title"}}) {
+			@title.Title(title.TitleProps{Class: "ui-empty-state-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-empty-state-title", "id": "empty-state-title"}}) {
 				{ p.Title }
 			}
-			@text.Text(text.TextProps{Class: "ui-empty-state-text", Attrs: templ.Attributes{"data-class": "empty-state-text"}}) {
+			@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 				{ p.Text }
 			}
 			@button.Button(button.ButtonProps{Href: p.Cta.Href}) {
-				@templ.Raw(icons.SVG("plus", "ui-empty-state-plus"))
+				@templ.Raw(icons.SVG("plus", "ui-icon-sm"))
 				{ p.Cta.Label }
 			}
 		}

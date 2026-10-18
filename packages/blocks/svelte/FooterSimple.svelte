@@ -8,26 +8,26 @@
   let { data }: { data: FooterSimpleData } = $props();
 </script>
 
-<Block class="ui-footer-simple" data-class="footer-simple" tag="footer">
-  <Container class="ui-footer-simple-container" data-class="footer-simple-container">
-    <Link class="ui-footer-simple-brand" data-class="footer-simple-brand" href={data.href || undefined}>
-      {@html svg("brand-mark", `ui-footer-simple-mark`)}
+<Block class="ui-footer-simple" data-class="ui-footer-simple" tag="footer">
+  <Container class="ui-footer-simple-container" data-class="ui-footer-simple-container">
+    <Link class="ui-footer-simple-brand" data-class="ui-footer-simple-brand" href={data.href || undefined}>
+      {@html svg("brand-mark", `ui-icon-sm`)}
       <Inline>
         {data.brand}
       </Inline>
     </Link>
-    <nav class="ui-footer-simple-nav" data-class="footer-simple-nav" aria-label={data.label}>
-      <List class="ui-footer-simple-links" data-class="footer-simple-links">
+    <nav class="ui-footer-simple-nav" data-class="ui-footer-simple-nav" aria-label={data.label}>
+      <List class="ui-footer-simple-links" data-class="ui-footer-simple-links">
         {#each data.links as l}
           <ListItem>
-            <Link class="ui-footer-simple-link" data-class="footer-simple-link" variant="muted" href={l.href || undefined}>
+            <Link class="ui-footer-simple-link" data-class="ui-footer-simple-link" variant="muted" href={l.href || undefined}>
               {l.label}
             </Link>
           </ListItem>
         {/each}
       </List>
     </nav>
-    <Text class="ui-footer-simple-copyright" data-class="footer-simple-copyright">
+    <Text class="ui-muted-sm" data-class="ui-muted-sm">
       {data.copyright}
     </Text>
   </Container>

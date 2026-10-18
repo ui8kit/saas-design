@@ -7,21 +7,21 @@
   let { data }: { data: NewsletterBandData } = $props();
 </script>
 
-<Block class="ui-newsletter-band" data-class="newsletter-band" tag="section" aria-labelledby="newsletter-band-title">
-  <Container class="ui-newsletter-band-container" data-class="newsletter-band-container">
-    <Stack class="ui-newsletter-band-copy" data-class="newsletter-band-copy">
-      <Title class="ui-newsletter-band-title" data-class="newsletter-band-title" as={2} id="newsletter-band-title">
+<Block class="ui-section ui-newsletter-band" data-class="ui-newsletter-band" tag="section" aria-labelledby="newsletter-band-title">
+  <Container class="ui-newsletter-band-container" data-class="ui-newsletter-band-container">
+    <Stack class="ui-newsletter-band-copy" data-class="ui-newsletter-band-copy">
+      <Title class="ui-section-title-sm" data-class="ui-section-title-sm" as={2} id="newsletter-band-title">
         {data.title}
       </Title>
-      <Text class="ui-newsletter-band-text" data-class="newsletter-band-text">
+      <Text class="ui-muted" data-class="ui-muted">
         {data.text}
       </Text>
     </Stack>
-    <Form class="ui-newsletter-band-form" data-class="newsletter-band-form" action={data.action || undefined} method="post">
-      <Label class="ui-newsletter-band-label" data-class="newsletter-band-label" for="newsletter-band-email">
+    <Form class="ui-newsletter-band-form" data-class="ui-newsletter-band-form" action={data.action || undefined} method="post">
+      <Label class="ui-newsletter-band-label" data-class="ui-newsletter-band-label" for="newsletter-band-email">
         {data.label}
       </Label>
-      <Input class="ui-newsletter-band-input" data-class="newsletter-band-input" id="newsletter-band-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.placeholder || undefined} />
+      <Input class="ui-newsletter-band-input" data-class="ui-newsletter-band-input" id="newsletter-band-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.placeholder || undefined} />
       <Button type="submit">
         {data.button}
       </Button>

@@ -14,24 +14,24 @@ import (
 
 // TeamGrid: People with avatar, name and role.
 templ TeamGrid(p TeamGridData) {
-	@block.Block(block.BlockProps{Class: "ui-team-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "team-grid", "aria-labelledby": "team-grid-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-team-grid-container", Attrs: templ.Attributes{"data-class": "team-grid-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-team-grid-head", Attrs: templ.Attributes{"data-class": "team-grid-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-team-grid-title", As: 2, Attrs: templ.Attributes{"data-class": "team-grid-title", "id": "team-grid-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-team-grid", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-team-grid", "aria-labelledby": "team-grid-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-team-grid-head", Attrs: templ.Attributes{"data-class": "ui-team-grid-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "team-grid-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-team-grid-lead", Attrs: templ.Attributes{"data-class": "team-grid-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-team-grid-grid", Attrs: templ.Attributes{"data-class": "team-grid-grid"}}) {
+			@list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}) {
 				for _, m := range p.Members {
-					@list.ListItem(list.ListItemProps{Class: "ui-team-grid-member", Attrs: templ.Attributes{"data-class": "team-grid-member"}}) {
-						@image.Image(image.ImageProps{Class: "ui-team-grid-avatar", Variant: "avatar", Size: "xl", Src: m.Avatar.Src, Alt: m.Avatar.Alt, Attrs: templ.Attributes{"data-class": "team-grid-avatar"}})
-						@title.Title(title.TitleProps{Class: "ui-team-grid-name", As: 3, Attrs: templ.Attributes{"data-class": "team-grid-name"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-team-grid-member", Attrs: templ.Attributes{"data-class": "ui-team-grid-member"}}) {
+						@image.Image(image.ImageProps{Class: "ui-team-grid-avatar", Variant: "avatar", Size: "xl", Src: m.Avatar.Src, Alt: m.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-team-grid-avatar"}})
+						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ m.Name }
 						}
-						@text.Text(text.TextProps{Class: "ui-team-grid-role", Attrs: templ.Attributes{"data-class": "team-grid-role"}}) {
+						@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ m.Role }
 						}
 					}

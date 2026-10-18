@@ -86,7 +86,7 @@ func CookieBanner(p CookieBannerData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cookie-banner-text", Attrs: templ.Attributes{"data-class": "cookie-banner-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-cookie-banner-text", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -166,19 +166,19 @@ func CookieBanner(p CookieBannerData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cookie-banner-actions", Attrs: templ.Attributes{"data-class": "cookie-banner-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cookie-banner-actions", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-actions"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cookie-banner-card", Attrs: templ.Attributes{"data-class": "cookie-banner-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-cookie-banner-card", Attrs: templ.Attributes{"data-class": "ui-cookie-banner-card"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-cookie-banner", Tag: "aside", Attrs: templ.Attributes{"data-class": "cookie-banner", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-cookie-banner", Tag: "aside", Attrs: templ.Attributes{"data-class": "ui-cookie-banner", "aria-label": p.Label}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

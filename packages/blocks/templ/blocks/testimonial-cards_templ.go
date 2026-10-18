@@ -104,7 +104,7 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-testimonial-cards-title", As: 2, Attrs: templ.Attributes{"data-class": "testimonial-cards-title", "id": "testimonial-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-display", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-display", "id": "testimonial-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -135,13 +135,13 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-testimonial-cards-lead", Attrs: templ.Attributes{"data-class": "testimonial-cards-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-testimonial-cards-lead", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-lead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-testimonial-cards-head", Attrs: templ.Attributes{"data-class": "testimonial-cards-head"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -198,7 +198,7 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 										}()
 									}
 									ctx = templ.InitializeContext(ctx)
-									templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-testimonial-cards-avatar", Variant: "avatar", Src: item.Avatar.Src, Alt: item.Avatar.Alt, Attrs: templ.Attributes{"data-class": "testimonial-cards-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-testimonial-cards-avatar", Variant: "avatar", Src: item.Avatar.Src, Alt: item.Avatar.Alt, Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-avatar"}}).Render(ctx, templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -241,7 +241,7 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-cards-name", Attrs: templ.Attributes{"data-class": "testimonial-cards-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-cards-name", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-name"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
@@ -272,23 +272,23 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-cards-role", Attrs: templ.Attributes{"data-class": "testimonial-cards-role"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = inline.Inline(inline.InlineProps{Class: "ui-testimonial-cards-role", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-role"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-testimonial-cards-who", Attrs: templ.Attributes{"data-class": "testimonial-cards-who"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-testimonial-cards-author", Attrs: templ.Attributes{"data-class": "testimonial-cards-author"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = group.Group(group.GroupProps{Class: "ui-testimonial-cards-author", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-author"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
-								templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, " <blockquote class=\"ui-testimonial-cards-quote\" data-class=\"testimonial-cards-quote\">")
+								templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, " <blockquote class=\"ui-testimonial-cards-quote\" data-class=\"ui-testimonial-cards-quote\">")
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -325,32 +325,32 @@ func TestimonialCards(p TestimonialCardsData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "testimonial-cards-card", "tag": "figure"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = card.Card(card.CardProps{Class: "ui-testimonial-cards-card", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-card", "tag": "figure"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-testimonial-cards-item", Attrs: templ.Attributes{"data-class": "testimonial-cards-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-testimonial-cards-item", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-item"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-testimonial-cards-grid", Attrs: templ.Attributes{"data-class": "testimonial-cards-grid"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-testimonial-cards-container", Attrs: templ.Attributes{"data-class": "testimonial-cards-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-testimonial-cards-container", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-testimonial-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "testimonial-cards", "aria-labelledby": "testimonial-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-testimonial-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-testimonial-cards", "aria-labelledby": "testimonial-cards-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

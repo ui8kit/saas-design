@@ -8,26 +8,26 @@
   let { data }: { data: FeatureGridData } = $props();
 </script>
 
-<Block class="ui-feature-grid" data-class="feature-grid" tag="section" aria-labelledby="feature-grid-title">
-  <Container class="ui-feature-grid-container" data-class="feature-grid-container">
-    <Stack class="ui-feature-grid-head" data-class="feature-grid-head">
-      <Title class="ui-feature-grid-title" data-class="feature-grid-title" as={2} id="feature-grid-title">
+<Block class="ui-section ui-feature-grid" data-class="ui-feature-grid" tag="section" aria-labelledby="feature-grid-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Stack class="ui-feature-grid-head" data-class="ui-feature-grid-head">
+      <Title class="ui-section-title" data-class="ui-section-title" as={2} id="feature-grid-title">
         {data.title}
       </Title>
-      <Text class="ui-feature-grid-lead" data-class="feature-grid-lead">
+      <Text class="ui-section-lead" data-class="ui-section-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-feature-grid-grid" data-class="feature-grid-grid">
+    <List class="ui-feature-grid-grid" data-class="ui-feature-grid-grid">
       {#each data.items as item}
-        <ListItem class="ui-feature-grid-item" data-class="feature-grid-item">
-          <IconBadge class="ui-feature-grid-badge" data-class="feature-grid-badge">
+        <ListItem class="ui-feature-grid-item" data-class="ui-feature-grid-item">
+          <IconBadge class="ui-feature-grid-badge" data-class="ui-feature-grid-badge">
             {@html svg(item.icon, `ui-feature-grid-icon`)}
           </IconBadge>
-          <Title class="ui-feature-grid-item-title" data-class="feature-grid-item-title" as={3}>
+          <Title class="ui-item-title" data-class="ui-item-title" as={3}>
             {item.title}
           </Title>
-          <Text class="ui-feature-grid-item-text" data-class="feature-grid-item-text">
+          <Text class="ui-muted" data-class="ui-muted">
             {item.text}
           </Text>
         </ListItem>

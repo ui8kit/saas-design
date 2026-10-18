@@ -1,3 +1,2875 @@
 {
-  "patterns": {}
+  "patterns": {
+    "ui-alert": [
+      "flex",
+      "flex-col",
+      "gap-2",
+      "rounded-md",
+      "px-6",
+      "py-4",
+      "inset-ring"
+    ],
+    "ui-alert-default": [
+      "bg-card",
+      "text-card-foreground",
+      "inset-ring-border"
+    ],
+    "ui-alert-destructive": [
+      "bg-destructive/10",
+      "text-destructive",
+      "inset-ring-destructive"
+    ],
+    "ui-alert-success": [
+      "bg-primary/10",
+      "text-foreground",
+      "inset-ring-primary"
+    ],
+    "ui-alert-warning": [
+      "bg-accent",
+      "text-accent-foreground",
+      "inset-ring-border"
+    ],
+    "ui-announcement-bar": [
+      "bg-secondary",
+      "text-secondary-foreground"
+    ],
+    "ui-announcement-bar-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-wrap",
+      "items-center",
+      "justify-center",
+      "gap-4",
+      "px-6",
+      "py-2",
+      "text-sm"
+    ],
+    "ui-announcement-bar-link": [
+      "font-semibold",
+      "text-current",
+      "underline"
+    ],
+    "ui-announcement-bar-text": [],
+    "ui-app-download": [],
+    "ui-app-download-apple": [
+      "size-6"
+    ],
+    "ui-app-download-container": [
+      "mx-auto",
+      "grid",
+      "max-w-page",
+      "grid-cols-1",
+      "items-center",
+      "gap-12",
+      "overflow-hidden",
+      "rounded-lg",
+      "bg-background",
+      "px-12",
+      "pt-16",
+      "text-foreground",
+      "lg:grid-cols-2"
+    ],
+    "ui-app-download-copy": [
+      "flex",
+      "flex-col",
+      "items-start",
+      "gap-6",
+      "pb-16"
+    ],
+    "ui-app-download-image": [
+      "mx-auto",
+      "w-1/2",
+      "self-end",
+      "rounded-t-md"
+    ],
+    "ui-app-download-phone": [
+      "size-6"
+    ],
+    "ui-app-download-stores": [
+      "flex-wrap",
+      "gap-4"
+    ],
+    "ui-app-download-text": [
+      "text-xl",
+      "text-muted-foreground"
+    ],
+    "ui-app-gallery": [
+      "overflow-x-clip",
+      "pt-24"
+    ],
+    "ui-app-gallery-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-20"
+    ],
+    "ui-app-gallery-lead": [
+      "text-xl",
+      "font-light"
+    ],
+    "ui-app-gallery-screen": [
+      "w-full",
+      "self-start",
+      "rounded-md",
+      "ring-2",
+      "ring-secondary"
+    ],
+    "ui-app-gallery-tile": [
+      "flex",
+      "justify-center",
+      "rounded-lg",
+      "px-12",
+      "pt-24",
+      "pb-12"
+    ],
+    "ui-app-gallery-tile-tone-lilac": [
+      "bg-chart-3",
+      "text-foreground"
+    ],
+    "ui-app-gallery-tile-tone-muted": [
+      "bg-muted",
+      "text-foreground"
+    ],
+    "ui-app-gallery-tile-tone-pink": [
+      "bg-chart-5",
+      "text-foreground"
+    ],
+    "ui-app-gallery-tile-tone-primary": [
+      "bg-primary",
+      "text-primary-foreground"
+    ],
+    "ui-app-gallery-tile-tone-secondary": [
+      "bg-secondary",
+      "text-secondary-foreground"
+    ],
+    "ui-app-gallery-tile-tone-sky": [
+      "bg-chart-4",
+      "text-foreground"
+    ],
+    "ui-app-gallery-tiles": [
+      "grid",
+      "grid-cols-2",
+      "gap-10",
+      "md:grid-cols-4",
+      "lg:w-5/4",
+      "lg:grid-cols-5"
+    ],
+    "ui-badge": [
+      "inline-flex",
+      "shrink-0",
+      "items-center",
+      "gap-2",
+      "whitespace-nowrap",
+      "rounded-full",
+      "font-normal"
+    ],
+    "ui-badge-default": [
+      "bg-primary",
+      "text-primary-foreground"
+    ],
+    "ui-badge-destructive": [
+      "bg-destructive",
+      "text-destructive-foreground"
+    ],
+    "ui-badge-outline": [
+      "bg-transparent",
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-badge-secondary": [
+      "bg-secondary",
+      "text-secondary-foreground"
+    ],
+    "ui-badge-size-default": [
+      "h-7",
+      "px-3",
+      "text-sm"
+    ],
+    "ui-badge-size-lg": [
+      "h-8",
+      "px-4",
+      "text-sm"
+    ],
+    "ui-badge-size-sm": [
+      "h-6",
+      "px-2",
+      "text-xs"
+    ],
+    "ui-blog-cards": [],
+    "ui-blog-cards-body": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "p-8"
+    ],
+    "ui-blog-cards-date": [],
+    "ui-blog-cards-head": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-blog-cards-image": [
+      "w-1/3",
+      "self-start",
+      "rounded-t-md"
+    ],
+    "ui-blog-cards-media": [
+      "flex",
+      "aspect-video",
+      "justify-center",
+      "overflow-hidden",
+      "bg-accent",
+      "pt-8"
+    ],
+    "ui-blog-cards-meta": [
+      "gap-4",
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-blog-cards-post": [
+      "flex",
+      "flex-col",
+      "overflow-hidden",
+      "rounded-lg",
+      "bg-card"
+    ],
+    "ui-blog-cards-post-link": [
+      "text-foreground",
+      "hover:underline"
+    ],
+    "ui-breadcrumb": [
+      "text-sm"
+    ],
+    "ui-breadcrumb-part-1": [
+      "flex",
+      "flex-wrap",
+      "items-center",
+      "gap-2"
+    ],
+    "ui-breadcrumb-part-2": [
+      "inline-flex",
+      "items-center"
+    ],
+    "ui-breadcrumb-part-3": [
+      "text-sm"
+    ],
+    "ui-breadcrumb-part-3-2": [
+      "font-medium"
+    ],
+    "ui-breadcrumb-part-3-3": [
+      "text-muted-foreground"
+    ],
+    "ui-breadcrumb-part-3-4": [
+      "text-primary",
+      "underline-offset-4",
+      "hover:underline"
+    ],
+    "ui-breadcrumb-part-4": [
+      "text-sm"
+    ],
+    "ui-breadcrumb-part-4-2": [
+      "font-medium"
+    ],
+    "ui-breadcrumb-part-4-3": [
+      "text-muted-foreground"
+    ],
+    "ui-breadcrumb-part-4-4": [
+      "text-primary",
+      "underline-offset-4",
+      "hover:underline"
+    ],
+    "ui-button": [
+      "inline-flex",
+      "shrink-0",
+      "items-center",
+      "justify-center",
+      "gap-2",
+      "whitespace-nowrap",
+      "rounded-full",
+      "font-semibold",
+      "transition-colors",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring",
+      "disabled:pointer-events-none",
+      "disabled:opacity-50"
+    ],
+    "ui-button-contrast": [
+      "bg-background",
+      "text-foreground",
+      "hover:bg-background/90"
+    ],
+    "ui-button-default": [
+      "bg-primary",
+      "text-primary-foreground",
+      "hover:bg-primary/90"
+    ],
+    "ui-button-destructive": [
+      "bg-destructive",
+      "text-destructive-foreground",
+      "hover:bg-destructive/90"
+    ],
+    "ui-button-ghost": [
+      "bg-transparent",
+      "text-current",
+      "hover:bg-accent",
+      "hover:text-accent-foreground"
+    ],
+    "ui-button-link": [
+      "bg-transparent",
+      "text-primary",
+      "underline-offset-4",
+      "hover:underline"
+    ],
+    "ui-button-muted": [
+      "bg-muted",
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-border",
+      "hover:bg-accent"
+    ],
+    "ui-button-outline": [
+      "bg-transparent",
+      "text-current",
+      "inset-ring",
+      "inset-ring-border",
+      "hover:bg-accent",
+      "hover:text-accent-foreground"
+    ],
+    "ui-button-secondary": [
+      "bg-secondary",
+      "text-secondary-foreground",
+      "hover:bg-secondary/90"
+    ],
+    "ui-button-size-default": [
+      "h-10",
+      "px-6",
+      "text-base"
+    ],
+    "ui-button-size-icon": [
+      "size-10"
+    ],
+    "ui-button-size-lg": [
+      "h-12",
+      "px-10",
+      "text-base"
+    ],
+    "ui-button-size-sm": [
+      "h-8",
+      "px-4",
+      "text-sm"
+    ],
+    "ui-card": [
+      "flex",
+      "flex-col",
+      "gap-6",
+      "rounded-lg",
+      "bg-card",
+      "p-12",
+      "text-card-foreground"
+    ],
+    "ui-card-accent": [
+      "bg-accent",
+      "text-accent-foreground"
+    ],
+    "ui-card-compact": [
+      "gap-4",
+      "p-6"
+    ],
+    "ui-card-content": [
+      "px-6"
+    ],
+    "ui-card-description": [
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-card-flat": [
+      "bg-transparent",
+      "p-0"
+    ],
+    "ui-card-footer": [
+      "flex",
+      "items-center",
+      "px-6"
+    ],
+    "ui-card-ghost": [
+      "bg-transparent",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-card-header": [
+      "grid",
+      "auto-rows-min",
+      "items-start",
+      "gap-2",
+      "px-6"
+    ],
+    "ui-card-kpi": [
+      "gap-2",
+      "p-6"
+    ],
+    "ui-card-muted": [
+      "bg-muted"
+    ],
+    "ui-card-raised": [
+      "bg-background",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-card-title": [
+      "font-semibold",
+      "leading-none"
+    ],
+    "ui-cell": [
+      "px-6",
+      "py-4"
+    ],
+    "ui-changelog": [],
+    "ui-changelog-date": [
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-changelog-head": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-changelog-item": [
+      "flex",
+      "flex-col",
+      "gap-2"
+    ],
+    "ui-changelog-list": [
+      "flex",
+      "flex-col",
+      "gap-10",
+      "border-l",
+      "border-border",
+      "pl-8"
+    ],
+    "ui-changelog-meta": [
+      "gap-4"
+    ],
+    "ui-checkbox": [
+      "shrink-0",
+      "rounded-sm",
+      "accent-primary",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring",
+      "disabled:opacity-50"
+    ],
+    "ui-checkbox-size-default": [
+      "size-4"
+    ],
+    "ui-checkbox-size-lg": [
+      "size-5"
+    ],
+    "ui-checkbox-size-sm": [
+      "size-4"
+    ],
+    "ui-checkbox-size-xs": [
+      "size-3"
+    ],
+    "ui-cols-1": [
+      "grid-cols-1"
+    ],
+    "ui-cols-1-2": [
+      "grid-cols-1",
+      "md:grid-cols-2"
+    ],
+    "ui-cols-1-3": [
+      "grid-cols-1",
+      "md:grid-cols-2",
+      "xl:grid-cols-3"
+    ],
+    "ui-cols-1-4": [
+      "grid-cols-1",
+      "md:grid-cols-2",
+      "xl:grid-cols-4"
+    ],
+    "ui-cols-10": [
+      "grid-cols-10"
+    ],
+    "ui-cols-11": [
+      "grid-cols-11"
+    ],
+    "ui-cols-12": [
+      "grid-cols-12"
+    ],
+    "ui-cols-2": [
+      "grid-cols-2"
+    ],
+    "ui-cols-3": [
+      "grid-cols-3"
+    ],
+    "ui-cols-4": [
+      "grid-cols-4"
+    ],
+    "ui-cols-5": [
+      "grid-cols-5"
+    ],
+    "ui-cols-6": [
+      "grid-cols-6"
+    ],
+    "ui-cols-7": [
+      "grid-cols-7"
+    ],
+    "ui-cols-8": [
+      "grid-cols-8"
+    ],
+    "ui-cols-9": [
+      "grid-cols-9"
+    ],
+    "ui-comparison-table": [],
+    "ui-comparison-table-cell": [
+      "px-6",
+      "py-4",
+      "text-center"
+    ],
+    "ui-comparison-table-cell-2": [
+      "px-6",
+      "py-4",
+      "text-center"
+    ],
+    "ui-comparison-table-feature": [
+      "px-6",
+      "py-4",
+      "font-normal"
+    ],
+    "ui-comparison-table-head": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-comparison-table-no": [
+      "mx-auto",
+      "size-4",
+      "text-muted-foreground"
+    ],
+    "ui-comparison-table-no-2": [
+      "mx-auto",
+      "size-4",
+      "text-muted-foreground"
+    ],
+    "ui-comparison-table-row": [
+      "border-t",
+      "border-border"
+    ],
+    "ui-comparison-table-scroll": [
+      "overflow-x-auto",
+      "rounded-lg",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-comparison-table-sr": [
+      "sr-only"
+    ],
+    "ui-comparison-table-sr-2": [
+      "sr-only"
+    ],
+    "ui-comparison-table-sr-3": [
+      "sr-only"
+    ],
+    "ui-comparison-table-sr-4": [
+      "sr-only"
+    ],
+    "ui-comparison-table-table": [
+      "w-full",
+      "text-left"
+    ],
+    "ui-comparison-table-th": [
+      "px-6",
+      "py-4",
+      "font-semibold"
+    ],
+    "ui-comparison-table-th-plan": [
+      "px-6",
+      "py-4",
+      "text-center",
+      "font-semibold"
+    ],
+    "ui-comparison-table-th-plan-2": [
+      "px-6",
+      "py-4",
+      "text-center",
+      "font-semibold"
+    ],
+    "ui-comparison-table-thead": [
+      "bg-muted"
+    ],
+    "ui-comparison-table-yes": [
+      "mx-auto",
+      "size-4",
+      "text-primary"
+    ],
+    "ui-comparison-table-yes-2": [
+      "mx-auto",
+      "size-4",
+      "text-primary"
+    ],
+    "ui-contact-form": [],
+    "ui-contact-form-button": [
+      "self-start"
+    ],
+    "ui-contact-form-container": [
+      "mx-auto",
+      "grid",
+      "max-w-page",
+      "grid-cols-1",
+      "gap-12",
+      "px-6",
+      "lg:grid-cols-2",
+      "lg:px-0"
+    ],
+    "ui-contact-form-copy": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-contact-form-field": [],
+    "ui-contact-form-field-message": [],
+    "ui-contact-form-form": [
+      "flex",
+      "flex-col",
+      "gap-6",
+      "rounded-lg",
+      "bg-muted",
+      "p-10"
+    ],
+    "ui-contact-form-input": [],
+    "ui-contact-form-label": [],
+    "ui-contact-form-label-message": [],
+    "ui-contact-form-text": [
+      "text-xl",
+      "text-muted-foreground"
+    ],
+    "ui-contact-form-textarea": [],
+    "ui-cookie-banner": [
+      "px-6",
+      "py-8"
+    ],
+    "ui-cookie-banner-actions": [
+      "shrink-0",
+      "gap-2"
+    ],
+    "ui-cookie-banner-card": [
+      "mx-auto",
+      "max-w-2xl",
+      "flex-col",
+      "justify-between",
+      "gap-4",
+      "rounded-lg",
+      "bg-popover",
+      "p-6",
+      "text-popover-foreground",
+      "shadow-lg",
+      "inset-ring",
+      "inset-ring-border",
+      "md:flex-row"
+    ],
+    "ui-cookie-banner-text": [
+      "text-sm"
+    ],
+    "ui-cta-centered": [],
+    "ui-cta-centered-actions": [
+      "flex-wrap",
+      "justify-center",
+      "gap-4"
+    ],
+    "ui-cta-centered-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "items-center",
+      "gap-8",
+      "rounded-lg",
+      "bg-primary",
+      "px-6",
+      "py-20",
+      "text-center",
+      "text-primary-foreground"
+    ],
+    "ui-cta-centered-text": [
+      "max-w-xl",
+      "text-xl"
+    ],
+    "ui-cta-centered-title": [
+      "max-w-2xl",
+      "text-5xl",
+      "font-bold"
+    ],
+    "ui-cta-split": [
+      "pt-24"
+    ],
+    "ui-cta-split-aside": [
+      "flex",
+      "flex-col",
+      "items-start",
+      "gap-16",
+      "lg:items-end"
+    ],
+    "ui-cta-split-container": [
+      "mx-auto",
+      "max-w-page"
+    ],
+    "ui-cta-split-mark": [
+      "size-20",
+      "text-foreground"
+    ],
+    "ui-cta-split-panel": [
+      "flex",
+      "flex-col",
+      "gap-24",
+      "rounded-lg",
+      "bg-accent",
+      "p-20",
+      "text-accent-foreground"
+    ],
+    "ui-cta-split-row": [
+      "grid-cols-1",
+      "items-end",
+      "gap-12",
+      "lg:grid-cols-2"
+    ],
+    "ui-cta-split-text": [
+      "max-w-lg",
+      "text-xl",
+      "leading-8",
+      "font-light",
+      "lg:text-right"
+    ],
+    "ui-cta-split-title": [
+      "max-w-xl",
+      "text-display",
+      "font-normal"
+    ],
+    "ui-dashboard-stats": [],
+    "ui-dashboard-stats-card": [
+      "flex",
+      "flex-col",
+      "gap-2",
+      "rounded-lg",
+      "bg-card",
+      "p-8"
+    ],
+    "ui-dashboard-stats-grid": [
+      "grid",
+      "grid-cols-1",
+      "gap-6",
+      "md:grid-cols-2",
+      "lg:grid-cols-4"
+    ],
+    "ui-dialog": [
+      "m-auto",
+      "rounded-lg",
+      "bg-popover",
+      "p-8",
+      "text-popover-foreground",
+      "shadow-lg",
+      "backdrop:bg-foreground/40"
+    ],
+    "ui-dialog-card": [
+      "bg-card",
+      "text-card-foreground"
+    ],
+    "ui-dialog-sheet": [
+      "min-h-screen",
+      "rounded-none"
+    ],
+    "ui-dialog-size-default": [
+      "w-full",
+      "max-w-lg"
+    ],
+    "ui-dialog-size-full": [
+      "h-full",
+      "w-full",
+      "max-w-none"
+    ],
+    "ui-dialog-size-lg": [
+      "w-full",
+      "max-w-2xl"
+    ],
+    "ui-dialog-size-sm": [
+      "w-full",
+      "max-w-sm"
+    ],
+    "ui-dialog-size-xl": [
+      "w-full",
+      "max-w-4xl"
+    ],
+    "ui-disabled": [
+      "pointer-events-none",
+      "opacity-50"
+    ],
+    "ui-disclosure-card": [
+      "rounded-lg",
+      "bg-card",
+      "text-card-foreground"
+    ],
+    "ui-disclosure-default": [
+      "rounded-md",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-disclosure-size-default": [
+      "text-base"
+    ],
+    "ui-disclosure-size-lg": [
+      "text-lg"
+    ],
+    "ui-disclosure-size-sm": [
+      "text-sm"
+    ],
+    "ui-empty-state": [],
+    "ui-empty-state-badge": [
+      "size-16",
+      "rounded-full",
+      "bg-muted",
+      "text-muted-foreground"
+    ],
+    "ui-empty-state-container": [
+      "mx-auto",
+      "flex",
+      "max-w-xl",
+      "flex-col",
+      "items-center",
+      "gap-6",
+      "rounded-lg",
+      "px-6",
+      "py-20",
+      "text-center",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-empty-state-icon": [
+      "size-6"
+    ],
+    "ui-empty-state-title": [
+      "text-2xl",
+      "font-semibold"
+    ],
+    "ui-end-1": [
+      "col-end-1"
+    ],
+    "ui-end-10": [
+      "col-end-10"
+    ],
+    "ui-end-11": [
+      "col-end-11"
+    ],
+    "ui-end-12": [
+      "col-end-12"
+    ],
+    "ui-end-2": [
+      "col-end-2"
+    ],
+    "ui-end-3": [
+      "col-end-3"
+    ],
+    "ui-end-4": [
+      "col-end-4"
+    ],
+    "ui-end-5": [
+      "col-end-5"
+    ],
+    "ui-end-6": [
+      "col-end-6"
+    ],
+    "ui-end-7": [
+      "col-end-7"
+    ],
+    "ui-end-8": [
+      "col-end-8"
+    ],
+    "ui-end-9": [
+      "col-end-9"
+    ],
+    "ui-faq-accordion": [],
+    "ui-faq-accordion-answer": [
+      "pt-4",
+      "text-muted-foreground"
+    ],
+    "ui-faq-accordion-chevron": [
+      "size-4",
+      "shrink-0"
+    ],
+    "ui-faq-accordion-head": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "items-center",
+      "text-center"
+    ],
+    "ui-faq-accordion-item": [
+      "rounded-lg",
+      "bg-muted",
+      "px-8",
+      "py-6"
+    ],
+    "ui-faq-accordion-list": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-faq-accordion-question": [
+      "flex",
+      "cursor-pointer",
+      "list-none",
+      "items-center",
+      "justify-between",
+      "gap-4",
+      "text-lg",
+      "font-medium"
+    ],
+    "ui-faq-tiles": [
+      "pt-24"
+    ],
+    "ui-faq-tiles-answer": [
+      "pt-4",
+      "pl-16",
+      "text-base",
+      "leading-6"
+    ],
+    "ui-faq-tiles-arrow": [
+      "flex",
+      "size-10",
+      "shrink-0",
+      "items-center",
+      "justify-center",
+      "rounded-full",
+      "bg-background",
+      "text-foreground"
+    ],
+    "ui-faq-tiles-arrow-icon": [
+      "size-4"
+    ],
+    "ui-faq-tiles-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-16"
+    ],
+    "ui-faq-tiles-grid": [
+      "grid-cols-1",
+      "gap-x-10",
+      "gap-y-8",
+      "md:grid-cols-2"
+    ],
+    "ui-faq-tiles-lead": [
+      "text-xl",
+      "font-light"
+    ],
+    "ui-faq-tiles-more": [
+      "self-end",
+      "text-lg",
+      "text-foreground",
+      "hover:underline"
+    ],
+    "ui-faq-tiles-question": [
+      "flex",
+      "cursor-pointer",
+      "list-none",
+      "items-center",
+      "gap-6",
+      "text-xl",
+      "font-medium"
+    ],
+    "ui-faq-tiles-tile": [
+      "rounded-lg",
+      "px-10",
+      "py-8"
+    ],
+    "ui-faq-tiles-tile-tone-lilac": [
+      "bg-chart-3",
+      "text-foreground"
+    ],
+    "ui-faq-tiles-tile-tone-muted": [
+      "bg-muted",
+      "text-foreground"
+    ],
+    "ui-faq-tiles-tile-tone-pink": [
+      "bg-chart-5",
+      "text-foreground"
+    ],
+    "ui-faq-tiles-tile-tone-primary": [
+      "bg-primary",
+      "text-primary-foreground"
+    ],
+    "ui-faq-tiles-tile-tone-secondary": [
+      "bg-secondary",
+      "text-secondary-foreground"
+    ],
+    "ui-faq-tiles-tile-tone-sky": [
+      "bg-chart-4",
+      "text-foreground"
+    ],
+    "ui-faq-tiles-title": [
+      "max-w-3xl",
+      "text-6xl",
+      "font-bold"
+    ],
+    "ui-feature-cards": [
+      "pt-24"
+    ],
+    "ui-feature-cards-card": [
+      "gap-6"
+    ],
+    "ui-feature-cards-card-text": [
+      "text-base",
+      "leading-6",
+      "text-muted-foreground"
+    ],
+    "ui-feature-cards-card-title": [
+      "text-xl",
+      "leading-none",
+      "font-semibold"
+    ],
+    "ui-feature-cards-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-12"
+    ],
+    "ui-feature-cards-grid": [
+      "grid-cols-1",
+      "gap-10",
+      "md:grid-cols-3"
+    ],
+    "ui-feature-cards-head": [
+      "flex-col",
+      "items-start",
+      "justify-between",
+      "gap-6",
+      "lg:flex-row",
+      "lg:items-center"
+    ],
+    "ui-feature-cards-icon": [
+      "size-6",
+      "text-foreground"
+    ],
+    "ui-feature-cards-lead": [
+      "max-w-md",
+      "text-xl",
+      "font-light"
+    ],
+    "ui-feature-grid": [],
+    "ui-feature-grid-badge": [
+      "size-12",
+      "rounded-full",
+      "bg-primary",
+      "text-primary-foreground"
+    ],
+    "ui-feature-grid-grid": [
+      "grid",
+      "grid-cols-1",
+      "gap-x-10",
+      "gap-y-12",
+      "md:grid-cols-2",
+      "lg:grid-cols-3"
+    ],
+    "ui-feature-grid-head": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "items-center",
+      "text-center"
+    ],
+    "ui-feature-grid-icon": [
+      "size-6"
+    ],
+    "ui-feature-grid-item": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-feature-split": [],
+    "ui-feature-split-art": [
+      "flex",
+      "justify-center",
+      "rounded-lg",
+      "bg-chart-3",
+      "px-12",
+      "pt-16"
+    ],
+    "ui-feature-split-check": [
+      "size-6",
+      "shrink-0",
+      "text-primary"
+    ],
+    "ui-feature-split-container": [
+      "mx-auto",
+      "grid",
+      "max-w-page",
+      "grid-cols-1",
+      "items-center",
+      "gap-16",
+      "px-6",
+      "lg:grid-cols-2",
+      "lg:px-0"
+    ],
+    "ui-feature-split-copy": [
+      "flex",
+      "flex-col",
+      "gap-8"
+    ],
+    "ui-feature-split-head": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-feature-split-image": [
+      "w-1/2",
+      "rounded-t-md"
+    ],
+    "ui-feature-split-item": [
+      "flex",
+      "gap-4"
+    ],
+    "ui-feature-split-list": [
+      "flex",
+      "flex-col",
+      "gap-6"
+    ],
+    "ui-fieldset": [
+      "grid",
+      "gap-4"
+    ],
+    "ui-fieldset-card": [
+      "rounded-md",
+      "border",
+      "border-border",
+      "p-4"
+    ],
+    "ui-fieldset-inline": [
+      "flex",
+      "flex-wrap",
+      "items-start",
+      "gap-4"
+    ],
+    "ui-fieldset-size-default": [
+      "gap-4"
+    ],
+    "ui-fieldset-size-lg": [
+      "gap-6"
+    ],
+    "ui-fieldset-size-sm": [
+      "gap-2"
+    ],
+    "ui-footer-newsletter": [
+      "px-0",
+      "pt-20",
+      "pb-24"
+    ],
+    "ui-footer-newsletter-brand": [
+      "flex",
+      "flex-col",
+      "gap-8",
+      "lg:col-span-4"
+    ],
+    "ui-footer-newsletter-brand-link": [
+      "gap-2",
+      "text-3xl",
+      "leading-none",
+      "font-bold",
+      "text-foreground"
+    ],
+    "ui-footer-newsletter-column": [
+      "flex",
+      "flex-col",
+      "gap-6",
+      "lg:col-span-2"
+    ],
+    "ui-footer-newsletter-column-title": [
+      "text-base",
+      "leading-5",
+      "font-semibold"
+    ],
+    "ui-footer-newsletter-container": [
+      "mx-auto",
+      "max-w-page"
+    ],
+    "ui-footer-newsletter-copyright": [
+      "border-t",
+      "border-border",
+      "pt-8",
+      "text-center",
+      "leading-5",
+      "text-muted-foreground"
+    ],
+    "ui-footer-newsletter-form": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-footer-newsletter-input": [
+      "bg-card"
+    ],
+    "ui-footer-newsletter-label": [
+      "sr-only"
+    ],
+    "ui-footer-newsletter-link": [
+      "leading-5",
+      "text-muted-foreground",
+      "hover:text-foreground"
+    ],
+    "ui-footer-newsletter-mark": [
+      "size-6"
+    ],
+    "ui-footer-newsletter-newsletter": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "lg:col-span-3",
+      "lg:col-start-10"
+    ],
+    "ui-footer-newsletter-newsletter-title": [
+      "text-base",
+      "leading-5",
+      "font-semibold"
+    ],
+    "ui-footer-newsletter-panel": [
+      "flex",
+      "flex-col",
+      "gap-16",
+      "rounded-lg",
+      "bg-background",
+      "px-12",
+      "pt-16",
+      "pb-6",
+      "text-foreground"
+    ],
+    "ui-footer-newsletter-social": [
+      "text-muted-foreground",
+      "hover:text-foreground"
+    ],
+    "ui-footer-newsletter-social-icon": [
+      "size-6"
+    ],
+    "ui-footer-newsletter-socials": [
+      "flex",
+      "gap-4"
+    ],
+    "ui-footer-newsletter-submit": [
+      "w-full",
+      "font-normal"
+    ],
+    "ui-footer-newsletter-text": [
+      "max-w-xs",
+      "leading-6",
+      "text-muted-foreground"
+    ],
+    "ui-footer-newsletter-top": [
+      "grid-cols-1",
+      "gap-10",
+      "md:grid-cols-2",
+      "lg:grid-cols-12",
+      "lg:gap-6"
+    ],
+    "ui-footer-simple": [
+      "border-t",
+      "border-border",
+      "py-10"
+    ],
+    "ui-footer-simple-brand": [
+      "gap-2",
+      "text-xl",
+      "font-bold",
+      "text-foreground"
+    ],
+    "ui-footer-simple-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "items-center",
+      "justify-between",
+      "gap-6",
+      "px-6",
+      "md:flex-row",
+      "lg:px-0"
+    ],
+    "ui-footer-simple-link": [],
+    "ui-footer-simple-links": [
+      "flex",
+      "flex-wrap",
+      "gap-6"
+    ],
+    "ui-footer-simple-nav": [],
+    "ui-form-description": [
+      "text-xs",
+      "text-muted-foreground"
+    ],
+    "ui-form-item": [
+      "grid",
+      "gap-2"
+    ],
+    "ui-form-message": [
+      "text-sm",
+      "font-medium",
+      "text-destructive"
+    ],
+    "ui-grid": [
+      "grid"
+    ],
+    "ui-grid-3": [
+      "grid",
+      "grid-cols-1",
+      "gap-10",
+      "md:grid-cols-3"
+    ],
+    "ui-group": [
+      "flex",
+      "items-center"
+    ],
+    "ui-habits-table": [],
+    "ui-habits-table-cell-2": [
+      "px-6",
+      "py-4",
+      "text-muted-foreground"
+    ],
+    "ui-habits-table-habit": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-habits-table-row": [
+      "border-t",
+      "border-border"
+    ],
+    "ui-habits-table-scroll": [
+      "overflow-x-auto",
+      "rounded-lg",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-habits-table-status": [],
+    "ui-habits-table-status-tone-done": [
+      "bg-primary",
+      "text-primary-foreground"
+    ],
+    "ui-habits-table-status-tone-pending": [
+      "bg-muted",
+      "text-foreground"
+    ],
+    "ui-habits-table-table": [
+      "w-full",
+      "text-left"
+    ],
+    "ui-habits-table-th": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-habits-table-th-2": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-habits-table-th-3": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-habits-table-th-4": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-habits-table-thead": [
+      "bg-muted",
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-hero-centered": [
+      "px-8",
+      "pt-8"
+    ],
+    "ui-hero-centered-actions": [
+      "flex-wrap",
+      "justify-center",
+      "gap-4"
+    ],
+    "ui-hero-centered-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "items-center",
+      "gap-8",
+      "rounded-lg",
+      "bg-muted",
+      "px-6",
+      "py-24",
+      "text-center"
+    ],
+    "ui-hero-centered-lead": [
+      "max-w-2xl",
+      "text-xl",
+      "text-muted-foreground"
+    ],
+    "ui-hero-centered-title": [
+      "max-w-3xl",
+      "text-6xl",
+      "leading-none",
+      "font-semibold"
+    ],
+    "ui-hero-phones": [
+      "relative",
+      "isolate",
+      "mx-8",
+      "mt-8",
+      "flex",
+      "flex-col",
+      "overflow-hidden",
+      "rounded-lg",
+      "bg-primary",
+      "px-12",
+      "pt-12",
+      "pb-12",
+      "text-primary-foreground",
+      "lg:aspect-video"
+    ],
+    "ui-hero-phones-actions": [
+      "mt-4",
+      "flex-wrap",
+      "justify-center",
+      "gap-6"
+    ],
+    "ui-hero-phones-art": [
+      "pointer-events-none",
+      "absolute",
+      "inset-0",
+      "-z-10",
+      "hidden",
+      "lg:block"
+    ],
+    "ui-hero-phones-badge": [
+      "mt-auto",
+      "self-center"
+    ],
+    "ui-hero-phones-badge-icon": [
+      "size-4",
+      "fill-current"
+    ],
+    "ui-hero-phones-content": [
+      "mx-auto",
+      "flex",
+      "max-w-3xl",
+      "flex-col",
+      "items-center",
+      "gap-8",
+      "pt-24",
+      "text-center"
+    ],
+    "ui-hero-phones-demo": [],
+    "ui-hero-phones-demo-icon": [
+      "size-4",
+      "fill-current"
+    ],
+    "ui-hero-phones-dot-1": [
+      "absolute",
+      "top-33/100",
+      "left-9/100",
+      "size-16",
+      "rounded-full",
+      "bg-muted"
+    ],
+    "ui-hero-phones-dot-2": [
+      "absolute",
+      "top-1/2",
+      "left-77/100",
+      "size-16",
+      "rounded-full",
+      "bg-secondary"
+    ],
+    "ui-hero-phones-dot-3": [
+      "absolute",
+      "top-33/100",
+      "left-80/100",
+      "size-16",
+      "rounded-full",
+      "bg-chart-3"
+    ],
+    "ui-hero-phones-dot-4": [
+      "absolute",
+      "top-77/100",
+      "left-61/100",
+      "size-16",
+      "rounded-full",
+      "bg-chart-4"
+    ],
+    "ui-hero-phones-dot-5": [
+      "absolute",
+      "top-58/100",
+      "left-21/100",
+      "size-16",
+      "rounded-full",
+      "bg-chart-4"
+    ],
+    "ui-hero-phones-dot-6": [
+      "absolute",
+      "top-52/100",
+      "left-20/100",
+      "size-16",
+      "rounded-full",
+      "bg-chart-5"
+    ],
+    "ui-hero-phones-lead": [
+      "max-w-2xl",
+      "text-xl"
+    ],
+    "ui-hero-phones-screen": [
+      "absolute",
+      "w-4/25",
+      "origin-top-left",
+      "rounded-md",
+      "ring-2",
+      "ring-secondary"
+    ],
+    "ui-hero-phones-title": [
+      "max-w-2xl",
+      "text-6xl",
+      "leading-none",
+      "font-medium"
+    ],
+    "ui-hero-split": [
+      "py-16"
+    ],
+    "ui-hero-split-actions": [
+      "flex-wrap",
+      "gap-4"
+    ],
+    "ui-hero-split-art": [
+      "flex",
+      "justify-center",
+      "rounded-lg",
+      "bg-accent",
+      "px-12",
+      "pt-12"
+    ],
+    "ui-hero-split-container": [
+      "mx-auto",
+      "grid",
+      "max-w-page",
+      "grid-cols-1",
+      "items-center",
+      "gap-12",
+      "px-6",
+      "lg:grid-cols-2",
+      "lg:px-0"
+    ],
+    "ui-hero-split-copy": [
+      "flex",
+      "flex-col",
+      "items-start",
+      "gap-8"
+    ],
+    "ui-hero-split-image": [
+      "w-1/2",
+      "rounded-t-md"
+    ],
+    "ui-hero-split-lead": [
+      "text-xl",
+      "text-muted-foreground"
+    ],
+    "ui-hero-split-title": [
+      "text-6xl",
+      "leading-none",
+      "font-semibold"
+    ],
+    "ui-icon": [
+      "inline-block",
+      "shrink-0"
+    ],
+    "ui-icon-size-default": [
+      "size-4"
+    ],
+    "ui-icon-size-lg": [
+      "size-6"
+    ],
+    "ui-icon-size-md": [
+      "size-5"
+    ],
+    "ui-icon-size-sm": [
+      "size-4"
+    ],
+    "ui-icon-size-xl": [
+      "size-8"
+    ],
+    "ui-icon-size-xs": [
+      "size-3"
+    ],
+    "ui-icon-sm": [
+      "size-4"
+    ],
+    "ui-iconbadge": [
+      "inline-flex",
+      "shrink-0",
+      "items-center",
+      "justify-center",
+      "rounded-full",
+      "font-semibold"
+    ],
+    "ui-iconbadge-accent": [
+      "bg-accent",
+      "text-accent-foreground"
+    ],
+    "ui-iconbadge-default": [
+      "bg-muted",
+      "text-muted-foreground"
+    ],
+    "ui-iconbadge-destructive": [
+      "bg-destructive",
+      "text-destructive-foreground"
+    ],
+    "ui-iconbadge-outline": [
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-iconbadge-secondary": [
+      "bg-secondary",
+      "text-secondary-foreground"
+    ],
+    "ui-iconbadge-size-default": [
+      "size-10",
+      "text-sm"
+    ],
+    "ui-iconbadge-size-lg": [
+      "size-12",
+      "text-base"
+    ],
+    "ui-iconbadge-size-sm": [
+      "size-8",
+      "text-xs"
+    ],
+    "ui-iconbadge-size-xs": [
+      "size-6",
+      "text-xs"
+    ],
+    "ui-image": [
+      "block",
+      "max-w-full"
+    ],
+    "ui-image-aspect-auto": [
+      "aspect-auto"
+    ],
+    "ui-image-aspect-square": [
+      "aspect-square"
+    ],
+    "ui-image-aspect-video": [
+      "aspect-video"
+    ],
+    "ui-image-avatar": [
+      "rounded-full"
+    ],
+    "ui-image-fit-contain": [
+      "object-contain"
+    ],
+    "ui-image-fit-cover": [
+      "object-cover"
+    ],
+    "ui-image-fit-fill": [
+      "object-fill"
+    ],
+    "ui-image-fit-none": [
+      "object-none"
+    ],
+    "ui-image-fit-scale-down": [
+      "object-scale-down"
+    ],
+    "ui-image-logo": [
+      "object-contain"
+    ],
+    "ui-image-position-bottom": [
+      "object-bottom"
+    ],
+    "ui-image-position-center": [
+      "object-center"
+    ],
+    "ui-image-position-left": [
+      "object-left"
+    ],
+    "ui-image-position-left-bottom": [
+      "object-left-bottom"
+    ],
+    "ui-image-position-left-top": [
+      "object-left-top"
+    ],
+    "ui-image-position-right": [
+      "object-right"
+    ],
+    "ui-image-position-right-bottom": [
+      "object-right-bottom"
+    ],
+    "ui-image-position-right-top": [
+      "object-right-top"
+    ],
+    "ui-image-position-top": [
+      "object-top"
+    ],
+    "ui-image-rounded": [
+      "rounded-md"
+    ],
+    "ui-image-size-full": [
+      "size-full"
+    ],
+    "ui-image-size-lg": [
+      "size-16"
+    ],
+    "ui-image-size-md": [
+      "size-12"
+    ],
+    "ui-image-size-sm": [
+      "size-8"
+    ],
+    "ui-image-size-xl": [
+      "size-24"
+    ],
+    "ui-image-size-xs": [
+      "size-6"
+    ],
+    "ui-image-thumbnail": [
+      "rounded-md",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-input": [
+      "w-full",
+      "rounded-full",
+      "bg-background",
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-input",
+      "outline-none",
+      "transition-colors",
+      "placeholder:text-muted-foreground",
+      "focus-visible:inset-ring-ring",
+      "disabled:pointer-events-none",
+      "disabled:opacity-50"
+    ],
+    "ui-input-ghost": [
+      "bg-muted",
+      "inset-ring-transparent"
+    ],
+    "ui-input-outline": [
+      "bg-transparent"
+    ],
+    "ui-input-size-default": [
+      "h-10",
+      "px-6",
+      "text-base"
+    ],
+    "ui-input-size-lg": [
+      "h-12",
+      "px-6",
+      "text-base"
+    ],
+    "ui-input-size-sm": [
+      "h-8",
+      "px-4",
+      "text-sm"
+    ],
+    "ui-input-size-xs": [
+      "h-8",
+      "px-3",
+      "text-xs"
+    ],
+    "ui-integrations": [],
+    "ui-integrations-badge": [
+      "size-12",
+      "shrink-0",
+      "rounded-full",
+      "bg-accent",
+      "text-accent-foreground"
+    ],
+    "ui-integrations-grid": [
+      "grid",
+      "grid-cols-1",
+      "gap-6",
+      "md:grid-cols-2",
+      "lg:grid-cols-3"
+    ],
+    "ui-integrations-head": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-integrations-icon": [
+      "size-6"
+    ],
+    "ui-integrations-item": [
+      "flex",
+      "items-start",
+      "gap-4",
+      "rounded-lg",
+      "bg-card",
+      "p-8",
+      "inset-ring",
+      "inset-ring-border"
+    ],
+    "ui-item-title": [
+      "text-xl",
+      "font-semibold"
+    ],
+    "ui-item-title-sm": [
+      "text-lg",
+      "font-semibold"
+    ],
+    "ui-label": [
+      "text-sm",
+      "font-medium",
+      "leading-none"
+    ],
+    "ui-legend": [
+      "text-sm",
+      "font-medium"
+    ],
+    "ui-legend-muted": [
+      "text-muted-foreground"
+    ],
+    "ui-legend-size-default": [
+      "text-sm"
+    ],
+    "ui-legend-size-lg": [
+      "text-base"
+    ],
+    "ui-legend-size-sm": [
+      "text-xs"
+    ],
+    "ui-link": [
+      "inline-flex",
+      "items-center",
+      "gap-2",
+      "underline-offset-4",
+      "transition-colors",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring"
+    ],
+    "ui-link-block": [
+      "flex",
+      "w-full",
+      "text-foreground",
+      "hover:text-primary"
+    ],
+    "ui-link-default": [
+      "text-primary",
+      "hover:underline"
+    ],
+    "ui-link-external": [
+      "text-primary",
+      "hover:underline"
+    ],
+    "ui-link-muted": [
+      "text-muted-foreground",
+      "hover:text-foreground"
+    ],
+    "ui-link-nav": [
+      "text-current",
+      "hover:underline"
+    ],
+    "ui-link-size-default": [
+      "text-base"
+    ],
+    "ui-link-size-lg": [
+      "text-lg"
+    ],
+    "ui-link-size-md": [
+      "text-base"
+    ],
+    "ui-link-size-sm": [
+      "text-sm"
+    ],
+    "ui-login-card": [
+      "py-24"
+    ],
+    "ui-login-card-button": [
+      "w-full"
+    ],
+    "ui-login-card-card": [
+      "gap-8",
+      "p-10"
+    ],
+    "ui-login-card-container": [
+      "mx-auto",
+      "flex",
+      "max-w-md",
+      "flex-col",
+      "px-6"
+    ],
+    "ui-login-card-field": [],
+    "ui-login-card-foot": [
+      "text-center",
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-login-card-form": [
+      "flex",
+      "flex-col",
+      "gap-6"
+    ],
+    "ui-login-card-head": [
+      "flex",
+      "flex-col",
+      "gap-2",
+      "text-center"
+    ],
+    "ui-login-card-input": [],
+    "ui-login-card-label": [],
+    "ui-logo-cloud": [
+      "py-16"
+    ],
+    "ui-logo-cloud-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "items-center",
+      "gap-8",
+      "px-6"
+    ],
+    "ui-logo-cloud-logo": [
+      "h-10",
+      "w-auto"
+    ],
+    "ui-logo-cloud-logos": [
+      "flex",
+      "flex-wrap",
+      "items-center",
+      "justify-center",
+      "gap-12"
+    ],
+    "ui-logo-cloud-title": [
+      "text-base",
+      "font-medium",
+      "text-muted-foreground"
+    ],
+    "ui-meter": [
+      "h-2",
+      "w-full"
+    ],
+    "ui-meter-default": [
+      "accent-primary"
+    ],
+    "ui-meter-muted": [
+      "accent-muted-foreground"
+    ],
+    "ui-meter-size-default": [
+      "h-2"
+    ],
+    "ui-meter-size-lg": [
+      "h-3"
+    ],
+    "ui-meter-size-sm": [
+      "h-1"
+    ],
+    "ui-muted": [
+      "text-muted-foreground"
+    ],
+    "ui-muted-sm": [
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-navbar": [
+      "flex",
+      "items-center",
+      "justify-between",
+      "gap-8"
+    ],
+    "ui-navbar-brand": [
+      "gap-2",
+      "text-3xl",
+      "leading-none",
+      "font-bold",
+      "text-current",
+      "no-underline",
+      "hover:no-underline"
+    ],
+    "ui-navbar-cta": [
+      "px-8"
+    ],
+    "ui-navbar-mark": [
+      "size-6"
+    ],
+    "ui-navbar-menu": [
+      "hidden",
+      "items-center",
+      "gap-8",
+      "lg:flex"
+    ],
+    "ui-navbar-menu-link": [
+      "text-lg",
+      "leading-none",
+      "text-current",
+      "hover:underline"
+    ],
+    "ui-newsletter-band": [],
+    "ui-newsletter-band-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "items-center",
+      "justify-between",
+      "gap-8",
+      "rounded-lg",
+      "bg-accent",
+      "px-12",
+      "py-16",
+      "text-accent-foreground",
+      "lg:flex-row"
+    ],
+    "ui-newsletter-band-copy": [
+      "flex",
+      "flex-col",
+      "gap-2"
+    ],
+    "ui-newsletter-band-form": [
+      "flex",
+      "w-full",
+      "max-w-md",
+      "gap-2"
+    ],
+    "ui-newsletter-band-input": [],
+    "ui-newsletter-band-label": [
+      "sr-only"
+    ],
+    "ui-not-found": [
+      "py-24"
+    ],
+    "ui-not-found-code": [
+      "text-display",
+      "leading-none",
+      "font-bold",
+      "text-primary"
+    ],
+    "ui-not-found-container": [
+      "mx-auto",
+      "flex",
+      "max-w-2xl",
+      "flex-col",
+      "items-center",
+      "gap-6",
+      "px-6",
+      "text-center"
+    ],
+    "ui-not-found-text": [
+      "text-xl",
+      "text-muted-foreground"
+    ],
+    "ui-not-found-title": [
+      "text-4xl",
+      "font-bold"
+    ],
+    "ui-order-1": [
+      "order-1"
+    ],
+    "ui-order-10": [
+      "order-10"
+    ],
+    "ui-order-11": [
+      "order-11"
+    ],
+    "ui-order-12": [
+      "order-12"
+    ],
+    "ui-order-2": [
+      "order-2"
+    ],
+    "ui-order-3": [
+      "order-3"
+    ],
+    "ui-order-4": [
+      "order-4"
+    ],
+    "ui-order-5": [
+      "order-5"
+    ],
+    "ui-order-6": [
+      "order-6"
+    ],
+    "ui-order-7": [
+      "order-7"
+    ],
+    "ui-order-8": [
+      "order-8"
+    ],
+    "ui-order-9": [
+      "order-9"
+    ],
+    "ui-page": [
+      "overflow-x-clip"
+    ],
+    "ui-pricing-three-tiers": [],
+    "ui-pricing-three-tiers-check": [
+      "size-4",
+      "text-primary"
+    ],
+    "ui-pricing-three-tiers-cross": [
+      "size-4",
+      "text-muted-foreground"
+    ],
+    "ui-pricing-three-tiers-feature": [
+      "flex",
+      "items-center",
+      "gap-4"
+    ],
+    "ui-pricing-three-tiers-head": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "items-center",
+      "text-center"
+    ],
+    "ui-pricing-three-tiers-plan": [
+      "flex",
+      "flex-col",
+      "gap-8",
+      "rounded-lg",
+      "p-10",
+      "text-card-foreground"
+    ],
+    "ui-pricing-three-tiers-plan-cta": [
+      "mt-auto",
+      "w-full"
+    ],
+    "ui-pricing-three-tiers-plan-name": [
+      "text-2xl",
+      "font-semibold"
+    ],
+    "ui-pricing-three-tiers-plan-name-row": [
+      "justify-between",
+      "gap-4"
+    ],
+    "ui-pricing-three-tiers-plan-theme-dark": [
+      "bg-background"
+    ],
+    "ui-pricing-three-tiers-plan-theme-light": [
+      "bg-card"
+    ],
+    "ui-pricing-three-tiers-plans": [
+      "grid",
+      "grid-cols-1",
+      "gap-6",
+      "lg:grid-cols-3"
+    ],
+    "ui-pricing-three-tiers-price": [
+      "flex",
+      "items-baseline",
+      "gap-2"
+    ],
+    "ui-pricing-three-tiers-price-value": [
+      "text-4xl",
+      "font-bold"
+    ],
+    "ui-pricing-two-plans": [
+      "pt-24"
+    ],
+    "ui-pricing-two-plans-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-16"
+    ],
+    "ui-pricing-two-plans-feature": [
+      "flex",
+      "h-6",
+      "items-center",
+      "gap-4",
+      "leading-5"
+    ],
+    "ui-pricing-two-plans-feature-check": [
+      "size-4",
+      "text-primary"
+    ],
+    "ui-pricing-two-plans-feature-lock": [
+      "size-4",
+      "text-muted-foreground"
+    ],
+    "ui-pricing-two-plans-lead": [
+      "text-xl",
+      "font-light"
+    ],
+    "ui-pricing-two-plans-plan": [
+      "flex",
+      "flex-col",
+      "gap-12",
+      "rounded-lg",
+      "p-16",
+      "pb-24",
+      "text-card-foreground"
+    ],
+    "ui-pricing-two-plans-plan-cta": [
+      "mt-auto",
+      "w-full"
+    ],
+    "ui-pricing-two-plans-plan-description": [
+      "leading-5",
+      "text-muted-foreground"
+    ],
+    "ui-pricing-two-plans-plan-name": [
+      "text-2xl",
+      "leading-6",
+      "font-semibold"
+    ],
+    "ui-pricing-two-plans-plan-name-row": [
+      "justify-between",
+      "gap-4"
+    ],
+    "ui-pricing-two-plans-plan-theme-dark": [
+      "bg-background"
+    ],
+    "ui-pricing-two-plans-plan-theme-light": [
+      "bg-card"
+    ],
+    "ui-pricing-two-plans-plans": [
+      "grid",
+      "grid-cols-1",
+      "gap-10",
+      "lg:grid-cols-2"
+    ],
+    "ui-pricing-two-plans-price": [
+      "flex",
+      "items-baseline",
+      "gap-2"
+    ],
+    "ui-pricing-two-plans-price-value": [
+      "text-4xl",
+      "font-bold"
+    ],
+    "ui-progress": [
+      "h-2",
+      "w-full"
+    ],
+    "ui-progress-default": [
+      "accent-primary"
+    ],
+    "ui-progress-muted": [
+      "accent-muted-foreground"
+    ],
+    "ui-progress-size-default": [
+      "h-2"
+    ],
+    "ui-progress-size-lg": [
+      "h-3"
+    ],
+    "ui-progress-size-sm": [
+      "h-1"
+    ],
+    "ui-radio": [
+      "shrink-0",
+      "rounded-full",
+      "accent-primary",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring",
+      "disabled:opacity-50"
+    ],
+    "ui-radio-size-default": [
+      "size-4"
+    ],
+    "ui-radio-size-lg": [
+      "size-5"
+    ],
+    "ui-radio-size-sm": [
+      "size-4"
+    ],
+    "ui-radio-size-xs": [
+      "size-3"
+    ],
+    "ui-section": [
+      "py-24"
+    ],
+    "ui-section-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-12",
+      "px-6",
+      "lg:px-0"
+    ],
+    "ui-section-container-narrow": [
+      "mx-auto",
+      "flex",
+      "max-w-3xl",
+      "flex-col",
+      "gap-12",
+      "px-6"
+    ],
+    "ui-section-head-center": [
+      "flex",
+      "flex-col",
+      "items-center",
+      "gap-4",
+      "text-center"
+    ],
+    "ui-section-lead": [
+      "max-w-2xl",
+      "text-xl",
+      "font-light",
+      "text-muted-foreground"
+    ],
+    "ui-section-title": [
+      "text-5xl",
+      "font-bold"
+    ],
+    "ui-section-title-display": [
+      "text-6xl",
+      "font-bold"
+    ],
+    "ui-section-title-sm": [
+      "text-3xl",
+      "font-bold"
+    ],
+    "ui-select": [
+      "w-full",
+      "appearance-none",
+      "rounded-full",
+      "bg-background",
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-input",
+      "outline-none",
+      "transition-colors",
+      "placeholder:text-muted-foreground",
+      "focus-visible:inset-ring-ring",
+      "disabled:pointer-events-none",
+      "disabled:opacity-50"
+    ],
+    "ui-select-ghost": [
+      "bg-muted",
+      "inset-ring-transparent"
+    ],
+    "ui-select-outline": [
+      "bg-transparent"
+    ],
+    "ui-select-size-default": [
+      "h-10",
+      "px-6",
+      "text-base"
+    ],
+    "ui-select-size-lg": [
+      "h-12",
+      "px-6",
+      "text-base"
+    ],
+    "ui-select-size-sm": [
+      "h-8",
+      "px-4",
+      "text-sm"
+    ],
+    "ui-select-size-xs": [
+      "h-8",
+      "px-3",
+      "text-xs"
+    ],
+    "ui-separator": [
+      "shrink-0",
+      "border-0",
+      "bg-border"
+    ],
+    "ui-separator-muted": [
+      "bg-muted"
+    ],
+    "ui-separator-orientation-horizontal": [
+      "h-px",
+      "w-full"
+    ],
+    "ui-separator-orientation-vertical": [
+      "h-full",
+      "w-px"
+    ],
+    "ui-separator-spaced": [
+      "my-4"
+    ],
+    "ui-separator-strong": [
+      "bg-foreground"
+    ],
+    "ui-settings-panel": [],
+    "ui-settings-panel-button": [
+      "self-end"
+    ],
+    "ui-settings-panel-container": [
+      "mx-auto",
+      "flex",
+      "max-w-2xl",
+      "flex-col",
+      "px-6"
+    ],
+    "ui-settings-panel-form": [
+      "flex",
+      "flex-col",
+      "gap-8",
+      "rounded-lg",
+      "bg-card",
+      "p-10"
+    ],
+    "ui-settings-panel-label": [
+      "text-base",
+      "font-normal"
+    ],
+    "ui-settings-panel-legend": [
+      "mb-2",
+      "flex",
+      "flex-col",
+      "gap-2"
+    ],
+    "ui-settings-panel-option": [
+      "justify-between",
+      "gap-4",
+      "rounded-md",
+      "bg-background",
+      "px-6",
+      "py-4"
+    ],
+    "ui-settings-panel-switch": [],
+    "ui-settings-panel-title": [
+      "text-2xl",
+      "font-semibold"
+    ],
+    "ui-signup-card": [
+      "py-24"
+    ],
+    "ui-signup-card-button": [
+      "w-full"
+    ],
+    "ui-signup-card-card": [
+      "gap-8",
+      "p-10"
+    ],
+    "ui-signup-card-container": [
+      "mx-auto",
+      "flex",
+      "max-w-md",
+      "flex-col",
+      "px-6"
+    ],
+    "ui-signup-card-field": [],
+    "ui-signup-card-foot": [
+      "text-center",
+      "text-sm",
+      "text-muted-foreground"
+    ],
+    "ui-signup-card-form": [
+      "flex",
+      "flex-col",
+      "gap-6"
+    ],
+    "ui-signup-card-head": [
+      "flex",
+      "flex-col",
+      "gap-2",
+      "text-center"
+    ],
+    "ui-signup-card-input": [],
+    "ui-signup-card-label": [],
+    "ui-skip": [
+      "sr-only",
+      "focus:not-sr-only",
+      "focus:fixed",
+      "focus:top-4",
+      "focus:left-4",
+      "focus:z-50",
+      "focus:rounded-full",
+      "focus:bg-background",
+      "focus:px-6",
+      "focus:py-2",
+      "focus:text-foreground"
+    ],
+    "ui-social-proof-split": [
+      "pt-10"
+    ],
+    "ui-social-proof-split-body": [
+      "flex",
+      "flex-col",
+      "justify-between",
+      "gap-12",
+      "py-6"
+    ],
+    "ui-social-proof-split-container": [
+      "mx-auto",
+      "grid",
+      "max-w-page",
+      "grid-cols-1",
+      "gap-16",
+      "lg:grid-cols-2"
+    ],
+    "ui-social-proof-split-logo": [
+      "h-12",
+      "w-auto"
+    ],
+    "ui-social-proof-split-logos": [
+      "flex-wrap",
+      "justify-between",
+      "gap-8",
+      "rounded-lg",
+      "bg-muted",
+      "px-12",
+      "py-10"
+    ],
+    "ui-social-proof-split-panel": [
+      "flex",
+      "aspect-square",
+      "justify-center",
+      "overflow-hidden",
+      "rounded-lg",
+      "bg-accent",
+      "pt-20"
+    ],
+    "ui-social-proof-split-screen": [
+      "w-1/2",
+      "self-start",
+      "rounded-md",
+      "ring-2",
+      "ring-secondary"
+    ],
+    "ui-social-proof-split-title": [
+      "text-4xl",
+      "leading-12",
+      "font-medium"
+    ],
+    "ui-span-1": [
+      "col-span-1"
+    ],
+    "ui-span-10": [
+      "col-span-10"
+    ],
+    "ui-span-11": [
+      "col-span-11"
+    ],
+    "ui-span-12": [
+      "col-span-12"
+    ],
+    "ui-span-2": [
+      "col-span-2"
+    ],
+    "ui-span-3": [
+      "col-span-3"
+    ],
+    "ui-span-4": [
+      "col-span-4"
+    ],
+    "ui-span-5": [
+      "col-span-5"
+    ],
+    "ui-span-6": [
+      "col-span-6"
+    ],
+    "ui-span-7": [
+      "col-span-7"
+    ],
+    "ui-span-8": [
+      "col-span-8"
+    ],
+    "ui-span-9": [
+      "col-span-9"
+    ],
+    "ui-stack": [
+      "flex",
+      "flex-col"
+    ],
+    "ui-stack-2": [
+      "flex",
+      "flex-col",
+      "gap-2"
+    ],
+    "ui-stack-4": [
+      "flex",
+      "flex-col",
+      "gap-4"
+    ],
+    "ui-stack-6": [
+      "flex",
+      "flex-col",
+      "gap-6"
+    ],
+    "ui-stack-8": [
+      "flex",
+      "flex-col",
+      "gap-8"
+    ],
+    "ui-start-1": [
+      "col-start-1"
+    ],
+    "ui-start-10": [
+      "col-start-10"
+    ],
+    "ui-start-11": [
+      "col-start-11"
+    ],
+    "ui-start-12": [
+      "col-start-12"
+    ],
+    "ui-start-2": [
+      "col-start-2"
+    ],
+    "ui-start-3": [
+      "col-start-3"
+    ],
+    "ui-start-4": [
+      "col-start-4"
+    ],
+    "ui-start-5": [
+      "col-start-5"
+    ],
+    "ui-start-6": [
+      "col-start-6"
+    ],
+    "ui-start-7": [
+      "col-start-7"
+    ],
+    "ui-start-8": [
+      "col-start-8"
+    ],
+    "ui-start-9": [
+      "col-start-9"
+    ],
+    "ui-stats-row": [],
+    "ui-stats-row-item": [
+      "flex",
+      "flex-col",
+      "gap-2",
+      "rounded-lg",
+      "bg-muted",
+      "p-8"
+    ],
+    "ui-stats-row-list": [
+      "grid",
+      "grid-cols-2",
+      "gap-6",
+      "lg:grid-cols-4"
+    ],
+    "ui-stats-row-title": [
+      "sr-only"
+    ],
+    "ui-steps": [],
+    "ui-steps-head": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "items-center",
+      "text-center"
+    ],
+    "ui-steps-icon": [
+      "size-6",
+      "text-primary"
+    ],
+    "ui-steps-item": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "rounded-lg",
+      "bg-muted",
+      "p-10"
+    ],
+    "ui-steps-list": [
+      "grid",
+      "grid-cols-1",
+      "gap-10",
+      "md:grid-cols-3"
+    ],
+    "ui-summary": [
+      "flex",
+      "cursor-pointer",
+      "list-none",
+      "items-center",
+      "gap-4",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring"
+    ],
+    "ui-summary-card": [
+      "px-8",
+      "py-6",
+      "font-medium"
+    ],
+    "ui-summary-default": [
+      "px-6",
+      "py-4",
+      "font-medium"
+    ],
+    "ui-summary-ghost": [
+      "py-2",
+      "font-medium"
+    ],
+    "ui-summary-size-default": [
+      "text-base"
+    ],
+    "ui-summary-size-lg": [
+      "text-xl"
+    ],
+    "ui-summary-size-sm": [
+      "text-sm"
+    ],
+    "ui-switch": [
+      "shrink-0",
+      "rounded-sm",
+      "accent-primary",
+      "outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring",
+      "disabled:opacity-50"
+    ],
+    "ui-switch-size-default": [
+      "size-4"
+    ],
+    "ui-switch-size-lg": [
+      "size-5"
+    ],
+    "ui-switch-size-sm": [
+      "size-4"
+    ],
+    "ui-switch-size-xs": [
+      "size-3"
+    ],
+    "ui-table": [
+      "w-full",
+      "caption-bottom",
+      "text-sm"
+    ],
+    "ui-team-grid": [],
+    "ui-team-grid-avatar": [],
+    "ui-team-grid-head": [
+      "flex",
+      "flex-col",
+      "gap-4",
+      "items-center",
+      "text-center"
+    ],
+    "ui-team-grid-member": [
+      "flex",
+      "flex-col",
+      "items-center",
+      "gap-4",
+      "rounded-lg",
+      "bg-muted",
+      "p-10",
+      "text-center"
+    ],
+    "ui-testimonial-cards": [
+      "pt-24"
+    ],
+    "ui-testimonial-cards-author": [
+      "gap-4"
+    ],
+    "ui-testimonial-cards-avatar": [],
+    "ui-testimonial-cards-card": [
+      "h-full",
+      "gap-8"
+    ],
+    "ui-testimonial-cards-container": [
+      "mx-auto",
+      "flex",
+      "max-w-page",
+      "flex-col",
+      "gap-16"
+    ],
+    "ui-testimonial-cards-item": [],
+    "ui-testimonial-cards-lead": [
+      "text-xl",
+      "font-light"
+    ],
+    "ui-testimonial-cards-name": [
+      "leading-5",
+      "font-bold"
+    ],
+    "ui-testimonial-cards-quote": [
+      "leading-6",
+      "text-muted-foreground"
+    ],
+    "ui-testimonial-cards-role": [
+      "leading-5",
+      "text-muted-foreground"
+    ],
+    "ui-testimonial-quote": [
+      "py-24"
+    ],
+    "ui-testimonial-quote-author": [
+      "gap-4"
+    ],
+    "ui-testimonial-quote-avatar": [],
+    "ui-testimonial-quote-container": [
+      "mx-auto",
+      "max-w-page",
+      "px-6",
+      "lg:px-0"
+    ],
+    "ui-testimonial-quote-name": [
+      "font-bold"
+    ],
+    "ui-testimonial-quote-panel": [
+      "flex",
+      "flex-col",
+      "items-center",
+      "gap-8",
+      "rounded-lg",
+      "bg-chart-5",
+      "px-12",
+      "py-20",
+      "text-center",
+      "text-foreground"
+    ],
+    "ui-testimonial-quote-quote": [
+      "max-w-3xl",
+      "text-3xl",
+      "leading-10",
+      "font-medium"
+    ],
+    "ui-testimonial-quote-who": [
+      "flex",
+      "flex-col",
+      "items-start"
+    ],
+    "ui-textarea": [
+      "w-full",
+      "rounded-md",
+      "bg-background",
+      "text-foreground",
+      "inset-ring",
+      "inset-ring-input",
+      "outline-none",
+      "transition-colors",
+      "placeholder:text-muted-foreground",
+      "focus-visible:inset-ring-ring",
+      "disabled:pointer-events-none",
+      "disabled:opacity-50"
+    ],
+    "ui-textarea-ghost": [
+      "bg-muted",
+      "inset-ring-transparent"
+    ],
+    "ui-textarea-outline": [
+      "bg-transparent"
+    ],
+    "ui-textarea-size-default": [
+      "px-6",
+      "py-4",
+      "text-base"
+    ],
+    "ui-textarea-size-lg": [
+      "px-6",
+      "py-4",
+      "text-lg"
+    ],
+    "ui-textarea-size-sm": [
+      "px-4",
+      "py-2",
+      "text-sm"
+    ],
+    "ui-textarea-size-xs": [
+      "px-3",
+      "py-2",
+      "text-xs"
+    ]
+  }
 }

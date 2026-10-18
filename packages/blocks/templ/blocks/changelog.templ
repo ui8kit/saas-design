@@ -15,31 +15,31 @@ import (
 
 // Changelog: Release timeline with version badges.
 templ Changelog(p ChangelogData) {
-	@block.Block(block.BlockProps{Class: "ui-changelog", Tag: "section", Attrs: templ.Attributes{"data-class": "changelog", "aria-labelledby": "changelog-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-changelog-container", Attrs: templ.Attributes{"data-class": "changelog-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-changelog-head", Attrs: templ.Attributes{"data-class": "changelog-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-changelog-title", As: 2, Attrs: templ.Attributes{"data-class": "changelog-title", "id": "changelog-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-changelog", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-changelog", "aria-labelledby": "changelog-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container-narrow", Attrs: templ.Attributes{"data-class": "ui-section-container-narrow"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-changelog-head", Attrs: templ.Attributes{"data-class": "ui-changelog-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "changelog-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-changelog-lead", Attrs: templ.Attributes{"data-class": "changelog-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-changelog-list", Tag: "ol", Attrs: templ.Attributes{"data-class": "changelog-list"}}) {
+			@list.List(list.ListProps{Class: "ui-changelog-list", Tag: "ol", Attrs: templ.Attributes{"data-class": "ui-changelog-list"}}) {
 				for _, r := range p.Items {
-					@list.ListItem(list.ListItemProps{Class: "ui-changelog-item", Attrs: templ.Attributes{"data-class": "changelog-item"}}) {
-						@group.Group(group.GroupProps{Class: "ui-changelog-meta", Attrs: templ.Attributes{"data-class": "changelog-meta"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-changelog-item", Attrs: templ.Attributes{"data-class": "ui-changelog-item"}}) {
+						@group.Group(group.GroupProps{Class: "ui-changelog-meta", Attrs: templ.Attributes{"data-class": "ui-changelog-meta"}}) {
 							@badge.Badge(badge.BadgeProps{}) {
 								{ r.Version }
 							}
-							<time class="ui-changelog-date" data-class="changelog-date" datetime={ r.Datetime }>
+							<time class="ui-changelog-date" data-class="ui-changelog-date" datetime={ r.Datetime }>
 								{ r.Date }
 							</time>
 						}
-						@title.Title(title.TitleProps{Class: "ui-changelog-item-title", As: 3, Attrs: templ.Attributes{"data-class": "changelog-item-title"}}) {
+						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ r.Title }
 						}
-						@text.Text(text.TextProps{Class: "ui-changelog-item-text", Attrs: templ.Attributes{"data-class": "changelog-item-text"}}) {
+						@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ r.Text }
 						}
 					}

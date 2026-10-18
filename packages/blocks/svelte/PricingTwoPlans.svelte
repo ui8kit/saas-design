@@ -8,22 +8,22 @@
   let { data }: { data: PricingTwoPlansData } = $props();
 </script>
 
-<Block class="ui-pricing-two-plans" data-class="pricing-two-plans" tag="section" id={data.id || undefined} aria-labelledby="pricing-two-plans-title">
-  <Container class="ui-pricing-two-plans-container" data-class="pricing-two-plans-container">
-    <Stack class="ui-pricing-two-plans-head" data-class="pricing-two-plans-head">
-      <Title class="ui-pricing-two-plans-title" data-class="pricing-two-plans-title" as={2} id="pricing-two-plans-title">
+<Block class="ui-pricing-two-plans" data-class="ui-pricing-two-plans" tag="section" id={data.id || undefined} aria-labelledby="pricing-two-plans-title">
+  <Container class="ui-pricing-two-plans-container" data-class="ui-pricing-two-plans-container">
+    <Stack class="ui-stack-4" data-class="ui-stack-4">
+      <Title class="ui-section-title-display" data-class="ui-section-title-display" as={2} id="pricing-two-plans-title">
         {data.title}
       </Title>
-      <Text class="ui-pricing-two-plans-lead" data-class="pricing-two-plans-lead">
+      <Text class="ui-pricing-two-plans-lead" data-class="ui-pricing-two-plans-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-pricing-two-plans-plans" data-class="pricing-two-plans-plans">
+    <List class="ui-pricing-two-plans-plans" data-class="ui-pricing-two-plans-plans">
       {#each data.plans as plan}
-        <ListItem class="ui-pricing-two-plans-plan ui-pricing-two-plans-plan-theme-{plan.theme}" data-class="pricing-two-plans-plan" data-theme={plan.theme}>
-          <Stack class="ui-pricing-two-plans-plan-head" data-class="pricing-two-plans-plan-head">
-            <Group class="ui-pricing-two-plans-plan-name-row" data-class="pricing-two-plans-plan-name-row">
-              <Title class="ui-pricing-two-plans-plan-name" data-class="pricing-two-plans-plan-name" as={3}>
+        <ListItem class="ui-pricing-two-plans-plan ui-pricing-two-plans-plan-theme-{plan.theme}" data-class="ui-pricing-two-plans-plan" data-theme={plan.theme}>
+          <Stack class="ui-stack-4" data-class="ui-stack-4">
+            <Group class="ui-pricing-two-plans-plan-name-row" data-class="ui-pricing-two-plans-plan-name-row">
+              <Title class="ui-pricing-two-plans-plan-name" data-class="ui-pricing-two-plans-plan-name" as={3}>
                 {plan.name}
               </Title>
               {#if plan.badge}
@@ -32,24 +32,24 @@
                 </Badge>
               {/if}
             </Group>
-            <Text class="ui-pricing-two-plans-plan-description" data-class="pricing-two-plans-plan-description">
+            <Text class="ui-pricing-two-plans-plan-description" data-class="ui-pricing-two-plans-plan-description">
               {plan.description}
             </Text>
           </Stack>
-          <Stack class="ui-pricing-two-plans-plan-body" data-class="pricing-two-plans-plan-body">
-            <Text class="ui-pricing-two-plans-price" data-class="pricing-two-plans-price">
-              <Inline class="ui-pricing-two-plans-price-value" data-class="pricing-two-plans-price-value">
+          <Stack class="ui-stack-6" data-class="ui-stack-6">
+            <Text class="ui-pricing-two-plans-price" data-class="ui-pricing-two-plans-price">
+              <Inline class="ui-pricing-two-plans-price-value" data-class="ui-pricing-two-plans-price-value">
                 {plan.price}
               </Inline>
               {#if plan.period}
-                <Inline class="ui-pricing-two-plans-price-period" data-class="pricing-two-plans-price-period">
+                <Inline class="ui-muted" data-class="ui-muted">
                   {plan.period}
                 </Inline>
               {/if}
             </Text>
-            <List class="ui-pricing-two-plans-features" data-class="pricing-two-plans-features">
+            <List class="ui-stack-4" data-class="ui-stack-4">
               {#each plan.features as f}
-                <ListItem class="ui-pricing-two-plans-feature" data-class="pricing-two-plans-feature">
+                <ListItem class="ui-pricing-two-plans-feature" data-class="ui-pricing-two-plans-feature">
                   {#if f.included}
                     {@html svg("check", `ui-pricing-two-plans-feature-check`)}
                   {/if}
@@ -61,7 +61,7 @@
               {/each}
             </List>
           </Stack>
-          <Button class="ui-pricing-two-plans-plan-cta" data-class="pricing-two-plans-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
+          <Button class="ui-pricing-two-plans-plan-cta" data-class="ui-pricing-two-plans-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
             {plan.cta.label}
           </Button>
         </ListItem>

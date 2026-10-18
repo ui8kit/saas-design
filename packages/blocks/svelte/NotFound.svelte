@@ -7,15 +7,15 @@
   let { data }: { data: NotFoundData } = $props();
 </script>
 
-<Block class="ui-not-found" data-class="not-found" tag="section" aria-labelledby="not-found-title">
-  <Container class="ui-not-found-container" data-class="not-found-container">
-    <Text class="ui-not-found-code" data-class="not-found-code">
+<Block class="ui-not-found" data-class="ui-not-found" tag="section" aria-labelledby="not-found-title">
+  <Container class="ui-not-found-container" data-class="ui-not-found-container">
+    <Text class="ui-not-found-code" data-class="ui-not-found-code">
       {data.code}
     </Text>
-    <Title class="ui-not-found-title" data-class="not-found-title" as={1} id="not-found-title">
+    <Title class="ui-not-found-title" data-class="ui-not-found-title" as={1} id="not-found-title">
       {data.title}
     </Title>
-    <Text class="ui-not-found-text" data-class="not-found-text">
+    <Text class="ui-not-found-text" data-class="ui-not-found-text">
       {data.text}
     </Text>
     <Button variant="secondary" size="lg" href={data.cta.href || undefined}>

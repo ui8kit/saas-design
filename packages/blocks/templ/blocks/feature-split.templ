@@ -16,29 +16,29 @@ import (
 
 // FeatureSplit: Checklist of benefits beside an app screen.
 templ FeatureSplit(p FeatureSplitData) {
-	@block.Block(block.BlockProps{Class: "ui-feature-split", Tag: "section", Attrs: templ.Attributes{"data-class": "feature-split", "aria-labelledby": "feature-split-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-feature-split-container", Attrs: templ.Attributes{"data-class": "feature-split-container"}}) {
-			@box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "feature-split-art"}}) {
-				@image.Image(image.ImageProps{Class: "ui-feature-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "feature-split-image"}})
+	@block.Block(block.BlockProps{Class: "ui-section ui-feature-split", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-feature-split", "aria-labelledby": "feature-split-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-feature-split-container", Attrs: templ.Attributes{"data-class": "ui-feature-split-container"}}) {
+			@box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "ui-feature-split-art"}}) {
+				@image.Image(image.ImageProps{Class: "ui-feature-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-feature-split-image"}})
 			}
-			@stack.Stack(stack.StackProps{Class: "ui-feature-split-copy", Attrs: templ.Attributes{"data-class": "feature-split-copy"}}) {
-				@stack.Stack(stack.StackProps{Class: "ui-feature-split-head", Attrs: templ.Attributes{"data-class": "feature-split-head"}}) {
-					@title.Title(title.TitleProps{Class: "ui-feature-split-title", As: 2, Attrs: templ.Attributes{"data-class": "feature-split-title", "id": "feature-split-title"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-feature-split-copy", Attrs: templ.Attributes{"data-class": "ui-feature-split-copy"}}) {
+				@stack.Stack(stack.StackProps{Class: "ui-feature-split-head", Attrs: templ.Attributes{"data-class": "ui-feature-split-head"}}) {
+					@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "feature-split-title"}}) {
 						{ p.Title }
 					}
-					@text.Text(text.TextProps{Class: "ui-feature-split-lead", Attrs: templ.Attributes{"data-class": "feature-split-lead"}}) {
+					@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 						{ p.Lead }
 					}
 				}
-				@list.List(list.ListProps{Class: "ui-feature-split-list", Attrs: templ.Attributes{"data-class": "feature-split-list"}}) {
+				@list.List(list.ListProps{Class: "ui-feature-split-list", Attrs: templ.Attributes{"data-class": "ui-feature-split-list"}}) {
 					for _, item := range p.Items {
-						@list.ListItem(list.ListItemProps{Class: "ui-feature-split-item", Attrs: templ.Attributes{"data-class": "feature-split-item"}}) {
+						@list.ListItem(list.ListItemProps{Class: "ui-feature-split-item", Attrs: templ.Attributes{"data-class": "ui-feature-split-item"}}) {
 							@templ.Raw(icons.SVG("circle-check", "ui-feature-split-check"))
-							@stack.Stack(stack.StackProps{Class: "ui-feature-split-item-body", Attrs: templ.Attributes{"data-class": "feature-split-item-body"}}) {
-								@title.Title(title.TitleProps{Class: "ui-feature-split-item-title", As: 3, Attrs: templ.Attributes{"data-class": "feature-split-item-title"}}) {
+							@stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}) {
+								@title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}) {
 									{ item.Title }
 								}
-								@text.Text(text.TextProps{Class: "ui-feature-split-item-text", Attrs: templ.Attributes{"data-class": "feature-split-item-text"}}) {
+								@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 									{ item.Text }
 								}
 							}

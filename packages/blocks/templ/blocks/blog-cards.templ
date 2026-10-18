@@ -18,37 +18,37 @@ import (
 
 // BlogCards: Three latest posts with image, tag, date and excerpt.
 templ BlogCards(p BlogCardsData) {
-	@block.Block(block.BlockProps{Class: "ui-blog-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "blog-cards", "aria-labelledby": "blog-cards-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-blog-cards-container", Attrs: templ.Attributes{"data-class": "blog-cards-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-blog-cards-head", Attrs: templ.Attributes{"data-class": "blog-cards-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-blog-cards-title", As: 2, Attrs: templ.Attributes{"data-class": "blog-cards-title", "id": "blog-cards-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-blog-cards", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-blog-cards", "aria-labelledby": "blog-cards-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-blog-cards-head", Attrs: templ.Attributes{"data-class": "ui-blog-cards-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "blog-cards-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-blog-cards-lead", Attrs: templ.Attributes{"data-class": "blog-cards-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-blog-cards-grid", Attrs: templ.Attributes{"data-class": "blog-cards-grid"}}) {
+			@list.List(list.ListProps{Class: "ui-grid-3", Attrs: templ.Attributes{"data-class": "ui-grid-3"}}) {
 				for _, post := range p.Posts {
-					@list.ListItem(list.ListItemProps{Class: "ui-blog-cards-post", Attrs: templ.Attributes{"data-class": "blog-cards-post"}}) {
-						@box.Box(box.BoxProps{Class: "ui-blog-cards-media", Attrs: templ.Attributes{"data-class": "blog-cards-media"}}) {
-							@image.Image(image.ImageProps{Class: "ui-blog-cards-image", Src: post.Image.Src, Alt: post.Image.Alt, Attrs: templ.Attributes{"data-class": "blog-cards-image"}})
+					@list.ListItem(list.ListItemProps{Class: "ui-blog-cards-post", Attrs: templ.Attributes{"data-class": "ui-blog-cards-post"}}) {
+						@box.Box(box.BoxProps{Class: "ui-blog-cards-media", Attrs: templ.Attributes{"data-class": "ui-blog-cards-media"}}) {
+							@image.Image(image.ImageProps{Class: "ui-blog-cards-image", Src: post.Image.Src, Alt: post.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-blog-cards-image"}})
 						}
-						@stack.Stack(stack.StackProps{Class: "ui-blog-cards-body", Attrs: templ.Attributes{"data-class": "blog-cards-body"}}) {
-							@group.Group(group.GroupProps{Class: "ui-blog-cards-meta", Attrs: templ.Attributes{"data-class": "blog-cards-meta"}}) {
+						@stack.Stack(stack.StackProps{Class: "ui-blog-cards-body", Attrs: templ.Attributes{"data-class": "ui-blog-cards-body"}}) {
+							@group.Group(group.GroupProps{Class: "ui-blog-cards-meta", Attrs: templ.Attributes{"data-class": "ui-blog-cards-meta"}}) {
 								@badge.Badge(badge.BadgeProps{Variant: "outline"}) {
 									{ post.Tag }
 								}
-								<time class="ui-blog-cards-date" data-class="blog-cards-date" datetime={ post.Datetime }>
+								<time class="ui-blog-cards-date" data-class="ui-blog-cards-date" datetime={ post.Datetime }>
 									{ post.Date }
 								</time>
 							}
-							@title.Title(title.TitleProps{Class: "ui-blog-cards-post-title", As: 3, Attrs: templ.Attributes{"data-class": "blog-cards-post-title"}}) {
-								@link.Link(link.LinkProps{Class: "ui-blog-cards-post-link", Href: post.Href, Attrs: templ.Attributes{"data-class": "blog-cards-post-link"}}) {
+							@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
+								@link.Link(link.LinkProps{Class: "ui-blog-cards-post-link", Href: post.Href, Attrs: templ.Attributes{"data-class": "ui-blog-cards-post-link"}}) {
 									{ post.Title }
 								}
 							}
-							@text.Text(text.TextProps{Class: "ui-blog-cards-excerpt", Attrs: templ.Attributes{"data-class": "blog-cards-excerpt"}}) {
+							@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 								{ post.Excerpt }
 							}
 						}

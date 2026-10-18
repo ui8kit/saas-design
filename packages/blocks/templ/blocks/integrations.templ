@@ -15,27 +15,27 @@ import (
 
 // Integrations: Grid of integration cards.
 templ Integrations(p IntegrationsData) {
-	@block.Block(block.BlockProps{Class: "ui-integrations", Tag: "section", Attrs: templ.Attributes{"data-class": "integrations", "aria-labelledby": "integrations-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-integrations-container", Attrs: templ.Attributes{"data-class": "integrations-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-integrations-head", Attrs: templ.Attributes{"data-class": "integrations-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-integrations-title", As: 2, Attrs: templ.Attributes{"data-class": "integrations-title", "id": "integrations-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-integrations", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-integrations", "aria-labelledby": "integrations-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-integrations-head", Attrs: templ.Attributes{"data-class": "ui-integrations-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "integrations-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-integrations-lead", Attrs: templ.Attributes{"data-class": "integrations-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-integrations-grid", Attrs: templ.Attributes{"data-class": "integrations-grid"}}) {
+			@list.List(list.ListProps{Class: "ui-integrations-grid", Attrs: templ.Attributes{"data-class": "ui-integrations-grid"}}) {
 				for _, item := range p.Items {
-					@list.ListItem(list.ListItemProps{Class: "ui-integrations-item", Attrs: templ.Attributes{"data-class": "integrations-item"}}) {
-						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-integrations-badge", Attrs: templ.Attributes{"data-class": "integrations-badge"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-integrations-item", Attrs: templ.Attributes{"data-class": "ui-integrations-item"}}) {
+						@iconbadge.IconBadge(iconbadge.IconBadgeProps{Class: "ui-integrations-badge", Attrs: templ.Attributes{"data-class": "ui-integrations-badge"}}) {
 							@templ.Raw(icons.SVG(item.Icon, "ui-integrations-icon"))
 						}
-						@stack.Stack(stack.StackProps{Class: "ui-integrations-body", Attrs: templ.Attributes{"data-class": "integrations-body"}}) {
-							@title.Title(title.TitleProps{Class: "ui-integrations-item-title", As: 3, Attrs: templ.Attributes{"data-class": "integrations-item-title"}}) {
+						@stack.Stack(stack.StackProps{Class: "ui-stack-2", Attrs: templ.Attributes{"data-class": "ui-stack-2"}}) {
+							@title.Title(title.TitleProps{Class: "ui-item-title-sm", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title-sm"}}) {
 								{ item.Name }
 							}
-							@text.Text(text.TextProps{Class: "ui-integrations-item-text", Attrs: templ.Attributes{"data-class": "integrations-item-text"}}) {
+							@text.Text(text.TextProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}) {
 								{ item.Text }
 							}
 						}

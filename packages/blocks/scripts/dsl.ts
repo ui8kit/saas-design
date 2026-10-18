@@ -12,6 +12,8 @@ export type Val = string | boolean | Expr;
 export type Schema = string | Schema[] | { [k: string]: Schema };
 
 export type Style = {
+  /** Shared kit class ui-<kit> (scripts/kits.ts). */
+  kit?: string;
   /** Part name: class becomes ui-<block>-<ui>; omitted on the root. */
   ui?: string;
   /** Tailwind utilities, emitted as @apply in the adapter (never in markup). */
@@ -31,8 +33,8 @@ export type Node =
 
 type Opts = Style & Record<string, unknown>;
 function split(o: Opts) {
-  const { ui, css, variants, vary, ...props } = o;
-  return { style: { ui, css, variants, vary } as Style, props: props as Record<string, Val> };
+  const { ui, css, variants, vary, kit, ...props } = o;
+  return { style: { ui, css, variants, vary, kit } as Style, props: props as Record<string, Val> };
 }
 /** Primitive component from @saas-design/ui (Block, Container, Stack, Title, Text, Button, …). */
 export const c = (comp: string, o: Opts = {}, ...children: Child[]): Node => { const { style, props } = split(o); return { k: "c", comp, props, children, ...style }; };

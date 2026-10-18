@@ -88,7 +88,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-habits-table-title", As: 2, Attrs: templ.Attributes{"data-class": "habits-table-title", "id": "habits-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-section-title-sm", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title-sm", "id": "habits-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -167,7 +167,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -198,7 +198,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-2", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-2", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -229,7 +229,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-3", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-3", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -260,7 +260,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-4", Scope: "col", Attrs: templ.Attributes{"data-class": "habits-table-th-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-th-4", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-habits-table-th-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -272,7 +272,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = table.TableHead(table.TableHeadProps{Class: "ui-habits-table-thead", Attrs: templ.Attributes{"data-class": "habits-table-thead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = table.TableHead(table.TableHeadProps{Class: "ui-habits-table-thead", Attrs: templ.Attributes{"data-class": "ui-habits-table-thead"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var8), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -328,7 +328,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-habit", Scope: "row", Attrs: templ.Attributes{"data-class": "habits-table-habit"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableHeadCell(table.TableHeadCellProps{Class: "ui-habits-table-habit", Scope: "row", Attrs: templ.Attributes{"data-class": "ui-habits-table-habit"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -359,7 +359,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell", Attrs: templ.Attributes{"data-class": "habits-table-cell"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-cell", Attrs: templ.Attributes{"data-class": "ui-cell"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -390,7 +390,7 @@ func HabitsTable(p HabitsTableData) templ.Component {
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-2", Attrs: templ.Attributes{"data-class": "habits-table-cell-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-2", Attrs: templ.Attributes{"data-class": "ui-habits-table-cell-2"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var24), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
@@ -433,19 +433,19 @@ func HabitsTable(p HabitsTableData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = badge.Badge(badge.BadgeProps{Class: "ui-habits-table-status" + " ui-habits-table-status-tone-" + r.Tone, Attrs: templ.Attributes{"data-class": "habits-table-status"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = badge.Badge(badge.BadgeProps{Class: "ui-habits-table-status" + " ui-habits-table-status-tone-" + r.Tone, Attrs: templ.Attributes{"data-class": "ui-habits-table-status"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
 										return nil
 									})
-									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-habits-table-cell-3", Attrs: templ.Attributes{"data-class": "habits-table-cell-3"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
+									templ_7745c5c3_Err = table.TableCell(table.TableCellProps{Class: "ui-cell", Attrs: templ.Attributes{"data-class": "ui-cell"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var26), templ_7745c5c3_Buffer)
 									if templ_7745c5c3_Err != nil {
 										return templ_7745c5c3_Err
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = table.TableRow(table.TableRowProps{Class: "ui-habits-table-row", Attrs: templ.Attributes{"data-class": "habits-table-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = table.TableRow(table.TableRowProps{Class: "ui-habits-table-row", Attrs: templ.Attributes{"data-class": "ui-habits-table-row"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var19), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -458,25 +458,25 @@ func HabitsTable(p HabitsTableData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = table.Table(table.TableProps{Class: "ui-habits-table-table", Attrs: templ.Attributes{"data-class": "habits-table-table"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = table.Table(table.TableProps{Class: "ui-habits-table-table", Attrs: templ.Attributes{"data-class": "ui-habits-table-table"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-habits-table-scroll", Attrs: templ.Attributes{"data-class": "habits-table-scroll"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-habits-table-scroll", Attrs: templ.Attributes{"data-class": "ui-habits-table-scroll"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-habits-table-container", Attrs: templ.Attributes{"data-class": "habits-table-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-habits-table", Tag: "section", Attrs: templ.Attributes{"data-class": "habits-table", "aria-labelledby": "habits-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-section ui-habits-table", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-habits-table", "aria-labelledby": "habits-table-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

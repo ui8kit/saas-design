@@ -7,43 +7,43 @@
   let { data }: { data: HabitsTableData } = $props();
 </script>
 
-<Block class="ui-habits-table" data-class="habits-table" tag="section" aria-labelledby="habits-table-title">
-  <Container class="ui-habits-table-container" data-class="habits-table-container">
-    <Title class="ui-habits-table-title" data-class="habits-table-title" as={2} id="habits-table-title">
+<Block class="ui-section ui-habits-table" data-class="ui-habits-table" tag="section" aria-labelledby="habits-table-title">
+  <Container class="ui-section-container" data-class="ui-section-container">
+    <Title class="ui-section-title-sm" data-class="ui-section-title-sm" as={2} id="habits-table-title">
       {data.title}
     </Title>
-    <Box class="ui-habits-table-scroll" data-class="habits-table-scroll">
-      <Table class="ui-habits-table-table" data-class="habits-table-table">
-        <TableHead class="ui-habits-table-thead" data-class="habits-table-thead">
+    <Box class="ui-habits-table-scroll" data-class="ui-habits-table-scroll">
+      <Table class="ui-habits-table-table" data-class="ui-habits-table-table">
+        <TableHead class="ui-habits-table-thead" data-class="ui-habits-table-thead">
           <TableRow>
-            <TableHeadCell class="ui-habits-table-th" data-class="habits-table-th" scope="col">
+            <TableHeadCell class="ui-habits-table-th" data-class="ui-habits-table-th" scope="col">
               {data.columns.habit}
             </TableHeadCell>
-            <TableHeadCell class="ui-habits-table-th-2" data-class="habits-table-th-2" scope="col">
+            <TableHeadCell class="ui-habits-table-th-2" data-class="ui-habits-table-th-2" scope="col">
               {data.columns.streak}
             </TableHeadCell>
-            <TableHeadCell class="ui-habits-table-th-3" data-class="habits-table-th-3" scope="col">
+            <TableHeadCell class="ui-habits-table-th-3" data-class="ui-habits-table-th-3" scope="col">
               {data.columns.time}
             </TableHeadCell>
-            <TableHeadCell class="ui-habits-table-th-4" data-class="habits-table-th-4" scope="col">
+            <TableHeadCell class="ui-habits-table-th-4" data-class="ui-habits-table-th-4" scope="col">
               {data.columns.status}
             </TableHeadCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {#each data.rows as r}
-            <TableRow class="ui-habits-table-row" data-class="habits-table-row">
-              <TableHeadCell class="ui-habits-table-habit" data-class="habits-table-habit" scope="row">
+            <TableRow class="ui-habits-table-row" data-class="ui-habits-table-row">
+              <TableHeadCell class="ui-habits-table-habit" data-class="ui-habits-table-habit" scope="row">
                 {r.habit}
               </TableHeadCell>
-              <TableCell class="ui-habits-table-cell" data-class="habits-table-cell">
+              <TableCell class="ui-cell" data-class="ui-cell">
                 {r.streak}
               </TableCell>
-              <TableCell class="ui-habits-table-cell-2" data-class="habits-table-cell-2">
+              <TableCell class="ui-habits-table-cell-2" data-class="ui-habits-table-cell-2">
                 {r.time}
               </TableCell>
-              <TableCell class="ui-habits-table-cell-3" data-class="habits-table-cell-3">
-                <Badge class="ui-habits-table-status ui-habits-table-status-tone-{r.tone}" data-class="habits-table-status">
+              <TableCell class="ui-cell" data-class="ui-cell">
+                <Badge class="ui-habits-table-status ui-habits-table-status-tone-{r.tone}" data-class="ui-habits-table-status">
                   {r.status}
                 </Badge>
               </TableCell>

@@ -15,58 +15,58 @@ import (
 
 // ComparisonTable: Feature matrix for Free vs Premium.
 templ ComparisonTable(p ComparisonTableData) {
-	@block.Block(block.BlockProps{Class: "ui-comparison-table", Tag: "section", Attrs: templ.Attributes{"data-class": "comparison-table", "aria-labelledby": "comparison-table-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-comparison-table-container", Attrs: templ.Attributes{"data-class": "comparison-table-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-comparison-table-head", Attrs: templ.Attributes{"data-class": "comparison-table-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-comparison-table-title", As: 2, Attrs: templ.Attributes{"data-class": "comparison-table-title", "id": "comparison-table-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-comparison-table", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-comparison-table", "aria-labelledby": "comparison-table-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-comparison-table-head", Attrs: templ.Attributes{"data-class": "ui-comparison-table-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "comparison-table-title"}}) {
 					{ p.Title }
 				}
 			}
-			@box.Box(box.BoxProps{Class: "ui-comparison-table-scroll", Attrs: templ.Attributes{"data-class": "comparison-table-scroll"}}) {
-				@table.Table(table.TableProps{Class: "ui-comparison-table-table", Attrs: templ.Attributes{"data-class": "comparison-table-table"}}) {
-					@table.TableHead(table.TableHeadProps{Class: "ui-comparison-table-thead", Attrs: templ.Attributes{"data-class": "comparison-table-thead"}}) {
+			@box.Box(box.BoxProps{Class: "ui-comparison-table-scroll", Attrs: templ.Attributes{"data-class": "ui-comparison-table-scroll"}}) {
+				@table.Table(table.TableProps{Class: "ui-comparison-table-table", Attrs: templ.Attributes{"data-class": "ui-comparison-table-table"}}) {
+					@table.TableHead(table.TableHeadProps{Class: "ui-comparison-table-thead", Attrs: templ.Attributes{"data-class": "ui-comparison-table-thead"}}) {
 						@table.TableRow(table.TableRowProps{}) {
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th"}}) {
 								{ p.Feature }
 							}
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th-plan"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th-plan"}}) {
 								{ p.Free }
 							}
-							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan-2", Scope: "col", Attrs: templ.Attributes{"data-class": "comparison-table-th-plan-2"}}) {
+							@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-th-plan-2", Scope: "col", Attrs: templ.Attributes{"data-class": "ui-comparison-table-th-plan-2"}}) {
 								{ p.Premium }
 							}
 						}
 					}
 					@table.TableBody(table.TableBodyProps{}) {
 						for _, r := range p.Rows {
-							@table.TableRow(table.TableRowProps{Class: "ui-comparison-table-row", Attrs: templ.Attributes{"data-class": "comparison-table-row"}}) {
-								@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-feature", Scope: "row", Attrs: templ.Attributes{"data-class": "comparison-table-feature"}}) {
+							@table.TableRow(table.TableRowProps{Class: "ui-comparison-table-row", Attrs: templ.Attributes{"data-class": "ui-comparison-table-row"}}) {
+								@table.TableHeadCell(table.TableHeadCellProps{Class: "ui-comparison-table-feature", Scope: "row", Attrs: templ.Attributes{"data-class": "ui-comparison-table-feature"}}) {
 									{ r.Feature }
 								}
-								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell", Attrs: templ.Attributes{"data-class": "comparison-table-cell"}}) {
+								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell"}}) {
 									if r.Free {
 										@templ.Raw(icons.SVG("check", "ui-comparison-table-yes"))
-										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr", Attrs: templ.Attributes{"data-class": "comparison-table-sr"}}) {
+										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr"}}) {
 											{ p.Yes }
 										}
 									}
 									if !(r.Free) {
 										@templ.Raw(icons.SVG("x", "ui-comparison-table-no"))
-										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-2", Attrs: templ.Attributes{"data-class": "comparison-table-sr-2"}}) {
+										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-2"}}) {
 											{ p.No }
 										}
 									}
 								}
-								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell-2", Attrs: templ.Attributes{"data-class": "comparison-table-cell-2"}}) {
+								@table.TableCell(table.TableCellProps{Class: "ui-comparison-table-cell-2", Attrs: templ.Attributes{"data-class": "ui-comparison-table-cell-2"}}) {
 									if r.Premium {
 										@templ.Raw(icons.SVG("check", "ui-comparison-table-yes-2"))
-										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-3", Attrs: templ.Attributes{"data-class": "comparison-table-sr-3"}}) {
+										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-3", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-3"}}) {
 											{ p.Yes }
 										}
 									}
 									if !(r.Premium) {
 										@templ.Raw(icons.SVG("x", "ui-comparison-table-no-2"))
-										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-4", Attrs: templ.Attributes{"data-class": "comparison-table-sr-4"}}) {
+										@inline.Inline(inline.InlineProps{Class: "ui-comparison-table-sr-4", Attrs: templ.Attributes{"data-class": "ui-comparison-table-sr-4"}}) {
 											{ p.No }
 										}
 									}

@@ -87,7 +87,7 @@ func LogoCloud(p LogoCloudData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-logo-cloud-title", As: 2, Attrs: templ.Attributes{"data-class": "logo-cloud-title", "id": "logo-cloud-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-logo-cloud-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-logo-cloud-title", "id": "logo-cloud-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -120,7 +120,7 @@ func LogoCloud(p LogoCloudData) templ.Component {
 								}()
 							}
 							ctx = templ.InitializeContext(ctx)
-							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-logo-cloud-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "logo-cloud-logo"}}).Render(ctx, templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = image.Image(image.ImageProps{Class: "ui-logo-cloud-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "ui-logo-cloud-logo"}}).Render(ctx, templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -133,19 +133,19 @@ func LogoCloud(p LogoCloudData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-logo-cloud-logos", Attrs: templ.Attributes{"data-class": "logo-cloud-logos"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-logo-cloud-logos", Attrs: templ.Attributes{"data-class": "ui-logo-cloud-logos"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-logo-cloud-container", Attrs: templ.Attributes{"data-class": "logo-cloud-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-logo-cloud-container", Attrs: templ.Attributes{"data-class": "ui-logo-cloud-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-logo-cloud", Tag: "section", Attrs: templ.Attributes{"data-class": "logo-cloud", "aria-labelledby": "logo-cloud-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-logo-cloud", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-logo-cloud", "aria-labelledby": "logo-cloud-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

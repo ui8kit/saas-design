@@ -4,23 +4,19 @@
     {
       "name": "controls",
       "files": [
-        "ui/**",
-        "components/**",
-        "elements/**",
-        "utils/*.go",
-        "utils/**/*.go"
+        "packages/ui/**",
+        "packages/icons/**",
+        "packages/adapter/src/primitives.generated.css"
       ],
       "spacing": "control"
     },
     {
       "name": "layout",
       "files": [
-        "examples/**",
-        "tests/examples/**",
-        "testdata/**",
-        "internal/site/views/**",
-        "**/views/**",
-        "**/pages/**"
+        "packages/blocks/**",
+        "packages/adapter/src/blocks.generated.css",
+        "packages/adapter/src/base.css",
+        "apps/**"
       ],
       "spacing": "layout"
     }

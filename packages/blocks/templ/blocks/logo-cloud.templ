@@ -12,15 +12,15 @@ import (
 
 // LogoCloud: Caption over a row of customer logos.
 templ LogoCloud(p LogoCloudData) {
-	@block.Block(block.BlockProps{Class: "ui-logo-cloud", Tag: "section", Attrs: templ.Attributes{"data-class": "logo-cloud", "aria-labelledby": "logo-cloud-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-logo-cloud-container", Attrs: templ.Attributes{"data-class": "logo-cloud-container"}}) {
-			@title.Title(title.TitleProps{Class: "ui-logo-cloud-title", As: 2, Attrs: templ.Attributes{"data-class": "logo-cloud-title", "id": "logo-cloud-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-logo-cloud", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-logo-cloud", "aria-labelledby": "logo-cloud-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-logo-cloud-container", Attrs: templ.Attributes{"data-class": "ui-logo-cloud-container"}}) {
+			@title.Title(title.TitleProps{Class: "ui-logo-cloud-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-logo-cloud-title", "id": "logo-cloud-title"}}) {
 				{ p.Title }
 			}
-			@list.List(list.ListProps{Class: "ui-logo-cloud-logos", Attrs: templ.Attributes{"data-class": "logo-cloud-logos"}}) {
+			@list.List(list.ListProps{Class: "ui-logo-cloud-logos", Attrs: templ.Attributes{"data-class": "ui-logo-cloud-logos"}}) {
 				for _, logo := range p.Logos {
 					@list.ListItem(list.ListItemProps{}) {
-						@image.Image(image.ImageProps{Class: "ui-logo-cloud-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "logo-cloud-logo"}})
+						@image.Image(image.ImageProps{Class: "ui-logo-cloud-logo", Variant: "logo", Src: logo.Src, Alt: logo.Alt, Attrs: templ.Attributes{"data-class": "ui-logo-cloud-logo"}})
 					}
 				}
 			}

@@ -158,7 +158,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-brand-link", Href: p.Href, Attrs: templ.Attributes{"data-class": "footer-newsletter-brand-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-brand-link", Href: p.Href, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-brand-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var7), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -189,7 +189,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-newsletter-text", Attrs: templ.Attributes{"data-class": "footer-newsletter-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-newsletter-text", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -240,7 +240,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 											}
 											return nil
 										})
-										templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-social", Href: s.Href, AriaLabel: s.Label, Attrs: templ.Attributes{"data-class": "footer-newsletter-social"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+										templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-social", Href: s.Href, AriaLabel: s.Label, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-social"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 										if templ_7745c5c3_Err != nil {
 											return templ_7745c5c3_Err
 										}
@@ -253,13 +253,13 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-footer-newsletter-socials", Attrs: templ.Attributes{"data-class": "footer-newsletter-socials"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-footer-newsletter-socials", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-socials"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var12), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-brand", Attrs: templ.Attributes{"data-class": "footer-newsletter-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-brand", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-brand"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
@@ -299,7 +299,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-footer-newsletter-column-title", As: 2, Attrs: templ.Attributes{"data-class": "footer-newsletter-column-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-footer-newsletter-column-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-column-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -355,7 +355,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 												}
 												return nil
 											})
-											templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-link", Href: l.Href, Attrs: templ.Attributes{"data-class": "footer-newsletter-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
+											templ_7745c5c3_Err = link.Link(link.LinkProps{Class: "ui-footer-newsletter-link", Href: l.Href, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-link"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var20), templ_7745c5c3_Buffer)
 											if templ_7745c5c3_Err != nil {
 												return templ_7745c5c3_Err
 											}
@@ -368,13 +368,13 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-footer-newsletter-links", Attrs: templ.Attributes{"data-class": "footer-newsletter-links"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-stack-4", Attrs: templ.Attributes{"data-class": "ui-stack-4"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var18), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-column", Tag: "div", Attrs: templ.Attributes{"data-class": "footer-newsletter-column"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-column", Tag: "div", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-column"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var15), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -418,7 +418,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-footer-newsletter-newsletter-title", As: 2, Attrs: templ.Attributes{"data-class": "footer-newsletter-newsletter-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = title.Title(title.TitleProps{Class: "ui-footer-newsletter-newsletter-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-newsletter-title"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var23), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -449,7 +449,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-newsletter-newsletter-text", Attrs: templ.Attributes{"data-class": "footer-newsletter-newsletter-text"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var25), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-muted-sm", Attrs: templ.Attributes{"data-class": "ui-muted-sm"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var25), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
@@ -492,7 +492,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-footer-newsletter-label", HTMLFor: "footer-newsletter-email", Attrs: templ.Attributes{"data-class": "footer-newsletter-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var28), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = label.Label(label.LabelProps{Class: "ui-footer-newsletter-label", HTMLFor: "footer-newsletter-email", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-label"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var28), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -500,7 +500,7 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
-								templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-footer-newsletter-input", ID: "footer-newsletter-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Newsletter.Placeholder, Attrs: templ.Attributes{"data-class": "footer-newsletter-input"}}).Render(ctx, templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = input.Input(input.InputProps{Class: "ui-footer-newsletter-input", ID: "footer-newsletter-email", Type: "email", Name: "email", Autocomplete: "email", Required: true, Placeholder: p.Newsletter.Placeholder, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-input"}}).Render(ctx, templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
@@ -531,25 +531,25 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 									}
 									return nil
 								})
-								templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-footer-newsletter-submit", Type: "submit", Attrs: templ.Attributes{"data-class": "footer-newsletter-submit"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var30), templ_7745c5c3_Buffer)
+								templ_7745c5c3_Err = button.Button(button.ButtonProps{Class: "ui-footer-newsletter-submit", Type: "submit", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-submit"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var30), templ_7745c5c3_Buffer)
 								if templ_7745c5c3_Err != nil {
 									return templ_7745c5c3_Err
 								}
 								return nil
 							})
-							templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-footer-newsletter-form", Action: p.Newsletter.Action, Method: "post", Attrs: templ.Attributes{"data-class": "footer-newsletter-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
+							templ_7745c5c3_Err = form.Form(form.FormProps{Class: "ui-footer-newsletter-form", Action: p.Newsletter.Action, Method: "post", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-form"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var27), templ_7745c5c3_Buffer)
 							if templ_7745c5c3_Err != nil {
 								return templ_7745c5c3_Err
 							}
 							return nil
 						})
-						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-newsletter", Attrs: templ.Attributes{"data-class": "footer-newsletter-newsletter"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
+						templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-newsletter", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-newsletter"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var22), templ_7745c5c3_Buffer)
 						if templ_7745c5c3_Err != nil {
 							return templ_7745c5c3_Err
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-footer-newsletter-top", Attrs: templ.Attributes{"data-class": "footer-newsletter-top"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = grid.Grid(grid.GridProps{Class: "ui-footer-newsletter-top", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-top"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var5), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -580,25 +580,25 @@ func FooterNewsletter(p FooterNewsletterData) templ.Component {
 						}
 						return nil
 					})
-					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-newsletter-copyright", Attrs: templ.Attributes{"data-class": "footer-newsletter-copyright"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var32), templ_7745c5c3_Buffer)
+					templ_7745c5c3_Err = text.Text(text.TextProps{Class: "ui-footer-newsletter-copyright", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-copyright"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var32), templ_7745c5c3_Buffer)
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-panel", Attrs: templ.Attributes{"data-class": "footer-newsletter-panel", "data-theme": "dark"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = stack.Stack(stack.StackProps{Class: "ui-footer-newsletter-panel", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-panel", "data-theme": "dark"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
 				return nil
 			})
-			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-footer-newsletter-container", Attrs: templ.Attributes{"data-class": "footer-newsletter-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = container.Container(container.ContainerProps{Class: "ui-footer-newsletter-container", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-container"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var3), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-footer-newsletter", Tag: "footer", Attrs: templ.Attributes{"data-class": "footer-newsletter"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = block.Block(block.BlockProps{Class: "ui-footer-newsletter", Tag: "footer", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

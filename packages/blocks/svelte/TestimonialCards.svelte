@@ -7,32 +7,32 @@
   let { data }: { data: TestimonialCardsData } = $props();
 </script>
 
-<Block class="ui-testimonial-cards" data-class="testimonial-cards" tag="section" aria-labelledby="testimonial-cards-title">
-  <Container class="ui-testimonial-cards-container" data-class="testimonial-cards-container">
-    <Stack class="ui-testimonial-cards-head" data-class="testimonial-cards-head">
-      <Title class="ui-testimonial-cards-title" data-class="testimonial-cards-title" as={2} id="testimonial-cards-title">
+<Block class="ui-testimonial-cards" data-class="ui-testimonial-cards" tag="section" aria-labelledby="testimonial-cards-title">
+  <Container class="ui-testimonial-cards-container" data-class="ui-testimonial-cards-container">
+    <Stack class="ui-stack-4" data-class="ui-stack-4">
+      <Title class="ui-section-title-display" data-class="ui-section-title-display" as={2} id="testimonial-cards-title">
         {data.title}
       </Title>
-      <Text class="ui-testimonial-cards-lead" data-class="testimonial-cards-lead">
+      <Text class="ui-testimonial-cards-lead" data-class="ui-testimonial-cards-lead">
         {data.lead}
       </Text>
     </Stack>
-    <List class="ui-testimonial-cards-grid" data-class="testimonial-cards-grid">
+    <List class="ui-grid-3" data-class="ui-grid-3">
       {#each data.items as item}
-        <ListItem class="ui-testimonial-cards-item" data-class="testimonial-cards-item">
-          <Card class="ui-testimonial-cards-card" data-class="testimonial-cards-card" tag="figure">
-            <Group class="ui-testimonial-cards-author" data-class="testimonial-cards-author">
-              <Image class="ui-testimonial-cards-avatar" data-class="testimonial-cards-avatar" variant="avatar" src={item.avatar.src || undefined} alt={item.avatar.alt || undefined} />
-              <Stack class="ui-testimonial-cards-who" data-class="testimonial-cards-who">
-                <Inline class="ui-testimonial-cards-name" data-class="testimonial-cards-name">
+        <ListItem class="ui-testimonial-cards-item" data-class="ui-testimonial-cards-item">
+          <Card class="ui-testimonial-cards-card" data-class="ui-testimonial-cards-card" tag="figure">
+            <Group class="ui-testimonial-cards-author" data-class="ui-testimonial-cards-author">
+              <Image class="ui-testimonial-cards-avatar" data-class="ui-testimonial-cards-avatar" variant="avatar" src={item.avatar.src || undefined} alt={item.avatar.alt || undefined} />
+              <Stack class="ui-stack-2" data-class="ui-stack-2">
+                <Inline class="ui-testimonial-cards-name" data-class="ui-testimonial-cards-name">
                   {item.name}
                 </Inline>
-                <Inline class="ui-testimonial-cards-role" data-class="testimonial-cards-role">
+                <Inline class="ui-testimonial-cards-role" data-class="ui-testimonial-cards-role">
                   {item.role}
                 </Inline>
               </Stack>
             </Group>
-            <blockquote class="ui-testimonial-cards-quote" data-class="testimonial-cards-quote">
+            <blockquote class="ui-testimonial-cards-quote" data-class="ui-testimonial-cards-quote">
               <Text>
                 {item.quote}
               </Text>

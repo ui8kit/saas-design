@@ -14,24 +14,24 @@ import (
 
 // Steps: Ordered three-step explainer.
 templ Steps(p StepsData) {
-	@block.Block(block.BlockProps{Class: "ui-steps", Tag: "section", Attrs: templ.Attributes{"data-class": "steps", "aria-labelledby": "steps-title"}}) {
-		@container.Container(container.ContainerProps{Class: "ui-steps-container", Attrs: templ.Attributes{"data-class": "steps-container"}}) {
-			@stack.Stack(stack.StackProps{Class: "ui-steps-head", Attrs: templ.Attributes{"data-class": "steps-head"}}) {
-				@title.Title(title.TitleProps{Class: "ui-steps-title", As: 2, Attrs: templ.Attributes{"data-class": "steps-title", "id": "steps-title"}}) {
+	@block.Block(block.BlockProps{Class: "ui-section ui-steps", Tag: "section", Attrs: templ.Attributes{"data-class": "ui-steps", "aria-labelledby": "steps-title"}}) {
+		@container.Container(container.ContainerProps{Class: "ui-section-container", Attrs: templ.Attributes{"data-class": "ui-section-container"}}) {
+			@stack.Stack(stack.StackProps{Class: "ui-steps-head", Attrs: templ.Attributes{"data-class": "ui-steps-head"}}) {
+				@title.Title(title.TitleProps{Class: "ui-section-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-section-title", "id": "steps-title"}}) {
 					{ p.Title }
 				}
-				@text.Text(text.TextProps{Class: "ui-steps-lead", Attrs: templ.Attributes{"data-class": "steps-lead"}}) {
+				@text.Text(text.TextProps{Class: "ui-section-lead", Attrs: templ.Attributes{"data-class": "ui-section-lead"}}) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-steps-list", Tag: "ol", Attrs: templ.Attributes{"data-class": "steps-list"}}) {
+			@list.List(list.ListProps{Class: "ui-steps-list", Tag: "ol", Attrs: templ.Attributes{"data-class": "ui-steps-list"}}) {
 				for _, item := range p.Items {
-					@list.ListItem(list.ListItemProps{Class: "ui-steps-item", Attrs: templ.Attributes{"data-class": "steps-item"}}) {
+					@list.ListItem(list.ListItemProps{Class: "ui-steps-item", Attrs: templ.Attributes{"data-class": "ui-steps-item"}}) {
 						@templ.Raw(icons.SVG(item.Icon, "ui-steps-icon"))
-						@title.Title(title.TitleProps{Class: "ui-steps-item-title", As: 3, Attrs: templ.Attributes{"data-class": "steps-item-title"}}) {
+						@title.Title(title.TitleProps{Class: "ui-item-title", As: 3, Attrs: templ.Attributes{"data-class": "ui-item-title"}}) {
 							{ item.Title }
 						}
-						@text.Text(text.TextProps{Class: "ui-steps-item-text", Attrs: templ.Attributes{"data-class": "steps-item-text"}}) {
+						@text.Text(text.TextProps{Class: "ui-muted", Attrs: templ.Attributes{"data-class": "ui-muted"}}) {
 							{ item.Text }
 						}
 					}
