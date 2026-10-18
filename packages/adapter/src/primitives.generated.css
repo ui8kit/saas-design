@@ -221,6 +221,16 @@
   .ui-separator-orientation-vertical { @apply h-full w-px; }
   .ui-separator-spaced { @apply my-4; }
   .ui-separator-strong { @apply bg-foreground; }
+  .ui-sheet { @apply fixed inset-0 z-50 flex; }
+  .ui-sheet-side-left { @apply flex-row justify-start; }
+  .ui-sheet-side-right { @apply flex-row justify-end; }
+  .ui-sheettrigger { @apply inline-flex shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring; }
+  .ui-sheettrigger-contrast { @apply bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20; }
+  .ui-sheettrigger-default { @apply bg-muted text-foreground hover:bg-accent; }
+  .ui-sheettrigger-ghost { @apply bg-transparent text-foreground hover:bg-muted; }
+  .ui-sheettrigger-size-default { @apply size-10; }
+  .ui-sheettrigger-size-lg { @apply size-12; }
+  .ui-sheettrigger-size-sm { @apply size-8; }
   .ui-span-1 { @apply col-span-1; }
   .ui-span-10 { @apply col-span-10; }
   .ui-span-11 { @apply col-span-11; }

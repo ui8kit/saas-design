@@ -16,6 +16,9 @@ step "packages/icons"
 (cd packages/icons && bun scripts/generate.ts --check)
 step "packages/ui: codegen drift + templ/svelte parity"
 (cd packages/ui && bun scripts/generate.ts --check && bun --preload ../../tools/svelte-preload.ts scripts/parity.ts)
+(cd packages/ui/templ && go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path ui >/dev/null)
+git diff --quiet -- packages/ui/templ && [ -z "$(git ls-files --others --exclude-standard packages/ui/templ)" ] || { echo "drift: packages/ui/templ *_templ.go (run templ generate)"; exit 1; }
+node --check packages/ui/behaviors/ui8kit.js && node --check packages/ui/behaviors/theme-init.js
 step "packages/blocks: DSL drift + templ/svelte parity"
 (cd packages/blocks && bun scripts/generate.ts --check && bun --preload ../../tools/svelte-preload.ts scripts/parity.ts)
 step "ui8px policy drift + lint"

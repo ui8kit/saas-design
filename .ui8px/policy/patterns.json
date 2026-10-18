@@ -2439,6 +2439,87 @@
       "text-2xl",
       "font-semibold"
     ],
+    "ui-sheet": [
+      "fixed",
+      "inset-0",
+      "z-50",
+      "flex"
+    ],
+    "ui-sheet-close-icon": [
+      "size-5"
+    ],
+    "ui-sheet-icon-close": [
+      "block"
+    ],
+    "ui-sheet-icon-open": [
+      "hidden"
+    ],
+    "ui-sheet-locked": [
+      "overflow-hidden"
+    ],
+    "ui-sheet-overlay": [
+      "absolute",
+      "inset-0",
+      "bg-foreground/40"
+    ],
+    "ui-sheet-panel": [
+      "relative",
+      "flex",
+      "h-full",
+      "w-80",
+      "max-w-full",
+      "flex-col",
+      "gap-6",
+      "overflow-auto",
+      "bg-background",
+      "p-6",
+      "text-foreground",
+      "shadow-xl"
+    ],
+    "ui-sheet-side-left": [
+      "flex-row",
+      "justify-start"
+    ],
+    "ui-sheet-side-right": [
+      "flex-row",
+      "justify-end"
+    ],
+    "ui-sheettrigger": [
+      "inline-flex",
+      "shrink-0",
+      "cursor-pointer",
+      "items-center",
+      "justify-center",
+      "rounded-full",
+      "transition-colors",
+      "focus-visible:outline-none",
+      "focus-visible:ring-2",
+      "focus-visible:ring-ring"
+    ],
+    "ui-sheettrigger-contrast": [
+      "bg-primary-foreground/10",
+      "text-primary-foreground",
+      "hover:bg-primary-foreground/20"
+    ],
+    "ui-sheettrigger-default": [
+      "bg-muted",
+      "text-foreground",
+      "hover:bg-accent"
+    ],
+    "ui-sheettrigger-ghost": [
+      "bg-transparent",
+      "text-foreground",
+      "hover:bg-muted"
+    ],
+    "ui-sheettrigger-size-default": [
+      "size-10"
+    ],
+    "ui-sheettrigger-size-lg": [
+      "size-12"
+    ],
+    "ui-sheettrigger-size-sm": [
+      "size-8"
+    ],
     "ui-signup-card": [
       "py-24"
     ],

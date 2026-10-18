@@ -13,3 +13,21 @@
   .ui-themetoggle-sun { @apply hidden size-5 dark:block; }
   .ui-themetoggle-moon { @apply block size-5 dark:hidden; }
 }
+
+/* Sheet (packages/ui/bricks/sheet): overlay + panel; trigger shows menu when closed, x when open. */
+@layer components {
+  .ui-sheet-overlay { @apply absolute inset-0 bg-foreground/40; }
+  .ui-sheet-panel { @apply relative flex h-full w-80 max-w-full flex-col gap-6 overflow-auto bg-background p-6 text-foreground shadow-xl; }
+  .ui-sheet-icon-open { @apply block size-5; }
+  .ui-sheet-icon-close { @apply hidden size-5; }
+  [aria-expanded="true"] > .ui-sheet-icon-open { @apply hidden; }
+  [aria-expanded="true"] > .ui-sheet-icon-close { @apply block; }
+  .ui-sheet-close-icon { @apply size-5; }
+  .ui-sheet-locked { @apply overflow-hidden; }
+}
+
+/* Native controls/scrollbars follow the active scheme (.dark set by behaviors/theme-init.js). */
+@layer base {
+  :root { @apply scheme-light; }
+  :root.dark { @apply scheme-dark; }
+}

@@ -41,6 +41,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/radio"
 	selectfield "github.com/ui8kit/saas-design/packages/ui/templ/ui/select"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/separator"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/sheet"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/stack"
 	formswitch "github.com/ui8kit/saas-design/packages/ui/templ/ui/switch"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/table"
@@ -442,6 +443,24 @@ func renderCase(ctx context.Context, name string, propsJSON []byte, children tem
 			return err
 		}
 		return themetoggle.ThemeToggle(p).Render(ctx, buf)
+	case "sheet/sheet/Sheet":
+		var p sheet.SheetProps
+		if err := json.Unmarshal(propsJSON, &p); err != nil {
+			return err
+		}
+		return sheet.Sheet(p).Render(templ.WithChildren(ctx, children), buf)
+	case "sheet/sheet/SheetTrigger":
+		var p sheet.SheetTriggerProps
+		if err := json.Unmarshal(propsJSON, &p); err != nil {
+			return err
+		}
+		return sheet.SheetTrigger(p).Render(ctx, buf)
+	case "sheet/sheet/SheetClose":
+		var p sheet.SheetCloseProps
+		if err := json.Unmarshal(propsJSON, &p); err != nil {
+			return err
+		}
+		return sheet.SheetClose(p).Render(ctx, buf)
 	}
 	return fmt.Errorf("unknown case %q", name)
 }

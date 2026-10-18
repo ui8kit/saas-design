@@ -141,6 +141,8 @@
     "rotate-180",
     "rotate-19",
     "rounded-t-md",
+    "scheme-dark",
+    "scheme-light",
     "self-center",
     "self-end",
     "self-start",
@@ -178,6 +180,7 @@
     "w-4/25",
     "w-5/4",
     "w-64",
+    "w-80",
     "w-px",
     "z-50"
   ]
