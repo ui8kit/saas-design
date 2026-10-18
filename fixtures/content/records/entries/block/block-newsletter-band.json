@@ -18,6 +18,7 @@
     },
     "runtimes": {
       "value": [
+        "templ",
         "svelte"
       ]
     },

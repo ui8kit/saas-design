@@ -240,5 +240,590 @@
       "ui-footer-newsletter-submit",
       "ui-footer-newsletter-copyright"
     ]
+  },
+  {
+    "id": "announcement-bar",
+    "name": "AnnouncementBar",
+    "title": "Announcement bar",
+    "category": "navigation",
+    "description": "One-line release note above the navbar with a link.",
+    "figma": null,
+    "classes": [
+      "ui-announcement-bar",
+      "ui-announcement-bar-container",
+      "ui-announcement-bar-text",
+      "ui-announcement-bar-link",
+      "ui-announcement-bar-arrow"
+    ]
+  },
+  {
+    "id": "hero-centered",
+    "name": "HeroCentered",
+    "title": "Hero centered",
+    "category": "hero",
+    "description": "Muted band with eyebrow badge, headline, lead and two actions.",
+    "figma": null,
+    "classes": [
+      "ui-hero-centered",
+      "ui-hero-centered-container",
+      "ui-hero-centered-title",
+      "ui-hero-centered-lead",
+      "ui-hero-centered-actions"
+    ]
+  },
+  {
+    "id": "hero-split",
+    "name": "HeroSplit",
+    "title": "Hero split",
+    "category": "hero",
+    "description": "Headline and actions beside an app screen on an accent panel.",
+    "figma": null,
+    "classes": [
+      "ui-hero-split",
+      "ui-hero-split-container",
+      "ui-hero-split-copy",
+      "ui-hero-split-title",
+      "ui-hero-split-lead",
+      "ui-hero-split-actions",
+      "ui-hero-split-play",
+      "ui-hero-split-art",
+      "ui-hero-split-image"
+    ]
+  },
+  {
+    "id": "logo-cloud",
+    "name": "LogoCloud",
+    "title": "Logo cloud",
+    "category": "social-proof",
+    "description": "Caption over a row of customer logos.",
+    "figma": null,
+    "classes": [
+      "ui-logo-cloud",
+      "ui-logo-cloud-container",
+      "ui-logo-cloud-title",
+      "ui-logo-cloud-logos",
+      "ui-logo-cloud-logo"
+    ]
+  },
+  {
+    "id": "stats-row",
+    "name": "StatsRow",
+    "title": "Stats row",
+    "category": "social-proof",
+    "description": "Four headline numbers with labels.",
+    "figma": null,
+    "classes": [
+      "ui-stats-row",
+      "ui-stats-row-container",
+      "ui-stats-row-title",
+      "ui-stats-row-list",
+      "ui-stats-row-item",
+      "ui-stats-row-value",
+      "ui-stats-row-label"
+    ]
+  },
+  {
+    "id": "feature-grid",
+    "name": "FeatureGrid",
+    "title": "Feature grid",
+    "category": "features",
+    "description": "Six features with icon badges on a plain grid.",
+    "figma": null,
+    "classes": [
+      "ui-feature-grid",
+      "ui-feature-grid-container",
+      "ui-feature-grid-head",
+      "ui-feature-grid-title",
+      "ui-feature-grid-lead",
+      "ui-feature-grid-grid",
+      "ui-feature-grid-item",
+      "ui-feature-grid-badge",
+      "ui-feature-grid-icon",
+      "ui-feature-grid-item-title",
+      "ui-feature-grid-item-text"
+    ]
+  },
+  {
+    "id": "feature-split",
+    "name": "FeatureSplit",
+    "title": "Feature split",
+    "category": "features",
+    "description": "Checklist of benefits beside an app screen.",
+    "figma": null,
+    "classes": [
+      "ui-feature-split",
+      "ui-feature-split-container",
+      "ui-feature-split-art",
+      "ui-feature-split-image",
+      "ui-feature-split-copy",
+      "ui-feature-split-head",
+      "ui-feature-split-title",
+      "ui-feature-split-lead",
+      "ui-feature-split-list",
+      "ui-feature-split-item",
+      "ui-feature-split-check",
+      "ui-feature-split-item-body",
+      "ui-feature-split-item-title",
+      "ui-feature-split-item-text"
+    ]
+  },
+  {
+    "id": "steps",
+    "name": "Steps",
+    "title": "Steps",
+    "category": "features",
+    "description": "Ordered three-step explainer.",
+    "figma": null,
+    "classes": [
+      "ui-steps",
+      "ui-steps-container",
+      "ui-steps-head",
+      "ui-steps-title",
+      "ui-steps-lead",
+      "ui-steps-list",
+      "ui-steps-item",
+      "ui-steps-icon",
+      "ui-steps-item-title",
+      "ui-steps-item-text"
+    ]
+  },
+  {
+    "id": "integrations",
+    "name": "Integrations",
+    "title": "Integrations",
+    "category": "features",
+    "description": "Grid of integration cards.",
+    "figma": null,
+    "classes": [
+      "ui-integrations",
+      "ui-integrations-container",
+      "ui-integrations-head",
+      "ui-integrations-title",
+      "ui-integrations-lead",
+      "ui-integrations-grid",
+      "ui-integrations-item",
+      "ui-integrations-badge",
+      "ui-integrations-icon",
+      "ui-integrations-body",
+      "ui-integrations-item-title",
+      "ui-integrations-item-text"
+    ]
+  },
+  {
+    "id": "pricing-three-tiers",
+    "name": "PricingThreeTiers",
+    "title": "Pricing, three tiers",
+    "category": "pricing",
+    "description": "Free, Premium (dark scope) and Team plans.",
+    "figma": null,
+    "classes": [
+      "ui-pricing-three-tiers",
+      "ui-pricing-three-tiers-container",
+      "ui-pricing-three-tiers-head",
+      "ui-pricing-three-tiers-title",
+      "ui-pricing-three-tiers-lead",
+      "ui-pricing-three-tiers-plans",
+      "ui-pricing-three-tiers-plan",
+      "ui-pricing-three-tiers-plan-theme-light",
+      "ui-pricing-three-tiers-plan-theme-dark",
+      "ui-pricing-three-tiers-plan-name-row",
+      "ui-pricing-three-tiers-plan-name",
+      "ui-pricing-three-tiers-plan-description",
+      "ui-pricing-three-tiers-price",
+      "ui-pricing-three-tiers-price-value",
+      "ui-pricing-three-tiers-price-period",
+      "ui-pricing-three-tiers-features",
+      "ui-pricing-three-tiers-feature",
+      "ui-pricing-three-tiers-check",
+      "ui-pricing-three-tiers-cross",
+      "ui-pricing-three-tiers-plan-cta"
+    ]
+  },
+  {
+    "id": "comparison-table",
+    "name": "ComparisonTable",
+    "title": "Comparison table",
+    "category": "pricing",
+    "description": "Feature matrix for Free vs Premium.",
+    "figma": null,
+    "classes": [
+      "ui-comparison-table",
+      "ui-comparison-table-container",
+      "ui-comparison-table-head",
+      "ui-comparison-table-title",
+      "ui-comparison-table-scroll",
+      "ui-comparison-table-table",
+      "ui-comparison-table-thead",
+      "ui-comparison-table-th",
+      "ui-comparison-table-th-plan",
+      "ui-comparison-table-th-plan-2",
+      "ui-comparison-table-row",
+      "ui-comparison-table-feature",
+      "ui-comparison-table-cell",
+      "ui-comparison-table-yes",
+      "ui-comparison-table-sr",
+      "ui-comparison-table-no",
+      "ui-comparison-table-sr-2",
+      "ui-comparison-table-cell-2",
+      "ui-comparison-table-yes-2",
+      "ui-comparison-table-sr-3",
+      "ui-comparison-table-no-2",
+      "ui-comparison-table-sr-4"
+    ]
+  },
+  {
+    "id": "testimonial-quote",
+    "name": "TestimonialQuote",
+    "title": "Testimonial quote",
+    "category": "testimonials",
+    "description": "One large quote with author on a pink panel.",
+    "figma": null,
+    "classes": [
+      "ui-testimonial-quote",
+      "ui-testimonial-quote-container",
+      "ui-testimonial-quote-panel",
+      "ui-testimonial-quote-quote",
+      "ui-testimonial-quote-author",
+      "ui-testimonial-quote-avatar",
+      "ui-testimonial-quote-who",
+      "ui-testimonial-quote-name",
+      "ui-testimonial-quote-role"
+    ]
+  },
+  {
+    "id": "team-grid",
+    "name": "TeamGrid",
+    "title": "Team grid",
+    "category": "about",
+    "description": "People with avatar, name and role.",
+    "figma": null,
+    "classes": [
+      "ui-team-grid",
+      "ui-team-grid-container",
+      "ui-team-grid-head",
+      "ui-team-grid-title",
+      "ui-team-grid-lead",
+      "ui-team-grid-grid",
+      "ui-team-grid-member",
+      "ui-team-grid-avatar",
+      "ui-team-grid-name",
+      "ui-team-grid-role"
+    ]
+  },
+  {
+    "id": "blog-cards",
+    "name": "BlogCards",
+    "title": "Blog cards",
+    "category": "content",
+    "description": "Three latest posts with image, tag, date and excerpt.",
+    "figma": null,
+    "classes": [
+      "ui-blog-cards",
+      "ui-blog-cards-container",
+      "ui-blog-cards-head",
+      "ui-blog-cards-title",
+      "ui-blog-cards-lead",
+      "ui-blog-cards-grid",
+      "ui-blog-cards-post",
+      "ui-blog-cards-media",
+      "ui-blog-cards-image",
+      "ui-blog-cards-body",
+      "ui-blog-cards-meta",
+      "ui-blog-cards-date",
+      "ui-blog-cards-post-title",
+      "ui-blog-cards-post-link",
+      "ui-blog-cards-excerpt"
+    ]
+  },
+  {
+    "id": "changelog",
+    "name": "Changelog",
+    "title": "Changelog",
+    "category": "content",
+    "description": "Release timeline with version badges.",
+    "figma": null,
+    "classes": [
+      "ui-changelog",
+      "ui-changelog-container",
+      "ui-changelog-head",
+      "ui-changelog-title",
+      "ui-changelog-lead",
+      "ui-changelog-list",
+      "ui-changelog-item",
+      "ui-changelog-meta",
+      "ui-changelog-date",
+      "ui-changelog-item-title",
+      "ui-changelog-item-text"
+    ]
+  },
+  {
+    "id": "faq-accordion",
+    "name": "FaqAccordion",
+    "title": "FAQ accordion",
+    "category": "faq",
+    "description": "Native details/summary list; first item open.",
+    "figma": null,
+    "classes": [
+      "ui-faq-accordion",
+      "ui-faq-accordion-container",
+      "ui-faq-accordion-head",
+      "ui-faq-accordion-title",
+      "ui-faq-accordion-lead",
+      "ui-faq-accordion-list",
+      "ui-faq-accordion-item",
+      "ui-faq-accordion-question",
+      "ui-faq-accordion-chevron",
+      "ui-faq-accordion-answer"
+    ]
+  },
+  {
+    "id": "cta-centered",
+    "name": "CtaCentered",
+    "title": "CTA centered",
+    "category": "cta",
+    "description": "Primary band with headline and two actions.",
+    "figma": null,
+    "classes": [
+      "ui-cta-centered",
+      "ui-cta-centered-container",
+      "ui-cta-centered-title",
+      "ui-cta-centered-text",
+      "ui-cta-centered-actions"
+    ]
+  },
+  {
+    "id": "app-download",
+    "name": "AppDownload",
+    "title": "App download",
+    "category": "cta",
+    "description": "Store buttons beside a phone on a dark panel.",
+    "figma": null,
+    "classes": [
+      "ui-app-download",
+      "ui-app-download-container",
+      "ui-app-download-copy",
+      "ui-app-download-title",
+      "ui-app-download-text",
+      "ui-app-download-stores",
+      "ui-app-download-apple",
+      "ui-app-download-phone",
+      "ui-app-download-image"
+    ]
+  },
+  {
+    "id": "newsletter-band",
+    "name": "NewsletterBand",
+    "title": "Newsletter band",
+    "category": "forms",
+    "description": "Inline email signup on an accent band.",
+    "figma": null,
+    "classes": [
+      "ui-newsletter-band",
+      "ui-newsletter-band-container",
+      "ui-newsletter-band-copy",
+      "ui-newsletter-band-title",
+      "ui-newsletter-band-text",
+      "ui-newsletter-band-form",
+      "ui-newsletter-band-label",
+      "ui-newsletter-band-input"
+    ]
+  },
+  {
+    "id": "contact-form",
+    "name": "ContactForm",
+    "title": "Contact form",
+    "category": "forms",
+    "description": "Name, email and message with labels.",
+    "figma": null,
+    "classes": [
+      "ui-contact-form",
+      "ui-contact-form-container",
+      "ui-contact-form-copy",
+      "ui-contact-form-title",
+      "ui-contact-form-text",
+      "ui-contact-form-form",
+      "ui-contact-form-field",
+      "ui-contact-form-label",
+      "ui-contact-form-input",
+      "ui-contact-form-field-message",
+      "ui-contact-form-label-message",
+      "ui-contact-form-textarea",
+      "ui-contact-form-button"
+    ]
+  },
+  {
+    "id": "login-card",
+    "name": "LoginCard",
+    "title": "Login card",
+    "category": "forms",
+    "description": "Login card with labelled fields on a centered card.",
+    "figma": null,
+    "classes": [
+      "ui-login-card",
+      "ui-login-card-container",
+      "ui-login-card-card",
+      "ui-login-card-head",
+      "ui-login-card-title",
+      "ui-login-card-text",
+      "ui-login-card-form",
+      "ui-login-card-field",
+      "ui-login-card-label",
+      "ui-login-card-input",
+      "ui-login-card-button",
+      "ui-login-card-foot"
+    ]
+  },
+  {
+    "id": "signup-card",
+    "name": "SignupCard",
+    "title": "Signup card",
+    "category": "forms",
+    "description": "Signup card with labelled fields on a centered card.",
+    "figma": null,
+    "classes": [
+      "ui-signup-card",
+      "ui-signup-card-container",
+      "ui-signup-card-card",
+      "ui-signup-card-head",
+      "ui-signup-card-title",
+      "ui-signup-card-text",
+      "ui-signup-card-form",
+      "ui-signup-card-field",
+      "ui-signup-card-label",
+      "ui-signup-card-input",
+      "ui-signup-card-button",
+      "ui-signup-card-foot"
+    ]
+  },
+  {
+    "id": "settings-panel",
+    "name": "SettingsPanel",
+    "title": "Settings panel",
+    "category": "app",
+    "description": "Notification switches in a fieldset with a save action.",
+    "figma": null,
+    "classes": [
+      "ui-settings-panel",
+      "ui-settings-panel-container",
+      "ui-settings-panel-form",
+      "ui-settings-panel-fieldset",
+      "ui-settings-panel-legend",
+      "ui-settings-panel-title",
+      "ui-settings-panel-text",
+      "ui-settings-panel-option",
+      "ui-settings-panel-label",
+      "ui-settings-panel-switch",
+      "ui-settings-panel-button"
+    ]
+  },
+  {
+    "id": "dashboard-stats",
+    "name": "DashboardStats",
+    "title": "Dashboard stats",
+    "category": "app",
+    "description": "KPI cards for today, streak, week and focus time.",
+    "figma": null,
+    "classes": [
+      "ui-dashboard-stats",
+      "ui-dashboard-stats-container",
+      "ui-dashboard-stats-title",
+      "ui-dashboard-stats-grid",
+      "ui-dashboard-stats-card",
+      "ui-dashboard-stats-label",
+      "ui-dashboard-stats-value",
+      "ui-dashboard-stats-hint"
+    ]
+  },
+  {
+    "id": "habits-table",
+    "name": "HabitsTable",
+    "title": "Habits table",
+    "category": "app",
+    "description": "Today's habits with streak, time and status badge.",
+    "figma": null,
+    "classes": [
+      "ui-habits-table",
+      "ui-habits-table-container",
+      "ui-habits-table-title",
+      "ui-habits-table-scroll",
+      "ui-habits-table-table",
+      "ui-habits-table-thead",
+      "ui-habits-table-th",
+      "ui-habits-table-th-2",
+      "ui-habits-table-th-3",
+      "ui-habits-table-th-4",
+      "ui-habits-table-row",
+      "ui-habits-table-habit",
+      "ui-habits-table-cell",
+      "ui-habits-table-cell-2",
+      "ui-habits-table-cell-3",
+      "ui-habits-table-status",
+      "ui-habits-table-status-tone-done",
+      "ui-habits-table-status-tone-pending"
+    ]
+  },
+  {
+    "id": "empty-state",
+    "name": "EmptyState",
+    "title": "Empty state",
+    "category": "app",
+    "description": "Icon, message and primary action when a list is empty.",
+    "figma": null,
+    "classes": [
+      "ui-empty-state",
+      "ui-empty-state-container",
+      "ui-empty-state-badge",
+      "ui-empty-state-icon",
+      "ui-empty-state-title",
+      "ui-empty-state-text",
+      "ui-empty-state-plus"
+    ]
+  },
+  {
+    "id": "not-found",
+    "name": "NotFound",
+    "title": "Not found",
+    "category": "app",
+    "description": "404 page body with a way back.",
+    "figma": null,
+    "classes": [
+      "ui-not-found",
+      "ui-not-found-container",
+      "ui-not-found-code",
+      "ui-not-found-title",
+      "ui-not-found-text"
+    ]
+  },
+  {
+    "id": "cookie-banner",
+    "name": "CookieBanner",
+    "title": "Cookie banner",
+    "category": "overlay",
+    "description": "Consent notice with accept/decline (static; floating layer gets the only shadow).",
+    "figma": null,
+    "classes": [
+      "ui-cookie-banner",
+      "ui-cookie-banner-card",
+      "ui-cookie-banner-text",
+      "ui-cookie-banner-actions"
+    ]
+  },
+  {
+    "id": "footer-simple",
+    "name": "FooterSimple",
+    "title": "Footer simple",
+    "category": "footer",
+    "description": "Brand, inline links and copyright on one row.",
+    "figma": null,
+    "classes": [
+      "ui-footer-simple",
+      "ui-footer-simple-container",
+      "ui-footer-simple-brand",
+      "ui-footer-simple-mark",
+      "ui-footer-simple-nav",
+      "ui-footer-simple-links",
+      "ui-footer-simple-link",
+      "ui-footer-simple-copyright"
+    ]
   }
 ]

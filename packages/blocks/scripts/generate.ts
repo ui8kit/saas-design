@@ -23,7 +23,9 @@ type Field = { name: string; type: string };
 const compDir = new Map<string, string>();
 for (const m of readFileSync(UI_SVELTE_INDEX, "utf8").matchAll(/export \{ default as (\w+) \} from "\.\/([\w-]+)\/\w+\.svelte"/g)) compDir.set(m[1]!, m[2]!);
 const goFields = new Map<string, Field[]>();
+const goPkg = new Map<string, string>(); // dir -> Go package name (switch → formswitch, select → selectfield)
 for (const dir of readdirSync(UI_TEMPL)) for (const f of readdirSync(join(UI_TEMPL, dir)).filter((f) => f.endsWith(".templ"))) {
+  goPkg.set(dir, /^package (\w+)/m.exec(readFileSync(join(UI_TEMPL, dir, f), "utf8"))![1]!);
   for (const m of readFileSync(join(UI_TEMPL, dir, f), "utf8").matchAll(/type (\w+)Props struct \{([\s\S]*?)\n\}/g)) {
     goFields.set(m[1]!, [...m[2]!.matchAll(/^\s+(\w+)\s+([\w.]+)/gm)].map((x) => ({ name: x[1]!, type: x[2]! })));
   }
@@ -55,7 +57,8 @@ function resolveExpr(e: Expr, sc: Scope): R {
 const cssRules = new Map<string, { css: string; block: string }>();
 function addCss(cls: string, css: string | undefined, block: string) {
   if (!css) return;
-  if (cssRules.has(cls)) throw new Error(`duplicate class ${cls}`);
+  const prev = cssRules.get(cls);
+  if (prev && prev.css !== css.trim().replace(/\s+/g, " ")) throw new Error(`class ${cls} defined twice with different css`);
   if (/\[|\]|style=|!important/.test(css)) throw new Error(`[${block}] arbitrary value or style in ${cls}: ${css}`);
   cssRules.set(cls, { css: css.trim().replace(/\s+/g, " "), block });
 }
@@ -64,9 +67,17 @@ type ClassOut = { goExpr: string | null; svAttr: string | null; dataClass: strin
 function classFor(n: Node & { ui?: string }, sc: Scope, isRoot: boolean): ClassOut {
   const st = n as any;
   if (!isRoot && !st.ui && !st.css && !st.variants) return { goExpr: null, svAttr: null, dataClass: null };
-  const base = `ui-${sc.block.id}${st.ui ? "-" + st.ui : ""}`;
+  let ui: string | undefined = st.ui;
+  if (!isRoot && !ui) {
+    // unnamed styled node: derive a part name from the element (button, button-2, …)
+    const stem = String((n as any).comp ?? (n as any).tag).replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+    const want = (st.css ?? "").trim().replace(/\s+/g, " ");
+    for (let i = 1; ; i++) { const cand = i === 1 ? stem : `${stem}-${i}`; const r = cssRules.get(`ui-${sc.block.id}-${cand}`); if (!r || r.css === want) { ui = cand; break; } }
+  }
+  const base = `ui-${sc.block.id}${ui ? "-" + ui : ""}`;
   addCss(base, st.css ?? (isRoot ? undefined : undefined), sc.block.id);
   if (!st.css && !cssRules.has(base)) cssRules.set(base, { css: "", block: sc.block.id });
+  else if (!st.css && cssRules.get(base)!.css) throw new Error(`class ${base} used with and without css`);
   let goExpr = goStr(base), sv = base;
   for (const [key, choices] of Object.entries((st.variants ?? {}) as Record<string, Record<string, string>>)) {
     for (const [v, css] of Object.entries(choices)) addCss(`${base}-${key}-${v}`, css, sc.block.id);
@@ -83,6 +94,7 @@ function classFor(n: Node & { ui?: string }, sc: Scope, isRoot: boolean): ClassO
 function goVal(v: Val, sc: Scope, type?: string): string {
   if (isExpr(v)) return resolveExpr(v, sc).go;
   if (typeof v === "boolean") return String(v);
+  if (type === "int") { if (!/^-?\d+$/.test(v)) throw new Error(`[${sc.block.id}] int prop needs digits: ${v}`); return v; }
   if (type?.endsWith("HeadingLevel")) { const m = /^h([1-6])$/.exec(v); if (!m) throw new Error(`[${sc.block.id}] bad heading level ${v}`); return m[1]!; }
   return goStr(v);
 }
@@ -166,10 +178,13 @@ function emit(n: Child, sc: Scope, ctx: Ctx, d: number, isRoot = false): { go: s
         else attrs.push(`${goStr(k)}: ${goVal(v, sc)}`);
         // heading levels are numeric in both runtimes (Go uiutils.HeadingLevel, Svelte 1–6)
         if (f?.type.endsWith("HeadingLevel") && typeof v === "string") svProps.push(`${k}={${goVal(v, sc, f.type)}}`);
+        // Go omits empty string fields (uiutils.IsSetStr); mirror that in Svelte
+        else if (f?.type === "string" && isExpr(v)) svProps.push(`${k}={${resolveExpr(v, sc).sv} || undefined}`);
         else svProps.push(svAttr(k, v, sc));
       }
       if (attrs.length) goProps.push(`Attrs: templ.Attributes{${attrs.join(", ")}}`);
-      const call = `${dir}.${n.comp}(${dir}.${n.comp}Props{${goProps.join(", ")}})`;
+      const pkg = goPkg.get(dir)!;
+      const call = `${pkg}.${n.comp}(${pkg}.${n.comp}Props{${goProps.join(", ")}})`;
       const svOpen = `<${n.comp}${svProps.length ? " " + svProps.join(" ") : ""}`;
       if (!n.children.length) return { go: `${ind(d)}@${call}\n`, sv: `${sind(d)}${svOpen} />\n` };
       const inner = join2(kids(n.children, sc));
@@ -214,7 +229,7 @@ for (const b of blocks) {
   const sc: Scope = { root: b.schema, vars: new Map(), block: b };
   const body = emit(b.root, sc, ctx, 1, true);
   for (const u of ctx.uses) if (!ids.has(u)) throw new Error(`[${b.id}] uses unknown block ${u}`);
-  const goImp = [...ctx.goImports].sort().map((d) => `\t"github.com/ui8kit/saas-design/packages/ui/templ/ui/${d}"`);
+  const goImp = [...ctx.goImports].sort().map((d) => `\t${goPkg.get(d) !== d ? goPkg.get(d) + " " : ""}"github.com/ui8kit/saas-design/packages/ui/templ/ui/${d}"`);
   if (ctx.icons) goImp.push(`\ticons "github.com/ui8kit/saas-design/packages/icons/templ"`);
   files.set(`templ/blocks/${b.id}.templ`, `// Code generated by packages/blocks/scripts/generate.ts from defs/${b.id}.ts. DO NOT EDIT.\n\npackage blocks\n\nimport (\n${goImp.join("\n")}\n)\n\n// ${name}: ${b.description}\ntempl ${name}(p ${name}Data) {\n${body.go}}\n`);
   const svImp = [`  import { ${[...ctx.svImports].sort().join(", ")} } from "@saas-design/ui";`];

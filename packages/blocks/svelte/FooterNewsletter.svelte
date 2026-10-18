@@ -13,7 +13,7 @@
     <Stack class="ui-footer-newsletter-panel" data-class="footer-newsletter-panel" data-theme="dark">
       <Grid class="ui-footer-newsletter-top" data-class="footer-newsletter-top">
         <Stack class="ui-footer-newsletter-brand" data-class="footer-newsletter-brand">
-          <Link class="ui-footer-newsletter-brand-link" data-class="footer-newsletter-brand-link" href={data.href}>
+          <Link class="ui-footer-newsletter-brand-link" data-class="footer-newsletter-brand-link" href={data.href || undefined}>
             {@html svg("brand-mark", `ui-footer-newsletter-mark`)}
             <Inline>
               {data.brand}
@@ -25,7 +25,7 @@
           <List class="ui-footer-newsletter-socials" data-class="footer-newsletter-socials">
             {#each data.socials as s}
               <ListItem>
-                <Link class="ui-footer-newsletter-social" data-class="footer-newsletter-social" href={s.href} aria-label={s.label}>
+                <Link class="ui-footer-newsletter-social" data-class="footer-newsletter-social" href={s.href || undefined} aria-label={s.label || undefined}>
                   {@html svg(s.icon, `ui-footer-newsletter-social-icon`)}
                 </Link>
               </ListItem>
@@ -40,7 +40,7 @@
             <List class="ui-footer-newsletter-links" data-class="footer-newsletter-links">
               {#each col.links as l}
                 <ListItem>
-                  <Link class="ui-footer-newsletter-link" data-class="footer-newsletter-link" href={l.href}>
+                  <Link class="ui-footer-newsletter-link" data-class="footer-newsletter-link" href={l.href || undefined}>
                     {l.label}
                   </Link>
                 </ListItem>
@@ -55,11 +55,11 @@
           <Text class="ui-footer-newsletter-newsletter-text" data-class="footer-newsletter-newsletter-text">
             {data.newsletter.text}
           </Text>
-          <Form class="ui-footer-newsletter-form" data-class="footer-newsletter-form" action={data.newsletter.action} method="post">
+          <Form class="ui-footer-newsletter-form" data-class="footer-newsletter-form" action={data.newsletter.action || undefined} method="post">
             <Label class="ui-footer-newsletter-label" data-class="footer-newsletter-label" for="footer-newsletter-email">
               {data.newsletter.label}
             </Label>
-            <Input class="ui-footer-newsletter-input" data-class="footer-newsletter-input" id="footer-newsletter-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.newsletter.placeholder} />
+            <Input class="ui-footer-newsletter-input" data-class="footer-newsletter-input" id="footer-newsletter-email" type="email" name="email" autocomplete="email" required={true} placeholder={data.newsletter.placeholder || undefined} />
             <Button class="ui-footer-newsletter-submit" data-class="footer-newsletter-submit" type="submit">
               {data.newsletter.button}
             </Button>

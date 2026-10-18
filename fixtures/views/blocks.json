@@ -1,0 +1,1267 @@
+{
+  "blocks": [
+    {
+      "block": "navbar",
+      "data": {
+        "label": "Main navigation",
+        "brand": "Habitus",
+        "href": "#top",
+        "items": [
+          {
+            "label": "Home",
+            "href": "#top"
+          },
+          {
+            "label": "Features",
+            "href": "#why"
+          },
+          {
+            "label": "How it works",
+            "href": "#inside"
+          },
+          {
+            "label": "Blog",
+            "href": "#blog"
+          },
+          {
+            "label": "Resources",
+            "href": "#resources"
+          },
+          {
+            "label": "About Us",
+            "href": "#about"
+          }
+        ],
+        "cta": {
+          "label": "Log In",
+          "href": "#login"
+        }
+      }
+    },
+    {
+      "block": "hero-phones",
+      "data": {
+        "nav": {
+          "label": "Main navigation",
+          "brand": "Habitus",
+          "href": "#top",
+          "items": [
+            {
+              "label": "Home",
+              "href": "#top"
+            },
+            {
+              "label": "Features",
+              "href": "#why"
+            },
+            {
+              "label": "How it works",
+              "href": "#inside"
+            },
+            {
+              "label": "Blog",
+              "href": "#blog"
+            },
+            {
+              "label": "Resources",
+              "href": "#resources"
+            },
+            {
+              "label": "About Us",
+              "href": "#about"
+            }
+          ],
+          "cta": {
+            "label": "Log In",
+            "href": "#login"
+          }
+        },
+        "title": "Build Better Habits. One Day at a Time.",
+        "lead": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+        "badge": "Loved by 1M+ users worldwide",
+        "primary": {
+          "label": "Get Started Free",
+          "href": "#pricing"
+        },
+        "secondary": {
+          "label": "Watch Demo",
+          "href": "#inside"
+        },
+        "screens": [
+          {
+            "src": "/media/screen-habit-tracker.png",
+            "alt": ""
+          },
+          {
+            "src": "/media/screen-settings.png",
+            "alt": ""
+          },
+          {
+            "src": "/media/screen-dashboard.png",
+            "alt": ""
+          },
+          {
+            "src": "/media/screen-goals.png",
+            "alt": ""
+          }
+        ]
+      }
+    },
+    {
+      "block": "feature-cards",
+      "data": {
+        "id": "why",
+        "title": "Why you’ll love it",
+        "lead": "Designed to help you stay on track, effortlessly.",
+        "items": [
+          {
+            "icon": "bell",
+            "title": "Smart Reminders",
+            "text": "Never miss a habit again. Set daily notifications or let the app suggest the best time."
+          },
+          {
+            "icon": "chart-line",
+            "title": "Progress Analytics",
+            "text": "See your growth with weekly reports, streaks, and visual heatmaps."
+          },
+          {
+            "icon": "flame",
+            "title": "Streak Tracking",
+            "text": "Stay motivated by building unbreakable streaks and unlocking milestones."
+          }
+        ]
+      }
+    },
+    {
+      "block": "social-proof-split",
+      "data": {
+        "title": "Join thousands of users from top companies using Habitus to build better habits",
+        "screen": {
+          "src": "/media/screen-habit-tracker.png",
+          "alt": "Habit tracker screen of the Habitus app"
+        },
+        "logos": [
+          {
+            "src": "/media/logo-google.svg",
+            "alt": "Google"
+          },
+          {
+            "src": "/media/logo-spotify.svg",
+            "alt": "Spotify"
+          },
+          {
+            "src": "/media/logo-treehouse.svg",
+            "alt": "Treehouse"
+          },
+          {
+            "src": "/media/logo-braze.svg",
+            "alt": "Braze"
+          }
+        ]
+      }
+    },
+    {
+      "block": "app-gallery",
+      "data": {
+        "id": "inside",
+        "title": "Take a Look Inside",
+        "lead": "A simple, beautiful interface built for everyday use.",
+        "tiles": [
+          {
+            "tone": "lilac",
+            "src": "/media/screen-dashboard.png",
+            "alt": "Dashboard screen of the Habitus app"
+          },
+          {
+            "tone": "primary",
+            "src": "/media/screen-habit-tracker.png",
+            "alt": "Habit tracker screen of the Habitus app"
+          },
+          {
+            "tone": "secondary",
+            "src": "/media/screen-settings.png",
+            "alt": "Settings screen of the Habitus app"
+          },
+          {
+            "tone": "sky",
+            "src": "/media/screen-goals.png",
+            "alt": "Goals screen of the Habitus app"
+          },
+          {
+            "tone": "pink",
+            "src": "",
+            "alt": ""
+          }
+        ]
+      }
+    },
+    {
+      "block": "testimonial-cards",
+      "data": {
+        "title": "What our users say",
+        "lead": "Real stories from people who turned their goals into habits.",
+        "items": [
+          {
+            "name": "Sarah T.",
+            "role": "Writer",
+            "quote": "\"I've finally stayed consistent with journaling for 90 days. This app made it effortless.\"",
+            "avatar": {
+              "src": "/media/avatar-sarah.jpg",
+              "alt": "Sarah T."
+            }
+          },
+          {
+            "name": "James K.",
+            "role": "Software Engineer",
+            "quote": "\"Seeing my progress visually keeps me motivated every day. The reminders are just perfect!\"",
+            "avatar": {
+              "src": "/media/avatar-james.jpg",
+              "alt": "James K."
+            }
+          },
+          {
+            "name": "Priya R.",
+            "role": "Wellness Coach",
+            "quote": "\"I've tried several habit trackers, but this one is the only one I actually stuck with.\"",
+            "avatar": {
+              "src": "/media/avatar-priya.jpg",
+              "alt": "Priya R."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block": "cta-split",
+      "data": {
+        "title": "Ready to build better habits?",
+        "text": "Take control of your daily routines, stay consistent with the goals that matter, and build meaningful progress — one habit at a time. With Habitus, you’re just a step away from creating a better version of yourself.",
+        "cta": {
+          "label": "Start Tracking – It’s Free",
+          "href": "#pricing"
+        }
+      }
+    },
+    {
+      "block": "pricing-two-plans",
+      "data": {
+        "id": "pricing",
+        "title": "Simple, transparent pricing",
+        "lead": "Start free. Upgrade when you're ready.",
+        "plans": [
+          {
+            "theme": "light",
+            "name": "Free",
+            "badge": "",
+            "description": "Perfect to get started",
+            "price": "$0",
+            "period": "",
+            "features": [
+              {
+                "label": "Track unlimited habits",
+                "included": true
+              },
+              {
+                "label": "Daily reminders",
+                "included": true
+              },
+              {
+                "label": "Streaks & basic analytics",
+                "included": true
+              },
+              {
+                "label": "Light & dark mode",
+                "included": true
+              },
+              {
+                "label": "No credit card required",
+                "included": false
+              }
+            ],
+            "cta": {
+              "label": "Start for Free",
+              "href": "#signup"
+            }
+          },
+          {
+            "theme": "dark",
+            "name": "Premium",
+            "badge": "Popular",
+            "description": "All features you need",
+            "price": "$4.99",
+            "period": "/month",
+            "features": [
+              {
+                "label": "Everything in Free",
+                "included": true
+              },
+              {
+                "label": "Advanced analytics",
+                "included": true
+              },
+              {
+                "label": "Habit templates & suggestions",
+                "included": true
+              },
+              {
+                "label": "Cloud backup & device sync",
+                "included": true
+              },
+              {
+                "label": "Premium themes and icons",
+                "included": true
+              },
+              {
+                "label": "Priority support",
+                "included": true
+              }
+            ],
+            "cta": {
+              "label": "Upgrade Now",
+              "href": "#signup"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block": "faq-tiles",
+      "data": {
+        "id": "faq",
+        "title": "Frequently Asked Questions",
+        "lead": "Everything you need to know before getting started",
+        "items": [
+          {
+            "tone": "primary",
+            "question": "What do I get with Premium?",
+            "answer": "Advanced analytics, habit templates, cloud backup and sync across devices, premium themes and priority support."
+          },
+          {
+            "tone": "pink",
+            "question": "What do I get with Premium?",
+            "answer": "Advanced analytics, habit templates, cloud backup and sync across devices, premium themes and priority support."
+          },
+          {
+            "tone": "lilac",
+            "question": "What happens if I miss a day?",
+            "answer": "Nothing is lost. Your streak pauses, the app suggests a better time, and you pick up again tomorrow."
+          },
+          {
+            "tone": "sky",
+            "question": "What happens if I miss a day?",
+            "answer": "Nothing is lost. Your streak pauses, the app suggests a better time, and you pick up again tomorrow."
+          }
+        ],
+        "more": {
+          "label": "View All FAQs",
+          "href": "#faq"
+        }
+      }
+    },
+    {
+      "block": "footer-newsletter",
+      "data": {
+        "brand": "Habitus",
+        "href": "#top",
+        "text": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+        "socials": [
+          {
+            "icon": "instagram",
+            "label": "Instagram",
+            "href": "#instagram"
+          },
+          {
+            "icon": "linkedin",
+            "label": "LinkedIn",
+            "href": "#linkedin"
+          }
+        ],
+        "columns": [
+          {
+            "title": "Product",
+            "links": [
+              {
+                "label": "Features",
+                "href": "#why"
+              },
+              {
+                "label": "Pricing",
+                "href": "#pricing"
+              },
+              {
+                "label": "FAQ",
+                "href": "#faq"
+              },
+              {
+                "label": "Blog",
+                "href": "#blog"
+              }
+            ]
+          },
+          {
+            "title": "Company",
+            "links": [
+              {
+                "label": "About",
+                "href": "#about"
+              },
+              {
+                "label": "Contact",
+                "href": "#contact"
+              },
+              {
+                "label": "Privacy Policy",
+                "href": "#privacy"
+              }
+            ]
+          }
+        ],
+        "newsletter": {
+          "title": "Newsletter",
+          "text": "Get tips & updates in your inbox",
+          "label": "Email address",
+          "placeholder": "Enter your email",
+          "button": "Subscribe",
+          "action": "#newsletter"
+        },
+        "copyright": "© 2025 Habitus. All rights reserved."
+      }
+    },
+    {
+      "block": "announcement-bar",
+      "data": {
+        "label": "Announcement",
+        "text": "Habitus 3.2 is out: weekly heatmaps for every habit.",
+        "link": {
+          "label": "Read the changelog",
+          "href": "#changelog"
+        }
+      }
+    },
+    {
+      "block": "hero-centered",
+      "data": {
+        "eyebrow": "Loved by 1M+ users worldwide",
+        "title": "Build Better Habits. One Day at a Time.",
+        "lead": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+        "primary": {
+          "label": "Get Started Free",
+          "href": "#pricing"
+        },
+        "secondary": {
+          "label": "Watch Demo",
+          "href": "#inside"
+        }
+      }
+    },
+    {
+      "block": "hero-split",
+      "data": {
+        "title": "Build Better Habits. One Day at a Time.",
+        "lead": "Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.",
+        "primary": {
+          "label": "Get Started Free",
+          "href": "#pricing"
+        },
+        "secondary": {
+          "label": "Watch Demo",
+          "href": "#inside"
+        },
+        "image": {
+          "src": "/media/screen-habit-tracker.png",
+          "alt": "Habit tracker screen of the Habitus app"
+        }
+      }
+    },
+    {
+      "block": "logo-cloud",
+      "data": {
+        "title": "Companies using Habitus",
+        "logos": [
+          {
+            "src": "/media/logo-google.svg",
+            "alt": "Google"
+          },
+          {
+            "src": "/media/logo-spotify.svg",
+            "alt": "Spotify"
+          },
+          {
+            "src": "/media/logo-treehouse.svg",
+            "alt": "Treehouse"
+          },
+          {
+            "src": "/media/logo-braze.svg",
+            "alt": "Braze"
+          }
+        ]
+      }
+    },
+    {
+      "block": "stats-row",
+      "data": {
+        "title": "Habitus in numbers",
+        "items": [
+          {
+            "value": "1M+",
+            "label": "Active users"
+          },
+          {
+            "value": "4.9",
+            "label": "App store rating"
+          },
+          {
+            "value": "12M",
+            "label": "Habits completed"
+          },
+          {
+            "value": "92%",
+            "label": "Keep a 7 day streak"
+          }
+        ]
+      }
+    },
+    {
+      "block": "feature-grid",
+      "data": {
+        "title": "Everything you need to stick with it",
+        "lead": "Designed to help you stay on track, effortlessly.",
+        "items": [
+          {
+            "icon": "bell",
+            "title": "Smart Reminders",
+            "text": "Never miss a habit again. Set daily notifications or let the app suggest the best time."
+          },
+          {
+            "icon": "chart-line",
+            "title": "Progress Analytics",
+            "text": "See your growth with weekly reports, streaks, and visual heatmaps."
+          },
+          {
+            "icon": "flame",
+            "title": "Streak Tracking",
+            "text": "Stay motivated by building unbreakable streaks and unlocking milestones."
+          },
+          {
+            "icon": "layout-template",
+            "title": "Habit templates",
+            "text": "Start from proven routines for sleep, focus, fitness and learning."
+          },
+          {
+            "icon": "cloud",
+            "title": "Cloud sync",
+            "text": "Your habits follow you across phone, tablet and web."
+          },
+          {
+            "icon": "shield-check",
+            "title": "Private by default",
+            "text": "Your data stays yours. Export or delete it any time."
+          }
+        ]
+      }
+    },
+    {
+      "block": "feature-split",
+      "data": {
+        "title": "Built around your day",
+        "lead": "A simple, beautiful interface built for everyday use.",
+        "items": [
+          {
+            "title": "Smart Reminders",
+            "text": "Never miss a habit again. Set daily notifications or let the app suggest the best time."
+          },
+          {
+            "title": "Progress Analytics",
+            "text": "See your growth with weekly reports, streaks, and visual heatmaps."
+          },
+          {
+            "title": "Streak Tracking",
+            "text": "Stay motivated by building unbreakable streaks and unlocking milestones."
+          }
+        ],
+        "image": {
+          "src": "/media/screen-dashboard.png",
+          "alt": "Dashboard screen of the Habitus app"
+        }
+      }
+    },
+    {
+      "block": "steps",
+      "data": {
+        "title": "How it works",
+        "lead": "Three steps from intention to routine.",
+        "items": [
+          {
+            "icon": "list-plus",
+            "title": "Pick a habit",
+            "text": "Choose from templates or write your own goal."
+          },
+          {
+            "icon": "bell",
+            "title": "Set a reminder",
+            "text": "Tell Habitus when, and it nudges you at the right time."
+          },
+          {
+            "icon": "chart-line",
+            "title": "Watch it grow",
+            "text": "Streaks and heatmaps show your progress every week."
+          }
+        ]
+      }
+    },
+    {
+      "block": "integrations",
+      "data": {
+        "title": "Works with your tools",
+        "lead": "Bring the data you already track.",
+        "items": [
+          {
+            "icon": "heart-pulse",
+            "name": "Apple Health",
+            "text": "Import steps, sleep and workouts."
+          },
+          {
+            "icon": "activity",
+            "name": "Google Fit",
+            "text": "Sync activity minutes automatically."
+          },
+          {
+            "icon": "calendar",
+            "name": "Calendar",
+            "text": "Block time for habits in your calendar."
+          },
+          {
+            "icon": "notebook-pen",
+            "name": "Notion",
+            "text": "Log daily notes next to your habits."
+          },
+          {
+            "icon": "message-square",
+            "name": "Slack",
+            "text": "Share weekly wins with your team."
+          },
+          {
+            "icon": "zap",
+            "name": "Zapier",
+            "text": "Connect Habitus to 5000+ apps."
+          }
+        ]
+      }
+    },
+    {
+      "block": "pricing-three-tiers",
+      "data": {
+        "title": "Simple, transparent pricing",
+        "lead": "Start free. Upgrade when you're ready.",
+        "plans": [
+          {
+            "theme": "light",
+            "name": "Free",
+            "badge": "",
+            "description": "Perfect to get started",
+            "price": "$0",
+            "period": "",
+            "features": [
+              {
+                "label": "Track unlimited habits",
+                "included": true
+              },
+              {
+                "label": "Daily reminders",
+                "included": true
+              },
+              {
+                "label": "Streaks & basic analytics",
+                "included": true
+              },
+              {
+                "label": "Light & dark mode",
+                "included": true
+              },
+              {
+                "label": "No credit card required",
+                "included": false
+              }
+            ],
+            "cta": {
+              "label": "Start for Free",
+              "href": "#signup"
+            }
+          },
+          {
+            "theme": "dark",
+            "name": "Premium",
+            "badge": "Popular",
+            "description": "All features you need",
+            "price": "$4.99",
+            "period": "/month",
+            "features": [
+              {
+                "label": "Everything in Free",
+                "included": true
+              },
+              {
+                "label": "Advanced analytics",
+                "included": true
+              },
+              {
+                "label": "Habit templates & suggestions",
+                "included": true
+              },
+              {
+                "label": "Cloud backup & device sync",
+                "included": true
+              },
+              {
+                "label": "Premium themes and icons",
+                "included": true
+              },
+              {
+                "label": "Priority support",
+                "included": true
+              }
+            ],
+            "cta": {
+              "label": "Upgrade Now",
+              "href": "#signup"
+            }
+          },
+          {
+            "theme": "light",
+            "name": "Team",
+            "badge": "",
+            "description": "For coaches and small groups",
+            "price": "$19.99",
+            "period": "/month",
+            "features": [
+              {
+                "label": "Everything in Premium",
+                "included": true
+              },
+              {
+                "label": "Up to 20 members",
+                "included": true
+              },
+              {
+                "label": "Shared challenges",
+                "included": true
+              },
+              {
+                "label": "Admin dashboard",
+                "included": true
+              }
+            ],
+            "cta": {
+              "label": "Contact sales",
+              "href": "#contact"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block": "comparison-table",
+      "data": {
+        "title": "Compare plans",
+        "feature": "Feature",
+        "free": "Free",
+        "premium": "Premium",
+        "yes": "Included",
+        "no": "Not included",
+        "rows": [
+          {
+            "feature": "Unlimited habits",
+            "free": true,
+            "premium": true
+          },
+          {
+            "feature": "Daily reminders",
+            "free": true,
+            "premium": true
+          },
+          {
+            "feature": "Advanced analytics",
+            "free": false,
+            "premium": true
+          },
+          {
+            "feature": "Cloud backup and sync",
+            "free": false,
+            "premium": true
+          },
+          {
+            "feature": "Premium themes",
+            "free": false,
+            "premium": true
+          },
+          {
+            "feature": "Priority support",
+            "free": false,
+            "premium": true
+          }
+        ]
+      }
+    },
+    {
+      "block": "testimonial-quote",
+      "data": {
+        "label": "Testimonial",
+        "quote": "\"I've finally stayed consistent with journaling for 90 days. This app made it effortless.\"",
+        "name": "Sarah T.",
+        "role": "Writer",
+        "avatar": {
+          "src": "/media/avatar-sarah.jpg",
+          "alt": "Sarah T."
+        }
+      }
+    },
+    {
+      "block": "team-grid",
+      "data": {
+        "title": "The people behind Habitus",
+        "lead": "A small team that ships every week.",
+        "members": [
+          {
+            "name": "Ava Lindqvist",
+            "role": "Co-founder, Product",
+            "avatar": {
+              "src": "/media/avatar-sarah.jpg",
+              "alt": "Sarah T."
+            }
+          },
+          {
+            "name": "Marcus Chen",
+            "role": "Co-founder, Engineering",
+            "avatar": {
+              "src": "/media/avatar-james.jpg",
+              "alt": "James K."
+            }
+          },
+          {
+            "name": "Priya Raman",
+            "role": "Head of Coaching",
+            "avatar": {
+              "src": "/media/avatar-priya.jpg",
+              "alt": "Priya R."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block": "blog-cards",
+      "data": {
+        "title": "From the blog",
+        "lead": "Short reads on building habits that last.",
+        "posts": [
+          {
+            "title": "The two-minute rule for new habits",
+            "excerpt": "Make the first step so small you cannot say no.",
+            "tag": "Guides",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "href": "#blog/the-two-minute-rule-for-new-habits",
+            "image": {
+              "src": "/media/screen-habit-tracker.png",
+              "alt": "Habit tracker screen of the Habitus app"
+            }
+          },
+          {
+            "title": "Why streaks work (and when they do not)",
+            "excerpt": "What the research says about chains and motivation.",
+            "tag": "Research",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "href": "#blog/why-streaks-work-and-when-they-do-not",
+            "image": {
+              "src": "/media/screen-dashboard.png",
+              "alt": "Dashboard screen of the Habitus app"
+            }
+          },
+          {
+            "title": "Designing a calm morning routine",
+            "excerpt": "Five habits our users keep for more than a year.",
+            "tag": "Stories",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "href": "#blog/designing-a-calm-morning-routine",
+            "image": {
+              "src": "/media/screen-goals.png",
+              "alt": "Goals screen of the Habitus app"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "block": "changelog",
+      "data": {
+        "title": "Changelog",
+        "lead": "What shipped recently.",
+        "items": [
+          {
+            "version": "3.0",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "title": "New design",
+            "text": "A fresh look with light and dark mode and larger tap targets."
+          },
+          {
+            "version": "3.1",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "title": "Smart reminder times",
+            "text": "Reminders move to the time you usually complete a habit."
+          },
+          {
+            "version": "3.2",
+            "datetime": "2026-10-18",
+            "date": "Oct 18, 2026",
+            "title": "Weekly heatmaps",
+            "text": "See every habit as a 7x52 heatmap and export it as an image."
+          }
+        ]
+      }
+    },
+    {
+      "block": "faq-accordion",
+      "data": {
+        "title": "Frequently Asked Questions",
+        "lead": "Everything you need to know before getting started",
+        "items": [
+          {
+            "question": "What do I get with Premium?",
+            "answer": "Advanced analytics, habit templates, cloud backup and sync across devices, premium themes and priority support.",
+            "open": true
+          },
+          {
+            "question": "What happens if I miss a day?",
+            "answer": "Nothing is lost. Your streak pauses, the app suggests a better time, and you pick up again tomorrow.",
+            "open": false
+          },
+          {
+            "question": "Can I use Habitus offline?",
+            "answer": "Yes. Habits are stored on the device and sync when you are back online.",
+            "open": false
+          },
+          {
+            "question": "Is there a family plan?",
+            "answer": "Premium covers one account. Family sharing is on the roadmap.",
+            "open": false
+          },
+          {
+            "question": "How do I cancel?",
+            "answer": "Cancel any time from Settings. You keep Premium until the end of the billing period.",
+            "open": false
+          }
+        ]
+      }
+    },
+    {
+      "block": "cta-centered",
+      "data": {
+        "title": "Ready to build better habits?",
+        "text": "Start free today. Upgrade when you are ready.",
+        "primary": {
+          "label": "Start Tracking – It’s Free",
+          "href": "#pricing"
+        },
+        "secondary": {
+          "label": "Watch Demo",
+          "href": "#inside"
+        }
+      }
+    },
+    {
+      "block": "app-download",
+      "data": {
+        "title": "Take Habitus everywhere",
+        "text": "Free on iOS and Android. Sync with the web app.",
+        "ios": {
+          "label": "App Store",
+          "href": "#ios"
+        },
+        "android": {
+          "label": "Google Play",
+          "href": "#android"
+        },
+        "image": {
+          "src": "/media/screen-goals.png",
+          "alt": "Goals screen of the Habitus app"
+        }
+      }
+    },
+    {
+      "block": "newsletter-band",
+      "data": {
+        "title": "Newsletter",
+        "text": "Get tips & updates in your inbox",
+        "label": "Email address",
+        "placeholder": "Enter your email",
+        "button": "Subscribe",
+        "action": "#newsletter"
+      }
+    },
+    {
+      "block": "contact-form",
+      "data": {
+        "title": "Talk to us",
+        "text": "Questions about Premium or Team? We answer within one business day.",
+        "name": {
+          "label": "Name",
+          "name": "name",
+          "type": "text",
+          "placeholder": "",
+          "autocomplete": "name"
+        },
+        "email": {
+          "label": "Email",
+          "name": "email",
+          "type": "email",
+          "placeholder": "",
+          "autocomplete": "email"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": ""
+        },
+        "send": "Send message",
+        "action": "#contact"
+      }
+    },
+    {
+      "block": "login-card",
+      "data": {
+        "title": "Welcome back",
+        "text": "Log in to continue your streak.",
+        "fields": [
+          {
+            "label": "Email",
+            "name": "login-email",
+            "type": "email",
+            "placeholder": "",
+            "autocomplete": "email"
+          },
+          {
+            "label": "Password",
+            "name": "login-password",
+            "type": "password",
+            "placeholder": "",
+            "autocomplete": "current-password"
+          }
+        ],
+        "submit": "Log In",
+        "action": "#login",
+        "note": "",
+        "link": {
+          "label": "Forgot password?",
+          "href": "#forgot"
+        }
+      }
+    },
+    {
+      "block": "signup-card",
+      "data": {
+        "title": "Create your account",
+        "text": "Start free. No credit card required.",
+        "fields": [
+          {
+            "label": "Full name",
+            "name": "signup-name",
+            "type": "text",
+            "placeholder": "",
+            "autocomplete": "name"
+          },
+          {
+            "label": "Email",
+            "name": "signup-email",
+            "type": "email",
+            "placeholder": "",
+            "autocomplete": "email"
+          },
+          {
+            "label": "Password",
+            "name": "signup-password",
+            "type": "password",
+            "placeholder": "",
+            "autocomplete": "new-password"
+          }
+        ],
+        "submit": "Get Started Free",
+        "action": "#signup",
+        "note": "I agree to the Terms and Privacy Policy",
+        "link": {
+          "label": "Terms",
+          "href": "#terms"
+        }
+      }
+    },
+    {
+      "block": "settings-panel",
+      "data": {
+        "title": "Notifications",
+        "text": "Choose how Habitus reminds you.",
+        "options": [
+          {
+            "id": "settings-option-1",
+            "label": "Daily summary email",
+            "checked": true
+          },
+          {
+            "id": "settings-option-2",
+            "label": "Push reminders",
+            "checked": true
+          },
+          {
+            "id": "settings-option-3",
+            "label": "Weekly report",
+            "checked": false
+          }
+        ],
+        "save": "Save changes",
+        "action": "#settings"
+      }
+    },
+    {
+      "block": "dashboard-stats",
+      "data": {
+        "title": "This week",
+        "cards": [
+          {
+            "label": "Today",
+            "value": "5 / 7",
+            "hint": "habits done"
+          },
+          {
+            "label": "Current streak",
+            "value": "23 days",
+            "hint": "best: 41"
+          },
+          {
+            "label": "This week",
+            "value": "86%",
+            "hint": "+4% vs last week"
+          },
+          {
+            "label": "Focus time",
+            "value": "6h 20m",
+            "hint": "logged this week"
+          }
+        ]
+      }
+    },
+    {
+      "block": "habits-table",
+      "data": {
+        "title": "Today",
+        "columns": {
+          "habit": "Habit",
+          "streak": "Streak",
+          "time": "Time",
+          "status": "Status"
+        },
+        "rows": [
+          {
+            "habit": "Read 20 pages",
+            "streak": "23 days",
+            "time": "07:30",
+            "status": "Done",
+            "tone": "done"
+          },
+          {
+            "habit": "Drink water",
+            "streak": "41 days",
+            "time": "09:00",
+            "status": "Done",
+            "tone": "done"
+          },
+          {
+            "habit": "Workout",
+            "streak": "6 days",
+            "time": "18:00",
+            "status": "Pending",
+            "tone": "pending"
+          },
+          {
+            "habit": "Journal",
+            "streak": "90 days",
+            "time": "22:00",
+            "status": "Pending",
+            "tone": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "block": "empty-state",
+      "data": {
+        "title": "No habits yet",
+        "text": "Create your first habit and we will remind you at the right time.",
+        "cta": {
+          "label": "New habit",
+          "href": "#new"
+        }
+      }
+    },
+    {
+      "block": "not-found",
+      "data": {
+        "code": "404",
+        "title": "This page skipped a day",
+        "text": "The page you are looking for does not exist or moved.",
+        "cta": {
+          "label": "Back to home",
+          "href": "/"
+        }
+      }
+    },
+    {
+      "block": "cookie-banner",
+      "data": {
+        "label": "Cookie consent",
+        "text": "We use cookies to keep you signed in and to measure what works.",
+        "accept": "Accept",
+        "decline": "Decline"
+      }
+    },
+    {
+      "block": "footer-simple",
+      "data": {
+        "label": "Footer",
+        "brand": "Habitus",
+        "href": "#top",
+        "links": [
+          {
+            "label": "Features",
+            "href": "#why"
+          },
+          {
+            "label": "Pricing",
+            "href": "#pricing"
+          },
+          {
+            "label": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "label": "Blog",
+            "href": "#blog"
+          },
+          {
+            "label": "About",
+            "href": "#about"
+          },
+          {
+            "label": "Contact",
+            "href": "#contact"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "#privacy"
+          }
+        ],
+        "copyright": "© 2025 Habitus. All rights reserved."
+      }
+    }
+  ]
+}

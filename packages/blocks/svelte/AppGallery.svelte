@@ -7,7 +7,7 @@
   let { data }: { data: AppGalleryData } = $props();
 </script>
 
-<Block class="ui-app-gallery" data-class="app-gallery" tag="section" id={data.id} aria-labelledby="app-gallery-title">
+<Block class="ui-app-gallery" data-class="app-gallery" tag="section" id={data.id || undefined} aria-labelledby="app-gallery-title">
   <Container class="ui-app-gallery-container" data-class="app-gallery-container">
     <Stack class="ui-app-gallery-head" data-class="app-gallery-head">
       <Title class="ui-app-gallery-title" data-class="app-gallery-title" as={2} id="app-gallery-title">
@@ -21,7 +21,7 @@
       {#each data.tiles as tile}
         <ListItem class="ui-app-gallery-tile ui-app-gallery-tile-tone-{tile.tone}" data-class="app-gallery-tile">
           {#if tile.src}
-            <Image class="ui-app-gallery-screen" data-class="app-gallery-screen" src={tile.src} alt={tile.alt} />
+            <Image class="ui-app-gallery-screen" data-class="app-gallery-screen" src={tile.src || undefined} alt={tile.alt || undefined} />
           {/if}
         </ListItem>
       {/each}

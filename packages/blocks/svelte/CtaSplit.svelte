@@ -20,7 +20,7 @@
           <Text class="ui-cta-split-text" data-class="cta-split-text">
             {data.text}
           </Text>
-          <Button size="lg" href={data.cta.href}>
+          <Button size="lg" href={data.cta.href || undefined}>
             {data.cta.label}
           </Button>
         </Stack>

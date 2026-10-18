@@ -9,7 +9,7 @@
 </script>
 
 <Block class="ui-navbar" data-class="navbar" tag="nav" aria-label={data.label}>
-  <Link class="ui-navbar-brand" data-class="navbar-brand" href={data.href}>
+  <Link class="ui-navbar-brand" data-class="navbar-brand" href={data.href || undefined}>
     {@html svg("brand-mark", `ui-navbar-mark`)}
     <Inline>
       {data.brand}
@@ -18,13 +18,13 @@
   <List class="ui-navbar-menu" data-class="navbar-menu">
     {#each data.items as item}
       <ListItem>
-        <Link class="ui-navbar-menu-link" data-class="navbar-menu-link" href={item.href}>
+        <Link class="ui-navbar-menu-link" data-class="navbar-menu-link" href={item.href || undefined}>
           {item.label}
         </Link>
       </ListItem>
     {/each}
   </List>
-  <Button class="ui-navbar-cta" data-class="navbar-cta" variant="contrast" href={data.cta.href}>
+  <Button class="ui-navbar-cta" data-class="navbar-cta" variant="contrast" href={data.cta.href || undefined}>
     {data.cta.label}
   </Button>
 </Block>

@@ -752,5 +752,1455 @@
     "text-center",
     "leading-5",
     "text-muted-foreground"
+  ],
+  "ui-announcement-bar": [
+    "bg-secondary",
+    "text-secondary-foreground"
+  ],
+  "ui-announcement-bar-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-wrap",
+    "items-center",
+    "justify-center",
+    "gap-4",
+    "px-6",
+    "py-2",
+    "text-sm"
+  ],
+  "ui-announcement-bar-text": [],
+  "ui-announcement-bar-link": [
+    "font-semibold",
+    "text-current",
+    "underline"
+  ],
+  "ui-announcement-bar-arrow": [
+    "size-4"
+  ],
+  "ui-hero-centered": [
+    "px-8",
+    "pt-8"
+  ],
+  "ui-hero-centered-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "items-center",
+    "gap-8",
+    "rounded-lg",
+    "bg-muted",
+    "px-6",
+    "py-24",
+    "text-center"
+  ],
+  "ui-hero-centered-title": [
+    "max-w-3xl",
+    "text-6xl",
+    "leading-none",
+    "font-semibold"
+  ],
+  "ui-hero-centered-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "text-muted-foreground"
+  ],
+  "ui-hero-centered-actions": [
+    "flex-wrap",
+    "justify-center",
+    "gap-4"
+  ],
+  "ui-hero-split": [
+    "py-16"
+  ],
+  "ui-hero-split-container": [
+    "mx-auto",
+    "grid",
+    "max-w-page",
+    "grid-cols-1",
+    "items-center",
+    "gap-12",
+    "px-6",
+    "lg:grid-cols-2",
+    "lg:px-0"
+  ],
+  "ui-hero-split-copy": [
+    "flex",
+    "flex-col",
+    "items-start",
+    "gap-8"
+  ],
+  "ui-hero-split-title": [
+    "text-6xl",
+    "leading-none",
+    "font-semibold"
+  ],
+  "ui-hero-split-lead": [
+    "text-xl",
+    "text-muted-foreground"
+  ],
+  "ui-hero-split-actions": [
+    "flex-wrap",
+    "gap-4"
+  ],
+  "ui-hero-split-play": [
+    "size-4"
+  ],
+  "ui-hero-split-art": [
+    "flex",
+    "justify-center",
+    "rounded-lg",
+    "bg-accent",
+    "px-12",
+    "pt-12"
+  ],
+  "ui-hero-split-image": [
+    "w-1/2",
+    "rounded-t-md"
+  ],
+  "ui-logo-cloud": [
+    "py-16"
+  ],
+  "ui-logo-cloud-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "items-center",
+    "gap-8",
+    "px-6"
+  ],
+  "ui-logo-cloud-title": [
+    "text-base",
+    "font-medium",
+    "text-muted-foreground"
+  ],
+  "ui-logo-cloud-logos": [
+    "flex",
+    "flex-wrap",
+    "items-center",
+    "justify-center",
+    "gap-12"
+  ],
+  "ui-logo-cloud-logo": [
+    "h-10",
+    "w-auto"
+  ],
+  "ui-stats-row": [
+    "py-24"
+  ],
+  "ui-stats-row-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-stats-row-title": [
+    "sr-only"
+  ],
+  "ui-stats-row-list": [
+    "grid",
+    "grid-cols-2",
+    "gap-6",
+    "lg:grid-cols-4"
+  ],
+  "ui-stats-row-item": [
+    "flex",
+    "flex-col",
+    "gap-2",
+    "rounded-lg",
+    "bg-muted",
+    "p-8"
+  ],
+  "ui-stats-row-value": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-stats-row-label": [
+    "text-muted-foreground"
+  ],
+  "ui-feature-grid": [
+    "py-24"
+  ],
+  "ui-feature-grid-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-feature-grid-head": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "items-center",
+    "text-center"
+  ],
+  "ui-feature-grid-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-feature-grid-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-feature-grid-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-x-10",
+    "gap-y-12",
+    "md:grid-cols-2",
+    "lg:grid-cols-3"
+  ],
+  "ui-feature-grid-item": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-feature-grid-badge": [
+    "size-12",
+    "rounded-full",
+    "bg-primary",
+    "text-primary-foreground"
+  ],
+  "ui-feature-grid-icon": [
+    "size-6"
+  ],
+  "ui-feature-grid-item-title": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-feature-grid-item-text": [
+    "text-muted-foreground"
+  ],
+  "ui-feature-split": [
+    "py-24"
+  ],
+  "ui-feature-split-container": [
+    "mx-auto",
+    "grid",
+    "max-w-page",
+    "grid-cols-1",
+    "items-center",
+    "gap-16",
+    "px-6",
+    "lg:grid-cols-2",
+    "lg:px-0"
+  ],
+  "ui-feature-split-art": [
+    "flex",
+    "justify-center",
+    "rounded-lg",
+    "bg-chart-3",
+    "px-12",
+    "pt-16"
+  ],
+  "ui-feature-split-image": [
+    "w-1/2",
+    "rounded-t-md"
+  ],
+  "ui-feature-split-copy": [
+    "flex",
+    "flex-col",
+    "gap-8"
+  ],
+  "ui-feature-split-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-feature-split-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-feature-split-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-feature-split-list": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-feature-split-item": [
+    "flex",
+    "gap-4"
+  ],
+  "ui-feature-split-check": [
+    "size-6",
+    "shrink-0",
+    "text-primary"
+  ],
+  "ui-feature-split-item-body": [
+    "flex",
+    "flex-col",
+    "gap-1"
+  ],
+  "ui-feature-split-item-title": [
+    "text-lg",
+    "font-semibold"
+  ],
+  "ui-feature-split-item-text": [
+    "text-muted-foreground"
+  ],
+  "ui-steps": [
+    "py-24"
+  ],
+  "ui-steps-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-steps-head": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "items-center",
+    "text-center"
+  ],
+  "ui-steps-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-steps-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-steps-list": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-steps-item": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "rounded-lg",
+    "bg-muted",
+    "p-10"
+  ],
+  "ui-steps-icon": [
+    "size-6",
+    "text-primary"
+  ],
+  "ui-steps-item-title": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-steps-item-text": [
+    "text-muted-foreground"
+  ],
+  "ui-integrations": [
+    "py-24"
+  ],
+  "ui-integrations-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-integrations-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-integrations-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-integrations-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-integrations-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-6",
+    "md:grid-cols-2",
+    "lg:grid-cols-3"
+  ],
+  "ui-integrations-item": [
+    "flex",
+    "items-start",
+    "gap-4",
+    "rounded-lg",
+    "bg-card",
+    "p-8",
+    "inset-ring",
+    "inset-ring-border"
+  ],
+  "ui-integrations-badge": [
+    "size-12",
+    "shrink-0",
+    "rounded-full",
+    "bg-accent",
+    "text-accent-foreground"
+  ],
+  "ui-integrations-icon": [
+    "size-6"
+  ],
+  "ui-integrations-body": [
+    "flex",
+    "flex-col",
+    "gap-1"
+  ],
+  "ui-integrations-item-title": [
+    "text-lg",
+    "font-semibold"
+  ],
+  "ui-integrations-item-text": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-pricing-three-tiers": [
+    "py-24"
+  ],
+  "ui-pricing-three-tiers-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-pricing-three-tiers-head": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "items-center",
+    "text-center"
+  ],
+  "ui-pricing-three-tiers-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-pricing-three-tiers-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-pricing-three-tiers-plans": [
+    "grid",
+    "grid-cols-1",
+    "gap-6",
+    "lg:grid-cols-3"
+  ],
+  "ui-pricing-three-tiers-plan": [
+    "flex",
+    "flex-col",
+    "gap-8",
+    "rounded-lg",
+    "p-10",
+    "text-card-foreground"
+  ],
+  "ui-pricing-three-tiers-plan-theme-light": [
+    "bg-card"
+  ],
+  "ui-pricing-three-tiers-plan-theme-dark": [
+    "bg-background"
+  ],
+  "ui-pricing-three-tiers-plan-name-row": [
+    "justify-between",
+    "gap-4"
+  ],
+  "ui-pricing-three-tiers-plan-name": [
+    "text-2xl",
+    "font-semibold"
+  ],
+  "ui-pricing-three-tiers-plan-description": [
+    "text-muted-foreground"
+  ],
+  "ui-pricing-three-tiers-price": [
+    "flex",
+    "items-baseline",
+    "gap-2"
+  ],
+  "ui-pricing-three-tiers-price-value": [
+    "text-4xl",
+    "font-bold"
+  ],
+  "ui-pricing-three-tiers-price-period": [
+    "text-muted-foreground"
+  ],
+  "ui-pricing-three-tiers-features": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-pricing-three-tiers-feature": [
+    "flex",
+    "items-center",
+    "gap-4"
+  ],
+  "ui-pricing-three-tiers-check": [
+    "size-4",
+    "text-primary"
+  ],
+  "ui-pricing-three-tiers-cross": [
+    "size-4",
+    "text-muted-foreground"
+  ],
+  "ui-pricing-three-tiers-plan-cta": [
+    "mt-auto",
+    "w-full"
+  ],
+  "ui-comparison-table": [
+    "py-24"
+  ],
+  "ui-comparison-table-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-comparison-table-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-comparison-table-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-comparison-table-scroll": [
+    "overflow-x-auto",
+    "rounded-lg",
+    "inset-ring",
+    "inset-ring-border"
+  ],
+  "ui-comparison-table-table": [
+    "w-full",
+    "text-left"
+  ],
+  "ui-comparison-table-thead": [
+    "bg-muted"
+  ],
+  "ui-comparison-table-th": [
+    "px-6",
+    "py-4",
+    "font-semibold"
+  ],
+  "ui-comparison-table-th-plan": [
+    "px-6",
+    "py-4",
+    "text-center",
+    "font-semibold"
+  ],
+  "ui-comparison-table-th-plan-2": [
+    "px-6",
+    "py-4",
+    "text-center",
+    "font-semibold"
+  ],
+  "ui-comparison-table-row": [
+    "border-t",
+    "border-border"
+  ],
+  "ui-comparison-table-feature": [
+    "px-6",
+    "py-4",
+    "font-normal"
+  ],
+  "ui-comparison-table-cell": [
+    "px-6",
+    "py-4",
+    "text-center"
+  ],
+  "ui-comparison-table-yes": [
+    "mx-auto",
+    "size-4",
+    "text-primary"
+  ],
+  "ui-comparison-table-sr": [
+    "sr-only"
+  ],
+  "ui-comparison-table-no": [
+    "mx-auto",
+    "size-4",
+    "text-muted-foreground"
+  ],
+  "ui-comparison-table-sr-2": [
+    "sr-only"
+  ],
+  "ui-comparison-table-cell-2": [
+    "px-6",
+    "py-4",
+    "text-center"
+  ],
+  "ui-comparison-table-yes-2": [
+    "mx-auto",
+    "size-4",
+    "text-primary"
+  ],
+  "ui-comparison-table-sr-3": [
+    "sr-only"
+  ],
+  "ui-comparison-table-no-2": [
+    "mx-auto",
+    "size-4",
+    "text-muted-foreground"
+  ],
+  "ui-comparison-table-sr-4": [
+    "sr-only"
+  ],
+  "ui-testimonial-quote": [
+    "py-24"
+  ],
+  "ui-testimonial-quote-container": [
+    "mx-auto",
+    "max-w-page",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-testimonial-quote-panel": [
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-8",
+    "rounded-lg",
+    "bg-chart-5",
+    "px-12",
+    "py-20",
+    "text-center",
+    "text-foreground"
+  ],
+  "ui-testimonial-quote-quote": [
+    "max-w-3xl",
+    "text-3xl",
+    "leading-10",
+    "font-medium"
+  ],
+  "ui-testimonial-quote-author": [
+    "gap-4"
+  ],
+  "ui-testimonial-quote-avatar": [],
+  "ui-testimonial-quote-who": [
+    "flex",
+    "flex-col",
+    "items-start"
+  ],
+  "ui-testimonial-quote-name": [
+    "font-bold"
+  ],
+  "ui-testimonial-quote-role": [
+    "text-muted-foreground"
+  ],
+  "ui-team-grid": [
+    "py-24"
+  ],
+  "ui-team-grid-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-team-grid-head": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "items-center",
+    "text-center"
+  ],
+  "ui-team-grid-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-team-grid-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-team-grid-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-team-grid-member": [
+    "flex",
+    "flex-col",
+    "items-center",
+    "gap-4",
+    "rounded-lg",
+    "bg-muted",
+    "p-10",
+    "text-center"
+  ],
+  "ui-team-grid-avatar": [],
+  "ui-team-grid-name": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-team-grid-role": [
+    "text-muted-foreground"
+  ],
+  "ui-blog-cards": [
+    "py-24"
+  ],
+  "ui-blog-cards-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-blog-cards-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-blog-cards-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-blog-cards-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-blog-cards-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-10",
+    "md:grid-cols-3"
+  ],
+  "ui-blog-cards-post": [
+    "flex",
+    "flex-col",
+    "overflow-hidden",
+    "rounded-lg",
+    "bg-card"
+  ],
+  "ui-blog-cards-media": [
+    "flex",
+    "h-48",
+    "justify-center",
+    "overflow-hidden",
+    "bg-accent",
+    "pt-8"
+  ],
+  "ui-blog-cards-image": [
+    "w-1/3",
+    "self-start",
+    "rounded-t-md"
+  ],
+  "ui-blog-cards-body": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "p-8"
+  ],
+  "ui-blog-cards-meta": [
+    "gap-4",
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-blog-cards-date": [],
+  "ui-blog-cards-post-title": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-blog-cards-post-link": [
+    "text-foreground",
+    "hover:underline"
+  ],
+  "ui-blog-cards-excerpt": [
+    "text-muted-foreground"
+  ],
+  "ui-changelog": [
+    "py-24"
+  ],
+  "ui-changelog-container": [
+    "mx-auto",
+    "flex",
+    "max-w-3xl",
+    "flex-col",
+    "gap-12",
+    "px-6"
+  ],
+  "ui-changelog-head": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-changelog-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-changelog-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-changelog-list": [
+    "flex",
+    "flex-col",
+    "gap-10",
+    "border-l",
+    "border-border",
+    "pl-8"
+  ],
+  "ui-changelog-item": [
+    "flex",
+    "flex-col",
+    "gap-2"
+  ],
+  "ui-changelog-meta": [
+    "gap-4"
+  ],
+  "ui-changelog-date": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-changelog-item-title": [
+    "text-xl",
+    "font-semibold"
+  ],
+  "ui-changelog-item-text": [
+    "text-muted-foreground"
+  ],
+  "ui-faq-accordion": [
+    "py-24"
+  ],
+  "ui-faq-accordion-container": [
+    "mx-auto",
+    "flex",
+    "max-w-3xl",
+    "flex-col",
+    "gap-12",
+    "px-6"
+  ],
+  "ui-faq-accordion-head": [
+    "flex",
+    "flex-col",
+    "gap-4",
+    "items-center",
+    "text-center"
+  ],
+  "ui-faq-accordion-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-faq-accordion-lead": [
+    "max-w-2xl",
+    "text-xl",
+    "font-light",
+    "text-muted-foreground"
+  ],
+  "ui-faq-accordion-list": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-faq-accordion-item": [
+    "rounded-lg",
+    "bg-muted",
+    "px-8",
+    "py-6"
+  ],
+  "ui-faq-accordion-question": [
+    "flex",
+    "cursor-pointer",
+    "list-none",
+    "items-center",
+    "justify-between",
+    "gap-4",
+    "text-lg",
+    "font-medium"
+  ],
+  "ui-faq-accordion-chevron": [
+    "size-4",
+    "shrink-0"
+  ],
+  "ui-faq-accordion-answer": [
+    "pt-4",
+    "text-muted-foreground"
+  ],
+  "ui-cta-centered": [
+    "py-24"
+  ],
+  "ui-cta-centered-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "items-center",
+    "gap-8",
+    "rounded-lg",
+    "bg-primary",
+    "px-6",
+    "py-20",
+    "text-center",
+    "text-primary-foreground"
+  ],
+  "ui-cta-centered-title": [
+    "max-w-2xl",
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-cta-centered-text": [
+    "max-w-xl",
+    "text-xl"
+  ],
+  "ui-cta-centered-actions": [
+    "flex-wrap",
+    "justify-center",
+    "gap-4"
+  ],
+  "ui-app-download": [
+    "py-24"
+  ],
+  "ui-app-download-container": [
+    "mx-auto",
+    "grid",
+    "max-w-page",
+    "grid-cols-1",
+    "items-center",
+    "gap-12",
+    "overflow-hidden",
+    "rounded-lg",
+    "bg-background",
+    "px-12",
+    "pt-16",
+    "text-foreground",
+    "lg:grid-cols-2"
+  ],
+  "ui-app-download-copy": [
+    "flex",
+    "flex-col",
+    "items-start",
+    "gap-6",
+    "pb-16"
+  ],
+  "ui-app-download-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-app-download-text": [
+    "text-xl",
+    "text-muted-foreground"
+  ],
+  "ui-app-download-stores": [
+    "flex-wrap",
+    "gap-4"
+  ],
+  "ui-app-download-apple": [
+    "size-6"
+  ],
+  "ui-app-download-phone": [
+    "size-6"
+  ],
+  "ui-app-download-image": [
+    "mx-auto",
+    "w-1/2",
+    "self-end",
+    "rounded-t-md"
+  ],
+  "ui-newsletter-band": [
+    "py-24"
+  ],
+  "ui-newsletter-band-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "items-center",
+    "justify-between",
+    "gap-8",
+    "rounded-lg",
+    "bg-accent",
+    "px-12",
+    "py-16",
+    "text-accent-foreground",
+    "lg:flex-row"
+  ],
+  "ui-newsletter-band-copy": [
+    "flex",
+    "flex-col",
+    "gap-2"
+  ],
+  "ui-newsletter-band-title": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-newsletter-band-text": [
+    "text-muted-foreground"
+  ],
+  "ui-newsletter-band-form": [
+    "flex",
+    "w-full",
+    "max-w-md",
+    "gap-2"
+  ],
+  "ui-newsletter-band-label": [
+    "sr-only"
+  ],
+  "ui-newsletter-band-input": [],
+  "ui-contact-form": [
+    "py-24"
+  ],
+  "ui-contact-form-container": [
+    "mx-auto",
+    "grid",
+    "max-w-page",
+    "grid-cols-1",
+    "gap-12",
+    "px-6",
+    "lg:grid-cols-2",
+    "lg:px-0"
+  ],
+  "ui-contact-form-copy": [
+    "flex",
+    "flex-col",
+    "gap-4"
+  ],
+  "ui-contact-form-title": [
+    "text-5xl",
+    "font-bold"
+  ],
+  "ui-contact-form-text": [
+    "text-xl",
+    "text-muted-foreground"
+  ],
+  "ui-contact-form-form": [
+    "flex",
+    "flex-col",
+    "gap-6",
+    "rounded-lg",
+    "bg-muted",
+    "p-10"
+  ],
+  "ui-contact-form-field": [],
+  "ui-contact-form-label": [],
+  "ui-contact-form-input": [],
+  "ui-contact-form-field-message": [],
+  "ui-contact-form-label-message": [],
+  "ui-contact-form-textarea": [],
+  "ui-contact-form-button": [
+    "self-start"
+  ],
+  "ui-login-card": [
+    "py-24"
+  ],
+  "ui-login-card-container": [
+    "mx-auto",
+    "flex",
+    "max-w-md",
+    "flex-col",
+    "px-6"
+  ],
+  "ui-login-card-card": [
+    "gap-8",
+    "p-10"
+  ],
+  "ui-login-card-head": [
+    "flex",
+    "flex-col",
+    "gap-2",
+    "text-center"
+  ],
+  "ui-login-card-title": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-login-card-text": [
+    "text-muted-foreground"
+  ],
+  "ui-login-card-form": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-login-card-field": [],
+  "ui-login-card-label": [],
+  "ui-login-card-input": [],
+  "ui-login-card-button": [
+    "w-full"
+  ],
+  "ui-login-card-foot": [
+    "text-center",
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-signup-card": [
+    "py-24"
+  ],
+  "ui-signup-card-container": [
+    "mx-auto",
+    "flex",
+    "max-w-md",
+    "flex-col",
+    "px-6"
+  ],
+  "ui-signup-card-card": [
+    "gap-8",
+    "p-10"
+  ],
+  "ui-signup-card-head": [
+    "flex",
+    "flex-col",
+    "gap-2",
+    "text-center"
+  ],
+  "ui-signup-card-title": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-signup-card-text": [
+    "text-muted-foreground"
+  ],
+  "ui-signup-card-form": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-signup-card-field": [],
+  "ui-signup-card-label": [],
+  "ui-signup-card-input": [],
+  "ui-signup-card-button": [
+    "w-full"
+  ],
+  "ui-signup-card-foot": [
+    "text-center",
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-settings-panel": [
+    "py-24"
+  ],
+  "ui-settings-panel-container": [
+    "mx-auto",
+    "flex",
+    "max-w-2xl",
+    "flex-col",
+    "px-6"
+  ],
+  "ui-settings-panel-form": [
+    "flex",
+    "flex-col",
+    "gap-8",
+    "rounded-lg",
+    "bg-card",
+    "p-10"
+  ],
+  "ui-settings-panel-fieldset": [
+    "flex",
+    "flex-col",
+    "gap-6"
+  ],
+  "ui-settings-panel-legend": [
+    "mb-2",
+    "flex",
+    "flex-col",
+    "gap-2"
+  ],
+  "ui-settings-panel-title": [
+    "text-2xl",
+    "font-semibold"
+  ],
+  "ui-settings-panel-text": [
+    "text-muted-foreground"
+  ],
+  "ui-settings-panel-option": [
+    "justify-between",
+    "gap-4",
+    "rounded-md",
+    "bg-background",
+    "px-6",
+    "py-4"
+  ],
+  "ui-settings-panel-label": [
+    "text-base",
+    "font-normal"
+  ],
+  "ui-settings-panel-switch": [],
+  "ui-settings-panel-button": [
+    "self-end"
+  ],
+  "ui-dashboard-stats": [
+    "py-24"
+  ],
+  "ui-dashboard-stats-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-dashboard-stats-title": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-dashboard-stats-grid": [
+    "grid",
+    "grid-cols-1",
+    "gap-6",
+    "md:grid-cols-2",
+    "lg:grid-cols-4"
+  ],
+  "ui-dashboard-stats-card": [
+    "flex",
+    "flex-col",
+    "gap-2",
+    "rounded-lg",
+    "bg-card",
+    "p-8"
+  ],
+  "ui-dashboard-stats-label": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-dashboard-stats-value": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-dashboard-stats-hint": [
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-habits-table": [
+    "py-24"
+  ],
+  "ui-habits-table-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "gap-12",
+    "px-6",
+    "lg:px-0"
+  ],
+  "ui-habits-table-title": [
+    "text-3xl",
+    "font-bold"
+  ],
+  "ui-habits-table-scroll": [
+    "overflow-x-auto",
+    "rounded-lg",
+    "inset-ring",
+    "inset-ring-border"
+  ],
+  "ui-habits-table-table": [
+    "w-full",
+    "text-left"
+  ],
+  "ui-habits-table-thead": [
+    "bg-muted",
+    "text-sm",
+    "text-muted-foreground"
+  ],
+  "ui-habits-table-th": [
+    "px-6",
+    "py-4",
+    "font-medium"
+  ],
+  "ui-habits-table-th-2": [
+    "px-6",
+    "py-4",
+    "font-medium"
+  ],
+  "ui-habits-table-th-3": [
+    "px-6",
+    "py-4",
+    "font-medium"
+  ],
+  "ui-habits-table-th-4": [
+    "px-6",
+    "py-4",
+    "font-medium"
+  ],
+  "ui-habits-table-row": [
+    "border-t",
+    "border-border"
+  ],
+  "ui-habits-table-habit": [
+    "px-6",
+    "py-4",
+    "font-medium"
+  ],
+  "ui-habits-table-cell": [
+    "px-6",
+    "py-4"
+  ],
+  "ui-habits-table-cell-2": [
+    "px-6",
+    "py-4",
+    "text-muted-foreground"
+  ],
+  "ui-habits-table-cell-3": [
+    "px-6",
+    "py-4"
+  ],
+  "ui-habits-table-status": [],
+  "ui-habits-table-status-tone-done": [
+    "bg-primary",
+    "text-primary-foreground"
+  ],
+  "ui-habits-table-status-tone-pending": [
+    "bg-muted",
+    "text-foreground"
+  ],
+  "ui-empty-state": [
+    "py-24"
+  ],
+  "ui-empty-state-container": [
+    "mx-auto",
+    "flex",
+    "max-w-xl",
+    "flex-col",
+    "items-center",
+    "gap-6",
+    "rounded-lg",
+    "px-6",
+    "py-20",
+    "text-center",
+    "inset-ring",
+    "inset-ring-border"
+  ],
+  "ui-empty-state-badge": [
+    "size-16",
+    "rounded-full",
+    "bg-muted",
+    "text-muted-foreground"
+  ],
+  "ui-empty-state-icon": [
+    "size-6"
+  ],
+  "ui-empty-state-title": [
+    "text-2xl",
+    "font-semibold"
+  ],
+  "ui-empty-state-text": [
+    "text-muted-foreground"
+  ],
+  "ui-empty-state-plus": [
+    "size-4"
+  ],
+  "ui-not-found": [
+    "py-24"
+  ],
+  "ui-not-found-container": [
+    "mx-auto",
+    "flex",
+    "max-w-2xl",
+    "flex-col",
+    "items-center",
+    "gap-6",
+    "px-6",
+    "text-center"
+  ],
+  "ui-not-found-code": [
+    "text-display",
+    "leading-none",
+    "font-bold",
+    "text-primary"
+  ],
+  "ui-not-found-title": [
+    "text-4xl",
+    "font-bold"
+  ],
+  "ui-not-found-text": [
+    "text-xl",
+    "text-muted-foreground"
+  ],
+  "ui-cookie-banner": [
+    "px-6",
+    "py-8"
+  ],
+  "ui-cookie-banner-card": [
+    "mx-auto",
+    "max-w-2xl",
+    "flex-col",
+    "justify-between",
+    "gap-4",
+    "rounded-lg",
+    "bg-popover",
+    "p-6",
+    "text-popover-foreground",
+    "shadow-lg",
+    "inset-ring",
+    "inset-ring-border",
+    "md:flex-row"
+  ],
+  "ui-cookie-banner-text": [
+    "text-sm"
+  ],
+  "ui-cookie-banner-actions": [
+    "shrink-0",
+    "gap-2"
+  ],
+  "ui-footer-simple": [
+    "border-t",
+    "border-border",
+    "py-10"
+  ],
+  "ui-footer-simple-container": [
+    "mx-auto",
+    "flex",
+    "max-w-page",
+    "flex-col",
+    "items-center",
+    "justify-between",
+    "gap-6",
+    "px-6",
+    "md:flex-row",
+    "lg:px-0"
+  ],
+  "ui-footer-simple-brand": [
+    "gap-2",
+    "text-xl",
+    "font-bold",
+    "text-foreground"
+  ],
+  "ui-footer-simple-mark": [
+    "size-4"
+  ],
+  "ui-footer-simple-nav": [],
+  "ui-footer-simple-links": [
+    "flex",
+    "flex-wrap",
+    "gap-6"
+  ],
+  "ui-footer-simple-link": [],
+  "ui-footer-simple-copyright": [
+    "text-sm",
+    "text-muted-foreground"
   ]
 }

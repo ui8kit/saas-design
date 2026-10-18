@@ -8,7 +8,7 @@
   let { data }: { data: FaqTilesData } = $props();
 </script>
 
-<Block class="ui-faq-tiles" data-class="faq-tiles" tag="section" id={data.id} aria-labelledby="faq-tiles-title">
+<Block class="ui-faq-tiles" data-class="faq-tiles" tag="section" id={data.id || undefined} aria-labelledby="faq-tiles-title">
   <Container class="ui-faq-tiles-container" data-class="faq-tiles-container">
     <Stack class="ui-faq-tiles-head" data-class="faq-tiles-head">
       <Title class="ui-faq-tiles-title" data-class="faq-tiles-title" as={2} id="faq-tiles-title">
@@ -34,7 +34,7 @@
           </Disclosure>
         {/each}
       </Grid>
-      <Link class="ui-faq-tiles-more" data-class="faq-tiles-more" href={data.more.href}>
+      <Link class="ui-faq-tiles-more" data-class="faq-tiles-more" href={data.more.href || undefined}>
         {data.more.label}
       </Link>
     </Stack>

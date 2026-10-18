@@ -10,9 +10,38 @@ import CtaSplit from "./CtaSplit.svelte";
 import PricingTwoPlans from "./PricingTwoPlans.svelte";
 import FaqTiles from "./FaqTiles.svelte";
 import FooterNewsletter from "./FooterNewsletter.svelte";
+import AnnouncementBar from "./AnnouncementBar.svelte";
+import HeroCentered from "./HeroCentered.svelte";
+import HeroSplit from "./HeroSplit.svelte";
+import LogoCloud from "./LogoCloud.svelte";
+import StatsRow from "./StatsRow.svelte";
+import FeatureGrid from "./FeatureGrid.svelte";
+import FeatureSplit from "./FeatureSplit.svelte";
+import Steps from "./Steps.svelte";
+import Integrations from "./Integrations.svelte";
+import PricingThreeTiers from "./PricingThreeTiers.svelte";
+import ComparisonTable from "./ComparisonTable.svelte";
+import TestimonialQuote from "./TestimonialQuote.svelte";
+import TeamGrid from "./TeamGrid.svelte";
+import BlogCards from "./BlogCards.svelte";
+import Changelog from "./Changelog.svelte";
+import FaqAccordion from "./FaqAccordion.svelte";
+import CtaCentered from "./CtaCentered.svelte";
+import AppDownload from "./AppDownload.svelte";
+import NewsletterBand from "./NewsletterBand.svelte";
+import ContactForm from "./ContactForm.svelte";
+import LoginCard from "./LoginCard.svelte";
+import SignupCard from "./SignupCard.svelte";
+import SettingsPanel from "./SettingsPanel.svelte";
+import DashboardStats from "./DashboardStats.svelte";
+import HabitsTable from "./HabitsTable.svelte";
+import EmptyState from "./EmptyState.svelte";
+import NotFound from "./NotFound.svelte";
+import CookieBanner from "./CookieBanner.svelte";
+import FooterSimple from "./FooterSimple.svelte";
 
 export * from "./types";
-export { Navbar, HeroPhones, FeatureCards, SocialProofSplit, AppGallery, TestimonialCards, CtaSplit, PricingTwoPlans, FaqTiles, FooterNewsletter };
+export { Navbar, HeroPhones, FeatureCards, SocialProofSplit, AppGallery, TestimonialCards, CtaSplit, PricingTwoPlans, FaqTiles, FooterNewsletter, AnnouncementBar, HeroCentered, HeroSplit, LogoCloud, StatsRow, FeatureGrid, FeatureSplit, Steps, Integrations, PricingThreeTiers, ComparisonTable, TestimonialQuote, TeamGrid, BlogCards, Changelog, FaqAccordion, CtaCentered, AppDownload, NewsletterBand, ContactForm, LoginCard, SignupCard, SettingsPanel, DashboardStats, HabitsTable, EmptyState, NotFound, CookieBanner, FooterSimple };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const registry: Record<string, Component<{ data: any }>> = {
@@ -26,4 +55,33 @@ export const registry: Record<string, Component<{ data: any }>> = {
   "pricing-two-plans": PricingTwoPlans,
   "faq-tiles": FaqTiles,
   "footer-newsletter": FooterNewsletter,
+  "announcement-bar": AnnouncementBar,
+  "hero-centered": HeroCentered,
+  "hero-split": HeroSplit,
+  "logo-cloud": LogoCloud,
+  "stats-row": StatsRow,
+  "feature-grid": FeatureGrid,
+  "feature-split": FeatureSplit,
+  "steps": Steps,
+  "integrations": Integrations,
+  "pricing-three-tiers": PricingThreeTiers,
+  "comparison-table": ComparisonTable,
+  "testimonial-quote": TestimonialQuote,
+  "team-grid": TeamGrid,
+  "blog-cards": BlogCards,
+  "changelog": Changelog,
+  "faq-accordion": FaqAccordion,
+  "cta-centered": CtaCentered,
+  "app-download": AppDownload,
+  "newsletter-band": NewsletterBand,
+  "contact-form": ContactForm,
+  "login-card": LoginCard,
+  "signup-card": SignupCard,
+  "settings-panel": SettingsPanel,
+  "dashboard-stats": DashboardStats,
+  "habits-table": HabitsTable,
+  "empty-state": EmptyState,
+  "not-found": NotFound,
+  "cookie-banner": CookieBanner,
+  "footer-simple": FooterSimple,
 };

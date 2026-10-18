@@ -8,7 +8,7 @@
   let { data }: { data: PricingTwoPlansData } = $props();
 </script>
 
-<Block class="ui-pricing-two-plans" data-class="pricing-two-plans" tag="section" id={data.id} aria-labelledby="pricing-two-plans-title">
+<Block class="ui-pricing-two-plans" data-class="pricing-two-plans" tag="section" id={data.id || undefined} aria-labelledby="pricing-two-plans-title">
   <Container class="ui-pricing-two-plans-container" data-class="pricing-two-plans-container">
     <Stack class="ui-pricing-two-plans-head" data-class="pricing-two-plans-head">
       <Title class="ui-pricing-two-plans-title" data-class="pricing-two-plans-title" as={2} id="pricing-two-plans-title">
@@ -61,7 +61,7 @@
               {/each}
             </List>
           </Stack>
-          <Button class="ui-pricing-two-plans-plan-cta" data-class="pricing-two-plans-plan-cta" variant="secondary" size="lg" href={plan.cta.href}>
+          <Button class="ui-pricing-two-plans-plan-cta" data-class="pricing-two-plans-plan-cta" variant="secondary" size="lg" href={plan.cta.href || undefined}>
             {plan.cta.label}
           </Button>
         </ListItem>

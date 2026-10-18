@@ -19,10 +19,10 @@
       {data.lead}
     </Text>
     <Group class="ui-hero-phones-actions" data-class="hero-phones-actions">
-      <Button variant="contrast" size="lg" href={data.primary.href}>
+      <Button variant="contrast" size="lg" href={data.primary.href || undefined}>
         {data.primary.label}
       </Button>
-      <Button class="ui-hero-phones-demo" data-class="hero-phones-demo" variant="secondary" size="lg" href={data.secondary.href}>
+      <Button class="ui-hero-phones-demo" data-class="hero-phones-demo" variant="secondary" size="lg" href={data.secondary.href || undefined}>
         {@html svg("play", `ui-hero-phones-demo-icon`)}
         {data.secondary.label}
       </Button>
@@ -40,7 +40,7 @@
     <Box class="ui-hero-phones-dot-5" data-class="hero-phones-dot-5" />
     <Box class="ui-hero-phones-dot-6" data-class="hero-phones-dot-6" />
     {#each data.screens as screen}
-      <Image class="ui-hero-phones-screen" data-class="hero-phones-screen" src={screen.src} alt="" decorative={true} />
+      <Image class="ui-hero-phones-screen" data-class="hero-phones-screen" src={screen.src || undefined} alt="" decorative={true} />
     {/each}
   </Box>
 </Block>

@@ -10,7 +10,7 @@
 <Block class="ui-social-proof-split" data-class="social-proof-split" tag="section" aria-labelledby="social-proof-title">
   <Container class="ui-social-proof-split-container" data-class="social-proof-split-container">
     <Box class="ui-social-proof-split-panel" data-class="social-proof-split-panel">
-      <Image class="ui-social-proof-split-screen" data-class="social-proof-split-screen" src={data.screen.src} alt={data.screen.alt} />
+      <Image class="ui-social-proof-split-screen" data-class="social-proof-split-screen" src={data.screen.src || undefined} alt={data.screen.alt || undefined} />
     </Box>
     <Stack class="ui-social-proof-split-body" data-class="social-proof-split-body">
       <Title class="ui-social-proof-split-title" data-class="social-proof-split-title" as={2} id="social-proof-title">
@@ -18,7 +18,7 @@
       </Title>
       <Group class="ui-social-proof-split-logos" data-class="social-proof-split-logos">
         {#each data.logos as logo}
-          <Image class="ui-social-proof-split-logo" data-class="social-proof-split-logo" variant="logo" src={logo.src} alt={logo.alt} />
+          <Image class="ui-social-proof-split-logo" data-class="social-proof-split-logo" variant="logo" src={logo.src || undefined} alt={logo.alt || undefined} />
         {/each}
       </Group>
     </Stack>

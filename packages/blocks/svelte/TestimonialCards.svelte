@@ -22,7 +22,7 @@
         <ListItem class="ui-testimonial-cards-item" data-class="testimonial-cards-item">
           <Card class="ui-testimonial-cards-card" data-class="testimonial-cards-card" tag="figure">
             <Group class="ui-testimonial-cards-author" data-class="testimonial-cards-author">
-              <Image class="ui-testimonial-cards-avatar" data-class="testimonial-cards-avatar" variant="avatar" src={item.avatar.src} alt={item.avatar.alt} />
+              <Image class="ui-testimonial-cards-avatar" data-class="testimonial-cards-avatar" variant="avatar" src={item.avatar.src || undefined} alt={item.avatar.alt || undefined} />
               <Stack class="ui-testimonial-cards-who" data-class="testimonial-cards-who">
                 <Inline class="ui-testimonial-cards-name" data-class="testimonial-cards-name">
                   {item.name}

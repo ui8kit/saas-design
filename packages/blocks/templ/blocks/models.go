@@ -197,3 +197,463 @@ type FooterNewsletterData struct {
 	Newsletter FooterNewsletterDataNewsletter    `json:"newsletter"`
 	Copyright  string                            `json:"copyright"`
 }
+
+type AnnouncementBarDataLink struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type AnnouncementBarData struct {
+	Label string                  `json:"label"`
+	Text  string                  `json:"text"`
+	Link  AnnouncementBarDataLink `json:"link"`
+}
+
+type HeroCenteredDataPrimary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type HeroCenteredDataSecondary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type HeroCenteredData struct {
+	Eyebrow   string                    `json:"eyebrow"`
+	Title     string                    `json:"title"`
+	Lead      string                    `json:"lead"`
+	Primary   HeroCenteredDataPrimary   `json:"primary"`
+	Secondary HeroCenteredDataSecondary `json:"secondary"`
+}
+
+type HeroSplitDataPrimary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type HeroSplitDataSecondary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type HeroSplitDataImage struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type HeroSplitData struct {
+	Title     string                 `json:"title"`
+	Lead      string                 `json:"lead"`
+	Primary   HeroSplitDataPrimary   `json:"primary"`
+	Secondary HeroSplitDataSecondary `json:"secondary"`
+	Image     HeroSplitDataImage     `json:"image"`
+}
+
+type LogoCloudDataLogosItem struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type LogoCloudData struct {
+	Title string                   `json:"title"`
+	Logos []LogoCloudDataLogosItem `json:"logos"`
+}
+
+type StatsRowDataItemsItem struct {
+	Value string `json:"value"`
+	Label string `json:"label"`
+}
+
+type StatsRowData struct {
+	Title string                  `json:"title"`
+	Items []StatsRowDataItemsItem `json:"items"`
+}
+
+type FeatureGridDataItemsItem struct {
+	Icon  string `json:"icon"`
+	Title string `json:"title"`
+	Text  string `json:"text"`
+}
+
+type FeatureGridData struct {
+	Title string                     `json:"title"`
+	Lead  string                     `json:"lead"`
+	Items []FeatureGridDataItemsItem `json:"items"`
+}
+
+type FeatureSplitDataItemsItem struct {
+	Title string `json:"title"`
+	Text  string `json:"text"`
+}
+
+type FeatureSplitDataImage struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type FeatureSplitData struct {
+	Title string                      `json:"title"`
+	Lead  string                      `json:"lead"`
+	Items []FeatureSplitDataItemsItem `json:"items"`
+	Image FeatureSplitDataImage       `json:"image"`
+}
+
+type StepsDataItemsItem struct {
+	Icon  string `json:"icon"`
+	Title string `json:"title"`
+	Text  string `json:"text"`
+}
+
+type StepsData struct {
+	Title string               `json:"title"`
+	Lead  string               `json:"lead"`
+	Items []StepsDataItemsItem `json:"items"`
+}
+
+type IntegrationsDataItemsItem struct {
+	Icon string `json:"icon"`
+	Name string `json:"name"`
+	Text string `json:"text"`
+}
+
+type IntegrationsData struct {
+	Title string                      `json:"title"`
+	Lead  string                      `json:"lead"`
+	Items []IntegrationsDataItemsItem `json:"items"`
+}
+
+type PricingThreeTiersDataPlansItemFeaturesItem struct {
+	Label    string `json:"label"`
+	Included bool   `json:"included"`
+}
+
+type PricingThreeTiersDataPlansItemCta struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type PricingThreeTiersDataPlansItem struct {
+	Theme       string                                       `json:"theme"`
+	Name        string                                       `json:"name"`
+	Badge       string                                       `json:"badge"`
+	Description string                                       `json:"description"`
+	Price       string                                       `json:"price"`
+	Period      string                                       `json:"period"`
+	Features    []PricingThreeTiersDataPlansItemFeaturesItem `json:"features"`
+	Cta         PricingThreeTiersDataPlansItemCta            `json:"cta"`
+}
+
+type PricingThreeTiersData struct {
+	Title string                           `json:"title"`
+	Lead  string                           `json:"lead"`
+	Plans []PricingThreeTiersDataPlansItem `json:"plans"`
+}
+
+type ComparisonTableDataRowsItem struct {
+	Feature string `json:"feature"`
+	Free    bool   `json:"free"`
+	Premium bool   `json:"premium"`
+}
+
+type ComparisonTableData struct {
+	Title   string                        `json:"title"`
+	Feature string                        `json:"feature"`
+	Free    string                        `json:"free"`
+	Premium string                        `json:"premium"`
+	Yes     string                        `json:"yes"`
+	No      string                        `json:"no"`
+	Rows    []ComparisonTableDataRowsItem `json:"rows"`
+}
+
+type TestimonialQuoteDataAvatar struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type TestimonialQuoteData struct {
+	Label  string                     `json:"label"`
+	Quote  string                     `json:"quote"`
+	Name   string                     `json:"name"`
+	Role   string                     `json:"role"`
+	Avatar TestimonialQuoteDataAvatar `json:"avatar"`
+}
+
+type TeamGridDataMembersItemAvatar struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type TeamGridDataMembersItem struct {
+	Name   string                        `json:"name"`
+	Role   string                        `json:"role"`
+	Avatar TeamGridDataMembersItemAvatar `json:"avatar"`
+}
+
+type TeamGridData struct {
+	Title   string                    `json:"title"`
+	Lead    string                    `json:"lead"`
+	Members []TeamGridDataMembersItem `json:"members"`
+}
+
+type BlogCardsDataPostsItemImage struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type BlogCardsDataPostsItem struct {
+	Title    string                      `json:"title"`
+	Excerpt  string                      `json:"excerpt"`
+	Date     string                      `json:"date"`
+	Datetime string                      `json:"datetime"`
+	Tag      string                      `json:"tag"`
+	Href     string                      `json:"href"`
+	Image    BlogCardsDataPostsItemImage `json:"image"`
+}
+
+type BlogCardsData struct {
+	Title string                   `json:"title"`
+	Lead  string                   `json:"lead"`
+	Posts []BlogCardsDataPostsItem `json:"posts"`
+}
+
+type ChangelogDataItemsItem struct {
+	Version  string `json:"version"`
+	Date     string `json:"date"`
+	Datetime string `json:"datetime"`
+	Title    string `json:"title"`
+	Text     string `json:"text"`
+}
+
+type ChangelogData struct {
+	Title string                   `json:"title"`
+	Lead  string                   `json:"lead"`
+	Items []ChangelogDataItemsItem `json:"items"`
+}
+
+type FaqAccordionDataItemsItem struct {
+	Question string `json:"question"`
+	Answer   string `json:"answer"`
+	Open     bool   `json:"open"`
+}
+
+type FaqAccordionData struct {
+	Title string                      `json:"title"`
+	Lead  string                      `json:"lead"`
+	Items []FaqAccordionDataItemsItem `json:"items"`
+}
+
+type CtaCenteredDataPrimary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type CtaCenteredDataSecondary struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type CtaCenteredData struct {
+	Title     string                   `json:"title"`
+	Text      string                   `json:"text"`
+	Primary   CtaCenteredDataPrimary   `json:"primary"`
+	Secondary CtaCenteredDataSecondary `json:"secondary"`
+}
+
+type AppDownloadDataIos struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type AppDownloadDataAndroid struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type AppDownloadDataImage struct {
+	Src string `json:"src"`
+	Alt string `json:"alt"`
+}
+
+type AppDownloadData struct {
+	Title   string                 `json:"title"`
+	Text    string                 `json:"text"`
+	Ios     AppDownloadDataIos     `json:"ios"`
+	Android AppDownloadDataAndroid `json:"android"`
+	Image   AppDownloadDataImage   `json:"image"`
+}
+
+type NewsletterBandData struct {
+	Title       string `json:"title"`
+	Text        string `json:"text"`
+	Label       string `json:"label"`
+	Placeholder string `json:"placeholder"`
+	Button      string `json:"button"`
+	Action      string `json:"action"`
+}
+
+type ContactFormDataName struct {
+	Label        string `json:"label"`
+	Name         string `json:"name"`
+	Type         string `json:"type"`
+	Placeholder  string `json:"placeholder"`
+	Autocomplete string `json:"autocomplete"`
+}
+
+type ContactFormDataEmail struct {
+	Label        string `json:"label"`
+	Name         string `json:"name"`
+	Type         string `json:"type"`
+	Placeholder  string `json:"placeholder"`
+	Autocomplete string `json:"autocomplete"`
+}
+
+type ContactFormDataMessage struct {
+	Label       string `json:"label"`
+	Placeholder string `json:"placeholder"`
+}
+
+type ContactFormData struct {
+	Title   string                 `json:"title"`
+	Text    string                 `json:"text"`
+	Name    ContactFormDataName    `json:"name"`
+	Email   ContactFormDataEmail   `json:"email"`
+	Message ContactFormDataMessage `json:"message"`
+	Send    string                 `json:"send"`
+	Action  string                 `json:"action"`
+}
+
+type LoginCardDataFieldsItem struct {
+	Label        string `json:"label"`
+	Name         string `json:"name"`
+	Type         string `json:"type"`
+	Placeholder  string `json:"placeholder"`
+	Autocomplete string `json:"autocomplete"`
+}
+
+type LoginCardDataLink struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type LoginCardData struct {
+	Title  string                    `json:"title"`
+	Text   string                    `json:"text"`
+	Fields []LoginCardDataFieldsItem `json:"fields"`
+	Submit string                    `json:"submit"`
+	Action string                    `json:"action"`
+	Note   string                    `json:"note"`
+	Link   LoginCardDataLink         `json:"link"`
+}
+
+type SignupCardDataFieldsItem struct {
+	Label        string `json:"label"`
+	Name         string `json:"name"`
+	Type         string `json:"type"`
+	Placeholder  string `json:"placeholder"`
+	Autocomplete string `json:"autocomplete"`
+}
+
+type SignupCardDataLink struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type SignupCardData struct {
+	Title  string                     `json:"title"`
+	Text   string                     `json:"text"`
+	Fields []SignupCardDataFieldsItem `json:"fields"`
+	Submit string                     `json:"submit"`
+	Action string                     `json:"action"`
+	Note   string                     `json:"note"`
+	Link   SignupCardDataLink         `json:"link"`
+}
+
+type SettingsPanelDataOptionsItem struct {
+	ID      string `json:"id"`
+	Label   string `json:"label"`
+	Checked bool   `json:"checked"`
+}
+
+type SettingsPanelData struct {
+	Title   string                         `json:"title"`
+	Text    string                         `json:"text"`
+	Options []SettingsPanelDataOptionsItem `json:"options"`
+	Save    string                         `json:"save"`
+	Action  string                         `json:"action"`
+}
+
+type DashboardStatsDataCardsItem struct {
+	Label string `json:"label"`
+	Value string `json:"value"`
+	Hint  string `json:"hint"`
+}
+
+type DashboardStatsData struct {
+	Title string                        `json:"title"`
+	Cards []DashboardStatsDataCardsItem `json:"cards"`
+}
+
+type HabitsTableDataColumns struct {
+	Habit  string `json:"habit"`
+	Streak string `json:"streak"`
+	Time   string `json:"time"`
+	Status string `json:"status"`
+}
+
+type HabitsTableDataRowsItem struct {
+	Habit  string `json:"habit"`
+	Streak string `json:"streak"`
+	Time   string `json:"time"`
+	Status string `json:"status"`
+	Tone   string `json:"tone"`
+}
+
+type HabitsTableData struct {
+	Title   string                    `json:"title"`
+	Columns HabitsTableDataColumns    `json:"columns"`
+	Rows    []HabitsTableDataRowsItem `json:"rows"`
+}
+
+type EmptyStateDataCta struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type EmptyStateData struct {
+	Title string            `json:"title"`
+	Text  string            `json:"text"`
+	Cta   EmptyStateDataCta `json:"cta"`
+}
+
+type NotFoundDataCta struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type NotFoundData struct {
+	Code  string          `json:"code"`
+	Title string          `json:"title"`
+	Text  string          `json:"text"`
+	Cta   NotFoundDataCta `json:"cta"`
+}
+
+type CookieBannerData struct {
+	Label   string `json:"label"`
+	Text    string `json:"text"`
+	Accept  string `json:"accept"`
+	Decline string `json:"decline"`
+}
+
+type FooterSimpleDataLinksItem struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
+type FooterSimpleData struct {
+	Label     string                      `json:"label"`
+	Brand     string                      `json:"brand"`
+	Href      string                      `json:"href"`
+	Links     []FooterSimpleDataLinksItem `json:"links"`
+	Copyright string                      `json:"copyright"`
+}

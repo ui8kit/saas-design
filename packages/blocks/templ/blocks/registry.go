@@ -10,7 +10,7 @@ import (
 )
 
 // IDs lists every block id in catalog order.
-var IDs = []string{"navbar", "hero-phones", "feature-cards", "social-proof-split", "app-gallery", "testimonial-cards", "cta-split", "pricing-two-plans", "faq-tiles", "footer-newsletter"}
+var IDs = []string{"navbar", "hero-phones", "feature-cards", "social-proof-split", "app-gallery", "testimonial-cards", "cta-split", "pricing-two-plans", "faq-tiles", "footer-newsletter", "announcement-bar", "hero-centered", "hero-split", "logo-cloud", "stats-row", "feature-grid", "feature-split", "steps", "integrations", "pricing-three-tiers", "comparison-table", "testimonial-quote", "team-grid", "blog-cards", "changelog", "faq-accordion", "cta-centered", "app-download", "newsletter-band", "contact-form", "login-card", "signup-card", "settings-panel", "dashboard-stats", "habits-table", "empty-state", "not-found", "cookie-banner", "footer-simple"}
 
 // Render decodes raw view data for block id and returns its component.
 func Render(id string, raw json.RawMessage) (templ.Component, error) {
@@ -75,6 +75,180 @@ func Render(id string, raw json.RawMessage) (templ.Component, error) {
 			return nil, fmt.Errorf("%s: %w", id, err)
 		}
 		return FooterNewsletter(d), nil
+	case "announcement-bar":
+		var d AnnouncementBarData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return AnnouncementBar(d), nil
+	case "hero-centered":
+		var d HeroCenteredData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return HeroCentered(d), nil
+	case "hero-split":
+		var d HeroSplitData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return HeroSplit(d), nil
+	case "logo-cloud":
+		var d LogoCloudData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return LogoCloud(d), nil
+	case "stats-row":
+		var d StatsRowData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return StatsRow(d), nil
+	case "feature-grid":
+		var d FeatureGridData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return FeatureGrid(d), nil
+	case "feature-split":
+		var d FeatureSplitData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return FeatureSplit(d), nil
+	case "steps":
+		var d StepsData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return Steps(d), nil
+	case "integrations":
+		var d IntegrationsData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return Integrations(d), nil
+	case "pricing-three-tiers":
+		var d PricingThreeTiersData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return PricingThreeTiers(d), nil
+	case "comparison-table":
+		var d ComparisonTableData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return ComparisonTable(d), nil
+	case "testimonial-quote":
+		var d TestimonialQuoteData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return TestimonialQuote(d), nil
+	case "team-grid":
+		var d TeamGridData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return TeamGrid(d), nil
+	case "blog-cards":
+		var d BlogCardsData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return BlogCards(d), nil
+	case "changelog":
+		var d ChangelogData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return Changelog(d), nil
+	case "faq-accordion":
+		var d FaqAccordionData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return FaqAccordion(d), nil
+	case "cta-centered":
+		var d CtaCenteredData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return CtaCentered(d), nil
+	case "app-download":
+		var d AppDownloadData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return AppDownload(d), nil
+	case "newsletter-band":
+		var d NewsletterBandData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return NewsletterBand(d), nil
+	case "contact-form":
+		var d ContactFormData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return ContactForm(d), nil
+	case "login-card":
+		var d LoginCardData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return LoginCard(d), nil
+	case "signup-card":
+		var d SignupCardData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return SignupCard(d), nil
+	case "settings-panel":
+		var d SettingsPanelData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return SettingsPanel(d), nil
+	case "dashboard-stats":
+		var d DashboardStatsData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return DashboardStats(d), nil
+	case "habits-table":
+		var d HabitsTableData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return HabitsTable(d), nil
+	case "empty-state":
+		var d EmptyStateData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return EmptyState(d), nil
+	case "not-found":
+		var d NotFoundData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return NotFound(d), nil
+	case "cookie-banner":
+		var d CookieBannerData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return CookieBanner(d), nil
+	case "footer-simple":
+		var d FooterSimpleData
+		if err := json.Unmarshal(raw, &d); err != nil {
+			return nil, fmt.Errorf("%s: %w", id, err)
+		}
+		return FooterSimple(d), nil
 	}
 	return nil, fmt.Errorf("unknown block %q", id)
 }

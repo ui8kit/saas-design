@@ -8,7 +8,7 @@
   let { data }: { data: FeatureCardsData } = $props();
 </script>
 
-<Block class="ui-feature-cards" data-class="feature-cards" tag="section" id={data.id} aria-labelledby="feature-cards-title">
+<Block class="ui-feature-cards" data-class="feature-cards" tag="section" id={data.id || undefined} aria-labelledby="feature-cards-title">
   <Container class="ui-feature-cards-container" data-class="feature-cards-container">
     <Group class="ui-feature-cards-head" data-class="feature-cards-head">
       <Title class="ui-feature-cards-title" data-class="feature-cards-title" as={2} id="feature-cards-title">
