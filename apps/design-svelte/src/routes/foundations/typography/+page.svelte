@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { font, typeScale, typeSteps } from "$lib/foundations";
+  import { font, typeScale, typeSteps } from "$design/foundations";
 </script>
 
 <svelte:head><title>Typography · Habitus Design</title></svelte:head>

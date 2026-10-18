@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Badge, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, ThemeToggle } from "@saas-design/ui";
-  import { colors } from "$lib/foundations";
+  import { colors } from "$design/foundations";
   const groups = [
     { id: "light", title: "shadcn tokens · light", items: colors.light },
     { id: "dark", title: "shadcn tokens · dark (.dark)", items: colors.dark },

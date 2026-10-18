@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Badge, Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Image, Input, Label, List, ListItem, Text } from "@saas-design/ui";
-  import { blockData } from "$lib/blocks";
+  import { blockData } from "$design/blocks";
   import type { DashboardStatsData, NewsletterBandData, PricingTwoPlansData, TestimonialCardsData } from "@saas-design/blocks";
 
   // Widgets: small compositions of packages/ui components, fed by the same fixture view data as the blocks.

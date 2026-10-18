@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { radii, radius } from "$lib/foundations";
+  import { radii, radius } from "$design/foundations";
 </script>
 
 <svelte:head><title>Radius · Habitus Design</title></svelte:head>

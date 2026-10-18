@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import { page } from "$app/state";
   import { Sheet, SheetClose, SheetTrigger, ThemeToggle } from "@saas-design/ui";
-  import { nav } from "$lib/nav";
+  import { nav } from "$design/nav";
 
   let { children } = $props();
   // shared vanilla behaviors (theme toggle, sheet): same script as apps/site, loaded client-side only

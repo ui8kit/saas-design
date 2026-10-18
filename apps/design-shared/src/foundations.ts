@@ -1,6 +1,6 @@
 // Foundation scales shown by the docs app. Values come from fixtures/tokens/tokens.json and the ui8px policy.
-import tokens from "../../../../fixtures/tokens/tokens.json";
-import policy from "../../../../.ui8px/policy/allowed.json";
+import tokens from "../../../fixtures/tokens/tokens.json";
+import policy from "../../../.ui8px/policy/allowed.json";
 
 type Color = { hsl: string; hex: string; source: string };
 const entries = (o: Record<string, Color>) => Object.entries(o).map(([name, v]) => ({ name, ...v }));

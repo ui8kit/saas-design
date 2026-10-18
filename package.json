@@ -36,6 +36,7 @@
     "playwright-core": "1.48.2",
     "svelte": "5",
     "tailwind-merge": "2",
-    "tailwindcss": "4"
+    "tailwindcss": "4",
+    "typescript": "^5.9"
   }
 }

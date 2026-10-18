@@ -5,8 +5,6 @@
   "description": "Svelte 5 design-system docs app (SvelteKit, static prerender). Consumes packages/* and fixtures.",
   "scripts": {
     "dev": "vite dev",
-    "generate": "bun scripts/foundations.ts",
-    "check": "bun scripts/foundations.ts --check",
     "build": "node ../../tools/copy-media.mjs static && vite build",
     "preview": "vite preview"
   },

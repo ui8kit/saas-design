@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { shadows, shadowTokens } from "$lib/foundations";
+  import { shadows, shadowTokens } from "$design/foundations";
 </script>
 
 <svelte:head><title>Shadows · Habitus Design</title></svelte:head>

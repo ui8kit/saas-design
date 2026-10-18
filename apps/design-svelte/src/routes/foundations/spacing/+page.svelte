@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { spaceSteps, spacing } from "$lib/foundations";
+  import { spaceSteps, spacing } from "$design/foundations";
 </script>
 
 <svelte:head><title>Spacing · Habitus Design</title></svelte:head>

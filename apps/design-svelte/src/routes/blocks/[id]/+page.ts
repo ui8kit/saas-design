@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit";
-import { blocks } from "$lib/blocks";
+import { blocks } from "$design/blocks";
 
 export const entries = () => blocks.map((b) => ({ id: b.id }));
 export const load = ({ params }) => {

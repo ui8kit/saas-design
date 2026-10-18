@@ -3,7 +3,7 @@
 ```bash
 $EDITOR fixtures/tokens/mapping.json   # shadcn role → Figma variable name or hex, light + dark
 bun run tokens                         # → fixtures/tokens/tokens.json, packages/tokens/theme.css,
-                                       #   apps/site/styles/brand.css, apps/design-svelte/src/lib/styles/brand.css
+                                       #   apps/site/styles/brand.css, apps/design-shared/styles/brand.css
 bun run brand:emit                     # brand-os@0.3.0 bundle → fixtures/tokens/brand.generated
 bun run brand:check                    # validate + verify --strict
 ```

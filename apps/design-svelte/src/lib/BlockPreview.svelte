@@ -1,6 +1,6 @@
 <script lang="ts">
   import { registry } from "@saas-design/blocks";
-  import { blockData } from "./blocks";
+  import { blockData } from "$design/blocks";
 
   let { id }: { id: string } = $props();
   const Block = $derived(registry[id]);

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { nav } from "$lib/nav";
+  import { nav } from "$design/nav";
 </script>
 
 <svelte:head><title>Habitus Design System</title></svelte:head>

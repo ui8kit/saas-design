@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { blocks, categories } from "$lib/blocks";
+  import { blocks, categories } from "$design/blocks";
 </script>
 
 <svelte:head><title>Blocks · Habitus Design</title></svelte:head>

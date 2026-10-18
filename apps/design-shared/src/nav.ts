@@ -1,4 +1,4 @@
-import catalog from "$packages/blocks/catalog.json";
+import catalog from "../../../packages/blocks/catalog.json";
 
 export type NavItem = { label: string; href: string };
 export type NavGroup = { title: string; items: NavItem[] };

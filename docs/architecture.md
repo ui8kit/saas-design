@@ -49,7 +49,7 @@ apps/site  (Go templ → static HTML)     apps/design-svelte (SvelteKit, Svelte 
     - dark under `.dark, [data-theme="dark"]`;
     - `@custom-variant dark`;
     - an `@theme` block with `--text-display*` and `--container-page`.
-  - `apps/site/styles/brand.css` and `apps/design-svelte/src/lib/styles/brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
+  - `apps/site/styles/brand.css` and `apps/design-shared/styles/brand.css`: colors without a shadcn role (`--brand-*`). These are **app level only**.
   - `fixtures/tokens/{palette,tokens}.json` and `brand.contract.json` for [brand-os](https://github.com/ui8kit/brand-os) (`bun run brand:emit`, `bun run brand:check`).
 
 ### 3. Adapter (`packages/adapter/src`)

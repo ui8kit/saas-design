@@ -10,4 +10,4 @@ alwaysApply: false
 - Every utility lives in an `@apply` rule: `.ui-stats-row-list { @apply grid grid-cols-2 gap-6 md:grid-cols-4; }`.
 - Tailwind is imported with `source(none)` — no content scanning, so a utility in markup would silently not exist.
 - Primitive classes come from `packages/ui/recipes/*.variants.json` (generator rewrites them to `ui-*`); block classes from the `css:` field in `packages/blocks/defs`. Do not edit `*.generated.css`.
-- Per-value visual samples (swatches, sizes) get one generated class each (`apps/design-svelte/scripts/foundations.ts`), not inline styles.
+- Per-value visual samples (swatches, sizes) get one generated class each (`apps/design-shared/scripts/foundations.ts`), not inline styles.

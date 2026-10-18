@@ -87,7 +87,7 @@ bun tools/ui8px-policy.ts && npx -y ui8px@latest lint   # Violations: 0
 
 # 9. apps
 bun run site:build                                # apps/site/public
-(cd apps/design-svelte && bun run generate && bun run build)
+(cd apps/design-shared && bun run generate) && (cd apps/design-svelte && bun run build)
 
 # 10. gate
 bun run check                                     # "all checks passed"
