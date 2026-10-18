@@ -23,6 +23,8 @@ The first part covers common failures and their fixes. The second part summarize
 | Chrome not found (shots, tests) | Chrome is not at `/usr/bin/google-chrome` | Set `CHROME=/path` (`shots*.ts`, `test-behaviors.ts`). `measure.ts` has the path hard-coded |
 | `lint-apps: N blocking` | Raw tag, `{@html}` / `dangerouslySetInnerHTML` / `@templ.Raw`, computed tag, reactive ARIA, a second Block on a render path, or `style` in composition code | Use the primitive with `tag`/`as`, an icons component, a static ARIA attribute per branch, or extract a file; see [blocks-retag rule](../.cursor/rules/blocks-retag.mdc) |
 | `lint-apps.baseline.json: stale entry` | A baselined finding was fixed | Remove the entry |
+| `layout audit` reports `edge` | A text, image or nested card sits less than 8px from the inner border of a bordered/filled surface (often a missing `md:`/base padding step) | Read the item in `.ui8px/reports/layout.json` (`AUDIT_DEBUG=1 bun tools/audit-layout.ts` for rects); add padding in the block DSL (`packages/blocks/defs`) or the recipe, never in one runtime. Intentional bleed: `data-bleed` on the element |
+| `layout audit` reports `overflow` | An element is wider than the viewport (fixed widths, long nowrap rows, a dialog wider than 390px) | Make the width responsive (`w-full md:w-auto`, `max-w-full`, `flex-wrap`) |
 | Parity mismatch (design apps) | A design-svelte page and its design-react twin render a different `<body>` | `bun tools/design-parity.ts --diff`; change both apps |
 
 ## Known gaps (from `.project/backlog`)

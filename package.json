@@ -24,7 +24,8 @@
     "shots:design": "bun tools/shots-design.ts",
     "shots:modes": "bun tools/shots-modes.ts all",
     "test:behaviors": "bun tools/test-behaviors.ts",
-    "docs:links": "bun tools/check-links.ts"
+    "docs:links": "bun tools/check-links.ts",
+    "audit:layout": "bun tools/audit-layout.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4",

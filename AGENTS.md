@@ -105,6 +105,7 @@ bun tools/lint-apps.ts                                   # 0 blocking
 bun run site:build                                # apps/site/public
 (cd packages/design-docs && bun run generate) && bun run design-svelte:build && bun run design-react:build
 bun tools/design-parity.ts                        # react 49/49 DOM-identical to svelte
+bun tools/audit-layout.ts                         # layout audit: 0 blocking
 
 # 10. gate
 bun run check                                     # "all checks passed"
@@ -161,8 +162,9 @@ A change is done only when all of these hold:
   - ui8px **0 blocking**; lint-apps **0 blocking** and no stale baseline entry;
   - no brand tokens in `packages/`;
   - packages compile standalone;
-  - all three apps build, and design-parity is **0 mismatches**.
-- [ ] For visual changes: you ran `bun run shots` (and `shots:modes` for theme or mobile changes), **opened the images**, and compared them with Figma. Section height deltas in `report.json` must not get worse. Check dark mode and 390px.
+  - all three apps build, and design-parity is **0 mismatches**;
+  - layout audit **0 blocking** (no overflow, nothing within 8px of a bordered/filled surface edge at 390/768/1024/1440).
+- [ ] For visual changes: you ran `bun run shots` (and `shots:modes` for theme or mobile changes), **opened the images**, and compared them with Figma. Section height deltas in `report.json` must not get worse. Check dark mode and 390px, 768px and 1024px (`bun tools/audit-layout.ts --report --dark --shots <dir>` writes every block at every width).
 - [ ] For behaviour changes (`ui8kit.js`, Sheet, ThemeToggle): `bun run test:behaviors` passes in all three apps.
 - [ ] New utilities are reviewed into `tools/ui8px/allowed.extra.json`: on-grid, token colors, no arbitrary values.
 - [ ] Docs updated if a command, path or rule changed: `README.md`, `docs/`, `.manual/`, `.cursor/rules/`. Relative links are checked by `bun run docs:links`, which is part of `check`.

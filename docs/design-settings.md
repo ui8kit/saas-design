@@ -35,6 +35,26 @@ match `[data-slot].<utility>` selectors, and this repo's markup carries only `ui
 - **Section gap `28`** (112px, Figma 110px) is an ordinary 2.0 layout step. It is no longer a local extension of the old
   ui8px preset (backlog [ui8px-layout-step-28.md](../.project/backlog/ui8px-layout-step-28.md), fixed).
 
+## Responsive spacing
+
+Desktop (Figma) values sit at `lg:` / `xl:`, so the 1440 page is unchanged; tablet and mobile step down on the same rhythm.
+
+| Where | base (390) | `md:` (768) | `lg:` (1024+) |
+|---|---|---|---|
+| Block gutter (root of every block) | `px-6` | `px-10` | `px-12` |
+| Content container | `mx-auto w-full max-w-page`, no padding | | |
+| Section padding (kit `section`) | `py-16` | `py-20` | `py-24` |
+| Figma section top step | `pt-16` | `pt-20` | `pt-28` |
+| Container gaps | `gap-8` | `gap-10` | `gap-12` |
+| Card recipe | `p-6` | `p-8` | `p-12` |
+| Card grids (kit `grid-3`) | 1 column, `gap-6` | 2 columns | 3 columns, `gap-10` |
+
+- Every bordered or filled surface keeps at least 8px (`2`) of padding around its content at every width; `bun tools/audit-layout.ts` (in check) enforces it.
+- Media boxes use aspect ratios (`aspect-video`, `aspect-square`), not fixed heights; the image inside takes a share of the width (`w-1/2`).
+- Meta rows (badge + date) are `flex-wrap gap-x-4 gap-y-2` with a `whitespace-nowrap` date.
+- The navbar sizes by its own width (`@container`, `@5xl:`), show/hide still by the viewport (burger below `lg`). Container-query variants are report-only in the ui8px gate ([backlog](../.project/backlog/ui8px-container-queries.md)).
+- Design apps: the sidebar is a sheet below `xl` (1280px), so previews get the full width on tablets and small laptops.
+
 ## Controls
 
 | Control | sm / default / lg / xl | Upstream 2.0 | Why it differs |

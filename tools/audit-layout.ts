@@ -1,5 +1,5 @@
 /**
- * Layout audit of the built apps in headless Chrome (playwright-core).
+ * Layout audit of the built apps in headless Chrome (playwright-core). Step "layout audit" of bun run check.
  *   bun tools/audit-layout.ts [--shots <dir>] [--dark] [--app design-svelte|design-react|site|all] [--report]
  *
  * Pages: apps/site "/", and every design page (overview, foundations, primitives, components, widgets, blocks,
@@ -135,7 +135,7 @@ const pagesOf = (dir: string) => {
 
 const targets: { app: string; dir: string; pages: string[] }[] = [];
 if (app === "all" || app === "site") targets.push({ app: "site", dir: join(ROOT, "apps/site/public"), pages: ["/"] });
-for (const a of ["design-svelte", "design-react"]) if (app === a || (app === "all" && a === "design-svelte")) { const dir = join(ROOT, `apps/${a}/build`); targets.push({ app: a, dir, pages: pagesOf(dir) }); }
+for (const a of ["design-svelte", "design-react"]) if (app === a || app === "all") { const dir = join(ROOT, `apps/${a}/build`); targets.push({ app: a, dir, pages: pagesOf(dir) }); }
 
 const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/usr/bin/google-chrome", args: ["--font-render-hinting=none"] });
 const report: Record<string, Problem[]> = {};

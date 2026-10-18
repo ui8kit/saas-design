@@ -45,4 +45,6 @@ step "apps/design-react: tsc + Vite SSR build + static prerender"
 (cd apps/design-react && ../../node_modules/.bin/tsc -p . && bun run build >/dev/null && echo "design-react: built $(find build -name '*.html' | wc -l) pages")
 step "design apps: DOM parity design-react vs design-svelte (every prerendered page)"
 bun tools/design-parity.ts
+step "layout audit: no horizontal overflow, nothing within 8px of a bordered/filled surface edge (390/768/1024/1440, 3 apps)"
+bun tools/audit-layout.ts
 printf '\nall checks passed\n'

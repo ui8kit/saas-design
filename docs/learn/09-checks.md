@@ -8,7 +8,8 @@
 4. ui8px policy drift and the lint gate, plus the no-brand-tokens grep;
 5. app-level retag + block rules (`tools/lint-apps.ts`);
 6. packages compile standalone;
-7. the site build, the design-docs foundations drift, both design-app builds, and design parity.
+7. the site build, the design-docs foundations drift, both design-app builds, and design parity;
+8. the layout audit ([`tools/audit-layout.ts`](../../tools/audit-layout.ts)): no overflow and no content within 8px of a bordered/filled surface edge, at 390/768/1024/1440 in all three apps.
 
 Drift checks use `git diff --quiet`, which compares the working tree with the **index**. Stage generated files (`git add -A`) before you run check on uncommitted work.
 
