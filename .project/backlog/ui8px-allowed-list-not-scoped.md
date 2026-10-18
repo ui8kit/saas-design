@@ -11,4 +11,4 @@ app-level brand swatches (`bg-brand-*`) and `bg-sidebar-*`/`bg-input`/`bg-ring` 
 **Impact.** The "extra tokens only at app level" rule is not machine-enforced.
 
 **Proposed fix.** Let scopes carry `allowed`/`denied` utility lists (e.g. deny `*-brand-*` in `packages/**`). Until then, review by grep:
-`rg 'brand-' packages/` must stay empty.
+`rg '(bg|text|border|fill|stroke|ring|from|to)-brand-|var\(--brand-' packages/` must stay empty (now part of `bun run check`).

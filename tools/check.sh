@@ -21,6 +21,8 @@ step "packages/blocks: DSL drift + templ/svelte parity"
 step "ui8px policy drift + lint"
 bun tools/ui8px-policy.ts --check
 npx -y ui8px@latest lint
+# app-level brand tokens must never reach packages/ (ui8px cannot scope allowed utilities, see .project/backlog)
+if grep -rEn --exclude-dir=node_modules '(bg|text|border|fill|stroke|ring|from|to)-brand-|var\(--brand-' packages/; then echo "brand tokens used in packages/"; exit 1; fi
 step "apps/site: templ generate (no drift) + static build"
 (cd apps/site && go run github.com/a-h/templ/cmd/templ@v0.3.1001 generate -path views >/dev/null)
 git diff --quiet -- apps/site/views || { echo "drift: apps/site/views (run templ generate)"; exit 1; }
