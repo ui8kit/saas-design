@@ -35,3 +35,14 @@
   .ds-text { @apply max-w-3xl text-base text-muted-foreground; }
 }
 @layer components { .ds-sample-dark { @apply rounded-lg bg-background p-4; } }
+@layer components {
+  .ds-toc { @apply mt-6 flex flex-wrap gap-2; }
+  .ds-toc-link { @apply rounded-full border border-border px-4 py-2 text-sm text-foreground hover:bg-muted; }
+  .ds-part { @apply mt-8 flex flex-col gap-4; }
+  .ds-preview { @apply grid grid-cols-1 gap-4 rounded-lg border border-border p-6 md:grid-cols-2 xl:grid-cols-3; }
+  .ds-case { @apply flex min-w-0 flex-col gap-2; }
+  .ds-case-body { @apply flex min-h-12 items-center; }
+  .ds-table { @apply w-full text-left text-sm; }
+  .ds-th { @apply border-border py-2 pr-4 font-semibold text-foreground; }
+  .ds-td { @apply border-t border-border py-2 pr-4; }
+}
