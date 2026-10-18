@@ -30,7 +30,7 @@ Behaviour: `bun run test:behaviors` → 18/18 ok (sheet focus trap, Esc, overlay
 
 ## Partial / open
 - **Vercel** — configs build locally; no real deploy has been verified.
-- **Nav breakpoint** — the burger appears below `lg`, not `md` (overflow at 768px; backlog `navbar-collapse-lg-not-md.md`).
-- **Fidelity** — section deltas are ≤ 24px. Hero badge star colour and logo glyph still differ (backlog `hero-star-color-logo-glyph.md`).
+- **Nav breakpoint** — the burger appears below `lg`, not `md` (overflow at 768px; backlog `site-navbar-collapse-lg-not-md.md`).
+- **Fidelity** — section deltas are ≤ 24px. Hero badge star colour and logo glyph still differ (backlog `blocks-hero-star-color-logo-glyph.md`).
 - **Dark** — the `dark:` variant ignores `data-theme` islands (backlog). Contrast was checked visually in screenshots, not with an automated contrast tool.
 - **Design app** — no code snippets per component; breadcrumb/table previews are minimal; Svelte Link a11y warning remains (backlog).
