@@ -33,4 +33,4 @@ The original `.fig` file is not redistributed here.
 
 ## Code
 
-The source code of this repository (scripts, generators, packages, apps, configuration and documentation text) is licensed under the **MIT License**. See [LICENSE](LICENSE).
+The source code of this repository (scripts, generators, packages, apps, configuration and documentation text) is licensed under the **MIT License**, Copyright (c) 2026 UI8Kit. See [LICENSE](LICENSE).

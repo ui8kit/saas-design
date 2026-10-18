@@ -23,7 +23,7 @@ Behaviour: `bun run test:behaviors` → 18/18 ok (sheet focus trap, Esc, overlay
 - **.cursor** — rules: pipeline, grid-8-4, tokens, adapter-no-inline-styles, blocks-retag, fixtures-contract, git-workflow, dark-mode, sheet. Skill: figma-to-site.
 - **.manual** — 00–09 (09 = dark mode + behaviours).
 - **.project/backlog** — 23 feedback files.
-- **License** — code MIT (`LICENSE`), design + design-derived assets CC BY 4.0 (`LICENSE-DESIGN.md`).
+- **License** — code MIT, © 2026 UI8Kit (`LICENSE`), design + design-derived assets CC BY 4.0 (`LICENSE-DESIGN.md`).
 - **English docs** — `README.md` (pipeline diagram, tools, structure, quickstart, screenshots in `docs/assets/`, design credit, license note), `AGENTS.md`, `CONTRIBUTING.md`, `docs/` (architecture, replicate-with-new-figma, add-a-runtime, checks, deploy-vercel, troubleshooting). Relative links + anchors are checked in `bun run check` (`tools/check-links.ts`).
 - **Screenshots** in `/workspace/shots-saas/`:
   - Figma vs site: site-home.png, sections/, compare/ (incl. hero.png), report.json.

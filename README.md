@@ -188,6 +188,6 @@ The design and design-derived assets are licensed under **[CC BY 4.0](https://cr
 
 ## License
 
-- **Code:** [MIT](LICENSE), © 2026 Smarty Cab.
+- **Code:** [MIT](LICENSE), © 2026 UI8Kit.
 - **Design and design-derived assets:** CC BY 4.0. See [Design credit and license](#design-credit-and-license) and [LICENSE-DESIGN.md](LICENSE-DESIGN.md).
 - The upstream tools (fig2design, @ui8kit/contract, ui8kit/codegen, ui8px, brand-os) are MIT-licensed according to their npm metadata.
