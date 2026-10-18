@@ -48,7 +48,7 @@ const views: Record<string, any> = {
   "pricing-two-plans": (() => {
     const s = sec("pricing");
     const plans = ["plan-free", "plan-premium"].map(get).map((p) => ({
-      theme: m(p, "featured", false) ? "dark" : "light", name: p.title, badge: m(p, "badge", ""), description: p.excerpt ?? "",
+      theme: m(p, "featured", false) ? "dark" : "default", name: p.title, badge: m(p, "badge", ""), description: p.excerpt ?? "",
       price: m(p, "price_label"), period: m(p, "period", ""), features: m(p, "features"), cta: { label: m(p, "cta_label"), href: m(p, "cta_href") },
     }));
     return { id: s.slug, title: s.title, lead: s.excerpt, plans };
@@ -76,7 +76,7 @@ export const homeView = home;
 // ---- design-system catalog demo data (every block, both runtimes) ----
 const date = (e: any) => String(e.published_at ?? e.created_at).slice(0, 10);
 const human = (iso: string) => new Date(iso + "T00:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
-const planView = (p: Entry) => ({ theme: m(p, "featured", false) ? "dark" : "light", name: p.title, badge: m(p, "badge", ""), description: p.excerpt ?? "", price: m(p, "price_label"), period: m(p, "period", ""), features: m(p, "features"), cta: { label: m(p, "cta_label"), href: m(p, "cta_href") } });
+const planView = (p: Entry) => ({ theme: m(p, "featured", false) ? "dark" : "default", name: p.title, badge: m(p, "badge", ""), description: p.excerpt ?? "", price: m(p, "price_label"), period: m(p, "period", ""), features: m(p, "features"), cta: { label: m(p, "cta_label"), href: m(p, "cta_href") } });
 const fld = (label: string, name: string, type: string, autocomplete: string, placeholder = "") => ({ label, name, type, placeholder, autocomplete });
 const logos = (m(sec("social-proof"), "logos") as string[]).map(media);
 const screen = (id: string) => media(`media-screen-${id}`);

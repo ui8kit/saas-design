@@ -19,7 +19,7 @@ const head = (id: string, center = false, lead = true) =>
     c("Title", { as: "h2", id: `${id}-title`, kit: "section-title" }, $("title")),
     ...(lead ? [c("Text", { kit: "section-lead" }, $("lead"))] : []));
 const planCard = (prefix: string) =>
-  c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-8 rounded-lg p-10 text-card-foreground" },
+  c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { default: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-8 rounded-lg p-10 text-card-foreground" },
     c("Group", { ui: "plan-name-row", css: "justify-between gap-4" },
       c("Title", { as: "h3", ui: "plan-name", css: "text-2xl font-semibold" }, $("plan.name")),
       when($("plan.badge"), c("Badge", {}, $("plan.badge")))),

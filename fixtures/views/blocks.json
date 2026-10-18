@@ -250,7 +250,7 @@
         "lead": "Start free. Upgrade when you're ready.",
         "plans": [
           {
-            "theme": "light",
+            "theme": "default",
             "name": "Free",
             "badge": "",
             "description": "Perfect to get started",
@@ -655,7 +655,7 @@
         "lead": "Start free. Upgrade when you're ready.",
         "plans": [
           {
-            "theme": "light",
+            "theme": "default",
             "name": "Free",
             "badge": "",
             "description": "Perfect to get started",
@@ -727,7 +727,7 @@
             }
           },
           {
-            "theme": "light",
+            "theme": "default",
             "name": "Team",
             "badge": "",
             "description": "For coaches and small groups",

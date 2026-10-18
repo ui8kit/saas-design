@@ -157,7 +157,7 @@ export const pricingTwoPlans = block({
         c("Text", { ui: "lead", css: "text-xl font-light" }, $("lead"))),
       c("List", { ui: "plans", css: "grid grid-cols-1 gap-10 lg:grid-cols-2" },
         each($("plans"), "plan",
-          c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { light: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground" },
+          c("ListItem", { ui: "plan", "data-theme": $("plan.theme"), variants: { theme: { default: "bg-card", dark: "bg-background inset-ring inset-ring-input" } }, vary: { theme: $("plan.theme") }, css: "flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground" },
             c("Stack", { kit: "stack-4" },
               c("Group", { ui: "plan-name-row", css: "justify-between gap-4" },
                 c("Title", { as: "h3", ui: "plan-name", css: "text-2xl leading-6 font-semibold" }, $("plan.name")),

@@ -233,7 +233,7 @@
         "lead": "Start free. Upgrade when you're ready.",
         "plans": [
           {
-            "theme": "light",
+            "theme": "default",
             "name": "Free",
             "badge": "",
             "description": "Perfect to get started",

@@ -110,7 +110,7 @@
   .ui-pricing-two-plans-lead { @apply text-xl font-light; }
   .ui-pricing-two-plans-plans { @apply grid grid-cols-1 gap-10 lg:grid-cols-2; }
   .ui-pricing-two-plans-plan { @apply flex flex-col gap-12 rounded-lg p-16 pb-24 text-card-foreground; }
-  .ui-pricing-two-plans-plan-theme-light { @apply bg-card; }
+  .ui-pricing-two-plans-plan-theme-default { @apply bg-card; }
   .ui-pricing-two-plans-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-two-plans-plan-name-row { @apply justify-between gap-4; }
   .ui-pricing-two-plans-plan-name { @apply text-2xl leading-6 font-semibold; }
@@ -224,7 +224,7 @@
   .ui-pricing-three-tiers-head { @apply flex flex-col gap-4 items-center text-center; }
   .ui-pricing-three-tiers-plans { @apply grid grid-cols-1 gap-6 lg:grid-cols-3; }
   .ui-pricing-three-tiers-plan { @apply flex flex-col gap-8 rounded-lg p-10 text-card-foreground; }
-  .ui-pricing-three-tiers-plan-theme-light { @apply bg-card; }
+  .ui-pricing-three-tiers-plan-theme-default { @apply bg-card; }
   .ui-pricing-three-tiers-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-three-tiers-plan-name-row { @apply justify-between gap-4; }
   .ui-pricing-three-tiers-plan-name { @apply text-2xl font-semibold; }
