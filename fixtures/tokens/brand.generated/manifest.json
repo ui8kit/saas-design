@@ -1,0 +1,31 @@
+{
+  "manifestVersion": "1.0.0",
+  "generator": {
+    "name": "brand-os",
+    "version": "0.3.0"
+  },
+  "schema": {
+    "version": "1.0.0",
+    "sha256": "6d07f66cd29191804f95dc581d48612d1ebf7ff5f55e6a6f5cf7636c1d3fe1ca"
+  },
+  "warnings": [
+    "Theme \"dark\" dark heading contrast 6.99:1 is below configured threshold 7:1."
+  ],
+  "files": [
+    {
+      "path": "DESIGN.md",
+      "bytes": 4165,
+      "sha256": "6a0ee63ce7087e6e25d4139753887f4a3fe004874204771f1578cd07137c128a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 248,
+      "sha256": "13e4f3f38e71005d0b61741811a7306457277f20771da79dba977e6cde11db95"
+    },
+    {
+      "path": "contract.json",
+      "bytes": 6652,
+      "sha256": "6d07f66cd29191804f95dc581d48612d1ebf7ff5f55e6a6f5cf7636c1d3fe1ca"
+    }
+  ]
+}

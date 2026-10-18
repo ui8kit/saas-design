@@ -6,7 +6,6 @@ dist/
 build/
 .vercel/
 .output/
-*_templ.go
 apps/site/bin/
 apps/site/public/
 apps/design/static/media/

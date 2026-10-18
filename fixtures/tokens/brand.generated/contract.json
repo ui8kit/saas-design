@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "1.0.0",
+  "meta": {
+    "name": "Habitus",
+    "slug": "habitus",
+    "description": "Habit tracking SaaS landing (Figma frame Home 1:10, file saas-landing.fig).",
+    "sourceReference": {
+      "project": "ui8kit/saas-design"
+    }
+  },
+  "brandThesis": {
+    "summary": "Build better habits, one day at a time.",
+    "positioning": "Friendly consumer habit tracker with a bold orange surface and soft pastel cards.",
+    "personality": [
+      "warm",
+      "encouraging",
+      "clear"
+    ],
+    "antiPersonality": [
+      "corporate",
+      "clinical"
+    ]
+  },
+  "designGrammar": {
+    "styleDirection": "Bold orange hero band, white page, soft pastel rounded cards, dark footer and premium card.",
+    "shapeLanguage": {
+      "core": "One large corner radius (40px) on every card and band, pills for buttons and badges, 20px on phone mockups."
+    },
+    "surfaceLanguage": {
+      "base": "white page",
+      "depthRule": "no shadows; depth comes from color blocks",
+      "accentRule": "orange only for primary actions, badges and the hero band",
+      "contrastRule": "dark text on pastel, white text on orange and ink"
+    },
+    "imageTreatment": {
+      "style": "app screenshots in phone frames with a dark 4-7px outline",
+      "preferred": [
+        "product screenshots",
+        "round avatars"
+      ],
+      "avoid": [
+        "stock photography",
+        "gradients",
+        "drop shadows"
+      ]
+    },
+    "contentVoice": {
+      "adjectives": [
+        "encouraging",
+        "plain",
+        "short"
+      ],
+      "avoid": [
+        "jargon",
+        "exclamation marks in headings"
+      ]
+    }
+  },
+  "componentPolicy": {
+    "keepStandard": [
+      "button",
+      "badge",
+      "input",
+      "card",
+      "accordion"
+    ],
+    "customBlocks": [
+      "hero-phones",
+      "app-gallery",
+      "faq-tiles"
+    ],
+    "avoid": [
+      "shadows on cards",
+      "more than one accent color per card",
+      "inline styles"
+    ]
+  },
+  "tokens": {
+    "color": {
+      "light": {
+        "background": "hsl(0 0% 100%)",
+        "foreground": "hsl(220.9 39.3% 11%)",
+        "card": "hsl(0 0% 96.5%)",
+        "cardForeground": "hsl(220.9 39.3% 11%)",
+        "popover": "hsl(0 0% 100%)",
+        "popoverForeground": "hsl(220.9 39.3% 11%)",
+        "primary": "hsl(12.4 99% 59.8%)",
+        "primaryForeground": "hsl(0 0% 100%)",
+        "secondary": "hsl(220.9 39.3% 11%)",
+        "secondaryForeground": "hsl(0 0% 100%)",
+        "muted": "hsl(0 0% 96.5%)",
+        "mutedForeground": "hsl(215 13.8% 34.1%)",
+        "accent": "hsl(206.2 80% 92.2%)",
+        "accentForeground": "hsl(220.9 39.3% 11%)",
+        "destructive": "hsl(0 72.2% 50.6%)",
+        "destructiveForeground": "hsl(0 0% 100%)",
+        "border": "hsl(220 13% 91%)",
+        "input": "hsl(220 13% 91%)",
+        "ring": "hsl(12.4 99% 59.8%)",
+        "chart1": "hsl(12.4 99% 59.8%)",
+        "chart2": "hsl(220.9 39.3% 11%)",
+        "chart3": "hsl(307.3 30.3% 78.6%)",
+        "chart4": "hsl(206.2 80% 92.2%)",
+        "chart5": "hsl(358.9 96.6% 88.6%)",
+        "sidebar": "hsl(0 0% 96.5%)",
+        "sidebarForeground": "hsl(220.9 39.3% 11%)",
+        "sidebarPrimary": "hsl(12.4 99% 59.8%)",
+        "sidebarPrimaryForeground": "hsl(0 0% 100%)",
+        "sidebarAccent": "hsl(206.2 80% 92.2%)",
+        "sidebarAccentForeground": "hsl(220.9 39.3% 11%)",
+        "sidebarBorder": "hsl(220 13% 91%)",
+        "sidebarRing": "hsl(12.4 99% 59.8%)"
+      },
+      "dark": {
+        "background": "hsl(220.9 39.3% 11%)",
+        "foreground": "hsl(0 0% 100%)",
+        "card": "hsl(215 27.9% 16.9%)",
+        "cardForeground": "hsl(0 0% 100%)",
+        "popover": "hsl(215 27.9% 16.9%)",
+        "popoverForeground": "hsl(0 0% 100%)",
+        "primary": "hsl(12.4 99% 59.8%)",
+        "primaryForeground": "hsl(0 0% 100%)",
+        "secondary": "hsl(0 0% 96.5%)",
+        "secondaryForeground": "hsl(220.9 39.3% 11%)",
+        "muted": "hsl(215 27.9% 16.9%)",
+        "mutedForeground": "hsl(217.9 10.6% 64.9%)",
+        "accent": "hsl(216.9 19.1% 26.7%)",
+        "accentForeground": "hsl(0 0% 100%)",
+        "destructive": "hsl(0 84.2% 60.2%)",
+        "destructiveForeground": "hsl(0 0% 100%)",
+        "border": "hsl(215 27.9% 16.9%)",
+        "input": "hsl(216.9 19.1% 26.7%)",
+        "ring": "hsl(12.4 99% 59.8%)",
+        "chart1": "hsl(12.4 99% 59.8%)",
+        "chart2": "hsl(0 0% 96.5%)",
+        "chart3": "hsl(307.3 30.3% 78.6%)",
+        "chart4": "hsl(206.2 80% 92.2%)",
+        "chart5": "hsl(358.9 96.6% 88.6%)",
+        "sidebar": "hsl(220.9 39.3% 11%)",
+        "sidebarForeground": "hsl(0 0% 100%)",
+        "sidebarPrimary": "hsl(12.4 99% 59.8%)",
+        "sidebarPrimaryForeground": "hsl(0 0% 100%)",
+        "sidebarAccent": "hsl(216.9 19.1% 26.7%)",
+        "sidebarAccentForeground": "hsl(0 0% 100%)",
+        "sidebarBorder": "hsl(215 27.9% 16.9%)",
+        "sidebarRing": "hsl(12.4 99% 59.8%)"
+      },
+      "charts": {
+        "chart-1": "hsl(12.4 99% 59.8%)",
+        "chart-2": "hsl(220.9 39.3% 11%)",
+        "chart-3": "hsl(307.3 30.3% 78.6%)",
+        "chart-4": "hsl(206.2 80% 92.2%)",
+        "chart-5": "hsl(358.9 96.6% 88.6%)"
+      },
+      "categories": {
+        "brandOrange": {
+          "value": "hsl(12.4 99% 59.8%)"
+        },
+        "brandInk": {
+          "value": "hsl(220.9 39.3% 11%)"
+        },
+        "brandPink": {
+          "value": "hsl(358.9 96.6% 88.6%)"
+        },
+        "brandLilac": {
+          "value": "hsl(307.3 30.3% 78.6%)"
+        },
+        "brandSky": {
+          "value": "hsl(206.2 80% 92.2%)"
+        },
+        "brandMist": {
+          "value": "hsl(0 0% 96.5%)"
+        },
+        "brandSuccess": {
+          "value": "hsl(160.1 84.1% 39.4%)"
+        },
+        "brandPlaceholder": {
+          "value": "hsl(236 10.1% 70.8%)"
+        }
+      }
+    },
+    "typography": {
+      "families": {
+        "display": "Inter",
+        "body": "Inter"
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "sizes": {
+        "px85": "5.3125rem",
+        "6xl": "3.75rem",
+        "4xl": "2.25rem",
+        "3xl": "1.875rem",
+        "2xl": "1.5rem",
+        "px22": "1.375rem",
+        "xl": "1.25rem",
+        "lg": "1.125rem",
+        "base": "1rem",
+        "sm": "0.875rem"
+      }
+    },
+    "spacing": {
+      "baseUnit": 8,
+      "container": {
+        "page": "77.5rem"
+      }
+    },
+    "radius": {
+      "sm": "0.625rem",
+      "md": "1.25rem",
+      "lg": "2.5rem"
+    },
+    "shadow": {
+      "sm": "none",
+      "md": "none"
+    }
+  }
+}
