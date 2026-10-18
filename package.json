@@ -14,7 +14,11 @@
     "brand:emit": "npx -y brand-os@0.3.0 emit --schema fixtures/tokens/brand.contract.json --output fixtures/tokens/brand.generated --force --json",
     "brand:check": "npx -y brand-os@0.3.0 validate --schema fixtures/tokens/brand.contract.json --json && npx -y brand-os@0.3.0 verify --schema fixtures/tokens/brand.contract.json --bundle fixtures/tokens/brand.generated --strict --json",
     "content": "bun tools/content.ts",
-    "contract": "bun tools/validate-content.ts"
+    "contract": "bun tools/validate-content.ts",
+    "check": "bash tools/check.sh",
+    "design:build": "cd apps/design && bun run build",
+    "site:build": "bash apps/site/scripts/build.sh",
+    "shots:design": "bun tools/shots-design.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4",
