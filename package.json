@@ -18,7 +18,9 @@
     "check": "bash tools/check.sh",
     "design:build": "cd apps/design && bun run build",
     "site:build": "bash apps/site/scripts/build.sh",
-    "shots:design": "bun tools/shots-design.ts"
+    "shots:design": "bun tools/shots-design.ts",
+    "shots:modes": "bun tools/shots-modes.ts all",
+    "test:behaviors": "bun tools/test-behaviors.ts"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4",
