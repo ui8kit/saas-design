@@ -21,3 +21,17 @@
   .ds-card { @apply rounded-lg border border-border bg-card p-6; }
   .ds-card-link { @apply font-semibold text-foreground hover:text-primary; }
 }
+@layer components {
+  .ds-grid { @apply grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4; }
+  .ds-swatch { @apply h-24 w-full rounded-lg border border-border; }
+  .ds-sample { @apply flex flex-col gap-2; }
+  .ds-name { @apply text-sm font-semibold text-foreground; }
+  .ds-meta { @apply text-xs text-muted-foreground; }
+  .ds-rows { @apply flex flex-col gap-4; }
+  .ds-row { @apply flex flex-wrap items-center gap-6 border-t border-border pt-4; }
+  .ds-row-label { @apply w-32 shrink-0 text-sm text-muted-foreground; }
+  .ds-box { @apply bg-primary; }
+  .ds-tile { @apply size-24 border border-border bg-card; }
+  .ds-text { @apply max-w-3xl text-base text-muted-foreground; }
+}
+@layer components { .ds-sample-dark { @apply rounded-lg bg-background p-4; } }

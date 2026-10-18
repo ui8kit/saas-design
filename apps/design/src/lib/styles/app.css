@@ -4,3 +4,4 @@
 @import "./brand.css";
 @import "../../../../../packages/adapter/src/index.css";
 @import "./design.css";
+@import "./foundations.generated.css";
