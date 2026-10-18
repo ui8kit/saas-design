@@ -13,5 +13,6 @@ For people and agents. Run every command from the repo root unless a `cd` is sho
 | 6 | [06-checks.md](06-checks.md) | `bun run check` |
 | 7 | [07-screenshots.md](07-screenshots.md) | `/workspace/shots-saas/` |
 | 8 | [08-deploy-vercel.md](08-deploy-vercel.md) | two Vercel projects |
+| 9 | [09-dark-mode-behaviors.md](09-dark-mode-behaviors.md) | dark tokens, ThemeToggle/Sheet bricks, `ui8kit.js` |
 
 Rules the steps rely on: `.cursor/rules/*.mdc`. Agent skill: `.cursor/skills/figma-to-site/SKILL.md`.
