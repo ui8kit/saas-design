@@ -1,6 +1,6 @@
 # Design license (CC BY 4.0)
 
-The visual design reproduced in this repository is **Habitus — Habit Tracker App Landing Page** by its original author, published on Figma Community:
+The visual design reproduced in this repository is **Habitus — Habit Tracker App Landing Page** by [@olgaaverchenko](https://www.figma.com/@olgaaverchenko), published on Figma Community:
 https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page
 
 The design is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**:
@@ -19,9 +19,9 @@ The design and everything derived from it:
 
 ## Attribution
 
-When you reuse or adapt these materials, credit the original author and link the Figma Community file and the license. For example:
+When you reuse or adapt these materials, credit the author ([@olgaaverchenko](https://www.figma.com/@olgaaverchenko)) and link the Figma Community file and the license. For example:
 
-> Design: "Habitus — Habit Tracker App Landing Page" by its original author on Figma Community (https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Changes: re-implemented as code; tokens, layout and assets adapted.
+> Design: "Habitus — Habit Tracker App Landing Page" by @olgaaverchenko (https://www.figma.com/@olgaaverchenko) on Figma Community (https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page), licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Changes: re-implemented as code; tokens, layout and assets adapted.
 
 Changes made in this repository:
 - the design was re-implemented as code;

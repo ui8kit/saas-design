@@ -182,7 +182,7 @@ See [.project/STATUS.md](.project/STATUS.md). In short:
 
 ## Design credit and license
 
-The source design is **[Habitus — Habit Tracker App Landing Page](https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page)** on Figma Community, by its original author. All visual design credit goes to them; this repo only re-implements it to test the pipeline. The `.fig` file is not redistributed here.
+The source design is **[Habitus — Habit Tracker App Landing Page](https://www.figma.com/community/file/1507106587522840897/habitus-habit-tracker-app-landing-page)** on Figma Community, by [@olgaaverchenko](https://www.figma.com/@olgaaverchenko). All visual design credit goes to them; this repo only re-implements it to test the pipeline. The `.fig` file is not redistributed here.
 
 The design and design-derived assets are licensed under **[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**. That covers `fixtures/figma` images/exports, `fixtures/media` artwork, design copy in fixtures, and the `docs/assets` screenshots. The attribution requirements and the full list are in [LICENSE-DESIGN.md](LICENSE-DESIGN.md).
 
