@@ -6,6 +6,10 @@ The first part covers common failures and their fixes. The second part summarize
 
 | Symptom | Cause | Fix |
 |---|---|---|
+| `check`: records drift after `bun run tokens` | records embed token values and brand names | `bun run content` (or `bun run regen`) |
+| `views`: `no catalog data for block X` | new block without preview data | add `"X": {…}` to `catalogData` in `tools/views.ts` ([lesson 05](learn/05-blocks.md#checklist-add-a-block)) |
+| `Cannot access 'x' before initialization` in `defs/` | block def declared after `catalogBlocks` | move the def above the array |
+| `check`: ui8px policy drift | block classes changed | `bun tools/ui8px-policy.ts` |
 | `drift: … (run: …)` in `bun run check` | A source changed but its generated output was not regenerated, or the output was hand-edited | Run the generator named in the message and commit the output. See [checks.md](checks.md). |
 | `drift: packages/ui/templ *_templ.go` or `apps/site/views` | `templ generate` not rerun after a `.templ` change | `go run github.com/a-h/templ/cmd/templ@v0.3.1070 generate -path ui` (in `packages/ui/templ`) or `-path views` (in `apps/site`) |
 | `undefined: templ.ResolveAttributeValue` | A templ CLI newer than the runtime generated the code | Always use the pinned `go run …templ@v0.3.1070` ([templ-version-pin.md](../.project/backlog/templ-version-pin.md)) |
@@ -84,7 +88,7 @@ The first part covers common failures and their fixes. The second part summarize
 
 ### Not tracked in a backlog file
 
-- **Vercel.** A real deploy is not verified ([deploy-vercel.md](deploy-vercel.md#known-risks)).
-- **Design-specific scripts.** `tools/content.ts`, `tokens.ts`, `views.ts`, `shots.ts` and `figma-render.ts` are tied to frame `1-10` ([replicate-with-new-figma.md](replicate-with-new-figma.md#file-specific-code-you-must-change)).
+- **Vercel.** All three projects deploy on push. If one stops, see [deploy-vercel.md](deploy-vercel.md#when-a-deploy-fails).
+- **Design-specific scripts.** Names, frame and paths come from `fixtures/site.config.json` ([new-brand.md](new-brand.md)). Node ids in `tools/content.ts` and the `SECTIONS` table in `tools/shots.ts` are still tied to this Figma file ([replicate-with-new-figma.md](replicate-with-new-figma.md#file-specific-code-you-must-change)).
 - **Block emitter.** It supports templ, Svelte and React; Vue, Solid and the PHP/Python runtimes need an emitter ([add-a-runtime.md](add-a-runtime.md#4-blocks-emitter)).
 - **Contrast.** Contrast in dark mode was checked visually, not with an automated tool.

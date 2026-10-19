@@ -67,7 +67,7 @@ Layer details: [docs/architecture.md](docs/architecture.md).
 
 | Tool | Role here | Version used |
 |---|---|---|
-| [fig2design](https://www.npmjs.com/package/fig2design) ([source](https://github.com/codegen-x/figma-cli)) | Parses `.fig` offline into a JSON dump | `0.1.0` via `npx` |
+| [fig2design](https://www.npmjs.com/package/fig2design) (source not public; [docs/figma-parser.md](docs/figma-parser.md)) | Parses `.fig` offline into a JSON dump | `0.1.0` via `npx` |
 | [@ui8kit/contract](https://www.npmjs.com/package/@ui8kit/contract) ([source](https://github.com/ui8kit/contract)) | Content record schemas + validator | `0.2.0` (devDependency) |
 | [ui8kit/codegen](https://github.com/ui8kit/codegen) 2.0 (`@ui8kit/codegen`, xgen) | Brick specs (40 bricks, 72 parts) + emitters for templ, Svelte 5, React 19, Vue 3, Solid, Twig, Latte, Jinja2; its `rules` detectors drive `tools/lint-apps.ts`. This repo uses templ, Svelte and React | `github:ui8kit/codegen#2309848` (tag `v0.1.0` = `972b492`, the 0.1 line this repo used before) |
 | [ui8px](https://www.npmjs.com/package/ui8px) ([source](https://github.com/ui8kit/ui8px-cli)) | Lints utilities (8+4 grid, token colors, no arbitrary values) | `ui8px@latest` via `npx` |
@@ -197,7 +197,7 @@ See [.project/STATUS.md](.project/STATUS.md). In short:
 - All checks are green, with 0 mismatches in every parity check: primitives templ/Svelte/React, blocks Svelte/React vs templ, and the design apps React vs Svelte. The app-level retag lint reports 0 blocking findings.
 - The site is within 11px of the Figma page height (6277 vs 6288px); see [docs/design-settings.md](docs/design-settings.md).
 - Dark mode and mobile Sheet navigation work in all three apps.
-- A real Vercel deploy is **not verified yet**.
+- Deploys: all three apps deploy on Vercel on every push to `main`, at [saas-svelte.vercel.app](https://saas-svelte.vercel.app) and [saas-react.vercel.app](https://saas-react.vercel.app), plus the `saas-templ` site ([docs/deploy-vercel.md](docs/deploy-vercel.md)).
 
 ## Design credit and license
 

@@ -29,7 +29,7 @@ Primitives come from `@ui8kit/codegen` 2.0 (xgen, pinned `github:ui8kit/codegen#
    - 1 step = 4px.
    - Layout scope (blocks, apps, `base.css`) uses even steps only: `0 2 4 6 8 10 12 16 20 24 28` (the codegen 2.0 8px grid narrowed to the Habitus rhythm; see [docs/design-settings.md](docs/design-settings.md)).
    - Control scope (`packages/ui`, icons) may also use `1 3 5 7`. Control heights are the 2.0 scale `h-8 / h-10 / h-12`, plus `h-14` for the Habitus `xl` button.
-   - Corners: `--radius` (40px) is the one corner token in `@theme`. Plain `rounded` follows it: pills on controls, 40px on cards. Use `rounded-full` only for circles.
+   - Corners ([radius.mdc](.cursor/rules/radius.mdc)): outer surfaces of a block (card, band, panel) use `rounded` / `rounded-lg` = `--radius` (40px). Everything inside uses the fixed `--radius-md` (20px) via `rounded-nested`, `rounded-field` and `rounded-dense`, whatever the padding. Pills use `rounded` and circles use `rounded-full`. The design apps' preview frame is 8px (`rounded-preview`).
    - No fractional or arbitrary values.
 4. **Tokens-only colors** ([tokens.mdc](.cursor/rules/tokens.mdc)):
    - Packages use only shadcn HSL token utilities (`bg-primary`, `text-muted-foreground`, …). No palette colors, no hex.

@@ -1,101 +1,81 @@
 # Deploy to Vercel
 
-Deploy as three Vercel projects from one repository, one per app. This is the English long-form counterpart of [.manual/08-deploy-vercel.md](../.manual/08-deploy-vercel.md).
+The repo deploys as three Vercel projects, one per app. Each one builds on every push to `main` and reports a GitHub commit status named `Vercel – <project>`. This is the English long-form counterpart of [.manual/08-deploy-vercel.md](../.manual/08-deploy-vercel.md).
 
-> **Status: not verified on Vercel.** Both configs have been dry-run locally with the exact install and build commands Vercel would execute, and both succeed (2026-10-18). A real Vercel deploy, including Go being available in the build image and the `npm` fallback path, has **not** been tested.
+## Projects (live, verified 2026-10-19)
 
-## Projects
-
-| Project | Root Directory | Framework preset | Config |
+| Project | Root Directory | URL | Config |
 |---|---|---|---|
-| site (e.g. `saas-site`) | `apps/site` | Other | [`apps/site/vercel.json`](../apps/site/vercel.json) |
-| design (e.g. `saas-design`) | `apps/design-svelte` | Other | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
-| design-react (e.g. `saas-design-react`) | `apps/design-react` | Other | [`apps/design-react/vercel.json`](../apps/design-react/vercel.json) |
+| `saas-templ` | `apps/site` | the site (Go templ → static HTML) | [`apps/site/vercel.json`](../apps/site/vercel.json) |
+| `saas-design` | `apps/design-svelte` | https://saas-svelte.vercel.app | [`apps/design-svelte/vercel.json`](../apps/design-svelte/vercel.json) |
+| `saas-react` | `apps/design-react` | https://saas-react.vercel.app | [`apps/design-react/vercel.json`](../apps/design-react/vercel.json) |
 
-> **Root Directory must be `apps/design-svelte`** for the Svelte design project. The app was renamed from `apps/design` in `ab8add8`; a project still pointing at `apps/design` fails every build (this is what happened to `saas-design` / https://saas-svelte.vercel.app, last good deploy `5c4f921`). Fix: Project → Settings → Build and Deployment → Root Directory → `apps/design-svelte`, then redeploy. The React app needs its **own third project** with Root Directory `apps/design-react`.
->
-> Dry run (2026-10-19, clean clone, Vercel's install + build commands): from `apps/design-svelte` → 49 pages; from `apps/design-react` → 49 pages; from the repo root (`bun install --frozen-lockfile && bun run design-svelte:build`) → 49 pages.
+All three use the framework preset **Other**. Keep **"Include source files outside of the Root Directory in the Build Step"** enabled (Vercel's default), because every app reads `packages/`, `fixtures/` and `tools/` from the repo root.
 
-Keep **"Include source files outside of the Root Directory in the Build Step"** enabled; it is Vercel's default. All apps read `packages/`, `fixtures/` and `tools/` from the repo root.
+Check a push:
+
+```bash
+gh api repos/<owner>/<repo>/commits/<sha>/statuses --jq '.[] | "\(.context) \(.state)"' | sort -u
+```
+
+The statuses appear about 20–70 s after the push, first as `pending` and then as `success`.
 
 ### apps/site (Go templ → static HTML)
 
 ```json
-{
-  "framework": null,
-  "installCommand": "bash scripts/vercel-install.sh",
-  "buildCommand": "bash scripts/build.sh",
-  "outputDirectory": "public",
-  "cleanUrls": true
-}
+{ "framework": null, "installCommand": "bash scripts/vercel-install.sh", "buildCommand": "bash scripts/build.sh", "outputDirectory": "public", "cleanUrls": true }
 ```
 
-- `scripts/vercel-install.sh` runs from the repo root:
-  - `bun install --frozen-lockfile` if bun exists, otherwise `npm install --no-audit --no-fund`;
-  - if `go` is missing, it downloads Go `${GO_VERSION:-1.26.0}` into `.vercel-go/` (git-ignored).
-- `scripts/build.sh` puts `.vercel-go/go/bin` on `PATH`, then:
-  1. runs `go run ./cmd/export` (templ blocks + `fixtures/views/home.json` → `public/index.html`);
-  2. copies `packages/ui/behaviors/ui8kit.js` → `public/assets/`;
-  3. compiles `styles/app.css` with the Tailwind CLI → `public/assets/app.css`;
-  4. copies media with `node tools/copy-media.mjs public`.
-- The committed `*_templ.go` files are used, so `templ generate` is **not** needed at deploy time.
-
-### apps/design-react (React 19, Vite SSR → static HTML)
-
-```json
-{
-  "framework": null,
-  "installCommand": "bash scripts/vercel-install.sh",
-  "buildCommand": "node ../../tools/copy-media.mjs public && node scripts/build.mjs",
-  "outputDirectory": "build",
-  "cleanUrls": true,
-  "trailingSlash": false
-}
-```
-
-- The install is the same bun workspace install as design-svelte. Go is not needed.
-- `scripts/build.mjs` runs a Vite client build (CSS + `public/` media), then a Vite SSR build of `src/entry-server.tsx`, then writes one `.html` per route (50) with `react-dom/server`. No client React is shipped. See [apps/design-react/README.md](../apps/design-react/README.md).
+- `scripts/vercel-install.sh` runs `bun install --frozen-lockfile` from the repo root (falling back to `npm install` without bun). If Go is missing, it downloads Go `${GO_VERSION:-1.26.0}` into `.vercel-go/` (git-ignored).
+- `scripts/build.sh` runs these steps:
+  1. `go run ./cmd/export` (templ blocks + `fixtures/views/home.json` → `public/index.html`);
+  2. copies `ui8kit.js`;
+  3. compiles `styles/app.css` with the Tailwind CLI;
+  4. copies media.
+- The committed `*_templ.go` files are used, so no `templ generate` step is needed at deploy time.
 
 ### apps/design-svelte (SvelteKit static)
 
 ```json
-{
-  "framework": null,
-  "installCommand": "bash scripts/vercel-install.sh",
-  "buildCommand": "node ../../tools/copy-media.mjs static && npx vite build",
-  "outputDirectory": "build",
-  "cleanUrls": true,
-  "trailingSlash": false
-}
+{ "framework": null, "installCommand": "bash scripts/vercel-install.sh", "buildCommand": "node ../../tools/copy-media.mjs static && npx vite build", "outputDirectory": "build", "cleanUrls": true, "trailingSlash": false }
 ```
 
-- `scripts/vercel-install.sh` installs the bun workspace at the repo root (with an `npm install` fallback).
-- The build copies media into `static/` (git-ignored) and prerenders all pages with `@sveltejs/adapter-static` into `build/`. 49 pages were built locally.
+It prerenders all 50 pages with `@sveltejs/adapter-static`.
 
-## CLI
+### apps/design-react (React 19, Vite SSR → static HTML)
 
-Run once per project, from the repo root. These are Vercel CLI commands; they were not run here.
+```json
+{ "framework": null, "installCommand": "bash scripts/vercel-install.sh", "buildCommand": "node ../../tools/copy-media.mjs public && node scripts/build.mjs", "outputDirectory": "build", "cleanUrls": true, "trailingSlash": false }
+```
+
+`scripts/build.mjs` runs a Vite client build (CSS + media) and an SSR build of `src/entry-server.tsx`, then writes one `.html` per route (50) with `react-dom/server`. No client React is shipped. Go is not needed.
+
+## Your own copy
+
+Import the GitHub repo three times in the Vercel dashboard, once per row above, and set each Root Directory. With the CLI:
 
 ```bash
-npx vercel link --cwd apps/site        # create/choose the site project, Root Directory apps/site
-npx vercel --cwd apps/site --prod
-npx vercel link --cwd apps/design-svelte      # create/choose the design project, Root Directory apps/design-svelte
-npx vercel --cwd apps/design-svelte --prod
+npx vercel link --cwd apps/site && npx vercel --cwd apps/site --prod
+npx vercel link --cwd apps/design-svelte && npx vercel --cwd apps/design-svelte --prod
+npx vercel link --cwd apps/design-react && npx vercel --cwd apps/design-react --prod
 ```
 
-Alternatively, import the GitHub repo twice in the Vercel dashboard and set the Root Directory for each project.
+These CLI commands were not run here; the projects above were connected in the dashboard.
 
-## Local dry run (verified)
+## Local dry run
 
 ```bash
-(cd apps/site && bash scripts/vercel-install.sh && bash scripts/build.sh)                              # → apps/site/public
-(cd apps/design-svelte && bash scripts/vercel-install.sh && node ../../tools/copy-media.mjs static && npx vite build)   # → apps/design-svelte/build
+(cd apps/site && bash scripts/vercel-install.sh && bash scripts/build.sh)                                              # → apps/site/public
+(cd apps/design-svelte && bash scripts/vercel-install.sh && node ../../tools/copy-media.mjs static && npx vite build)   # → build/
+(cd apps/design-react && bash scripts/vercel-install.sh && node ../../tools/copy-media.mjs public && node scripts/build.mjs)  # → build/
 ```
 
-## Known risks
+## When a deploy fails
 
-| Risk | Why it matters | Status |
-|---|---|---|
-| Go is not guaranteed in Vercel's build image | `vercel-install.sh` downloads it from go.dev on demand | not verified on Vercel |
-| `npm install` fallback | the workspace uses bun `workspace:*` protocol deps and a `github:` dependency (`@ui8kit/codegen`), and npm may not resolve them identically | not verified. Prefer an image with bun |
-| No `bun run check` in the deploy | Vercel builds whatever is on the branch | run `bun run check` in CI or locally before pushing |
+| Symptom | Fix |
+|---|---|
+| A design project fails on every push | Check Root Directory. `apps/design` was renamed to `apps/design-svelte` in `ab8add8`, so a project still pointing at the old path fails. Set it in Project → Settings → Build and Deployment, then redeploy |
+| A commit has no `Vercel – …` status at all | It happened once (`88713a3`); the next push built normally. Push the next commit, or redeploy from the dashboard |
+| Go download fails in the site build | `vercel-install.sh` fetches Go from go.dev; retry, or set `GO_VERSION` |
+| Vercel uses the `npm install` fallback | bun `workspace:*` and the `github:` dependency (`@ui8kit/codegen`) may not resolve the same way under npm. Vercel's image has bun, so this path is untested |
+| A broken change went live | Vercel builds whatever is on the branch and does not run `bun run check`. Run it before you push |

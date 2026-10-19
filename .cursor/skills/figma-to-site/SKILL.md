@@ -1,6 +1,6 @@
 ---
 name: figma-to-site
-description: Turn a local Figma .fig file into contract fixtures, shadcn tokens, ui8kit primitives/blocks (Svelte 5 + Go templ), the static site (apps/site) and the design-system app (apps/design-svelte), with parity, ui8px lint and screenshot checks. Use when asked to rebuild, extend or fix the saas-design pipeline, add a block, retune tokens or close Figma-vs-site drift.
+description: Turn a local Figma .fig file into contract fixtures, shadcn tokens, ui8kit primitives/blocks (Go templ + Svelte 5 + React 19), the static site (apps/site) and the design-system apps (apps/design-svelte, apps/design-react), with parity, ui8px lint and screenshot checks. Use when asked to rebuild, extend or fix the saas-design pipeline, add a block, retune tokens or close Figma-vs-site drift.
 ---
 
 # Figma → site (saas-design)
