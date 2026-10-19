@@ -774,10 +774,10 @@
   ],
   "ui-faq-tiles-tile": [
     "rounded-lg",
-    "p-4",
-    "surface-pad-4",
-    "md:p-6",
-    "md:surface-pad-6"
+    "p-2",
+    "surface-pad-2",
+    "md:p-4",
+    "md:surface-pad-4"
   ],
   "ui-faq-tiles-tile-tone-primary": [
     "bg-primary",
@@ -827,6 +827,7 @@
     "size-4"
   ],
   "ui-faq-tiles-answer": [
+    "mx-6",
     "pt-4",
     "pl-12",
     "text-base",

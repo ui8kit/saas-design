@@ -129,7 +129,7 @@
   .ui-faq-tiles-title { @apply max-w-3xl text-4xl leading-tight font-bold md:text-5xl lg:text-6xl; }
   .ui-faq-tiles-lead { @apply text-xl font-light; }
   .ui-faq-tiles-grid { @apply grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-x-10 lg:gap-y-8; }
-  .ui-faq-tiles-tile { @apply rounded-lg p-4 surface-pad-4 md:p-6 md:surface-pad-6; }
+  .ui-faq-tiles-tile { @apply rounded-lg p-2 surface-pad-2 md:p-4 md:surface-pad-4; }
   .ui-faq-tiles-tile-tone-primary { @apply bg-primary text-primary-foreground; }
   .ui-faq-tiles-tile-tone-secondary { @apply bg-secondary text-secondary-foreground; }
   .ui-faq-tiles-tile-tone-lilac { @apply bg-chart-3 text-foreground; }
@@ -139,7 +139,7 @@
   .ui-faq-tiles-question { @apply flex cursor-pointer list-none items-center gap-4 text-lg font-medium md:text-xl; }
   .ui-faq-tiles-arrow { @apply flex size-8 shrink-0 items-center justify-center rounded-full bg-background text-foreground; }
   .ui-faq-tiles-arrow-icon { @apply size-4; }
-  .ui-faq-tiles-answer { @apply pt-4 pl-12 text-base leading-6; }
+  .ui-faq-tiles-answer { @apply mx-6 pt-4 pl-12 text-base leading-6; }
   .ui-faq-tiles-more { @apply self-end text-lg text-foreground hover:underline; }
   .ui-faq-tiles-question > [data-slot="summary-indicator"] { @apply hidden; }
   .ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }

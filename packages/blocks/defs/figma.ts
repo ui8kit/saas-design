@@ -190,11 +190,11 @@ export const faqTiles = block({
       c("Stack", { kit: "stack-8" },
         c("Grid", { ui: "grid", css: "grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-x-10 lg:gap-y-8" },
           each($("items"), "item",
-            c("Disclosure", { ui: "tile", variants: { tone }, vary: { tone: $("item.tone") }, css: "rounded-lg p-4 surface-pad-4 md:p-6 md:surface-pad-6" },
+            c("Disclosure", { ui: "tile", variants: { tone }, vary: { tone: $("item.tone") }, css: "rounded-lg p-2 surface-pad-2 md:p-4 md:surface-pad-4" },
               c("Summary", { ui: "question", css: "flex cursor-pointer list-none items-center gap-4 text-lg font-medium md:text-xl" },
                 c("Inline", { ui: "arrow", css: "flex size-8 shrink-0 items-center justify-center rounded-full bg-background text-foreground" }, icon("chevron-down", { ui: "arrow-icon", css: "size-4" })),
                 $("item.question")),
-              c("Text", { ui: "answer", css: "pt-4 pl-12 text-base leading-6" }, $("item.answer"))))),
+              c("Text", { ui: "answer", css: "mx-6 pt-4 pl-12 text-base leading-6" }, $("item.answer"))))),
         c("Link", { ui: "more", href: $("more.href"), css: "self-end text-lg text-foreground hover:underline" }, $("more.label"))))),
   extraCss: `.ui-faq-tiles-question > [data-slot="summary-indicator"] { @apply hidden; }
   .ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }
