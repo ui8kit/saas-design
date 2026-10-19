@@ -43,15 +43,15 @@
   .ui-button-x-layout-icon-size-sm { @apply size-8 p-0 [&>svg]:size-4; }
   .ui-button-x-variant-ghost-layout-icon { @apply text-muted-foreground; }
   .ui-button-x-variant-outline-layout-icon { @apply text-muted-foreground; }
-  .ui-card { @apply flex flex-col gap-6 rounded bg-card p-6 surface-pad-6 text-card-foreground md:p-8 md:surface-pad-8 lg:p-12 lg:surface-pad-12; }
+  .ui-card { @apply flex flex-col gap-6 rounded bg-card p-6 text-card-foreground md:p-8 lg:p-12; }
   .ui-card-accent { @apply bg-accent text-accent-foreground; }
-  .ui-card-compact { @apply gap-4 p-6 surface-pad-6; }
+  .ui-card-compact { @apply gap-4 p-6; }
   .ui-card-description { @apply text-sm text-muted-foreground; }
-  .ui-card-flat { @apply bg-transparent p-0 surface-pad-0; }
+  .ui-card-flat { @apply bg-transparent p-0; }
   .ui-card-footer { @apply flex items-center; }
   .ui-card-ghost { @apply bg-transparent inset-ring; @apply inset-ring-border; }
   .ui-card-header { @apply grid auto-rows-min items-start gap-2; }
-  .ui-card-kpi { @apply gap-2 p-6 surface-pad-6; }
+  .ui-card-kpi { @apply gap-2 p-6; }
   .ui-card-muted { @apply bg-muted; }
   .ui-card-raised { @apply bg-background inset-ring; @apply inset-ring-border; }
   .ui-card-title { @apply font-semibold leading-none; }
@@ -96,7 +96,7 @@
   .ui-end-8 { @apply col-end-8; }
   .ui-end-9 { @apply col-end-9; }
   .ui-fieldset { @apply grid; }
-  .ui-fieldset-card { @apply rounded-nested p-4 nested-pad-4 inset-ring; @apply inset-ring-border; }
+  .ui-fieldset-card { @apply rounded-nested p-4 inset-ring; @apply inset-ring-border; }
   .ui-fieldset-inline { @apply flex flex-wrap items-start gap-4; }
   .ui-fieldset-size-default { @apply gap-2; }
   .ui-fieldset-size-lg { @apply gap-4; }

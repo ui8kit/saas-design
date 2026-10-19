@@ -9,9 +9,9 @@ local value exists. Measurements come from the Figma frame (`fixtures/figma/fram
 | Setting | Value | Where | Why |
 |---|---|---|---|
 | `--radius` | `2.5rem` (40px) | `@theme` in [packages/tokens/theme.css](../packages/tokens/theme.css), from `radius.base` of [fixtures/tokens/mapping.json](../fixtures/tokens/mapping.json) | The one corner token of 2.0: plain `rounded` reads it. The frame has 40px on 23 cards and bands. |
-| `rounded-md` | `calc(var(--radius) * 0.5)` = 20px | `@theme inline` | Phone screens in the frame (9 nodes at 20px). |
-| `rounded-sm`, `rounded-xl` | 0.25× / 1.5× | `@theme inline` | Kept for the foundations page; the frame does not use them. |
-| pills | `rounded` on controls, `rounded-full` on circles | recipes | 40px on a control of 32–56px clamps to a pill, so the button recipe uses plain `rounded` like upstream (no `rounded-full` override). Input, select and textarea use `rounded-field`, alerts `rounded-dense` (see [Nested corners](#nested-corners)): a pill on their own, concentric inside a padded surface. |
+| `rounded-md` | `calc(var(--radius) * 0.5)` = 20px | `@theme inline` | Phone screens in the frame (9 nodes at 20px). Also the one fixed radius of everything inside a block (see [Inner corners](#inner-corners)). |
+| `rounded-sm`, `rounded-xl` | 0.25× / 1.5× (10px / 60px) | `@theme inline` | Kept for the foundations page; neither the frame nor the blocks use them. |
+| pills | `rounded` on controls, `rounded-full` on circles | recipes | 40px on a control of 32–56px clamps to a pill, so the button recipe uses plain `rounded` like upstream (no `rounded-full` override). Input, select and textarea use `rounded-field`, alerts `rounded-dense`, both the fixed 20px md radius (see [Inner corners](#inner-corners)); on an `h-10` field that is half the height, so a single-line field still reads as a pill. |
 
 Before this, `--radius` sat only in `:root`. Plain `rounded` then compiled to Tailwind's `0.25rem`, so every upstream
 primitive that relies on the corner token (textarea, alert, dialog, disclosure, fieldset card, meter, progress, range,
@@ -25,24 +25,41 @@ match `[data-slot].<utility>` selectors, and this repo's markup carries only `ui
 `packages/adapter/src/kit.generated.css` but never apply. See backlog
 [codegen2-kit-css-layering.md](../.project/backlog/codegen2-kit-css-layering.md).
 
-## Nested corners
+## Inner corners
 
-Rule: **inner R = outer R − padding** (equivalently outer R = inner R + padding), floored at `--radius-floor` = 4px.
-Example: an outer corner of 24px with 8px padding gives 16px inside. In Habitus the outer surface of a block carries
-`--radius` (40px); everything inside derives from it and from the padding of the surface it sits in.
+Rule: the **outer** surface of a block (card, band, panel, plan, form card, FAQ tile, media panel) carries the brand corner
+`--radius` (40px). **Everything inside** a block uses one fixed token, `--radius-md` = `calc(var(--radius) * 0.5)` = 20px,
+whatever the padding of the surface around it. The design apps' preview frame stays at 8px.
 
 | token / utility | value | used by |
 |---|---|---|
-| `surface-pad-N` | sets `--surface-pad` = spacing N (resets `--nested-pad`) | every padded outer surface, mirroring its `p-*`/`px-*` at the same breakpoints (contact form, settings panel, newsletter band, footer panel, plan cards, `Card`, FAQ tiles) |
-| `nested-pad-N` | sets `--nested-pad` = spacing N | a nested surface with its own children (settings rows, fieldset card) |
-| `rounded-nested` | `max(--radius-floor, --radius − --surface-pad)` | inner tiles and rows, disclosure / fieldset cards |
-| `rounded-field` | `max(--radius-floor, --radius − --surface-pad − --nested-pad)` | input, select, textarea recipes |
-| `rounded-dense` | `--radius-sm` (10px) | tables and data/detail lists with a header row (the container clips, so header corners follow); notices: alert recipe, notifications, toasts, cookie banner (buttons inside stay pills) |
-| `rounded-preview`, `bg-preview` | `--preview-radius` 8px, `--preview-surface` = `color-mix(in oklab, var(--primary) 4%/7%, var(--background))` | design apps only: the block preview frame, which is not part of a block's chain |
+| `rounded` / `rounded-lg` | `--radius` = 40px | outer surfaces of blocks, `Card` recipe |
+| `rounded-nested` | `--radius-md` = 20px | inner tiles and rows, inner cards: settings-panel option rows, disclosure / fieldset cards |
+| `rounded-field` | `--radius-md` = 20px | input, select, textarea recipes (newsletter band, contact form, login card, signup card, footer newsletter) |
+| `rounded-dense` | `--radius-md` = 20px | tables and data/detail lists with a header row (habits table, comparison table; the container clips, so header corners follow); notices: alert recipe, notifications, toasts, cookie banner (buttons inside stay pills) |
+| `rounded-full` | pill / circle | buttons, badges, icon circles, avatars, FAQ arrow |
+| `rounded-preview`, `bg-preview` | `--preview-radius` 8px, `--preview-surface` = `color-mix(in oklab, var(--primary) 4%/7%, var(--background))` | design apps only: the block preview frame, which is not part of a block |
 
-Because the pads follow the breakpoints, the inner radius does too: the contact form card (`p-6 md:p-8 lg:p-10`) gives its
-fields 16px / 8px / 4px. Outside any surface the pads are 0, so a standalone input still clamps to a pill. The `calc`/`max`
-values live only in these token definitions (`tools/tokens.ts`); the pad utilities are allowed in ui8px for the 8+4 layout steps only.
+`rounded-nested`, `rounded-field` and `rounded-dense` are semantic aliases of `--radius-md` (`@theme inline`,
+`tools/tokens.ts`), so one value retunes every inner corner and the markup keeps saying what each corner is.
+
+History: until October 2026 inner corners were concentric (`inner R = outer R − padding`, floored at 4px). Each padded surface
+declared its padding with `surface-pad-N` / `nested-pad-N`, so fields inside a `p-10` form card shrank to 4px on desktop, and
+tables and notices used the 10px `rounded-sm`. That rule was replaced by the fixed md token. The pad utilities,
+`--surface-pad`, `--nested-pad` and `--radius-floor` were removed, because nothing else read them.
+
+## Media
+
+Media fills its box edge to edge, as in the blog cards: the media container has no padding; the image is
+`size-full object-cover` (`object-top` for app screens, so the status bar and title stay in view); the container clips it
+(`overflow-hidden` plus its own radius) and the image has no radius or ring of its own.
+
+| Block | container | ratio base / `md:` / `lg:` |
+|---|---|---|
+| blog cards | `ui-blog-cards-media` | `aspect-video` |
+| hero split, feature split | `ui-*-art` | `aspect-square` / `aspect-4/3` / `aspect-square` |
+| social proof split | `ui-social-proof-split-panel` | `aspect-square` / `aspect-4/3` / `h-140` |
+| app gallery | `ui-app-gallery-tile` | `aspect-1/2` (portrait app screens are 938×2030) |
 
 ## Spacing
 
@@ -69,7 +86,7 @@ Desktop (Figma) values sit at `lg:` / `xl:`, so the 1440 page is unchanged; tabl
 | Card grids (kit `grid-3`) | 1 column, `gap-6` | 2 columns | 3 columns, `gap-10` |
 
 - Every bordered or filled surface keeps at least 8px (`2`) of padding around its content at every width; `bun tools/audit-layout.ts` (in check) enforces it.
-- Media boxes use aspect ratios (`aspect-video`, `aspect-square`), not fixed heights; the image inside takes a share of the width (`w-1/2`).
+- Media boxes use aspect ratios (`aspect-video`, `aspect-square`, `aspect-4/3`, `aspect-1/2`), not fixed heights; the image fills the box (`size-full object-cover`, see [Media](#media)).
 - Meta rows (badge + date) are `flex-wrap gap-x-4 gap-y-2` with a `whitespace-nowrap` date.
 - The navbar sizes by its own width (`@container`, `@5xl:`), show/hide still by the viewport (burger below `lg`). Container-query variants are report-only in the ui8px gate ([backlog](../.project/backlog/ui8px-container-queries.md)).
 - Design apps: the sidebar is a sheet below `xl` (1280px), so previews get the full width on tablets and small laptops.

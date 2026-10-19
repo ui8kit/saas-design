@@ -159,28 +159,14 @@ ${block(".dark,\n[data-theme=\"dark\"]", dark)}
   --radius: ${radiusPx / 16}rem;
 }
 
-/* Nested radius rule (concentric corners): inner R = outer R - padding, floored at --radius-floor (equivalently outer R = inner R + padding).
-   A padded surface declares its padding as a token next to its padding utilities, at the same breakpoints:
-     surface-pad-N   on an outer surface (radius --radius)      sets --surface-pad = spacing N (and resets --nested-pad)
-     nested-pad-N    on a nested surface that has children     sets --nested-pad  = spacing N
-   Children read the derived radii (computed on the child, from the inherited pads; outside any surface they fall back to --radius):
-     rounded-nested  nested surface (row tile, inner card, media)   --radius - surface-pad
-     rounded-field   field / control inside (input, select, textarea) --radius - surface-pad - nested-pad
-   Dense surfaces (tables, data/detail lists with a header row) and notices (alert, toast, cookie banner) take rounded-dense (= --radius-sm) instead of --radius; their
-   container clips (overflow) so the header row follows the container corners.
-   Docs: docs/learn (nested radius) and .cursor/rules/radius.mdc. Arbitrary values live only here, in the token definitions. */
-:root {
-  --radius-floor: 0.25rem;
-  --surface-pad: 0px;
-  --nested-pad: 0px;
-}
-@utility surface-pad-* {
-  --surface-pad: --spacing(--value(integer));
-  --nested-pad: 0px;
-}
-@utility nested-pad-* {
-  --nested-pad: --spacing(--value(integer));
-}
+/* Inner corners: one fixed md token. The outer surface of a block (card, band, panel, plan, form card) keeps --radius (40px);
+   everything inside it reads --radius-md (calc(--radius * 0.5) = 20px), whatever the padding of the surface around it:
+     rounded-nested  inner tiles, rows, inner cards (settings rows, disclosure / fieldset cards)   = --radius-md
+     rounded-field   input, select, textarea (recipes)                                             = --radius-md
+     rounded-dense   tables and data/detail lists with a header row (the container clips, so the header row follows its
+                     corners); notices: alert, toast, notification, cookie banner (buttons inside stay pills)  = --radius-md
+   The three names stay as semantic aliases, so one value retunes every inner corner. Pills (rounded) and circles (rounded-full)
+   keep their own shape. Docs: docs/design-settings.md#inner-corners and .cursor/rules/radius.mdc. */
 
 /* Derived steps measured in the frame (fixtures/figma/frames/1-10.json radii: 20 phone screens, 40 cards, 100/9999 pills).
    Not the 2.0 multipliers (0.6 / 0.8 / 1.4 of a 10px corner): on a 40px corner they give 24 / 32 / 56, which the frame never uses. */
@@ -190,9 +176,9 @@ ${themeKeys.map((k) => `  --color-${k}: var(--${k});`).join("\n")}
   --radius-md: calc(var(--radius) * 0.5);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.5);
-  --radius-dense: var(--radius-sm);
-  --radius-nested: max(var(--radius-floor), calc(var(--radius) - var(--surface-pad)));
-  --radius-field: max(var(--radius-floor), calc(var(--radius) - var(--surface-pad) - var(--nested-pad)));
+  --radius-dense: var(--radius-md);
+  --radius-nested: var(--radius-md);
+  --radius-field: var(--radius-md);
   --font-sans: var(--font-sans);
 }
 

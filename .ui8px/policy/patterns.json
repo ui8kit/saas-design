@@ -130,25 +130,14 @@
       "md:text-xl"
     ],
     "ui-app-gallery-screen": [
-      "w-full",
-      "self-start",
-      "rounded-md",
-      "ring-2",
-      "ring-secondary"
+      "size-full",
+      "object-cover",
+      "object-top"
     ],
     "ui-app-gallery-tile": [
-      "flex",
-      "justify-center",
-      "rounded-lg",
-      "px-4",
-      "pt-10",
-      "pb-6",
-      "md:px-6",
-      "md:pt-16",
-      "md:pb-8",
-      "lg:px-12",
-      "lg:pt-24",
-      "lg:pb-12"
+      "aspect-1/2",
+      "overflow-hidden",
+      "rounded-lg"
     ],
     "ui-app-gallery-tile-tone-lilac": [
       "bg-chart-3",
@@ -422,12 +411,9 @@
       "rounded",
       "bg-card",
       "p-6",
-      "surface-pad-6",
       "text-card-foreground",
       "md:p-8",
-      "md:surface-pad-8",
-      "lg:p-12",
-      "lg:surface-pad-12"
+      "lg:p-12"
     ],
     "ui-card-accent": [
       "bg-accent",
@@ -435,8 +421,7 @@
     ],
     "ui-card-compact": [
       "gap-4",
-      "p-6",
-      "surface-pad-6"
+      "p-6"
     ],
     "ui-card-description": [
       "text-sm",
@@ -444,8 +429,7 @@
     ],
     "ui-card-flat": [
       "bg-transparent",
-      "p-0",
-      "surface-pad-0"
+      "p-0"
     ],
     "ui-card-footer": [
       "flex",
@@ -464,8 +448,7 @@
     ],
     "ui-card-kpi": [
       "gap-2",
-      "p-6",
-      "surface-pad-6"
+      "p-6"
     ],
     "ui-card-muted": [
       "bg-muted"
@@ -698,11 +681,8 @@
       "rounded-lg",
       "bg-muted",
       "p-6",
-      "surface-pad-6",
       "md:p-8",
-      "md:surface-pad-8",
-      "lg:p-10",
-      "lg:surface-pad-10"
+      "lg:p-10"
     ],
     "ui-contact-form-input": [],
     "ui-contact-form-label": [],
@@ -1082,9 +1062,7 @@
     "ui-faq-tiles-tile": [
       "rounded-lg",
       "p-2",
-      "surface-pad-2",
-      "md:p-4",
-      "md:surface-pad-4"
+      "md:p-4"
     ],
     "ui-faq-tiles-tile-tone-lilac": [
       "bg-chart-3",
@@ -1209,17 +1187,11 @@
     ],
     "ui-feature-split": [],
     "ui-feature-split-art": [
-      "flex",
       "aspect-square",
-      "justify-center",
       "overflow-hidden",
       "rounded-lg",
       "bg-chart-3",
-      "px-8",
-      "pt-10",
-      "md:aspect-video",
-      "md:px-12",
-      "md:pt-16",
+      "md:aspect-4/3",
       "lg:aspect-square"
     ],
     "ui-feature-split-check": [
@@ -1251,11 +1223,9 @@
       "gap-4"
     ],
     "ui-feature-split-image": [
-      "w-1/2",
-      "self-start",
-      "rounded-t-md",
-      "md:w-1/3",
-      "lg:w-1/2"
+      "size-full",
+      "object-cover",
+      "object-top"
     ],
     "ui-feature-split-item": [
       "flex",
@@ -1272,7 +1242,6 @@
     "ui-fieldset-card": [
       "rounded-nested",
       "p-4",
-      "nested-pad-4",
       "inset-ring",
       "inset-ring-border"
     ],
@@ -1381,16 +1350,13 @@
       "px-6",
       "pt-8",
       "pb-6",
-      "surface-pad-6",
       "text-foreground",
       "md:gap-10",
       "md:px-8",
       "md:pt-10",
-      "md:surface-pad-8",
       "lg:gap-16",
       "lg:px-12",
-      "lg:pt-16",
-      "lg:surface-pad-12"
+      "lg:pt-16"
     ],
     "ui-footer-newsletter-social": [
       "text-muted-foreground",
@@ -1822,17 +1788,11 @@
       "gap-4"
     ],
     "ui-hero-split-art": [
-      "flex",
       "aspect-square",
-      "justify-center",
       "overflow-hidden",
       "rounded-lg",
       "bg-accent",
-      "px-8",
-      "pt-8",
-      "md:aspect-video",
-      "md:px-12",
-      "md:pt-12",
+      "md:aspect-4/3",
       "lg:aspect-square"
     ],
     "ui-hero-split-container": [
@@ -1854,11 +1814,9 @@
       "md:gap-8"
     ],
     "ui-hero-split-image": [
-      "w-1/2",
-      "self-start",
-      "rounded-t-md",
-      "md:w-1/3",
-      "lg:w-1/2"
+      "size-full",
+      "object-cover",
+      "object-top"
     ],
     "ui-hero-split-lead": [
       "text-lg",
@@ -2200,10 +2158,8 @@
     "ui-login-card-card": [
       "gap-6",
       "p-6",
-      "surface-pad-6",
       "md:gap-8",
-      "md:p-10",
-      "md:surface-pad-10"
+      "md:p-10"
     ],
     "ui-login-card-container": [
       "mx-auto",
@@ -2386,17 +2342,14 @@
       "bg-accent",
       "px-6",
       "py-10",
-      "surface-pad-6",
       "text-accent-foreground",
       "md:gap-8",
       "md:px-10",
       "md:py-12",
-      "md:surface-pad-10",
       "lg:flex-row",
       "lg:items-center",
       "lg:px-12",
-      "lg:py-16",
-      "lg:surface-pad-12"
+      "lg:py-16"
     ],
     "ui-newsletter-band-copy": [
       "flex",
@@ -2514,13 +2467,10 @@
       "gap-6",
       "rounded-lg",
       "p-6",
-      "surface-pad-6",
       "text-card-foreground",
       "md:gap-8",
       "md:p-8",
-      "md:surface-pad-8",
-      "lg:p-10",
-      "lg:surface-pad-10"
+      "lg:p-10"
     ],
     "ui-pricing-three-tiers-plan-cta": [
       "mt-auto",
@@ -2603,16 +2553,13 @@
       "rounded-lg",
       "p-8",
       "pb-10",
-      "surface-pad-8",
       "text-card-foreground",
       "md:gap-10",
       "md:p-10",
       "md:pb-12",
-      "md:surface-pad-10",
       "lg:gap-12",
       "lg:p-16",
-      "lg:pb-24",
-      "lg:surface-pad-16"
+      "lg:pb-24"
     ],
     "ui-pricing-two-plans-plan-cta": [
       "mt-auto",
@@ -2861,12 +2808,9 @@
       "rounded-lg",
       "bg-card",
       "p-6",
-      "surface-pad-6",
       "md:gap-8",
       "md:p-8",
-      "md:surface-pad-8",
-      "lg:p-10",
-      "lg:surface-pad-10"
+      "lg:p-10"
     ],
     "ui-settings-panel-label": [
       "text-base",
@@ -2885,9 +2829,7 @@
       "bg-background",
       "px-4",
       "py-4",
-      "nested-pad-4",
-      "md:px-6",
-      "md:nested-pad-6"
+      "md:px-6"
     ],
     "ui-settings-panel-switch": [],
     "ui-settings-panel-title": [
@@ -2998,10 +2940,8 @@
     "ui-signup-card-card": [
       "gap-6",
       "p-6",
-      "surface-pad-6",
       "md:gap-8",
-      "md:p-10",
-      "md:surface-pad-10"
+      "md:p-10"
     ],
     "ui-signup-card-container": [
       "mx-auto",
@@ -3105,25 +3045,18 @@
       "lg:py-10"
     ],
     "ui-social-proof-split-panel": [
-      "flex",
       "aspect-square",
-      "justify-center",
       "overflow-hidden",
       "rounded-lg",
       "bg-accent",
-      "pt-12",
-      "md:aspect-video",
-      "md:pt-16",
+      "md:aspect-4/3",
       "lg:aspect-auto",
-      "lg:h-140",
-      "lg:pt-20"
+      "lg:h-140"
     ],
     "ui-social-proof-split-screen": [
-      "w-1/2",
-      "self-start",
-      "rounded-md",
-      "ring-2",
-      "ring-secondary"
+      "size-full",
+      "object-cover",
+      "object-top"
     ],
     "ui-social-proof-split-title": [
       "text-3xl",

@@ -2,7 +2,7 @@
   "id": "ui.fieldset",
   "byKey": {
     "variant": {
-      "card": "rounded-nested p-4 nested-pad-4 inset-ring inset-ring-border"
+      "card": "rounded-nested p-4 inset-ring inset-ring-border"
     }
   }
 }
