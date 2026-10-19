@@ -82,10 +82,6 @@ func SocialProofSplit(p SocialProofSplitData) templ.Component {
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
-					templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-social-proof-split-fade", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-fade", "aria-hidden": "true"}}).Render(ctx, templ_7745c5c3_Buffer)
-					if templ_7745c5c3_Err != nil {
-						return templ_7745c5c3_Err
-					}
 					return nil
 				})
 				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-panel"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
@@ -119,7 +115,7 @@ func SocialProofSplit(p SocialProofSplitData) templ.Component {
 						var templ_7745c5c3_Var7 string
 						templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(p.Title)
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `social-proof-split.templ`, Line: 25, Col: 14}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `social-proof-split.templ`, Line: 24, Col: 14}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 						if templ_7745c5c3_Err != nil {

@@ -405,16 +405,6 @@
     "object-cover",
     "object-top"
   ],
-  "ui-social-proof-split-fade": [
-    "pointer-events-none",
-    "absolute",
-    "inset-x-0",
-    "bottom-0",
-    "h-2/5",
-    "bg-linear-to-t",
-    "to-transparent",
-    "from-accent"
-  ],
   "ui-social-proof-split-body": [
     "flex",
     "flex-col",
@@ -518,33 +508,6 @@
     "size-full",
     "object-cover",
     "object-top"
-  ],
-  "ui-app-gallery-fade": [
-    "pointer-events-none",
-    "absolute",
-    "inset-x-0",
-    "bottom-0",
-    "h-2/5",
-    "bg-linear-to-t",
-    "to-transparent"
-  ],
-  "ui-app-gallery-fade-tone-primary": [
-    "from-primary"
-  ],
-  "ui-app-gallery-fade-tone-secondary": [
-    "from-secondary"
-  ],
-  "ui-app-gallery-fade-tone-lilac": [
-    "from-chart-3"
-  ],
-  "ui-app-gallery-fade-tone-sky": [
-    "from-chart-4"
-  ],
-  "ui-app-gallery-fade-tone-pink": [
-    "from-chart-5"
-  ],
-  "ui-app-gallery-fade-tone-muted": [
-    "from-muted"
   ],
   "ui-testimonial-cards": [
     "px-6",
@@ -1097,16 +1060,6 @@
     "object-cover",
     "object-top"
   ],
-  "ui-hero-split-fade": [
-    "pointer-events-none",
-    "absolute",
-    "inset-x-0",
-    "bottom-0",
-    "h-2/5",
-    "bg-linear-to-t",
-    "to-transparent",
-    "from-accent"
-  ],
   "ui-logo-cloud": [
     "px-6",
     "md:px-10",
@@ -1220,16 +1173,6 @@
     "size-full",
     "object-cover",
     "object-top"
-  ],
-  "ui-feature-split-fade": [
-    "pointer-events-none",
-    "absolute",
-    "inset-x-0",
-    "bottom-0",
-    "h-2/5",
-    "bg-linear-to-t",
-    "to-transparent",
-    "from-chart-3"
   ],
   "ui-feature-split-copy": [
     "flex",

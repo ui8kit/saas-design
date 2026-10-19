@@ -84,10 +84,6 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
-					templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-feature-split-fade", Attrs: templ.Attributes{"data-class": "ui-feature-split-fade", "aria-hidden": "true"}}).Render(ctx, templ_7745c5c3_Buffer)
-					if templ_7745c5c3_Err != nil {
-						return templ_7745c5c3_Err
-					}
 					return nil
 				})
 				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "ui-feature-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var4), templ_7745c5c3_Buffer)
@@ -133,7 +129,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 							var templ_7745c5c3_Var8 string
 							templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(p.Title)
 							if templ_7745c5c3_Err != nil {
-								return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 28, Col: 15}
+								return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 27, Col: 15}
 							}
 							_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 							if templ_7745c5c3_Err != nil {
@@ -160,7 +156,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 							var templ_7745c5c3_Var10 string
 							templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(p.Lead)
 							if templ_7745c5c3_Err != nil {
-								return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 31, Col: 14}
+								return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 30, Col: 14}
 							}
 							_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 							if templ_7745c5c3_Err != nil {
@@ -234,7 +230,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 										var templ_7745c5c3_Var15 string
 										templ_7745c5c3_Var15, templ_7745c5c3_Err = templ.JoinStringErrs(item.Title)
 										if templ_7745c5c3_Err != nil {
-											return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 40, Col: 21}
+											return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 39, Col: 21}
 										}
 										_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var15))
 										if templ_7745c5c3_Err != nil {
@@ -261,7 +257,7 @@ func FeatureSplit(p FeatureSplitData) templ.Component {
 										var templ_7745c5c3_Var17 string
 										templ_7745c5c3_Var17, templ_7745c5c3_Err = templ.JoinStringErrs(item.Text)
 										if templ_7745c5c3_Err != nil {
-											return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 43, Col: 20}
+											return templ.Error{Err: templ_7745c5c3_Err, FileName: `feature-split.templ`, Line: 42, Col: 20}
 										}
 										_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var17))
 										if templ_7745c5c3_Err != nil {

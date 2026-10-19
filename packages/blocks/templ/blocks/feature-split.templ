@@ -20,7 +20,6 @@ templ FeatureSplit(p FeatureSplitData) {
 		@container.Container(container.ContainerProps{Class: "ui-feature-split-container", Attrs: templ.Attributes{"data-class": "ui-feature-split-container"}}) {
 			@box.Box(box.BoxProps{Class: "ui-feature-split-art", Attrs: templ.Attributes{"data-class": "ui-feature-split-art"}}) {
 				@image.Image(image.ImageProps{Class: "ui-feature-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-feature-split-image"}})
-				@box.Box(box.BoxProps{Class: "ui-feature-split-fade", Attrs: templ.Attributes{"data-class": "ui-feature-split-fade", "aria-hidden": "true"}})
 			}
 			@stack.Stack(stack.StackProps{Class: "ui-feature-split-copy", Attrs: templ.Attributes{"data-class": "ui-feature-split-copy"}}) {
 				@stack.Stack(stack.StackProps{Class: "ui-feature-split-head", Attrs: templ.Attributes{"data-class": "ui-feature-split-head"}}) {

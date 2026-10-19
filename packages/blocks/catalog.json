@@ -81,7 +81,6 @@
       "ui-social-proof-split-container",
       "ui-social-proof-split-panel",
       "ui-social-proof-split-screen",
-      "ui-social-proof-split-fade",
       "ui-social-proof-split-body",
       "ui-social-proof-split-title",
       "ui-social-proof-split-logos",
@@ -93,7 +92,7 @@
     "name": "AppGallery",
     "title": "App gallery",
     "category": "media",
-    "description": "Centered header and a row of colored tiles, each filled by an app screen that fades into the tile color at the bottom.",
+    "description": "Centered header and a row of colored tiles, each filled by an app screen inside a 2px border that fades from the tile color at the bottom.",
     "figma": "1:206 Inside",
     "classes": [
       "ui-app-gallery",
@@ -107,14 +106,7 @@
       "ui-app-gallery-tile-tone-sky",
       "ui-app-gallery-tile-tone-pink",
       "ui-app-gallery-tile-tone-muted",
-      "ui-app-gallery-screen",
-      "ui-app-gallery-fade",
-      "ui-app-gallery-fade-tone-primary",
-      "ui-app-gallery-fade-tone-secondary",
-      "ui-app-gallery-fade-tone-lilac",
-      "ui-app-gallery-fade-tone-sky",
-      "ui-app-gallery-fade-tone-pink",
-      "ui-app-gallery-fade-tone-muted"
+      "ui-app-gallery-screen"
     ]
   },
   {
@@ -284,8 +276,7 @@
       "ui-hero-split-lead",
       "ui-hero-split-actions",
       "ui-hero-split-art",
-      "ui-hero-split-image",
-      "ui-hero-split-fade"
+      "ui-hero-split-image"
     ]
   },
   {
@@ -345,7 +336,6 @@
       "ui-feature-split-container",
       "ui-feature-split-art",
       "ui-feature-split-image",
-      "ui-feature-split-fade",
       "ui-feature-split-copy",
       "ui-feature-split-head",
       "ui-feature-split-list",

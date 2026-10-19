@@ -3,7 +3,7 @@
  * Every block renders in both runtimes from this one definition.
  */
 import { $, block, c, each, h, icon, unless, when, type Node } from "../scripts/dsl";
-import { mediaFadeCss } from "./figma";
+import { mediaBorderCss } from "./figma";
 
 const link = { label: "string", href: "string" };
 const img = { src: "string", alt: "string" };
@@ -74,8 +74,8 @@ export const heroSplit = block({
         c("Button", { size: "lg", href: $("primary.href") }, $("primary.label")),
         c("Button", { variant: "ghost", size: "lg", href: $("secondary.href") }, icon("play", { kit: "icon-sm" }), $("secondary.label")))),
     c("Box", { ui: "art", css: "relative aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-square" },
-      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }),
-      c("Box", { ui: "fade", "aria-hidden": "true", css: `${mediaFadeCss} from-accent` }))),
+      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }))),
+  extraCss: mediaBorderCss(".ui-hero-split-art"),
 });
 
 export const logoCloud = block({
@@ -119,8 +119,7 @@ export const featureSplit = block({
   schema: { title: "string", lead: "string", items: [{ title: "string", text: "string" }], image: img },
   root: section("feature-split", { container: "mx-auto grid w-full max-w-page grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16" },
     c("Box", { ui: "art", css: "relative aspect-square overflow-hidden rounded-lg bg-chart-3 md:aspect-4/3 lg:aspect-square" },
-      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }),
-      c("Box", { ui: "fade", "aria-hidden": "true", css: `${mediaFadeCss} from-chart-3` })),
+      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" })),
     c("Stack", { ui: "copy", css: "flex flex-col gap-6 md:gap-8" },
       head("feature-split"),
       c("List", { ui: "list", css: "flex flex-col gap-6" },
@@ -129,6 +128,7 @@ export const featureSplit = block({
           c("Stack", { kit: "stack-2" },
             c("Title", { as: "h3", kit: "item-title-sm" }, $("item.title")),
             c("Text", { kit: "muted" }, $("item.text")))))))),
+  extraCss: mediaBorderCss(".ui-feature-split-art"),
 });
 
 export const steps = block({

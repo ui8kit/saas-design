@@ -38,7 +38,6 @@ templ HeroSplit(p HeroSplitData) {
 			}
 			@box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "ui-hero-split-art"}}) {
 				@image.Image(image.ImageProps{Class: "ui-hero-split-image", Src: p.Image.Src, Alt: p.Image.Alt, Attrs: templ.Attributes{"data-class": "ui-hero-split-image"}})
-				@box.Box(box.BoxProps{Class: "ui-hero-split-fade", Attrs: templ.Attributes{"data-class": "ui-hero-split-fade", "aria-hidden": "true"}})
 			}
 		}
 	}

@@ -237,10 +237,6 @@ func HeroSplit(p HeroSplitData) templ.Component {
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
-					templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-split-fade", Attrs: templ.Attributes{"data-class": "ui-hero-split-fade", "aria-hidden": "true"}}).Render(ctx, templ_7745c5c3_Buffer)
-					if templ_7745c5c3_Err != nil {
-						return templ_7745c5c3_Err
-					}
 					return nil
 				})
 				templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-hero-split-art", Attrs: templ.Attributes{"data-class": "ui-hero-split-art"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)

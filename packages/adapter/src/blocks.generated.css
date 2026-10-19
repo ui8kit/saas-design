@@ -70,11 +70,12 @@
   .ui-social-proof-split-container { @apply mx-auto grid w-full max-w-page grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16; }
   .ui-social-proof-split-panel { @apply relative aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-auto lg:h-140; }
   .ui-social-proof-split-screen { @apply size-full object-cover object-top; }
-  .ui-social-proof-split-fade { @apply pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t to-transparent from-accent; }
   .ui-social-proof-split-body { @apply flex flex-col justify-between gap-8 lg:gap-12 lg:py-6; }
   .ui-social-proof-split-title { @apply text-3xl leading-10 font-medium md:text-4xl md:leading-12; }
   .ui-social-proof-split-logos { @apply flex-wrap justify-center gap-6 rounded-lg bg-muted px-6 py-6 md:justify-between md:gap-8 md:px-10 md:py-8 lg:px-12 lg:py-10; }
   .ui-social-proof-split-logo { @apply h-8 w-auto md:h-10 lg:h-12 dark:brightness-0 dark:invert; }
+  .ui-social-proof-split-panel::after { content: ""; @apply pointer-events-none absolute inset-0 border-2; border-color: transparent; border-radius: inherit; background-color: inherit;
+  mask: linear-gradient(to top, black, transparent), linear-gradient(black 0 0) padding-box, linear-gradient(black 0 0) border-box; mask-composite: intersect, exclude; }
   /* app-gallery */
   .ui-app-gallery { @apply px-6 md:px-10 lg:px-12 pt-16 md:pt-20 lg:pt-28; }
   .ui-app-gallery-container { @apply mx-auto flex w-full max-w-page flex-col gap-10 md:gap-16 lg:gap-20; }
@@ -88,13 +89,8 @@
   .ui-app-gallery-tile-tone-pink { @apply bg-chart-5 text-foreground; }
   .ui-app-gallery-tile-tone-muted { @apply bg-muted text-foreground; }
   .ui-app-gallery-screen { @apply size-full object-cover object-top; }
-  .ui-app-gallery-fade { @apply pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t to-transparent; }
-  .ui-app-gallery-fade-tone-primary { @apply from-primary; }
-  .ui-app-gallery-fade-tone-secondary { @apply from-secondary; }
-  .ui-app-gallery-fade-tone-lilac { @apply from-chart-3; }
-  .ui-app-gallery-fade-tone-sky { @apply from-chart-4; }
-  .ui-app-gallery-fade-tone-pink { @apply from-chart-5; }
-  .ui-app-gallery-fade-tone-muted { @apply from-muted; }
+  .ui-app-gallery-tile::after { content: ""; @apply pointer-events-none absolute inset-0 border-2; border-color: transparent; border-radius: inherit; background-color: inherit;
+  mask: linear-gradient(to top, black, transparent), linear-gradient(black 0 0) padding-box, linear-gradient(black 0 0) border-box; mask-composite: intersect, exclude; }
   /* testimonial-cards */
   .ui-testimonial-cards { @apply px-6 md:px-10 lg:px-12 pt-16 md:pt-20 lg:pt-28; }
   .ui-testimonial-cards-container { @apply mx-auto flex w-full max-w-page flex-col gap-10 md:gap-12 lg:gap-16; }
@@ -193,7 +189,8 @@
   .ui-hero-split-actions { @apply flex-wrap gap-4; }
   .ui-hero-split-art { @apply relative aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-square; }
   .ui-hero-split-image { @apply size-full object-cover object-top; }
-  .ui-hero-split-fade { @apply pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t to-transparent from-accent; }
+  .ui-hero-split-art::after { content: ""; @apply pointer-events-none absolute inset-0 border-2; border-color: transparent; border-radius: inherit; background-color: inherit;
+  mask: linear-gradient(to top, black, transparent), linear-gradient(black 0 0) padding-box, linear-gradient(black 0 0) border-box; mask-composite: intersect, exclude; }
   /* logo-cloud */
   .ui-logo-cloud { @apply px-6 md:px-10 lg:px-12 py-12 md:py-16; }
   .ui-logo-cloud-container { @apply mx-auto flex w-full max-w-page flex-col items-center gap-8; }
@@ -214,12 +211,13 @@
   .ui-feature-split-container { @apply mx-auto grid w-full max-w-page grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16; }
   .ui-feature-split-art { @apply relative aspect-square overflow-hidden rounded-lg bg-chart-3 md:aspect-4/3 lg:aspect-square; }
   .ui-feature-split-image { @apply size-full object-cover object-top; }
-  .ui-feature-split-fade { @apply pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t to-transparent from-chart-3; }
   .ui-feature-split-copy { @apply flex flex-col gap-6 md:gap-8; }
   .ui-feature-split-head { @apply flex flex-col gap-4; }
   .ui-feature-split-list { @apply flex flex-col gap-6; }
   .ui-feature-split-item { @apply flex gap-4; }
   .ui-feature-split-check { @apply size-6 shrink-0 text-primary; }
+  .ui-feature-split-art::after { content: ""; @apply pointer-events-none absolute inset-0 border-2; border-color: transparent; border-radius: inherit; background-color: inherit;
+  mask: linear-gradient(to top, black, transparent), linear-gradient(black 0 0) padding-box, linear-gradient(black 0 0) border-box; mask-composite: intersect, exclude; }
   /* steps */
   .ui-steps-head { @apply flex flex-col gap-4 items-center text-center; }
   .ui-steps-list { @apply grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-10; }
