@@ -4,7 +4,7 @@ export type NavItem = { label: string; href: string };
 export type NavGroup = { title: string; items: NavItem[] };
 
 export const nav: NavGroup[] = [
-  { title: "Getting started", items: [{ label: "Overview", href: "/" }] },
+  { title: "Getting started", items: [{ label: "Overview", href: "/" }, { label: "Instructions", href: "/instructions" }] },
   {
     title: "Foundations",
     items: [

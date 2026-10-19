@@ -33,6 +33,12 @@
     },
     "copyright": {
       "value": "© 2025 Habitus. All rights reserved."
+    },
+    "source_label": {
+      "value": "Source on GitHub: learn UI8Kit & Figma parser"
+    },
+    "source_href": {
+      "value": "https://github.com/ui8kit/saas-design"
     }
   }
 }

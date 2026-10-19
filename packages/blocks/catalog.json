@@ -206,7 +206,7 @@
     "name": "FooterNewsletter",
     "title": "Footer with newsletter",
     "category": "footer",
-    "description": "Dark-scope footer card: brand and socials, two link columns, newsletter form and copyright bar.",
+    "description": "Dark-scope footer card: brand and socials, two link columns, newsletter form, and a bottom bar with copyright and a source-repository link.",
     "figma": "1:11 Footer",
     "classes": [
       "ui-footer-newsletter",
@@ -229,7 +229,10 @@
       "ui-footer-newsletter-label",
       "ui-footer-newsletter-input",
       "ui-footer-newsletter-submit",
-      "ui-footer-newsletter-copyright"
+      "ui-footer-newsletter-bottom",
+      "ui-footer-newsletter-copyright",
+      "ui-footer-newsletter-source",
+      "ui-footer-newsletter-source-icon"
     ]
   },
   {

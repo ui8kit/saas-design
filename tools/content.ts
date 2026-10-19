@@ -107,7 +107,7 @@ sec("testimonials", "1:179", txt("1:181"), txt("1:180"), { block: "testimonial-c
 sec("cta", "1:170", txt("1:174"), txt("1:175"), { block: "cta-split", primary_label: txt("1:173"), primary_href: "#pricing" }, 6);
 sec("pricing", "1:84", txt("1:86"), txt("1:85"), { block: "pricing-two-plans", items: ["plan-free", "plan-premium"] }, 7);
 sec("faq", "1:56", txt("1:83"), txt("1:57"), { block: "faq-tiles", items: ["faq-premium", "faq-premium-2", "faq-miss-a-day", "faq-miss-a-day-2"], link_label: txt("1:58"), link_href: "#faq" }, 8);
-sec("footer", "1:11", "Habitus", txt("1:19"), { block: "footer-newsletter", newsletter_title: txt("1:47"), newsletter_text: txt("1:53"), email_placeholder: txt("1:50"), submit_label: txt("1:52"), copyright: txt("1:55") }, 9);
+sec("footer", "1:11", "Habitus", txt("1:19"), { block: "footer-newsletter", newsletter_title: txt("1:47"), newsletter_text: txt("1:53"), email_placeholder: txt("1:50"), submit_label: txt("1:52"), copyright: txt("1:55"), source_label: authored.repository.label, source_href: authored.repository.href }, 9);
 
 // features
 const feat = [["smart-reminders", "1:252", "1:253", "bell"], ["progress-analytics", "1:248", "1:249", "chart-line"], ["streak-tracking", "1:257", "1:258", "flame"]];
@@ -199,7 +199,7 @@ const manifest = {
   name: "saas-design", version: "1",
   resources: [
     res("page", "Pages", [f("figma_node", "string"), f("sections", "collection", { items: f("section", "string") })]),
-    res("section", "Page sections", [f("figma_node", "string", { required: true }), f("block", "string", { required: true }), f("badge", "string"), f("primary_label", "string"), f("primary_href", "string"), f("secondary_label", "string"), f("secondary_href", "string"), f("login_label", "string"), f("login_href", "string"), f("link_label", "string"), f("link_href", "string"), f("media", "collection", { items: f("media_id", "string") }), f("logos", "collection", { items: f("media_id", "string") }), f("items", "collection", { items: f("entry_id", "string") }), f("newsletter_title", "string"), f("newsletter_text", "string"), f("email_placeholder", "string"), f("submit_label", "string"), f("copyright", "string")]),
+    res("section", "Page sections", [f("figma_node", "string", { required: true }), f("block", "string", { required: true }), f("badge", "string"), f("primary_label", "string"), f("primary_href", "string"), f("secondary_label", "string"), f("secondary_href", "string"), f("login_label", "string"), f("login_href", "string"), f("link_label", "string"), f("link_href", "string"), f("media", "collection", { items: f("media_id", "string") }), f("logos", "collection", { items: f("media_id", "string") }), f("items", "collection", { items: f("entry_id", "string") }), f("newsletter_title", "string"), f("newsletter_text", "string"), f("email_placeholder", "string"), f("submit_label", "string"), f("copyright", "string"), f("source_label", "string"), f("source_href", "string")]),
     res("media", "Media", [f("file", "string", { required: true }), f("public_path", "string", { required: true }), f("mime", "string", { required: true }), f("width", "number", { rules: [{ name: "fastygo.codex/integer" }] }), f("height", "number", { rules: [{ name: "fastygo.codex/integer" }] }), f("alt", "string", { required: true }), f("figma_hash", "string"), f("figma_node", "string"), src]),
     res("feature", "Features", [f("icon", "string", { required: true }), f("figma_node", "string"), src]),
     res("testimonial", "Testimonials", [f("role", "string", { required: true }), src]),

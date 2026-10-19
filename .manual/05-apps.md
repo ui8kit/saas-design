@@ -15,7 +15,7 @@ bun run serve                          # http://localhost:4173
 cd apps/design-svelte
 bun run generate                       # foundations.generated.css + showcase.generated.json (from tokens + packages/ui registry)
 bun run dev                            # http://localhost:5173
-bun run build                          # copy media → static/, vite build → build/ (49 prerendered pages)
+bun run build                          # copy media → static/, vite build → build/ (50 prerendered pages)
 ```
 
 Pages: overview, foundations (colors, typography, spacing, radius, shadows), primitives, components, widgets, blocks + one page per block.
@@ -24,7 +24,7 @@ Pages: overview, foundations (colors, typography, spacing, radius, shadows), pri
 ## apps/design-react — React 19 twin of the design app (Vite SSR + static prerender)
 
 ```bash
-bun run design-react:build             # vite build (client + SSR) → prerender 49 pages into apps/design-react/build
+bun run design-react:build             # vite build (client + SSR) → prerender 50 pages into apps/design-react/build
 bun tools/design-parity.ts             # every page: normalized DOM identical to apps/design-svelte/build
 ```
 

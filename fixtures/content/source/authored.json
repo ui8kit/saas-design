@@ -83,5 +83,6 @@
   },
   "contact": { "title": "Talk to us", "text": "Questions about Premium or Team? We answer within one business day.", "name": "Name", "email": "Email", "message": "Message", "send": "Send message" },
   "settings": { "title": "Notifications", "text": "Choose how Habitus reminds you.", "options": ["Daily summary email", "Push reminders", "Weekly report"], "save": "Save changes" },
-  "download": { "title": "Take Habitus everywhere", "text": "Free on iOS and Android. Sync with the web app.", "ios": "App Store", "android": "Google Play" }
+  "download": { "title": "Take Habitus everywhere", "text": "Free on iOS and Android. Sync with the web app.", "ios": "App Store", "android": "Google Play" },
+  "repository": { "label": "Source on GitHub: learn UI8Kit & Figma parser", "href": "https://github.com/ui8kit/saas-design" }
 }

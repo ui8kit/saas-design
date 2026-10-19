@@ -1270,6 +1270,17 @@
       "lg:pt-20",
       "lg:pb-24"
     ],
+    "ui-footer-newsletter-bottom": [
+      "flex-col",
+      "items-center",
+      "justify-between",
+      "gap-4",
+      "border-t",
+      "border-border",
+      "pt-6",
+      "md:flex-row",
+      "md:pt-8"
+    ],
     "ui-footer-newsletter-brand": [
       "flex",
       "flex-col",
@@ -1301,13 +1312,9 @@
       "max-w-page"
     ],
     "ui-footer-newsletter-copyright": [
-      "border-t",
-      "border-border",
-      "pt-6",
       "text-center",
       "leading-5",
-      "text-muted-foreground",
-      "md:pt-8"
+      "text-muted-foreground"
     ],
     "ui-footer-newsletter-form": [
       "flex",
@@ -1367,6 +1374,17 @@
     "ui-footer-newsletter-socials": [
       "flex",
       "gap-4"
+    ],
+    "ui-footer-newsletter-source": [
+      "gap-2",
+      "text-center",
+      "leading-5",
+      "text-muted-foreground",
+      "hover:text-foreground"
+    ],
+    "ui-footer-newsletter-source-icon": [
+      "size-5",
+      "shrink-0"
     ],
     "ui-footer-newsletter-submit": [
       "w-full",

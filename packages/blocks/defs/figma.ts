@@ -214,8 +214,8 @@ export const faqTiles = block({
 
 export const footerNewsletter = block({
   id: "footer-newsletter", title: "Footer with newsletter", category: "footer", figma: "1:11 Footer",
-  description: "Dark-scope footer card: brand and socials, two link columns, newsletter form and copyright bar.",
-  schema: { brand: "string", href: "string", text: "string", socials: [{ icon: "string", label: "string", href: "string" }], columns: [{ title: "string", links: [link] }], newsletter: { title: "string", text: "string", label: "string", placeholder: "string", button: "string", action: "string" }, copyright: "string" },
+  description: "Dark-scope footer card: brand and socials, two link columns, newsletter form, and a bottom bar with copyright and a source-repository link.",
+  schema: { brand: "string", href: "string", text: "string", socials: [{ icon: "string", label: "string", href: "string" }], columns: [{ title: "string", links: [link] }], newsletter: { title: "string", text: "string", label: "string", placeholder: "string", button: "string", action: "string" }, copyright: "string", source: link },
   root: c("Block", { tag: "footer", css: "px-4 md:px-6 lg:px-12 pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 lg:pb-24" },
     c("Container", { ui: "container", css: "mx-auto w-full max-w-page" },
       c("Stack", { ui: "panel", "data-theme": "dark", css: "flex flex-col gap-8 rounded-lg bg-background px-6 pt-8 pb-6 text-foreground md:gap-10 md:px-8 md:pt-10 lg:gap-16 lg:px-12 lg:pt-16" },
@@ -238,7 +238,9 @@ export const footerNewsletter = block({
               c("Label", { ui: "label", for: "footer-newsletter-email", css: "sr-only" }, $("newsletter.label")),
               c("Input", { ui: "input", id: "footer-newsletter-email", type: "email", name: "email", autocomplete: "email", required: true, placeholder: $("newsletter.placeholder"), css: "bg-card" }),
               c("Button", { ui: "submit", type: "submit", css: "w-full font-normal" }, $("newsletter.button"))))),
-        c("Text", { ui: "copyright", css: "border-t border-border pt-6 text-center leading-5 text-muted-foreground md:pt-8" }, $("copyright"))))),
+        c("Group", { ui: "bottom", css: "flex-col items-center justify-between gap-4 border-t border-border pt-6 md:flex-row md:pt-8" },
+          c("Text", { ui: "copyright", css: "text-center leading-5 text-muted-foreground" }, $("copyright")),
+          c("Link", { ui: "source", href: $("source.href"), css: "gap-2 text-center leading-5 text-muted-foreground hover:text-foreground" }, icon("github", { ui: "source-icon", css: "size-5 shrink-0" }), c("Inline", {}, $("source.label"))))))),
 });
 
 export const figmaBlocks = [navbar, heroPhones, featureCards, socialProofSplit, appGallery, testimonialCards, ctaSplit, pricingTwoPlans, faqTiles, footerNewsletter];

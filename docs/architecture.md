@@ -102,8 +102,8 @@ The semantic class layer. Markup in every runtime carries only `ui-*` classes. T
 | App | Runtime | Entry | Output |
 |---|---|---|---|
 | `apps/site` | Go + templ | `cmd/export/main.go` renders `fixtures/views/home.json` through `blocks.Render` into `views.Page` (`views/layout.templ`) | `apps/site/public` (index.html, `/assets/app.css` via Tailwind CLI, `/assets/ui8kit.js`, media) |
-| `apps/design-svelte` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design-svelte/build` (49 prerendered pages) |
-| `apps/design-react` | React 19, Vite (client + SSR build), `react-dom/server` prerender | `src/routes.tsx`, `src/pages/*` | `apps/design-react/build` (49 pages, no client React) |
+| `apps/design-svelte` | SvelteKit 2, Svelte 5, adapter-static | `src/routes/**` | `apps/design-svelte/build` (50 prerendered pages) |
+| `apps/design-react` | React 19, Vite (client + SSR build), `react-dom/server` prerender | `src/routes.tsx`, `src/pages/*` | `apps/design-react/build` (50 pages, no client React) |
 | `packages/design-docs` (not an app) | TS + CSS shared by both design apps | `src/*`, `styles/design.css`, `scripts/foundations.ts` | `foundations.generated.css` in each design app (it uses brand colors, so it stays at app level) |
 
 - **Site.** One page for now (`pages = {"home.json": "index.html"}` in `cmd/export`). Each block's `region` (`header`/`main`/`footer`) places it.

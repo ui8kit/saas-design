@@ -147,10 +147,10 @@ bun run site:build                         # = bash apps/site/scripts/build.sh
 
 # design system app (SvelteKit)
 (cd apps/design-svelte && bun run dev)            # vite dev → http://localhost:5173
-bun run design-svelte:build                       # → apps/design-svelte/build (49 prerendered pages)
+bun run design-svelte:build                       # → apps/design-svelte/build (50 prerendered pages)
 
 # design system app (React 19)
-bun run design-react:build                        # → apps/design-react/build (49 prerendered pages)
+bun run design-react:build                        # → apps/design-react/build (50 prerendered pages)
 (cd apps/design-react && bun run preview)         # vite preview of build/
 ```
 

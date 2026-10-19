@@ -54,7 +54,7 @@ Keep **"Include source files outside of the Root Directory in the Build Step"** 
 ```
 
 - The install is the same bun workspace install as design-svelte. Go is not needed.
-- `scripts/build.mjs` runs a Vite client build (CSS + `public/` media), then a Vite SSR build of `src/entry-server.tsx`, then writes one `.html` per route (49) with `react-dom/server`. No client React is shipped. See [apps/design-react/README.md](../apps/design-react/README.md).
+- `scripts/build.mjs` runs a Vite client build (CSS + `public/` media), then a Vite SSR build of `src/entry-server.tsx`, then writes one `.html` per route (50) with `react-dom/server`. No client React is shipped. See [apps/design-react/README.md](../apps/design-react/README.md).
 
 ### apps/design-svelte (SvelteKit static)
 

@@ -61,6 +61,7 @@ const views: Record<string, any> = {
       columns: [{ title: t("footer.product"), links: menu("footer-product") }, { title: t("footer.company"), links: menu("footer-company") }],
       newsletter: { title: m(s, "newsletter_title"), text: m(s, "newsletter_text"), label: t("footer.email_label"), placeholder: m(s, "email_placeholder"), button: m(s, "submit_label"), action: "#newsletter" },
       copyright: m(s, "copyright"),
+      source: { label: m(s, "source_label"), href: m(s, "source_href") },
     };
   })(),
 };

@@ -8,6 +8,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/container"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/form"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/grid"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/group"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/inline"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/input"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/label"
@@ -19,7 +20,7 @@ import (
 	icons "github.com/ui8kit/saas-design/packages/icons/templ"
 )
 
-// FooterNewsletter: Dark-scope footer card: brand and socials, two link columns, newsletter form and copyright bar.
+// FooterNewsletter: Dark-scope footer card: brand and socials, two link columns, newsletter form, and a bottom bar with copyright and a source-repository link.
 templ FooterNewsletter(p FooterNewsletterData) {
 	@block.Block(block.BlockProps{Class: "ui-footer-newsletter", Tag: "footer", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter"}}) {
 		@container.Container(container.ContainerProps{Class: "ui-footer-newsletter-container", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-container"}}) {
@@ -79,8 +80,16 @@ templ FooterNewsletter(p FooterNewsletterData) {
 						}
 					}
 				}
-				@text.Text(text.TextProps{Class: "ui-footer-newsletter-copyright", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-copyright"}}) {
-					{ p.Copyright }
+				@group.Group(group.GroupProps{Class: "ui-footer-newsletter-bottom", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-bottom"}}) {
+					@text.Text(text.TextProps{Class: "ui-footer-newsletter-copyright", Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-copyright"}}) {
+						{ p.Copyright }
+					}
+					@link.Link(link.LinkProps{Class: "ui-footer-newsletter-source", Href: p.Source.Href, Attrs: templ.Attributes{"data-class": "ui-footer-newsletter-source"}}) {
+						@icons.Icon("github", "ui-footer-newsletter-source-icon")
+						@inline.Inline(inline.InlineProps{}) {
+							{ p.Source.Label }
+						}
+					}
 				}
 			}
 		}

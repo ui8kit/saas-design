@@ -9,12 +9,12 @@ Gate: `bun run check` → all checks passed.
 | contract | 206 records, 0 errors, 0 warnings |
 | ui parity | 370 cases: templ 370/370, Svelte 370/370, React 370/370 = canonical; 0 non-`ui-*` classes |
 | blocks parity | 49 cases (39/39 blocks): Svelte 49/49 and React 49/49 identical to templ |
-| design parity | 49 pages: design-react 49/49 DOM-identical to design-svelte |
+| design parity | 50 pages: design-react 50/50 DOM-identical to design-svelte |
 | ui8px | 0 blocking (34 upstream codegen 2.0 utilities + 6 container-query variants report-only) |
 | lint-apps (retag + block rules) | 0 blocking, 5 baselined, 139 report-only (literal-text) |
-| layout audit | 396 page×width checks (site + 49 + 49 pages × 390/768/1024/1440): 0 overflow, 0 edge (nothing within 8px of a bordered/filled surface edge); 4 media warnings |
+| layout audit | 404 page×width checks (site + 50 + 50 pages × 390/768/1024/1440): 0 overflow, 0 edge (nothing within 8px of a bordered/filled surface edge); 4 media warnings |
 | links | 0 broken |
-| builds | site; design-svelte 49 pages; design-react 49 pages; packages compile standalone |
+| builds | site; design-svelte 50 pages; design-react 50 pages; packages compile standalone |
 
 Behaviour: `bun run test:behaviors` → 27/27 ok (sheet focus trap, Esc, overlay, focus restore, toggle + persistence; site + design-svelte + design-react @390px).
 
@@ -28,7 +28,7 @@ Behaviour: `bun run test:behaviors` → 27/27 ok (sheet focus trap, Esc, overlay
   - Pages: overview; foundations (colors incl. a light/dark preview and light + dark brand groups, typography, 8+4 spacing, radius, shadows); primitives + components (40 codegen 2.0 bricks); widgets; 39 block pages. App parts are retagged onto primitives (`src/lib`: NavTree, PageHeader, Pager, Section, ShowcasePart, Sidebar, Topbar).
   - Dark mode: ThemeToggle in the sidebar head and mobile top bar; theme-init is injected by hooks.server.
   - Mobile/tablet: the sidebar becomes a left Sheet below `xl` (1280px), so block previews get the full width.
-- **apps/design-react** — React 19, Vite client + SSR build, static prerender of the same 49 pages (no client React). Shares nav, page data, showcase transforms and `ds-*` CSS with design-svelte via `packages/design-docs`.
+- **apps/design-react** — React 19, Vite client + SSR build, static prerender of the same 50 pages (incl. the Instructions page, `/instructions`, from `packages/design-docs/src/guides.ts`) (no client React). Shares nav, page data, showcase transforms and `ds-*` CSS with design-svelte via `packages/design-docs`.
 - **packages**
   - ui: 40 codegen 2.0 bricks (ThemeToggle and Sheet are now upstream) in templ + Svelte 5 + React 19, recipe overrides in `packages/ui/recipes`, with parity.
   - ui behaviours: `packages/ui/behaviors/ui8kit.js` plus `theme-init.js`.

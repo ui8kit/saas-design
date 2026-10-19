@@ -55,6 +55,8 @@
     "download.text": "Free on iOS and Android. Sync with the web app.",
     "download.ios": "App Store",
     "download.android": "Google Play",
+    "repository.label": "Source on GitHub: learn UI8Kit & Figma parser",
+    "repository.href": "https://github.com/ui8kit/saas-design",
     "settings.option_1": "Daily summary email",
     "settings.option_2": "Push reminders",
     "settings.option_3": "Weekly report"

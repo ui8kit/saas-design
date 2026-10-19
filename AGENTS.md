@@ -104,7 +104,7 @@ bun tools/lint-apps.ts                                   # 0 blocking
 # 9. apps
 bun run site:build                                # apps/site/public
 (cd packages/design-docs && bun run generate) && bun run design-svelte:build && bun run design-react:build
-bun tools/design-parity.ts                        # react 49/49 DOM-identical to svelte
+bun tools/design-parity.ts                        # react 50/50 DOM-identical to svelte
 bun tools/audit-layout.ts                         # layout audit: 0 blocking
 
 # 10. gate

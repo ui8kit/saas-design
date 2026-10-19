@@ -147,6 +147,16 @@
             "id": "copyright",
             "label": "copyright",
             "type": "string"
+          },
+          {
+            "id": "source_label",
+            "label": "source label",
+            "type": "string"
+          },
+          {
+            "id": "source_href",
+            "label": "source href",
+            "type": "string"
           }
         ]
       }

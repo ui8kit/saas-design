@@ -188,6 +188,11 @@ type FooterNewsletterDataNewsletter struct {
 	Action      string `json:"action"`
 }
 
+type FooterNewsletterDataSource struct {
+	Label string `json:"label"`
+	Href  string `json:"href"`
+}
+
 type FooterNewsletterData struct {
 	Brand      string                            `json:"brand"`
 	Href       string                            `json:"href"`
@@ -196,6 +201,7 @@ type FooterNewsletterData struct {
 	Columns    []FooterNewsletterDataColumnsItem `json:"columns"`
 	Newsletter FooterNewsletterDataNewsletter    `json:"newsletter"`
 	Copyright  string                            `json:"copyright"`
+	Source     FooterNewsletterDataSource        `json:"source"`
 }
 
 type AnnouncementBarDataLink struct {

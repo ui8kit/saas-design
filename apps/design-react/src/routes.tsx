@@ -4,6 +4,7 @@ import * as BlockPage from "./pages/BlockPage";
 import * as Blocks from "./pages/Blocks";
 import * as Colors from "./pages/Colors";
 import * as Components from "./pages/Components";
+import * as Instructions from "./pages/Instructions";
 import * as Overview from "./pages/Overview";
 import * as Primitives from "./pages/Primitives";
 import * as Radius from "./pages/Radius";
@@ -14,9 +15,10 @@ import * as Widgets from "./pages/Widgets";
 
 export type Route = { path: string; title: string; page: () => ReactElement };
 
-// Every prerendered page: the same 49 routes as apps/design-svelte (10 static pages + 39 blocks).
+// Every prerendered page: the same 50 routes as apps/design-svelte (11 static pages + 39 blocks).
 export const routes: Route[] = [
   { path: "/", title: Overview.title, page: () => <Overview.OverviewPage /> },
+  { path: "/instructions", title: Instructions.title, page: () => <Instructions.InstructionsPage /> },
   { path: "/foundations/colors", title: Colors.title, page: () => <Colors.ColorsPage /> },
   { path: "/foundations/typography", title: Typography.title, page: () => <Typography.TypographyPage /> },
   { path: "/foundations/spacing", title: Spacing.title, page: () => <Spacing.SpacingPage /> },

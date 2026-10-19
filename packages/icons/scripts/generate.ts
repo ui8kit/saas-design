@@ -12,7 +12,7 @@ const CHECK = process.argv.includes("--check");
 export const LUCIDE = [
   "activity", "arrow-right", "bell", "calendar", "chart-line", "check", "chevron-down", "chevron-right", "circle-check", "cloud",
   "flame", "heart-pulse", "inbox", "instagram", "layout-template", "linkedin", "list-plus", "lock", "mail", "menu", "message-square",
-  "notebook-pen", "play", "plus", "search", "settings", "shield-check", "star", "target", "timer", "trending-up", "x", "zap", "apple", "smartphone",
+  "notebook-pen", "play", "plus", "search", "settings", "shield-check", "star", "target", "timer", "trending-up", "x", "zap", "apple", "smartphone", "github",
 ];
 const BRAND = ["brand-mark"];
 
