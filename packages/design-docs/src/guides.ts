@@ -13,6 +13,7 @@ export const guideGroups: GuideGroup[] = [
     id: "getting-started", title: "Getting started", guides: [
       { title: "README", path: "README.md", text: "What the repo builds, the pipeline diagram, prerequisites, quickstart and how to run the three apps." },
       { title: "Learn, in order", path: "docs/learn/README.md", text: "Ten short lessons from tokens to deploy, each linking the real files." },
+      { title: "New brand", path: "docs/new-brand.md", text: "Clone → rename and recolour in fixtures/site.config.json and mapping.json → bun run regen → green check." },
       { title: "Agent guide", path: "AGENTS.md", text: "Golden rules, pipeline order, how to read common requests and the definition of done." },
       { title: "Architecture", path: "docs/architecture.md", text: "Layers, data flow and why the adapter layer exists." },
       { title: "Command manual", path: ".manual/README.md", text: "Short command-by-command manual, setup to deploy." },
@@ -42,6 +43,7 @@ export const guideGroups: GuideGroup[] = [
   },
   {
     id: "figma", title: "Figma parser", guides: [
+      { title: "Figma parser", path: "docs/figma-parser.md", text: "fig2design: the dump schema (frames, images, variables) and which scripts read it." },
       { title: "Replicate with a new Figma file", path: "docs/replicate-with-new-figma.md", text: "Extract another .fig with fig2design, map its palette, frames and texts, then measure drift." },
       { title: "Contract and fixtures", path: "docs/learn/06-contract-fixtures.md", text: "Figma dump → contract records → view models; why copy never lives in components." },
       { title: "Extract a Figma file", path: ".manual/01-extract-figma.md", text: "Commands to run the fig2design parser on a .fig kept outside the repo." },
