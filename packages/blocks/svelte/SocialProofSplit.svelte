@@ -11,6 +11,7 @@
   <Container class="ui-social-proof-split-container" data-class="ui-social-proof-split-container">
     <Box class="ui-social-proof-split-panel" data-class="ui-social-proof-split-panel">
       <Image class="ui-social-proof-split-screen" data-class="ui-social-proof-split-screen" src={data.screen.src || undefined} alt={data.screen.alt || undefined} />
+      <Box class="ui-social-proof-split-fade" data-class="ui-social-proof-split-fade" aria-hidden="true" />
     </Box>
     <Stack class="ui-social-proof-split-body" data-class="ui-social-proof-split-body">
       <Title class="ui-social-proof-split-title" data-class="ui-social-proof-split-title" as={2} id="social-proof-title">

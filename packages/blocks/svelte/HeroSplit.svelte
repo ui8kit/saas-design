@@ -29,6 +29,7 @@
     </Stack>
     <Box class="ui-hero-split-art" data-class="ui-hero-split-art">
       <Image class="ui-hero-split-image" data-class="ui-hero-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+      <Box class="ui-hero-split-fade" data-class="ui-hero-split-fade" aria-hidden="true" />
     </Box>
   </Container>
 </Block>

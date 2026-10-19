@@ -12,6 +12,7 @@
   <Container class="ui-feature-split-container" data-class="ui-feature-split-container">
     <Box class="ui-feature-split-art" data-class="ui-feature-split-art">
       <Image class="ui-feature-split-image" data-class="ui-feature-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+      <Box class="ui-feature-split-fade" data-class="ui-feature-split-fade" aria-hidden="true" />
     </Box>
     <Stack class="ui-feature-split-copy" data-class="ui-feature-split-copy">
       <Stack class="ui-feature-split-head" data-class="ui-feature-split-head">

@@ -40,7 +40,6 @@ const views: Record<string, any> = {
   "app-gallery": (() => {
     const s = sec("inside"); const tones = ["lilac", "primary", "secondary", "sky", "pink"];
     const tiles = (m(s, "media") as string[]).map((id, i) => ({ tone: tones[i]!, ...media(id) }));
-    tiles.push({ tone: tones[4]!, src: "", alt: "" });
     return { id: s.slug, title: s.title, lead: s.excerpt, tiles };
   })(),
   "testimonial-cards": (() => { const s = sec("testimonials"); return { title: s.title, lead: s.excerpt, items: ofKind("testimonial").map((e) => ({ name: e.title, role: m(e, "role"), quote: `"${e.content}"`, avatar: media(e.featured_media_id!) })) }; })(),

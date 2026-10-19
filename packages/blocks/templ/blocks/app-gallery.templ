@@ -4,6 +4,7 @@ package blocks
 
 import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/block"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/box"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/container"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/image"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/list"
@@ -12,7 +13,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/title"
 )
 
-// AppGallery: Centered header and a row of colored tiles each framing an app screen; the last tile bleeds off the page.
+// AppGallery: Centered header and a row of colored tiles, each filled by an app screen that fades into the tile color at the bottom.
 templ AppGallery(p AppGalleryData) {
 	@block.Block(block.BlockProps{Class: "ui-app-gallery", Tag: "section", ID: p.ID, Attrs: templ.Attributes{"data-class": "ui-app-gallery", "aria-labelledby": "app-gallery-title"}}) {
 		@container.Container(container.ContainerProps{Class: "ui-app-gallery-container", Attrs: templ.Attributes{"data-class": "ui-app-gallery-container"}}) {
@@ -24,12 +25,13 @@ templ AppGallery(p AppGalleryData) {
 					{ p.Lead }
 				}
 			}
-			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles", "data-bleed": "inline-end"}}) {
+			@list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}) {
 				for _, tile := range p.Tiles {
 					@list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-tile"}}) {
 						if tile.Src != "" {
 							@image.Image(image.ImageProps{Class: "ui-app-gallery-screen", Src: tile.Src, Alt: tile.Alt, Attrs: templ.Attributes{"data-class": "ui-app-gallery-screen"}})
 						}
+						@box.Box(box.BoxProps{Class: "ui-app-gallery-fade" + " ui-app-gallery-fade-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-fade", "aria-hidden": "true"}})
 					}
 				}
 			}

@@ -59,7 +59,14 @@ Media fills its box edge to edge, as in the blog cards: the media container has 
 | blog cards | `ui-blog-cards-media` | `aspect-video` |
 | hero split, feature split | `ui-*-art` | `aspect-square` / `aspect-4/3` / `aspect-square` |
 | social proof split | `ui-social-proof-split-panel` | `aspect-square` / `aspect-4/3` / `h-140` |
-| app gallery | `ui-app-gallery-tile` | `aspect-1/2` (portrait app screens are 938×2030) |
+| app gallery | `ui-app-gallery-tile` | `aspect-1/2` (portrait app screens are 938×2030); four tiles: 2×2 / one row of 4 / one row of 4 |
+
+Bottom fade: every media box with a set background color (app gallery tiles, hero and feature split art, social proof panel)
+has a decorative overlay `<div aria-hidden="true">` after the image: `pointer-events-none absolute inset-x-0 bottom-0 h-2/5
+bg-linear-to-t from-<tone> to-transparent` (`mediaFadeCss` in `packages/blocks/defs/figma.ts`). The `from-*` stop is the
+container's own `bg-*` color token (for gallery tiles it is derived from the same tone map, so tile and fade cannot drift), and
+it follows light/dark with the token. The container is `relative`; the overlay is part of the shared def, so all runtimes
+render the same DOM.
 
 ## Spacing
 

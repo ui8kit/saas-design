@@ -12,6 +12,7 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/block"
+	"github.com/ui8kit/saas-design/packages/ui/templ/ui/box"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/container"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/image"
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/list"
@@ -20,7 +21,7 @@ import (
 	"github.com/ui8kit/saas-design/packages/ui/templ/ui/title"
 )
 
-// AppGallery: Centered header and a row of colored tiles each framing an app screen; the last tile bleeds off the page.
+// AppGallery: Centered header and a row of colored tiles, each filled by an app screen that fades into the tile color at the bottom.
 func AppGallery(p AppGalleryData) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -93,7 +94,7 @@ func AppGallery(p AppGalleryData) templ.Component {
 						var templ_7745c5c3_Var6 string
 						templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(p.Title)
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `app-gallery.templ`, Line: 21, Col: 14}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `app-gallery.templ`, Line: 22, Col: 14}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 						if templ_7745c5c3_Err != nil {
@@ -120,7 +121,7 @@ func AppGallery(p AppGalleryData) templ.Component {
 						var templ_7745c5c3_Var8 string
 						templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(p.Lead)
 						if templ_7745c5c3_Err != nil {
-							return templ.Error{Err: templ_7745c5c3_Err, FileName: `app-gallery.templ`, Line: 24, Col: 13}
+							return templ.Error{Err: templ_7745c5c3_Err, FileName: `app-gallery.templ`, Line: 25, Col: 13}
 						}
 						_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
 						if templ_7745c5c3_Err != nil {
@@ -169,6 +170,14 @@ func AppGallery(p AppGalleryData) templ.Component {
 									return templ_7745c5c3_Err
 								}
 							}
+							templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, " ")
+							if templ_7745c5c3_Err != nil {
+								return templ_7745c5c3_Err
+							}
+							templ_7745c5c3_Err = box.Box(box.BoxProps{Class: "ui-app-gallery-fade" + " ui-app-gallery-fade-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-fade", "aria-hidden": "true"}}).Render(ctx, templ_7745c5c3_Buffer)
+							if templ_7745c5c3_Err != nil {
+								return templ_7745c5c3_Err
+							}
 							return nil
 						})
 						templ_7745c5c3_Err = list.ListItem(list.ListItemProps{Class: "ui-app-gallery-tile" + " ui-app-gallery-tile-tone-" + tile.Tone, Attrs: templ.Attributes{"data-class": "ui-app-gallery-tile"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
@@ -178,7 +187,7 @@ func AppGallery(p AppGalleryData) templ.Component {
 					}
 					return nil
 				})
-				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles", "data-bleed": "inline-end"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+				templ_7745c5c3_Err = list.List(list.ListProps{Class: "ui-app-gallery-tiles", Attrs: templ.Attributes{"data-class": "ui-app-gallery-tiles"}}).Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}

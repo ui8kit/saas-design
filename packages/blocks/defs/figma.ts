@@ -7,6 +7,9 @@ import { $, block, c, each, h, icon, unless, use, when } from "../scripts/dsl";
 const link = { label: "string", href: "string" };
 const img = { src: "string", alt: "string" };
 const tone = { primary: "bg-primary text-primary-foreground", secondary: "bg-secondary text-secondary-foreground", lilac: "bg-chart-3 text-foreground", sky: "bg-chart-4 text-foreground", pink: "bg-chart-5 text-foreground", muted: "bg-muted text-foreground" };
+/** Bottom fade over media, in the same tone as its tile: the bg-* token of each tone becomes the gradient's from-* stop. */
+const fade = Object.fromEntries(Object.entries(tone).map(([k, v]) => [k, v.split(" ")[0]!.replace(/^bg-/, "from-")])) as Record<keyof typeof tone, string>;
+export const mediaFadeCss = "pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t to-transparent";
 
 export const navbar = block({
   id: "navbar", title: "Navbar", category: "navigation", figma: "1:262 › Logo, Menu, Button",
@@ -89,8 +92,9 @@ export const socialProofSplit = block({
   schema: { title: "string", screen: img, logos: [img] },
   root: c("Block", { tag: "section", "aria-labelledby": "social-proof-title", css: "px-6 md:px-10 lg:px-12 pt-10" },
     c("Container", { ui: "container", css: "mx-auto grid w-full max-w-page grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2 lg:gap-16" },
-      c("Box", { ui: "panel", css: "aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-auto lg:h-140" },
-        c("Image", { ui: "screen", src: $("screen.src"), alt: $("screen.alt"), css: "size-full object-cover object-top" })),
+      c("Box", { ui: "panel", css: "relative aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-auto lg:h-140" },
+        c("Image", { ui: "screen", src: $("screen.src"), alt: $("screen.alt"), css: "size-full object-cover object-top" }),
+        c("Box", { ui: "fade", "aria-hidden": "true", css: `${mediaFadeCss} from-accent` })),
       c("Stack", { ui: "body", css: "flex flex-col justify-between gap-8 lg:gap-12 lg:py-6" },
         c("Title", { as: "h2", id: "social-proof-title", ui: "title", css: "text-3xl leading-10 font-medium md:text-4xl md:leading-12" }, $("title")),
         c("Group", { ui: "logos", css: "flex-wrap justify-center gap-6 rounded-lg bg-muted px-6 py-6 md:justify-between md:gap-8 md:px-10 md:py-8 lg:px-12 lg:py-10" },
@@ -99,17 +103,18 @@ export const socialProofSplit = block({
 
 export const appGallery = block({
   id: "app-gallery", title: "App gallery", category: "media", figma: "1:206 Inside",
-  description: "Centered header and a row of colored tiles each framing an app screen; the last tile bleeds off the page.",
+  description: "Centered header and a row of colored tiles, each filled by an app screen that fades into the tile color at the bottom.",
   schema: { id: "string", title: "string", lead: "string", tiles: [{ tone: "string", src: "string", alt: "string" }] },
-  root: c("Block", { tag: "section", id: $("id"), "aria-labelledby": "app-gallery-title", css: "overflow-x-clip px-6 md:px-10 lg:px-12 pt-16 md:pt-20 lg:pt-28" },
+  root: c("Block", { tag: "section", id: $("id"), "aria-labelledby": "app-gallery-title", css: "px-6 md:px-10 lg:px-12 pt-16 md:pt-20 lg:pt-28" },
     c("Container", { ui: "container", css: "mx-auto flex w-full max-w-page flex-col gap-10 md:gap-16 lg:gap-20" },
       c("Stack", { kit: "section-head-center" },
         c("Title", { as: "h2", id: "app-gallery-title", kit: "section-title-display" }, $("title")),
         c("Text", { ui: "lead", css: "text-lg font-light md:text-xl" }, $("lead"))),
-      c("List", { ui: "tiles", "data-bleed": "inline-end", css: "grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 lg:w-5/4 lg:grid-cols-5 lg:gap-10" },
+      c("List", { ui: "tiles", css: "grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 lg:gap-10" },
         each($("tiles"), "tile",
-          c("ListItem", { ui: "tile", variants: { tone }, vary: { tone: $("tile.tone") }, css: "aspect-1/2 overflow-hidden rounded-lg" },
-            when($("tile.src"), c("Image", { ui: "screen", src: $("tile.src"), alt: $("tile.alt"), css: "size-full object-cover object-top" }))))))),
+          c("ListItem", { ui: "tile", variants: { tone }, vary: { tone: $("tile.tone") }, css: "relative aspect-1/2 overflow-hidden rounded-lg" },
+            when($("tile.src"), c("Image", { ui: "screen", src: $("tile.src"), alt: $("tile.alt"), css: "size-full object-cover object-top" })),
+            c("Box", { ui: "fade", "aria-hidden": "true", variants: { tone: fade }, vary: { tone: $("tile.tone") }, css: mediaFadeCss })))))),
 });
 
 export const testimonialCards = block({

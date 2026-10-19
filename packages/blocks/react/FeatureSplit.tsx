@@ -11,6 +11,7 @@ export function FeatureSplit({ data }: { data: FeatureSplitData }) {
       <Container className="ui-feature-split-container" data-class="ui-feature-split-container">
         <Box className="ui-feature-split-art" data-class="ui-feature-split-art">
           <Image className="ui-feature-split-image" data-class="ui-feature-split-image" src={data.image.src || undefined} alt={data.image.alt || undefined} />
+          <Box className="ui-feature-split-fade" data-class="ui-feature-split-fade" aria-hidden={"true"} />
         </Box>
         <Stack className="ui-feature-split-copy" data-class="ui-feature-split-copy">
           <Stack className="ui-feature-split-head" data-class="ui-feature-split-head">

@@ -10,6 +10,7 @@ export function SocialProofSplit({ data }: { data: SocialProofSplitData }) {
       <Container className="ui-social-proof-split-container" data-class="ui-social-proof-split-container">
         <Box className="ui-social-proof-split-panel" data-class="ui-social-proof-split-panel">
           <Image className="ui-social-proof-split-screen" data-class="ui-social-proof-split-screen" src={data.screen.src || undefined} alt={data.screen.alt || undefined} />
+          <Box className="ui-social-proof-split-fade" data-class="ui-social-proof-split-fade" aria-hidden={"true"} />
         </Box>
         <Stack className="ui-social-proof-split-body" data-class="ui-social-proof-split-body">
           <Title className="ui-social-proof-split-title" data-class="ui-social-proof-split-title" as={2} id={"social-proof-title"}>

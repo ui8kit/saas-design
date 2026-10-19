@@ -18,6 +18,7 @@ templ SocialProofSplit(p SocialProofSplitData) {
 		@container.Container(container.ContainerProps{Class: "ui-social-proof-split-container", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-container"}}) {
 			@box.Box(box.BoxProps{Class: "ui-social-proof-split-panel", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-panel"}}) {
 				@image.Image(image.ImageProps{Class: "ui-social-proof-split-screen", Src: p.Screen.Src, Alt: p.Screen.Alt, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-screen"}})
+				@box.Box(box.BoxProps{Class: "ui-social-proof-split-fade", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-fade", "aria-hidden": "true"}})
 			}
 			@stack.Stack(stack.StackProps{Class: "ui-social-proof-split-body", Attrs: templ.Attributes{"data-class": "ui-social-proof-split-body"}}) {
 				@title.Title(title.TitleProps{Class: "ui-social-proof-split-title", As: 2, Attrs: templ.Attributes{"data-class": "ui-social-proof-split-title", "id": "social-proof-title"}}) {

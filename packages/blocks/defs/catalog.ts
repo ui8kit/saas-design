@@ -3,6 +3,7 @@
  * Every block renders in both runtimes from this one definition.
  */
 import { $, block, c, each, h, icon, unless, when, type Node } from "../scripts/dsl";
+import { mediaFadeCss } from "./figma";
 
 const link = { label: "string", href: "string" };
 const img = { src: "string", alt: "string" };
@@ -72,8 +73,9 @@ export const heroSplit = block({
       c("Group", { ui: "actions", css: "flex-wrap gap-4" },
         c("Button", { size: "lg", href: $("primary.href") }, $("primary.label")),
         c("Button", { variant: "ghost", size: "lg", href: $("secondary.href") }, icon("play", { kit: "icon-sm" }), $("secondary.label")))),
-    c("Box", { ui: "art", css: "aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-square" },
-      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }))),
+    c("Box", { ui: "art", css: "relative aspect-square overflow-hidden rounded-lg bg-accent md:aspect-4/3 lg:aspect-square" },
+      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }),
+      c("Box", { ui: "fade", "aria-hidden": "true", css: `${mediaFadeCss} from-accent` }))),
 });
 
 export const logoCloud = block({
@@ -116,8 +118,9 @@ export const featureSplit = block({
   description: "Checklist of benefits beside an app screen.",
   schema: { title: "string", lead: "string", items: [{ title: "string", text: "string" }], image: img },
   root: section("feature-split", { container: "mx-auto grid w-full max-w-page grid-cols-1 items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16" },
-    c("Box", { ui: "art", css: "aspect-square overflow-hidden rounded-lg bg-chart-3 md:aspect-4/3 lg:aspect-square" },
-      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" })),
+    c("Box", { ui: "art", css: "relative aspect-square overflow-hidden rounded-lg bg-chart-3 md:aspect-4/3 lg:aspect-square" },
+      c("Image", { ui: "image", src: $("image.src"), alt: $("image.alt"), css: "size-full object-cover object-top" }),
+      c("Box", { ui: "fade", "aria-hidden": "true", css: `${mediaFadeCss} from-chart-3` })),
     c("Stack", { ui: "copy", css: "flex flex-col gap-6 md:gap-8" },
       head("feature-split"),
       c("List", { ui: "list", css: "flex flex-col gap-6" },
