@@ -1,7 +1,6 @@
 <script lang="ts">
   // App frame, same DOM as apps/design-react/src/components/Layout.tsx.
   import "$lib/styles/app.css";
-  import { onMount } from "svelte";
   import { page } from "$app/state";
   import { Box, Container, LinkPlain, Sheet, SheetClose } from "@saas-design/ui";
   import NavTree from "$lib/NavTree.svelte";
@@ -9,8 +8,7 @@
   import Topbar from "$lib/Topbar.svelte";
 
   let { children } = $props();
-  // shared vanilla behaviors (theme toggle, sheet): same script as apps/site, loaded client-side only
-  onMount(() => { import("../../../../packages/ui/behaviors/ui8kit.js"); });
+  // shared vanilla behaviors (theme toggle, sheet): same script as apps/site and design-react, loaded by src/app.html
 </script>
 
 <LinkPlain class="ui-skip" href="#content">Skip to content</LinkPlain>
