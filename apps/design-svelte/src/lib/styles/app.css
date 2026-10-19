@@ -5,3 +5,8 @@
 @import "../../../../../packages/adapter/src/index.css";
 @import "../../../../../packages/design-docs/styles/design.css";
 @import "./foundations.generated.css";
+
+/* App-level preview frame: own 8px corner (--preview-radius) and tinted surface (--preview-surface), see brand.css. */
+@layer components {
+  .ds-frame { @apply rounded-preview bg-preview; }
+}

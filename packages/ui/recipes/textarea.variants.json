@@ -1,0 +1,4 @@
+{
+  "id": "ui.textarea",
+  "base": "w-full min-w-0 bg-background text-foreground inset-ring inset-ring-input outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 focus-visible:inset-ring-ring rounded-field"
+}

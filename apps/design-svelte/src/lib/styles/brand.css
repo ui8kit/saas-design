@@ -33,3 +33,21 @@
   --color-brand-success: var(--brand-success);
   --color-brand-placeholder: var(--brand-placeholder);
 }
+
+/* Preview frame (design apps only, not part of a block's nested-radius chain): its own small corner, independent of the
+   brand --radius, and a subtle --primary tint of --background as surface, light and dark. */
+:root,
+[data-theme="light"] {
+  --preview-radius: 0.5rem;
+  --preview-surface: color-mix(in oklab, var(--primary) 4%, var(--background));
+}
+
+.dark,
+[data-theme="dark"] {
+  --preview-surface: color-mix(in oklab, var(--primary) 7%, var(--background));
+}
+
+@theme inline {
+  --color-preview: var(--preview-surface);
+  --radius-preview: var(--preview-radius);
+}

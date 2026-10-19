@@ -1,0 +1,4 @@
+{
+  "id": "ui.alert",
+  "base": "flex min-h-8 items-center gap-2 px-2 text-xs font-semibold inset-ring rounded-dense"
+}

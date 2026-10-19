@@ -1,0 +1,9 @@
+{
+  "id": "ui.disclosure",
+  "byKey": {
+    "variant": {
+      "card": "rounded-nested bg-card inset-ring inset-ring-border",
+      "default": "rounded-nested inset-ring inset-ring-border"
+    }
+  }
+}

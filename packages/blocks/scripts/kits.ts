@@ -22,6 +22,6 @@ export const kits: Record<string, string> = {
   "muted": "text-muted-foreground",
   "muted-sm": "text-sm text-muted-foreground",
   "grid-3": "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10",
-  "cell": "px-6 py-4",
+  "cell": "px-2 py-4 whitespace-nowrap md:px-6",
   "icon-sm": "size-4",
 };

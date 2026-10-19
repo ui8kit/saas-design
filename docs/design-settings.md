@@ -11,7 +11,7 @@ local value exists. Measurements come from the Figma frame (`fixtures/figma/fram
 | `--radius` | `2.5rem` (40px) | `@theme` in [packages/tokens/theme.css](../packages/tokens/theme.css), from `radius.base` of [fixtures/tokens/mapping.json](../fixtures/tokens/mapping.json) | The one corner token of 2.0: plain `rounded` reads it. The frame has 40px on 23 cards and bands. |
 | `rounded-md` | `calc(var(--radius) * 0.5)` = 20px | `@theme inline` | Phone screens in the frame (9 nodes at 20px). |
 | `rounded-sm`, `rounded-xl` | 0.25× / 1.5× | `@theme inline` | Kept for the foundations page; the frame does not use them. |
-| pills | `rounded` on controls, `rounded-full` on circles | recipes | 40px on a control of 32–56px clamps to a pill, so the button, input and select recipes use plain `rounded` like upstream (no `rounded-full` override). |
+| pills | `rounded` on controls, `rounded-full` on circles | recipes | 40px on a control of 32–56px clamps to a pill, so the button recipe uses plain `rounded` like upstream (no `rounded-full` override). Input, select and textarea use `rounded-field`, alerts `rounded-dense` (see [Nested corners](#nested-corners)): a pill on their own, concentric inside a padded surface. |
 
 Before this, `--radius` sat only in `:root`. Plain `rounded` then compiled to Tailwind's `0.25rem`, so every upstream
 primitive that relies on the corner token (textarea, alert, dialog, disclosure, fieldset card, meter, progress, range,
@@ -24,6 +24,25 @@ The per-element tokens of 2.0 (`--radius-card|button|badge|alert|media`, `--shad
 match `[data-slot].<utility>` selectors, and this repo's markup carries only `ui-*` classes. They are copied into
 `packages/adapter/src/kit.generated.css` but never apply. See backlog
 [codegen2-kit-css-layering.md](../.project/backlog/codegen2-kit-css-layering.md).
+
+## Nested corners
+
+Rule: **inner R = outer R − padding** (equivalently outer R = inner R + padding), floored at `--radius-floor` = 4px.
+Example: an outer corner of 24px with 8px padding gives 16px inside. In Habitus the outer surface of a block carries
+`--radius` (40px); everything inside derives from it and from the padding of the surface it sits in.
+
+| token / utility | value | used by |
+|---|---|---|
+| `surface-pad-N` | sets `--surface-pad` = spacing N (resets `--nested-pad`) | every padded outer surface, mirroring its `p-*`/`px-*` at the same breakpoints (contact form, settings panel, newsletter band, footer panel, plan cards, `Card`, FAQ tiles) |
+| `nested-pad-N` | sets `--nested-pad` = spacing N | a nested surface with its own children (settings rows, fieldset card) |
+| `rounded-nested` | `max(--radius-floor, --radius − --surface-pad)` | inner tiles and rows, disclosure / fieldset cards |
+| `rounded-field` | `max(--radius-floor, --radius − --surface-pad − --nested-pad)` | input, select, textarea recipes |
+| `rounded-dense` | `--radius-sm` (10px) | tables and data/detail lists with a header row (the container clips, so header corners follow); notices: alert recipe, notifications, toasts, cookie banner (buttons inside stay pills) |
+| `rounded-preview`, `bg-preview` | `--preview-radius` 8px, `--preview-surface` = `color-mix(in oklab, var(--primary) 4%/7%, var(--background))` | design apps only: the block preview frame, which is not part of a block's chain |
+
+Because the pads follow the breakpoints, the inner radius does too: the contact form card (`p-6 md:p-8 lg:p-10`) gives its
+fields 16px / 8px / 4px. Outside any surface the pads are 0, so a standalone input still clamps to a pill. The `calc`/`max`
+values live only in these token definitions (`tools/tokens.ts`); the pad utilities are allowed in ui8px for the 8+4 layout steps only.
 
 ## Spacing
 

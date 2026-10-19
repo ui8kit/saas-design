@@ -74,10 +74,33 @@
 }
 
 /* The one corner token (codegen 2.0, xgen/runtimes/core/assets/styles/theme.css): in @theme, so plain `rounded` reads it
-   (in :root only, `rounded` fell back to Tailwind's 0.25rem). Habitus: 40px on cards and bands; on controls (h-8..h-14)
-   it clamps to a pill, so buttons and inputs need no rounded-full override. A skin changes this one value. */
+   (in :root only, `rounded` fell back to Tailwind's 0.25rem). Habitus: 40px on the OUTER surface of a block (card, band,
+   panel); on controls (h-8..h-14) it clamps to a pill, so buttons and badges need no rounded-full override. A skin changes this one value. */
 @theme {
   --radius: 2.5rem;
+}
+
+/* Nested radius rule (concentric corners): inner R = outer R - padding, floored at --radius-floor (equivalently outer R = inner R + padding).
+   A padded surface declares its padding as a token next to its padding utilities, at the same breakpoints:
+     surface-pad-N   on an outer surface (radius --radius)      sets --surface-pad = spacing N (and resets --nested-pad)
+     nested-pad-N    on a nested surface that has children     sets --nested-pad  = spacing N
+   Children read the derived radii (computed on the child, from the inherited pads; outside any surface they fall back to --radius):
+     rounded-nested  nested surface (row tile, inner card, media)   --radius - surface-pad
+     rounded-field   field / control inside (input, select, textarea) --radius - surface-pad - nested-pad
+   Dense surfaces (tables, data/detail lists with a header row) and notices (alert, toast, cookie banner) take rounded-dense (= --radius-sm) instead of --radius; their
+   container clips (overflow) so the header row follows the container corners.
+   Docs: docs/learn (nested radius) and .cursor/rules/radius.mdc. Arbitrary values live only here, in the token definitions. */
+:root {
+  --radius-floor: 0.25rem;
+  --surface-pad: 0px;
+  --nested-pad: 0px;
+}
+@utility surface-pad-* {
+  --surface-pad: --spacing(--value(integer));
+  --nested-pad: 0px;
+}
+@utility nested-pad-* {
+  --nested-pad: --spacing(--value(integer));
 }
 
 /* Derived steps measured in the frame (fixtures/figma/frames/1-10.json radii: 20 phone screens, 40 cards, 100/9999 pills).
@@ -119,6 +142,9 @@
   --radius-md: calc(var(--radius) * 0.5);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.5);
+  --radius-dense: var(--radius-sm);
+  --radius-nested: max(var(--radius-floor), calc(var(--radius) - var(--surface-pad)));
+  --radius-field: max(var(--radius-floor), calc(var(--radius) - var(--surface-pad) - var(--nested-pad)));
   --font-sans: var(--font-sans);
 }
 

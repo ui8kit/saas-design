@@ -9,7 +9,7 @@
       "text-xs",
       "font-semibold",
       "inset-ring",
-      "rounded"
+      "rounded-dense"
     ],
     "ui-alert-default": [
       "bg-card",
@@ -243,18 +243,14 @@
       "gap-4"
     ],
     "ui-blog-cards-image": [
-      "w-1/2",
-      "self-start",
-      "rounded-t-md"
+      "size-full",
+      "object-cover",
+      "object-top"
     ],
     "ui-blog-cards-media": [
-      "flex",
       "aspect-video",
-      "justify-center",
       "overflow-hidden",
-      "bg-accent",
-      "px-6",
-      "pt-6"
+      "bg-accent"
     ],
     "ui-blog-cards-meta": [
       "flex-wrap",
@@ -426,9 +422,12 @@
       "rounded",
       "bg-card",
       "p-6",
+      "surface-pad-6",
       "text-card-foreground",
       "md:p-8",
-      "lg:p-12"
+      "md:surface-pad-8",
+      "lg:p-12",
+      "lg:surface-pad-12"
     ],
     "ui-card-accent": [
       "bg-accent",
@@ -436,7 +435,8 @@
     ],
     "ui-card-compact": [
       "gap-4",
-      "p-6"
+      "p-6",
+      "surface-pad-6"
     ],
     "ui-card-description": [
       "text-sm",
@@ -444,7 +444,8 @@
     ],
     "ui-card-flat": [
       "bg-transparent",
-      "p-0"
+      "p-0",
+      "surface-pad-0"
     ],
     "ui-card-footer": [
       "flex",
@@ -463,7 +464,8 @@
     ],
     "ui-card-kpi": [
       "gap-2",
-      "p-6"
+      "p-6",
+      "surface-pad-6"
     ],
     "ui-card-muted": [
       "bg-muted"
@@ -478,8 +480,10 @@
       "leading-none"
     ],
     "ui-cell": [
-      "px-6",
-      "py-4"
+      "px-2",
+      "py-4",
+      "whitespace-nowrap",
+      "md:px-6"
     ],
     "ui-changelog": [],
     "ui-changelog-date": [
@@ -571,19 +575,22 @@
     ],
     "ui-comparison-table": [],
     "ui-comparison-table-cell": [
-      "px-6",
+      "px-4",
       "py-4",
-      "text-center"
+      "text-center",
+      "md:px-6"
     ],
     "ui-comparison-table-cell-2": [
-      "px-6",
+      "px-4",
       "py-4",
-      "text-center"
+      "text-center",
+      "md:px-6"
     ],
     "ui-comparison-table-feature": [
-      "px-6",
+      "px-4",
       "py-4",
-      "font-normal"
+      "font-normal",
+      "md:px-6"
     ],
     "ui-comparison-table-head": [
       "flex",
@@ -606,7 +613,7 @@
     ],
     "ui-comparison-table-scroll": [
       "overflow-x-auto",
-      "rounded-lg",
+      "rounded-dense",
       "inset-ring",
       "inset-ring-border"
     ],
@@ -624,24 +631,30 @@
     ],
     "ui-comparison-table-table": [
       "w-full",
-      "text-left"
+      "text-left",
+      "text-sm"
     ],
     "ui-comparison-table-th": [
-      "px-6",
+      "px-4",
       "py-4",
-      "font-semibold"
+      "font-semibold",
+      "md:px-6"
     ],
     "ui-comparison-table-th-plan": [
-      "px-6",
+      "px-4",
       "py-4",
       "text-center",
-      "font-semibold"
+      "font-semibold",
+      "whitespace-nowrap",
+      "md:px-6"
     ],
     "ui-comparison-table-th-plan-2": [
-      "px-6",
+      "px-4",
       "py-4",
       "text-center",
-      "font-semibold"
+      "font-semibold",
+      "whitespace-nowrap",
+      "md:px-6"
     ],
     "ui-comparison-table-thead": [
       "bg-muted"
@@ -685,8 +698,11 @@
       "rounded-lg",
       "bg-muted",
       "p-6",
+      "surface-pad-6",
       "md:p-8",
-      "lg:p-10"
+      "md:surface-pad-8",
+      "lg:p-10",
+      "lg:surface-pad-10"
     ],
     "ui-contact-form-input": [],
     "ui-contact-form-label": [],
@@ -713,7 +729,7 @@
       "items-start",
       "justify-between",
       "gap-4",
-      "rounded-lg",
+      "rounded-dense",
       "bg-popover",
       "p-6",
       "text-popover-foreground",
@@ -875,13 +891,13 @@
       "opacity-50"
     ],
     "ui-disclosure-card": [
-      "rounded",
+      "rounded-nested",
       "bg-card",
       "inset-ring",
       "inset-ring-border"
     ],
     "ui-disclosure-default": [
-      "rounded",
+      "rounded-nested",
       "inset-ring",
       "inset-ring-border"
     ],
@@ -1007,13 +1023,13 @@
     ],
     "ui-faq-tiles-answer": [
       "pt-4",
-      "pl-16",
+      "pl-12",
       "text-base",
       "leading-6"
     ],
     "ui-faq-tiles-arrow": [
       "flex",
-      "size-10",
+      "size-8",
       "shrink-0",
       "items-center",
       "justify-center",
@@ -1057,17 +1073,17 @@
       "cursor-pointer",
       "list-none",
       "items-center",
-      "gap-6",
+      "gap-4",
       "text-lg",
       "font-medium",
       "md:text-xl"
     ],
     "ui-faq-tiles-tile": [
       "rounded-lg",
-      "px-6",
-      "py-6",
-      "md:px-8",
-      "lg:px-10"
+      "p-4",
+      "surface-pad-4",
+      "md:p-6",
+      "md:surface-pad-6"
     ],
     "ui-faq-tiles-tile-tone-lilac": [
       "bg-chart-3",
@@ -1253,8 +1269,9 @@
       "grid"
     ],
     "ui-fieldset-card": [
-      "rounded",
+      "rounded-nested",
       "p-4",
+      "nested-pad-4",
       "inset-ring",
       "inset-ring-border"
     ],
@@ -1274,18 +1291,21 @@
       "gap-2"
     ],
     "ui-footer-newsletter": [
-      "px-6",
-      "md:px-10",
+      "px-4",
+      "md:px-6",
       "lg:px-12",
-      "pt-16",
-      "pb-16",
-      "md:pt-20",
+      "pt-8",
+      "pb-8",
+      "md:pt-12",
+      "md:pb-12",
+      "lg:pt-20",
       "lg:pb-24"
     ],
     "ui-footer-newsletter-brand": [
       "flex",
       "flex-col",
-      "gap-8",
+      "gap-6",
+      "md:gap-8",
       "lg:col-span-4"
     ],
     "ui-footer-newsletter-brand-link": [
@@ -1314,10 +1334,11 @@
     "ui-footer-newsletter-copyright": [
       "border-t",
       "border-border",
-      "pt-8",
+      "pt-6",
       "text-center",
       "leading-5",
-      "text-muted-foreground"
+      "text-muted-foreground",
+      "md:pt-8"
     ],
     "ui-footer-newsletter-form": [
       "flex",
@@ -1353,19 +1374,22 @@
     "ui-footer-newsletter-panel": [
       "flex",
       "flex-col",
-      "gap-10",
+      "gap-8",
       "rounded-lg",
       "bg-background",
       "px-6",
-      "pt-10",
+      "pt-8",
       "pb-6",
+      "surface-pad-6",
       "text-foreground",
-      "md:gap-12",
-      "md:px-10",
-      "md:pt-12",
+      "md:gap-10",
+      "md:px-8",
+      "md:pt-10",
+      "md:surface-pad-8",
       "lg:gap-16",
       "lg:px-12",
-      "lg:pt-16"
+      "lg:pt-16",
+      "lg:surface-pad-12"
     ],
     "ui-footer-newsletter-social": [
       "text-muted-foreground",
@@ -1389,8 +1413,9 @@
     ],
     "ui-footer-newsletter-top": [
       "grid-cols-1",
-      "gap-10",
+      "gap-8",
       "md:grid-cols-2",
+      "md:gap-10",
       "lg:grid-cols-12",
       "lg:gap-6"
     ],
@@ -1544,14 +1569,17 @@
     ],
     "ui-habits-table": [],
     "ui-habits-table-cell-2": [
-      "px-6",
+      "px-2",
       "py-4",
-      "text-muted-foreground"
+      "whitespace-nowrap",
+      "text-muted-foreground",
+      "md:px-6"
     ],
     "ui-habits-table-habit": [
-      "px-6",
+      "px-4",
       "py-4",
-      "font-medium"
+      "font-medium",
+      "md:px-6"
     ],
     "ui-habits-table-row": [
       "border-t",
@@ -1559,7 +1587,7 @@
     ],
     "ui-habits-table-scroll": [
       "overflow-x-auto",
-      "rounded-lg",
+      "rounded-dense",
       "inset-ring",
       "inset-ring-border"
     ],
@@ -1574,31 +1602,35 @@
     ],
     "ui-habits-table-table": [
       "w-full",
-      "text-left"
+      "text-left",
+      "text-sm"
     ],
     "ui-habits-table-th": [
-      "px-6",
+      "px-4",
       "py-4",
-      "font-medium"
+      "font-medium",
+      "md:px-6"
     ],
     "ui-habits-table-th-2": [
-      "px-6",
+      "px-2",
       "py-4",
-      "font-medium"
+      "font-medium",
+      "md:px-6"
     ],
     "ui-habits-table-th-3": [
-      "px-6",
+      "px-2",
       "py-4",
-      "font-medium"
+      "font-medium",
+      "md:px-6"
     ],
     "ui-habits-table-th-4": [
-      "px-6",
+      "px-2",
       "py-4",
-      "font-medium"
+      "font-medium",
+      "md:px-6"
     ],
     "ui-habits-table-thead": [
       "bg-muted",
-      "text-sm",
       "text-muted-foreground"
     ],
     "ui-hero-centered": [
@@ -2008,7 +2040,7 @@
     ],
     "ui-input": [
       "w-full",
-      "rounded",
+      "rounded-field",
       "bg-background",
       "text-foreground",
       "inset-ring",
@@ -2167,8 +2199,10 @@
     "ui-login-card-card": [
       "gap-6",
       "p-6",
+      "surface-pad-6",
       "md:gap-8",
-      "md:p-10"
+      "md:p-10",
+      "md:surface-pad-10"
     ],
     "ui-login-card-container": [
       "mx-auto",
@@ -2351,14 +2385,17 @@
       "bg-accent",
       "px-6",
       "py-10",
+      "surface-pad-6",
       "text-accent-foreground",
       "md:gap-8",
       "md:px-10",
       "md:py-12",
+      "md:surface-pad-10",
       "lg:flex-row",
       "lg:items-center",
       "lg:px-12",
-      "lg:py-16"
+      "lg:py-16",
+      "lg:surface-pad-12"
     ],
     "ui-newsletter-band-copy": [
       "flex",
@@ -2476,10 +2513,13 @@
       "gap-6",
       "rounded-lg",
       "p-6",
+      "surface-pad-6",
       "text-card-foreground",
       "md:gap-8",
       "md:p-8",
-      "lg:p-10"
+      "md:surface-pad-8",
+      "lg:p-10",
+      "lg:surface-pad-10"
     ],
     "ui-pricing-three-tiers-plan-cta": [
       "mt-auto",
@@ -2562,13 +2602,16 @@
       "rounded-lg",
       "p-8",
       "pb-10",
+      "surface-pad-8",
       "text-card-foreground",
       "md:gap-10",
       "md:p-10",
       "md:pb-12",
+      "md:surface-pad-10",
       "lg:gap-12",
       "lg:p-16",
-      "lg:pb-24"
+      "lg:pb-24",
+      "lg:surface-pad-16"
     ],
     "ui-pricing-two-plans-plan-cta": [
       "mt-auto",
@@ -2744,7 +2787,7 @@
     "ui-select": [
       "w-full",
       "appearance-none",
-      "rounded",
+      "rounded-field",
       "bg-background",
       "text-foreground",
       "inset-ring",
@@ -2817,9 +2860,12 @@
       "rounded-lg",
       "bg-card",
       "p-6",
+      "surface-pad-6",
       "md:gap-8",
       "md:p-8",
-      "lg:p-10"
+      "md:surface-pad-8",
+      "lg:p-10",
+      "lg:surface-pad-10"
     ],
     "ui-settings-panel-label": [
       "text-base",
@@ -2834,11 +2880,13 @@
     "ui-settings-panel-option": [
       "justify-between",
       "gap-4",
-      "rounded-md",
+      "rounded-nested",
       "bg-background",
       "px-4",
       "py-4",
-      "md:px-6"
+      "nested-pad-4",
+      "md:px-6",
+      "md:nested-pad-6"
     ],
     "ui-settings-panel-switch": [],
     "ui-settings-panel-title": [
@@ -2949,8 +2997,10 @@
     "ui-signup-card-card": [
       "gap-6",
       "p-6",
+      "surface-pad-6",
       "md:gap-8",
-      "md:p-10"
+      "md:p-10",
+      "md:surface-pad-10"
     ],
     "ui-signup-card-container": [
       "mx-auto",
@@ -3514,7 +3564,7 @@
       "disabled:cursor-not-allowed",
       "disabled:opacity-50",
       "focus-visible:inset-ring-ring",
-      "rounded"
+      "rounded-field"
     ],
     "ui-textarea-ghost": [
       "bg-muted",

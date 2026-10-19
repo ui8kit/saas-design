@@ -1,17 +1,17 @@
 {
   "id": "ui.card",
-  "base": "flex flex-col gap-6 rounded bg-card p-6 text-card-foreground md:p-8 lg:p-12",
+  "base": "flex flex-col gap-6 rounded bg-card p-6 surface-pad-6 text-card-foreground md:p-8 md:surface-pad-8 lg:p-12 lg:surface-pad-12",
   "keys": ["variant"],
   "defaults": { "variant": "default" },
   "byKey": {
     "variant": {
       "default": "",
       "raised": "bg-background inset-ring inset-ring-border",
-      "kpi": "gap-2 p-6",
+      "kpi": "gap-2 p-6 surface-pad-6",
       "muted": "bg-muted",
       "ghost": "bg-transparent inset-ring inset-ring-border",
-      "compact": "gap-4 p-6",
-      "flat": "bg-transparent p-0",
+      "compact": "gap-4 p-6 surface-pad-6",
+      "flat": "bg-transparent p-0 surface-pad-0",
       "accent": "bg-accent text-accent-foreground"
     }
   }

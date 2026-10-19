@@ -18,7 +18,7 @@
           <Inline class="ui-section-title" data-class="ui-section-title">
             {s.value}
           </Inline>
-          <Inline class="ui-muted" data-class="ui-muted">
+          <Inline class="ui-muted-sm" data-class="ui-muted-sm">
             {s.label}
           </Inline>
         </ListItem>

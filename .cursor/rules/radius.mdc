@@ -1,0 +1,27 @@
+---
+description: Nested (concentric) corner radius, dense surfaces, preview frame radius
+globs: packages/tokens/**,packages/ui/recipes/**,packages/blocks/defs/**,packages/adapter/**,apps/design-*/**/styles/**,tools/tokens.ts
+alwaysApply: false
+---
+
+# Corners: nested radius rule
+
+**inner R = outer R − padding** (equivalently outer R = inner R + padding), floored at `--radius-floor` (4px).
+Example: outer 24px with 8px padding → inner 16px. Habitus: a card at `--radius` 40px with `p-6` (24px) → its fields 16px.
+
+- The outer surface of a block (card, band, panel, plan, form card) uses `rounded` / `rounded-lg` = `--radius` (40px).
+- A padded surface declares its padding as a token **in the same rule and at the same breakpoints** as its `p-*`/`px-*`:
+  `p-6 surface-pad-6 md:p-8 md:surface-pad-8 lg:p-10 lg:surface-pad-10`. A nested surface that has children of its own adds `nested-pad-N`.
+- Children never hand-write `calc`; they use the derived tokens (packages/tokens/theme.css, `@theme inline`):
+  - `rounded-nested` → `--radius-nested = max(--radius-floor, --radius − --surface-pad)`: inner tiles, rows, inner cards (settings rows, disclosure/fieldset cards).
+  - `rounded-field` → `--radius-field = max(--radius-floor, --radius − --surface-pad − --nested-pad)`: input, select, textarea (recipes).
+  - Outside any surface the pads are 0, so both fall back to `--radius` (a standalone input is still a pill).
+- Pills stay pills: buttons and badges keep `rounded` / `rounded-full`; circles (icon badges, avatars, FAQ arrow) keep `rounded-full`.
+- Media that fills a card edge to edge (blog card image) has no radius of its own: the card's `overflow-hidden` clips it.
+- Dense surfaces (tables, data/detail lists with a header row) use `rounded-dense` (`--radius-dense` = `--radius-sm`) and clip with
+  `overflow-*`, so the header row follows the container corners. Cell text is `text-sm`, cells `whitespace-nowrap` (the container scrolls).
+- Notices use the same small token: alerts (recipe), notifications, toasts and the cookie banner take `rounded-dense`; buttons inside keep their own shape (pill).
+- Design apps only: the block preview frame (`.ds-frame`) is not part of a block's chain. It uses `--preview-radius` (8px, `rounded-preview`)
+  and `--preview-surface` (`bg-preview`, a `color-mix` tint of `--primary` over `--background`), defined in the apps' generated brand.css.
+- Arbitrary values (`calc`, `max`) exist only in the token definitions (tools/tokens.ts → theme.css). `surface-pad-N` / `nested-pad-N`
+  are listed in tools/ui8px/allowed.extra.json for the 8+4 layout steps only, so ui8px still enforces the grid.

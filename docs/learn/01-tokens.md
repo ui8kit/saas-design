@@ -14,6 +14,7 @@ All colors are shadcn-style HSL tokens (`--background`, `--primary`, `--chart-3`
 
 - **Brand tokens only at app level.** `--brand-*` and `bg-brand-*` may only appear in an app's `brand.css`. `tools/check.sh` greps `packages/` and fails on any brand token.
 - **One corner token.** `--radius: 2.5rem` lives in `@theme`, so plain `rounded` follows it. The derived steps (`sm`, `md`, `lg`, `xl`) are measured from Figma. See [design settings](../design-settings.md).
+- **Nested corners are concentric.** inner R = outer R − padding (outer R = inner R + padding), never below 4px. A padded surface declares its padding as a token next to its padding utility (`p-6 surface-pad-6 md:p-8 md:surface-pad-8`); its children take `rounded-nested` (tiles, rows) or `rounded-field` (inputs, textarea), which `theme.css` derives with `calc`/`max`. Pills and circles stay `rounded` / `rounded-full`; tables, alerts, toasts and the cookie banner use the small `rounded-dense`. Details in [design settings](../design-settings.md#nested-corners) and `.cursor/rules/radius.mdc`.
 
 ## Try it
 

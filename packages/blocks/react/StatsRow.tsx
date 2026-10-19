@@ -18,7 +18,7 @@ export function StatsRow({ data }: { data: StatsRowData }) {
               <Inline className="ui-section-title" data-class="ui-section-title">
                 {s.value}
               </Inline>
-              <Inline className="ui-muted" data-class="ui-muted">
+              <Inline className="ui-muted-sm" data-class="ui-muted-sm">
                 {s.label}
               </Inline>
             </ListItem>

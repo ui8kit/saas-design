@@ -19,7 +19,7 @@
   .ui-muted { @apply text-muted-foreground; }
   .ui-muted-sm { @apply text-sm text-muted-foreground; }
   .ui-grid-3 { @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-10; }
-  .ui-cell { @apply px-6 py-4; }
+  .ui-cell { @apply px-2 py-4 whitespace-nowrap md:px-6; }
   .ui-icon-sm { @apply size-4; }
   /* navbar */
   .ui-navbar { @apply @container flex items-center justify-between gap-4 @5xl:gap-8; }
@@ -111,7 +111,7 @@
   .ui-pricing-two-plans-container { @apply mx-auto flex w-full max-w-page flex-col gap-10 md:gap-12 lg:gap-16; }
   .ui-pricing-two-plans-lead { @apply text-xl font-light; }
   .ui-pricing-two-plans-plans { @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-10; }
-  .ui-pricing-two-plans-plan { @apply flex flex-col gap-8 rounded-lg p-8 pb-10 text-card-foreground md:gap-10 md:p-10 md:pb-12 lg:gap-12 lg:p-16 lg:pb-24; }
+  .ui-pricing-two-plans-plan { @apply flex flex-col gap-8 rounded-lg p-8 pb-10 surface-pad-8 text-card-foreground md:gap-10 md:p-10 md:pb-12 md:surface-pad-10 lg:gap-12 lg:p-16 lg:pb-24 lg:surface-pad-16; }
   .ui-pricing-two-plans-plan-theme-default { @apply bg-card; }
   .ui-pricing-two-plans-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-two-plans-plan-name-row { @apply justify-between gap-4; }
@@ -129,27 +129,27 @@
   .ui-faq-tiles-title { @apply max-w-3xl text-4xl leading-tight font-bold md:text-5xl lg:text-6xl; }
   .ui-faq-tiles-lead { @apply text-xl font-light; }
   .ui-faq-tiles-grid { @apply grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-x-10 lg:gap-y-8; }
-  .ui-faq-tiles-tile { @apply rounded-lg px-6 py-6 md:px-8 lg:px-10; }
+  .ui-faq-tiles-tile { @apply rounded-lg p-4 surface-pad-4 md:p-6 md:surface-pad-6; }
   .ui-faq-tiles-tile-tone-primary { @apply bg-primary text-primary-foreground; }
   .ui-faq-tiles-tile-tone-secondary { @apply bg-secondary text-secondary-foreground; }
   .ui-faq-tiles-tile-tone-lilac { @apply bg-chart-3 text-foreground; }
   .ui-faq-tiles-tile-tone-sky { @apply bg-chart-4 text-foreground; }
   .ui-faq-tiles-tile-tone-pink { @apply bg-chart-5 text-foreground; }
   .ui-faq-tiles-tile-tone-muted { @apply bg-muted text-foreground; }
-  .ui-faq-tiles-question { @apply flex cursor-pointer list-none items-center gap-6 text-lg font-medium md:text-xl; }
-  .ui-faq-tiles-arrow { @apply flex size-10 shrink-0 items-center justify-center rounded-full bg-background text-foreground; }
+  .ui-faq-tiles-question { @apply flex cursor-pointer list-none items-center gap-4 text-lg font-medium md:text-xl; }
+  .ui-faq-tiles-arrow { @apply flex size-8 shrink-0 items-center justify-center rounded-full bg-background text-foreground; }
   .ui-faq-tiles-arrow-icon { @apply size-4; }
-  .ui-faq-tiles-answer { @apply pt-4 pl-16 text-base leading-6; }
+  .ui-faq-tiles-answer { @apply pt-4 pl-12 text-base leading-6; }
   .ui-faq-tiles-more { @apply self-end text-lg text-foreground hover:underline; }
   .ui-faq-tiles-question > [data-slot="summary-indicator"] { @apply hidden; }
   .ui-faq-tiles-tile[open] .ui-faq-tiles-arrow-icon { @apply rotate-180; }
   .ui-faq-tiles-question::-webkit-details-marker { @apply hidden; }
   /* footer-newsletter */
-  .ui-footer-newsletter { @apply px-6 md:px-10 lg:px-12 pt-16 pb-16 md:pt-20 lg:pb-24; }
+  .ui-footer-newsletter { @apply px-4 md:px-6 lg:px-12 pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-20 lg:pb-24; }
   .ui-footer-newsletter-container { @apply mx-auto w-full max-w-page; }
-  .ui-footer-newsletter-panel { @apply flex flex-col gap-10 rounded-lg bg-background px-6 pt-10 pb-6 text-foreground md:gap-12 md:px-10 md:pt-12 lg:gap-16 lg:px-12 lg:pt-16; }
-  .ui-footer-newsletter-top { @apply grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-6; }
-  .ui-footer-newsletter-brand { @apply flex flex-col gap-8 lg:col-span-4; }
+  .ui-footer-newsletter-panel { @apply flex flex-col gap-8 rounded-lg bg-background px-6 pt-8 pb-6 surface-pad-6 text-foreground md:gap-10 md:px-8 md:pt-10 md:surface-pad-8 lg:gap-16 lg:px-12 lg:pt-16 lg:surface-pad-12; }
+  .ui-footer-newsletter-top { @apply grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-12 lg:gap-6; }
+  .ui-footer-newsletter-brand { @apply flex flex-col gap-6 md:gap-8 lg:col-span-4; }
   .ui-footer-newsletter-brand-link { @apply gap-2 text-3xl leading-none font-bold text-foreground; }
   .ui-footer-newsletter-mark { @apply size-6; }
   .ui-footer-newsletter-text { @apply max-w-xs leading-6 text-muted-foreground; }
@@ -165,7 +165,7 @@
   .ui-footer-newsletter-label { @apply sr-only; }
   .ui-footer-newsletter-input { @apply bg-card; }
   .ui-footer-newsletter-submit { @apply w-full font-normal; }
-  .ui-footer-newsletter-copyright { @apply border-t border-border pt-8 text-center leading-5 text-muted-foreground; }
+  .ui-footer-newsletter-copyright { @apply border-t border-border pt-6 text-center leading-5 text-muted-foreground md:pt-8; }
   /* announcement-bar */
   .ui-announcement-bar { @apply bg-secondary text-secondary-foreground; }
   .ui-announcement-bar-container { @apply mx-auto flex max-w-page flex-wrap items-center justify-center gap-x-4 gap-y-2 px-6 py-2 text-center text-sm; }
@@ -226,7 +226,7 @@
   /* pricing-three-tiers */
   .ui-pricing-three-tiers-head { @apply flex flex-col gap-4 items-center text-center; }
   .ui-pricing-three-tiers-plans { @apply grid grid-cols-1 gap-6 lg:grid-cols-3; }
-  .ui-pricing-three-tiers-plan { @apply flex flex-col gap-6 rounded-lg p-6 text-card-foreground md:gap-8 md:p-8 lg:p-10; }
+  .ui-pricing-three-tiers-plan { @apply flex flex-col gap-6 rounded-lg p-6 surface-pad-6 text-card-foreground md:gap-8 md:p-8 md:surface-pad-8 lg:p-10 lg:surface-pad-10; }
   .ui-pricing-three-tiers-plan-theme-default { @apply bg-card; }
   .ui-pricing-three-tiers-plan-theme-dark { @apply bg-background inset-ring; @apply inset-ring-input; }
   .ui-pricing-three-tiers-plan-name-row { @apply flex-wrap justify-between gap-2; }
@@ -239,20 +239,20 @@
   .ui-pricing-three-tiers-plan-cta { @apply mt-auto w-full; }
   /* comparison-table */
   .ui-comparison-table-head { @apply flex flex-col gap-4; }
-  .ui-comparison-table-scroll { @apply overflow-x-auto rounded-lg inset-ring; @apply inset-ring-border; }
-  .ui-comparison-table-table { @apply w-full text-left; }
+  .ui-comparison-table-scroll { @apply overflow-x-auto rounded-dense inset-ring; @apply inset-ring-border; }
+  .ui-comparison-table-table { @apply w-full text-left text-sm; }
   .ui-comparison-table-thead { @apply bg-muted; }
-  .ui-comparison-table-th { @apply px-6 py-4 font-semibold; }
-  .ui-comparison-table-th-plan { @apply px-6 py-4 text-center font-semibold; }
-  .ui-comparison-table-th-plan-2 { @apply px-6 py-4 text-center font-semibold; }
+  .ui-comparison-table-th { @apply px-4 py-4 font-semibold md:px-6; }
+  .ui-comparison-table-th-plan { @apply px-4 py-4 text-center font-semibold whitespace-nowrap md:px-6; }
+  .ui-comparison-table-th-plan-2 { @apply px-4 py-4 text-center font-semibold whitespace-nowrap md:px-6; }
   .ui-comparison-table-row { @apply border-t border-border; }
-  .ui-comparison-table-feature { @apply px-6 py-4 font-normal; }
-  .ui-comparison-table-cell { @apply px-6 py-4 text-center; }
+  .ui-comparison-table-feature { @apply px-4 py-4 font-normal md:px-6; }
+  .ui-comparison-table-cell { @apply px-4 py-4 text-center md:px-6; }
   .ui-comparison-table-yes { @apply mx-auto size-4 text-primary; }
   .ui-comparison-table-sr { @apply sr-only; }
   .ui-comparison-table-no { @apply mx-auto size-4 text-muted-foreground; }
   .ui-comparison-table-sr-2 { @apply sr-only; }
-  .ui-comparison-table-cell-2 { @apply px-6 py-4 text-center; }
+  .ui-comparison-table-cell-2 { @apply px-4 py-4 text-center md:px-6; }
   .ui-comparison-table-yes-2 { @apply mx-auto size-4 text-primary; }
   .ui-comparison-table-sr-3 { @apply sr-only; }
   .ui-comparison-table-no-2 { @apply mx-auto size-4 text-muted-foreground; }
@@ -270,8 +270,8 @@
   /* blog-cards */
   .ui-blog-cards-head { @apply flex flex-col gap-4; }
   .ui-blog-cards-post { @apply flex flex-col overflow-hidden rounded-lg bg-card; }
-  .ui-blog-cards-media { @apply flex aspect-video justify-center overflow-hidden bg-accent px-6 pt-6; }
-  .ui-blog-cards-image { @apply w-1/2 self-start rounded-t-md; }
+  .ui-blog-cards-media { @apply aspect-video overflow-hidden bg-accent; }
+  .ui-blog-cards-image { @apply size-full object-cover object-top; }
   .ui-blog-cards-body { @apply flex flex-col gap-4 p-6 lg:p-8; }
   .ui-blog-cards-meta { @apply flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground; }
   .ui-blog-cards-date { @apply whitespace-nowrap; }
@@ -307,7 +307,7 @@
   .ui-app-download-image { @apply mx-auto w-1/2 self-end rounded-t-md md:w-1/3 lg:w-1/2; }
   .ui-app-download-container:has(.ui-app-download-copy) { @apply bg-secondary text-secondary-foreground; }
   /* newsletter-band */
-  .ui-newsletter-band-container { @apply mx-auto flex w-full max-w-page flex-col items-start justify-between gap-6 rounded-lg bg-accent px-6 py-10 text-accent-foreground md:gap-8 md:px-10 md:py-12 lg:flex-row lg:items-center lg:px-12 lg:py-16; }
+  .ui-newsletter-band-container { @apply mx-auto flex w-full max-w-page flex-col items-start justify-between gap-6 rounded-lg bg-accent px-6 py-10 surface-pad-6 text-accent-foreground md:gap-8 md:px-10 md:py-12 md:surface-pad-10 lg:flex-row lg:items-center lg:px-12 lg:py-16 lg:surface-pad-12; }
   .ui-newsletter-band-copy { @apply flex flex-col gap-2; }
   .ui-newsletter-band-form { @apply flex w-full max-w-md flex-col gap-2 md:flex-row; }
   .ui-newsletter-band-label { @apply sr-only; }
@@ -315,12 +315,12 @@
   .ui-contact-form-container { @apply mx-auto grid w-full max-w-page grid-cols-1 gap-8 md:gap-10 lg:grid-cols-2 lg:gap-12; }
   .ui-contact-form-copy { @apply flex flex-col gap-4; }
   .ui-contact-form-text { @apply text-lg text-muted-foreground md:text-xl; }
-  .ui-contact-form-form { @apply flex flex-col gap-6 rounded-lg bg-muted p-6 md:p-8 lg:p-10; }
+  .ui-contact-form-form { @apply flex flex-col gap-6 rounded-lg bg-muted p-6 surface-pad-6 md:p-8 md:surface-pad-8 lg:p-10 lg:surface-pad-10; }
   .ui-contact-form-button { @apply self-start; }
   /* login-card */
   .ui-login-card { @apply px-6 md:px-10 lg:px-12 py-16 md:py-20 lg:py-24; }
   .ui-login-card-container { @apply mx-auto flex w-full max-w-md flex-col; }
-  .ui-login-card-card { @apply gap-6 p-6 md:gap-8 md:p-10; }
+  .ui-login-card-card { @apply gap-6 p-6 surface-pad-6 md:gap-8 md:p-10 md:surface-pad-10; }
   .ui-login-card-head { @apply flex flex-col gap-2 text-center; }
   .ui-login-card-form { @apply flex flex-col gap-6; }
   .ui-login-card-button { @apply w-full; }
@@ -328,33 +328,33 @@
   /* signup-card */
   .ui-signup-card { @apply px-6 md:px-10 lg:px-12 py-16 md:py-20 lg:py-24; }
   .ui-signup-card-container { @apply mx-auto flex w-full max-w-md flex-col; }
-  .ui-signup-card-card { @apply gap-6 p-6 md:gap-8 md:p-10; }
+  .ui-signup-card-card { @apply gap-6 p-6 surface-pad-6 md:gap-8 md:p-10 md:surface-pad-10; }
   .ui-signup-card-head { @apply flex flex-col gap-2 text-center; }
   .ui-signup-card-form { @apply flex flex-col gap-6; }
   .ui-signup-card-button { @apply w-full; }
   .ui-signup-card-foot { @apply text-center text-sm text-muted-foreground; }
   /* settings-panel */
   .ui-settings-panel-container { @apply mx-auto flex w-full max-w-2xl flex-col; }
-  .ui-settings-panel-form { @apply flex flex-col gap-6 rounded-lg bg-card p-6 md:gap-8 md:p-8 lg:p-10; }
+  .ui-settings-panel-form { @apply flex flex-col gap-6 rounded-lg bg-card p-6 surface-pad-6 md:gap-8 md:p-8 md:surface-pad-8 lg:p-10 lg:surface-pad-10; }
   .ui-settings-panel-legend { @apply mb-2 flex flex-col gap-2; }
   .ui-settings-panel-title { @apply text-2xl font-semibold; }
-  .ui-settings-panel-option { @apply justify-between gap-4 rounded-md bg-background px-4 py-4 md:px-6; }
+  .ui-settings-panel-option { @apply justify-between gap-4 rounded-nested bg-background px-4 py-4 nested-pad-4 md:px-6 md:nested-pad-6; }
   .ui-settings-panel-label { @apply text-base font-normal; }
   .ui-settings-panel-button { @apply self-end; }
   /* dashboard-stats */
   .ui-dashboard-stats-grid { @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4; }
   .ui-dashboard-stats-card { @apply flex flex-col gap-2 rounded-lg bg-card p-6 lg:p-8; }
   /* habits-table */
-  .ui-habits-table-scroll { @apply overflow-x-auto rounded-lg inset-ring; @apply inset-ring-border; }
-  .ui-habits-table-table { @apply w-full text-left; }
-  .ui-habits-table-thead { @apply bg-muted text-sm text-muted-foreground; }
-  .ui-habits-table-th { @apply px-6 py-4 font-medium; }
-  .ui-habits-table-th-2 { @apply px-6 py-4 font-medium; }
-  .ui-habits-table-th-3 { @apply px-6 py-4 font-medium; }
-  .ui-habits-table-th-4 { @apply px-6 py-4 font-medium; }
+  .ui-habits-table-scroll { @apply overflow-x-auto rounded-dense inset-ring; @apply inset-ring-border; }
+  .ui-habits-table-table { @apply w-full text-left text-sm; }
+  .ui-habits-table-thead { @apply bg-muted text-muted-foreground; }
+  .ui-habits-table-th { @apply px-4 py-4 font-medium md:px-6; }
+  .ui-habits-table-th-2 { @apply px-2 py-4 font-medium md:px-6; }
+  .ui-habits-table-th-3 { @apply px-2 py-4 font-medium md:px-6; }
+  .ui-habits-table-th-4 { @apply px-2 py-4 font-medium md:px-6; }
   .ui-habits-table-row { @apply border-t border-border; }
-  .ui-habits-table-habit { @apply px-6 py-4 font-medium; }
-  .ui-habits-table-cell-2 { @apply px-6 py-4 text-muted-foreground; }
+  .ui-habits-table-habit { @apply px-4 py-4 font-medium md:px-6; }
+  .ui-habits-table-cell-2 { @apply px-2 py-4 whitespace-nowrap text-muted-foreground md:px-6; }
   .ui-habits-table-status-tone-done { @apply bg-primary text-primary-foreground; }
   .ui-habits-table-status-tone-pending { @apply bg-muted text-foreground; }
   /* empty-state */
@@ -370,7 +370,7 @@
   .ui-not-found-text { @apply text-lg text-muted-foreground md:text-xl; }
   /* cookie-banner */
   .ui-cookie-banner { @apply px-6 py-8 md:px-10; }
-  .ui-cookie-banner-card { @apply mx-auto max-w-2xl flex-col items-start justify-between gap-4 rounded-lg bg-popover p-6 text-popover-foreground shadow-lg inset-ring md:flex-row md:items-center; @apply inset-ring-border; }
+  .ui-cookie-banner-card { @apply mx-auto max-w-2xl flex-col items-start justify-between gap-4 rounded-dense bg-popover p-6 text-popover-foreground shadow-lg inset-ring md:flex-row md:items-center; @apply inset-ring-border; }
   .ui-cookie-banner-text { @apply text-sm; }
   .ui-cookie-banner-actions { @apply shrink-0 gap-2; }
   /* footer-simple */
