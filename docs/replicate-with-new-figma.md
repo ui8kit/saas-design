@@ -30,7 +30,7 @@ FIG=/abs/path/new.fig bun run extract                         # → fixtures/fig
 List the sections of the frame. The direct children with their y and height become your blocks:
 
 ```bash
-bun -e 'const f=await Bun.file("fixtures/figma/frames/1-10.json").json(); console.table(f.sections.map(s=>({k:s.k,name:s.name,y:s.y,w:s.w,h:s.h})))'
+bun -e 'const f=await Bun.file("fixtures/figma/frames/<frame>.json").json(); console.table(f.sections.map(s=>({k:s.k,name:s.name,y:s.y,w:s.w,h:s.h})))'
 ```
 
 The frame JSON also has `layoutDigest.typeScale`, `radii` and `roles`, and `root` (a tree of `{k, name, type, x, y, w, h, fills, children, abs, text?}`). `fixtures/figma/outline.txt` is a human-readable tree, but **no script in this repo generates it**; it was committed with the initial dump. Regenerate it by hand if you want it.
@@ -38,7 +38,7 @@ The frame JSON also has `layoutDigest.typeScale`, `radii` and `roles`, and `root
 Reference render for later comparison (writes HTML outside the repo):
 
 ```bash
-bun tools/figma-render.ts --frame <id-with-dash> --out /workspace/shots-saas
+bun tools/figma-render.ts --frame <id-with-dash>   # --out defaults to paths.shots in fixtures/site.config.json
 ```
 
 ## 2. Map the palette to shadcn tokens
@@ -103,7 +103,7 @@ bun run check
 ## 6. Measure drift and iterate
 
 ```bash
-bun run render:figma                  # NOTE: package script uses the default frame 1-10; call tools/figma-render.ts --frame <id> otherwise
+bun run render:figma                  # frame = figma.frame in fixtures/site.config.json (or FIGMA_FRAME=<id>)
 bun run shots                         # report.json: per section figma y/height vs site y/height, compare/*.png
 bun tools/measure.ts '.ui-<block>-title' '.ui-<block>-card'   # exact box/typography of built elements at 1440px
 ```
@@ -122,12 +122,10 @@ Then check dark mode and mobile with `bun run shots:modes` and `bun run test:beh
 
 | File | What is specific to the current design |
 |---|---|
-| `tools/content.ts` | reads `fixtures/figma/frames/1-10.json`; text node ids (`"1:91"` …), image hashes → media ids, section ↔ node map, page title |
-| `tools/tokens.ts` | reads `frames/1-10.json` for usage counts and type scale; brand-os `meta` (`name: "Habitus"`, `slug`, description, image-treatment notes) |
-| `tools/shots.ts` | reads `frames/1-10.json` and `figma/1-10.html`; `SECTIONS` table maps Figma section names → slugs → block ids |
-| `tools/figma-render.ts`, `package.json` `render:figma` | default `--frame 1-10` |
-| `tools/extract.sh` | default `FIG=/workspace/fig-fixtures/saas.fig` (always pass `FIG=`) |
-| `tools/measure.ts`, `tools/shots*.ts`, `tools/test-behaviors.ts` | Chrome at `/usr/bin/google-chrome` (`CHROME=` overrides it, except in `measure.ts`). `measure.ts` serves the hard-coded path `/workspace/saas-design/apps/site/public` |
+| [`fixtures/site.config.json`](../fixtures/site.config.json) | **not code, edit first**: brand name/slug/description, home page title, design-app name/title, `figma.frame` (e.g. `1-10`), `figma.fig` and `paths.shots` (repo-relative). Read by [`tools/config.ts`](../tools/config.ts) and `packages/design-docs/src/site.ts`; env overrides `FIG`, `FIGMA_FRAME`, `SHOTS_DIR`, `CHROME`. Rename-only walkthrough: [new-brand.md](new-brand.md) |
+| `tools/content.ts` | text node ids (`"1:91"` …), image hashes → media ids, section ↔ node map (frame file and names come from the config) |
+| `tools/tokens.ts` | type scale and image-treatment notes in the brand-os `meta` (name/slug/description come from the config) |
+| `tools/shots.ts` | `SECTIONS` table maps Figma section names → slugs → block ids |
 | `packages/blocks/defs/figma.ts` | blocks copied from this design (keep as examples or remove) |
 | `fixtures/content/source/*.json` | authored copy and block catalog for this design |
 | `tools/views.ts` | the "Figma home page" part: which `section-*` records become which blocks on `home.json`, and per-block view builders (e.g. `planView`). The block-preview part (`blocks.json`) is per block id |
