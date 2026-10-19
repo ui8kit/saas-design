@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { Badge, Box, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Inline, List, ListItem, Text, ThemeToggle } from "@saas-design/ui";
   import { colors } from "$design/foundations";
   import PageHeader from "$lib/PageHeader.svelte";
@@ -13,7 +14,7 @@
   const swatches = ["chart-3", "chart-4", "chart-5", "accent", "muted"];
 </script>
 
-<svelte:head><title>Colors · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle("Colors")}</title></svelte:head>
 <PageHeader title="Colors" lead="shadcn HSL token set from fixtures/tokens/tokens.json (mapped from Figma variables). Markup only uses token utilities through the adapter." />
 <Section id="colors-preview" title="Light / dark preview">
   <Text class="ds-text">The same components rendered under each token set (scoped with data-theme, independent of the page theme). Toggle the page theme with <ThemeToggle variant="ghost" size="sm" />.</Text>

@@ -1,8 +1,9 @@
+import { pageTitle } from "$design/site";
 import { Inline, List, ListItem } from "@saas-design/ui/react";
 import { shadows, shadowTokens } from "$design/foundations";
 import { PageHeader } from "../components/PageHeader";
 
-export const title = "Shadows · Habitus Design";
+export const title = pageTitle("Shadows");
 
 export function ShadowsPage() {
   return (

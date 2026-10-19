@@ -1,5 +1,5 @@
 /**
- * Light / dark / mobile screenshots of the built apps → /workspace/shots-saas
+ * Light / dark / mobile screenshots of the built apps → config.shots (fixtures/site.config.json, env SHOTS_DIR)
  *   site:   site-light.png site-dark.png site-mobile.png site-mobile-menu.png site-mobile-dark-menu.png
  *   design: design-light.png design-dark.png design-mobile.png design-mobile-menu.png design-dark-<page>.png
  *   design-react: the same set prefixed design-react-* (apps/design-react/build)
@@ -10,9 +10,10 @@ import { chromium, type Page } from "playwright-core";
 import { createServer } from "node:http";
 import { existsSync, readFileSync, statSync, mkdirSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
-const OUT = process.env.SHOTS_DIR ?? "/workspace/shots-saas";
+const OUT = config.shots;
 const which = process.argv[2] ?? "all";
 const types: Record<string, string> = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".json": "application/json" };
 function serve(dir: string) {

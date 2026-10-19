@@ -1,10 +1,12 @@
-"""Optimized README screenshots: /workspace/shots-saas/*.png (tools/shots.ts, tools/shots-modes.ts) -> docs/assets/*.png
+"""Optimized README screenshots: <paths.shots of fixtures/site.config.json>/*.png (tools/shots.ts, tools/shots-modes.ts) -> docs/assets/*.png
 (downscaled, 256-color palette). Needs Pillow.   python3 tools/docs-assets.py [shots-dir]"""
-import sys
+import json, os, sys
 from pathlib import Path
 from PIL import Image
 
-SHOTS = Path(sys.argv[1] if len(sys.argv) > 1 else "/workspace/shots-saas")
+_ROOT = Path(__file__).resolve().parents[1]
+_CFG = json.loads((_ROOT / "fixtures/site.config.json").read_text())
+SHOTS = Path(sys.argv[1] if len(sys.argv) > 1 else os.environ.get("SHOTS_DIR") or (_ROOT / _CFG["paths"]["shots"]).resolve())
 OUT = Path(__file__).resolve().parent.parent / "docs/assets"
 # name -> (source, crop height at source width or None, target width)
 JOBS = {

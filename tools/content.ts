@@ -1,7 +1,7 @@
 /**
  * Figma dump + authored source -> Codex v0.4 records (@ui8kit/contract).
  *
- * Reads   fixtures/figma/frames/1-10.json, fixtures/figma/images/index.json,
+ * Reads   fixtures/figma/frames/<frame>.json (fixtures/site.config.json), fixtures/site.config.json (brand name, page title), fixtures/figma/images/index.json,
  *         fixtures/content/source/{authored,blocks}.json, fixtures/tokens/tokens.json
  * Writes  fixtures/content/records/{manifest.json,settings/,menus/,dictionaries/,entries/<kind>/}
  *         fixtures/media/svg/*.svg (vector assets of the frame, by role)
@@ -10,11 +10,13 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, readdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
 const CHECK = process.argv.includes("--check");
 const read = (p: string) => JSON.parse(readFileSync(join(ROOT, p), "utf8"));
-const frame = read("fixtures/figma/frames/1-10.json");
+const frame = JSON.parse(readFileSync(config.frameFile, "utf8"));
+const BRAND = config.brand.name;
 const images = read("fixtures/figma/images/index.json").images as Array<{ hash: string; file: string; ext: string; width: number | null; height: number | null }>;
 const authored = read("fixtures/content/source/authored.json");
 const catalog = read("fixtures/content/source/blocks.json").blocks as Array<any>;
@@ -55,10 +57,10 @@ const imageRoles: Record<string, { id: string; alt: string }> = {
   f578f9c2a181ef669150341163e63e6e9da01878: { id: "avatar-sarah", alt: "Sarah T." },
   "1d5ad8aaf12fd61a75197f707f6ef40c7edd6e1f": { id: "avatar-james", alt: "James K." },
   ec901f1c0d6bdc3abb3b7f2578c96a444ee001e2: { id: "avatar-priya", alt: "Priya R." },
-  "1bc08fb819ca5d936d5f96bb8290547b9d7865d9": { id: "screen-habit-tracker", alt: "Habit tracker screen of the Habitus app" },
-  "38b205df68ebac3d84139b2840c7a95f187bfa76": { id: "screen-settings", alt: "Settings screen of the Habitus app" },
-  "68b878ed3637ccfd005f7dc381ebff9f3c13e938": { id: "screen-dashboard", alt: "Dashboard screen of the Habitus app" },
-  "5dc3cce4105e68d65f30e95ba9b68e22e3a7c636": { id: "screen-goals", alt: "Goals screen of the Habitus app" },
+  "1bc08fb819ca5d936d5f96bb8290547b9d7865d9": { id: "screen-habit-tracker", alt: `Habit tracker screen of the ${BRAND} app` },
+  "38b205df68ebac3d84139b2840c7a95f187bfa76": { id: "screen-settings", alt: `Settings screen of the ${BRAND} app` },
+  "68b878ed3637ccfd005f7dc381ebff9f3c13e938": { id: "screen-dashboard", alt: `Dashboard screen of the ${BRAND} app` },
+  "5dc3cce4105e68d65f30e95ba9b68e22e3a7c636": { id: "screen-goals", alt: `Goals screen of the ${BRAND} app` },
 };
 for (const img of images) {
   const role = imageRoles[img.hash];
@@ -72,8 +74,8 @@ for (const img of images) {
 // ---- media: vector assets (logos, brand mark) -> svg files ---------------------------------
 const assets = frame.vectorAssets as Record<string, string>;
 const svgRoles: Array<{ node: string; id: string; alt: string }> = [
-  { node: "1:16", id: "brand-mark", alt: "Habitus" },
-  { node: "1:176", id: "brand-mark-large", alt: "Habitus" },
+  { node: "1:16", id: "brand-mark", alt: BRAND },
+  { node: "1:176", id: "brand-mark-large", alt: BRAND },
   { node: "1:233", id: "logo-google", alt: "Google" },
   { node: "1:240", id: "logo-spotify", alt: "Spotify" },
   { node: "1:230", id: "logo-treehouse", alt: "Treehouse" },
@@ -97,8 +99,8 @@ for (const r of svgRoles) {
 const sec = (id: string, figma: string, title: string, excerpt: string | undefined, m: Record<string, unknown>, order: number) =>
   entry("section", `section-${id}`, title, { slug: id, excerpt, order }, { figma_node: figma, block: m.block ?? id, ...m });
 
-entry("page", "page-home", "Habitus — Build Better Habits", { slug: "home", template: "landing", excerpt: txt("1:288") },
-  { figma_node: "1:10", sections: ["section-hero", "section-why", "section-social-proof", "section-inside", "section-testimonials", "section-cta", "section-pricing", "section-faq", "section-footer"] });
+entry("page", "page-home", config.site.homeTitle, { slug: "home", template: "landing", excerpt: txt("1:288") },
+  { figma_node: config.frameNode, sections: ["section-hero", "section-why", "section-social-proof", "section-inside", "section-testimonials", "section-cta", "section-pricing", "section-faq", "section-footer"] });
 sec("hero", "1:262", txt("1:289"), txt("1:288"), { block: "hero-phones", badge: txt("1:279"), primary_label: txt("1:282"), primary_href: "#pricing", secondary_label: txt("1:284"), secondary_href: "#inside", login_label: txt("1:291"), login_href: "#login", media: ["media-screen-habit-tracker", "media-screen-settings", "media-screen-dashboard", "media-screen-goals"] }, 1);
 sec("why", "1:244", txt("1:261"), txt("1:260"), { block: "feature-cards", items: ["feature-smart-reminders", "feature-progress-analytics", "feature-streak-tracking"] }, 2);
 sec("social-proof", "1:223", txt("1:227"), undefined, { block: "social-proof-split", media: ["media-screen-habit-tracker"], logos: ["media-logo-google", "media-logo-spotify", "media-logo-treehouse", "media-logo-braze"] }, 3);
@@ -107,7 +109,7 @@ sec("testimonials", "1:179", txt("1:181"), txt("1:180"), { block: "testimonial-c
 sec("cta", "1:170", txt("1:174"), txt("1:175"), { block: "cta-split", primary_label: txt("1:173"), primary_href: "#pricing" }, 6);
 sec("pricing", "1:84", txt("1:86"), txt("1:85"), { block: "pricing-two-plans", items: ["plan-free", "plan-premium"] }, 7);
 sec("faq", "1:56", txt("1:83"), txt("1:57"), { block: "faq-tiles", items: ["faq-premium", "faq-premium-2", "faq-miss-a-day", "faq-miss-a-day-2"], link_label: txt("1:58"), link_href: "#faq" }, 8);
-sec("footer", "1:11", "Habitus", txt("1:19"), { block: "footer-newsletter", newsletter_title: txt("1:47"), newsletter_text: txt("1:53"), email_placeholder: txt("1:50"), submit_label: txt("1:52"), copyright: txt("1:55"), source_label: authored.repository.label, source_href: authored.repository.href }, 9);
+sec("footer", "1:11", BRAND, txt("1:19"), { block: "footer-newsletter", newsletter_title: txt("1:47"), newsletter_text: txt("1:53"), email_placeholder: txt("1:50"), submit_label: txt("1:52"), copyright: txt("1:55"), source_label: authored.repository.label, source_href: authored.repository.href }, 9);
 
 // features
 const feat = [["smart-reminders", "1:252", "1:253", "bell"], ["progress-analytics", "1:248", "1:249", "chart-line"], ["streak-tracking", "1:257", "1:258", "flame"]];
@@ -156,7 +158,7 @@ entry("design-token", "token-radius", "--radius", { slug: "radius" }, { group: "
 entry("design-token", "token-font-sans", "--font-sans", { slug: "font-sans" }, { group: "font", scope: "shadcn", mode: "all", value: tokens.font.sans, source: "figma-font:Inter" });
 
 // ---- settings, menus, dictionary ----------------------------------------------------------
-const settings = { id: "site", locale: LOCALE, title: "Habitus", description: txt("1:288"), language: "en", timezone: "Europe/Moscow", logo_media_id: "media-brand-mark", front_page_id: "page-home", currency: "USD", version: 1, created_at: AT, updated_at: AT };
+const settings = { id: "site", locale: LOCALE, title: BRAND, description: txt("1:288"), language: "en", timezone: "Europe/Moscow", logo_media_id: "media-brand-mark", front_page_id: "page-home", currency: "USD", version: 1, created_at: AT, updated_at: AT };
 const menu = (id: string, location: string, items: Array<[string, string]>) => ({ id, location, locale: LOCALE, items: items.map(([label, url], i) => ({ id: `${id}-${slug(label)}`, label, url, order: i + 1 })) });
 const menus = [
   menu("header", "header", [[txt("1:293"), "#top"], [txt("1:294"), "#why"], [txt("1:295"), "#inside"], [txt("1:296"), "#blog"], [txt("1:297"), "#resources"], [txt("1:298"), "#about"]]),
@@ -167,7 +169,7 @@ const menus = [
 const dictionary = {
   locale: LOCALE,
   messages: {
-    "site.name": "Habitus",
+    "site.name": BRAND,
     "site.skip": "Skip to content",
     "nav.label": "Main navigation",
     "nav.login": txt("1:291"),
@@ -183,7 +185,7 @@ const dictionary = {
     "faq.view_all": txt("1:58"),
     "pricing.included": "Included",
     "pricing.not_included": "Not included",
-    "proof.logos": "Companies using Habitus",
+    "proof.logos": `Companies using ${BRAND}`,
     "gallery.label": "App screenshots",
     ...Object.fromEntries(Object.entries(authored).filter(([k, v]) => typeof v === "object" && !Array.isArray(v) && !["faq_answers", "dashboard"].includes(k) && !k.startsWith("$"))
       .flatMap(([k, v]) => Object.entries(v as Record<string, unknown>).filter(([, s]) => typeof s === "string").map(([kk, s]) => [`${k}.${kk}`, s]))),

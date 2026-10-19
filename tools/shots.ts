@@ -1,15 +1,16 @@
 /**
  * Screenshots: Figma reference render vs apps/site at the same width (1440), full page + per section,
- * plus side-by-side composites. Output: /workspace/shots-saas (outside the repo).
- *   bun tools/render:figma first (writes /workspace/shots-saas/figma/1-10.html), build apps/site, then:
+ * plus side-by-side composites. Output: config.shots (fixtures/site.config.json paths.shots, default ../shots-saas, env SHOTS_DIR).
+ *   bun run render:figma first (writes <shots>/figma/<frame>.html), build apps/site, then:
  *   bun tools/shots.ts
  */
 import { chromium } from "playwright-core";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { extname, join, resolve } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
-const OUT = process.env.SHOTS_DIR ?? "/workspace/shots-saas";
+const OUT = config.shots;
 const PUBLIC = join(ROOT, "apps/site/public");
 const WIDTH = 1440;
 const SECTIONS: [string, string, string][] = [
@@ -27,15 +28,15 @@ const server = Bun.serve({ port: 0, fetch(req) {
   return new Response(Bun.file(f), { headers: { "content-type": types[extname(f)] ?? "application/octet-stream" } });
 } });
 
-const frame = JSON.parse(readFileSync(join(ROOT, "fixtures/figma/frames/1-10.json"), "utf8"));
+const frame = JSON.parse(readFileSync(config.frameFile, "utf8"));
 const root = frame.root ?? frame;
 const figmaRect = (name: string) => { const n = root.children.find((c: any) => c.name === name); return { x: n.abs?.[0] ?? n.x, y: n.abs?.[1] ?? n.y, width: n.w, height: n.h }; };
 
-const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/usr/bin/google-chrome", args: ["--font-render-hinting=none"] });
+const browser = await chromium.launch({ executablePath: config.chrome, args: ["--font-render-hinting=none"] });
 const page = await browser.newPage({ viewport: { width: WIDTH, height: 900 }, deviceScaleFactor: 1 });
 const report: any[] = [];
 
-const figmaHtml = join(OUT, "figma/1-10.html");
+const figmaHtml = join(OUT, `figma/${config.frame}.html`);
 if (!existsSync(figmaHtml)) throw new Error(`missing ${figmaHtml}: run bun run render:figma`);
 await page.goto("file://" + figmaHtml); await page.waitForLoadState("networkidle");
 for (const [slug, name] of SECTIONS) {
@@ -72,7 +73,7 @@ const pair = async (a: string, b: string, out: string, label: string) => {
   await cmp.goto("file://" + join(OUT, "compare/_pair.html")); await cmp.waitForLoadState("networkidle");
   await cmp.screenshot({ path: join(OUT, "compare", out), fullPage: true });
 };
-await pair("../figma-1-10-home.png", "../site-home.png", "home.png", "Home 1440");
+await pair(`../figma-${config.frame}-home.png`, "../site-home.png", "home.png", "Home 1440");
 for (const [slug] of SECTIONS) await pair(`../sections/figma-${slug}.png`, `../sections/site-${slug}.png`, `${slug}.png`, slug);
 
 writeFileSync(join(OUT, "report.json"), JSON.stringify({ width: WIDTH, figmaHeight: root.h, siteHeight: fullH, sections: report }, null, 2));

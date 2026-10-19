@@ -1,3 +1,4 @@
+import { pageTitle } from "$design/site";
 import { List, ListItem, Text } from "@saas-design/ui/react";
 import { blocks } from "$design/blocks";
 import { BlockPreview } from "../components/BlockPreview";
@@ -5,7 +6,7 @@ import { PageHeader } from "../components/PageHeader";
 import { Pager } from "../components/Pager";
 import { Section } from "../components/Section";
 
-export const title = (id: string) => `${blocks.find((b) => b.id === id)!.title} · Blocks · Habitus Design`;
+export const title = (id: string) => pageTitle(blocks.find((b) => b.id === id)!.title, "Blocks");
 
 export function BlockPage({ id }: { id: string }) {
   const i = blocks.findIndex((b) => b.id === id);

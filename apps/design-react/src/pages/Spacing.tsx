@@ -1,9 +1,10 @@
+import { pageTitle } from "$design/site";
 import { Inline, List, ListItem } from "@saas-design/ui/react";
 import { spaceSteps, spacing } from "$design/foundations";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 
-export const title = "Spacing · Habitus Design";
+export const title = pageTitle("Spacing");
 const px = (steps: string[]) => steps.map((s) => `${s} (${Number(s) * 4}px)`).join(" · ");
 
 export function SpacingPage() {

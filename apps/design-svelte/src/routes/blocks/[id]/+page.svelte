@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { List, ListItem, Text } from "@saas-design/ui";
   import BlockPreview from "$lib/BlockPreview.svelte";
   import PageHeader from "$lib/PageHeader.svelte";
@@ -7,7 +8,7 @@
   let { data } = $props();
 </script>
 
-<svelte:head><title>{data.meta.title} · Blocks · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle(data.meta.title, "Blocks")}</title></svelte:head>
 <PageHeader eyebrow="blocks / {data.meta.category}" title={data.meta.title} lead={data.meta.description}>
   <Text class="ds-meta">React: {data.meta.name} · Svelte: {data.meta.name} · templ: blocks.{data.meta.name} · Figma: {data.meta.figma ?? "catalog (no Figma node)"}</Text>
 </PageHeader>

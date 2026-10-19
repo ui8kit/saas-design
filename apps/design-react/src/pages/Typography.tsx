@@ -1,9 +1,10 @@
+import { pageTitle } from "$design/site";
 import { Inline, List, ListItem } from "@saas-design/ui/react";
 import { font, typeScale, typeSteps } from "$design/foundations";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 
-export const title = "Typography · Habitus Design";
+export const title = pageTitle("Typography");
 
 export function TypographyPage() {
   return (

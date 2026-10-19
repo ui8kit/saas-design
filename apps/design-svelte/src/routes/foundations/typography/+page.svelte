@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { Inline, List, ListItem } from "@saas-design/ui";
   import { font, typeScale, typeSteps } from "$design/foundations";
   import PageHeader from "$lib/PageHeader.svelte";
   import Section from "$lib/Section.svelte";
 </script>
 
-<svelte:head><title>Typography · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle("Typography")}</title></svelte:head>
 <PageHeader title="Typography" lead="Family {font.sans} (--font-sans). Tailwind type steps used by the adapter, and the Figma type scale they were derived from." />
 <Section id="type-steps" title="Type steps">
   <List class="ds-rows">

@@ -1,9 +1,10 @@
+import { pageTitle } from "$design/site";
 import { LinkPlain, List, ListItem, Text } from "@saas-design/ui/react";
 import { blocks, categories } from "$design/blocks";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 
-export const title = "Blocks · Habitus Design";
+export const title = pageTitle("Blocks");
 
 export function BlocksPage() {
   return (

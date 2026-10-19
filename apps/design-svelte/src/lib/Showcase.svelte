@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   // Primitives / Components pages: every brick of packages/ui of one kind, from packages/ui/showcase.json.
   import type { Component } from "svelte";
   import { LinkPlain, List, ListItem, Text } from "@saas-design/ui";
@@ -18,7 +19,7 @@
   const slug = (id: string) => id.replace(/^ui\./, "").replaceAll(".", "-");
 </script>
 
-<svelte:head><title>{title} · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle(title)}</title></svelte:head>
 <PageHeader {title} {lead}>
   <List class="ds-toc">
     {#each bricks as b}<ListItem><LinkPlain class="ds-toc-link" href="#{slug(b.id)}">{slug(b.id)}</LinkPlain></ListItem>{/each}

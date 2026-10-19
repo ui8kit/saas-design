@@ -6,6 +6,7 @@
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
 const REC = join(ROOT, "fixtures/content/records");
@@ -87,7 +88,7 @@ const catalogData: Record<string, any> = {
   "hero-centered": { eyebrow: m(hero, "badge"), title: hero.title, lead: hero.excerpt, primary: { label: m(hero, "primary_label"), href: m(hero, "primary_href") }, secondary: { label: m(hero, "secondary_label"), href: m(hero, "secondary_href") } },
   "hero-split": { title: hero.title, lead: hero.excerpt, primary: { label: m(hero, "primary_label"), href: m(hero, "primary_href") }, secondary: { label: m(hero, "secondary_label"), href: m(hero, "secondary_href") }, image: screen("habit-tracker") },
   "logo-cloud": { title: t("proof.logos"), logos },
-  "stats-row": { title: "Habitus in numbers", items: ofKind("stat").map((e) => ({ value: m(e, "value"), label: e.title })) },
+  "stats-row": { title: `${config.brand.name} in numbers`, items: ofKind("stat").map((e) => ({ value: m(e, "value"), label: e.title })) },
   "feature-grid": { title: "Everything you need to stick with it", lead: sec("why").excerpt, items: ofKind("feature").map((f) => ({ icon: m(f, "icon"), title: f.title, text: f.excerpt })) },
   "feature-split": { title: "Built around your day", lead: sec("inside").excerpt, items: ofKind("feature").slice(0, 3).map((f) => ({ title: f.title, text: f.excerpt })), image: screen("dashboard") },
   steps: { title: "How it works", lead: "Three steps from intention to routine.", items: ofKind("step").map((e) => ({ icon: m(e, "icon"), title: e.title, text: e.excerpt })) },
@@ -95,7 +96,7 @@ const catalogData: Record<string, any> = {
   "pricing-three-tiers": { title: sec("pricing").title, lead: sec("pricing").excerpt, plans: ofKind("plan").map(planView) },
   "comparison-table": { title: "Compare plans", feature: "Feature", free: get("plan-free").title, premium: get("plan-premium").title, yes: t("pricing.included"), no: t("pricing.not_included"), rows: ofKind("comparison-row").map((e) => ({ feature: e.title, free: m(e, "free"), premium: m(e, "premium") })) },
   "testimonial-quote": (() => { const e = ofKind("testimonial")[0]!; return { label: "Testimonial", quote: `"${e.content}"`, name: e.title, role: m(e, "role"), avatar: media(e.featured_media_id!) }; })(),
-  "team-grid": { title: "The people behind Habitus", lead: "A small team that ships every week.", members: ofKind("member").map((e) => ({ name: e.title, role: m(e, "role"), avatar: media(e.featured_media_id!) })) },
+  "team-grid": { title: `The people behind ${config.brand.name}`, lead: "A small team that ships every week.", members: ofKind("member").map((e) => ({ name: e.title, role: m(e, "role"), avatar: media(e.featured_media_id!) })) },
   "blog-cards": { title: "From the blog", lead: "Short reads on building habits that last.", posts: ofKind("post").map((e) => ({ title: e.title, excerpt: e.excerpt, tag: m(e, "tag"), datetime: date(e), date: human(date(e)), href: `#blog/${e.slug}`, image: media(e.featured_media_id!) })) },
   changelog: { title: "Changelog", lead: "What shipped recently.", items: ofKind("release").sort((a, b) => (b.order ?? 0) - (a.order ?? 0)).map((e) => ({ version: m(e, "release_version"), datetime: date(e), date: human(date(e)), title: e.title, text: e.excerpt })) },
   "faq-accordion": { title: sec("faq").title, lead: sec("faq").excerpt, items: ofKind("faq").filter((f) => !f.slug.endsWith("-2")).map((f, i) => ({ question: f.title, answer: f.content, open: i === 0 })) },

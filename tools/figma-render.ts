@@ -4,13 +4,14 @@
  * fig2design 0.1.0 does not render frames (see .project/backlog/fig2design-no-frame-render.md),
  * so this script turns fixtures/figma/frames/<id>.json into a throw-away absolutely positioned
  * HTML file and screenshots it with Chrome. The HTML is written OUTSIDE the repo (default
- * /workspace/shots-saas/figma) because it uses inline styles; it is a measuring tool, never app code.
+ * <config.shots>/figma) because it uses inline styles; it is a measuring tool, never app code.
  *
- *   bun tools/figma-render.ts [--frame 1-10] [--out /workspace/shots-saas] [--chrome /usr/bin/google-chrome]
+ *   bun tools/figma-render.ts [--frame <config.frame>] [--out <config.shots>] [--chrome <config.chrome>]
  */
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { chromium } from "playwright-core";
+import { config } from "./config";
 
 const args = process.argv.slice(2);
 const flag = (n: string, d: string) => {
@@ -18,9 +19,9 @@ const flag = (n: string, d: string) => {
   return i >= 0 && args[i + 1] ? args[i + 1]! : d;
 };
 const ROOT = resolve(import.meta.dir, "..");
-const frameId = flag("frame", "1-10");
-const outDir = resolve(flag("out", "/workspace/shots-saas"));
-const chrome = flag("chrome", process.env.CHROME_PATH ?? "/usr/bin/google-chrome");
+const frameId = flag("frame", config.frame);
+const outDir = resolve(flag("out", config.shots));
+const chrome = flag("chrome", process.env.CHROME_PATH ?? config.chrome);
 const dump = join(ROOT, "fixtures/figma");
 
 type Paint = { type: string; color?: string; a?: number; opacity?: number; image?: string; mode?: string };

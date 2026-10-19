@@ -1,8 +1,9 @@
+import { pageTitle } from "$design/site";
 import { Inline, List, ListItem } from "@saas-design/ui/react";
 import { radii, radius } from "$design/foundations";
 import { PageHeader } from "../components/PageHeader";
 
-export const title = "Radius · Habitus Design";
+export const title = pageTitle("Radius");
 
 export function RadiusPage() {
   return (

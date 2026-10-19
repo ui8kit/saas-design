@@ -1,10 +1,11 @@
+import { pageTitle } from "$design/site";
 import { Badge, Box, Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Form, Image, Inline, Input, Label, List, ListItem, Text } from "@saas-design/ui/react";
 import type { DashboardStatsData, NewsletterBandData, PricingTwoPlansData, TestimonialCardsData } from "@saas-design/blocks/react";
 import { blockData } from "$design/blocks";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 
-export const title = "Widgets · Habitus Design";
+export const title = pageTitle("Widgets");
 
 // Widgets: small compositions of packages/ui components, fed by the same fixture view data as the blocks.
 const pricing = blockData("pricing-two-plans") as PricingTwoPlansData;

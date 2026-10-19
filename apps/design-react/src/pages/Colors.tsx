@@ -1,9 +1,10 @@
+import { pageTitle } from "$design/site";
 import { Badge, Box, Button, Card, CardContent, CardDescription, CardHeader, CardTitle, Inline, List, ListItem, Text, ThemeToggle } from "@saas-design/ui/react";
 import { colors } from "$design/foundations";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 
-export const title = "Colors · Habitus Design";
+export const title = pageTitle("Colors");
 
 const groups = [
   { id: "light", title: "shadcn tokens · light", items: colors.light },

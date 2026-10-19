@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { designTitle } from "$design/site";
   import { LinkPlain, List, ListItem } from "@saas-design/ui";
   import { nav } from "$design/nav";
   import PageHeader from "$lib/PageHeader.svelte";
   import Section from "$lib/Section.svelte";
 </script>
 
-<svelte:head><title>Habitus Design System</title></svelte:head>
+<svelte:head><title>{designTitle}</title></svelte:head>
 <PageHeader
-  title="Habitus Design System"
+  title={designTitle}
   lead="Foundations, primitives, components, widgets and blocks generated from the Figma file. Every page renders the generated packages with one DOM (React 19 in apps/design-react, Svelte 5 in apps/design-svelte, Go templ in apps/site): shadcn HSL tokens, semantic ui-* classes from the adapter, fixtures that conform to @ui8kit/contract."
 />
 <Section id="sections-title" title="Sections">

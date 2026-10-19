@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { Inline, List, ListItem } from "@saas-design/ui";
   import { spaceSteps, spacing } from "$design/foundations";
   import PageHeader from "$lib/PageHeader.svelte";
@@ -6,7 +7,7 @@
   const px = (steps: string[]) => steps.map((s) => `${s} (${Number(s) * 4}px)`).join(" · ");
 </script>
 
-<svelte:head><title>Spacing · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle("Spacing")}</title></svelte:head>
 <PageHeader title="Spacing" lead="8 + 4 px grid: one Tailwind step is 4px. Layout scope (blocks, apps) uses even steps (8px rhythm); control scope (primitives) may also use 4px half-steps. Enforced by ui8px lint." />
 <Section id="space-scopes" title="Allowed steps per scope">
   <List class="ds-rows">

@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { LinkPlain, List, ListItem, Text } from "@saas-design/ui";
   import { guideGroups, guideHref, repo } from "$design/guides";
   import PageHeader from "$lib/PageHeader.svelte";
   import Section from "$lib/Section.svelte";
 </script>
 
-<svelte:head><title>Instructions · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle("Instructions")}</title></svelte:head>
 <PageHeader title="Instructions" lead="Guides for building a new app or brand with this repo: setup, tokens, blocks and codegen, the Figma parser, checks and deploy. Each link opens the document on GitHub." eyebrow={repo} />
 {#each guideGroups as g}
   <Section id="guides-{g.id}" title={g.title}>

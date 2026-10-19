@@ -10,6 +10,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
 const CHECK = process.argv.includes("--check");
@@ -79,7 +80,7 @@ const palette = {
 emit("fixtures/tokens/palette.json", JSON.stringify(palette, null, 2));
 
 // ---- typography / radius / spacing evidence from the frame --------------------------------
-const frame = read("fixtures/figma/frames/1-10.json");
+const frame = JSON.parse(readFileSync(config.frameFile, "utf8"));
 const typeScale = frame.layoutDigest.typeScale as Array<{ size: number; weight: number; family: string; count: number }>;
 const twText: Record<number, string> = { 12: "xs", 14: "sm", 16: "base", 18: "lg", 20: "xl", 24: "2xl", 30: "3xl", 36: "4xl", 48: "5xl", 60: "6xl", 72: "7xl", 96: "8xl" };
 const radiusPx = parseFloat(mapping.radius.base);
@@ -100,9 +101,9 @@ const toMap = (set: Record<string, { hsl: string }>) => Object.fromEntries(Objec
 const contract = {
   schemaVersion: "1.0.0",
   meta: {
-    name: "Habitus",
-    slug: "habitus",
-    description: "Habit tracking SaaS landing (Figma frame Home 1:10, file saas-landing.fig).",
+    name: config.brand.name,
+    slug: config.brand.slug,
+    description: config.brand.description,
     sourceReference: { project: "ui8kit/saas-design" },
   },
   brandThesis: {

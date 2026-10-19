@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageTitle } from "$design/site";
   import { Badge, Box, Button, Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, Form, Image, Inline, Input, Label, List, ListItem, Text } from "@saas-design/ui";
   import type { DashboardStatsData, NewsletterBandData, PricingTwoPlansData, TestimonialCardsData } from "@saas-design/blocks";
   import { blockData } from "$design/blocks";
@@ -14,7 +15,7 @@
   const quote = testimonials.items[0]!;
 </script>
 
-<svelte:head><title>Widgets · Habitus Design</title></svelte:head>
+<svelte:head><title>{pageTitle("Widgets")}</title></svelte:head>
 <PageHeader title="Widgets" lead="Compositions of @saas-design/ui components (Card, Badge, Button, Input, Image) with fixture data. Blocks are built from the same pieces." />
 <Section id="w-plan" title="Plan card">
   <Card class="ds-widget">

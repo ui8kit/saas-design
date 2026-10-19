@@ -1,0 +1,22 @@
+{
+  "$comment": "One place for what makes this repo a specific brand/product: names, page titles, meta, the Figma frame and the local paths. Read by tools/config.ts (scripts) and packages/design-docs/src/site.ts (design apps). Paths are relative to the repo root; env overrides: FIG, FIGMA_FRAME, SHOTS_DIR, CHROME. Rename/recolour guide: docs/new-brand.md.",
+  "brand": {
+    "name": "Habitus",
+    "slug": "habitus",
+    "description": "Habit tracking SaaS landing (Figma frame Home 1:10, file saas-landing.fig)."
+  },
+  "site": {
+    "homeTitle": "Habitus — Build Better Habits"
+  },
+  "design": {
+    "name": "Habitus Design",
+    "title": "Habitus Design System"
+  },
+  "figma": {
+    "frame": "1-10",
+    "fig": "../fig-fixtures/saas.fig"
+  },
+  "paths": {
+    "shots": "../shots-saas"
+  }
+}

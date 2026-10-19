@@ -1,15 +1,16 @@
 /**
- * Screenshots of the built apps/design-svelte (apps/design-svelte/build) → /workspace/shots-saas/design-<page>.png
+ * Screenshots of the built apps/design-svelte (apps/design-svelte/build) → <config.shots>/design-<page>.png
  *   bun tools/shots-design.ts [out-dir] [paths...]
  */
 import { chromium } from "playwright-core";
 import { createServer } from "node:http";
 import { readFileSync, existsSync, mkdirSync, statSync } from "node:fs";
 import { join, resolve, extname } from "node:path";
+import { config } from "./config";
 
 const ROOT = resolve(import.meta.dir, "..");
 const BUILD = join(ROOT, "apps/design-svelte/build");
-const OUT = resolve(process.argv[2] ?? "/workspace/shots-saas");
+const OUT = resolve(process.argv[2] ?? config.shots);
 const paths = process.argv.slice(3).length ? process.argv.slice(3) : ["/", "/foundations/colors", "/primitives", "/components", "/blocks", "/blocks/pricing-two-plans"];
 const types: Record<string, string> = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg", ".json": "application/json" };
 
